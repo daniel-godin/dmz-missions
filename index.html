@@ -5,205 +5,1640 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DMZ Mission Tracker - By Daniel Godin</title>
+  <link rel='stylesheet' href='./style.css'>
 </head>
 <body>
   <div class='page-container'>
-    <div class='nav-container'></div>
-    <div class='header-container'></div>
+    <!-- <div class='nav-container'></div>
+    <div class='header-container'></div> -->
 
-    <div class='main-content-container'>
-      <!-- Desktop Version:  
-        5 columns (one for each faction).  
-        Inside each column should have 3-5 'tiers' for each tier. 
-        Inside each 'tier box' should have 2 divs - 1 for the tier title, progress %, and a "dropdown/pullup" button, 2nd for displaying the missions and checking off complete/incomplete.
-        Each Mission should have a checkbox next to it, the title of the mission, the quick description of the mission, and full description of mission and/or links to "how to complete" videos.
-      
+    <div class='content-container'>
+      <!-- 
+        Desktop Version:  
+          5 columns (one for each faction).  
+          Inside each column should have 3-5 'tiers' for each tier. 
+          Inside each 'tier box' should have 2 divs - 1 for the tier title, progress %, and a "dropdown/pullup" button, 2nd for displaying the missions and checking off complete/incomplete.
+          Each Mission should have a checkbox next to it, the title of the mission, the quick description of the mission, and full description of mission and/or links to "how to complete" videos.
+      -->
+      <!-- 
+        Factions:
+          Redacted
+          White Lotus
+          Legion
+          Black Mous
+          Crown
       -->
 
-      <!-- Factions:
-        Redacted
-        White Lotus
-        Legion
-        Black Mous
-        Crown
-      -->
-
-      <div class="faction-container" id='redactedFactionContainer'>
-        <div class="tier-container" id='t1RedactedContainer'>
-          <div class="tier-header">T1: Redacted</div>
-          <div class="tier-missions">
-            <form action="" class="missions-form" id="t1Redacted">
-              <div class="mission">
-                <input type="checkbox" name="" id="" class="mission-checkbox">
-                <header class="mission-title"></header>
-              </div>
-              <div class="mission">
-                <input type="checkbox" name="" id="" class="mission-checkbox">
-                <header class="mission-title"></header>
-              </div>
-              <div class="mission">
-                <input type="checkbox" name="" id="" class="mission-checkbox">
-                <header class="mission-title"></header>
-              </div>
-              <div class="mission">
-                <input type="checkbox" name="" id="" class="mission-checkbox">
-                <header class="mission-title"></header>
-              </div>
-              <div class="mission">
-                <input type="checkbox" name="" id="" class="mission-checkbox">
-                <header class="mission-title"></header>
-              </div>
-              <div class="mission">
-                <input type="checkbox" name="" id="" class="mission-checkbox">
-                <header class="mission-title"></header>
-              </div>
-              <div class="mission story-mission">
-                <input type="checkbox" name="" id="" class="mission-checkbox story-mission-checkbox">
-                <header class="mission-title story-mission-title"></header>
-              </div>
-            </form>
+      <div class="faction-column" id="redactedColumn">
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
           </div>
         </div>
-        
-          <div class="tier-header">T2: Redacted</div>
-          <div class="tier-missions">
-            <form action="" class="missions-form" id="t2Redacted">
-              <div class="mission">
-                <input type="checkbox" name="" id="" class="mission-checkbox">
-                <header class="mission-title"></header>
-              </div>
-              <div class="mission">
-                <input type="checkbox" name="" id="" class="mission-checkbox">
-                <header class="mission-title"></header>
-              </div>
-              <div class="mission">
-                <input type="checkbox" name="" id="" class="mission-checkbox">
-                <header class="mission-title"></header>
-              </div>
-              <div class="mission">
-                <input type="checkbox" name="" id="" class="mission-checkbox">
-                <header class="mission-title"></header>
-              </div>
-              <div class="mission">
-                <input type="checkbox" name="" id="" class="mission-checkbox">
-                <header class="mission-title"></header>
-              </div>
-              <div class="mission">
-                <input type="checkbox" name="" id="" class="mission-checkbox">
-                <header class="mission-title"></header>
-              </div>
-              <div class="mission story-mission">
-                <input:checkbox:mission-checkbox class="story-mission-checkbox"></input:checkbox:mission-checkbox>
-                <header class="mission-title story-mission-title"></header>
-              </div>
-            </form>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
           </div>
         </div>
-        
-          <div class="tier-header">T3: Redacted</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        <!-- Currently only 3 tiers for Redacted Faction.  Hide Them After Formatting. -->
-        
-          <div class="tier-header">T4: Redacted</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T5: Redacted</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="faction-container" id='whiteLotusFactionContainer'>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+      <div class="faction-column" id="whiteLotusColumn">
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="faction-container" id='legionFactionContainer'>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+      <div class="faction-column" id="legionColumn">
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="faction-container" id='blackMousFactionContainer'>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+      <div class="faction-column" id="blackMousColumn">
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="faction-container" id='crownFactionContainer'>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+      <div class="faction-column" id="crownColumn">
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
-        
-          <div class="tier-header">T1:</div>
-          <div class="tier-missions"></div>
+        <div class="tier-container" id="redactedT1Container">
+          <div class="tier-header-container">
+            <header class="tier-header"></header>
+            <div class="checkbox"></div>
+          </div>
+          <div class="tier-missions-container">
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+            <div class="mission-container">
+              <form action="" class="mission-form" id="redactedT1Form">
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+                <div class="mission-stuff"></div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-
-
-
 
 
 
@@ -211,27 +1646,8 @@
 
 
     </div>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>  
+    <div class="footer-container"></div>
+  </div>
+<script src='./script.js'></script>
 </body>
 </html>
