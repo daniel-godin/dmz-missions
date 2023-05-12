@@ -24,10 +24,40 @@ body {
 
 .page-container {
   display: grid;
+  height: 100%;
+  width: 100%;
 }
 
-.main-content-container {
+.content-container {
   width: 90%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  border: 2px solid red;
+  justify-self: center;
+}
+
+.faction-column {
+  border: 1px solid blue;
+}
+
+.tier-container {
+  border: 1px solid green;
+  width: 100%;
+  height: 200px;
+}
+
+.tier-header-container {
+  border: 1px solid orange;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tier-missions-container {
+  border: 1px solid brown;
+}
+
+.mission-title-container {
+  border: 1px dashed pink;
+  display: flex;
+  justify-content: space-between;
 }
