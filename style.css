@@ -35,6 +35,7 @@ body {
 
 .content-container {
   width: 90%;
+  height: min-content;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   border: 2px solid red;
