@@ -93,6 +93,14 @@ a:hover {
   justify-content: space-between;
 }
 
+.mission-checkbox {
+
+}
+
+.mission-checkbox:checked {
+  outline: 2px solid yellow;
+}
+
 .mission-content-container {
   border: 1px dotted grey;
 }

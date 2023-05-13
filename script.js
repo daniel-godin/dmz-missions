@@ -6,6 +6,8 @@
 
 // DOM Class Variables:
 const tierHeader = document.getElementsByClassName('tier-header');
+const tierStatus = document.getElementsByClassName('tier-status');
+const missionCheckbox = document.getElementsByClassName('mission-checkbox');
 
 // Events / Event Handlers
 
@@ -22,6 +24,22 @@ for (i = 0; i < tierHeader.length; i++) {
     linkedMissionsContainer.classList.toggle('hidden');
   });
 }
+
+// Event handler every time user clicks on a mission checkbox.
+for (i = 0; i < missionCheckbox.length; i++) {
+  missionCheckbox[i].addEventListener('click', (e) => {
+    console.log('clicking checkboxes is working');
+    console.log(e.target);
+  });
+}
+
+
+
+
+function tierProgressDisplay() {
+
+}
+
 
 
 
