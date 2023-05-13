@@ -12,7 +12,7 @@
     <!-- <div class='nav-container'></div>
     <div class='header-container'></div> -->
 
-    <div class='content-container'>
+    <div class='content-container' id='contentContainer'>
       <!-- 
         Desktop Version:  
           5 columns (one for each faction).  
@@ -32,10 +32,11 @@
       <div class="faction-column" id="redactedColumn">
         <div class="tier-container" id="redactedT1Container">
           <div class="tier-header-container">
-            <header class="tier-header">Redacted T1:</header>
-            <div class="checkbox">✅</div>
+            <header class="tier-header"><a id='redactedT1Header'>Redacted T1:</a></header>
+            <span class='tier-status'>?/7<span class="tier-checkbox">✅</span></span>
+            
           </div>
-          <div class="tier-missions-container hidden">
+          <div class="tier-missions-container hidden" id='redactedT1MissionsContainer'>
             <form action="" class="mission-form" id="redactedT1Form">
               <div class="mission-container">
                 <div class="mission-title-container">
@@ -162,7 +163,7 @@
         <div class="tier-container" id="redactedT2Container">
           <div class="tier-header-container">
             <header class="tier-header">Redacted T2:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -291,7 +292,7 @@
         <div class="tier-container" id="redactedT3Container">
           <div class="tier-header-container">
             <header class="tier-header">Redacted T3:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -420,7 +421,7 @@
         <div class="tier-container" id="redactedT4Container">
           <div class="tier-header-container">
             <header class="tier-header">Redacted T4:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -549,7 +550,7 @@
         <div class="tier-container" id="redactedT5Container">
           <div class="tier-header-container">
             <header class="tier-header">Redacted T5:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -680,7 +681,7 @@
         <div class="tier-container" id="whiteLotusT1Container">
           <div class="tier-header-container">
             <header class="tier-header">White Lotus T1:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -809,7 +810,7 @@
         <div class="tier-container" id="whiteLotusT2Container">
           <div class="tier-header-container">
             <header class="tier-header">White Lotus T2:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -938,7 +939,7 @@
         <div class="tier-container" id="whiteLotusT3Container">
           <div class="tier-header-container">
             <header class="tier-header">White Lotus T3:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -1067,7 +1068,7 @@
         <div class="tier-container" id="whiteLotusT4Container">
           <div class="tier-header-container">
             <header class="tier-header">White Lotus T4:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -1196,7 +1197,7 @@
         <div class="tier-container" id="whiteLotusT5Container">
           <div class="tier-header-container">
             <header class="tier-header">White Lotus T5:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -1327,7 +1328,7 @@
         <div class="tier-container" id="legionT1Container">
           <div class="tier-header-container">
             <header class="tier-header">Legion T1:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -1456,7 +1457,7 @@
         <div class="tier-container" id="legionT2Container">
           <div class="tier-header-container">
             <header class="tier-header">Legion T2:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -1585,7 +1586,7 @@
         <div class="tier-container" id="legionT3Container">
           <div class="tier-header-container">
             <header class="tier-header">Legion T3:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -1714,7 +1715,7 @@
         <div class="tier-container" id="legionT4Container">
           <div class="tier-header-container">
             <header class="tier-header">Legion T4:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -1843,7 +1844,7 @@
         <div class="tier-container" id="legionT5Container">
           <div class="tier-header-container">
             <header class="tier-header">Legion T5:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -1974,7 +1975,7 @@
         <div class="tier-container" id="blackMousT1Container">
           <div class="tier-header-container">
             <header class="tier-header">Black Mous T1:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -2103,7 +2104,7 @@
         <div class="tier-container" id="blackMousT2Container">
           <div class="tier-header-container">
             <header class="tier-header">Black Mous T2:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -2232,7 +2233,7 @@
         <div class="tier-container" id="blackMousT3Container">
           <div class="tier-header-container">
             <header class="tier-header">Black Mous T3:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -2361,7 +2362,7 @@
         <div class="tier-container" id="blackMousT4Container">
           <div class="tier-header-container">
             <header class="tier-header">Black Mous T4:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -2490,7 +2491,7 @@
         <div class="tier-container" id="blackMousT5Container">
           <div class="tier-header-container">
             <header class="tier-header">Black Mous T5:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -2621,7 +2622,7 @@
         <div class="tier-container" id="crownT1Container">
           <div class="tier-header-container">
             <header class="tier-header">Crown T1:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -2750,7 +2751,7 @@
         <div class="tier-container" id="crownT2Container">
           <div class="tier-header-container">
             <header class="tier-header">Crown T2:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -2879,7 +2880,7 @@
         <div class="tier-container" id="crownT3Container">
           <div class="tier-header-container">
             <header class="tier-header">Crown T3:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -3008,7 +3009,7 @@
         <div class="tier-container" id="crownT4Container">
           <div class="tier-header-container">
             <header class="tier-header">Crown T4:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
@@ -3137,7 +3138,7 @@
         <div class="tier-container" id="crownT5Container">
           <div class="tier-header-container">
             <header class="tier-header">Crown T5:</header>
-            <div class="checkbox">✅</div>
+            <span class="tier-checkbox">✅</span>
           </div>
           <div class="tier-missions-container hidden">
             <form action="" class="mission-form" id="redactedT1Form">
