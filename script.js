@@ -14,16 +14,28 @@ const tierHeader = document.getElementsByClassName('tier-header');
 
 // Events / Event Handlers
 
-redactedT1Header.addEventListener('click', toggleTierVisible);
+redactedT1Header.addEventListener('click', toggleT1TierVisible);
+
+// Class Event Listeners:
+function classEventListeners() {
+  for (i = 0; i < tierHeader.length; i++) {
+    tierHeader[i].addEventListener('click', toggleTierVisible);
+  }
+}
+
 
 
 // Function to show/hide list of tier missions.
 // Start with 'just' Redacted T1, then expand to all tiers
 
-function toggleTierVisible() {
+function toggleT1TierVisible() {
   // When user clicks a tier title/header, show or hide its cooresponding mission list (tier-missions-container) = Up one level, next sibling, I think.
   redactedT1MissionsContainer.classList.toggle('hidden');
   console.log('toggle working');
+}
+
+function toggleTierVisible() {
+  console.log('tier toggle is working');
 }
 
 
@@ -32,5 +44,5 @@ function toggleTierVisible() {
 
 
 
-
 // Functions To Run On Load:
+classEventListeners();
