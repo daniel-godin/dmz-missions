@@ -4,7 +4,7 @@ const redactedT1Header = document.getElementById('redactedT1Header');
 const redactedT1MissionsContainer = document.getElementById('redactedT1MissionsContainer');
 
 // DOM Faction Column Variables:
-const factionColumnNodeList = document.getElementById('contentContainer').childNodes;
+const factionColumnNodeList = document.getElementById('contentContainer').childNodes; // Should have 5 child nodes:  Each faction div column.  id='"factionName"Column' with a class of 'faction-column'.
 const redactedColumn = document.getElementById('redactedColumn');
 
 // DOM Class Variables:
