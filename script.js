@@ -30,6 +30,16 @@ for (i = 0; i < missionCheckbox.length; i++) {
   missionCheckbox[i].addEventListener('click', (e) => {
     console.log('clicking checkboxes is working');
     console.log(e.target);
+    let parent = e.target.parentNode;
+    let grandParent = e.target.parentNode.parentNode;
+    let greatGreatGrandParent = e.target.parentNode.parentNode.parentNode.parentNode;
+    let tierHead = greatGreatGrandParent.previousElementSibling;
+    let tierStatus = tierHead.lastElementChild;
+    
+    console.log(greatGreatGrandParent);
+    console.log(tierHead);
+    console.log(tierStatus);
+  
   });
 }
 
