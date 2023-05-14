@@ -29,25 +29,11 @@ for (i = 0; i < tierHeader.length; i++) {
 // Event handler every time user clicks on a mission checkbox.
 for (i = 0; i < missionCheckbox.length; i++) {
   missionCheckbox[i].addEventListener('click', (e) => {
-    // console.log('clicking checkboxes is working');
-    // console.log(e.target);
-    // let parent = e.target.parentNode;
-    // let grandParent = e.target.parentNode.parentNode;
-    // let greatGreatGrandParent = e.target.parentNode.parentNode.parentNode.parentNode;
-    // let tierHead = greatGreatGrandParent.previousElementSibling;
-    // let tierStatus = tierHead.lastElementChild;
-    
-    // console.log(greatGreatGrandParent);
-    // console.log(tierHead);
-    // console.log(tierStatus);
-  });
-
-  missionCheckbox[i].addEventListener('click', (e) => {
     let boxChecked = e.target;
     let tierMissionsContainer = e.target.parentNode.parentNode.parentNode;
     let tierProgressElementToChange = e.target.parentNode.parentNode.parentNode.parentNode.previousElementSibling.lastElementChild.firstElementChild;
     // console.log(tierProgressElementToChange);
-    console.log(tierMissionsContainer);
+    // console.log(tierMissionsContainer);
     tierProgressDisplay(boxChecked, tierMissionsContainer, tierProgressElementToChange);
   });
 }
@@ -59,17 +45,26 @@ function tierProgressDisplay(boxChecked, tierMissionsContainer, progressElement)
   // Need a refresh of redactedT1Progress element.  Right now it just adds another number.
   let status = tierMissionsContainer.querySelectorAll("input[type='checkbox']:checked").length;
 
-
-
   // let status = document.querySelectorAll('#redactedT1Form input[type="checkbox"]:checked').length;
-  console.table(status);
+  // console.table(status);
 
   progressElement.innerText = `${status} / 7`;
 
 
 }
 
+
+
 function displayAllTierProgress() {
+
+  for (i = 0; i < tierStatus.length; i++) {
+    let status = tierStatus[i].parentNode.parentNode.querySelectorAll("input[type='checkbox']:checked").length;
+    // let status = e.querySelectorAll("input[type='checkbox']:checked").length;
+    tierStatus[i].innerText = `${status} / 7`;
+    // console.log(`${status}`);
+    // console.log(`tier status working`);
+    
+  }
   
 }
 
@@ -83,5 +78,8 @@ function displayAllTierProgress() {
 
 
 
+
+
 // Functions To Run On Load:
-tierProgressDisplay();
+// tierProgressDisplay();
+displayAllTierProgress();
