@@ -82,7 +82,7 @@ a:hover {
   display: flex;
 }
 
-.tier-status + p {
+.tier-status + p, .tier-status-container > p {
   color: pink;
 }
 
