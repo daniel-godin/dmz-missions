@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "firebase": "^9.22.0"
+  },
+  "name": "dmz-missions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-godin/dmz-missions.git"
+  },
+  "author": "Daniel Godin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel-godin/dmz-missions/issues"
+  },
+  "homepage": "https://github.com/daniel-godin/dmz-missions#readme",
+  "description": "",
+  "devDependencies": {
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  }
+}
