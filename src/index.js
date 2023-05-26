@@ -1,8 +1,48 @@
 // Import the functions you need from the SDKs you need
+
+
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth, connectAuthEmulator } from "firebase/auth";
-import { } from "./script";
+import { 
+  getAuth, 
+  connectAuthEmulator, 
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult,
+  signOut,
+  GoogleAuthProvider
+} from "firebase/auth";
+import { 
+  getFirestore,
+  connectFirestoreEmulator,
+  collection,
+  addDoc,
+  getDocs
+} from 'firebase/firestore';
+
+
+// Import Non-Firebase Code From Other Files:  THIS IS ONLY FOR TESTING, THIS IS THE OFFICIAL VIDEO GITHUB CODE.
+import { 
+  hideLoginError,
+  showLoginState,
+  showLoginForm,
+  showApp,
+  showLoginError,
+  btnLogin,
+  btnSignup,
+  btnGoogleSignUp,
+  btnLogout,
+  txtPassword, 
+  lblAuthState,
+  btnTestingDocAdd,
+  btnTestingDocAddTwo
+
+} from "./ui";
+
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -22,4 +62,126 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
-connectAuthEmulator(auth, "http://localhost:9099");
+const db = getFirestore(app);
+// const provider = new GoogleAuthProvider();
+
+// Local Emulators
+connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
+connectFirestoreEmulator(db, 'localhost', 8080);
+
+// App Configurations:
+
+// Setting Up Auth From Video:
+const loginEmailPassword = async () => {
+  const loginEmail = txtEmail.value;
+  const loginPassword = txtPassword.value;
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
+    console.log(userCredential.user);
+  }
+  catch(error) {
+    console.log(error);
+    showLoginError(error);
+  }
+}
+
+btnLogin.addEventListener("click", loginEmailPassword);
+
+const createAccount = async () => {
+  const loginEmail = txtEmail.value;
+  const loginPassword = txtPassword.value;
+
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
+    console.log(userCredential.user);
+  }
+  catch(error) {
+    console.log(error);
+    showLoginError(error);
+  }
+}
+
+btnSignup.addEventListener("click", createAccount);
+  onAuthStateChanged(auth, user => {
+    if (user) {
+      console.log(user);
+      showApp();
+      showLoginState(user);
+
+      hideLoginError();
+    }
+    else {
+      showLoginForm();
+      lblAuthState.innerHTML = "You're not logged in.";
+
+    }
+
+  })
+const monitorAuthState = async () => {
+
+}
+
+monitorAuthState();
+
+const logout = async () => {
+  await signOut(auth);
+
+}
+
+btnLogout.addEventListener("click", logout);
+
+// Sign-in With Google:
+
+const handleGoogle = async () => {
+  const provider = await new GoogleAuthProvider();
+
+  // FUTURE:  if(desktop) = popup, elseif(mobile) = redirect
+
+  console.log('handleGoogle function triggered');
+  return signInWithPopup(auth, provider);
+
+
+}
+
+btnGoogleSignUp.addEventListener("click", handleGoogle);
+
+// Testing Firebase FireStore - Adding/Removing/Changing Data:
+
+// Adding Doc (From Firebase Docs/Reference)
+const testAddDocFunction = async () => {
+  try {
+    const docRef = await addDoc(collection(db, "users"), {
+      first: "Ada",
+      last: "Lovelace",
+      born: 1815
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+}
+btnTestingDocAdd.addEventListener("click", testAddDocFunction);
+
+// Adding a second doc
+const testAddSecondDoc = async () => {
+  try {
+    const docRef = await addDoc(collection(db, "users"), {
+      first: "Alan",
+      middle: "Mathison",
+      last: "Turing",
+      born: 1912
+    });
+  
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+}
+
+btnTestingDocAddTwo.addEventListener("click", testAddSecondDoc);
+
+// TEST:  Reading Docs
+const querySnapshot = await getDocs(collection(db, "users"));
+querySnapshot.forEach((doc) => {
+  console.log(`${doc.id} => ${doc.data()}`);
+});

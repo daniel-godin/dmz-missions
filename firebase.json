@@ -1,16 +1,16 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
     "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
+      // {
+      //   "source": "**",
+      //   "destination": "/index.html"
+      // }
     ]
   },
   "emulators": {
@@ -21,7 +21,7 @@
       "port": 8080
     },
     "hosting": {
-      "port": 5000
+      "port": 5001
     },
     "ui": {
       "enabled": true
