@@ -196,51 +196,57 @@ querySnapshot.forEach((doc) => {
 
 // TEST:  Creating Objects (maps)
 
-const dmzMissionObjectDocTemplate = {
-  redacted: {
+const dmzMissionObjectDocTemplate = [
+  {
+    factionName: "Redacted",
     status: true, // This should be true for all factions, except crown, where the user would need to own MW2 to "unlock" this set of missions.
     complete: false,
-    t1: { 
+    tier: [
+    {
+      tierName: "Tier 1",
       status: true, // true for all t1, false for all others, to start.
       complete: false,
-      mission1: {
+      missions: [
+      {
         status: false,
         complete: false,
         title: ""
       },
-      mission2: {
+      {
         status: false,
         complete: false,
         title: ""
       },
-      mission3: {
+      {
         status: false,
         complete: false,
         title: ""
       },
-      mission4: {
+      {
         status: false,
         complete: false,
         title: ""
       },
-      mission5: {
+      {
         status: false,
         complete: false,
         title: ""
       },
-      mission6: {
+      {
         status: false,
         complete: false,
         title: ""
       },
-      mission7: {
+      {
         status: false,
         complete: false,
         storyMission: true,
         title: ""
       }, 
+      ] 
     },
-    t2: { 
+    { 
+      tierName: "Tier 2",
       status: false, // true for all t1, false for all others, to start.
       complete: false,
       mission1: {
@@ -280,7 +286,8 @@ const dmzMissionObjectDocTemplate = {
         title: ""
       }, 
     },
-    t3: { 
+    { 
+      tierName: "Tier 3",
       status: false, // true for all t1, false for all others, to start.
       complete: false,
       mission1: {
@@ -320,7 +327,8 @@ const dmzMissionObjectDocTemplate = {
         title: ""
       }, 
     },
-    t4: { 
+    { 
+      tierName: "Tier 4",
       status: false, // true for all t1, false for all others, to start.
       complete: false,
       mission1: {
@@ -360,7 +368,8 @@ const dmzMissionObjectDocTemplate = {
         title: ""
       }, 
     },
-    t5: { 
+    { 
+      tierName: "Tier 5",
       status: false, // true for all t1, false for all others, to start.
       complete: false,
       mission1: {
@@ -399,825 +408,867 @@ const dmzMissionObjectDocTemplate = {
         storyMission: true,
         title: ""
       }, 
-    },
+    }
+    ] 
   },
-  whiteLotus: {
+  {
+    factionName: "White Lotus",
     status: true, // This should be true for all factions, except crown, where the user would need to own MW2 to "unlock" this set of missions.
     complete: false,
-    t1: { 
-      status: true, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
+    tier: [
+      {
+        tierName: "Tier 1",
+        status: true, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        missions: [
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
+        ] 
       },
-      mission2: {
-        status: false,
+      { 
+        tierName: "Tier 2",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
       },
-      mission3: {
-        status: false,
+      { 
+        tierName: "Tier 3",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
       },
-      mission4: {
-        status: false,
+      { 
+        tierName: "Tier 4",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
       },
-      mission5: {
-        status: false,
+      { 
+        tierName: "Tier 5",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t2: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t3: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t4: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t5: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
+      }
+    ] 
   },
-  legion: {
+  {
+    factionName: "Legion",
     status: true, // This should be true for all factions, except crown, where the user would need to own MW2 to "unlock" this set of missions.
     complete: false,
-    t1: { 
-      status: true, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
+    tier: [
+      {
+        tierName: "Tier 1",
+        status: true, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        missions: [
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
+        ] 
       },
-      mission2: {
-        status: false,
+      { 
+        tierName: "Tier 2",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
       },
-      mission3: {
-        status: false,
+      { 
+        tierName: "Tier 3",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
       },
-      mission4: {
-        status: false,
+      { 
+        tierName: "Tier 4",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
       },
-      mission5: {
-        status: false,
+      { 
+        tierName: "Tier 5",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t2: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t3: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t4: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t5: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
+      }
+    ]
   },
-  blackMous: {
+  {
+    factionName: "Black Mous",
     status: true, // This should be true for all factions, except crown, where the user would need to own MW2 to "unlock" this set of missions.
     complete: false,
-    t1: { 
-      status: true, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
+    tier: [
+      {
+        tierName: "Tier 1",
+        status: true, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        missions: [
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
+        ] 
       },
-      mission2: {
-        status: false,
+      { 
+        tierName: "Tier 2",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
       },
-      mission3: {
-        status: false,
+      { 
+        tierName: "Tier 3",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
       },
-      mission4: {
-        status: false,
+      { 
+        tierName: "Tier 4",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
       },
-      mission5: {
-        status: false,
+      { 
+        tierName: "Tier 5",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t2: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t3: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t4: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t5: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
+      }
+    ]
   },
-  crown: {
+  {
+    factionName: "Crown",
     status: false, // This should be true for all factions, except crown, where the user would need to own MW2 to "unlock" this set of missions.
     complete: false,
-    t1: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
+    tier: [
+      {
+        tierName: "Tier 1",
+        status: true, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        missions: [
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
+        ] 
       },
-      mission2: {
-        status: false,
+      { 
+        tierName: "Tier 2",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
       },
-      mission3: {
-        status: false,
+      { 
+        tierName: "Tier 3",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
       },
-      mission4: {
-        status: false,
+      { 
+        tierName: "Tier 4",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
       },
-      mission5: {
-        status: false,
+      { 
+        tierName: "Tier 5",
+        status: false, // true for all t1, false for all others, to start.
         complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t2: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t3: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t4: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
-    t5: { 
-      status: false, // true for all t1, false for all others, to start.
-      complete: false,
-      mission1: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission2: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission3: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission4: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission5: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission6: {
-        status: false,
-        complete: false,
-        title: ""
-      },
-      mission7: {
-        status: false,
-        complete: false,
-        storyMission: true,
-        title: ""
-      }, 
-    },
+        mission1: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission2: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission3: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission4: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission5: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission6: {
+          status: false,
+          complete: false,
+          title: ""
+        },
+        mission7: {
+          status: false,
+          complete: false,
+          storyMission: true,
+          title: ""
+        }, 
+      }
+    ]
   }
-};
+];
+
 
 // console.table(dmzMissionObjectDocTemplate);
 
