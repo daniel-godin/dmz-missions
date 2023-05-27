@@ -19,8 +19,14 @@ import {
   getFirestore,
   connectFirestoreEmulator,
   collection,
+  doc,
   addDoc,
-  getDocs
+  getDoc,
+  getDocs,
+  setDoc,
+  query,
+  where,
+  Timestamp
 } from 'firebase/firestore';
 
 
@@ -178,10 +184,1094 @@ const testAddSecondDoc = async () => {
   }
 }
 
-btnTestingDocAddTwo.addEventListener("click", testAddSecondDoc);
+// btnTestingDocAddTwo.addEventListener("click", testAddSecondDoc);
 
 // TEST:  Reading Docs
 const querySnapshot = await getDocs(collection(db, "users"));
+
 querySnapshot.forEach((doc) => {
   console.log(`${doc.id} => ${doc.data()}`);
 });
+
+
+// TEST:  Creating Objects (maps)
+
+const dmzMissionObjectDocTemplate = {
+  redacted: {
+    status: true, // This should be true for all factions, except crown, where the user would need to own MW2 to "unlock" this set of missions.
+    complete: false,
+    t1: { 
+      status: true, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t2: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t3: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t4: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t5: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+  },
+  whiteLotus: {
+    status: true, // This should be true for all factions, except crown, where the user would need to own MW2 to "unlock" this set of missions.
+    complete: false,
+    t1: { 
+      status: true, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t2: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t3: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t4: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t5: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+  },
+  legion: {
+    status: true, // This should be true for all factions, except crown, where the user would need to own MW2 to "unlock" this set of missions.
+    complete: false,
+    t1: { 
+      status: true, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t2: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t3: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t4: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t5: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+  },
+  blackMous: {
+    status: true, // This should be true for all factions, except crown, where the user would need to own MW2 to "unlock" this set of missions.
+    complete: false,
+    t1: { 
+      status: true, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t2: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t3: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t4: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t5: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+  },
+  crown: {
+    status: false, // This should be true for all factions, except crown, where the user would need to own MW2 to "unlock" this set of missions.
+    complete: false,
+    t1: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t2: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t3: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t4: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+    t5: { 
+      status: false, // true for all t1, false for all others, to start.
+      complete: false,
+      mission1: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission2: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission3: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission4: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission5: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission6: {
+        status: false,
+        complete: false,
+        title: ""
+      },
+      mission7: {
+        status: false,
+        complete: false,
+        storyMission: true,
+        title: ""
+      }, 
+    },
+  }
+};
+
+// console.table(dmzMissionObjectDocTemplate);
+
+// await setDoc(doc(db, 'users', 'test-template-UID', 'mw2-trackers', 'dmzMissionsTemplate'), dmzMissionObjectDocTemplate);
+
+const docRef = doc(db, 'users', 'test-template-UID', 'mw2-trackers', 'dmzMissionsTemplate');
+const docSnap = await getDoc(docRef);
+
+if (docSnap.exists()) {
+  console.table("Document data:", docSnap.data());
+} else {
+  // docSnap.data() will be undefined in this case
+  console.log("No such document!");
+}
+
+// JS File Creates entire Grid in div 'testing-dmz-data'
+
+const testDMZDataContainer = document.getElementById('testDMZDataContainer');
+
+function createDMZDataGrid () {
+  console.log('create dmz grid function working');
+
+
+
+
+
+  // let dataIWant = docSnap.data().blackMous.t2.mission2.title;
+
+  for (let i = 1; i < 8; i++) {
+    let thing = docSnap.data().blackMous.t[i].mission[i].title;
+    console.log(thing);
+  }
+
+
+
+
+
+  // console.log(dataIWant);
+
+
+  // let q = query(docRef, where(""))
+
+  testDMZDataContainer.insertAdjacentHTML('afterbegin', `
+    <h1>DMZ DATA GRID INSERT HTML WORKING</h1>
+  
+  
+  `
+      
+    )
+}
+
+
+createDMZDataGrid();
+
+
+
+
