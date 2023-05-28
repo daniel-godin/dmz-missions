@@ -4,2651 +4,980 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DMZ Mission Tracker - By Daniel Godin</title>
+  <title>DMZ Missions Tracker - Keep Track Of Your Progress and Share With Others</title>
   <link rel='stylesheet' href='./style.css'>
 </head>
 <body>
-  <div class='page-container'>
-    <!-- <div class='nav-container'></div>
-    <div class='header-container'></div> -->
+<div class='page-container'>
+  <!-- HEADER - Saving This For Later Use <div class='header-container'></div>  -->
 
-    <div class='content-container' id='contentContainer'>
-      <!-- 
-        Desktop Version:  
-          5 columns (one for each faction).  
-          Inside each column should have 3-5 'tiers' for each tier. 
-          Inside each 'tier box' should have 2 divs - 1 for the tier title, progress %, and a "dropdown/pullup" button, 2nd for displaying the missions and checking off complete/incomplete.
-          Each Mission should have a checkbox next to it, the title of the mission, the quick description of the mission, and full description of mission and/or links to "how to complete" videos.
-      -->
-      <!-- 
-        Factions:
-          Redacted
-          White Lotus
-          Legion
-          Black Mous
-          Crown
-      -->
-
-      <div class="faction-column" id="redactedColumn">
-        
-      </div>
-      <div class="faction-column" id="whiteLotusColumn">
-        <div class="tier-container" id="whiteLotusT1Container">
-          <div class="tier-header-container">
-            <header class="tier-header">White Lotus T1:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
-          </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+  <!-- Content:  DMZ Missions Checklist/Grid -->
+  <div class='entire-dmz-missions-container content-container'>
+    <div class='faction-container' id='redactedFactionContainer'>
+      <!-- Redacted Tier 1 -->
+      <div class="tier-container" id='redactedTier1Container'>
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 1:</header>
+          <div class="tier-progress"></div>
         </div>
-        <div class="tier-container" id="whiteLotusT2Container">
-          <div class="tier-header-container">
-            <header class="tier-header">White Lotus T2:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
+        <div class="missions-container" id="redactedTier1MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Upgraded Arsenal</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Dealmaker</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-        </div>
-        <div class="tier-container" id="whiteLotusT3Container">
-          <div class="tier-header-container">
-            <header class="tier-header">White Lotus T3:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
+          <div class="mission-container">
+            <header class="mission-title">Cartel Investigation</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Well Supplied Soldier</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-        </div>
-        <div class="tier-container" id="whiteLotusT4Container">
-          <div class="tier-header-container">
-            <header class="tier-header">White Lotus T4:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
+          <div class="mission-container">
+            <header class="mission-title">Calling Card</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Unstoppable Force</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-        </div>
-        <div class="tier-container" id="whiteLotusT5Container">
-          <div class="tier-header-container">
-            <header class="tier-header">White Lotus T5:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
-          </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Zero Tolerance (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
         </div>
       </div>
-      <div class="faction-column" id="legionColumn">
-        <div class="tier-container" id="legionT1Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Legion T1:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
+      <!-- Redacted Tier 2 -->
+      <div class="tier-container" id="redactedTier2Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 2:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier2MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">In Good Health and Spirits</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Smoking Gun</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Reconnaissance by Fire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dark Water</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Flight Risk</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Chaffeur</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Left High and Dry (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
         </div>
-        <div class="tier-container" id="legionT2Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Legion T2:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
-          </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+
+      </div>
+      <!-- Redacted Tier 3 -->
+      <div class="tier-container" id="redactedTier3Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 3:</header>
+          <div class="tier-progress"></div>
         </div>
-        <div class="tier-container" id="legionT3Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Legion T3:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
+        <div class="missions-container" id="redactedTier3MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Friendly Fire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Gear Up</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-        </div>
-        <div class="tier-container" id="legionT4Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Legion T4:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
+          <div class="mission-container">
+            <header class="mission-title">Double Cross</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Rain and Hellfire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-        </div>
-        <div class="tier-container" id="legionT5Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Legion T5:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
+          <div class="mission-container">
+            <header class="mission-title">One Shot, One Kill</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Fair Fight</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Excavation (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
         </div>
       </div>
-      <div class="faction-column" id="blackMousColumn">
-        <div class="tier-container" id="blackMousT1Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Black Mous T1:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
-          </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+      <!-- Redacted Tier 4 -->
+      <div class="tier-container" id="redactedTier4Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 4:</header>
+          <div class="tier-progress"></div>
         </div>
-        <div class="tier-container" id="blackMousT2Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Black Mous T2:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
+        <div class="missions-container" id="redactedTier4MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Bedrock</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Archaeologist</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-        </div>
-        <div class="tier-container" id="blackMousT3Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Black Mous T3:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
+          <div class="mission-container">
+            <header class="mission-title">Leaked Documents</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Tunnel Rats</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-        </div>
-        <div class="tier-container" id="blackMousT4Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Black Mous T4:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
+          <div class="mission-container">
+            <header class="mission-title">Brothers In Arms</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Abandoned Operator</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-        </div>
-        <div class="tier-container" id="blackMousT5Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Black Mous T5:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
-          </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Infrared (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
         </div>
       </div>
-      <div class="faction-column" id="crownColumn">
-        <div class="tier-container" id="crownT1Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Crown T1:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
-          </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+      <!-- Redacted Tier 5 -->
+      <div class="tier-container" id="redactedTier5Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 5:</header>
+          <div class="tier-progress"></div>
         </div>
-        <div class="tier-container" id="crownT2Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Crown T2:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
+        <div class="missions-container" id="redactedTier5MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Case The Place</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Chemical Sourcing</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-        </div>
-        <div class="tier-container" id="crownT3Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Crown T3:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
+          <div class="mission-container">
+            <header class="mission-title">Pet Rescue</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Unrestricted Access</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-        </div>
-        <div class="tier-container" id="crownT4Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Crown T4:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
+          <div class="mission-container">
+            <header class="mission-title">Dry Eyes</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Irradiated Waters</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
-        </div>
-        <div class="tier-container" id="crownT5Container">
-          <div class="tier-header-container">
-            <header class="tier-header">Crown T5:</header>
-            <span class='tier-status-container'><p class='tier-status' id='redactedT1Progress'></p></span>
-            
-          </div>
-          <div class="tier-missions-container hidden">
-            <form action="" class="mission-form" id="redactedT1Form">
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-container">
-                <div class="mission-title-container">
-                  <header class='mission-title'>Mission Title:</header>
-                  <input type='checkbox' class='mission-checkbox' name='' value=''>
-                </div>
-                <div class="mission-content-container">
-                  <div class="mission-description"></div>
-                  <div class="mission-objectives-container">
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                    <div class="mission-objective hidden"></div>
-                  </div>
-                  <div class="mission-help-container hidden">
-                    <div class="mission-help-links"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="mission-container">
+            <header class="mission-title">Red Smoke (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
           </div>
         </div>
       </div>
-
-
-
-
-
-
     </div>
-    <div class="footer-container"></div>
+
+    <!-- TEMPORARY COPIES OF REDACTED, FOR FORMATTING, USE OTHER FILLED IN FACTIONS LATER -->
+    <div class='faction-container' id='redactedFactionContainer2'>
+      <!-- Redacted Tier 1 -->
+      <div class="tier-container" id='redactedTier1Container'>
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 1:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier1MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Upgraded Arsenal</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dealmaker</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Cartel Investigation</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Well Supplied Soldier</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Calling Card</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Unstoppable Force</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Zero Tolerance (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 2 -->
+      <div class="tier-container" id="redactedTier2Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 2:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier2MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">In Good Health and Spirits</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Smoking Gun</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Reconnaissance by Fire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dark Water</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Flight Risk</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Chaffeur</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Left High and Dry (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+
+      </div>
+      <!-- Redacted Tier 3 -->
+      <div class="tier-container" id="redactedTier3Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 3:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier3MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Friendly Fire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Gear Up</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Double Cross</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Rain and Hellfire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">One Shot, One Kill</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Fair Fight</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Excavation (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 4 -->
+      <div class="tier-container" id="redactedTier4Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 4:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier4MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Bedrock</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Archaeologist</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Leaked Documents</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Tunnel Rats</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Brothers In Arms</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Abandoned Operator</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Infrared (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 5 -->
+      <div class="tier-container" id="redactedTier5Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 5:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier5MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Case The Place</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Chemical Sourcing</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Pet Rescue</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Unrestricted Access</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dry Eyes</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Irradiated Waters</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Red Smoke (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='faction-container' id='redactedFactionContainer3'>
+      <!-- Redacted Tier 1 -->
+      <div class="tier-container" id='redactedTier1Container'>
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 1:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier1MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Upgraded Arsenal</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dealmaker</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Cartel Investigation</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Well Supplied Soldier</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Calling Card</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Unstoppable Force</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Zero Tolerance (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 2 -->
+      <div class="tier-container" id="redactedTier2Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 2:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier2MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">In Good Health and Spirits</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Smoking Gun</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Reconnaissance by Fire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dark Water</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Flight Risk</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Chaffeur</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Left High and Dry (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+
+      </div>
+      <!-- Redacted Tier 3 -->
+      <div class="tier-container" id="redactedTier3Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 3:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier3MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Friendly Fire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Gear Up</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Double Cross</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Rain and Hellfire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">One Shot, One Kill</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Fair Fight</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Excavation (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 4 -->
+      <div class="tier-container" id="redactedTier4Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 4:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier4MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Bedrock</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Archaeologist</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Leaked Documents</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Tunnel Rats</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Brothers In Arms</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Abandoned Operator</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Infrared (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 5 -->
+      <div class="tier-container" id="redactedTier5Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 5:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier5MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Case The Place</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Chemical Sourcing</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Pet Rescue</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Unrestricted Access</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dry Eyes</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Irradiated Waters</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Red Smoke (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='faction-container' id='redactedFactionContainer4'>
+      <!-- Redacted Tier 1 -->
+      <div class="tier-container" id='redactedTier1Container'>
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 1:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier1MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Upgraded Arsenal</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dealmaker</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Cartel Investigation</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Well Supplied Soldier</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Calling Card</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Unstoppable Force</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Zero Tolerance (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 2 -->
+      <div class="tier-container" id="redactedTier2Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 2:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier2MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">In Good Health and Spirits</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Smoking Gun</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Reconnaissance by Fire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dark Water</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Flight Risk</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Chaffeur</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Left High and Dry (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+
+      </div>
+      <!-- Redacted Tier 3 -->
+      <div class="tier-container" id="redactedTier3Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 3:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier3MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Friendly Fire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Gear Up</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Double Cross</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Rain and Hellfire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">One Shot, One Kill</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Fair Fight</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Excavation (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 4 -->
+      <div class="tier-container" id="redactedTier4Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 4:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier4MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Bedrock</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Archaeologist</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Leaked Documents</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Tunnel Rats</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Brothers In Arms</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Abandoned Operator</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Infrared (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 5 -->
+      <div class="tier-container" id="redactedTier5Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 5:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier5MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Case The Place</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Chemical Sourcing</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Pet Rescue</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Unrestricted Access</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dry Eyes</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Irradiated Waters</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Red Smoke (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='faction-container' id='redactedFactionContainer5'>
+      <!-- Redacted Tier 1 -->
+      <div class="tier-container" id='redactedTier1Container'>
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 1:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier1MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Upgraded Arsenal</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dealmaker</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Cartel Investigation</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Well Supplied Soldier</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Calling Card</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Unstoppable Force</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Zero Tolerance (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 2 -->
+      <div class="tier-container" id="redactedTier2Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 2:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier2MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">In Good Health and Spirits</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Smoking Gun</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Reconnaissance by Fire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dark Water</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Flight Risk</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Chaffeur</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Left High and Dry (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+
+      </div>
+      <!-- Redacted Tier 3 -->
+      <div class="tier-container" id="redactedTier3Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 3:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier3MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Friendly Fire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Gear Up</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Double Cross</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Rain and Hellfire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">One Shot, One Kill</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Fair Fight</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Excavation (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 4 -->
+      <div class="tier-container" id="redactedTier4Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 4:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier4MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Bedrock</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Archaeologist</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Leaked Documents</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Tunnel Rats</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Brothers In Arms</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Abandoned Operator</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Infrared (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 5 -->
+      <div class="tier-container" id="redactedTier5Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 5:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier5MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Case The Place</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Chemical Sourcing</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Pet Rescue</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Unrestricted Access</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dry Eyes</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Irradiated Waters</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Red Smoke (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ABOVE IS TEMPORARY -- IMPORTANT! -->
+
+
+
+
+
+
+    <!-- Fill Other Factions In Later.  Placeholders For Now For Formating. -->
+    <div class="faction-container"></div>
+    <div class="faction-container"></div>
+    <div class="faction-container"></div>
+    <div class="faction-container"></div>
+
+
+
+
+
+
+
   </div>
-<script src='bundle.js'></script>
+
+  <!-- FOOTER - SAVE FOR LATER <div class='footer-container'></div> -->
+
+</div> 
 </body>
 </html>
