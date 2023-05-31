@@ -97,12 +97,11 @@ const createAccount = async () => {
 
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
-    console.log(userCredential.user.uid);
+    console.log(userCredential.user);
     // const newUser = new User(userName, userEmail, userRole, []);
-    // await setDoc(doc(db, 'users', userCredential.user.uid), { })
-    await setDoc(doc(db, 'users', userCredential.user.uid, 'mw2-trackers', 'dmzMissions'), { });
+    await setDoc(doc(db, 'users', userCredential.user.uid, 'mw2-trackers', 'dmzMissions'), { dmzMissionObjectDocTemplate });
 
-    // initialDatabaseSetUp(userCredential.user.uid)
+    // initialDatabaseSetUp(userCredential.user.uid) - Experimenting to call a function, instead of doing this INSIDE of the signup thing.  Later I will do this after a verification email is confirmed.
   }
   catch(error) {
     console.log(error);
