@@ -3134,7 +3134,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Favor for a Friend",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3159,7 +3159,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "The Ultimate Weapon",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3184,7 +3184,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Unarmed and Dangerous",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3209,7 +3209,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Vintage Connoisseur",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3234,7 +3234,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Substantial Findings",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3259,7 +3259,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Paperweights",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3285,7 +3285,7 @@ const fullMissionInformation = {
           status: false,
           complete: false,
           storyMission: true,
-          title: "Title (STORY)",
+          title: "Medical Diagnosis (STORY)",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3317,7 +3317,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Eyes and Ears",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3342,7 +3342,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Delivery Problem",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3367,7 +3367,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Eye in the Sky",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3392,7 +3392,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Handshake Deals",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3417,7 +3417,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Breaking and Entering",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3442,7 +3442,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Failed Bombing",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3468,7 +3468,7 @@ const fullMissionInformation = {
           status: false,
           complete: false,
           storyMission: true,
-          title: "Title (STORY)",
+          title: "The Trinity (STORY)",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3500,7 +3500,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Lone Hunter",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3525,7 +3525,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "The Client Is King",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3550,7 +3550,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Weapon Chase",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3575,7 +3575,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "For the Taking",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3600,7 +3600,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Hunting Party",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3625,7 +3625,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Flight Plans",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3651,7 +3651,7 @@ const fullMissionInformation = {
           status: false,
           complete: false,
           storyMission: true,
-          title: "Title (STORY)",
+          title: "Positive ID (STORY)",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3686,7 +3686,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Arms Trading",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3711,7 +3711,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Golden Ticket",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3736,7 +3736,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Non-Discriminatory",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3761,7 +3761,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Recon Flyover",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3786,7 +3786,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "M4 Weapons Testing",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3811,7 +3811,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Whistleblower",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3837,7 +3837,7 @@ const fullMissionInformation = {
           status: false,
           complete: false,
           storyMission: true,
-          title: "Title (STORY)",
+          title: "Piracy (STORY)",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3869,7 +3869,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Sample Platter",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3894,7 +3894,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Kastov Weapons Testing",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3919,7 +3919,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Vehicular Manslaughter",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3944,7 +3944,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Intel Exchange",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3969,7 +3969,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Boring Operation",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -3994,7 +3994,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Electric Sheep",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4020,7 +4020,7 @@ const fullMissionInformation = {
           status: false,
           complete: false,
           storyMission: true,
-          title: "Title (STORY)",
+          title: "Salvager (STORY)",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4052,7 +4052,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Lachmann Weapons Testing",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4077,7 +4077,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "False Alarm",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4102,7 +4102,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Delicate Movement",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4127,7 +4127,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Crown's Eye",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4152,7 +4152,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Exposé",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4177,7 +4177,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "No Traipsing to Trapper",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4203,7 +4203,7 @@ const fullMissionInformation = {
           status: false,
           complete: false,
           storyMission: true,
-          title: "Title (STORY)",
+          title: "Exfil Tracking (STORY)",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4235,7 +4235,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Flyboy",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4260,7 +4260,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "The Deadliest Sin",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4285,7 +4285,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Predator",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4310,7 +4310,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Decryption",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4335,7 +4335,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "The Pound",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4360,7 +4360,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Termination",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4386,7 +4386,7 @@ const fullMissionInformation = {
           status: false,
           complete: false,
           storyMission: true,
-          title: "Title (STORY)",
+          title: "Boating and Entering (STORY)",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4418,7 +4418,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Mass Extinction Event",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4443,7 +4443,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "All's Fair",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4468,7 +4468,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Escape Master",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4493,7 +4493,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Outsourcing",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4518,7 +4518,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "The Golden Rule",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4543,7 +4543,7 @@ const fullMissionInformation = {
         {
           status: false,
           complete: false,
-          title: "Title",
+          title: "Case By Case",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -4569,7 +4569,7 @@ const fullMissionInformation = {
           status: false,
           complete: false,
           storyMission: true,
-          title: "Title (STORY)",
+          title: "Data Wipe (STORY)",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
