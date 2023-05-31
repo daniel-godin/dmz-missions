@@ -97,7 +97,12 @@ const createAccount = async () => {
 
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
-    console.log(userCredential.user);
+    console.log(userCredential.user.uid);
+    // const newUser = new User(userName, userEmail, userRole, []);
+    // await setDoc(doc(db, 'users', userCredential.user.uid), { })
+    await setDoc(doc(db, 'users', userCredential.user.uid, 'mw2-trackers', 'dmzMissions'), { });
+
+    // initialDatabaseSetUp(userCredential.user.uid)
   }
   catch(error) {
     console.log(error);
@@ -105,6 +110,10 @@ const createAccount = async () => {
   }
 }
 btnSignup.addEventListener("click", createAccount);
+
+// function initialDatabaseSetUp (UID) {
+//   setDoc(doc(db, 'users', UID, 'mw2-trackers', 'dmzMissions'));
+// }
 
 onAuthStateChanged(auth, user => {
   if (user) {
