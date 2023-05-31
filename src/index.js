@@ -101,7 +101,7 @@ const createAccount = async () => {
     // const newUser = new User(userName, userEmail, userRole, []);
     await setDoc(doc(db, 'users', userCredential.user.uid, 'mw2-trackers', 'dmzMissions'), { });
 
-    await initialDatabaseSetUp(userCredential.user.uid) // Experimenting to call a function, instead of doing this INSIDE of the signup thing.  Later I will do this after a verification email is confirmed.
+    await initialDatabaseSetUp(userCredential) // Experimenting to call a function, instead of doing this INSIDE of the signup thing.  Later I will do this after a verification email is confirmed.
   }
   catch(error) {
     console.log(error);
@@ -110,9 +110,16 @@ const createAccount = async () => {
 }
 btnSignup.addEventListener("click", createAccount);
 
-function initialDatabaseSetUp (uid) {
+function initialDatabaseSetUp (userCredentials) {
+  let uid = userCredentials.user.uid;
+  const newUser = {
+    userName: userCredentials.user.displayName,
+    userEmail: userCredentials.user.email,
+    signedUp: "time"
+  }
+  setDoc(doc(db, 'users', uid), { newUser });
   setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissions'), { dmzMissionObjectDocTemplate });
-  // setDoc(doc(db, 'users'))
+  
 
 }
 
