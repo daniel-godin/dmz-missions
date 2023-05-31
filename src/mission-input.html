@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INTERNAL - MISSION INPUT</title>
+  <style>
+    input[type='radio'] {
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+<div class='page-container'>
+  <div class='form-container'>
+    <form class='mission-form' id='missionForm'>
+      <fieldset id='factionGroup'>
+        <legend>Faction:</legend>
+        <input type="radio" class="faction-choice radio" id='redacted' value='Redacted' name='faction'>
+        <label for='redacted'>Redacted</label><br>
+        <input type="radio" class="faction-choice radio" id='whiteLotus' value='White Lotus' name='faction'>
+        <label for='whiteLotus'>White Lotus</label><br>
+        <input type="radio" class="faction-choice radio" id='legion' value='Legion' name='faction'>
+        <label for='legion'>Legion</label><br>
+        <input type="radio" class="faction-choice radio" id='blackMous' value='Black Mous' name='faction'>
+        <label for='blackMous'>Black Mous</label><br>
+        <input type="radio" class="faction-choice radio" id='crown' value='Crown' name='faction'>
+        <label for='crown'>Crown</label>
+        
+      </fieldset>
+
+      <fieldset id='tierGroup'>
+        <legend>Tier:</legend>
+        input[type='radio']*5+label*5+br*5
+
+
+
+
+
+
+      </fieldset>
+
+
+
+
+      <label for="">Tier:
+        <input type="radio">
+      </label>
+      <label for="">Title:
+        <input type="text">
+    </label>
+      <label for="">Short Description:
+        <input type="text">
+      </label>
+      <label for="">Long Description
+        <input type="textarea">
+      </label>
+      <fieldset>
+        <label for=''>Objective 1:
+          <input type='text'>
+        </label>
+        <label for=''>Objective 2:
+          <input type='text'>
+        </label>
+        <label for=''>Objective 3:
+          <input type='text'>
+        </label>
+
+      </fieldset>
+
+
+
+
+
+
+
+      <button type='submit' id='btnSubmitMission'>Submit Mission</button>
+    </form>
+  </div>
+</div> 
+</body>
+</html>
