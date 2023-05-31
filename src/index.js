@@ -115,6 +115,8 @@ function initialDatabaseSetUp (userCredentials) {
   const newUser = {
     userName: userCredentials.user.displayName,
     userEmail: userCredentials.user.email,
+    userActivisionId: "",
+    userRegion: "",
     signedUp: "time"
   }
   setDoc(doc(db, 'users', uid), { newUser });
@@ -158,4 +160,8 @@ const handleGoogle = async () => {
   return signInWithPopup(auth, provider);
 }
 btnGoogleSignUp.addEventListener("click", handleGoogle);
+
+// Testing:
+
+
 

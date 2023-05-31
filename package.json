@@ -1,6 +1,9 @@
 {
   "dependencies": {
-    "firebase": "^9.22.0"
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "firebase": "^9.22.0",
+    "pretty": "^2.0.0"
   },
   "name": "dmz-missions",
   "version": "1.0.0",
