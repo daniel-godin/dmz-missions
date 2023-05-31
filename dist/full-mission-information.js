@@ -163,7 +163,7 @@ const fullMissionInformation = {
           status: false,
           complete: false,
           storyMission: true,
-          title: "Zero Tolerance",
+          title: "Zero Tolerance (STORY)",
           shortDescription: "",
           fullDescription: "",
           missionObjectives: [
@@ -185,7 +185,6 @@ const fullMissionInformation = {
           ],
           tags: [ ],
         },
-
       ]
     },
     tier2: {
@@ -4667,53 +4666,51 @@ function createMissionGrid (missionsArr, tierContainer) {
     let complete = missionsArr[i].complete;
 
     if (complete === true) {
-      tierContainer.insertAdjacentHTML('afterbegin', `
+      tierContainer.insertAdjacentHTML('beforeend', `
         <div class="mission-container">
           <header class="mission-title">${title}</header>
           <input type="checkbox" name="" id="" class="mission-progress" checked>
         </div>`
     )} else {
-      tierContainer.insertAdjacentHTML('afterbegin', `
+      tierContainer.insertAdjacentHTML('beforeend', `
         <div class="mission-container">
           <header class="mission-title">${title}</header>
           <input type="checkbox" name="" id="" class="mission-progress">
         </div>`
     )}}
-    // console.log(missionsArray[i].title);
-    // console.log(missionsArray[i].complete);
 }
 
-// createMissionGrid(redactedTier1MissionsArray, redactedTier1Container);
-// createMissionGrid(redactedTier2MissionsArray, redactedTier2Container);
-// createMissionGrid(redactedTier3MissionsArray, redactedTier3Container);
-// createMissionGrid(redactedTier4MissionsArray, redactedTier4Container);
-// createMissionGrid(redactedTier5MissionsArray, redactedTier5Container);
+createMissionGrid(redactedTier1MissionsArray, redactedTier1Container);
+createMissionGrid(redactedTier2MissionsArray, redactedTier2Container);
+createMissionGrid(redactedTier3MissionsArray, redactedTier3Container);
+createMissionGrid(redactedTier4MissionsArray, redactedTier4Container);
+createMissionGrid(redactedTier5MissionsArray, redactedTier5Container);
 
-// createMissionGrid(whiteLotusTier1MissionsArray, whiteLotusTier1Container);
-// createMissionGrid(whiteLotusTier2MissionsArray, whiteLotusTier2Container);
-// createMissionGrid(whiteLotusTier3MissionsArray, whiteLotusTier3Container);
-// createMissionGrid(whiteLotusTier4MissionsArray, whiteLotusTier4Container);
-// createMissionGrid(whiteLotusTier5MissionsArray, whiteLotusTier5Container);
+createMissionGrid(whiteLotusTier1MissionsArray, whiteLotusTier1Container);
+createMissionGrid(whiteLotusTier2MissionsArray, whiteLotusTier2Container);
+createMissionGrid(whiteLotusTier3MissionsArray, whiteLotusTier3Container);
+createMissionGrid(whiteLotusTier4MissionsArray, whiteLotusTier4Container);
+createMissionGrid(whiteLotusTier5MissionsArray, whiteLotusTier5Container);
 
-// createMissionGrid(legionTier1MissionsArray, legionTier1Container);
-// createMissionGrid(legionTier2MissionsArray, legionTier2Container);
-// createMissionGrid(legionTier3MissionsArray, legionTier3Container);
-// createMissionGrid(legionTier4MissionsArray, legionTier4Container);
-// createMissionGrid(legionTier5MissionsArray, legionTier5Container);
-
-
-// createMissionGrid(blackMousTier1MissionsArray, blackMousTier1Container);
-// createMissionGrid(blackMousTier2MissionsArray, blackMousTier2Container);
-// createMissionGrid(blackMousTier3MissionsArray, blackMousTier3Container);
-// createMissionGrid(blackMousTier4MissionsArray, blackMousTier4Container);
-// createMissionGrid(blackMousTier5MissionsArray, blackMousTier5Container);
+createMissionGrid(legionTier1MissionsArray, legionTier1Container);
+createMissionGrid(legionTier2MissionsArray, legionTier2Container);
+createMissionGrid(legionTier3MissionsArray, legionTier3Container);
+createMissionGrid(legionTier4MissionsArray, legionTier4Container);
+createMissionGrid(legionTier5MissionsArray, legionTier5Container);
 
 
-// createMissionGrid(crownTier1MissionsArray, crownTier1Container);
-// createMissionGrid(crownTier2MissionsArray, crownTier2Container);
-// createMissionGrid(crownTier3MissionsArray, crownTier3Container);
-// createMissionGrid(crownTier4MissionsArray, crownTier4Container);
-// createMissionGrid(crownTier5MissionsArray, crownTier5Container);
+createMissionGrid(blackMousTier1MissionsArray, blackMousTier1Container);
+createMissionGrid(blackMousTier2MissionsArray, blackMousTier2Container);
+createMissionGrid(blackMousTier3MissionsArray, blackMousTier3Container);
+createMissionGrid(blackMousTier4MissionsArray, blackMousTier4Container);
+createMissionGrid(blackMousTier5MissionsArray, blackMousTier5Container);
+
+
+createMissionGrid(crownTier1MissionsArray, crownTier1Container);
+createMissionGrid(crownTier2MissionsArray, crownTier2Container);
+createMissionGrid(crownTier3MissionsArray, crownTier3Container);
+createMissionGrid(crownTier4MissionsArray, crownTier4Container);
+createMissionGrid(crownTier5MissionsArray, crownTier5Container);
 
 
 
