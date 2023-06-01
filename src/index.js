@@ -30,11 +30,7 @@ import {
   Timestamp
 } from 'firebase/firestore';
 
-// DMZ Missions List Object.  Nested Objects and arrays.  Basically, what I want the db (firestore) doc to look like.  UID > mw2-trackers > dmzMissions (doc).
-import {
-  dmzMissionObjectDocTemplate
-} from './dmz-missions-list';
-
+// DMZ Missions Imports
 import { dmzMissionInformation } from "./full-mission-information";
 
 import {
@@ -64,6 +60,7 @@ import {
   crownTier3Container,
   crownTier4Container,
   crownTier5Container,
+  missionCheckboxArray,
 } from "./dmz-missions-ui";
 
 // Import Non-Firebase Code From Other Files:  THIS IS ONLY FOR TESTING, THIS IS THE OFFICIAL VIDEO GITHUB CODE.
@@ -104,10 +101,10 @@ const db = getFirestore(app);
 connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
 connectFirestoreEmulator(db, 'localhost', 8080);
 
+// Early Console.log Check.  Before lots of code executes or gets stuck.
+console.log('Early console log check, before lots of code executes or gets stuck');
+
 // App Configurations:
-
-console.log('DOES THIS WORK?');
-
 // Setting Up Auth From Video:
 const loginEmailPassword = async () => {
   const loginEmail = txtEmail.value;
@@ -121,7 +118,6 @@ const loginEmailPassword = async () => {
     showLoginError(error);
   }
 }
-
 
 const createAccount = async () => {
   const loginEmail = txtEmail.value;
@@ -138,7 +134,6 @@ const createAccount = async () => {
     showLoginError(error);
   }
 }
-
 
 function initialDatabaseSetUp (userCredentials) {
   let uid = userCredentials.user.uid;
@@ -237,6 +232,17 @@ onAuthStateChanged(auth, user => {
         
         console.log('User Signed In and Mission Grid Created');
 
+        const missionCheckboxArray = document.getElementsByClassName('mission-progress');
+
+        for (let i = 0; i < missionCheckboxArray.length; i++) {
+          missionCheckboxArray[i].addEventListener('click', (e) => {
+            let tar = e.target;
+
+
+            console.log(tar);
+            console.log('checkbox listener working');
+        })}
+
       } else {
         // docSnap.data() will be undefined in this case
         console.log("No such document!");
@@ -247,6 +253,8 @@ onAuthStateChanged(auth, user => {
 
     };
     dmzMissionDocRef(user);
+
+    
 
   }
   else {
@@ -264,7 +272,6 @@ const logout = async () => {
   await signOut(auth);
 
 }
-btnLogout.addEventListener("click", logout);
 
 // Sign-in With Google:
 
@@ -274,12 +281,14 @@ const handleGoogle = async () => {
   // FUTURE:  if(desktop) = popup, elseif(mobile) = redirect
   return signInWithPopup(auth, provider);
 }
-btnGoogleSignUp.addEventListener("click", handleGoogle);
 
 // Testing:
 
 
-
+// function changeMissionComplete (e) {
+//   let answer = e.target;
+//   console.log(answer);
+// }
 
 
 console.log('IS THIS EVEN WORKING?!?!?');
@@ -288,5 +297,7 @@ console.log('IS THIS EVEN WORKING?!?!?');
 
 
 
-btnLogin.addEventListener("click", loginEmailPassword);
-btnSignup.addEventListener("click", createAccount);
+// btnLogin.addEventListener("click", loginEmailPassword);
+// btnSignup.addEventListener("click", createAccount);
+// btnLogout.addEventListener("click", logout);
+// btnGoogleSignUp.addEventListener("click", handleGoogle);
