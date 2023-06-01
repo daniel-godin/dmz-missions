@@ -35,9 +35,10 @@ import {
   dmzMissionObjectDocTemplate
 } from './dmz-missions-list';
 
+import { dmzMissionInformation } from "./full-mission-information";
+
 import {
   createMissionGrid,
-  dmzMissionInformation,
   redactedTier1Container,
   redactedTier2Container,
   redactedTier3Container,
@@ -63,7 +64,7 @@ import {
   crownTier3Container,
   crownTier4Container,
   crownTier5Container,
-} from "./full-mission-information";
+} from "./dmz-missions-ui";
 
 // Import Non-Firebase Code From Other Files:  THIS IS ONLY FOR TESTING, THIS IS THE OFFICIAL VIDEO GITHUB CODE.
 // Open-source Firebase log-in code.  For testing and getting it working.  Will replace all of this from 'ui' later.
@@ -239,6 +240,9 @@ onAuthStateChanged(auth, user => {
       } else {
         // docSnap.data() will be undefined in this case
         console.log("No such document!");
+
+        // Possibly load the entire grid... WITHOUT checkboxes, along with a header that says "Not logged in - log in to keep track of your progress".
+
       }
 
     };
