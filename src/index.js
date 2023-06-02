@@ -61,23 +61,28 @@ import {
   crownTier4Container,
   crownTier5Container,
   missionCheckboxArray,
+  authContainer,
+  txtEmail,
+  txtPassword,
+  errorBox,
+  createAuthBox,
 } from "./dmz-missions-ui";
 
 // Import Non-Firebase Code From Other Files:  THIS IS ONLY FOR TESTING, THIS IS THE OFFICIAL VIDEO GITHUB CODE.
 // Open-source Firebase log-in code.  For testing and getting it working.  Will replace all of this from 'ui' later.
-import { 
-  hideLoginError,
-  showLoginState,
-  showLoginForm,
-  showApp,
-  showLoginError,
-  btnLogin,
-  btnSignup,
-  btnGoogleSignUp,
-  btnLogout,
-  txtPassword, 
-  lblAuthState,
-} from "./ui";
+// import { 
+//   hideLoginError,
+//   showLoginState,
+//   showLoginForm,
+//   showApp,
+//   showLoginError,
+//   btnLogin,
+//   btnSignup,
+//   btnGoogleSignUp,
+//   btnLogout,
+//   txtPassword, 
+//   lblAuthState,
+// } from "./ui";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -403,3 +408,6 @@ console.log('IS THIS EVEN WORKING?!?!?');
 // btnSignup.addEventListener("click", createAccount);
 // btnLogout.addEventListener("click", logout);
 // btnGoogleSignUp.addEventListener("click", handleGoogle);
+
+
+createAuthBox(authContainer);

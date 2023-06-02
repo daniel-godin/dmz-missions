@@ -55,6 +55,32 @@ nav {
   justify-content: space-evenly;
 }
 
+#authContainer {
+  border: 1px solid red;
+  background-color: beige;
+  width: 50%;
+  height: 50%;
+  justify-self: center;
+  align-self: center;
+  padding: 2rem;
+}
+
+#formDMZLogIn {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.25rem;
+}
+
+button {
+  width: 75%;
+  padding: 0.5rem;
+  justify-self: center;
+}
 
 
 .content-container {
