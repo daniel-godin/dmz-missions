@@ -82,6 +82,11 @@ button {
   justify-self: center;
 }
 
+#btnSignOut {
+  width: 100px;
+  padding: 0.25rem;
+  justify-self: none;
+}
 
 .content-container {
   width: 95%;

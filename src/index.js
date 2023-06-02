@@ -65,7 +65,19 @@ import {
   txtEmail,
   txtPassword,
   errorBox,
+  errorMessage,
   createAuthBox,
+  profileLinkContainer,
+  dmzMissionsContainer,
+  showLoginForm,
+  showApp,
+  hideLoginError,
+  showLoginError,
+  showLoginState,
+  btnLogIn,
+  btnSignUp,
+  btnSignOut,
+  btnGoogleSignIn,
 } from "./dmz-missions-ui";
 
 // Import Non-Firebase Code From Other Files:  THIS IS ONLY FOR TESTING, THIS IS THE OFFICIAL VIDEO GITHUB CODE.
@@ -158,9 +170,9 @@ function initialDatabaseSetUp (userCredentials) {
 onAuthStateChanged(auth, user => {
   if (user) {
     console.log();
-    // showApp();
-    // showLoginState(user);
-    // hideLoginError();
+    showApp();
+    showLoginState(user);
+    hideLoginError();
 
     // THIS IS WHERE YOU WANT TO ADD THE LITTLE "BOX" OR PROFILE PICTURE IN THE TOP RIGHT TO INDICATE YOU'RE LOGGED IN.
 
@@ -170,7 +182,7 @@ onAuthStateChanged(auth, user => {
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         // HERE'S WHERE I MAKE THE HTML GRID!!!!  
-        console.log('User Signed In - Mission Grid Loads Next');
+        // console.log('User Signed In - Mission Grid Loads Next');
 
         const redactedTier1MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier1.missions;
         const redactedTier2MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier2.missions;
@@ -352,8 +364,10 @@ onAuthStateChanged(auth, user => {
 
   }
   else {
+    
     showLoginForm();
-    lblAuthState.innerHTML = "You're not logged in.";
+    createAuthBox(authContainer);
+    // lblAuthState.innerHTML = "You're not logged in.";
   }
 })
 
@@ -409,5 +423,9 @@ console.log('IS THIS EVEN WORKING?!?!?');
 // btnLogout.addEventListener("click", logout);
 // btnGoogleSignUp.addEventListener("click", handleGoogle);
 
+btnLogIn.addEventListener('click', loginEmailPassword);
+btnSignUp.addEventListener('click', createAccount);
+btnSignOut.addEventListener('click', logout);
+btnGoogleSignIn.addEventListener('click', handleGoogle);
 
-createAuthBox(authContainer);
+
