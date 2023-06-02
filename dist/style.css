@@ -33,7 +33,34 @@ body {
   display: grid;
   min-height: 100vh;
   width: 100%;
+  margin-top: 30px;
 }
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background-color: lightblue;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-content: center;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+}
+
+.nav-links {
+  justify-self: space-between;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
 
 .content-container {
   width: 95%;

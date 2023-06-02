@@ -197,6 +197,39 @@ onAuthStateChanged(auth, user => {
         const crownTier4MissionsArray = docSnap.data().dmzMissionInformation.crown.tier4.missions;
         const crownTier5MissionsArray = docSnap.data().dmzMissionInformation.crown.tier5.missions;
    
+        // Is it possible to make an array of arrays and loop through them with 1 loop/function, instead of triggering this a million times?
+
+        const arrayOfMissions = [
+          redactedTier1MissionsArray,
+          redactedTier2MissionsArray,
+          redactedTier3MissionsArray,
+          redactedTier4MissionsArray,
+          redactedTier5MissionsArray,
+          whiteLotusTier1MissionsArray,
+          whiteLotusTier2MissionsArray,
+          whiteLotusTier3MissionsArray,
+          whiteLotusTier4MissionsArray,
+          whiteLotusTier5MissionsArray,
+  
+          legionTier1MissionsArray,
+          legionTier2MissionsArray,
+          legionTier3MissionsArray,
+          legionTier4MissionsArray,
+          legionTier5MissionsArray,
+  
+          blackMousTier1MissionsArray,
+          blackMousTier2MissionsArray,
+          blackMousTier3MissionsArray,
+          blackMousTier4MissionsArray,
+          blackMousTier5MissionsArray,
+
+          crownTier1MissionsArray,
+          crownTier2MissionsArray,
+          crownTier3MissionsArray,
+          crownTier4MissionsArray,
+          crownTier5MissionsArray,
+        ]
+
 
         createMissionGrid(redactedTier1MissionsArray, redactedTier1Container);
         createMissionGrid(redactedTier2MissionsArray, redactedTier2Container);
@@ -236,10 +269,66 @@ onAuthStateChanged(auth, user => {
 
         for (let i = 0; i < missionCheckboxArray.length; i++) {
           missionCheckboxArray[i].addEventListener('click', (e) => {
-            let tar = e.target;
+            let checkId = Number(e.target.id);
 
 
-            console.log(tar);
+
+            console.log(checkId);
+
+            console.log(arrayOfMissions);
+
+
+
+
+            function search(arr, id) {
+              for (let i = 0; i < arr.length; i++) {
+                let firstArray = arr[i];
+
+                for (let j = 0; j < firstArray.length; j++) {
+                  let secondArray = firstArray[j];
+
+                  let foundTitle = secondArray.title;
+
+                  console.log(foundTitle);
+
+                  // if (secondArray.missionId === id) {
+                  //   console.log("IT'S A MATCH!");
+                  // } else {
+                  //   console.log("no match");
+                  // }
+                  
+                  console.log(secondArray);
+                  break;
+
+
+                }
+
+
+                // console.log(firstArray);
+                // break;
+
+
+              }
+            }
+
+            search(arrayOfMissions, checkId);
+
+
+
+
+            // let findId = arrayOfMissions.find(x => x.missionId === checkId);
+
+            // let index = arrayOfMissions.indexOf(findId);
+
+            // console.log(index);
+
+            // search(arrayOfMissions, checkId);
+
+
+
+
+
+
             console.log('checkbox listener working');
         })}
 
@@ -293,7 +382,20 @@ const handleGoogle = async () => {
 
 console.log('IS THIS EVEN WORKING?!?!?');
 
-
+// function search(array, missionIdValue) {
+//   for (let i = 0; i < array.length; i++) {
+    
+//     for (let j = 0; i < array[i].length; j++) {
+//       if (array[i].missionId === missionIdValue) {
+//         console.log('mission found');
+//         break
+//       } else {
+//         console.log('mission not found');
+        
+//       }
+//     }
+//   }
+// }
 
 
 
