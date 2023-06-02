@@ -24,11 +24,6 @@ body {
 
 /* Class Selectors */
 
-.hidden {
-  /* class to hide content where applicable. */
-  display: none;
-}
-
 .page-container {
   display: grid;
   min-height: 100vh;
@@ -121,4 +116,12 @@ nav {
 
 .mission-progress-checkbox:checked {
   outline: 2px solid yellow;
+}
+
+
+/* Keep This LAST */
+.hidden {
+  /* class to hide content where applicable. */
+  display: none;
+  visibility: none;
 }
