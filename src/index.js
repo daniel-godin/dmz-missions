@@ -399,7 +399,7 @@ const handleGoogle = async () => {
 // }
 
 
-console.log('IS THIS EVEN WORKING?!?!?');
+
 
 // function search(array, missionIdValue) {
 //   for (let i = 0; i < array.length; i++) {
@@ -429,3 +429,4 @@ btnSignOut.addEventListener('click', logout);
 btnGoogleSignIn.addEventListener('click', handleGoogle);
 
 
+console.log('Got to the end of Index.js script');
