@@ -71,7 +71,7 @@ nav {
   gap: 0.5rem;
 }
 
-input {
+input[type='email'], input[type='password'] {
   width: 100%;
   padding: 0.25rem;
 }
@@ -150,9 +150,13 @@ button {
 }
 
 
-/* Keep This LAST */
-.hidden {
-  /* class to hide content where applicable. */
+.footer {
   display: none;
-  visibility: none;
 }
+
+/* Keep This LAST 
+/* .hidden {
+  /* class to hide content where applicable. 
+  /* display: none;
+  visibility: none; 
+} */

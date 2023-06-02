@@ -60,11 +60,10 @@ import {
   crownTier3Container,
   crownTier4Container,
   crownTier5Container,
-  missionCheckboxArray,
   authContainer,
   txtEmail,
   txtPassword,
-  errorBox,
+  errorContainer,
   errorMessage,
   createAuthBox,
   profileLinkContainer,
@@ -78,6 +77,9 @@ import {
   btnSignUp,
   btnSignOut,
   btnGoogleSignIn,
+  checkBoxFunction,
+  txtName,
+
 } from "./dmz-missions-ui";
 
 // Import Non-Firebase Code From Other Files:  THIS IS ONLY FOR TESTING, THIS IS THE OFFICIAL VIDEO GITHUB CODE.
@@ -124,6 +126,7 @@ console.log('Early console log check, before lots of code executes or gets stuck
 // App Configurations:
 // Setting Up Auth From Video:
 const loginEmailPassword = async () => {
+  console.log('login button clicked');
   const loginEmail = txtEmail.value;
   const loginPassword = txtPassword.value;
   try {
@@ -135,33 +138,54 @@ const loginEmailPassword = async () => {
     showLoginError(error);
   }
 }
+btnLogIn.addEventListener('click', loginEmailPassword);
 
 const createAccount = async () => {
+  console.log('sign up button clicked');
+
   const loginEmail = txtEmail.value;
   const loginPassword = txtPassword.value;
+  const loginName = txtName.value;
 
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
+    await setDoc(doc(db, 'users', userCredential.user.uid), {
+      name: loginName,
+    })
     await setDoc(doc(db, 'users', userCredential.user.uid, 'mw2-trackers', 'dmzMissions'), { });
 
-    await initialDatabaseSetUp(userCredential) // Experimenting to call a function, instead of doing this INSIDE of the signup thing.  Later I will do this after a verification email is confirmed.
+    await initialDatabaseSetUp(userCredential, loginName) // Experimenting to call a function, instead of doing this INSIDE of the signup thing.  Later I will do this after a verification email is confirmed.
   }
   catch(error) {
     console.log(error);
     showLoginError(error);
   }
 }
+btnSignUp.addEventListener('click', createAccount);
 
-function initialDatabaseSetUp (userCredentials) {
+// Sign-in With Google:
+const handleGoogle = async () => {
+  console.log('google button clicked');
+
+  const provider = await new GoogleAuthProvider();
+
+  // FUTURE:  if(desktop) = popup, elseif(mobile) = redirect
+  return signInWithPopup(auth, provider);
+}
+btnGoogleSignIn.addEventListener('click', handleGoogle);
+
+
+function initialDatabaseSetUp (userCredentials, name) {
   let uid = userCredentials.user.uid;
   const newUser = {
-    userName: userCredentials.user.displayName,
+    userName: name,
     userEmail: userCredentials.user.email,
     userActivisionId: "",
     userRegion: "",
     signedUp: "time"
   }
-  setDoc(doc(db, 'users', uid), { newUser });
+  setDoc(doc(db, 'users', uid), newUser );
+
   setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissions'), { dmzMissionInformation });
   
 
@@ -169,204 +193,117 @@ function initialDatabaseSetUp (userCredentials) {
 
 onAuthStateChanged(auth, user => {
   if (user) {
-    console.log();
+    console.log('onAuthStateChanged function triggered');
     showApp();
+    // console.table(user);
     showLoginState(user);
-    hideLoginError();
+    displayUserName(user);
+
+    const uid = user.uid;
+
+    console.log(uid);
+
+
+
+
+
+
+
+    // hideLoginError();
+
+    dmzMissionDocRef(user); // This function passes the user information, so I can grab the user's uid and grab their appropriate doc and create the grid, based on their "complete"ness.
+
 
     // THIS IS WHERE YOU WANT TO ADD THE LITTLE "BOX" OR PROFILE PICTURE IN THE TOP RIGHT TO INDICATE YOU'RE LOGGED IN.
 
 
-    const dmzMissionDocRef = async (user) => {
-      const docRef = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissions');
-      const docSnap = await getDoc(docRef);
-      if (docSnap.exists()) {
-        // HERE'S WHERE I MAKE THE HTML GRID!!!!  
-        // console.log('User Signed In - Mission Grid Loads Next');
+    // const dmzMissionDocRef = async (user) => {
+    //   const docRef = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissions');
+    //   const docSnap = await getDoc(docRef);
+    //   if (docSnap.exists()) {
+    //     // HERE'S WHERE I MAKE THE HTML GRID!!!!  
+    //     // console.log('User Signed In - Mission Grid Loads Next');
 
-        const redactedTier1MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier1.missions;
-        const redactedTier2MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier2.missions;
-        const redactedTier3MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier3.missions;
-        const redactedTier4MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier4.missions;
-        const redactedTier5MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier5.missions;
+    //     const redactedTier1MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier1.missions;
+    //     const redactedTier2MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier2.missions;
+    //     const redactedTier3MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier3.missions;
+    //     const redactedTier4MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier4.missions;
+    //     const redactedTier5MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier5.missions;
 
-        const whiteLotusTier1MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier1.missions;
-        const whiteLotusTier2MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier2.missions;
-        const whiteLotusTier3MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier3.missions;
-        const whiteLotusTier4MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier4.missions;
-        const whiteLotusTier5MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier5.missions;
+    //     const whiteLotusTier1MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier1.missions;
+    //     const whiteLotusTier2MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier2.missions;
+    //     const whiteLotusTier3MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier3.missions;
+    //     const whiteLotusTier4MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier4.missions;
+    //     const whiteLotusTier5MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier5.missions;
 
-        const legionTier1MissionsArray = docSnap.data().dmzMissionInformation.legion.tier1.missions;
-        const legionTier2MissionsArray = docSnap.data().dmzMissionInformation.legion.tier2.missions;
-        const legionTier3MissionsArray = docSnap.data().dmzMissionInformation.legion.tier3.missions;
-        const legionTier4MissionsArray = docSnap.data().dmzMissionInformation.legion.tier4.missions;
-        const legionTier5MissionsArray = docSnap.data().dmzMissionInformation.legion.tier5.missions;
+    //     const legionTier1MissionsArray = docSnap.data().dmzMissionInformation.legion.tier1.missions;
+    //     const legionTier2MissionsArray = docSnap.data().dmzMissionInformation.legion.tier2.missions;
+    //     const legionTier3MissionsArray = docSnap.data().dmzMissionInformation.legion.tier3.missions;
+    //     const legionTier4MissionsArray = docSnap.data().dmzMissionInformation.legion.tier4.missions;
+    //     const legionTier5MissionsArray = docSnap.data().dmzMissionInformation.legion.tier5.missions;
 
-        const blackMousTier1MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier1.missions;
-        const blackMousTier2MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier2.missions;
-        const blackMousTier3MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier3.missions;
-        const blackMousTier4MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier4.missions;
-        const blackMousTier5MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier5.missions;
+    //     const blackMousTier1MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier1.missions;
+    //     const blackMousTier2MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier2.missions;
+    //     const blackMousTier3MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier3.missions;
+    //     const blackMousTier4MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier4.missions;
+    //     const blackMousTier5MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier5.missions;
 
-        const crownTier1MissionsArray = docSnap.data().dmzMissionInformation.crown.tier1.missions;
-        const crownTier2MissionsArray = docSnap.data().dmzMissionInformation.crown.tier2.missions;
-        const crownTier3MissionsArray = docSnap.data().dmzMissionInformation.crown.tier3.missions;
-        const crownTier4MissionsArray = docSnap.data().dmzMissionInformation.crown.tier4.missions;
-        const crownTier5MissionsArray = docSnap.data().dmzMissionInformation.crown.tier5.missions;
+    //     const crownTier1MissionsArray = docSnap.data().dmzMissionInformation.crown.tier1.missions;
+    //     const crownTier2MissionsArray = docSnap.data().dmzMissionInformation.crown.tier2.missions;
+    //     const crownTier3MissionsArray = docSnap.data().dmzMissionInformation.crown.tier3.missions;
+    //     const crownTier4MissionsArray = docSnap.data().dmzMissionInformation.crown.tier4.missions;
+    //     const crownTier5MissionsArray = docSnap.data().dmzMissionInformation.crown.tier5.missions;
    
-        // Is it possible to make an array of arrays and loop through them with 1 loop/function, instead of triggering this a million times?
+    //     // Is it possible to make an array of arrays and loop through them with 1 loop/function, instead of triggering this a million times?
 
-        const arrayOfMissions = [
-          redactedTier1MissionsArray,
-          redactedTier2MissionsArray,
-          redactedTier3MissionsArray,
-          redactedTier4MissionsArray,
-          redactedTier5MissionsArray,
-          whiteLotusTier1MissionsArray,
-          whiteLotusTier2MissionsArray,
-          whiteLotusTier3MissionsArray,
-          whiteLotusTier4MissionsArray,
-          whiteLotusTier5MissionsArray,
-  
-          legionTier1MissionsArray,
-          legionTier2MissionsArray,
-          legionTier3MissionsArray,
-          legionTier4MissionsArray,
-          legionTier5MissionsArray,
-  
-          blackMousTier1MissionsArray,
-          blackMousTier2MissionsArray,
-          blackMousTier3MissionsArray,
-          blackMousTier4MissionsArray,
-          blackMousTier5MissionsArray,
+    //     createMissionGrid(redactedTier1MissionsArray, redactedTier1Container);
+    //     createMissionGrid(redactedTier2MissionsArray, redactedTier2Container);
+    //     createMissionGrid(redactedTier3MissionsArray, redactedTier3Container);
+    //     createMissionGrid(redactedTier4MissionsArray, redactedTier4Container);
+    //     createMissionGrid(redactedTier5MissionsArray, redactedTier5Container);
 
-          crownTier1MissionsArray,
-          crownTier2MissionsArray,
-          crownTier3MissionsArray,
-          crownTier4MissionsArray,
-          crownTier5MissionsArray,
-        ]
+    //     createMissionGrid(whiteLotusTier1MissionsArray, whiteLotusTier1Container);
+    //     createMissionGrid(whiteLotusTier2MissionsArray, whiteLotusTier2Container);
+    //     createMissionGrid(whiteLotusTier3MissionsArray, whiteLotusTier3Container);
+    //     createMissionGrid(whiteLotusTier4MissionsArray, whiteLotusTier4Container);
+    //     createMissionGrid(whiteLotusTier5MissionsArray, whiteLotusTier5Container);
+
+    //     createMissionGrid(legionTier1MissionsArray, legionTier1Container);
+    //     createMissionGrid(legionTier2MissionsArray, legionTier2Container);
+    //     createMissionGrid(legionTier3MissionsArray, legionTier3Container);
+    //     createMissionGrid(legionTier4MissionsArray, legionTier4Container);
+    //     createMissionGrid(legionTier5MissionsArray, legionTier5Container);
+
+    //     createMissionGrid(blackMousTier1MissionsArray, blackMousTier1Container);
+    //     createMissionGrid(blackMousTier2MissionsArray, blackMousTier2Container);
+    //     createMissionGrid(blackMousTier3MissionsArray, blackMousTier3Container);
+    //     createMissionGrid(blackMousTier4MissionsArray, blackMousTier4Container);
+    //     createMissionGrid(blackMousTier5MissionsArray, blackMousTier5Container);
 
 
-        createMissionGrid(redactedTier1MissionsArray, redactedTier1Container);
-        createMissionGrid(redactedTier2MissionsArray, redactedTier2Container);
-        createMissionGrid(redactedTier3MissionsArray, redactedTier3Container);
-        createMissionGrid(redactedTier4MissionsArray, redactedTier4Container);
-        createMissionGrid(redactedTier5MissionsArray, redactedTier5Container);
-
-        createMissionGrid(whiteLotusTier1MissionsArray, whiteLotusTier1Container);
-        createMissionGrid(whiteLotusTier2MissionsArray, whiteLotusTier2Container);
-        createMissionGrid(whiteLotusTier3MissionsArray, whiteLotusTier3Container);
-        createMissionGrid(whiteLotusTier4MissionsArray, whiteLotusTier4Container);
-        createMissionGrid(whiteLotusTier5MissionsArray, whiteLotusTier5Container);
-
-        createMissionGrid(legionTier1MissionsArray, legionTier1Container);
-        createMissionGrid(legionTier2MissionsArray, legionTier2Container);
-        createMissionGrid(legionTier3MissionsArray, legionTier3Container);
-        createMissionGrid(legionTier4MissionsArray, legionTier4Container);
-        createMissionGrid(legionTier5MissionsArray, legionTier5Container);
-
-
-        createMissionGrid(blackMousTier1MissionsArray, blackMousTier1Container);
-        createMissionGrid(blackMousTier2MissionsArray, blackMousTier2Container);
-        createMissionGrid(blackMousTier3MissionsArray, blackMousTier3Container);
-        createMissionGrid(blackMousTier4MissionsArray, blackMousTier4Container);
-        createMissionGrid(blackMousTier5MissionsArray, blackMousTier5Container);
-
-
-        createMissionGrid(crownTier1MissionsArray, crownTier1Container);
-        createMissionGrid(crownTier2MissionsArray, crownTier2Container);
-        createMissionGrid(crownTier3MissionsArray, crownTier3Container);
-        createMissionGrid(crownTier4MissionsArray, crownTier4Container);
-        createMissionGrid(crownTier5MissionsArray, crownTier5Container);
+    //     createMissionGrid(crownTier1MissionsArray, crownTier1Container);
+    //     createMissionGrid(crownTier2MissionsArray, crownTier2Container);
+    //     createMissionGrid(crownTier3MissionsArray, crownTier3Container);
+    //     createMissionGrid(crownTier4MissionsArray, crownTier4Container);
+    //     createMissionGrid(crownTier5MissionsArray, crownTier5Container);
         
-        console.log('User Signed In and Mission Grid Created');
+    //     console.log('User Signed In and Mission Grid Created');
 
-        const missionCheckboxArray = document.getElementsByClassName('mission-progress');
+    //   } else {
+    //     // docSnap.data() will be undefined in this case
+    //     console.log("No such document!");
 
-        for (let i = 0; i < missionCheckboxArray.length; i++) {
-          missionCheckboxArray[i].addEventListener('click', (e) => {
-            let checkId = Number(e.target.id);
+    //     // Possibly load the entire grid... WITHOUT checkboxes, along with a header that says "Not logged in - log in to keep track of your progress".
 
+    //   }
 
-
-            console.log(checkId);
-
-            console.log(arrayOfMissions);
-
-
-
-
-            function search(arr, id) {
-              for (let i = 0; i < arr.length; i++) {
-                let firstArray = arr[i];
-
-                for (let j = 0; j < firstArray.length; j++) {
-                  let secondArray = firstArray[j];
-
-                  let foundTitle = secondArray.title;
-
-                  console.log(foundTitle);
-
-                  // if (secondArray.missionId === id) {
-                  //   console.log("IT'S A MATCH!");
-                  // } else {
-                  //   console.log("no match");
-                  // }
-                  
-                  console.log(secondArray);
-                  break;
-
-
-                }
-
-
-                // console.log(firstArray);
-                // break;
-
-
-              }
-            }
-
-            search(arrayOfMissions, checkId);
-
-
-
-
-            // let findId = arrayOfMissions.find(x => x.missionId === checkId);
-
-            // let index = arrayOfMissions.indexOf(findId);
-
-            // console.log(index);
-
-            // search(arrayOfMissions, checkId);
-
-
-
-
-
-
-            console.log('checkbox listener working');
-        })}
-
-      } else {
-        // docSnap.data() will be undefined in this case
-        console.log("No such document!");
-
-        // Possibly load the entire grid... WITHOUT checkboxes, along with a header that says "Not logged in - log in to keep track of your progress".
-
-      }
-
-    };
-    dmzMissionDocRef(user);
-
+    // };
     
 
   }
   else {
-    
+    console.log('user not logged in');
     showLoginForm();
-    createAuthBox(authContainer);
     // lblAuthState.innerHTML = "You're not logged in.";
   }
 })
@@ -377,44 +314,122 @@ const monitorAuthState = async () => {
 monitorAuthState();
 
 const logout = async () => {
+  console.log('sign out button clicked');
   await signOut(auth);
-
 }
+btnSignOut.addEventListener('click', logout);
 
-// Sign-in With Google:
 
-const handleGoogle = async () => {
-  const provider = await new GoogleAuthProvider();
-
-  // FUTURE:  if(desktop) = popup, elseif(mobile) = redirect
-  return signInWithPopup(auth, provider);
-}
 
 // Testing:
 
 
-// function changeMissionComplete (e) {
-//   let answer = e.target;
-//   console.log(answer);
-// }
+// Testing whether I can put this function OUTSIDE of the authState function, and pass the parameters that I need.
+
+const displayUserName = async (user) => {
+  const docRef = doc(db, 'users', user.uid);
+  const docSnap = await getDoc(docRef);
+  if (docSnap.exists()) {
+    const name = docSnap.data().userName;
+    console.log(name);
+
+    profileLinkContainer.insertAdjacentHTML('afterbegin', `
+      You're Logged In, ${name}.
+    `);
+
+
+  } else {
+    console.log('no info');
+  }
+}
 
 
 
+const dmzMissionDocRef = async (user) => {
+  const docRef = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissions');
+  const docSnap = await getDoc(docRef);
+  if (docSnap.exists()) {
+    // HERE'S WHERE I MAKE THE HTML GRID!!!!  
+    // console.log('User Signed In - Mission Grid Loads Next');
 
-// function search(array, missionIdValue) {
-//   for (let i = 0; i < array.length; i++) {
+    const redactedTier1MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier1.missions;
+    const redactedTier2MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier2.missions;
+    const redactedTier3MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier3.missions;
+    const redactedTier4MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier4.missions;
+    const redactedTier5MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier5.missions;
+
+    const whiteLotusTier1MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier1.missions;
+    const whiteLotusTier2MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier2.missions;
+    const whiteLotusTier3MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier3.missions;
+    const whiteLotusTier4MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier4.missions;
+    const whiteLotusTier5MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier5.missions;
+
+    const legionTier1MissionsArray = docSnap.data().dmzMissionInformation.legion.tier1.missions;
+    const legionTier2MissionsArray = docSnap.data().dmzMissionInformation.legion.tier2.missions;
+    const legionTier3MissionsArray = docSnap.data().dmzMissionInformation.legion.tier3.missions;
+    const legionTier4MissionsArray = docSnap.data().dmzMissionInformation.legion.tier4.missions;
+    const legionTier5MissionsArray = docSnap.data().dmzMissionInformation.legion.tier5.missions;
+
+    const blackMousTier1MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier1.missions;
+    const blackMousTier2MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier2.missions;
+    const blackMousTier3MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier3.missions;
+    const blackMousTier4MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier4.missions;
+    const blackMousTier5MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier5.missions;
+
+    const crownTier1MissionsArray = docSnap.data().dmzMissionInformation.crown.tier1.missions;
+    const crownTier2MissionsArray = docSnap.data().dmzMissionInformation.crown.tier2.missions;
+    const crownTier3MissionsArray = docSnap.data().dmzMissionInformation.crown.tier3.missions;
+    const crownTier4MissionsArray = docSnap.data().dmzMissionInformation.crown.tier4.missions;
+    const crownTier5MissionsArray = docSnap.data().dmzMissionInformation.crown.tier5.missions;
+
+    // Is it possible to make an array of arrays and loop through them with 1 loop/function, instead of triggering this a million times?
+
+    createMissionGrid(redactedTier1MissionsArray, redactedTier1Container);
+    createMissionGrid(redactedTier2MissionsArray, redactedTier2Container);
+    createMissionGrid(redactedTier3MissionsArray, redactedTier3Container);
+    createMissionGrid(redactedTier4MissionsArray, redactedTier4Container);
+    createMissionGrid(redactedTier5MissionsArray, redactedTier5Container);
+
+    createMissionGrid(whiteLotusTier1MissionsArray, whiteLotusTier1Container);
+    createMissionGrid(whiteLotusTier2MissionsArray, whiteLotusTier2Container);
+    createMissionGrid(whiteLotusTier3MissionsArray, whiteLotusTier3Container);
+    createMissionGrid(whiteLotusTier4MissionsArray, whiteLotusTier4Container);
+    createMissionGrid(whiteLotusTier5MissionsArray, whiteLotusTier5Container);
+
+    createMissionGrid(legionTier1MissionsArray, legionTier1Container);
+    createMissionGrid(legionTier2MissionsArray, legionTier2Container);
+    createMissionGrid(legionTier3MissionsArray, legionTier3Container);
+    createMissionGrid(legionTier4MissionsArray, legionTier4Container);
+    createMissionGrid(legionTier5MissionsArray, legionTier5Container);
+
+    createMissionGrid(blackMousTier1MissionsArray, blackMousTier1Container);
+    createMissionGrid(blackMousTier2MissionsArray, blackMousTier2Container);
+    createMissionGrid(blackMousTier3MissionsArray, blackMousTier3Container);
+    createMissionGrid(blackMousTier4MissionsArray, blackMousTier4Container);
+    createMissionGrid(blackMousTier5MissionsArray, blackMousTier5Container);
+
+
+    createMissionGrid(crownTier1MissionsArray, crownTier1Container);
+    createMissionGrid(crownTier2MissionsArray, crownTier2Container);
+    createMissionGrid(crownTier3MissionsArray, crownTier3Container);
+    createMissionGrid(crownTier4MissionsArray, crownTier4Container);
+    createMissionGrid(crownTier5MissionsArray, crownTier5Container);
     
-//     for (let j = 0; i < array[i].length; j++) {
-//       if (array[i].missionId === missionIdValue) {
-//         console.log('mission found');
-//         break
-//       } else {
-//         console.log('mission not found');
-        
-//       }
-//     }
-//   }
-// }
+    console.log('User Signed In and Mission Grid Created');
+
+  } else {
+    // docSnap.data() will be undefined in this case
+    console.log("No such document!");
+
+    // Possibly load the entire grid... WITHOUT checkboxes, along with a header that says "Not logged in - log in to keep track of your progress".
+
+  }
+
+};
+
+
+
+
 
 
 
@@ -423,10 +438,21 @@ const handleGoogle = async () => {
 // btnLogout.addEventListener("click", logout);
 // btnGoogleSignUp.addEventListener("click", handleGoogle);
 
-btnLogIn.addEventListener('click', loginEmailPassword);
-btnSignUp.addEventListener('click', createAccount);
-btnSignOut.addEventListener('click', logout);
-btnGoogleSignIn.addEventListener('click', handleGoogle);
+// createAuthBox(authContainer);
 
+console.log('before button listeners');
+
+
+
+
+
+const missionCheckboxArray = document.getElementsByClassName('mission-progress');
+
+for (let i = 0; i < missionCheckboxArray.length; i++) {
+  missionCheckboxArray[i].addEventListener('click', (e) => {
+    let checkId = Number(e.target.id);
+    console.log(checkId);
+    console.log('checkbox listener working');
+})}
 
 console.log('Got to the end of Index.js script');
