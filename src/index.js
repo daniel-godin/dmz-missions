@@ -85,6 +85,8 @@ import {
 
 } from "./dmz-missions-ui";
 
+import { addDMZMissionsS3ObjToDb, } from "./db-creation";
+
 // Import Non-Firebase Code From Other Files:  THIS IS ONLY FOR TESTING, THIS IS THE OFFICIAL VIDEO GITHUB CODE.
 // Open-source Firebase log-in code.  For testing and getting it working.  Will replace all of this from 'ui' later.
 // import { 
@@ -126,29 +128,7 @@ connectFirestoreEmulator(db, 'localhost', 8080);
 // Early Console.log Check.  Before lots of code executes or gets stuck.
 console.log('Early console log check, before lots of code executes or gets stuck');
 
-// DELETE THIS LATER, AFTER YOU'VE MADE THE DATABASE LIVE.  THIS IS FOR ADDING TO TEST/EMULATOR DB:
-
-const addDMZMissionsS3ObjToDb = async () => {
-
-  // If doc does NOT exist... MAKE IT.  If it DOES exist, do nothing.
-
-  const docRef = doc(db, 'mw-info', 'dmzMissionsS3');
-  let docSnap = await getDoc(docRef);
-
-  if (docSnap.exists()) {
-    console.log('The S3 DMZ Object Doc Exists!')
-
-  } else {
-    console.log('The S3 Doc DOES NOT EXIST.  MAKING IT NOW!');
-    await setDoc(doc(db, 'mw2-info', 'dmzMissionsS3'), dmzMissionsS3);
-
-  }
-
-
-
-}
-
-addDMZMissionsS3ObjToDb();
+addDMZMissionsS3ObjToDb(db); // Adds the dmzMissionsS3 object to db, mw2-info, dmzMissions.  This is OUTSIDE of the user collection stuff.
 
 
 
