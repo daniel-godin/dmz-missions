@@ -126,12 +126,39 @@ connectFirestoreEmulator(db, 'localhost', 8080);
 // Early Console.log Check.  Before lots of code executes or gets stuck.
 console.log('Early console log check, before lots of code executes or gets stuck');
 
+// DELETE THIS LATER, AFTER YOU'VE MADE THE DATABASE LIVE.  THIS IS FOR ADDING TO TEST/EMULATOR DB:
+
+const addDMZMissionsS3ObjToDb = async () => {
+
+  // If doc does NOT exist... MAKE IT.  If it DOES exist, do nothing.
+
+  const docRef = doc(db, 'mw-info', 'dmzMissionsS3');
+  let docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    console.log('The S3 DMZ Object Doc Exists!')
+
+  } else {
+    console.log('The S3 Doc DOES NOT EXIST.  MAKING IT NOW!');
+    await setDoc(doc(db, 'mw2-info', 'dmzMissionsS3'), dmzMissionsS3);
+
+  }
+
+
+
+}
+
+addDMZMissionsS3ObjToDb();
+
+
+
+
 // Testing New S3 Missions Object
 let testingMissions = Object.values(dmzMissionsS3);
 
 for (let i = 0; i < testingMissions.length; i++) {
   let missionTitle = testingMissions[i].title;
-  console.log(missionTitle);
+  // console.log(missionTitle);
 }
 
 // console.table(testingMissions);
@@ -149,7 +176,7 @@ const loginEmailPassword = async () => {
   const loginPassword = txtPassword.value;
   try {
     const userCredential = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
-    console.log(userCredential.user);
+    // console.log(userCredential.user);
   }
   catch(error) {
     console.log(error);
@@ -511,7 +538,7 @@ for (let i = 0; i < missionCheckboxArray.length; i++) {
   missionCheckboxArray[i].addEventListener('click', (e) => {
     e.preventDefault();
     let checkId = Number(e.target.id);
-    console.log(checkId);
+    // console.log(checkId);
     console.log('checkbox listener working');
 })}
 
