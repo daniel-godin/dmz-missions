@@ -33,6 +33,8 @@ import {
 // DMZ Missions Imports
 import { dmzMissionInformation } from "./full-mission-information";
 
+import { dmzMissionsS3 } from "./dmz-missions-s3";
+
 import {
   createMissionGrid,
   redactedTier1Container,
@@ -123,6 +125,7 @@ connectFirestoreEmulator(db, 'localhost', 8080);
 
 // Early Console.log Check.  Before lots of code executes or gets stuck.
 console.log('Early console log check, before lots of code executes or gets stuck');
+console.table(dmzMissionsS3);
 
 // Sending missions object to database
 
