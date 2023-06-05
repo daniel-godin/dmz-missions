@@ -83,6 +83,24 @@ export function createMissionGrid (missionsArr, tierContainer) {
     )}
 }}
 
+export function createMissionGridLoggedOut (missionsArr, tierContainer) {
+  for (let i = 0; i < missionsArr.length; i++) {
+    let title = missionsArr[i].title;
+    tierContainer.insertAdjacentHTML('beforeend', `
+      <div class="mission-container">
+        <header class="mission-title">${title}</header>
+      </div>`
+  )}
+}
+
+
+
+
+
+
+
+
+
 
 // Keep className mission-progress AFTER createMissionGrid - otherwise I don't think there are any div's with mission-progress class anyway.
 // export const missionCheckboxArray = document.getElementsByClassName('mission-progress');

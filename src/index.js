@@ -36,7 +36,7 @@ import { dmzMissionInformation } from "./full-mission-information";
 import { dmzMissionsS3 } from "./dmz-missions-s3";
 
 import {
-  createMissionGrid,
+  createMissionGrid, createMissionGridLoggedOut,
   redactedTier1Container,
   redactedTier2Container,
   redactedTier3Container,
@@ -300,6 +300,8 @@ onAuthStateChanged(auth, user => {
   else {
     showDMZHeaderAuthStatus();
 
+    dmzMissionDocRef(user);
+
     showLoginState(user, 'logged-out')
 
     // showLoginForm();
@@ -343,84 +345,155 @@ const showLoginState = async (user, state) => {
 
 
 const dmzMissionDocRef = async (user) => {
-  const docRef = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissions');
-  const docSnap = await getDoc(docRef);
-  if (docSnap.exists()) {
-    const data = docSnap.data();
-    // console.table(data);
-    // HERE'S WHERE I MAKE THE HTML GRID!!!!  
-    // console.log('User Signed In - Mission Grid Loads Next');
 
-    const redactedTier1MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier1.missions;
-    const redactedTier2MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier2.missions;
-    const redactedTier3MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier3.missions;
-    const redactedTier4MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier4.missions;
-    const redactedTier5MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier5.missions;
 
-    const whiteLotusTier1MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier1.missions;
-    const whiteLotusTier2MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier2.missions;
-    const whiteLotusTier3MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier3.missions;
-    const whiteLotusTier4MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier4.missions;
-    const whiteLotusTier5MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier5.missions;
+  if (user) {
+    const docRef = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissions');
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      const data = docSnap.data();
+      // console.table(data);
+      // HERE'S WHERE I MAKE THE HTML GRID!!!!  
+      // console.log('User Signed In - Mission Grid Loads Next');
 
-    const legionTier1MissionsArray = docSnap.data().dmzMissionInformation.legion.tier1.missions;
-    const legionTier2MissionsArray = docSnap.data().dmzMissionInformation.legion.tier2.missions;
-    const legionTier3MissionsArray = docSnap.data().dmzMissionInformation.legion.tier3.missions;
-    const legionTier4MissionsArray = docSnap.data().dmzMissionInformation.legion.tier4.missions;
-    const legionTier5MissionsArray = docSnap.data().dmzMissionInformation.legion.tier5.missions;
+      const redactedTier1MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier1.missions;
+      const redactedTier2MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier2.missions;
+      const redactedTier3MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier3.missions;
+      const redactedTier4MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier4.missions;
+      const redactedTier5MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier5.missions;
 
-    const blackMousTier1MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier1.missions;
-    const blackMousTier2MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier2.missions;
-    const blackMousTier3MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier3.missions;
-    const blackMousTier4MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier4.missions;
-    const blackMousTier5MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier5.missions;
+      const whiteLotusTier1MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier1.missions;
+      const whiteLotusTier2MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier2.missions;
+      const whiteLotusTier3MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier3.missions;
+      const whiteLotusTier4MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier4.missions;
+      const whiteLotusTier5MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier5.missions;
 
-    const crownTier1MissionsArray = docSnap.data().dmzMissionInformation.crown.tier1.missions;
-    const crownTier2MissionsArray = docSnap.data().dmzMissionInformation.crown.tier2.missions;
-    const crownTier3MissionsArray = docSnap.data().dmzMissionInformation.crown.tier3.missions;
-    const crownTier4MissionsArray = docSnap.data().dmzMissionInformation.crown.tier4.missions;
-    const crownTier5MissionsArray = docSnap.data().dmzMissionInformation.crown.tier5.missions;
+      const legionTier1MissionsArray = docSnap.data().dmzMissionInformation.legion.tier1.missions;
+      const legionTier2MissionsArray = docSnap.data().dmzMissionInformation.legion.tier2.missions;
+      const legionTier3MissionsArray = docSnap.data().dmzMissionInformation.legion.tier3.missions;
+      const legionTier4MissionsArray = docSnap.data().dmzMissionInformation.legion.tier4.missions;
+      const legionTier5MissionsArray = docSnap.data().dmzMissionInformation.legion.tier5.missions;
+
+      const blackMousTier1MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier1.missions;
+      const blackMousTier2MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier2.missions;
+      const blackMousTier3MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier3.missions;
+      const blackMousTier4MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier4.missions;
+      const blackMousTier5MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier5.missions;
+
+      const crownTier1MissionsArray = docSnap.data().dmzMissionInformation.crown.tier1.missions;
+      const crownTier2MissionsArray = docSnap.data().dmzMissionInformation.crown.tier2.missions;
+      const crownTier3MissionsArray = docSnap.data().dmzMissionInformation.crown.tier3.missions;
+      const crownTier4MissionsArray = docSnap.data().dmzMissionInformation.crown.tier4.missions;
+      const crownTier5MissionsArray = docSnap.data().dmzMissionInformation.crown.tier5.missions;
+
+      // Is it possible to make an array of arrays and loop through them with 1 loop/function, instead of triggering this a million times?
+
+      createMissionGrid(redactedTier1MissionsArray, redactedTier1Container);
+      createMissionGrid(redactedTier2MissionsArray, redactedTier2Container);
+      createMissionGrid(redactedTier3MissionsArray, redactedTier3Container);
+      createMissionGrid(redactedTier4MissionsArray, redactedTier4Container);
+      createMissionGrid(redactedTier5MissionsArray, redactedTier5Container);
+
+      createMissionGrid(whiteLotusTier1MissionsArray, whiteLotusTier1Container);
+      createMissionGrid(whiteLotusTier2MissionsArray, whiteLotusTier2Container);
+      createMissionGrid(whiteLotusTier3MissionsArray, whiteLotusTier3Container);
+      createMissionGrid(whiteLotusTier4MissionsArray, whiteLotusTier4Container);
+      createMissionGrid(whiteLotusTier5MissionsArray, whiteLotusTier5Container);
+
+      createMissionGrid(legionTier1MissionsArray, legionTier1Container);
+      createMissionGrid(legionTier2MissionsArray, legionTier2Container);
+      createMissionGrid(legionTier3MissionsArray, legionTier3Container);
+      createMissionGrid(legionTier4MissionsArray, legionTier4Container);
+      createMissionGrid(legionTier5MissionsArray, legionTier5Container);
+
+      createMissionGrid(blackMousTier1MissionsArray, blackMousTier1Container);
+      createMissionGrid(blackMousTier2MissionsArray, blackMousTier2Container);
+      createMissionGrid(blackMousTier3MissionsArray, blackMousTier3Container);
+      createMissionGrid(blackMousTier4MissionsArray, blackMousTier4Container);
+      createMissionGrid(blackMousTier5MissionsArray, blackMousTier5Container);
+
+
+      createMissionGrid(crownTier1MissionsArray, crownTier1Container);
+      createMissionGrid(crownTier2MissionsArray, crownTier2Container);
+      createMissionGrid(crownTier3MissionsArray, crownTier3Container);
+      createMissionGrid(crownTier4MissionsArray, crownTier4Container);
+      createMissionGrid(crownTier5MissionsArray, crownTier5Container);
+      
+      console.log('User Signed In and Mission Grid Created');
+
+    } else {
+      // docSnap.data() will be undefined in this case
+      console.log("No such document!");
+
+      // Possibly load the entire grid... WITHOUT checkboxes, along with a header that says "Not logged in - log in to keep track of your progress".
+    }
+  } else {
+    // Loads Mission Grid From JS Object, without checkboxes.
+
+    console.log('not signed in grid creation');
+
+    const redactedTier1MissionsArray = dmzMissionInformation.redacted.tier1.missions;
+    const redactedTier2MissionsArray = dmzMissionInformation.redacted.tier2.missions;
+    const redactedTier3MissionsArray = dmzMissionInformation.redacted.tier3.missions;
+    const redactedTier4MissionsArray = dmzMissionInformation.redacted.tier4.missions;
+    const redactedTier5MissionsArray = dmzMissionInformation.redacted.tier5.missions;
+
+    const whiteLotusTier1MissionsArray = dmzMissionInformation.whiteLotus.tier1.missions;
+    const whiteLotusTier2MissionsArray = dmzMissionInformation.whiteLotus.tier2.missions;
+    const whiteLotusTier3MissionsArray = dmzMissionInformation.whiteLotus.tier3.missions;
+    const whiteLotusTier4MissionsArray = dmzMissionInformation.whiteLotus.tier4.missions;
+    const whiteLotusTier5MissionsArray = dmzMissionInformation.whiteLotus.tier5.missions;
+
+    const legionTier1MissionsArray = dmzMissionInformation.legion.tier1.missions;
+    const legionTier2MissionsArray = dmzMissionInformation.legion.tier2.missions;
+    const legionTier3MissionsArray = dmzMissionInformation.legion.tier3.missions;
+    const legionTier4MissionsArray = dmzMissionInformation.legion.tier4.missions;
+    const legionTier5MissionsArray = dmzMissionInformation.legion.tier5.missions;
+
+    const blackMousTier1MissionsArray = dmzMissionInformation.blackMous.tier1.missions;
+    const blackMousTier2MissionsArray = dmzMissionInformation.blackMous.tier2.missions;
+    const blackMousTier3MissionsArray = dmzMissionInformation.blackMous.tier3.missions;
+    const blackMousTier4MissionsArray = dmzMissionInformation.blackMous.tier4.missions;
+    const blackMousTier5MissionsArray = dmzMissionInformation.blackMous.tier5.missions;
+
+    const crownTier1MissionsArray = dmzMissionInformation.crown.tier1.missions;
+    const crownTier2MissionsArray = dmzMissionInformation.crown.tier2.missions;
+    const crownTier3MissionsArray = dmzMissionInformation.crown.tier3.missions;
+    const crownTier4MissionsArray = dmzMissionInformation.crown.tier4.missions;
+    const crownTier5MissionsArray = dmzMissionInformation.crown.tier5.missions;
 
     // Is it possible to make an array of arrays and loop through them with 1 loop/function, instead of triggering this a million times?
 
-    createMissionGrid(redactedTier1MissionsArray, redactedTier1Container);
-    createMissionGrid(redactedTier2MissionsArray, redactedTier2Container);
-    createMissionGrid(redactedTier3MissionsArray, redactedTier3Container);
-    createMissionGrid(redactedTier4MissionsArray, redactedTier4Container);
-    createMissionGrid(redactedTier5MissionsArray, redactedTier5Container);
+    createMissionGridLoggedOut(redactedTier1MissionsArray, redactedTier1Container);
+    createMissionGridLoggedOut(redactedTier2MissionsArray, redactedTier2Container);
+    createMissionGridLoggedOut(redactedTier3MissionsArray, redactedTier3Container);
+    createMissionGridLoggedOut(redactedTier4MissionsArray, redactedTier4Container);
+    createMissionGridLoggedOut(redactedTier5MissionsArray, redactedTier5Container);
 
-    createMissionGrid(whiteLotusTier1MissionsArray, whiteLotusTier1Container);
-    createMissionGrid(whiteLotusTier2MissionsArray, whiteLotusTier2Container);
-    createMissionGrid(whiteLotusTier3MissionsArray, whiteLotusTier3Container);
-    createMissionGrid(whiteLotusTier4MissionsArray, whiteLotusTier4Container);
-    createMissionGrid(whiteLotusTier5MissionsArray, whiteLotusTier5Container);
+    createMissionGridLoggedOut(whiteLotusTier1MissionsArray, whiteLotusTier1Container);
+    createMissionGridLoggedOut(whiteLotusTier2MissionsArray, whiteLotusTier2Container);
+    createMissionGridLoggedOut(whiteLotusTier3MissionsArray, whiteLotusTier3Container);
+    createMissionGridLoggedOut(whiteLotusTier4MissionsArray, whiteLotusTier4Container);
+    createMissionGridLoggedOut(whiteLotusTier5MissionsArray, whiteLotusTier5Container);
 
-    createMissionGrid(legionTier1MissionsArray, legionTier1Container);
-    createMissionGrid(legionTier2MissionsArray, legionTier2Container);
-    createMissionGrid(legionTier3MissionsArray, legionTier3Container);
-    createMissionGrid(legionTier4MissionsArray, legionTier4Container);
-    createMissionGrid(legionTier5MissionsArray, legionTier5Container);
+    createMissionGridLoggedOut(legionTier1MissionsArray, legionTier1Container);
+    createMissionGridLoggedOut(legionTier2MissionsArray, legionTier2Container);
+    createMissionGridLoggedOut(legionTier3MissionsArray, legionTier3Container);
+    createMissionGridLoggedOut(legionTier4MissionsArray, legionTier4Container);
+    createMissionGridLoggedOut(legionTier5MissionsArray, legionTier5Container);
 
-    createMissionGrid(blackMousTier1MissionsArray, blackMousTier1Container);
-    createMissionGrid(blackMousTier2MissionsArray, blackMousTier2Container);
-    createMissionGrid(blackMousTier3MissionsArray, blackMousTier3Container);
-    createMissionGrid(blackMousTier4MissionsArray, blackMousTier4Container);
-    createMissionGrid(blackMousTier5MissionsArray, blackMousTier5Container);
+    createMissionGridLoggedOut(blackMousTier1MissionsArray, blackMousTier1Container);
+    createMissionGridLoggedOut(blackMousTier2MissionsArray, blackMousTier2Container);
+    createMissionGridLoggedOut(blackMousTier3MissionsArray, blackMousTier3Container);
+    createMissionGridLoggedOut(blackMousTier4MissionsArray, blackMousTier4Container);
+    createMissionGridLoggedOut(blackMousTier5MissionsArray, blackMousTier5Container);
 
 
-    createMissionGrid(crownTier1MissionsArray, crownTier1Container);
-    createMissionGrid(crownTier2MissionsArray, crownTier2Container);
-    createMissionGrid(crownTier3MissionsArray, crownTier3Container);
-    createMissionGrid(crownTier4MissionsArray, crownTier4Container);
-    createMissionGrid(crownTier5MissionsArray, crownTier5Container);
-    
-    console.log('User Signed In and Mission Grid Created');
-
-  } else {
-    // docSnap.data() will be undefined in this case
-    console.log("No such document!");
-
-    // Possibly load the entire grid... WITHOUT checkboxes, along with a header that says "Not logged in - log in to keep track of your progress".
+    createMissionGridLoggedOut(crownTier1MissionsArray, crownTier1Container);
+    createMissionGridLoggedOut(crownTier2MissionsArray, crownTier2Container);
+    createMissionGridLoggedOut(crownTier3MissionsArray, crownTier3Container);
+    createMissionGridLoggedOut(crownTier4MissionsArray, crownTier4Container);
+    createMissionGridLoggedOut(crownTier5MissionsArray, crownTier5Container);
 
   }
 
