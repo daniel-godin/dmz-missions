@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DMZ Missions Authorization Page - Sign In, Sign Up</title>
+  <link rel='stylesheet' href='./style.css'>
+</head>
+<body>
+<div class='page-container'>
+  <div class='nav-container'>
+    <!-- Auto-generate this later from a .js file -->
+    <header class='logo'>DMZ-Missions</header>
+    <nav class='nav'>
+      <ul class='nav-links'>
+        <li class='nav-link'><a href='./dmz-missions.html'>DMZ Missions Page</a></li>
+        <li class='nav-link'><a href='./auth.html'>Auth Page</a></li>
+        <li class='nav-link'>Link</li>
+      </ul>
+      <div id='profileLinkContainer'>
+        <div id='navSignedIn'><button type='button' id='btnSignOut'>Sign Out</button></div>
+        <div id='navSignedOut'><a href='./auth.html'>Sign In/Sign Up</a></div>
+        <!-- Auto generated based on whether user is logged in or not -->
+      </div>
+    </nav>
+
+  </div>
+  <div class='auth-container' id='authContainer'>
+    <form id='formDMZLogIn'>
+      <label for='txtEmail'>Email:
+        <input type='email' placeholder='Email@Email.com' id='txtEmail' minlength='3' required />
+      </label>
+  
+      <label for='txtPassword'>Password:
+        <input type='password' placeholder='password' id='txtPassword' minlength='3' required />
+      </label>
+  
+      <div id='errorContainer'>
+        <p id='errorMessage'></p>
+      </div>
+      
+      <button type='button' id='btnLogIn'>Log In</button>
+      <button type='button' id='btnSignUp'>Sign Up</button>
+      <button type='button' id='btnGoogleSignIn'>Sign In With Google</button>
+    </form>
+  </div>
+
+  <div class='footer-container'>
+    <footer></footer>
+  </div>
+
+</div>
+
+
+
+
+
+<script src='bundle.js'></script>
+</body>
+</html>
