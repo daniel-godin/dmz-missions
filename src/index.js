@@ -72,13 +72,14 @@ import {
   showApp,
   hideLoginError,
   showLoginError,
-  showLoginState,
-  btnLogIn,
-  btnSignUp,
-  btnSignOut,
-  btnGoogleSignIn,
+  // showLoginState,
+  btnLogIn, btnSignUp, btnSignOut, btnGoogleSignIn,
   checkBoxFunction,
   txtName,
+  navSignedIn, navSignedOut,
+  dmzPageHeader,
+  showDMZHeaderAuthStatus,
+
 
 } from "./dmz-missions-ui";
 
@@ -123,9 +124,14 @@ connectFirestoreEmulator(db, 'localhost', 8080);
 // Early Console.log Check.  Before lots of code executes or gets stuck.
 console.log('Early console log check, before lots of code executes or gets stuck');
 
+// Sending missions object to database
+
+
 // App Configurations:
 // Setting Up Auth From Video:
 const loginEmailPassword = async () => {
+    // Do I need a preventDefault() function?
+
   console.log('login button clicked');
   const loginEmail = txtEmail.value;
   const loginPassword = txtPassword.value;
@@ -138,76 +144,54 @@ const loginEmailPassword = async () => {
     showLoginError(error);
   }
 }
-btnLogIn.addEventListener('click', loginEmailPassword);
 
 const createAccount = async () => {
+    // Do I need a preventDefault() function?
   console.log('sign up button clicked');
-
   const loginEmail = txtEmail.value;
   const loginPassword = txtPassword.value;
-  const loginName = txtName.value;
 
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
-    await setDoc(doc(db, 'users', userCredential.user.uid), {
-      name: loginName,
-    })
     await setDoc(doc(db, 'users', userCredential.user.uid, 'mw2-trackers', 'dmzMissions'), { });
-
-    await initialDatabaseSetUp(userCredential, loginName) // Experimenting to call a function, instead of doing this INSIDE of the signup thing.  Later I will do this after a verification email is confirmed.
+    await initialDatabaseSetUp(userCredential) // Experimenting to call a function, instead of doing this INSIDE of the signup thing.  Later I will do this after a verification email is confirmed.
   }
   catch(error) {
     console.log(error);
     showLoginError(error);
   }
 }
-btnSignUp.addEventListener('click', createAccount);
 
 // Sign-in With Google:
 const handleGoogle = async () => {
+    // Do I need a preventDefault() function?
   console.log('google button clicked');
-
   const provider = await new GoogleAuthProvider();
-
   // FUTURE:  if(desktop) = popup, elseif(mobile) = redirect
   return signInWithPopup(auth, provider);
 }
-btnGoogleSignIn.addEventListener('click', handleGoogle);
 
-
-function initialDatabaseSetUp (userCredentials, name) {
+function initialDatabaseSetUp (userCredentials) {
   let uid = userCredentials.user.uid;
   const newUser = {
-    userName: name,
+    userDisplayName: "Display Name - Future Fix",
     userEmail: userCredentials.user.email,
     userActivisionId: "",
     userRegion: "",
     signedUp: "time"
   }
-  setDoc(doc(db, 'users', uid), newUser );
-
-  setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissions'), { dmzMissionInformation });
-  
-
+  setDoc(doc(db, 'users', uid), newUser ); // Creates a doc in db > users > (unique user id [PRIVATE DOC])
+  setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissions'), { dmzMissionInformation }); // Creates the mission tracking doc inside a users UID doc sub-collections
 }
 
 onAuthStateChanged(auth, user => {
   if (user) {
     console.log('onAuthStateChanged function triggered');
-    showApp();
-    // console.table(user);
-    showLoginState(user);
-    displayUserName(user);
+    showLoginState(user, 'logged-in');
+    showDMZHeaderAuthStatus(user);
 
+    // showApp();
     const uid = user.uid;
-
-    console.log(uid);
-
-
-
-
-
-
 
     // hideLoginError();
 
@@ -302,8 +286,13 @@ onAuthStateChanged(auth, user => {
 
   }
   else {
-    console.log('user not logged in');
-    showLoginForm();
+    showDMZHeaderAuthStatus();
+
+    showLoginState(user, 'logged-out')
+
+    // showLoginForm();
+    // showLoginState(user, 'logged-out');
+
     // lblAuthState.innerHTML = "You're not logged in.";
   }
 })
@@ -314,41 +303,39 @@ const monitorAuthState = async () => {
 monitorAuthState();
 
 const logout = async () => {
+  // Do I need a preventDefault() function?
   console.log('sign out button clicked');
+
   await signOut(auth);
 }
-btnSignOut.addEventListener('click', logout);
 
 
 
 // Testing:
 
+const showLoginState = async (user, state) => {
+  if (state === 'logged-in') {
+    console.log('login-state-triggered for logged in')
 
-// Testing whether I can put this function OUTSIDE of the authState function, and pass the parameters that I need.
+    navSignedOut.style.display = 'none';
+    navSignedIn.style.display = 'block';
+  } else if (state === 'logged-out') {
+    console.log('login-state-triggered for logged out')
 
-const displayUserName = async (user) => {
-  const docRef = doc(db, 'users', user.uid);
-  const docSnap = await getDoc(docRef);
-  if (docSnap.exists()) {
-    const name = docSnap.data().userName;
-    console.log(name);
-
-    profileLinkContainer.insertAdjacentHTML('afterbegin', `
-      You're Logged In, ${name}.
-    `);
-
-
-  } else {
-    console.log('no info');
+    navSignedIn.style.display = 'none';
+    navSignedOut.style.display = 'block';
   }
 }
 
+// Testing whether I can put this function OUTSIDE of the authState function, and pass the parameters that I need.
 
 
 const dmzMissionDocRef = async (user) => {
   const docRef = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissions');
   const docSnap = await getDoc(docRef);
   if (docSnap.exists()) {
+    const data = docSnap.data();
+    // console.table(data);
     // HERE'S WHERE I MAKE THE HTML GRID!!!!  
     // console.log('User Signed In - Mission Grid Loads Next');
 
@@ -427,19 +414,6 @@ const dmzMissionDocRef = async (user) => {
 
 };
 
-
-
-
-
-
-
-// btnLogin.addEventListener("click", loginEmailPassword);
-// btnSignup.addEventListener("click", createAccount);
-// btnLogout.addEventListener("click", logout);
-// btnGoogleSignUp.addEventListener("click", handleGoogle);
-
-// createAuthBox(authContainer);
-
 console.log('before button listeners');
 
 
@@ -450,9 +424,17 @@ const missionCheckboxArray = document.getElementsByClassName('mission-progress')
 
 for (let i = 0; i < missionCheckboxArray.length; i++) {
   missionCheckboxArray[i].addEventListener('click', (e) => {
+    e.preventDefault();
     let checkId = Number(e.target.id);
     console.log(checkId);
     console.log('checkbox listener working');
 })}
+
+btnLogIn.addEventListener('click', loginEmailPassword);
+btnSignOut.addEventListener('click', logout);
+btnSignUp.addEventListener('submit', createAccount);
+btnGoogleSignIn.addEventListener('click', handleGoogle);
+
+
 
 console.log('Got to the end of Index.js script');

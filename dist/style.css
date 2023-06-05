@@ -36,15 +36,17 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 25px;
+  height: min-content;
   background-color: lightblue;
   display: grid;
   grid-template-columns: 200px 1fr;
   align-content: center;
+  align-items: center;
 }
 
 nav {
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr 200px;
 }
 
@@ -55,11 +57,33 @@ nav {
   justify-content: space-evenly;
 }
 
+#navSignedIn {
+
+}
+
+#navSignedOut {
+
+}
+
+#dmzPageHeader {
+  margin: 20px 0 20px 0;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid pink;
+  border-radius: 10px;
+  background-color: lightpink;
+  width: 50%;
+  height: 40px;
+  padding: 2rem;
+}
+
 #authContainer {
   border: 1px solid red;
   background-color: beige;
-  width: 50%;
-  height: 50%;
+  width: 500px;
+  height: min-content;
   justify-self: center;
   align-self: center;
   padding: 2rem;
