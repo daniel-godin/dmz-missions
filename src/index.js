@@ -125,7 +125,16 @@ connectFirestoreEmulator(db, 'localhost', 8080);
 
 // Early Console.log Check.  Before lots of code executes or gets stuck.
 console.log('Early console log check, before lots of code executes or gets stuck');
-console.table(dmzMissionsS3);
+
+// Testing New S3 Missions Object
+let testingMissions = Object.values(dmzMissionsS3);
+
+for (let i = 0; i < testingMissions.length; i++) {
+  let missionTitle = testingMissions[i].title;
+  console.log(missionTitle);
+}
+
+// console.table(testingMissions);
 
 // Sending missions object to database
 
@@ -435,7 +444,7 @@ for (let i = 0; i < missionCheckboxArray.length; i++) {
 
 btnLogIn.addEventListener('click', loginEmailPassword);
 btnSignOut.addEventListener('click', logout);
-btnSignUp.addEventListener('submit', createAccount);
+btnSignUp.addEventListener('click', createAccount);
 btnGoogleSignIn.addEventListener('click', handleGoogle);
 
 
