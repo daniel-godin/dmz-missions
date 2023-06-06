@@ -37,12 +37,7 @@ import { dmzMissionsS3 } from "./dmz-missions-s3"; // DMZ Missions Imports
 import { addDMZMissionsS3ObjToDb, } from "./db-creation";
 
 import {
-  arrayOfMissionCheckboxes, createMissionGridLoggedOut, createMissionGridLoggedIn, fullCreateMissionGridLoggedIn, fullCreateMissionGridLoggedOut,
-  redactedTier1Container, redactedTier2Container, redactedTier3Container, redactedTier4Container, redactedTier5Container,
-  whiteLotusTier1Container, whiteLotusTier2Container, whiteLotusTier3Container, whiteLotusTier4Container, whiteLotusTier5Container,
-  legionTier1Container, legionTier2Container, legionTier3Container, legionTier4Container, legionTier5Container, blackMousTier1Container,
-  blackMousTier2Container, blackMousTier3Container, blackMousTier4Container, blackMousTier5Container, 
-  crownTier1Container, crownTier2Container, crownTier3Container, crownTier4Container, crownTier5Container,
+  fullCreateMissionGridLoggedIn, fullCreateMissionGridLoggedOut,
   authContainer,
   txtEmail,
   txtPassword,
@@ -51,22 +46,13 @@ import {
   createAuthBox,
   profileLinkContainer,
   dmzMissionsContainer,
-  showLoginForm,
-  showApp,
   hideLoginError,
   showLoginError,
-  // showLoginState,
   btnLogIn, btnSignUp, btnSignOut, btnGoogleSignIn,
-  checkBoxFunction,
-  txtName,
   navSignedIn, navSignedOut,
   dmzPageHeader,
   showDMZHeaderAuthStatus,
-  // createMissionGridLoggedOut, createMissionGridLoggedIn,
   showLoginState,
-
-
-
 } from "./dmz-missions-ui";
 
 
