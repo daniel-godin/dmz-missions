@@ -627,10 +627,10 @@ const dmzMissionDocRef = async (user) => {
 // const docSnapTest = doc(docTestRef);
 
 
-// onSnapshot(docTestRef, (doc) => {
-//   // console.log(doc.data(), doc.id);
+onSnapshot(docTestRef, (doc) => {
+  console.log(doc.data(), doc.id);
   
-// })
+})
 
 
 
