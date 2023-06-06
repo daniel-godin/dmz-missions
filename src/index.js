@@ -210,113 +210,18 @@ onAuthStateChanged(auth, user => {
     console.log('onAuthStateChanged function triggered');
     showLoginState(user, 'logged-in');
     showDMZHeaderAuthStatus(user);
-
     // showApp();
     const uid = user.uid;
-
     // hideLoginError();
-
-    dmzMissionDocRef(user); // This function passes the user information, so I can grab the user's uid and grab their appropriate doc and create the grid, based on their "complete"ness.
-
-
-    // THIS IS WHERE YOU WANT TO ADD THE LITTLE "BOX" OR PROFILE PICTURE IN THE TOP RIGHT TO INDICATE YOU'RE LOGGED IN.
-
-
-    // const dmzMissionDocRef = async (user) => {
-    //   const docRef = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissions');
-    //   const docSnap = await getDoc(docRef);
-    //   if (docSnap.exists()) {
-    //     // HERE'S WHERE I MAKE THE HTML GRID!!!!  
-    //     // console.log('User Signed In - Mission Grid Loads Next');
-
-    //     const redactedTier1MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier1.missions;
-    //     const redactedTier2MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier2.missions;
-    //     const redactedTier3MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier3.missions;
-    //     const redactedTier4MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier4.missions;
-    //     const redactedTier5MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier5.missions;
-
-    //     const whiteLotusTier1MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier1.missions;
-    //     const whiteLotusTier2MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier2.missions;
-    //     const whiteLotusTier3MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier3.missions;
-    //     const whiteLotusTier4MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier4.missions;
-    //     const whiteLotusTier5MissionsArray = docSnap.data().dmzMissionInformation.whiteLotus.tier5.missions;
-
-    //     const legionTier1MissionsArray = docSnap.data().dmzMissionInformation.legion.tier1.missions;
-    //     const legionTier2MissionsArray = docSnap.data().dmzMissionInformation.legion.tier2.missions;
-    //     const legionTier3MissionsArray = docSnap.data().dmzMissionInformation.legion.tier3.missions;
-    //     const legionTier4MissionsArray = docSnap.data().dmzMissionInformation.legion.tier4.missions;
-    //     const legionTier5MissionsArray = docSnap.data().dmzMissionInformation.legion.tier5.missions;
-
-    //     const blackMousTier1MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier1.missions;
-    //     const blackMousTier2MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier2.missions;
-    //     const blackMousTier3MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier3.missions;
-    //     const blackMousTier4MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier4.missions;
-    //     const blackMousTier5MissionsArray = docSnap.data().dmzMissionInformation.blackMous.tier5.missions;
-
-    //     const crownTier1MissionsArray = docSnap.data().dmzMissionInformation.crown.tier1.missions;
-    //     const crownTier2MissionsArray = docSnap.data().dmzMissionInformation.crown.tier2.missions;
-    //     const crownTier3MissionsArray = docSnap.data().dmzMissionInformation.crown.tier3.missions;
-    //     const crownTier4MissionsArray = docSnap.data().dmzMissionInformation.crown.tier4.missions;
-    //     const crownTier5MissionsArray = docSnap.data().dmzMissionInformation.crown.tier5.missions;
-   
-    //     // Is it possible to make an array of arrays and loop through them with 1 loop/function, instead of triggering this a million times?
-
-    //     createMissionGrid(redactedTier1MissionsArray, redactedTier1Container);
-    //     createMissionGrid(redactedTier2MissionsArray, redactedTier2Container);
-    //     createMissionGrid(redactedTier3MissionsArray, redactedTier3Container);
-    //     createMissionGrid(redactedTier4MissionsArray, redactedTier4Container);
-    //     createMissionGrid(redactedTier5MissionsArray, redactedTier5Container);
-
-    //     createMissionGrid(whiteLotusTier1MissionsArray, whiteLotusTier1Container);
-    //     createMissionGrid(whiteLotusTier2MissionsArray, whiteLotusTier2Container);
-    //     createMissionGrid(whiteLotusTier3MissionsArray, whiteLotusTier3Container);
-    //     createMissionGrid(whiteLotusTier4MissionsArray, whiteLotusTier4Container);
-    //     createMissionGrid(whiteLotusTier5MissionsArray, whiteLotusTier5Container);
-
-    //     createMissionGrid(legionTier1MissionsArray, legionTier1Container);
-    //     createMissionGrid(legionTier2MissionsArray, legionTier2Container);
-    //     createMissionGrid(legionTier3MissionsArray, legionTier3Container);
-    //     createMissionGrid(legionTier4MissionsArray, legionTier4Container);
-    //     createMissionGrid(legionTier5MissionsArray, legionTier5Container);
-
-    //     createMissionGrid(blackMousTier1MissionsArray, blackMousTier1Container);
-    //     createMissionGrid(blackMousTier2MissionsArray, blackMousTier2Container);
-    //     createMissionGrid(blackMousTier3MissionsArray, blackMousTier3Container);
-    //     createMissionGrid(blackMousTier4MissionsArray, blackMousTier4Container);
-    //     createMissionGrid(blackMousTier5MissionsArray, blackMousTier5Container);
-
-
-    //     createMissionGrid(crownTier1MissionsArray, crownTier1Container);
-    //     createMissionGrid(crownTier2MissionsArray, crownTier2Container);
-    //     createMissionGrid(crownTier3MissionsArray, crownTier3Container);
-    //     createMissionGrid(crownTier4MissionsArray, crownTier4Container);
-    //     createMissionGrid(crownTier5MissionsArray, crownTier5Container);
-        
-    //     console.log('User Signed In and Mission Grid Created');
-
-    //   } else {
-    //     // docSnap.data() will be undefined in this case
-    //     console.log("No such document!");
-
-    //     // Possibly load the entire grid... WITHOUT checkboxes, along with a header that says "Not logged in - log in to keep track of your progress".
-
-    //   }
-
-    // };
-    
+    dmzMissionDocRef(user); // This function passes the user information, so I can grab the user's uid and grab their appropriate doc and create the grid, based on their "complete"ness.    
 
   }
   else {
     showDMZHeaderAuthStatus();
-
     dmzMissionDocRef(user);
-
     showLoginState(user, 'logged-out')
-
     // showLoginForm();
     // showLoginState(user, 'logged-out');
-
-    // lblAuthState.innerHTML = "You're not logged in.";
   }
 })
 
