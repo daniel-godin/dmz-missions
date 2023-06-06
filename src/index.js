@@ -201,6 +201,8 @@ function initialDatabaseSetUp (userCredentials) {
   }
   setDoc(doc(db, 'users', uid), newUser ); // Creates a doc in db > users > (unique user id [PRIVATE DOC])
   setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissions'), { dmzMissionInformation }); // Creates the mission tracking doc inside a users UID doc sub-collections
+  setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissionsS3'), { dmzMissionsS3 }); //  Creates season 3 mission tracking doc inside a users UID Doc sub-collection.  This is the newest version I'm working with.
+
 }
 
 onAuthStateChanged(auth, user => {
