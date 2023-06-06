@@ -38,7 +38,8 @@ import { dmzMissionInformation } from "./full-mission-information";
 import { dmzMissionsS3 } from "./dmz-missions-s3";
 
 import {
-  createMissionGrid, createMissionGridLoggedOut,
+  // createMissionGrid, 
+  // createMissionGridLoggedOut,
   arrayOfMissionCheckboxes,
   redactedTier1Container,
   redactedTier2Container,
@@ -91,22 +92,6 @@ import {
 
 import { addDMZMissionsS3ObjToDb, } from "./db-creation";
 
-// Import Non-Firebase Code From Other Files:  THIS IS ONLY FOR TESTING, THIS IS THE OFFICIAL VIDEO GITHUB CODE.
-// Open-source Firebase log-in code.  For testing and getting it working.  Will replace all of this from 'ui' later.
-// import { 
-//   hideLoginError,
-//   showLoginState,
-//   showLoginForm,
-//   showApp,
-//   showLoginError,
-//   btnLogin,
-//   btnSignup,
-//   btnGoogleSignUp,
-//   btnLogout,
-//   txtPassword, 
-//   lblAuthState,
-// } from "./ui";
-
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -132,15 +117,11 @@ connectFirestoreEmulator(db, 'localhost', 8080);
 // Early Console.log Check.  Before lots of code executes or gets stuck.
 console.log('Early console log check, before lots of code executes or gets stuck');
 
-// addDMZMissionsS3ObjToDb(db); // Adds the dmzMissionsS3 object to db, mw2-info, dmzMissions.  This is OUTSIDE of the user collection stuff.
-
-
-
 
 // Figuring out how to make dmz mission grid from dmzMissionsS3 doc
 const docTestRef = doc(db, 'users', 'uQvLZlDwAsXufUmgDp3lQVapxucM', 'mw2-trackers', 'dmzMissionsS3');
 
-function createMissionGridLTESTTESTTEST (docRef) { // THIS IS THE NOT-LOGGED IN VERSION.  THE CHECKBOXES ARE NOT CREATED.
+function createMissionGridLoggedOut (docRef) { // THIS IS THE NOT-LOGGED IN VERSION.  THE CHECKBOXES ARE NOT CREATED.
   getDoc(docRef)
   .then((doc) => {
     const obj = doc.data();
@@ -226,9 +207,9 @@ function createMissionGridLTESTTESTTEST (docRef) { // THIS IS THE NOT-LOGGED IN 
   })
 }
 
-// createMissionGridLTESTTESTTEST(docTestRef);
+// createMissionGridLoggedOut(docTestRef);
 
-function createMissionGridLoggedInTEST (docRef) {
+function createMissionGridLoggedIn (docRef) {
   getDoc(docRef)
   .then((doc) => {
     const obj = doc.data();
@@ -313,26 +294,27 @@ function createMissionGridLoggedInTEST (docRef) {
           console.log(title);
         } 
     }
+
+    // This adds eventlistener and update Doc to all the checkboxes.
+    const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
+
+    for (let i = 0; i < arrayOfMissionCheckboxes.length; i++) {
+      arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
+        // e.preventDefault();
+        let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
+        let checkId = Number(e.target.id); // Grabs the event target's id property, makes it into a Number (integar) from a string.
+        console.log('checkbox listener working');
+        // const docRefS3 = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'); // Document Reference to a users Season 3 dmz Missions Doc
+        updateDoc(docRef, {
+          [checkId+".complete"] : checked,
+        });
+    })}
   })
 }
 
-createMissionGridLoggedInTEST(docTestRef);
+// createMissionGridLoggedIn(docTestRef);
 
 
-
-
-
-// Testing New S3 Missions Object
-// let testingMissions = Object.values(dmzMissionsS3);
-
-// for (let i = 0; i < testingMissions.length; i++) {
-//   let missionTitle = testingMissions[i].title;
-//   // console.log(missionTitle);
-// }
-
-// console.table(testingMissions);
-
-// Sending missions object to database
 
 
 // App Configurations:
@@ -390,7 +372,6 @@ function initialDatabaseSetUp (userCredentials) {
   }
   setDoc(doc(db, 'users', uid), newUser ); // Creates a doc in db > users > (unique user id [PRIVATE DOC])
   setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3); //  Creates season 3 mission tracking doc inside a users UID Doc sub-collection.  This is the newest version I'm working with.
-
 }
 
 onAuthStateChanged(auth, user => {
@@ -398,25 +379,25 @@ onAuthStateChanged(auth, user => {
     // console.log('onAuthStateChanged function triggered');
     showLoginState(user, 'logged-in');
     showDMZHeaderAuthStatus(user);
-    // showApp();
-    const uid = user.uid;
     // hideLoginError();
-    dmzMissionDocRef(user); // This function passes the user information, so I can grab the user's uid and grab their appropriate doc and create the grid, based on their "complete"ness.    
-
+    // dmzMissionDocRef(user); // This function passes the user information, so I can grab the user's uid and grab their appropriate doc and create the grid, based on their "complete"ness.    
+    createMissionGridLoggedIn(docTestRef);
   }
   else {
     showDMZHeaderAuthStatus();
-    dmzMissionDocRef(user);
+    createMissionGridLoggedOut(docTestRef);
+    // dmzMissionDocRef(user);
     showLoginState(user, 'logged-out')
     // showLoginForm();
     // showLoginState(user, 'logged-out');
   }
 })
 
-const monitorAuthState = async () => {
+// I don't know what this does... I will delete soon if nothing breaks.
+// const monitorAuthState = async () => {
 
-}
-monitorAuthState();
+// }
+// monitorAuthState();
 
 const logout = async () => {
   // Do I need a preventDefault() function?
@@ -424,9 +405,6 @@ const logout = async () => {
 
   await signOut(auth);
 }
-
-
-
 // Testing:
 
 const showLoginState = async (user, state) => {
@@ -518,29 +496,7 @@ const dmzMissionDocRef = async (user) => {
       
       console.log('User Signed In and Mission Grid Created');
 
-      const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
 
-      // for (let i = 0; i < arrayOfMissionCheckboxes.length; i++) {
-      //   arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
-      //     // e.preventDefault();
-      //     let checkId = Number(e.target.id);
-      //     console.log(checkId);
-      //     console.log('checkbox listener working');
-      // })}
-
-      // Testing Alternative Way:
-
-      for (let i = 0; i < arrayOfMissionCheckboxes.length; i++) {
-        arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
-          // e.preventDefault();
-          let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
-          let checkId = Number(e.target.id); // Grabs the event target's id property, makes it into a Number (integar) from a string.
-          // console.log('checkbox listener working');
-          // const docRefS3 = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'); // Document Reference to a users Season 3 dmz Missions Doc
-          updateDoc(docRefS3, {
-            [checkId+".complete"] : checked,
-          });
-      })}
 
 
 
@@ -623,29 +579,14 @@ const dmzMissionDocRef = async (user) => {
 
 };
 
-// const docTestRef = doc(db, 'users', 'j5J4is2mEPzYCe5Mo6Cfh4SsS0Va', 'mw2-trackers', 'dmzMissionsS3');
-// const docSnapTest = doc(docTestRef);
-
 
 onSnapshot(docTestRef, (doc) => {
   console.log(doc.data(), doc.id);
+  // addDMZMissionsS3ObjToDb(db); // Adds the dmzMissionsS3 object to db, mw2-info, dmzMissions.  This is OUTSIDE of the user collection stuff.
+
   
 })
 
-
-
-
-// Button Listeners:
-// console.log('before button listeners');
-
-
-// for (let i = 0; i < missionCheckboxArray.length; i++) {
-//   missionCheckboxArray[i].addEventListener('click', (e) => {
-//     e.preventDefault();
-//     let checkId = Number(e.target.id);
-//     // console.log(checkId);
-//     console.log('checkbox listener working');
-// })}
 
 btnLogIn.addEventListener('click', loginEmailPassword);
 btnSignOut.addEventListener('click', logout);

@@ -125,22 +125,6 @@ export function createMissionGridTESTLOGGEDIN (tierContainer, title, id, complet
 
 
 
-
-
-
-
-
-// Log-in Stuff:
-// export const showLoginForm = () => {
-//   authContainer.style.display = 'block';
-//   dmzMissionsContainer.style.display = 'none';
-// }
-
-// export const showApp = () => {
-//   authContainer.style.display = 'none';
-//   dmzMissionsContainer.style.display = 'grid';
-// }
-
 export const hideLoginError = () => {
   errorContainer.style.display = 'none';
   errorMessage.innerText = '';
