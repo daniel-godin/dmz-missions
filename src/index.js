@@ -202,7 +202,7 @@ function initialDatabaseSetUp (userCredentials) {
   }
   setDoc(doc(db, 'users', uid), newUser ); // Creates a doc in db > users > (unique user id [PRIVATE DOC])
   setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissions'), { dmzMissionInformation }); // Creates the mission tracking doc inside a users UID doc sub-collections
-  setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissionsS3'), { dmzMissionsS3 }); //  Creates season 3 mission tracking doc inside a users UID Doc sub-collection.  This is the newest version I'm working with.
+  setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3); //  Creates season 3 mission tracking doc inside a users UID Doc sub-collection.  This is the newest version I'm working with.
 
 }
 
@@ -263,6 +263,11 @@ const dmzMissionDocRef = async (user) => {
 
 
   if (user) {
+
+    const docRefS3 = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'); // Document Reference to a users Season 3 dmz Missions Doc
+    const docSnapS3 = await getDoc(docRefS3); // Snapshot of S3 DMZ Missions doc
+
+
     const docRef = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissions');
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
@@ -344,6 +349,20 @@ const dmzMissionDocRef = async (user) => {
           let checkId = Number(e.target.id);
           // console.log(checkId);
           console.log('checkbox listener working');
+
+          // Pseudo-code:  search through doc ref for checkId number, first... console.log that object.
+
+          let q = query(docRefS3, where());
+
+          console.log(q);
+
+
+
+
+
+
+
+
       })}
 
 
