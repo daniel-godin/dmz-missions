@@ -2,7 +2,8 @@ import { AuthErrorCodes } from "firebase/auth";
 
 import { doc, getDoc, getDocs } from "firebase/firestore";
 
-const arrayOfMissionTitles = document.getElementsByClassName('mission-title');
+export const arrayOfMissionTitles = document.getElementsByClassName('mission-title');
+export const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
 
 export const navSignedIn = document.getElementById('navSignedIn');
 export const navSignedOut = document.getElementById('navSignedOut');
@@ -81,6 +82,20 @@ export function createMissionGrid (missionsArr, tierContainer) {
           <input type="checkbox" name="" id="${checkboxId}" class="mission-progress">
         </div>`
     )}
+
+    const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
+
+    for (let i = 0; i < arrayOfMissionCheckboxes.length; i++) {
+      arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
+        e.preventDefault();
+        let checkId = Number(e.target.id);
+        // console.log(checkId);
+        console.log('checkbox listener working');
+    })}
+
+
+
+
 }}
 
 export function createMissionGridLoggedOut (missionsArr, tierContainer) {
@@ -221,14 +236,14 @@ export const showLoginError = (error) => {
 export const showDMZHeaderAuthStatus = async (user) => {
   if (user) {
     let email = user.email;
-    console.log('showDMZHeaderAuthStatus Triggered with USER SIGNED IN');
-    console.log(user);
+    // console.log('showDMZHeaderAuthStatus Triggered with USER SIGNED IN');
+    // console.log(user);
     dmzPageHeader.insertAdjacentHTML('afterbegin', `
       <header class='dmz-header' id='dmzHeaderSignedIn'>Welcome Back ${email}.  Thank you for signing in.</header>
     `)
     // insert html to header welcoming a logged in user.
   } else {
-    console.log('showDMZHeaderAuthStatus Triggered with USER SIGNED OUT')
+    // console.log('showDMZHeaderAuthStatus Triggered with USER SIGNED OUT')
     dmzPageHeader.insertAdjacentHTML('afterbegin', `
       <header class='dmz-header' id='dmzHeaderSignedOut'>Thank you for visiting.  Please <a href='./auth.html'>Sign In or Sign Up</a> for full funcationality in tracking your progress.</header>
     `)

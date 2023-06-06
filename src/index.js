@@ -37,6 +37,7 @@ import { dmzMissionsS3 } from "./dmz-missions-s3";
 
 import {
   createMissionGrid, createMissionGridLoggedOut,
+  arrayOfMissionCheckboxes,
   redactedTier1Container,
   redactedTier2Container,
   redactedTier3Container,
@@ -207,7 +208,7 @@ function initialDatabaseSetUp (userCredentials) {
 
 onAuthStateChanged(auth, user => {
   if (user) {
-    console.log('onAuthStateChanged function triggered');
+    // console.log('onAuthStateChanged function triggered');
     showLoginState(user, 'logged-in');
     showDMZHeaderAuthStatus(user);
     // showApp();
@@ -243,12 +244,12 @@ const logout = async () => {
 
 const showLoginState = async (user, state) => {
   if (state === 'logged-in') {
-    console.log('login-state-triggered for logged in')
+    // console.log('login-state-triggered for logged in')
 
     navSignedOut.style.display = 'none';
     navSignedIn.style.display = 'block';
   } else if (state === 'logged-out') {
-    console.log('login-state-triggered for logged out')
+    // console.log('login-state-triggered for logged out')
 
     navSignedIn.style.display = 'none';
     navSignedOut.style.display = 'block';
@@ -337,14 +338,14 @@ const dmzMissionDocRef = async (user) => {
 
     } else {
       // docSnap.data() will be undefined in this case
-      console.log("No such document!");
+      // console.log("No such document!");
 
       // Possibly load the entire grid... WITHOUT checkboxes, along with a header that says "Not logged in - log in to keep track of your progress".
     }
   } else {
     // Loads Mission Grid From JS Object, without checkboxes.
 
-    console.log('not signed in grid creation');
+    // console.log('not signed in grid creation');
 
     const redactedTier1MissionsArray = dmzMissionInformation.redacted.tier1.missions;
     const redactedTier2MissionsArray = dmzMissionInformation.redacted.tier2.missions;
@@ -413,21 +414,20 @@ const dmzMissionDocRef = async (user) => {
 
 };
 
-console.log('before button listeners');
 
 
 
+// Button Listeners:
+// console.log('before button listeners');
 
 
-const missionCheckboxArray = document.getElementsByClassName('mission-progress');
-
-for (let i = 0; i < missionCheckboxArray.length; i++) {
-  missionCheckboxArray[i].addEventListener('click', (e) => {
-    e.preventDefault();
-    let checkId = Number(e.target.id);
-    // console.log(checkId);
-    console.log('checkbox listener working');
-})}
+// for (let i = 0; i < missionCheckboxArray.length; i++) {
+//   missionCheckboxArray[i].addEventListener('click', (e) => {
+//     e.preventDefault();
+//     let checkId = Number(e.target.id);
+//     // console.log(checkId);
+//     console.log('checkbox listener working');
+// })}
 
 btnLogIn.addEventListener('click', loginEmailPassword);
 btnSignOut.addEventListener('click', logout);
