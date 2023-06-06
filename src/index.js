@@ -25,9 +25,11 @@ import {
   getDoc,
   getDocs,
   setDoc,
+  updateDoc,
   query,
   where,
-  Timestamp
+  Timestamp,
+  onSnapshot,
 } from 'firebase/firestore';
 
 // DMZ Missions Imports
@@ -82,6 +84,7 @@ import {
   navSignedIn, navSignedOut,
   dmzPageHeader,
   showDMZHeaderAuthStatus,
+  testCheckbox,
 
 
 } from "./dmz-missions-ui";
@@ -260,14 +263,9 @@ const showLoginState = async (user, state) => {
 
 
 const dmzMissionDocRef = async (user) => {
-
-
   if (user) {
-
     const docRefS3 = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'); // Document Reference to a users Season 3 dmz Missions Doc
-    const docSnapS3 = await getDoc(docRefS3); // Snapshot of S3 DMZ Missions doc
-
-
+    // const docSnapS3 = getDoc(docRefS3); // Snapshot of S3 DMZ Missions doc
     const docRef = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissions');
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
@@ -343,27 +341,29 @@ const dmzMissionDocRef = async (user) => {
 
       const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
 
+      // for (let i = 0; i < arrayOfMissionCheckboxes.length; i++) {
+      //   arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
+      //     // e.preventDefault();
+      //     let checkId = Number(e.target.id);
+      //     console.log(checkId);
+      //     console.log('checkbox listener working');
+      // })}
+
+      // Testing Alternative Way:
+
       for (let i = 0; i < arrayOfMissionCheckboxes.length; i++) {
         arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
           // e.preventDefault();
-          let checkId = Number(e.target.id);
-          // console.log(checkId);
-          console.log('checkbox listener working');
-
-          // Pseudo-code:  search through doc ref for checkId number, first... console.log that object.
-
-          let q = query(docRefS3, where());
-
-          console.log(q);
-
-
-
-
-
-
-
-
+          let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
+          let checkId = Number(e.target.id); // Grabs the event target's id property, makes it into a Number (integar) from a string.
+          // console.log('checkbox listener working');
+          // const docRefS3 = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'); // Document Reference to a users Season 3 dmz Missions Doc
+          updateDoc(docRefS3, {
+            [checkId+".complete"] : checked,
+          });
       })}
+
+
 
 
     } else {
@@ -372,7 +372,7 @@ const dmzMissionDocRef = async (user) => {
 
       // Possibly load the entire grid... WITHOUT checkboxes, along with a header that says "Not logged in - log in to keep track of your progress".
     }
-  } else {
+  } else { // This is if user does not exist.
     // Loads Mission Grid From JS Object, without checkboxes.
 
     // console.log('not signed in grid creation');
@@ -444,6 +444,11 @@ const dmzMissionDocRef = async (user) => {
 
 };
 
+const docTestRef = doc(db, 'users', 'j5J4is2mEPzYCe5Mo6Cfh4SsS0Va', 'mw2-trackers', 'dmzMissionsS3');
+
+onSnapshot(docTestRef, (doc) => {
+  console.log(doc.data(), doc.id);
+})
 
 
 

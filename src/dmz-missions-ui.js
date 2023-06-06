@@ -1,6 +1,6 @@
 import { AuthErrorCodes } from "firebase/auth";
 
-import { doc, getDoc, getDocs } from "firebase/firestore";
+import { doc, getDoc, getDocs, onSnapshot, } from "firebase/firestore";
 
 export const arrayOfMissionTitles = document.getElementsByClassName('mission-title');
 export const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
@@ -94,6 +94,14 @@ export function createMissionGridLoggedOut (missionsArr, tierContainer) {
       </div>`
   )}
 }
+
+export function testCheckbox (checkboxId, docSnap) {
+  let data = docSnap.data();
+  console.log(data);
+  console.log(checkboxId);
+  console.log('checkbox listener working');
+}
+
 
 
 
