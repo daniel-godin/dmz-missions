@@ -1,6 +1,7 @@
 import { AuthErrorCodes } from "firebase/auth";
 
 import { doc, getDoc, getDocs, onSnapshot, } from "firebase/firestore";
+import { dmzMissionsS3 } from "./dmz-missions-s3";
 
 export const arrayOfMissionTitles = document.getElementsByClassName('mission-title');
 export const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
@@ -95,25 +96,34 @@ export function createMissionGridLoggedOut (missionsArr, tierContainer) {
   )}
 }
 
-export function testCheckbox (checkboxId, docSnap) {
-  let data = docSnap.data();
-  console.log(data);
-  console.log(checkboxId);
-  console.log('checkbox listener working');
+
+export function createMissionGridTEST (tierContainer, title) {
+  tierContainer.insertAdjacentHTML('beforeend', `
+  <div class="mission-container">
+    <header class="mission-title">${title}</header>
+  </div>`)
 }
 
 
 
 
 
+// export function createMissionGridLoggedOutTEST (obj) {
+//   console.log('create mission grid logged out test activated');
+  
+//   console.log(obj.data());
+
+
+// }
 
 
 
 
 
 
-// Keep className mission-progress AFTER createMissionGrid - otherwise I don't think there are any div's with mission-progress class anyway.
-// export const missionCheckboxArray = document.getElementsByClassName('mission-progress');
+
+
+
 
 // Log-in Stuff:
 // export const showLoginForm = () => {

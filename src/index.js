@@ -84,7 +84,8 @@ import {
   navSignedIn, navSignedOut,
   dmzPageHeader,
   showDMZHeaderAuthStatus,
-  testCheckbox,
+  createMissionGridTEST, 
+  // createMissionGridLoggedOutTEST,
 
 
 } from "./dmz-missions-ui";
@@ -132,18 +133,157 @@ connectFirestoreEmulator(db, 'localhost', 8080);
 // Early Console.log Check.  Before lots of code executes or gets stuck.
 console.log('Early console log check, before lots of code executes or gets stuck');
 
-addDMZMissionsS3ObjToDb(db); // Adds the dmzMissionsS3 object to db, mw2-info, dmzMissions.  This is OUTSIDE of the user collection stuff.
+// addDMZMissionsS3ObjToDb(db); // Adds the dmzMissionsS3 object to db, mw2-info, dmzMissions.  This is OUTSIDE of the user collection stuff.
+
+
+
+
+// Figuring out how to make dmz mission grid from dmzMissionsS3 doc
+const docTestRef = doc(db, 'users', 'uQvLZlDwAsXufUmgDp3lQVapxucM', 'mw2-trackers', 'dmzMissionsS3');
+
+function createMissionGridLTESTTESTTEST (docRef) {
+  getDoc(docRef)
+  .then((doc) => {
+
+    const obj = doc.data();
+
+    for (let [key, value] of Object.entries(obj)) {
+      let title = value.title;
+      let id = value.id;
+      let complete = value.complete;
+
+        if (id >= 10101 && id <=10107) {
+          createMissionGridTEST(redactedTier1Container, title);
+          console.log(title);
+        } else if (id >= 10201 && id <=10207) {
+          createMissionGridTEST(redactedTier2Container, title);
+          console.log(title);
+        } else if (id >= 10301 && id <=10307) {
+          createMissionGridTEST(redactedTier3Container, title);
+          console.log(title);
+        } else if (id >= 10401 && id <=10407) {
+          createMissionGridTEST(redactedTier4Container, title);
+          console.log(title);
+        } else if (id >= 10501 && id <=10507) {
+          createMissionGridTEST(redactedTier5Container, title);
+          console.log(title);
+        } else if (id >= 20101 && id <=20107) {
+          createMissionGridTEST(whiteLotusTier1Container, title);
+          console.log(title);
+        } else if (id >= 20201 && id <=20207) {
+          createMissionGridTEST(whiteLotusTier2Container, title);
+          console.log(title);
+        } else if (id >= 20301 && id <=20307) {
+          createMissionGridTEST(whiteLotusTier3Container, title);
+          console.log(title);
+        } else if (id >= 20401 && id <=20407) {
+          createMissionGridTEST(whiteLotusTier4Container, title);
+          console.log(title);
+        } else if (id >= 20501 && id <=20507) {
+          createMissionGridTEST(whiteLotusTier5Container, title);
+          console.log(title);
+        } else if (id >= 30101 && id <=30107) {
+          createMissionGridTEST(legionTier1Container, title);
+          console.log(title);
+        } else if (id >= 30201 && id <=30207) {
+          createMissionGridTEST(legionTier2Container, title);
+          console.log(title);
+        } else if (id >= 30301 && id <=30307) {
+          createMissionGridTEST(legionTier3Container, title);
+          console.log(title);
+        } else if (id >= 30401 && id <=30407) {
+          createMissionGridTEST(legionTier4Container, title);
+          console.log(title);
+        } else if (id >= 30501 && id <=30507) {
+          createMissionGridTEST(legionTier5Container, title);
+          console.log(title);
+        } else if (id >= 40101 && id <=40107) {
+          createMissionGridTEST(blackMousTier1Container, title);
+          console.log(title);
+        } else if (id >= 40201 && id <=40207) {
+          createMissionGridTEST(blackMousTier2Container, title);
+          console.log(title);
+        } else if (id >= 40301 && id <=40307) {
+          createMissionGridTEST(blackMousTier3Container, title);
+          console.log(title);
+        } else if (id >= 40401 && id <=40407) {
+          createMissionGridTEST(blackMousTier4Container, title);
+          console.log(title);
+        } else if (id >= 40501 && id <=40507) {
+          createMissionGridTEST(blackMousTier5Container, title);
+          console.log(title);
+        } else if (id >= 50101 && id <=50107) {
+          createMissionGridTEST(crownTier1Container, title);
+          console.log(title);
+        } else if (id >= 50201 && id <=50207) {
+          createMissionGridTEST(crownTier2Container, title);
+          console.log(title);
+        } else if (id >= 50301 && id <=50307) {
+          createMissionGridTEST(crownTier3Container, title);
+          console.log(title);
+        } else if (id >= 50401 && id <=50407) {
+          createMissionGridTEST(crownTier4Container, title);
+          console.log(title);
+        } else if (id >= 50501 && id <=50507) {
+          createMissionGridTEST(crownTier5Container, title);
+          console.log(title);
+        } 
+    }
+
+
+
+
+    // console.log(obj);
+
+
+
+
+    // let objKeys = Object.keys(doc.data());
+
+    // for (item of objKeys) {
+    //   console.log('key:', item);
+    //   console.log('value:', doc.data()[item]);
+    // }
+
+    // console.log(objKeys);
+
+    // console.log(doc.data(), doc.id);
+
+
+
+
+
+
+
+
+  })
+
+  // let data = Object(obj);
+
+  // console.log('create mission grid logged out test activated');
+  
+  // console.log(data);
+
+
+}
+
+createMissionGridLTESTTESTTEST(docTestRef);
+
+
+
+
+
 
 
 
 
 // Testing New S3 Missions Object
-let testingMissions = Object.values(dmzMissionsS3);
+// let testingMissions = Object.values(dmzMissionsS3);
 
-for (let i = 0; i < testingMissions.length; i++) {
-  let missionTitle = testingMissions[i].title;
-  // console.log(missionTitle);
-}
+// for (let i = 0; i < testingMissions.length; i++) {
+//   let missionTitle = testingMissions[i].title;
+//   // console.log(missionTitle);
+// }
 
 // console.table(testingMissions);
 
@@ -176,7 +316,7 @@ const createAccount = async () => {
 
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
-    await setDoc(doc(db, 'users', userCredential.user.uid, 'mw2-trackers', 'dmzMissions'), { });
+    await setDoc(doc(db, 'users', userCredential.user.uid, 'mw2-trackers', 'dmzMissions'), { dmzMissionInformation });
     await initialDatabaseSetUp(userCredential) // Experimenting to call a function, instead of doing this INSIDE of the signup thing.  Later I will do this after a verification email is confirmed.
   }
   catch(error) {
@@ -204,7 +344,6 @@ function initialDatabaseSetUp (userCredentials) {
     signedUp: "time"
   }
   setDoc(doc(db, 'users', uid), newUser ); // Creates a doc in db > users > (unique user id [PRIVATE DOC])
-  setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissions'), { dmzMissionInformation }); // Creates the mission tracking doc inside a users UID doc sub-collections
   setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3); //  Creates season 3 mission tracking doc inside a users UID Doc sub-collection.  This is the newest version I'm working with.
 
 }
@@ -265,14 +404,9 @@ const showLoginState = async (user, state) => {
 const dmzMissionDocRef = async (user) => {
   if (user) {
     const docRefS3 = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'); // Document Reference to a users Season 3 dmz Missions Doc
-    // const docSnapS3 = getDoc(docRefS3); // Snapshot of S3 DMZ Missions doc
     const docRef = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissions');
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
-      const data = docSnap.data();
-      // console.table(data);
-      // HERE'S WHERE I MAKE THE HTML GRID!!!!  
-      // console.log('User Signed In - Mission Grid Loads Next');
 
       const redactedTier1MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier1.missions;
       const redactedTier2MissionsArray = docSnap.data().dmzMissionInformation.redacted.tier2.missions;
@@ -444,11 +578,15 @@ const dmzMissionDocRef = async (user) => {
 
 };
 
-const docTestRef = doc(db, 'users', 'j5J4is2mEPzYCe5Mo6Cfh4SsS0Va', 'mw2-trackers', 'dmzMissionsS3');
+// const docTestRef = doc(db, 'users', 'j5J4is2mEPzYCe5Mo6Cfh4SsS0Va', 'mw2-trackers', 'dmzMissionsS3');
+// const docSnapTest = doc(docTestRef);
 
-onSnapshot(docTestRef, (doc) => {
-  console.log(doc.data(), doc.id);
-})
+
+// onSnapshot(docTestRef, (doc) => {
+//   // console.log(doc.data(), doc.id);
+  
+// })
+
 
 
 
