@@ -104,17 +104,22 @@ export function createMissionGridTEST (tierContainer, title) {
   </div>`)
 }
 
+export function createMissionGridTESTLOGGEDIN (tierContainer, title, id, complete) {
+  if (complete) {
+    tierContainer.insertAdjacentHTML('beforeend', `
+    <div class="mission-container">
+      <header class="mission-title">${title}</header>
+      <input type="checkbox" name="" id="${id}" class="mission-progress" checked>
+    </div>`)
+  } else {
+    tierContainer.insertAdjacentHTML('beforeend', `
+    <div class="mission-container">
+      <header class="mission-title">${title}</header>
+      <input type="checkbox" name="" id="${id}" class="mission-progress">
+    </div>`)
+  }
+}
 
-
-
-
-// export function createMissionGridLoggedOutTEST (obj) {
-//   console.log('create mission grid logged out test activated');
-  
-//   console.log(obj.data());
-
-
-// }
 
 
 

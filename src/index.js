@@ -84,8 +84,7 @@ import {
   navSignedIn, navSignedOut,
   dmzPageHeader,
   showDMZHeaderAuthStatus,
-  createMissionGridTEST, 
-  // createMissionGridLoggedOutTEST,
+  createMissionGridTEST, createMissionGridTESTLOGGEDIN,
 
 
 } from "./dmz-missions-ui";
@@ -141,17 +140,12 @@ console.log('Early console log check, before lots of code executes or gets stuck
 // Figuring out how to make dmz mission grid from dmzMissionsS3 doc
 const docTestRef = doc(db, 'users', 'uQvLZlDwAsXufUmgDp3lQVapxucM', 'mw2-trackers', 'dmzMissionsS3');
 
-function createMissionGridLTESTTESTTEST (docRef) {
+function createMissionGridLTESTTESTTEST (docRef) { // THIS IS THE NOT-LOGGED IN VERSION.  THE CHECKBOXES ARE NOT CREATED.
   getDoc(docRef)
   .then((doc) => {
-
     const obj = doc.data();
-
     for (let [key, value] of Object.entries(obj)) {
       let title = value.title;
-      let id = value.id;
-      let complete = value.complete;
-
         if (id >= 10101 && id <=10107) {
           createMissionGridTEST(redactedTier1Container, title);
           console.log(title);
@@ -229,49 +223,100 @@ function createMissionGridLTESTTESTTEST (docRef) {
           console.log(title);
         } 
     }
-
-
-
-
-    // console.log(obj);
-
-
-
-
-    // let objKeys = Object.keys(doc.data());
-
-    // for (item of objKeys) {
-    //   console.log('key:', item);
-    //   console.log('value:', doc.data()[item]);
-    // }
-
-    // console.log(objKeys);
-
-    // console.log(doc.data(), doc.id);
-
-
-
-
-
-
-
-
   })
-
-  // let data = Object(obj);
-
-  // console.log('create mission grid logged out test activated');
-  
-  // console.log(data);
-
-
 }
 
-createMissionGridLTESTTESTTEST(docTestRef);
+// createMissionGridLTESTTESTTEST(docTestRef);
 
+function createMissionGridLoggedInTEST (docRef) {
+  getDoc(docRef)
+  .then((doc) => {
+    const obj = doc.data();
+    for (let [key, value] of Object.entries(obj)) {
+      let title = value.title;
+      let id = value.id;
+      let complete = value.complete;
+        if (id >= 10101 && id <=10107) {
+          createMissionGridTESTLOGGEDIN(redactedTier1Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 10201 && id <=10207) {
+          createMissionGridTESTLOGGEDIN(redactedTier2Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 10301 && id <=10307) {
+          createMissionGridTESTLOGGEDIN(redactedTier3Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 10401 && id <=10407) {
+          createMissionGridTESTLOGGEDIN(redactedTier4Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 10501 && id <=10507) {
+          createMissionGridTESTLOGGEDIN(redactedTier5Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 20101 && id <=20107) {
+          createMissionGridTESTLOGGEDIN(whiteLotusTier1Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 20201 && id <=20207) {
+          createMissionGridTESTLOGGEDIN(whiteLotusTier2Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 20301 && id <=20307) {
+          createMissionGridTESTLOGGEDIN(whiteLotusTier3Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 20401 && id <=20407) {
+          createMissionGridTESTLOGGEDIN(whiteLotusTier4Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 20501 && id <=20507) {
+          createMissionGridTESTLOGGEDIN(whiteLotusTier5Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 30101 && id <=30107) {
+          createMissionGridTESTLOGGEDIN(legionTier1Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 30201 && id <=30207) {
+          createMissionGridTESTLOGGEDIN(legionTier2Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 30301 && id <=30307) {
+          createMissionGridTESTLOGGEDIN(legionTier3Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 30401 && id <=30407) {
+          createMissionGridTESTLOGGEDIN(legionTier4Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 30501 && id <=30507) {
+          createMissionGridTESTLOGGEDIN(legionTier5Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 40101 && id <=40107) {
+          createMissionGridTESTLOGGEDIN(blackMousTier1Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 40201 && id <=40207) {
+          createMissionGridTESTLOGGEDIN(blackMousTier2Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 40301 && id <=40307) {
+          createMissionGridTESTLOGGEDIN(blackMousTier3Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 40401 && id <=40407) {
+          createMissionGridTESTLOGGEDIN(blackMousTier4Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 40501 && id <=40507) {
+          createMissionGridTESTLOGGEDIN(blackMousTier5Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 50101 && id <=50107) {
+          createMissionGridTESTLOGGEDIN(crownTier1Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 50201 && id <=50207) {
+          createMissionGridTESTLOGGEDIN(crownTier2Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 50301 && id <=50307) {
+          createMissionGridTESTLOGGEDIN(crownTier3Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 50401 && id <=50407) {
+          createMissionGridTESTLOGGEDIN(crownTier4Container, title, id, complete);
+          console.log(title);
+        } else if (id >= 50501 && id <=50507) {
+          createMissionGridTESTLOGGEDIN(crownTier5Container, title), id, complete;
+          console.log(title);
+        } 
+    }
+  })
+}
 
-
-
+createMissionGridLoggedInTEST(docTestRef);
 
 
 
