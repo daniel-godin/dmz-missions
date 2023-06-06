@@ -336,6 +336,17 @@ const dmzMissionDocRef = async (user) => {
       
       console.log('User Signed In and Mission Grid Created');
 
+      const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
+
+      for (let i = 0; i < arrayOfMissionCheckboxes.length; i++) {
+        arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
+          // e.preventDefault();
+          let checkId = Number(e.target.id);
+          // console.log(checkId);
+          console.log('checkbox listener working');
+      })}
+
+
     } else {
       // docSnap.data() will be undefined in this case
       // console.log("No such document!");

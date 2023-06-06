@@ -82,21 +82,8 @@ export function createMissionGrid (missionsArr, tierContainer) {
           <input type="checkbox" name="" id="${checkboxId}" class="mission-progress">
         </div>`
     )}
-
-    const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
-
-    for (let i = 0; i < arrayOfMissionCheckboxes.length; i++) {
-      arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
-        e.preventDefault();
-        let checkId = Number(e.target.id);
-        // console.log(checkId);
-        console.log('checkbox listener working');
-    })}
-
-
-
-
-}}
+  }
+}
 
 export function createMissionGridLoggedOut (missionsArr, tierContainer) {
   for (let i = 0; i < missionsArr.length; i++) {
