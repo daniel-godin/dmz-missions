@@ -1,6 +1,6 @@
 import { AuthErrorCodes } from "firebase/auth";
 
-import { doc, getDoc, getDocs, onSnapshot, } from "firebase/firestore";
+import { doc, getDoc, getDocs, onSnapshot, updateDoc} from "firebase/firestore";
 import { dmzMissionsS3 } from "./dmz-missions-s3";
 
 export const arrayOfMissionTitles = document.getElementsByClassName('mission-title');
@@ -21,18 +21,14 @@ export const btnLogIn = document.getElementById('btnLogIn');
 export const btnSignUp = document.getElementById('btnSignUp');
 export const btnGoogleSignIn = document.getElementById('btnGoogleSignIn');
 
-
 export const btnSignOut = document.getElementById('btnSignOut');
 export const btnAuthLink = document.getElementById('btnAuthLink');
 
 export const dmzPageHeader = document.getElementById('dmzPageHeader');
 
-
-
 export const profileLinkContainer = document.getElementById('profileLinkContainer');
 
 export const dmzMissionsContainer = document.getElementById('dmzMissionsContainer');
-
 
 export const redactedTier1Container = document.getElementById('redactedTier1MissionsContainer');
 export const redactedTier2Container = document.getElementById('redactedTier2MissionsContainer');
@@ -64,47 +60,155 @@ export const crownTier3Container = document.getElementById('crownTier3MissionsCo
 export const crownTier4Container = document.getElementById('crownTier4MissionsContainer');
 export const crownTier5Container = document.getElementById('crownTier5MissionsContainer');
 
-export function createMissionGrid (missionsArr, tierContainer) {
-  for (let i = 0; i < missionsArr.length; i++) {
-    let title = missionsArr[i].title;
-    let complete = missionsArr[i].complete;
-    let checkboxId = missionsArr[i].missionId; // What I really want... is a way to 'map' this checkbox to it's sibling 'completed' true/false.
 
-    if (complete === true) {
-      tierContainer.insertAdjacentHTML('beforeend', `
-        <div class="mission-container">
-          <header class="mission-title">${title}</header>
-          <input type="checkbox" name="" id="${checkboxId}" class="mission-progress" checked>
-        </div>`
-    )} else {
-      tierContainer.insertAdjacentHTML('beforeend', `
-        <div class="mission-container">
-          <header class="mission-title">${title}</header>
-          <input type="checkbox" name="" id="${checkboxId}" class="mission-progress">
-        </div>`
-    )}
-  }
+export function fullCreateMissionGridLoggedOut (docRef) { // THIS IS THE NOT-LOGGED IN VERSION.  THE CHECKBOXES ARE NOT CREATED.
+  getDoc(docRef)
+  .then((doc) => {
+    const obj = doc.data();
+    for (let [key, value] of Object.entries(obj)) {
+      let title = value.title;
+      let id = value.id;
+        if (id >= 10101 && id <=10107) {
+          createMissionGridLoggedOut(redactedTier1Container, title);
+        } else if (id >= 10201 && id <=10207) {
+          createMissionGridLoggedOut(redactedTier2Container, title);
+        } else if (id >= 10301 && id <=10307) {
+          createMissionGridLoggedOut(redactedTier3Container, title);
+        } else if (id >= 10401 && id <=10407) {
+          createMissionGridLoggedOut(redactedTier4Container, title);
+        } else if (id >= 10501 && id <=10507) {
+          createMissionGridLoggedOut(redactedTier5Container, title);
+        } else if (id >= 20101 && id <=20107) {
+          createMissionGridLoggedOut(whiteLotusTier1Container, title);
+        } else if (id >= 20201 && id <=20207) {
+          createMissionGridLoggedOut(whiteLotusTier2Container, title);
+        } else if (id >= 20301 && id <=20307) {
+          createMissionGridLoggedOut(whiteLotusTier3Container, title);
+        } else if (id >= 20401 && id <=20407) {
+          createMissionGridLoggedOut(whiteLotusTier4Container, title);
+        } else if (id >= 20501 && id <=20507) {
+          createMissionGridLoggedOut(whiteLotusTier5Container, title);
+        } else if (id >= 30101 && id <=30107) {
+          createMissionGridLoggedOut(legionTier1Container, title);
+        } else if (id >= 30201 && id <=30207) {
+          createMissionGridLoggedOut(legionTier2Container, title);
+        } else if (id >= 30301 && id <=30307) {
+          createMissionGridLoggedOut(legionTier3Container, title);
+        } else if (id >= 30401 && id <=30407) {
+          createMissionGridLoggedOut(legionTier4Container, title);
+        } else if (id >= 30501 && id <=30507) {
+          createMissionGridLoggedOut(legionTier5Container, title);
+        } else if (id >= 40101 && id <=40107) {
+          createMissionGridLoggedOut(blackMousTier1Container, title);
+        } else if (id >= 40201 && id <=40207) {
+          createMissionGridLoggedOut(blackMousTier2Container, title);
+        } else if (id >= 40301 && id <=40307) {
+          createMissionGridLoggedOut(blackMousTier3Container, title);
+        } else if (id >= 40401 && id <=40407) {
+          createMissionGridLoggedOut(blackMousTier4Container, title);
+        } else if (id >= 40501 && id <=40507) {
+          createMissionGridLoggedOut(blackMousTier5Container, title);
+        } else if (id >= 50101 && id <=50107) {
+          createMissionGridLoggedOut(crownTier1Container, title);
+        } else if (id >= 50201 && id <=50207) {
+          createMissionGridLoggedOut(crownTier2Container, title);
+        } else if (id >= 50301 && id <=50307) {
+          createMissionGridLoggedOut(crownTier3Container, title);
+        } else if (id >= 50401 && id <=50407) {
+          createMissionGridLoggedOut(crownTier4Container, title);
+        } else if (id >= 50501 && id <=50507) {
+          createMissionGridLoggedOut(crownTier5Container, title);
+        } 
+    }
+  })
 }
 
-export function createMissionGridLoggedOut (missionsArr, tierContainer) {
-  for (let i = 0; i < missionsArr.length; i++) {
-    let title = missionsArr[i].title;
-    tierContainer.insertAdjacentHTML('beforeend', `
-      <div class="mission-container">
-        <header class="mission-title">${title}</header>
-      </div>`
-  )}
+export function fullCreateMissionGridLoggedIn (docRef) { // THIS IS THE LOGGED IN VERSION.  THE CHECKBOXES ARE CREATED.
+  getDoc(docRef)
+  .then((doc) => {
+    let obj = doc.data();
+    for (let [key, value] of Object.entries(obj)) {
+      let title = value.title;
+      let id = value.id;
+      let complete = value.complete;
+        if (id >= 10101 && id <=10107) {
+          createMissionGridLoggedIn(redactedTier1Container, title, id, complete);
+        } else if (id >= 10201 && id <=10207) {
+          createMissionGridLoggedIn(redactedTier2Container, title, id, complete);
+        } else if (id >= 10301 && id <=10307) {
+          createMissionGridLoggedIn(redactedTier3Container, title, id, complete);
+        } else if (id >= 10401 && id <=10407) {
+          createMissionGridLoggedIn(redactedTier4Container, title, id, complete);
+        } else if (id >= 10501 && id <=10507) {
+          createMissionGridLoggedIn(redactedTier5Container, title, id, complete);
+        } else if (id >= 20101 && id <=20107) {
+          createMissionGridLoggedIn(whiteLotusTier1Container, title, id, complete);
+        } else if (id >= 20201 && id <=20207) {
+          createMissionGridLoggedIn(whiteLotusTier2Container, title, id, complete);
+        } else if (id >= 20301 && id <=20307) {
+          createMissionGridLoggedIn(whiteLotusTier3Container, title, id, complete);
+        } else if (id >= 20401 && id <=20407) {
+          createMissionGridLoggedIn(whiteLotusTier4Container, title, id, complete);
+        } else if (id >= 20501 && id <=20507) {
+          createMissionGridLoggedIn(whiteLotusTier5Container, title, id, complete);
+        } else if (id >= 30101 && id <=30107) {
+          createMissionGridLoggedIn(legionTier1Container, title, id, complete);
+        } else if (id >= 30201 && id <=30207) {
+          createMissionGridLoggedIn(legionTier2Container, title, id, complete);
+        } else if (id >= 30301 && id <=30307) {
+          createMissionGridLoggedIn(legionTier3Container, title, id, complete);
+        } else if (id >= 30401 && id <=30407) {
+          createMissionGridLoggedIn(legionTier4Container, title, id, complete);
+        } else if (id >= 30501 && id <=30507) {
+          createMissionGridLoggedIn(legionTier5Container, title, id, complete);
+        } else if (id >= 40101 && id <=40107) {
+          createMissionGridLoggedIn(blackMousTier1Container, title, id, complete);
+        } else if (id >= 40201 && id <=40207) {
+          createMissionGridLoggedIn(blackMousTier2Container, title, id, complete);
+        } else if (id >= 40301 && id <=40307) {
+          createMissionGridLoggedIn(blackMousTier3Container, title, id, complete);
+        } else if (id >= 40401 && id <=40407) {
+          createMissionGridLoggedIn(blackMousTier4Container, title, id, complete);
+        } else if (id >= 40501 && id <=40507) {
+          createMissionGridLoggedIn(blackMousTier5Container, title, id, complete);
+        } else if (id >= 50101 && id <=50107) {
+          createMissionGridLoggedIn(crownTier1Container, title, id, complete);
+        } else if (id >= 50201 && id <=50207) {
+          createMissionGridLoggedIn(crownTier2Container, title, id, complete);
+        } else if (id >= 50301 && id <=50307) {
+          createMissionGridLoggedIn(crownTier3Container, title, id, complete);
+        } else if (id >= 50401 && id <=50407) {
+          createMissionGridLoggedIn(crownTier4Container, title, id, complete);
+        } else if (id >= 50501 && id <=50507) {
+          createMissionGridLoggedIn(crownTier5Container, title), id, complete;
+        } 
+      }
+    
+    // This adds eventlistener and update Doc to all the checkboxes.
+    const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
+
+    for (let i = 0; i < arrayOfMissionCheckboxes.length; i++) {
+      arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
+        // e.preventDefault();
+        let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
+        let checkId = Number(e.target.id); // Grabs the event target's id property, makes it into a Number (integar) from a string.
+        console.log('checkbox listener working');
+        // const docRefS3 = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'); // Document Reference to a users Season 3 dmz Missions Doc
+        updateDoc(docRef, {
+          [checkId+".complete"] : checked,
+        });
+    })}
+  })
 }
 
-
-export function createMissionGridTEST (tierContainer, title) {
+export function createMissionGridLoggedOut (tierContainer, title) {
   tierContainer.insertAdjacentHTML('beforeend', `
   <div class="mission-container">
     <header class="mission-title">${title}</header>
   </div>`)
 }
 
-export function createMissionGridTESTLOGGEDIN (tierContainer, title, id, complete) {
+export function createMissionGridLoggedIn (tierContainer, title, id, complete) {
   if (complete) {
     tierContainer.insertAdjacentHTML('beforeend', `
     <div class="mission-container">
@@ -120,10 +224,17 @@ export function createMissionGridTESTLOGGEDIN (tierContainer, title, id, complet
   }
 }
 
-
-
-
-
+export const showLoginState = async (user, state) => {
+  if (state === 'logged-in') {
+    // console.log('login-state-triggered for logged in')
+    navSignedOut.style.display = 'none';
+    navSignedIn.style.display = 'block';
+  } else if (state === 'logged-out') {
+    // console.log('login-state-triggered for logged out')
+    navSignedIn.style.display = 'none';
+    navSignedOut.style.display = 'block';
+  }
+}
 
 export const hideLoginError = () => {
   errorContainer.style.display = 'none';
@@ -138,94 +249,6 @@ export const showLoginError = (error) => {
     errorMessage.insertAdjacentHTML('afterbegin', `Error: ${error.message}`)
   }
 }
-
-// export const showLoginState = async (user, state) => {
-//   if (state === 'logged-in') {
-//     let userId = user.uid;
-//     profileLinkContainer.insertAdjacentHTML('afterbegin', `
-//       <button type='button' id='btnSignOut'>Sign Out ${userId}</button>
-//     `)
-//     btnSignOut.addEventListener('click', logout);
-//   } else if (state === 'logged-out') {
-//     profileLinkContainer.insertAdjacentHTML('afterbegin', `
-//       <button type='button' id='btnAuthLink'>Sign In/Sign Up</button>
-//     `)
-//     }
-// }
-
-// testing:
-// export const showLoginState = async (user, state) => {
-//   if (state === 'logged-in') {
-//     console.log('login-state-triggered for logged in')
-//     navSignedOut.display.style = 'none';
-//     navSignedIn.display.style = 'block';
-//   } else if (state === 'logged-out') {
-//     console.log('login-state-triggered for logged out')
-
-//     navSignedIn.display.style = 'none';
-//     navSignedOut.display.style = 'block';
-//   }
-// }
-
-
-// export function createAuthBox (container) {
-//   // if... user NOT logged in... creates html for log-in box.
-
-//   container.insertAdjacentHTML('afterbegin', 
-//   `
-//   <form id='formDMZLogIn'>
-//     <label>Email:
-//       <input type='email' placeholder='Email@Email.com' id='txtEmail'>
-//     </label>
-
-//     <label>Password:
-//       <input type='password' placeholder='password' id='txtPassword'>
-//     </label>
-
-//     <div id='errorContainer'>
-//       <p id='errorMessage'></p>
-//     </div>
-    
-//     <button type='button' id='btnLogIn'>Log In</button>
-//     <button type='button' id='btnSignUp'>Sign Up</button>
-//     <button type='button' id='btnGoogleSignIn'>Sign In With Google</button>
-//   </form>
-//   `
-//   )
-//   // if... user LOGGED IN, puts .hidden class in authContainer div
-// }
-
-// Testing Purposes:  arrayOfMissions.  For Later.
-// const arrayOfMissions = [
-//   redactedTier1MissionsArray,
-//   redactedTier2MissionsArray,
-//   redactedTier3MissionsArray,
-//   redactedTier4MissionsArray,
-//   redactedTier5MissionsArray,
-//   whiteLotusTier1MissionsArray,
-//   whiteLotusTier2MissionsArray,
-//   whiteLotusTier3MissionsArray,
-//   whiteLotusTier4MissionsArray,
-//   whiteLotusTier5MissionsArray,
-
-//   legionTier1MissionsArray,
-//   legionTier2MissionsArray,
-//   legionTier3MissionsArray,
-//   legionTier4MissionsArray,
-//   legionTier5MissionsArray,
-
-//   blackMousTier1MissionsArray,
-//   blackMousTier2MissionsArray,
-//   blackMousTier3MissionsArray,
-//   blackMousTier4MissionsArray,
-//   blackMousTier5MissionsArray,
-
-//   crownTier1MissionsArray,
-//   crownTier2MissionsArray,
-//   crownTier3MissionsArray,
-//   crownTier4MissionsArray,
-//   crownTier5MissionsArray,
-// ]
 
 export const showDMZHeaderAuthStatus = async (user) => {
   if (user) {
