@@ -64,71 +64,135 @@ export const crownTier5Container = document.getElementById('crownTier5MissionsCo
 
 export function loadPage() {
   loadNavigation();
+  // showLoginState();
 }
 
 
+// Old version:
+// export function fullCreateMissionGridLoggedOut (docRef) { // THIS IS THE NOT-LOGGED IN VERSION.  THE CHECKBOXES ARE NOT CREATED.
+//   // This should load from the JS Object file, NOT database.  Should speed things up, and reduce doc reads.
 
-export function fullCreateMissionGridLoggedOut (docRef) { // THIS IS THE NOT-LOGGED IN VERSION.  THE CHECKBOXES ARE NOT CREATED.
-  getDoc(docRef)
-  .then((doc) => {
-    const obj = doc.data();
-    for (let [key, value] of Object.entries(obj)) {
-      let title = value.title;
-      let id = value.id;
-        if (id >= 10101 && id <=10107) {
-          createMissionGridLoggedOut(redactedTier1Container, title);
-        } else if (id >= 10201 && id <=10207) {
-          createMissionGridLoggedOut(redactedTier2Container, title);
-        } else if (id >= 10301 && id <=10307) {
-          createMissionGridLoggedOut(redactedTier3Container, title);
-        } else if (id >= 10401 && id <=10407) {
-          createMissionGridLoggedOut(redactedTier4Container, title);
-        } else if (id >= 10501 && id <=10507) {
-          createMissionGridLoggedOut(redactedTier5Container, title);
-        } else if (id >= 20101 && id <=20107) {
-          createMissionGridLoggedOut(whiteLotusTier1Container, title);
-        } else if (id >= 20201 && id <=20207) {
-          createMissionGridLoggedOut(whiteLotusTier2Container, title);
-        } else if (id >= 20301 && id <=20307) {
-          createMissionGridLoggedOut(whiteLotusTier3Container, title);
-        } else if (id >= 20401 && id <=20407) {
-          createMissionGridLoggedOut(whiteLotusTier4Container, title);
-        } else if (id >= 20501 && id <=20507) {
-          createMissionGridLoggedOut(whiteLotusTier5Container, title);
-        } else if (id >= 30101 && id <=30107) {
-          createMissionGridLoggedOut(legionTier1Container, title);
-        } else if (id >= 30201 && id <=30207) {
-          createMissionGridLoggedOut(legionTier2Container, title);
-        } else if (id >= 30301 && id <=30307) {
-          createMissionGridLoggedOut(legionTier3Container, title);
-        } else if (id >= 30401 && id <=30407) {
-          createMissionGridLoggedOut(legionTier4Container, title);
-        } else if (id >= 30501 && id <=30507) {
-          createMissionGridLoggedOut(legionTier5Container, title);
-        } else if (id >= 40101 && id <=40107) {
-          createMissionGridLoggedOut(blackMousTier1Container, title);
-        } else if (id >= 40201 && id <=40207) {
-          createMissionGridLoggedOut(blackMousTier2Container, title);
-        } else if (id >= 40301 && id <=40307) {
-          createMissionGridLoggedOut(blackMousTier3Container, title);
-        } else if (id >= 40401 && id <=40407) {
-          createMissionGridLoggedOut(blackMousTier4Container, title);
-        } else if (id >= 40501 && id <=40507) {
-          createMissionGridLoggedOut(blackMousTier5Container, title);
-        } else if (id >= 50101 && id <=50107) {
-          createMissionGridLoggedOut(crownTier1Container, title);
-        } else if (id >= 50201 && id <=50207) {
-          createMissionGridLoggedOut(crownTier2Container, title);
-        } else if (id >= 50301 && id <=50307) {
-          createMissionGridLoggedOut(crownTier3Container, title);
-        } else if (id >= 50401 && id <=50407) {
-          createMissionGridLoggedOut(crownTier4Container, title);
-        } else if (id >= 50501 && id <=50507) {
-          createMissionGridLoggedOut(crownTier5Container, title);
-        } 
-    }
-  })
+//   getDoc(docRef)
+//   .then((doc) => {
+//     const obj = doc.data();
+//     for (let [key, value] of Object.entries(obj)) {
+//       let title = value.title;
+//       let id = value.id;
+//         if (id >= 10101 && id <=10107) {
+//           createMissionGridLoggedOut(redactedTier1Container, title);
+//         } else if (id >= 10201 && id <=10207) {
+//           createMissionGridLoggedOut(redactedTier2Container, title);
+//         } else if (id >= 10301 && id <=10307) {
+//           createMissionGridLoggedOut(redactedTier3Container, title);
+//         } else if (id >= 10401 && id <=10407) {
+//           createMissionGridLoggedOut(redactedTier4Container, title);
+//         } else if (id >= 10501 && id <=10507) {
+//           createMissionGridLoggedOut(redactedTier5Container, title);
+//         } else if (id >= 20101 && id <=20107) {
+//           createMissionGridLoggedOut(whiteLotusTier1Container, title);
+//         } else if (id >= 20201 && id <=20207) {
+//           createMissionGridLoggedOut(whiteLotusTier2Container, title);
+//         } else if (id >= 20301 && id <=20307) {
+//           createMissionGridLoggedOut(whiteLotusTier3Container, title);
+//         } else if (id >= 20401 && id <=20407) {
+//           createMissionGridLoggedOut(whiteLotusTier4Container, title);
+//         } else if (id >= 20501 && id <=20507) {
+//           createMissionGridLoggedOut(whiteLotusTier5Container, title);
+//         } else if (id >= 30101 && id <=30107) {
+//           createMissionGridLoggedOut(legionTier1Container, title);
+//         } else if (id >= 30201 && id <=30207) {
+//           createMissionGridLoggedOut(legionTier2Container, title);
+//         } else if (id >= 30301 && id <=30307) {
+//           createMissionGridLoggedOut(legionTier3Container, title);
+//         } else if (id >= 30401 && id <=30407) {
+//           createMissionGridLoggedOut(legionTier4Container, title);
+//         } else if (id >= 30501 && id <=30507) {
+//           createMissionGridLoggedOut(legionTier5Container, title);
+//         } else if (id >= 40101 && id <=40107) {
+//           createMissionGridLoggedOut(blackMousTier1Container, title);
+//         } else if (id >= 40201 && id <=40207) {
+//           createMissionGridLoggedOut(blackMousTier2Container, title);
+//         } else if (id >= 40301 && id <=40307) {
+//           createMissionGridLoggedOut(blackMousTier3Container, title);
+//         } else if (id >= 40401 && id <=40407) {
+//           createMissionGridLoggedOut(blackMousTier4Container, title);
+//         } else if (id >= 40501 && id <=40507) {
+//           createMissionGridLoggedOut(blackMousTier5Container, title);
+//         } else if (id >= 50101 && id <=50107) {
+//           createMissionGridLoggedOut(crownTier1Container, title);
+//         } else if (id >= 50201 && id <=50207) {
+//           createMissionGridLoggedOut(crownTier2Container, title);
+//         } else if (id >= 50301 && id <=50307) {
+//           createMissionGridLoggedOut(crownTier3Container, title);
+//         } else if (id >= 50401 && id <=50407) {
+//           createMissionGridLoggedOut(crownTier4Container, title);
+//         } else if (id >= 50501 && id <=50507) {
+//           createMissionGridLoggedOut(crownTier5Container, title);
+//         } 
+//     }
+//   })
+// }
+
+// New version
+export function fullCreateMissionGridLoggedOut (obj) { // THIS IS THE NOT-LOGGED IN VERSION.  THE CHECKBOXES ARE NOT CREATED.
+  // This should load from the JS Object file, NOT database.  Should speed things up, and reduce doc reads.
+  for (let [key, value] of Object.entries(obj)) {
+    let title = value.title;
+    let id = value.id;
+      if (id >= 10101 && id <=10107) {
+        createMissionGridLoggedOut(redactedTier1Container, title);
+      } else if (id >= 10201 && id <=10207) {
+        createMissionGridLoggedOut(redactedTier2Container, title);
+      } else if (id >= 10301 && id <=10307) {
+        createMissionGridLoggedOut(redactedTier3Container, title);
+      } else if (id >= 10401 && id <=10407) {
+        createMissionGridLoggedOut(redactedTier4Container, title);
+      } else if (id >= 10501 && id <=10507) {
+        createMissionGridLoggedOut(redactedTier5Container, title);
+      } else if (id >= 20101 && id <=20107) {
+        createMissionGridLoggedOut(whiteLotusTier1Container, title);
+      } else if (id >= 20201 && id <=20207) {
+        createMissionGridLoggedOut(whiteLotusTier2Container, title);
+      } else if (id >= 20301 && id <=20307) {
+        createMissionGridLoggedOut(whiteLotusTier3Container, title);
+      } else if (id >= 20401 && id <=20407) {
+        createMissionGridLoggedOut(whiteLotusTier4Container, title);
+      } else if (id >= 20501 && id <=20507) {
+        createMissionGridLoggedOut(whiteLotusTier5Container, title);
+      } else if (id >= 30101 && id <=30107) {
+        createMissionGridLoggedOut(legionTier1Container, title);
+      } else if (id >= 30201 && id <=30207) {
+        createMissionGridLoggedOut(legionTier2Container, title);
+      } else if (id >= 30301 && id <=30307) {
+        createMissionGridLoggedOut(legionTier3Container, title);
+      } else if (id >= 30401 && id <=30407) {
+        createMissionGridLoggedOut(legionTier4Container, title);
+      } else if (id >= 30501 && id <=30507) {
+        createMissionGridLoggedOut(legionTier5Container, title);
+      } else if (id >= 40101 && id <=40107) {
+        createMissionGridLoggedOut(blackMousTier1Container, title);
+      } else if (id >= 40201 && id <=40207) {
+        createMissionGridLoggedOut(blackMousTier2Container, title);
+      } else if (id >= 40301 && id <=40307) {
+        createMissionGridLoggedOut(blackMousTier3Container, title);
+      } else if (id >= 40401 && id <=40407) {
+        createMissionGridLoggedOut(blackMousTier4Container, title);
+      } else if (id >= 40501 && id <=40507) {
+        createMissionGridLoggedOut(blackMousTier5Container, title);
+      } else if (id >= 50101 && id <=50107) {
+        createMissionGridLoggedOut(crownTier1Container, title);
+      } else if (id >= 50201 && id <=50207) {
+        createMissionGridLoggedOut(crownTier2Container, title);
+      } else if (id >= 50301 && id <=50307) {
+        createMissionGridLoggedOut(crownTier3Container, title);
+      } else if (id >= 50401 && id <=50407) {
+        createMissionGridLoggedOut(crownTier4Container, title);
+      } else if (id >= 50501 && id <=50507) {
+        createMissionGridLoggedOut(crownTier5Container, title);
+      } 
+  }
 }
+
 
 export function fullCreateMissionGridLoggedIn (docRef) { // THIS IS THE LOGGED IN VERSION.  THE CHECKBOXES ARE CREATED.
   getDoc(docRef)
@@ -231,17 +295,17 @@ export function createMissionGridLoggedIn (tierContainer, title, id, complete) {
   }
 }
 
-export const showLoginState = async (user, state) => {
-  if (state === 'logged-in') {
-    // console.log('login-state-triggered for logged in')
-    navSignedOut.style.display = 'none';
-    navSignedIn.style.display = 'block';
-  } else if (state === 'logged-out') {
-    // console.log('login-state-triggered for logged out')
-    navSignedIn.style.display = 'none';
-    navSignedOut.style.display = 'block';
-  }
-}
+// export const showLoginState = async (user, state) => {
+//   if (state === 'logged-in') {
+//     // console.log('login-state-triggered for logged in')
+//     navSignedOut.style.display = 'none';
+//     navSignedIn.style.display = 'block';
+//   } else if (state === 'logged-out') {
+//     // console.log('login-state-triggered for logged out')
+//     navSignedIn.style.display = 'none';
+//     navSignedOut.style.display = 'block';
+//   }
+// }
 
 export const hideLoginError = () => {
   errorContainer.style.display = 'none';

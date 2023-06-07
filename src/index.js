@@ -158,7 +158,7 @@ onAuthStateChanged(auth, user => {
     showDMZHeaderAuthStatus();
     addDMZMissionsS3ObjToDb(db);
     const dmzMissionsS3DocRefLoggedOut = doc(db, 'mw2-info', 'dmzMissionsS3')
-    fullCreateMissionGridLoggedOut(dmzMissionsS3DocRefLoggedOut);
+    fullCreateMissionGridLoggedOut(dmzMissionsS3);
     // showLoginState(user, 'logged-out')
     // showLoginForm();
   }
