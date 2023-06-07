@@ -148,9 +148,7 @@ button {
   text-decoration: underline;
 }
 
-.tier-progress {
-  
-}
+
 
 .missions-container {
   border: 1px solid brown;
@@ -164,6 +162,10 @@ button {
 
 .mission-title {
   color:rgb(251, 96, 106);
+}
+
+.mission-locked {
+  color: grey;
 }
 
 .mission-progress-checkbox {

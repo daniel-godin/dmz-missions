@@ -228,17 +228,33 @@ export function createMissionGridLoggedIn (tierContainer, value) {
   // console.log(title, id, complete, unlocked);
 
   if (complete) {
-    tierContainer.insertAdjacentHTML('beforeend', `
-    <div class="mission-container">
-      <header class="mission-title">${title}</header>
-      <input type="checkbox" name="" id="${id}" class="mission-progress" checked>
-    </div>`)
+    if (unlocked === true) {
+      tierContainer.insertAdjacentHTML('beforeend', `
+      <div class="mission-container">
+        <header class="mission-title">${title}</header>
+        <input type="checkbox" name="" id="${id}" class="mission-progress" checked>
+      </div>`)
+    } else if (unlocked === false) {
+      tierContainer.insertAdjacentHTML('beforeend', `
+      <div class="mission-container">
+        <header class="mission-title mission-locked">${title}</header>
+        <input type="checkbox" name="" id="${id}" class="mission-progress" checked>
+      </div>`)
+    }
   } else {
-    tierContainer.insertAdjacentHTML('beforeend', `
-    <div class="mission-container">
-      <header class="mission-title">${title}</header>
-      <input type="checkbox" name="" id="${id}" class="mission-progress">
-    </div>`)
+    if (unlocked === true) {
+      tierContainer.insertAdjacentHTML('beforeend', `
+      <div class="mission-container">
+        <header class="mission-title">${title}</header>
+        <input type="checkbox" name="" id="${id}" class="mission-progress">
+      </div>`)
+    } else if (unlocked === false) {
+      tierContainer.insertAdjacentHTML('beforeend', `
+      <div class="mission-container">
+        <header class="mission-title mission-locked">${title}</header>
+        <input type="checkbox" name="" id="${id}" class="mission-progress">
+      </div>`)
+    }
   }
 }
 
