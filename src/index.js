@@ -80,8 +80,7 @@ connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
 connectFirestoreEmulator(db, 'localhost', 8080);
 
 // Early Console.log Check.  Before lots of code executes or gets stuck.
-console.log('Early console log check, before lots of code executes or gets stuck');
-// loadPage(); // Should I put this into the onSnapshot or other listener position?
+console.log('INDEX.JS CHECK:  beginning triggered');
 
 // App Configurations:
 // Setting Up Auth From Video:
@@ -106,7 +105,6 @@ const createAccount = async () => {
   console.log('sign up button clicked');
   const loginEmail = txtEmail.value;
   const loginPassword = txtPassword.value;
-
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
     await setDoc(doc(db, 'users', userCredential.user.uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3);
@@ -140,26 +138,21 @@ function initialDatabaseSetUp (userCredentials) {
   setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3); //  Creates season 3 mission tracking doc inside a users UID Doc sub-collection.  This is the newest version I'm working with.
 }
 
-addDMZMissionsS3ObjToDb(db);
-
 onAuthStateChanged(auth, user => {
   if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
     let userDoc = user.uid;
-    // showLoginState(user, 'logged-in');
-    loadPage('logged-in'); // Should I put this into the onSnapshot or other listener position?
-
-    showDMZHeaderAuthStatus(user);
+    loadPage(user); // Should I put this into the onSnapshot or other listener position?
     // hideLoginError();
-    const dmzMissionsS3DocRefLoggedIn = doc(db, 'users', userDoc, 'mw2-trackers', 'dmzMissionsS3');
-    fullCreateMissionGridLoggedIn(dmzMissionsS3DocRefLoggedIn);
+    if (dmzMissionsContainer) {
+      const dmzMissionsS3DocRefLoggedIn = doc(db, 'users', userDoc, 'mw2-trackers', 'dmzMissionsS3');
+      fullCreateMissionGridLoggedIn(dmzMissionsS3DocRefLoggedIn);
+    }
   }
   else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
-    loadPage('logged-out');
-    showDMZHeaderAuthStatus();
-    addDMZMissionsS3ObjToDb(db);
-    const dmzMissionsS3DocRefLoggedOut = doc(db, 'mw2-info', 'dmzMissionsS3')
-    fullCreateMissionGridLoggedOut(dmzMissionsS3);
-    // showLoginState(user, 'logged-out')
+    loadPage(); // No user sent as a parameter.
+    if (dmzMissionsContainer) {
+      fullCreateMissionGridLoggedOut(dmzMissionsS3);
+    }
     // showLoginForm();
   }
 })
@@ -172,19 +165,27 @@ const logout = async () => {
 }
 // Testing:
 
-
-
 // onSnapshot(docTestRef, (doc) => {
 //   // console.log(doc.data(), doc.id);
 //   // addDMZMissionsS3ObjToDb(db); // Adds the dmzMissionsS3 object to db, mw2-info, dmzMissions.  This is OUTSIDE of the user collection stuff.
 // })
 
 // These keep spitting errors, and I can't get to the end of the file.  Need to fix them.  Maybe:  Load only when I'm on a page that has these?  I don't know.
-btnLogIn.addEventListener('click', loginEmailPassword);
-btnSignOut.addEventListener('click', logout);
-btnSignUp.addEventListener('click', createAccount);
-btnGoogleSignIn.addEventListener('click', handleGoogle);
+
+
+if (btnLogIn) {
+  btnLogIn.addEventListener('click', loginEmailPassword);
+}
+if (btnSignOut) {
+  btnSignOut.addEventListener('click', logout);
+}
+if (btnSignUp) {
+  btnSignUp.addEventListener('click', createAccount);
+}
+if (btnGoogleSignIn) {
+  btnGoogleSignIn.addEventListener('click', handleGoogle);
+}
 
 
 
-console.log('Got to the end of Index.js script');
+console.log('INDEX.JS CHECK:  END TRIGGERED');
