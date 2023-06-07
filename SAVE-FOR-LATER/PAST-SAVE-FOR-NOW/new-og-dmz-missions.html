@@ -1,0 +1,959 @@
+<!-- Saved on 2023.05.31  I am now going to dynamically load the HTML in the JS file. -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DMZ Missions Tracker - Keep Track Of Your Progress and Share With Others</title>
+  <link rel='stylesheet' href='./style.css'>
+</head>
+<body>
+<div class='page-container'>
+  <!-- HEADER - Saving This For Later Use <div class='header-container'></div>  -->
+
+  <!-- Content:  DMZ Missions Checklist/Grid -->
+  <div class='entire-dmz-missions-container content-container'>
+
+    <!-- Redacted Faction -->
+    <div class='faction-container' id='redactedFactionContainer'>
+      <!-- Redacted Tier 1 -->
+      <div class="tier-container" id='redactedTier1Container'>
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 1:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier1MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Upgraded Arsenal</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dealmaker</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Cartel Investigation</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Well Supplied Soldier</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Calling Card</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Unstoppable Force</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Zero Tolerance (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 2 -->
+      <div class="tier-container" id="redactedTier2Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 2:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier2MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">In Good Health and Spirits</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Smoking Gun</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Reconnaissance by Fire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dark Water</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Flight Risk</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Chaffeur</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Left High and Dry (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+
+      </div>
+      <!-- Redacted Tier 3 -->
+      <div class="tier-container" id="redactedTier3Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 3:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier3MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Friendly Fire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Gear Up</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Double Cross</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Rain and Hellfire</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">One Shot, One Kill</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Fair Fight</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Excavation (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 4 -->
+      <div class="tier-container" id="redactedTier4Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 4:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier4MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Bedrock</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Archaeologist</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Leaked Documents</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Tunnel Rats</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Brothers In Arms</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Abandoned Operator</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Infrared (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+      <!-- Redacted Tier 5 -->
+      <div class="tier-container" id="redactedTier5Container">
+        <div class="header-container">
+          <header class="tier-header">Redacted Tier 5:</header>
+          <div class="tier-progress"></div>
+        </div>
+        <div class="missions-container" id="redactedTier5MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Case The Place</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Chemical Sourcing</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Pet Rescue</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Unrestricted Access</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Dry Eyes</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Irradiated Waters</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Red Smoke (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress-checkbox">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fill Other Factions In Later.  Placeholders For Now For Formating. -->
+
+    <!-- White Lotus Faction -->
+    <div class="faction-container" id='whiteLotusFactionContainer'>
+      <div class="tier-container" id="whiteLotusTier1Container">
+        <div class="header-container">
+          <header class="tier-header">White Lotus Tier 1:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="whiteLotusTier1MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Make Contact</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Hostiles Located</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Cashier</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Information Seeker</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Convenience</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Committed Shopper</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Stronghold Reacquisition (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="whiteLotusTier2Container">
+        <div class="header-container">
+          <header class="tier-header">White Lotus Tier 2:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="whiteLotusTier2MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Break Check</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Commanding Intel</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Death From Above</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Hostage Rescue</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Smuggling Tunnels</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Pathfinder</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Train Tracks (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="whiteLotusTier3Container">
+        <div class="header-container">
+          <header class="tier-header">White Lotus Tier 3:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="whiteLotusTier3MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Hideout Preperation</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Fast and Strong</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Air Supremacy</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Medical Mule</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Unearthed</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Caved In</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Nowhere to Hide (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="whiteLotusTier4Container">
+        <div class="header-container">
+          <header class="tier-header">White Lotus Tier 4:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="whiteLotusTier4MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Operation Black Gold</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Mall Rat</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Hero Run</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Bombing Run</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Pacific Foothold</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">The Route Forward</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Toxin Research (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="whiteLotusTier5Container">
+        <div class="header-container">
+          <header class="tier-header">White Lotus Tier 5:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="whiteLotusTier5MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Skull Slugs</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Deadlines</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">The Oath</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Weight Limit</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Clean House</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Firing Power</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Extermination (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Legion Faction -->
+    <div class="faction-container" id='legionFactionContainer'>
+      <div class="tier-container" id="legionTier1Container">
+        <div class="header-container">
+          <header class="tier-header">Legion Tier 1:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="legionTier1MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Investigative</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Create a Class</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Health Conscious</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Key Elimination</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Frame Job</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Buried Barrels</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Muddy Waters (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="legionTier2Container">
+        <div class="header-container">
+          <header class="tier-header">Legion Tier 2:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="legionTier2MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Into the Deep</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Anti-Air</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Demolitions</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Data Collection</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Poisoned Well</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">A Helping Hand</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Untraceable (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="legionTier3Container">
+        <div class="header-container">
+          <header class="tier-header">Legion Tier 3:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="legionTier3MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Shock Value</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Joy Ride</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Lead By Example</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Good Fortune</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Missing Person</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Deadly Precision</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">The Transporter (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="legionTier4Container">
+        <div class="header-container">
+          <header class="tier-header">Legion Tier 4:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="legionTier4MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Heavy Armor</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Intelligence Control</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Junkyard</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Last Minute Evac</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Wingman</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Nail in the Coffin</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Follow Instructions (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="legionTier5Container">
+        <div class="header-container">
+          <header class="tier-header">Legion Tier 5:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="legionTier5MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Out of the Deep</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">All Clear</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">All Fired Up</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Thirst For Knowledge</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Contractual Obligations</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Clean Sweep</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Air Traffic</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Black Mous Faction -->
+    <div class="faction-container" id='blackMousFactionContainer'>
+      <div class="tier-container" id="blackMousTier1Container">
+        <div class="header-container">
+          <header class="tier-header">Black Mous Tier 1:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="blackMousTier1MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Vehicular Homicide</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">On Rails</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Vintage Collection</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Cargo Keeper</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Team Player</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Speed of Sound</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Labs Investigation (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="blackMousTier2Container">
+        <div class="header-container">
+          <header class="tier-header">Black Mous Tier 2:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="blackMousTier2MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Custom Hardware</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Weapons Research</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Perfection</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Getaway Vehicle</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Return to Sender</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Crash Down</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Political Take Down (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="blackMousTier3Container">
+        <div class="header-container">
+          <header class="tier-header">Black Mous Tier 3:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="blackMousTier3MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Favor for a Friend</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">The Ultimiate Weapon</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Unarmed and Dangerous</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Vintage Connoisseur</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Substantial Findings</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Paperweights</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Medical Diagnosis (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="blackMousTier4Container">
+        <div class="header-container">
+          <header class="tier-header">Black Mous Tier 4:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="blackMousTier4MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Eyes and Ears</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Delivery Problem</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Eye in the Sky</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Handshake Deals</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Breaking and Entering</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Failed Bombing</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">The Trinity (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="blackMousTier5Container">
+        <div class="header-container">
+          <header class="tier-header">Black Mous Tier 5:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="blackMousTier5MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Lone Hunter</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">The Client Is King</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Weapon Chase</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">For the Taking</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Hunting Party</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Flight Plans</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Positive ID (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Crown Faction -->
+    <div class="faction-container" id='crownFactionContainer'>
+      <div class="tier-container" id="crownTier1Container">
+        <div class="header-container">
+          <header class="tier-header">Crown Tier 1:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="crownTier1MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Arms Trading</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Golden Ticket</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Non-Discriminatory</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Recon Flyover</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">M4 Weapons Testing</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Whistleblower</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Piracy (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="crownTier2Container">
+        <div class="header-container">
+          <header class="tier-header">Crown Tier 2:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="crownTier2MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Sample Platter</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Kastov Weapons Testing</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Vehicular Manslaughter</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Intel Exchange</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Boring Operation</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Electric Sheep</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Salvager (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="crownTier3Container">
+        <div class="header-container">
+          <header class="tier-header">Crown Tier 3:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="crownTier3MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Lachmann Weapons Testing</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">False Alarm</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Delicate Movement</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Crown's Eye</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Exposé</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">No Traipsing to Trapper</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Exfil Tracking (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="crownTier4Container">
+        <div class="header-container">
+          <header class="tier-header">Crown Tier 4:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="crownTier4MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Flyboy</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">The Deadliest Sin</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Predator</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Decryption</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">The Pound</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Termination</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Boating and Entering (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+      <div class="tier-container" id="crownTier5Container">
+        <div class="header-container">
+          <header class="tier-header">Crown Tier 5:</header>
+          <div class="tier-progress"><span></span></div>
+        </div>
+        <div class="missions-container" id="crownTier5MissionsContainer">
+          <div class="mission-container">
+            <header class="mission-title">Mass Extinction Event</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">All's Fair</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Escape Master</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Outsourcing</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">The Golden Rule</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Case By Case</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+          <div class="mission-container">
+            <header class="mission-title">Data Wipe (STORY)</header>
+            <input type="checkbox" name="" id="" class="mission-progress">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER - SAVE FOR LATER <div class='footer-container'></div> -->
+
+</div> 
+
+<script src='./full-mission-information.js'></script>
+</body>
+</html>

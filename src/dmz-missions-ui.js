@@ -3,6 +3,8 @@ import { AuthErrorCodes } from "firebase/auth";
 import { doc, getDoc, getDocs, onSnapshot, updateDoc} from "firebase/firestore";
 import { dmzMissionsS3 } from "./dmz-missions-s3";
 
+import { loadNavigation, navContainer } from "./nav";
+
 export const arrayOfMissionTitles = document.getElementsByClassName('mission-title');
 export const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
 
@@ -59,6 +61,11 @@ export const crownTier2Container = document.getElementById('crownTier2MissionsCo
 export const crownTier3Container = document.getElementById('crownTier3MissionsContainer');
 export const crownTier4Container = document.getElementById('crownTier4MissionsContainer');
 export const crownTier5Container = document.getElementById('crownTier5MissionsContainer');
+
+export function loadPage() {
+  loadNavigation();
+}
+
 
 
 export function fullCreateMissionGridLoggedOut (docRef) { // THIS IS THE NOT-LOGGED IN VERSION.  THE CHECKBOXES ARE NOT CREATED.

@@ -37,6 +37,7 @@ import { dmzMissionsS3 } from "./dmz-missions-s3"; // DMZ Missions Imports
 import { addDMZMissionsS3ObjToDb, } from "./db-creation";
 
 import {
+  loadPage,
   fullCreateMissionGridLoggedIn, fullCreateMissionGridLoggedOut,
   authContainer,
   txtEmail,
@@ -80,6 +81,7 @@ connectFirestoreEmulator(db, 'localhost', 8080);
 
 // Early Console.log Check.  Before lots of code executes or gets stuck.
 console.log('Early console log check, before lots of code executes or gets stuck');
+// loadPage(); // Should I put this into the onSnapshot or other listener position?
 
 // App Configurations:
 // Setting Up Auth From Video:
@@ -143,18 +145,21 @@ addDMZMissionsS3ObjToDb(db);
 onAuthStateChanged(auth, user => {
   if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
     let userDoc = user.uid;
-    showLoginState(user, 'logged-in');
+    // showLoginState(user, 'logged-in');
+    loadPage('logged-in'); // Should I put this into the onSnapshot or other listener position?
+
     showDMZHeaderAuthStatus(user);
     // hideLoginError();
     const dmzMissionsS3DocRefLoggedIn = doc(db, 'users', userDoc, 'mw2-trackers', 'dmzMissionsS3');
     fullCreateMissionGridLoggedIn(dmzMissionsS3DocRefLoggedIn);
   }
   else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
+    loadPage('logged-out');
     showDMZHeaderAuthStatus();
     addDMZMissionsS3ObjToDb(db);
     const dmzMissionsS3DocRefLoggedOut = doc(db, 'mw2-info', 'dmzMissionsS3')
     fullCreateMissionGridLoggedOut(dmzMissionsS3DocRefLoggedOut);
-    showLoginState(user, 'logged-out')
+    // showLoginState(user, 'logged-out')
     // showLoginForm();
   }
 })
