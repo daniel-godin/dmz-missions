@@ -217,23 +217,6 @@ export function createMissionGridLoggedOut (tierContainer, title) {
   </div>`)
 }
 
-// working old version:
-// export function createMissionGridLoggedIn (tierContainer, title, id, complete) {
-//   if (complete) {
-//     tierContainer.insertAdjacentHTML('beforeend', `
-//     <div class="mission-container">
-//       <header class="mission-title">${title}</header>
-//       <input type="checkbox" name="" id="${id}" class="mission-progress" checked>
-//     </div>`)
-//   } else {
-//     tierContainer.insertAdjacentHTML('beforeend', `
-//     <div class="mission-container">
-//       <header class="mission-title">${title}</header>
-//       <input type="checkbox" name="" id="${id}" class="mission-progress">
-//     </div>`)
-//   }
-// }
-
 // new version in which the values get passed
 export function createMissionGridLoggedIn (tierContainer, value) {
   let title = value.title;
