@@ -27,6 +27,7 @@ export const btnSignOut = document.getElementById('btnSignOut');
 export const btnAuthLink = document.getElementById('btnAuthLink');
 
 export const dmzPageHeader = document.getElementById('dmzPageHeader');
+// export const btnHideHeader = document.getElementById('btnHideHeader');
 
 export const profileLinkContainer = document.getElementById('profileLinkContainer');
 
@@ -274,16 +275,25 @@ export const showDMZHeaderAuthStatus = async (user) => {
     // console.log(user);
     dmzPageHeader.insertAdjacentHTML('afterbegin', `
       <header class='dmz-header' id='dmzHeaderSignedIn'>Welcome Back ${email}.  Thank you for signing in.</header>
+      <button type='button' class='btn-hide' id='btnHideHeader'>Hide This Message</button>
     `)
     // insert html to header welcoming a logged in user.
   } else if (dmzPageHeader) {
     // console.log('showDMZHeaderAuthStatus Triggered with USER SIGNED OUT')
     dmzPageHeader.insertAdjacentHTML('afterbegin', `
       <header class='dmz-header' id='dmzHeaderSignedOut'>Thank you for visiting.  Please <a href='./auth.html'>Sign In or Sign Up</a> for full funcationality in tracking your progress.</header>
-    `)
+      <button type='button' class='btn-hide' id='btnHideHeader'>Hide This Message</button>
+      `)
     // Insert HTML to header asking user to sign up for full functionality.  Importantly... Checkboxes don't appear with this one.
   } else {
     // Does Nothing because user is not in the dmz-missions.html page.
     // console.log('dmz show header do nothing'); // Testing purposes.
+  }
+  const btnHideHeader = document.getElementById('btnHideHeader');
+  if (btnHideHeader && dmzPageHeader) {
+    // Currently, hiding this doesn't save this into a user preference.  Later, I will do that.
+    btnHideHeader.addEventListener('click', () => {
+      dmzPageHeader.style.display = 'none';
+    });
   }
 }

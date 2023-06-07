@@ -49,7 +49,7 @@ import {
   dmzMissionsContainer,
   hideLoginError,
   showLoginError,
-  btnLogIn, btnSignUp, btnSignOut, btnGoogleSignIn,
+  btnLogIn, btnSignUp, btnSignOut, btnGoogleSignIn, btnHideHeader,
   navSignedIn, navSignedOut,
   dmzPageHeader,
   showDMZHeaderAuthStatus,
@@ -185,7 +185,5 @@ if (btnSignUp) {
 if (btnGoogleSignIn) {
   btnGoogleSignIn.addEventListener('click', handleGoogle);
 }
-
-
 
 console.log('INDEX.JS CHECK:  END TRIGGERED');

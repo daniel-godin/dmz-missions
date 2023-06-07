@@ -14,5 +14,5 @@ module.exports = {
   // map the built code back to the original source format when debugging.
   experiments: {
     topLevelAwait: true
-  }
+  },
 };
