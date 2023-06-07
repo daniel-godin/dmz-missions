@@ -141,55 +141,55 @@ export function fullCreateMissionGridLoggedIn (docRef) { // THIS IS THE LOGGED I
       let id = value.id;
       let complete = value.complete;
         if (id >= 10101 && id <=10107) {
-          createMissionGridLoggedIn(redactedTier1Container, title, id, complete);
+          createMissionGridLoggedIn(redactedTier1Container, value);
         } else if (id >= 10201 && id <=10207) {
-          createMissionGridLoggedIn(redactedTier2Container, title, id, complete);
+          createMissionGridLoggedIn(redactedTier2Container, value);
         } else if (id >= 10301 && id <=10307) {
-          createMissionGridLoggedIn(redactedTier3Container, title, id, complete);
+          createMissionGridLoggedIn(redactedTier3Container, value);
         } else if (id >= 10401 && id <=10407) {
-          createMissionGridLoggedIn(redactedTier4Container, title, id, complete);
+          createMissionGridLoggedIn(redactedTier4Container, value);
         } else if (id >= 10501 && id <=10507) {
-          createMissionGridLoggedIn(redactedTier5Container, title, id, complete);
+          createMissionGridLoggedIn(redactedTier5Container, value);
         } else if (id >= 20101 && id <=20107) {
-          createMissionGridLoggedIn(whiteLotusTier1Container, title, id, complete);
+          createMissionGridLoggedIn(whiteLotusTier1Container, value);
         } else if (id >= 20201 && id <=20207) {
-          createMissionGridLoggedIn(whiteLotusTier2Container, title, id, complete);
+          createMissionGridLoggedIn(whiteLotusTier2Container, value);
         } else if (id >= 20301 && id <=20307) {
-          createMissionGridLoggedIn(whiteLotusTier3Container, title, id, complete);
+          createMissionGridLoggedIn(whiteLotusTier3Container, value);
         } else if (id >= 20401 && id <=20407) {
-          createMissionGridLoggedIn(whiteLotusTier4Container, title, id, complete);
+          createMissionGridLoggedIn(whiteLotusTier4Container, value);
         } else if (id >= 20501 && id <=20507) {
-          createMissionGridLoggedIn(whiteLotusTier5Container, title, id, complete);
+          createMissionGridLoggedIn(whiteLotusTier5Container, value);
         } else if (id >= 30101 && id <=30107) {
-          createMissionGridLoggedIn(legionTier1Container, title, id, complete);
+          createMissionGridLoggedIn(legionTier1Container, value);
         } else if (id >= 30201 && id <=30207) {
-          createMissionGridLoggedIn(legionTier2Container, title, id, complete);
+          createMissionGridLoggedIn(legionTier2Container, value);
         } else if (id >= 30301 && id <=30307) {
-          createMissionGridLoggedIn(legionTier3Container, title, id, complete);
+          createMissionGridLoggedIn(legionTier3Container, value);
         } else if (id >= 30401 && id <=30407) {
-          createMissionGridLoggedIn(legionTier4Container, title, id, complete);
+          createMissionGridLoggedIn(legionTier4Container, value);
         } else if (id >= 30501 && id <=30507) {
-          createMissionGridLoggedIn(legionTier5Container, title, id, complete);
+          createMissionGridLoggedIn(legionTier5Container, value);
         } else if (id >= 40101 && id <=40107) {
-          createMissionGridLoggedIn(blackMousTier1Container, title, id, complete);
+          createMissionGridLoggedIn(blackMousTier1Container, value);
         } else if (id >= 40201 && id <=40207) {
-          createMissionGridLoggedIn(blackMousTier2Container, title, id, complete);
+          createMissionGridLoggedIn(blackMousTier2Container, value);
         } else if (id >= 40301 && id <=40307) {
-          createMissionGridLoggedIn(blackMousTier3Container, title, id, complete);
+          createMissionGridLoggedIn(blackMousTier3Container, value);
         } else if (id >= 40401 && id <=40407) {
-          createMissionGridLoggedIn(blackMousTier4Container, title, id, complete);
+          createMissionGridLoggedIn(blackMousTier4Container, value);
         } else if (id >= 40501 && id <=40507) {
-          createMissionGridLoggedIn(blackMousTier5Container, title, id, complete);
+          createMissionGridLoggedIn(blackMousTier5Container, value);
         } else if (id >= 50101 && id <=50107) {
-          createMissionGridLoggedIn(crownTier1Container, title, id, complete);
+          createMissionGridLoggedIn(crownTier1Container, value);
         } else if (id >= 50201 && id <=50207) {
-          createMissionGridLoggedIn(crownTier2Container, title, id, complete);
+          createMissionGridLoggedIn(crownTier2Container, value);
         } else if (id >= 50301 && id <=50307) {
-          createMissionGridLoggedIn(crownTier3Container, title, id, complete);
+          createMissionGridLoggedIn(crownTier3Container, value);
         } else if (id >= 50401 && id <=50407) {
-          createMissionGridLoggedIn(crownTier4Container, title, id, complete);
+          createMissionGridLoggedIn(crownTier4Container, value);
         } else if (id >= 50501 && id <=50507) {
-          createMissionGridLoggedIn(crownTier5Container, title), id, complete;
+          createMissionGridLoggedIn(crownTier5Container, value);
         } 
       }
     
@@ -217,7 +217,32 @@ export function createMissionGridLoggedOut (tierContainer, title) {
   </div>`)
 }
 
-export function createMissionGridLoggedIn (tierContainer, title, id, complete) {
+// working old version:
+// export function createMissionGridLoggedIn (tierContainer, title, id, complete) {
+//   if (complete) {
+//     tierContainer.insertAdjacentHTML('beforeend', `
+//     <div class="mission-container">
+//       <header class="mission-title">${title}</header>
+//       <input type="checkbox" name="" id="${id}" class="mission-progress" checked>
+//     </div>`)
+//   } else {
+//     tierContainer.insertAdjacentHTML('beforeend', `
+//     <div class="mission-container">
+//       <header class="mission-title">${title}</header>
+//       <input type="checkbox" name="" id="${id}" class="mission-progress">
+//     </div>`)
+//   }
+// }
+
+// new version in which the values get passed
+export function createMissionGridLoggedIn (tierContainer, value) {
+  let title = value.title;
+  let id = value.id;
+  let complete = value.complete;
+  let unlocked = value.unlocked;
+
+  // console.log(title, id, complete, unlocked);
+
   if (complete) {
     tierContainer.insertAdjacentHTML('beforeend', `
     <div class="mission-container">
