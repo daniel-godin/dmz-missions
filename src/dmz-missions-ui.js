@@ -21,7 +21,7 @@ export const errorMessage = document.getElementById('errorMessage');
 
 export const btnLogIn = document.getElementById('btnLogIn');
 export const btnSignUp = document.getElementById('btnSignUp');
-export const btnGoogleSignIn = document.getElementById('btnGoogleSignIn');
+export const btnHandleGoogle = document.getElementById('btnHandleGoogle');
 
 export const btnSignOut = document.getElementById('btnSignOut');
 export const btnAuthLink = document.getElementById('btnAuthLink');
@@ -202,7 +202,7 @@ export function fullCreateMissionGridLoggedIn (docRef) { // THIS IS THE LOGGED I
         // e.preventDefault();
         let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
         let checkId = Number(e.target.id); // Grabs the event target's id property, makes it into a Number (integar) from a string.
-        console.log('checkbox listener working');
+        // console.log('checkbox listener working');
         // const docRefS3 = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'); // Document Reference to a users Season 3 dmz Missions Doc
         updateDoc(docRef, {
           [checkId+".complete"] : checked,
@@ -275,14 +275,14 @@ export const hideLoginError = () => {
   errorMessage.innerText = '';
 }
 
-export const showLoginError = (error) => {
-  errorContainer.style.display = 'block';
-  if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
-    errorMessage.innerText = 'Wrong Password.  Try Again.';
-  } else {
-    errorMessage.insertAdjacentHTML('afterbegin', `Error: ${error.message}`)
-  }
-}
+// export const showLoginError = (error) => {
+//   errorContainer.style.display = 'block';
+//   if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
+//     errorMessage.innerText = 'Wrong Password.  Try Again.';
+//   } else {
+//     errorMessage.insertAdjacentHTML('afterbegin', `Error: ${error.message}`)
+//   }
+// }
 
 export const showDMZHeaderAuthStatus = async (user) => {
   if (user && dmzPageHeader) {

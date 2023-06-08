@@ -32,7 +32,7 @@ import {
   onSnapshot,
 } from 'firebase/firestore';
 
-import { dmzMissionsS3 } from "./dmz-missions-s3"; // DMZ Missions Imports
+// import { dmzMissionsS3 } from "./dmz-missions-s3"; // DMZ Missions Imports
 
 import { addDMZMissionsS3ObjToDb, } from "./db-creation";
 
@@ -56,28 +56,19 @@ import {
   showLoginState,
 } from "./dmz-missions-ui";
 
+import { formDMZSignUp, newUser, createAccount, handleGoogle } from "./auth-ui";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDcnF8Vqs9g2gNmIYUCIFbbbkBnSMAQOo0",
-  authDomain: "dmz-missions-150b0.firebaseapp.com",
-  projectId: "dmz-missions-150b0",
-  storageBucket: "dmz-missions-150b0.appspot.com",
-  messagingSenderId: "756249949288",
-  appId: "1:756249949288:web:8f6dbb7b6cbfe6853577dd",
-  measurementId: "G-Z86M5P6WED"
-};
+import { app, auth, db } from "./firebase";
 
-// Initialize Firebase Apps
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const auth = getAuth(app);
-const db = getFirestore(app);
+// // Initialize Firebase Apps
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+// const auth = getAuth(app);
+// const db = getFirestore(app);
 
-// Local Emulators
-connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
-connectFirestoreEmulator(db, 'localhost', 8080);
+// // Local Emulators
+// connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
+// connectFirestoreEmulator(db, 'localhost', 8080);
 
 // Early Console.log Check.  Before lots of code executes or gets stuck.
 console.log('INDEX.JS CHECK:  beginning triggered');
@@ -96,47 +87,47 @@ const loginEmailPassword = async () => {
   }
   catch(error) {
     console.log(error);
-    showLoginError(error);
+    // showLoginError(error);
   }
 }
 
-const createAccount = async () => {
-    // Do I need a preventDefault() function?
-  console.log('sign up button clicked');
-  const loginEmail = txtEmail.value;
-  const loginPassword = txtPassword.value;
-  try {
-    const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
-    await setDoc(doc(db, 'users', userCredential.user.uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3);
-    await initialDatabaseSetUp(userCredential) // Experimenting to call a function, instead of doing this INSIDE of the signup thing.  Later I will do this after a verification email is confirmed.
-  }
-  catch(error) {
-    console.log(error);
-    showLoginError(error);
-  }
-}
+// const createAccount = async () => {
+//     // Do I need a preventDefault() function?
+//   console.log('sign up button clicked');
+//   const loginEmail = txtEmail.value;
+//   const loginPassword = txtPassword.value;
+//   try {
+//     const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
+//     await setDoc(doc(db, 'users', userCredential.user.uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3);
+//     await initialDatabaseSetUp(userCredential) // Experimenting to call a function, instead of doing this INSIDE of the signup thing.  Later I will do this after a verification email is confirmed.
+//   }
+//   catch(error) {
+//     console.log(error);
+//     showLoginError(error);
+//   }
+// }
 
 // Sign-in With Google:
-const handleGoogle = async () => {
-    // Do I need a preventDefault() function?
-  console.log('google button clicked');
-  const provider = await new GoogleAuthProvider();
-  // FUTURE:  if(desktop) = popup, elseif(mobile) = redirect
-  return signInWithPopup(auth, provider);
-}
+// const handleGoogle = async () => {
+//     // Do I need a preventDefault() function?
+//   console.log('google button clicked');
+//   const provider = await new GoogleAuthProvider();
+//   // FUTURE:  if(desktop) = popup, elseif(mobile) = redirect
+//   return signInWithPopup(auth, provider);
+// }
 
-function initialDatabaseSetUp (userCredentials) {
-  let uid = userCredentials.user.uid;
-  const newUser = {
-    userDisplayName: "Display Name - Future Fix",
-    userEmail: userCredentials.user.email,
-    userActivisionId: "",
-    userRegion: "",
-    signedUp: "time"
-  }
-  setDoc(doc(db, 'users', uid), newUser ); // Creates a doc in db > users > (unique user id [PRIVATE DOC])
-  setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3); //  Creates season 3 mission tracking doc inside a users UID Doc sub-collection.  This is the newest version I'm working with.
-}
+// function initialDatabaseSetUp (userCredentials) {
+//   let uid = userCredentials.user.uid;
+//   const newUser = {
+//     userDisplayName: "Display Name - Future Fix",
+//     userEmail: userCredentials.user.email,
+//     userActivisionId: "",
+//     userRegion: "",
+//     signedUp: "time"
+//   }
+//   setDoc(doc(db, 'users', uid), newUser ); // Creates a doc in db > users > (unique user id [PRIVATE DOC])
+//   setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3); //  Creates season 3 mission tracking doc inside a users UID Doc sub-collection.  This is the newest version I'm working with.
+// }
 
 onAuthStateChanged(auth, user => {
   if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
@@ -179,11 +170,11 @@ if (btnLogIn) {
 if (btnSignOut) {
   btnSignOut.addEventListener('click', logout);
 }
-if (btnSignUp) {
-  btnSignUp.addEventListener('click', createAccount);
-}
-if (btnGoogleSignIn) {
-  btnGoogleSignIn.addEventListener('click', handleGoogle);
-}
+// if (btnSignUp) {
+//   btnSignUp.addEventListener('click', createAccount);
+// }
+// if (btnHandleGoogle) {
+//   btnGoogleSignIn.addEventListener('click', handleGoogle);
+// }
 
 console.log('INDEX.JS CHECK:  END TRIGGERED');

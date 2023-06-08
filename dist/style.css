@@ -96,9 +96,10 @@ nav {
   gap: 0.5rem;
 }
 
-input[type='email'], input[type='password'] {
+input[type='email'], input[type='password'], input[type='text'] {
   width: 100%;
   padding: 0.25rem;
+  margin: .25rem;
 }
 
 button {
@@ -164,9 +165,9 @@ button {
   color:rgb(251, 96, 106);
 }
 
-.mission-locked {
+/* .mission-locked {
   color: grey;
-}
+} */
 
 .mission-progress-checkbox {
 
