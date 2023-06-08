@@ -56,7 +56,7 @@ import {
   showLoginState,
 } from "./dmz-missions-ui";
 
-import { formDMZSignUp, newUser, createAccount, handleGoogle } from "./auth-ui";
+import { formDMZSignUp, newUser, createAccount, handleGoogle } from './auth';
 
 import { app, auth, db } from "./firebase";
 

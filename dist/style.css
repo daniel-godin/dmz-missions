@@ -102,6 +102,21 @@ input[type='email'], input[type='password'], input[type='text'] {
   margin: .25rem;
 }
 
+.fieldset-radio-region {
+  padding: 1rem;
+  margin: .5rem 0 .5rem 0;
+}
+
+.label-radio-region {
+  display: block;
+  margin: 0.5rem;
+}
+
+.radio-region {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
 button {
   width: 75%;
   padding: 0.5rem;
