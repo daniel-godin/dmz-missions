@@ -3,7 +3,7 @@
 
 import { app, auth, db } from "./firebase";
 
-import { getFirestore, setDoc, doc, connectFirestoreEmulator } from "firebase/firestore";
+import { setDoc, doc, connectFirestoreEmulator } from "firebase/firestore";
 
 import { createUserWithEmailAndPassword, GoogleAuthProvider, getAuth, connectAuthEmulator, updateProfile, sendEmailVerification } from "firebase/auth";
 
@@ -28,7 +28,7 @@ export const authContainer = document.getElementById('authContainer');
 export const txtEmail = document.getElementById('txtEmail');
 export const txtPassword = document.getElementById('txtPassword');
 export const txtDisplayName = document.getElementById('txtDisplayName');
-export const radioRegion = document.getElementsByClassName('radio-region');
+// export const radioRegion = document.getElementsByClassName('radio-region');
 
 export const errorContainer = document.getElementById('errorContainer');
 export const errorMessage = document.getElementById('errorMessage');
@@ -113,12 +113,12 @@ if (formDMZSignUp) {
     let loginEmail = txtEmail.value;
     let loginPassword = txtPassword.value;
     let displayName = txtDisplayName.value;
-    let region;
-    for (let i = 0; i < radioRegion.length; i++) {
-      if (radioRegion[i].checked) {
-        region = radioRegion[i].value;
-      }
-    }
+    // let region;
+    // for (let i = 0; i < radioRegion.length; i++) {
+    //   if (radioRegion[i].checked) {
+    //     region = radioRegion[i].value;
+    //   }
+    // }
     console.log(region);
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
@@ -132,7 +132,7 @@ if (formDMZSignUp) {
           userId: user.uid,
           userDisplayName: user.displayName,
           userActivisionId: "",
-          userRegion: region,
+          userRegion: "",
         }
         await setDoc(doc(db, 'users', user.uid), userDocObj ); // Creates a doc in db > users > (unique user id [PRIVATE DOC])
         await setDoc(doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3);
