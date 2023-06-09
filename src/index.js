@@ -1,20 +1,9 @@
-// Import the functions you need from Firebase SDK's.
-import { initializeApp } from "firebase/app";
 import { 
   getAnalytics 
 } from "firebase/analytics";
 import { 
-  getAuth, 
-  connectAuthEmulator, 
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
   onAuthStateChanged,
-  signInWithPopup,
-  signInWithRedirect,
-  getRedirectResult,
   signOut,
-  GoogleAuthProvider,
-  FirebaseAuth,
 } from "firebase/auth";
 import { 
   getFirestore,
@@ -39,16 +28,8 @@ import { addDMZMissionsS3ObjToDb, } from "./db-creation";
 import {
   loadPage,
   fullCreateMissionGridLoggedIn, fullCreateMissionGridLoggedOut,
-  authContainer,
-  txtEmail,
-  txtPassword,
-  errorContainer,
-  errorMessage,
-  createAuthBox,
   profileLinkContainer,
   dmzMissionsContainer,
-  hideLoginError,
-  showLoginError,
   btnLogIn, btnSignUp, btnSignOut, btnGoogleSignIn, btnHideHeader,
   navSignedIn, navSignedOut,
   dmzPageHeader,
@@ -56,15 +37,7 @@ import {
   showLoginState,
 } from "./dmz-missions-ui";
 
-import { formDMZSignUp, newUser, createAccount, handleGoogle } from './auth';
-
-import { app, auth, db } from "./firebase";
-
-// // Initialize Firebase Apps
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-// const auth = getAuth(app);
-// const db = getFirestore(app);
+import { auth, db } from "./firebase";
 
 // // Local Emulators
 // connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
@@ -74,60 +47,6 @@ import { app, auth, db } from "./firebase";
 console.log('INDEX.JS CHECK:  beginning triggered');
 
 // App Configurations:
-// Setting Up Auth From Video:
-const loginEmailPassword = async () => {
-    // Do I need a preventDefault() function?
-
-  console.log('login button clicked');
-  const loginEmail = txtEmail.value;
-  const loginPassword = txtPassword.value;
-  try {
-    const userCredential = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
-    // console.log(userCredential.user);
-  }
-  catch(error) {
-    console.log(error);
-    // showLoginError(error);
-  }
-}
-
-// const createAccount = async () => {
-//     // Do I need a preventDefault() function?
-//   console.log('sign up button clicked');
-//   const loginEmail = txtEmail.value;
-//   const loginPassword = txtPassword.value;
-//   try {
-//     const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
-//     await setDoc(doc(db, 'users', userCredential.user.uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3);
-//     await initialDatabaseSetUp(userCredential) // Experimenting to call a function, instead of doing this INSIDE of the signup thing.  Later I will do this after a verification email is confirmed.
-//   }
-//   catch(error) {
-//     console.log(error);
-//     showLoginError(error);
-//   }
-// }
-
-// Sign-in With Google:
-// const handleGoogle = async () => {
-//     // Do I need a preventDefault() function?
-//   console.log('google button clicked');
-//   const provider = await new GoogleAuthProvider();
-//   // FUTURE:  if(desktop) = popup, elseif(mobile) = redirect
-//   return signInWithPopup(auth, provider);
-// }
-
-// function initialDatabaseSetUp (userCredentials) {
-//   let uid = userCredentials.user.uid;
-//   const newUser = {
-//     userDisplayName: "Display Name - Future Fix",
-//     userEmail: userCredentials.user.email,
-//     userActivisionId: "",
-//     userRegion: "",
-//     signedUp: "time"
-//   }
-//   setDoc(doc(db, 'users', uid), newUser ); // Creates a doc in db > users > (unique user id [PRIVATE DOC])
-//   setDoc(doc(db, 'users', uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3); //  Creates season 3 mission tracking doc inside a users UID Doc sub-collection.  This is the newest version I'm working with.
-// }
 
 onAuthStateChanged(auth, user => {
   if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
@@ -154,6 +73,9 @@ const logout = async () => {
 
   await signOut(auth);
 }
+
+
+
 // Testing:
 
 // onSnapshot(docTestRef, (doc) => {
@@ -164,17 +86,8 @@ const logout = async () => {
 // These keep spitting errors, and I can't get to the end of the file.  Need to fix them.  Maybe:  Load only when I'm on a page that has these?  I don't know.
 
 
-if (btnLogIn) {
-  btnLogIn.addEventListener('click', loginEmailPassword);
-}
 if (btnSignOut) {
   btnSignOut.addEventListener('click', logout);
 }
-// if (btnSignUp) {
-//   btnSignUp.addEventListener('click', createAccount);
-// }
-// if (btnHandleGoogle) {
-//   btnGoogleSignIn.addEventListener('click', handleGoogle);
-// }
 
 console.log('INDEX.JS CHECK:  END TRIGGERED');

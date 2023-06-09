@@ -117,14 +117,10 @@ input[type='email'], input[type='password'], input[type='text'] {
   margin-right: 0.5rem;
 }
 
-button {
+#btnSignUp, #btnLogIn {
+  align-self: center;
   width: 75%;
   padding: 0.5rem;
-  justify-self: center;
-}
-
-#btnSignUp {
-  align-self: center;
 }
 
 #btnSignOut {
@@ -135,13 +131,14 @@ button {
 
 #errorContainer {
   /* Sign Up and/or Sign In Div Container */
-  padding: 2rem;
+  padding: 1rem;
 
 }
 
 #errorMessage {
   /* p Element inside of errorContainer for Sign Up and/or Sign In Div */
   /* Displays Error Message From Firebase Auth */
+  color: red;
 
 }
 

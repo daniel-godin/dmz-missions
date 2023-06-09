@@ -6,14 +6,14 @@ import { auth, db } from "./firebase";
 import { setDoc, doc, connectFirestoreEmulator } from "firebase/firestore";
 
 import { 
-  createUserWithEmailAndPassword, sendEmailVerification,
+  createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword,
   connectAuthEmulator, 
   updateProfile, 
   AuthErrorCodes,
 
 } from "firebase/auth";
 
-import { dmzMissionsS3 } from "./dmz-missions-s3";
+import { dmzMissionsS3, dmzMissionsS4 } from "./dmz-mission-list-objects";
 
 // Local Emulators
 connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
@@ -22,6 +22,7 @@ connectFirestoreEmulator(db, 'localhost', 8080);
 
 // DOM Element Variables:
 export const formDMZSignUp = document.getElementById('formDMZSignUp');
+export const formDMZLogIn = document.getElementById('formDMZLogIn');
 
 export const btnLogIn = document.getElementById('btnLogIn');
 export const btnSignUp = document.getElementById('btnSignUp');
@@ -51,11 +52,11 @@ if (formDMZSignUp) { // If the DMZ Sign Up form exists in the DOM, it means the 
     }
     catch(error) {
       console.log(error);
-      showLoginError(error); // Still need to fix this.
+      showLoginError(error); 
     }
-    formDMZSignUp.reset();
+    // formDMZSignUp.reset();
     })
-  console.log('End of Create Account Function Triggered'); // This console log is set up to make sure this event goes through entire set of functions.
+  // console.log('End of Create Account Function Triggered'); // This console log is set up to make sure this event goes through entire set of functions.
 }
 const createUserDocs = async (user) => { // Creates an initial setup for each user when they sign up.  Later I will do this after a verification email is confirmed.
   const userDocObj = {
@@ -68,7 +69,26 @@ const createUserDocs = async (user) => { // Creates an initial setup for each us
   await setDoc(doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3); // Creates a doc in db > users > UID > mw2-trackers > dmzMissionsS3 (This is the doc that tracks a users Mission Progress in Season 3)
 }
 
-export const showLoginError = (error) => {
+// Log in Function:
+if (formDMZLogIn) {
+  formDMZLogIn.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    // console.log('login button submitted');
+    const loginEmail = txtEmail.value;
+    const loginPassword = txtPassword.value;
+    try {
+      await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
+      // console.log('signInWithEmail and Password triggered', userCredential.user);
+      // formDMZLogIn.reset();
+    }
+    catch(error) {
+      console.log(error);
+      showLoginError(error);
+    }
+  });
+}
+
+export const showLoginError = (error) => { // Triggers when there is an auth error in either the sign up or log in forms.  Uses firebase AuthErrorCodes.
   // errorContainer.style.display = 'block';
   if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
     errorMessage.innerText = 'Wrong Password.  Try Again.';

@@ -1,4 +1,4 @@
-import { dmzMissionsS3 } from './dmz-missions-s3';
+import { dmzMissionsS3 } from './dmz-mission-list-objects';
 
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 

@@ -1,7 +1,7 @@
 import { AuthErrorCodes } from "firebase/auth";
 
 import { doc, getDoc, getDocs, onSnapshot, updateDoc} from "firebase/firestore";
-import { dmzMissionsS3 } from "./dmz-missions-s3";
+import { dmzMissionsS3 } from "./dmz-mission-list-objects";
 
 import { loadNavigation, navContainer } from "./nav";
 
