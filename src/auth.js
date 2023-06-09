@@ -1,11 +1,17 @@
 // Put UI elements and code for auth in here, get it out of the main index.js.
 // UI Elements and functions for Signing up users, and signing in users.  Also validation and the user interface.
 
-import { app, auth, db } from "./firebase";
+import { auth, db } from "./firebase";
 
 import { setDoc, doc, connectFirestoreEmulator } from "firebase/firestore";
 
-import { createUserWithEmailAndPassword, connectAuthEmulator, updateProfile, sendEmailVerification } from "firebase/auth";
+import { 
+  createUserWithEmailAndPassword, sendEmailVerification,
+  connectAuthEmulator, 
+  updateProfile, 
+  AuthErrorCodes,
+
+} from "firebase/auth";
 
 import { dmzMissionsS3 } from "./dmz-missions-s3";
 
@@ -45,7 +51,7 @@ if (formDMZSignUp) { // If the DMZ Sign Up form exists in the DOM, it means the 
     }
     catch(error) {
       console.log(error);
-      // showLoginError(error); // Still need to fix this.
+      showLoginError(error); // Still need to fix this.
     }
     formDMZSignUp.reset();
     })
@@ -62,10 +68,8 @@ const createUserDocs = async (user) => { // Creates an initial setup for each us
   await setDoc(doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3); // Creates a doc in db > users > UID > mw2-trackers > dmzMissionsS3 (This is the doc that tracks a users Mission Progress in Season 3)
 }
 
-
-
 export const showLoginError = (error) => {
-  errorContainer.style.display = 'block';
+  // errorContainer.style.display = 'block';
   if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
     errorMessage.innerText = 'Wrong Password.  Try Again.';
   } else {
