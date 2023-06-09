@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DMZ Missions Authorization Page - Sign In, Sign Up</title>
+  <link rel='stylesheet' href='./style.css'>
+  <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+
+</head>
+<body>
+<div class='page-container'>
+  <div class='nav-container' id='navContainer'>
+    <!-- Auto-generated:  dmz-missions-ui.js and nav.js -->
+  </div>
+  <div class='auth-container' id='authContainer'>
+    <form id='formDMZSignUp'>
+      <label for='txtEmail'>Email:
+        <input type='email' placeholder='Email@Email.com' id='txtEmail' minlength='3' required />
+      </label>
+  
+      <label for='txtPassword'>Password:
+        <input type='password' id='txtPassword' minlength='3' required />
+      </label>
+
+      <label for='txtDisplayName'>Display Name:
+        <input type='text' id='txtDisplayName' minlength='3' required />
+      </label>
+
+      <fieldset class='fieldset-radio-region'>
+        <legend>Region:</legend>
+        <label for='radioRegionNAWest' class='label-radio-region'>
+          <input type='radio' id='radioRegionNAWest' class='radio-region' name='radioRegion' value='North America (West)' />North America (West)
+        </label>
+        <label for='radioRegionNAEast' class='label-radio-region'>
+          <input type='radio' id='radioRegionNAEast' class='radio-region' name='radioRegion' value='North America (East)'  />North America (East)
+        </label>
+        <label for='radioRegionEuropeWest' class='label-radio-region'>
+          <input type='radio' id='radioRegionEuropeWest' class='radio-region' name='radioRegion' value='Europe (West)'  />Europe (West)
+        </label>
+        <label for='radioRegionEuropeast' class='label-radio-region'>
+          <input type='radio' id='radioRegionEuropeEast' class='radio-region' name='radioRegion' value='Europe (East)'  />Europe (East)
+        </label>
+        <label for='radioRegionSA' class='label-radio-region'>
+          <input type='radio' id='radioRegionSA' class='radio-region' name='radioRegion' value='South America'  />South America
+        </label>
+        <label for='radioRegionOceania' class='label-radio-region'>
+          <input type='radio' id='radioRegionOceania' class='radio-region' name='radioRegion' value='Oceania'  />Oceania
+        </label>
+        <label for='radioRegionAsia' class='label-radio-region'>
+          <input type='radio' id='radioRegionAsia' class='radio-region' name='radioRegion' value='Asia'  />Asia
+        </label>
+      </fieldset>
+
+      <div id='errorContainer'>
+        <p id='errorMessage'></p>
+      </div>
+      
+      <button type='submit' id='btnSignUp'>Sign Up</button>
+      <!-- <button type='button' id='btnHandleGoogle'>Sign Up With Google</button> -->
+    </form>
+  </div>
+
+  <div class='footer-container'>
+    <footer></footer>
+  </div>
+
+</div>
+<script src='bundle.js'></script>
+</body>
+</html>
