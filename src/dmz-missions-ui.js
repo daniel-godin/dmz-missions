@@ -26,7 +26,6 @@ export const btnHandleGoogle = document.getElementById('btnHandleGoogle');
 export const btnAuthLink = document.getElementById('btnAuthLink');
 
 export const dmzPageHeader = document.getElementById('dmzPageHeader');
-// export const btnHideHeader = document.getElementById('btnHideHeader');
 
 export const profileLinkContainer = document.getElementById('profileLinkContainer');
 
@@ -62,25 +61,21 @@ export const crownTier3Container = document.getElementById('crownTier3MissionsCo
 export const crownTier4Container = document.getElementById('crownTier4MissionsContainer');
 export const crownTier5Container = document.getElementById('crownTier5MissionsContainer');
 
+// console.log('Beginning of dmz-missions-ui triggered.  After variables');
+
 export function loadPage(user) {
   // showLoginState();
   if (user) {
-    console.log('loadPage user triggered');
     showDMZHeaderAuthStatus(user);
     loadNavigation(user);
   } else {
-    console.log('loadPage no user triggered');
     if (dmzMissionsContainer) {
-      console.log('no user and mission container exists');
       loadNavigation();
       showDMZHeaderAuthStatus();
       fullCreateMissionGridLoggedOut();
     } else {
-      console.log('no user and dmz mission does not exist');
       loadNavigation();
-      console.log('gettinghere?');
     }
-    
   }
 }
 
@@ -269,10 +264,6 @@ export function createMissionGridLoggedIn (tierContainer, value) {
   }
 }
 
-
-
-
-
 export const showDMZHeaderAuthStatus = async (user) => {
   if (user && dmzPageHeader) {
     let email = user.email;
@@ -302,3 +293,5 @@ export const showDMZHeaderAuthStatus = async (user) => {
     });
   }
 }
+
+// console.log('End of dmz-missions-ui triggered');

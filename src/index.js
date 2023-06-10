@@ -2,8 +2,10 @@ import {
   getAnalytics 
 } from "firebase/analytics";
 import { 
+  connectAuthEmulator,
   onAuthStateChanged,
   signOut,
+  
 } from "firebase/auth";
 import { 
   getFirestore,
@@ -37,14 +39,13 @@ import { auth, db } from "./firebase";
 
 import { } from "./auth";
 
-// // Local Emulators
-// connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
-// connectFirestoreEmulator(db, 'localhost', 8080);
+// Local Emulators
+connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
+connectFirestoreEmulator(db, 'localhost', 8080);
 
-// Early Console.log Check.  Before lots of code executes or gets stuck.
-console.log('INDEX.JS CHECK:  beginning triggered');
+// console.log('INDEX.JS CHECK:  beginning triggered');
 
-// App Configurations:
+// Page Loads and Listener Triggers
 
 onAuthStateChanged(auth, user => {
   if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
@@ -64,9 +65,6 @@ onAuthStateChanged(auth, user => {
 })
 
 
-
-
-
 // Testing:
 
 // onSnapshot(docTestRef, (doc) => {
@@ -75,4 +73,4 @@ onAuthStateChanged(auth, user => {
 // })
 
 
-console.log('INDEX.JS CHECK:  END TRIGGERED');
+// console.log('INDEX.JS CHECK:  END TRIGGERED');

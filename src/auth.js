@@ -3,11 +3,10 @@
 
 import { auth, db } from "./firebase";
 
-import { setDoc, doc, connectFirestoreEmulator } from "firebase/firestore";
+import { setDoc, doc, } from "firebase/firestore";
 
 import { 
   createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword,
-  connectAuthEmulator, 
   updateProfile, 
   AuthErrorCodes,
   signOut,
@@ -16,11 +15,6 @@ import {
 
 import { dmzMissionsS3, dmzMissionsS4 } from "./dmz-mission-list-objects";
 import { btnSignOut } from "./nav";
-
-// Local Emulators
-connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
-connectFirestoreEmulator(db, 'localhost', 8080);
-
 
 // DOM Element Variables:
 export const formDMZSignUp = document.getElementById('formDMZSignUp');
@@ -37,7 +31,8 @@ export const txtDisplayName = document.getElementById('txtDisplayName');
 export const errorContainer = document.getElementById('errorContainer');
 export const errorMessage = document.getElementById('errorMessage');
 
-console.log('beginning of auth.js');
+// console.log('beginning of auth.js');
+
 // Sign-up Listeners and Functions:
 if (formDMZSignUp) { // If the DMZ Sign Up form exists in the DOM, it means the user is on the sign-up.html page.  Everything here will then activate.
   formDMZSignUp.addEventListener('submit', async (e) => {
@@ -100,15 +95,7 @@ export const showLoginError = (error) => { // Triggers when there is an auth err
   }
 }
 
-// export const hideLoginError = () => { // Currently not connected. (2023.06.10) - Use this to 'hide' the div box displaying errors until an error happens, then change the display = none to block with showLoginError function.
-//   errorContainer.style.display = 'none';
-//   errorMessage.innerText = '';
-// }
-
-
 // Sign-out Functions:
-
-
 
 // if (btnSignOut) {
 //   btnSignOut.addEventListener('click', logout);
@@ -128,4 +115,4 @@ export const showLoginError = (error) => { // Triggers when there is an auth err
 // }
 
 
-console.log('end of auth.js');
+// console.log('end of auth.js');
