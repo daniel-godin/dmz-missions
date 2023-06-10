@@ -10,10 +10,12 @@ import {
   connectAuthEmulator, 
   updateProfile, 
   AuthErrorCodes,
+  signOut,
 
 } from "firebase/auth";
 
 import { dmzMissionsS3, dmzMissionsS4 } from "./dmz-mission-list-objects";
+import { btnSignOut } from "./nav";
 
 // Local Emulators
 connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
@@ -35,7 +37,7 @@ export const txtDisplayName = document.getElementById('txtDisplayName');
 export const errorContainer = document.getElementById('errorContainer');
 export const errorMessage = document.getElementById('errorMessage');
 
-
+console.log('beginning of auth.js');
 // Sign-up Listeners and Functions:
 if (formDMZSignUp) { // If the DMZ Sign Up form exists in the DOM, it means the user is on the sign-up.html page.  Everything here will then activate.
   formDMZSignUp.addEventListener('submit', async (e) => {
@@ -54,10 +56,11 @@ if (formDMZSignUp) { // If the DMZ Sign Up form exists in the DOM, it means the 
       console.log(error);
       showLoginError(error); 
     }
-    // formDMZSignUp.reset();
+    formDMZSignUp.reset();
     })
   // console.log('End of Create Account Function Triggered'); // This console log is set up to make sure this event goes through entire set of functions.
 }
+
 const createUserDocs = async (user) => { // Creates an initial setup for each user when they sign up.  Later I will do this after a verification email is confirmed.
   const userDocObj = {
     userId: user.uid,
@@ -89,7 +92,7 @@ if (formDMZLogIn) {
 }
 
 export const showLoginError = (error) => { // Triggers when there is an auth error in either the sign up or log in forms.  Uses firebase AuthErrorCodes.
-  // errorContainer.style.display = 'block';
+  errorContainer.style.display = 'block';
   if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
     errorMessage.innerText = 'Wrong Password.  Try Again.';
   } else {
@@ -97,3 +100,32 @@ export const showLoginError = (error) => { // Triggers when there is an auth err
   }
 }
 
+// export const hideLoginError = () => { // Currently not connected. (2023.06.10) - Use this to 'hide' the div box displaying errors until an error happens, then change the display = none to block with showLoginError function.
+//   errorContainer.style.display = 'none';
+//   errorMessage.innerText = '';
+// }
+
+
+// Sign-out Functions:
+
+
+
+// if (btnSignOut) {
+//   btnSignOut.addEventListener('click', logout);
+// }
+
+// const logout = async () => {
+//   // Do I need a preventDefault() function?
+//   console.log('sign out button clicked');
+//   await signOut(auth);
+// }
+
+// if (btnSignOut) {
+//   btnSignOut.addEventListener('click', async () => {
+//     console.log('Sign out Button clicked');
+//     await signOut(auth);
+//   })
+// }
+
+
+console.log('end of auth.js');

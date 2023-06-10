@@ -8,8 +8,8 @@ import { loadNavigation, navContainer } from "./nav";
 export const arrayOfMissionTitles = document.getElementsByClassName('mission-title');
 export const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
 
-export const navSignedIn = document.getElementById('navSignedIn');
-export const navSignedOut = document.getElementById('navSignedOut');
+// export const navSignedIn = document.getElementById('navSignedIn');
+// export const navSignedOut = document.getElementById('navSignedOut');
 
 export const authContainer = document.getElementById('authContainer');
 export const txtEmail = document.getElementById('txtEmail');
@@ -23,7 +23,6 @@ export const btnLogIn = document.getElementById('btnLogIn');
 export const btnSignUp = document.getElementById('btnSignUp');
 export const btnHandleGoogle = document.getElementById('btnHandleGoogle');
 
-export const btnSignOut = document.getElementById('btnSignOut');
 export const btnAuthLink = document.getElementById('btnAuthLink');
 
 export const dmzPageHeader = document.getElementById('dmzPageHeader');
@@ -64,12 +63,24 @@ export const crownTier4Container = document.getElementById('crownTier4MissionsCo
 export const crownTier5Container = document.getElementById('crownTier5MissionsContainer');
 
 export function loadPage(user) {
-  loadNavigation();
   // showLoginState();
   if (user) {
+    console.log('loadPage user triggered');
     showDMZHeaderAuthStatus(user);
+    loadNavigation(user);
   } else {
-    showDMZHeaderAuthStatus();
+    console.log('loadPage no user triggered');
+    if (dmzMissionsContainer) {
+      console.log('no user and mission container exists');
+      loadNavigation();
+      showDMZHeaderAuthStatus();
+      fullCreateMissionGridLoggedOut();
+    } else {
+      console.log('no user and dmz mission does not exist');
+      loadNavigation();
+      console.log('gettinghere?');
+    }
+    
   }
 }
 
@@ -258,31 +269,9 @@ export function createMissionGridLoggedIn (tierContainer, value) {
   }
 }
 
-// export const showLoginState = async (user, state) => {
-//   if (state === 'logged-in') {
-//     // console.log('login-state-triggered for logged in')
-//     navSignedOut.style.display = 'none';
-//     navSignedIn.style.display = 'block';
-//   } else if (state === 'logged-out') {
-//     // console.log('login-state-triggered for logged out')
-//     navSignedIn.style.display = 'none';
-//     navSignedOut.style.display = 'block';
-//   }
-// }
 
-export const hideLoginError = () => {
-  errorContainer.style.display = 'none';
-  errorMessage.innerText = '';
-}
 
-// export const showLoginError = (error) => {
-//   errorContainer.style.display = 'block';
-//   if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
-//     errorMessage.innerText = 'Wrong Password.  Try Again.';
-//   } else {
-//     errorMessage.insertAdjacentHTML('afterbegin', `Error: ${error.message}`)
-//   }
-// }
+
 
 export const showDMZHeaderAuthStatus = async (user) => {
   if (user && dmzPageHeader) {

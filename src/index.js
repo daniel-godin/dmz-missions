@@ -21,7 +21,7 @@ import {
   onSnapshot,
 } from 'firebase/firestore';
 
-// import { dmzMissionsS3 } from "./dmz-missions-s3"; // DMZ Missions Imports
+import { dmzMissionsS3 } from "./dmz-mission-list-objects"; // DMZ Missions Imports
 
 import { addDMZMissionsS3ObjToDb, } from "./db-creation";
 
@@ -30,14 +30,12 @@ import {
   fullCreateMissionGridLoggedIn, fullCreateMissionGridLoggedOut,
   profileLinkContainer,
   dmzMissionsContainer,
-  btnLogIn, btnSignUp, btnSignOut, btnGoogleSignIn, btnHideHeader,
-  navSignedIn, navSignedOut,
-  dmzPageHeader,
-  showDMZHeaderAuthStatus,
   showLoginState,
 } from "./dmz-missions-ui";
 
 import { auth, db } from "./firebase";
+
+import { } from "./auth";
 
 // // Local Emulators
 // connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
@@ -52,7 +50,6 @@ onAuthStateChanged(auth, user => {
   if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
     let userDoc = user.uid;
     loadPage(user); // Should I put this into the onSnapshot or other listener position?
-    // hideLoginError();
     if (dmzMissionsContainer) {
       const dmzMissionsS3DocRefLoggedIn = doc(db, 'users', userDoc, 'mw2-trackers', 'dmzMissionsS3');
       fullCreateMissionGridLoggedIn(dmzMissionsS3DocRefLoggedIn);
@@ -63,16 +60,10 @@ onAuthStateChanged(auth, user => {
     if (dmzMissionsContainer) {
       fullCreateMissionGridLoggedOut(dmzMissionsS3);
     }
-    // showLoginForm();
   }
 })
 
-const logout = async () => {
-  // Do I need a preventDefault() function?
-  console.log('sign out button clicked');
 
-  await signOut(auth);
-}
 
 
 
@@ -83,11 +74,5 @@ const logout = async () => {
 //   // addDMZMissionsS3ObjToDb(db); // Adds the dmzMissionsS3 object to db, mw2-info, dmzMissions.  This is OUTSIDE of the user collection stuff.
 // })
 
-// These keep spitting errors, and I can't get to the end of the file.  Need to fix them.  Maybe:  Load only when I'm on a page that has these?  I don't know.
-
-
-if (btnSignOut) {
-  btnSignOut.addEventListener('click', logout);
-}
 
 console.log('INDEX.JS CHECK:  END TRIGGERED');
