@@ -107,22 +107,4 @@ export const createSignOutButtonFunction = async () => {
   }
 }
 
-// if (btnSignOut) {
-//   btnSignOut.addEventListener('click', logout);
-// }
-
-// const logout = async () => {
-//   // Do I need a preventDefault() function?
-//   console.log('sign out button clicked');
-//   await signOut(auth);
-// }
-
-// if (btnSignOut) {
-//   btnSignOut.addEventListener('click', async () => {
-//     console.log('Sign out Button clicked');
-//     await signOut(auth);
-//   })
-// }
-
-
-// console.log('end of auth.js');
+// console.log('end of auth.js'); // FOR TESTING PURPOSES
