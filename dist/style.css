@@ -80,6 +80,17 @@ nav {
   padding: 2rem;
 }
 
+#displayLoggedInContainer {
+  display: none;
+  border: 1px solid blue;
+  background-color: beige;
+  width: 500px;
+  height: min-content;
+  justify-self: center;
+  align-self: center;
+  padding: 2rem;
+}
+
 #authContainer {
   border: 1px solid red;
   background-color: beige;

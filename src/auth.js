@@ -10,6 +10,7 @@ import {
   updateProfile, 
   AuthErrorCodes,
   signOut,
+  onAuthStateChanged,
 
 } from "firebase/auth";
 
@@ -17,21 +18,34 @@ import { dmzMissionsS3, dmzMissionsS4 } from "./dmz-mission-list-objects";
 import { btnSignOut } from "./nav";
 
 // DOM Element Variables:
+export const authContainer = document.getElementById('authContainer');
+export const displayLoggedInContainer = document.getElementById('displayLoggedInContainer');
 export const formDMZSignUp = document.getElementById('formDMZSignUp');
 export const formDMZLogIn = document.getElementById('formDMZLogIn');
 
-export const btnLogIn = document.getElementById('btnLogIn');
-export const btnSignUp = document.getElementById('btnSignUp');
-
-export const authContainer = document.getElementById('authContainer');
 export const txtEmail = document.getElementById('txtEmail');
 export const txtPassword = document.getElementById('txtPassword');
 export const txtDisplayName = document.getElementById('txtDisplayName');
+
+export const btnLogIn = document.getElementById('btnLogIn');
+export const btnSignUp = document.getElementById('btnSignUp');
 
 export const errorContainer = document.getElementById('errorContainer');
 export const errorMessage = document.getElementById('errorMessage');
 
 // console.log('beginning of auth.js');
+
+onAuthStateChanged(auth, user => {
+  if (authContainer) { // If authContainer exists, run this.  Basically, this only exists on the sign up and sign in pages.
+    if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
+      authContainer.style.display = 'none';
+      displayLoggedInContainer.style.display = 'block';
+    } else {
+      authContainer.style.display = 'block';
+      displayLoggedInContainer.style.display = 'none';
+    }
+  }
+});
 
 // Sign-up Listeners and Functions:
 if (formDMZSignUp) { // If the DMZ Sign Up form exists in the DOM, it means the user is on the sign-up.html page.  Everything here will then activate.
