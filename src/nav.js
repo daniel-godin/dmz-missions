@@ -1,9 +1,15 @@
 // This file is intended to be a one-change, all sites changed thing.
 // Eventually create 3 versions:  Desktop, Mobile, Tablet.
 
+import { signOut } from "firebase/auth";
+
+import { createSignOutButtonFunction } from "./auth";
+
 export const navContainer = document.getElementById('navContainer');
 export const profileLinkContainer = document.getElementById('profileLinkContainer');
-export const btnSignOut = document.getElementById('btnSignOut');
+// export const btnSignOut = document.getElementById('btnSignOut');
+
+console.log('Beginning of nav.js triggered');
 
 export async function loadNavigation(user) {
   // Inserts HTML first thing inside of the navContainer div
@@ -21,6 +27,7 @@ export async function loadNavigation(user) {
       </div>
     </nav>
     `)
+    createSignOutButtonFunction();
   } else {
     navContainer.insertAdjacentHTML('afterbegin', `
     <header class='logo'>DMZ-Missions</header>
@@ -37,4 +44,4 @@ export async function loadNavigation(user) {
   }
 }
 
-// console.log('End of nav.js Triggered');
+console.log('End of nav.js Triggered');

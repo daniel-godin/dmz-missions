@@ -68,6 +68,13 @@ export function loadPage(user) {
   if (user) {
     showDMZHeaderAuthStatus(user);
     loadNavigation(user);
+    // const btnSignOut = document.getElementById('btnSignOut');
+    // if (btnSignOut) {
+    //   btnSignOut.addEventListener('click', async () => {
+    //     console.log('Sign out Button clicked');
+    //     await signOut(auth);
+    //   })
+    // }
   } else {
     if (dmzMissionsContainer) {
       loadNavigation();

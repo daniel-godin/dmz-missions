@@ -97,6 +97,16 @@ export const showLoginError = (error) => { // Triggers when there is an auth err
 
 // Sign-out Functions:
 
+export const createSignOutButtonFunction = async () => {
+  const btnSignOut = document.getElementById('btnSignOut');
+  if (btnSignOut) {
+    btnSignOut.addEventListener('click', async () => {
+      console.log('Sign out Button clicked');
+      await signOut(auth);
+    })
+  }
+}
+
 // if (btnSignOut) {
 //   btnSignOut.addEventListener('click', logout);
 // }
