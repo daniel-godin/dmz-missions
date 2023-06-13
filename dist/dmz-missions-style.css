@@ -13,9 +13,12 @@
   --color-bg-color: var(--color-secondary);
   --color-font-color: var(--color-primary);
 
+  /* Font Variables */
+  font-size: 16px;
+  --font--size-tier-header: 1.1rem;
+
 
   /* Other Root Items */
-  font-size: 16px;
 }
 
 * {
@@ -121,30 +124,46 @@ nav {
   height: min-content;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
+  gap: .5rem;
   border: 2px solid red;
   justify-self: center;
+  justify-items: center;
 }
 
 .faction-container {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+  padding: .25rem;
+  display: grid;
+  gap: .5rem;
+  width: 300px;
 }
 
 .tier-container {
   border: 1px solid white;
+  display: grid;
   width: 100%;
+  padding: .5rem;
+  row-gap: 1rem;
   /* height: 200px; */
-  height: min-content;
+  /* height: min-content; */
 }
 
-.tier-header-container {
+.header-container {
   border: 1px solid orange;
+  border-width: 0 0 medium 0;
+  border-bottom-style: dotted;
+  align-self: center;
   display: flex;
   justify-content: space-between;
+  padding: .5rem 0 .5rem 0;
 }
 
 .tier-header {
   color: var(--color-font-color);
+  font-size: var(--font--size-tier-header);
   cursor: pointer;
+  text-align: center;
 }
 
 .tier-header:hover {
@@ -153,10 +172,11 @@ nav {
 
 .missions-container {
   /* border: 1px solid brown; */
+  display: grid;
+  gap: .5rem;
 }
 
 .mission-container {
-  /* border: 1px dashed pink; */
   display: flex;
   justify-content: space-between;
 }
@@ -171,6 +191,15 @@ nav {
 
 .mission-progress-checkbox {
 
+}
+
+.mission-unlocked-incomplete-checkbox {
+  outline: 2px solid grey;
+}
+
+.mission-locked-checkbox {
+  outline: 2px solid red;
+  /* Need to create a nicely styled 'Locked" button/display. */
 }
 
 .mission-progress-checkbox:checked {

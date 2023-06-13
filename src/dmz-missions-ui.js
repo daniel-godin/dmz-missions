@@ -244,7 +244,7 @@ export function createMissionGridLoggedIn (tierContainer, value) {
       tierContainer.insertAdjacentHTML('beforeend', `
       <div class="mission-container">
         <header class="mission-title mission-locked">${title}</header>
-        <input type="checkbox" name="" id="${id}" class="mission-progress" checked>
+        <input type="checkbox" name="" id="${id}" class="mission-progress mission-locked-checkbox" checked>
       </div>`)
     }
   } else {
@@ -258,7 +258,7 @@ export function createMissionGridLoggedIn (tierContainer, value) {
       tierContainer.insertAdjacentHTML('beforeend', `
       <div class="mission-container">
         <header class="mission-title mission-locked">${title}</header>
-        <input type="checkbox" name="" id="${id}" class="mission-progress">
+        <input type="checkbox" name="" id="${id}" class="mission-progress mission-locked-checkbox">
       </div>`)
     }
   }
