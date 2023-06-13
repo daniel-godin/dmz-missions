@@ -15,7 +15,7 @@ export async function loadNavigation(user) {
     <header class='logo'>DMZ-Missions</header>
     <nav class='nav'>
       <ul class='nav-links'>
-        <li class='nav-link'><a href='./dmz-missions-s3.html'>DMZ Missions Page</a></li>
+        <li class='nav-link'><a href='./dmz-missions.html'>DMZ Missions Page</a></li>
         <li class='nav-link'><a href='./auth.html'>Log In</a></li>
         <li class='nav-link'><a href='./sign-up.html'>Sign Up</a></li>
       </ul>
@@ -30,7 +30,7 @@ export async function loadNavigation(user) {
     <header class='logo'>DMZ-Missions</header>
     <nav class='nav'>
       <ul class='nav-links'>
-        <li class='nav-link'><a href='./dmz-missions-s3.html'>DMZ Missions Page</a></li>
+        <li class='nav-link'><a href='./dmz-missions.html'>DMZ Missions Page</a></li>
         <li class='nav-link'><a href='./auth.html'>Log In</a></li>
         <li class='nav-link'><a href='./sign-up.html'>Sign Up</a></li>
       </ul>
