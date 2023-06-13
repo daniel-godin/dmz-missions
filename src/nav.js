@@ -12,12 +12,13 @@ export async function loadNavigation(user) {
   // Inserts HTML first thing inside of the navContainer div
   if (user) {
     navContainer.insertAdjacentHTML('afterbegin', `
-    <header class='logo'>DMZ-Missions</header>
+    <header class='logo'><a href='./index.html'>DMZ-Missions</a></header>
     <nav class='nav'>
       <ul class='nav-links'>
         <li class='nav-link'><a href='./dmz-missions.html'>DMZ Missions Page</a></li>
         <li class='nav-link'><a href='./auth.html'>Log In</a></li>
         <li class='nav-link'><a href='./sign-up.html'>Sign Up</a></li>
+        <li class='nav-link'><a href='./dmz-missions-test.html'>DMZ Missions TEST Page</a></li>
       </ul>
       <div id='profileLinkContainer'>
         <button type='button' id='btnSignOut'>Sign Out</button>
@@ -27,12 +28,13 @@ export async function loadNavigation(user) {
     createSignOutButtonFunction();
   } else {
     navContainer.insertAdjacentHTML('afterbegin', `
-    <header class='logo'>DMZ-Missions</header>
+    <header class='logo'><a href='./index.html'>DMZ-Missions</a></header>
     <nav class='nav'>
       <ul class='nav-links'>
         <li class='nav-link'><a href='./dmz-missions.html'>DMZ Missions Page</a></li>
         <li class='nav-link'><a href='./auth.html'>Log In</a></li>
         <li class='nav-link'><a href='./sign-up.html'>Sign Up</a></li>
+        <li class='nav-link'><a href='./dmz-missions-test.html'>DMZ Missions TEST Page</a></li>
       </ul>
       <div id='profileLinkContainer'>
       </div>
