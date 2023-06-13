@@ -1,0 +1,190 @@
+:root {
+  /* CSS Variables */
+  /* Realtime Colors link for selected colors: https://realtimecolors.com/?colors=f8f7fd-000000-1ba8d0-ffffff-0f5f75 */
+  /* Dark Theme Color Variables */
+  --color-primary: rgb(248, 247, 253);
+  --color-secondary: rgb(0, 0, 0);
+  --color-btn-primary:  rgb(27, 168, 208);
+  --color-btn-secondary: rgb(255, 255, 255);
+  --color-accent:  rgb(15, 95, 117);
+
+  /* Other Variables */
+  /* Dark Theme Color Variables.  Need to add a kind of 'switch' later. */
+  --color-bg-color: var(--color-secondary);
+  --color-font-color: var(--color-primary);
+
+
+  /* Other Root Items */
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--color-bg-color);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Class Selectors */
+
+.page-container {
+  display: grid;
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: min-content;
+  background-color: lightblue;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-content: center;
+  align-items: center;
+}
+
+nav {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 200px;
+}
+
+.nav-links {
+  justify-self: space-between;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#navSignedIn {
+
+}
+
+#navSignedOut {
+
+}
+
+#dmzPageHeader {
+  margin: 20px 0 20px 0;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid pink;
+  border-radius: 10px;
+  background-color: lightpink;
+  width: 50%;
+  height: 40px;
+  padding: 2rem;
+}
+
+#dmzGridLastUpdated {
+  color: var(--color-font-color);
+  margin: 5px;
+  position: relative;
+  text-align: right;
+  padding-right: 5%;
+}
+
+#displayLoggedInContainer {
+  display: none;
+  border: 1px solid blue;
+  background-color: beige;
+  width: 500px;
+  height: min-content;
+  justify-self: center;
+  align-self: center;
+  padding: 2rem;
+}
+
+#btnSignOut {
+  width: 100px;
+  padding: 0.25rem;
+  justify-self: none;
+}
+
+#dmzMissionsContainer {
+  width: 95%;
+  height: min-content;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border: 2px solid red;
+  justify-self: center;
+}
+
+.faction-container {
+  border: 1px solid blue;
+}
+
+.tier-container {
+  border: 1px solid white;
+  width: 100%;
+  /* height: 200px; */
+  height: min-content;
+}
+
+.tier-header-container {
+  border: 1px solid orange;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tier-header {
+  color: var(--color-font-color);
+  cursor: pointer;
+}
+
+.tier-header:hover {
+  text-decoration: underline;
+}
+
+.missions-container {
+  /* border: 1px solid brown; */
+}
+
+.mission-container {
+  /* border: 1px dashed pink; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.mission-title {
+  color: var(--color-font-color);
+}
+
+/* .mission-locked {
+  color: grey;
+} */
+
+.mission-progress-checkbox {
+
+}
+
+.mission-progress-checkbox:checked {
+  outline: 2px solid yellow;
+}
+
+
+.footer {
+  display: none;
+}
+
+/* Keep This LAST 
+/* .hidden {
+  /* class to hide content where applicable. 
+  /* display: none;
+  visibility: none; 
+} */

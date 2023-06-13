@@ -58,9 +58,6 @@ onAuthStateChanged(auth, user => {
   }
   else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
     loadPage(); // No user sent as a parameter.
-    // if (dmzMissionsContainer) {
-    //   fullCreateMissionGridLoggedOut(dmzMissionsS3);
-    // }
   }
 })
 
