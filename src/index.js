@@ -23,7 +23,8 @@ import {
   onSnapshot,
 } from 'firebase/firestore';
 
-import { dmzMissionsS3 } from "./dmz-mission-list-objects"; // DMZ Missions Imports
+import { dataDmzStandardMissionsS4 } from "./data/data-dmz-standard-missions-s4"; // DMZ Missions Import
+import { dataDmzFobS4 } from "./data/data-dmz-fob-s4"; // DMZ Forward Operating Base (FOB) Import
 
 import { addDMZMissionsS3ObjToDb, } from "./db-creation";
 
