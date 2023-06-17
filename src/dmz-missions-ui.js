@@ -1,7 +1,7 @@
 import { AuthErrorCodes } from "firebase/auth";
 
 import { doc, getDoc, getDocs, onSnapshot, updateDoc} from "firebase/firestore";
-import { dmzMissionsS3 } from "./data/dmz-mission-list-objects";
+import { dmzMissionsS3 } from "./data/data-dmz-standard-missions-s4";
 
 import { loadNavigation, navContainer } from "./nav";
 
@@ -60,6 +60,13 @@ export const crownTier2Container = document.getElementById('crownTier2MissionsCo
 export const crownTier3Container = document.getElementById('crownTier3MissionsContainer');
 export const crownTier4Container = document.getElementById('crownTier4MissionsContainer');
 export const crownTier5Container = document.getElementById('crownTier5MissionsContainer');
+
+export const phalanxTier1Container = document.getElementById('phalanxTier1MissionsContainer');
+export const phalanxTier2Container = document.getElementById('phalanxTier2MissionsContainer');
+export const phalanxTier3Container = document.getElementById('phalanxTier3MissionsContainer');
+export const phalanxTier4Container = document.getElementById('phalanxTier4MissionsContainer');
+export const phalanxTier5Container = document.getElementById('phalanxTier5MissionsContainer');
+
 
 // console.log('Beginning of dmz-missions-ui triggered.  After variables');
 

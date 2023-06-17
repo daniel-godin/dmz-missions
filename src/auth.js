@@ -14,7 +14,7 @@ import {
 
 } from "firebase/auth";
 
-import { dmzMissionsS3, dmzMissionsS4 } from "./data/dmz-mission-list-objects";
+import { dmzMissionsS3, dmzMissionsS4 } from "./data/data-dmz-standard-missions-s4";
 import { btnSignOut } from "./nav";
 
 // DOM Element Variables:
