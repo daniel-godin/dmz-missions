@@ -26,9 +26,9 @@ import {
 import { dataDmzStandardMissionsS4 } from "./data/data-dmz-standard-missions-s4"; // DMZ Missions Import
 import { dataDmzFobS4 } from "./data/data-dmz-fob-s4"; // DMZ Forward Operating Base (FOB) Import
 
-import { addDMZMissionsS3ObjToDb, addDMZToDoDocs, } from "./db-creation";
+import { addDMZMissionsS3ObjToDb, } from "./db-creation";
 
-import { toDoMainMissionsContainer, toDoMainFobContainer, } from "./to-do";
+import { toDoMainMissionsContainer, toDoMainFobContainer, populateToDoLists, addDMZToDoDocs, } from "./to-do";
 
 import {
   loadPage,
@@ -54,13 +54,14 @@ onAuthStateChanged(auth, user => {
   if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
     let userDoc = user.uid;
     loadPage(user); // Should I put this into the onSnapshot or other listener position?
-    if (dmzMissionsContainer) {
-      const dmzMissionsS3DocRefLoggedIn = doc(db, 'users', userDoc, 'mw2-trackers', 'dmzMissionsS3');
-      fullCreateMissionGridLoggedIn(dmzMissionsS3DocRefLoggedIn);
-    };
+    // if (dmzMissionsContainer) {
+    //   const dmzMissionsS3DocRefLoggedIn = doc(db, 'users', userDoc, 'mw2-trackers', 'dmzMissionsS3');
+    //   fullCreateMissionGridLoggedIn(dmzMissionsS3DocRefLoggedIn);
+    // };
     if (toDoMainMissionsContainer) {
-      addDMZToDoDocs(db, user.uid);
-    }
+      populateToDoLists(db, user.uid);
+
+    };
   }
   else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
     loadPage(); // No user sent as a parameter.
