@@ -13,7 +13,7 @@ export const dataDmzStandardMissionsS4 = {
     description: "Al-Qatala is using burner phones to coordinate attacks against us.  Intel was able to track some that are still active, but we need to secure them fast.  Locate a phone and download its contents.  Once decrypted, we can use the data to take on contracts for a payout.",
     objectives: {
       objective1: {
-        objectiveText: "Use your Tac-Map with "KEYBINDING" and ping a contract phone.",
+        objectiveText: "Use your Tac-Map with KEYBINDING and ping a contract phone.",
         complete: false,
         // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
         // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
