@@ -15,10 +15,10 @@ export async function loadNavigation(user) {
     <header class='logo'><a href='./index.html'>DMZ-Missions</a></header>
     <nav class='nav'>
       <ul class='nav-links'>
-        <li class='nav-link'><a href='./dmz-missions.html'>DMZ Missions Page</a></li>
+        <li class='nav-link'><a href='./dmz-standard-missions-s4.html'>DMZ Missions Page</a></li>
         <li class='nav-link'><a href='./auth.html'>Log In</a></li>
         <li class='nav-link'><a href='./sign-up.html'>Sign Up</a></li>
-        <li class='nav-link'><a href='./dmz-missions-test.html'>DMZ Missions TEST Page</a></li>
+        <li class='nav-link'><a href='./to-do.html'>To-Do Page</a></li>
       </ul>
       <div id='profileLinkContainer'>
         <button type='button' id='btnSignOut'>Sign Out</button>
@@ -31,10 +31,10 @@ export async function loadNavigation(user) {
     <header class='logo'><a href='./index.html'>DMZ-Missions</a></header>
     <nav class='nav'>
       <ul class='nav-links'>
-        <li class='nav-link'><a href='./dmz-missions.html'>DMZ Missions Page</a></li>
+        <li class='nav-link'><a href='./dmz-standard-missions-s4.html'>DMZ Missions Page</a></li>
         <li class='nav-link'><a href='./auth.html'>Log In</a></li>
         <li class='nav-link'><a href='./sign-up.html'>Sign Up</a></li>
-        <li class='nav-link'><a href='./dmz-missions-test.html'>DMZ Missions TEST Page</a></li>
+        <li class='nav-link'><a href='./to-do.html'>To-Do Page</a></li>
       </ul>
       <div id='profileLinkContainer'>
       </div>

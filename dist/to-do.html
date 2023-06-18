@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DMZ Tracker - To-Do</title>
   <link rel='stylesheet' href='./style/style.css'>
+  <link rel='stylesheet' href='./style/style-to-do.css'>
   <link rel="icon" href="data:;base64,iVBORwOKGO=" />
 
 </head>
@@ -15,8 +16,69 @@
     <!-- Auto-generated:  dmz-missions-ui.js and nav.js -->
   </div>
 
-  <div class='main-content-container'>
-    <!-- Put Your New Page Here -->
+  <div class='main-content-container' id='mainToDoContainer'>
+    <div class='to-do-container' id='toDoMainMissionsContainer'>
+      <!-- Left Column.  Contains Entire Missions Column Top to Bottom -->
+
+      <header class='to-do-header' id='activeToDoMissionsHeader'><h2>Missons: (active)</h2></header>
+
+      <div class='active-to-do-container' id='activeToDoMissionsContainer'>
+        <!-- Active Missions.  JS Script Fills This In From DB Data. -->
+      </div>
+
+      <div class='add-to-do-container' id='addMissionToDoContainer'>
+        <form class='form-add-to-do' id='formAddMissionToDo'>
+          <!-- 1 text input, 1 number input, 1 submit button -->
+          <label for='inputMissionTextToDo' class='label-input-text-to-do'>Mission Task:</label>
+          <input type='text' class='input-text-to-do' id='inputMissionTextToDo' placeholder='Write Mission Task Here' />
+          
+          <label for='inputMissionNumberToDo' class='label-input-number-to-do'>Amount:</label>
+          <input type='number' class='input-number-to-do' id='inputMissionNumberToDo' />
+
+          <button type='submit' class='btn-submit-to-do' id='btnSubmitMissionToDo'>Add Mission Task</button>
+        </form>
+      </div>
+
+      <div class='archived-container'>
+        <header class='header-archived-to-do' id='headerArchivedMissionsToDo'>Archived/Complete Missions:</header>
+        <div class='archived-to-do-container' id='archivedMissionsToDoContainer'>
+          <!-- Archived/Complete Missions.  JS Script Fills This In From DB Data.  Minimized by default. -->
+        </div>
+      </div>
+    </div>
+
+    <div class='to-do-container' id='toDoMainFobContainer'>
+      <!-- Right Column.  Contains Entire FOB Column Top to Bottom -->
+
+      <header class='to-do-header' id='activeToDoFobHeader'><h2>Passive Tasks: (active)</h2></header>
+
+      <div class='active-to-do-container' id='activeToDoFobContainer'>
+        <!-- Active Missions.  JS Script Fills This In From DB Data. -->
+      </div>
+
+      <div class='add-to-do-container' id='addFobToDoContainer'>
+        <form class='form-add-to-do' id='formAddFobToDo'>
+          <!-- 1 text input, 1 number input, 1 submit button -->
+          <label for='inputFobTextToDo' class='label-input-text-to-do'>Passive FOB Task:</label>
+          <input type='text' class='input-text-to-do' id='inputFobTextToDo' placeholder='Write Passive FOB Task Here' />
+          
+          <label for='inputFobNumberToDo' class='label-input-number-to-do'>Amount:</label>
+          <input type='number' class='input-number-to-do' id='inputFobNumberToDo' />
+          
+          <button type='submit' class='btn-submit-to-do' id='btnSubmitFobToDo'>Add Passive FOB Task</button>
+        </form>
+      </div>
+
+      <div class='archived-container'>
+        <header class='header-archived-to-do' id='headerArchivedMissionsToDo'>Archived/Complete Missions:</header>
+        <div class='archived-to-do-container' id='archivedMissionsToDoContainer'>
+          <!-- Archived/Complete Missions.  JS Script Fills This In From DB Data.  Minimized by default. -->
+        </div>
+      </div>
+
+
+
+    </div>
 
 
 
