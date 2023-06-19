@@ -41,8 +41,8 @@ export const dataDMZToDoFOB = {
       progressTotal: 10, // This should be a Number.  For example.  Exfil with 10 Gold Bars, this should be 10.
     },
   },
-  taskUID: { // Possibly use a date and time generation to use this, for easier sorting.
-    taskUID: "taskUID", // Randomly generated.  Need to implement later.
+  taskUID2: { // Possibly use a date and time generation to use this, for easier sorting.
+    taskUID: "taskUID2", // Randomly generated.  Need to implement later.
     userUID: "", // Users UID.  For easier tracking/moving later.
     dateTimeCreated: "", // Date and Time when to-do task was created.  This is for sorting.  Oldest top to newest bottom at first.
     type: "FOB", // type mission or type fob.  For organizing later.

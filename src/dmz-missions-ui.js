@@ -219,7 +219,7 @@ export function fullCreateMissionGridLoggedIn (docRef) { // THIS IS THE LOGGED I
         // console.log('checkbox listener working');
         // const docRefS3 = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'); // Document Reference to a users Season 3 dmz Missions Doc
         updateDoc(docRef, {
-          [checkId+".complete"] : checked,
+          [checkId+".complete"] : checked, // checkId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
         });
     })}
   })

@@ -2,13 +2,13 @@
 
 import { dataDMZToDoMissions, dataDMZToDoFOB } from './data/data-dmz-to-do-s4';
 
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
 
 export const toDoMainMissionsContainer = document.getElementById('toDoMainMissionsContainer');
 export const toDoMainFobContainer = document.getElementById('toDoMainFobContainer');
 
-export const activeToDoMissionsContainer = document.getElementById('activeToDoMissionsContainer');
-export const activeToDoFobContainer = document.getElementById('activeToDoFobContainer');
+export const activeMissionsToDoContainer = document.getElementById('activeMissionsToDoContainer');
+export const activeFOBToDoContainer = document.getElementById('activeFOBToDoContainer');
 
 export const archivedMissionsToDoContainer = document.getElementById('archivedMissionsToDoContainer');
 export const archivedFOBToDoContainer = document.getElementById('archivedFOBToDoContainer');
@@ -42,6 +42,8 @@ export const addDMZToDoDocs = async (database, uid) => {
   };
 
 
+
+
 }
 
 
@@ -67,11 +69,36 @@ export const populateToDoLists = async (database, uid, missionsDoc, FOBDoc) => {
   
     if (docSnapFOBDoc.exists()) { // Checks to see if the FOB To-Do Doc exists.  If it does not, it creates it, if it does, it does nothing.  console.log's for testing.
       console.log('The DMZ To Do Missions Doc Exists');
+      populateFOBToDoLists(docSnapFOBDoc);
     } else {
       console.log('The DMZ To Do Missions Doc Does Not Exist.  Creating Now.')
       await setDoc(doc(database, 'users', uid, 'to-do-trackers', 'DMZToDoFOB'), dataDMZToDoFOB)
     };
 
+    const arrayOfMissionTaskCheckboxes = document.getElementsByClassName('mission-task-checkbox');
+    const arrayOfFOBTaskCheckboxes = document.getElementsByClassName('fob-task-checkbox');
+
+    for (let i = 0; i < arrayOfMissionTaskCheckboxes.length && i < 200; i++) {
+      arrayOfMissionTaskCheckboxes[i].addEventListener('click', (e) => {
+        let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
+        let checkId = e.target.id; // Grabs the event target's id property.
+        console.log('mission task checkbox clicked', checkId, checked);
+        updateDoc(docRefMissionsDoc, {
+          [checkId+".complete"] : checked, // checkId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
+        });
+      })
+    }
+
+    for (let i = 0; i < arrayOfFOBTaskCheckboxes.length && i < 200; i++) {
+      arrayOfFOBTaskCheckboxes[i].addEventListener('click', (e) => {
+        let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
+        let checkId = e.target.id; // Grabs the event target's id property.
+        console.log('FOB task checkbox clicked', checkId, checked);
+        updateDoc(docRefFOBDoc, {
+          [checkId+".complete"] : checked, // checkId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
+        });
+      })
+    }
 
 
   // This should take in both the missions to do doc, and the FOB to do DOC.
@@ -85,14 +112,6 @@ export const populateToDoLists = async (database, uid, missionsDoc, FOBDoc) => {
 const populateMissionToDoLists = async (missionDoc) => {
 
   let missionObj = missionDoc.data();
-
-  // console.log(missionObj);
-
-  // console.log(missionObj.taskUID);
-
-  // console.log(missionObj.taskUID.task);
-
-
 
   for (let [key, value] of Object.entries(missionObj)) { // for loop which loops through each object in the mission tasks doc.
     let id = value.taskUID;
@@ -114,7 +133,7 @@ const populateMissionToDoLists = async (missionDoc) => {
       </div>
     `)
     } else if (complete === false) { // Checking through each object, if NOT complete, puts the "task" in the ACTIVE div.
-      activeToDoMissionsContainer.insertAdjacentHTML('beforeend', `
+      activeMissionsToDoContainer.insertAdjacentHTML('beforeend', `
       <div class='mission-task-container' id='${id}'>
         <input type='checkbox' id='${id}' class='mission-task-checkbox' name='' />
         <p class='mission-task-text'>${task}</p>
@@ -133,6 +152,43 @@ const populateMissionToDoLists = async (missionDoc) => {
 
 }
 
-function populateFOBToDoLists() {
+function populateFOBToDoLists(FOBDoc) {
+  let FOBObj = FOBDoc.data();
 
+  for (let [key, value] of Object.entries(FOBObj)) { // for loop which loops through each object in the mission tasks doc.
+    let id = value.taskUID;
+    let task = value.task;
+    let complete = value.complete;
+    let progressCurrent = value.progress.progressCurrent;
+    let progressTotal = value.progress.progressTotal;
+
+    console.log(task, complete, progressTotal, progressCurrent);
+
+    if (complete === true) { // Checking through each object, if complete, puts the "task" in the ARCHIVED div.
+      archivedFOBToDoContainer.insertAdjacentHTML('beforeend', `
+      <div class='mission-task-container' id='${id}'>
+        <input type='checkbox' id='${id}' class='fob-task-checkbox' name='' checked />
+        <p class='mission-task-text task-complete-strike-through'>${task}</p>
+        <div class='mission-task-progress-container'>
+          <p class='mission-task-progress-text'>${progressCurrent} / ${progressTotal}</p>
+        </div>
+      </div>
+    `)
+    } else if (complete === false) { // Checking through each object, if NOT complete, puts the "task" in the ACTIVE div.
+      activeFOBToDoContainer.insertAdjacentHTML('beforeend', `
+      <div class='mission-task-container' id='${id}'>
+        <input type='checkbox' id='${id}' class='fob-task-checkbox' name='' />
+        <p class='mission-task-text'>${task}</p>
+        <div class='mission-task-progress-container'>
+          <p class='mission-task-progress-text'>${progressCurrent} / ${progressTotal}</p>
+        </div>
+      </div>
+    `)
+    } else {
+      console.log('neither true or false for complete.  This is only for error checking');
+    }
+
+
+    // Put this back into the main function, then pass the object along, and create the html.
+  }
 }

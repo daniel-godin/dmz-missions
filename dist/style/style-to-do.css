@@ -32,9 +32,10 @@ label {
 
 .mission-task-container {
   display: grid;
-  grid-template-columns: 15px 1fr 50px;
+  grid-template-columns: 15px 1fr 50px; /* I need to fix these values to be flexible.  At least the middle and last. */
   gap: 10px;
   align-items: center;
+  height: min-content;
 }
 
 .mission-task-text, .mission-task-progress-text {
