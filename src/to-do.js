@@ -93,12 +93,25 @@ const populateMissionToDoLists = async (missionDoc) => {
 
   // READ THIS NEXT TIME:  CREATE THE ADDHTMLADJACENT UNDER THIS.
   for (let [key, value] of Object.entries(missionObj)) {
+    let id = value.taskUID;
     let task = value.task;
     let complete = value.complete;
-    let progressTotal = value.progress.progressTotal;
     let progressCurrent = value.progress.progressCurrent;
+    let progressTotal = value.progress.progressTotal;
 
     console.log(task, complete, progressTotal, progressCurrent);
+
+    activeToDoMissionsContainer.insertAdjacentHTML('beforeend', `
+      <div class='mission-task-container' id='${id}'>
+        <input type='checkbox' id='${id}' class='mission-task-checkbox' name='' />
+        <p class='mission-task-text'>${task}</p>
+        <div class='mission-task-progress-container'>
+          <p class='mission-task-progress-text'>${progressCurrent} / ${progressTotal}</p>
+        </div>
+      </div>
+    `)
+
+    // Put this back into the main function, then pass the object along, and create the html.
   }
 
 }

@@ -30,6 +30,17 @@ label {
   border: 1px dashed blue;
 }
 
+.mission-task-container {
+  display: grid;
+  grid-template-columns: 20px 1fr 30px;
+  gap: 10px;
+  align-items: center;
+}
+
+.mission-task-text, .mission-task-progress-text {
+  color: white;
+}
+
 /* Form Stuff */
 .add-to-do-container {
   height: min-content;
