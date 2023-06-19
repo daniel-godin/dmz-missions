@@ -58,17 +58,13 @@ onAuthStateChanged(auth, user => {
     const docRefFOBTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoFOB');
     
     onSnapshot(docRefMissionTaskDoc, (snapshot) => {
-      console.log('Mission Doc HAS CHANGED');
       if (toDoMainMissionsContainer) {
-        // populateToDoLists(db, user.uid);
         populateMissionToDoLists(snapshot, docRefMissionTaskDoc, db, userID);
       };
     })
     onSnapshot(docRefFOBTaskDoc, (snapshot) => {
-      console.log('FOB Task Doc HAS CHANGED');
-      console.log('doc ref fob changed', snapshot.data());
+
       if (toDoMainMissionsContainer) {
-        // populateToDoLists(db, user.uid);
         populateFOBToDoLists(snapshot, docRefFOBTaskDoc, db, userID);
       };
     })

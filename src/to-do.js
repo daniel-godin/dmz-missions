@@ -25,7 +25,7 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
   // After creation of the DOM, attaches a listener to the checkboxes.  When user clicks a checkbox, it moves it to either active or archive, depending on true/false value.
 
   if (missionDoc.exists()) { // Checks to see if the Missions To-Do Doc exists.  If it does not, it creates it, if it does, it does nothing.  console.log's for testing.
-    console.log('The DMZ To Do Missions Doc Exists');
+    // console.log('The DMZ To Do Missions Doc Exists');
 
     activeMissionsToDoContainer.innerHTML = "";
     archivedMissionsToDoContainer.innerHTML = "";
@@ -38,9 +38,7 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
       let complete = value.complete;
       let progressCurrent = value.progress.progressCurrent;
       let progressTotal = value.progress.progressTotal;
-  
-      console.log(task, complete, progressTotal, progressCurrent);
-  
+    
       if (complete === true) { // Checking through each object, if complete, puts the "task" in the ARCHIVED div.
         archivedMissionsToDoContainer.insertAdjacentHTML('beforeend', `
         <div class='mission-task-container' id='${id}'>
@@ -71,7 +69,7 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
       arrayOfMissionTaskCheckboxes[i].addEventListener('click', (e) => {
         let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
         let checkId = e.target.id; // Grabs the event target's id property.
-        console.log('mission task checkbox clicked', checkId, checked);
+        // console.log('mission task checkbox clicked', checkId, checked);
         updateDoc(missionDocRef, {
           [checkId+".complete"] : checked, // checkId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
         });
@@ -79,7 +77,7 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
     }
 
   } else {
-    console.log('The DMZ To Do Missions Doc Does Not Exist.  Creating Now.')
+    // console.log('The DMZ To Do Missions Doc Does Not Exist.  Creating Now.')
     await setDoc(doc(database, 'users', uid, 'to-do-trackers', 'DMZToDoMissions'), dataDMZToDoMissions)
   };
 }
@@ -93,8 +91,6 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
   // After creation of the DOM, attaches a listener to the checkboxes.  When user clicks a checkbox, it moves it to either active or archive, depending on true/false value.
 
   if (FOBDoc.exists()) { // Checks to see if the FOB To-Do Doc exists.  If it does not, it creates it, if it does, it does nothing.  console.log's for testing.
-    console.log('The DMZ FOB TO DO Doc Exists');
-
     activeFOBToDoContainer.innerHTML = "";
     archivedFOBToDoContainer.innerHTML = "";
   
@@ -106,9 +102,7 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
       let complete = value.complete;
       let progressCurrent = value.progress.progressCurrent;
       let progressTotal = value.progress.progressTotal;
-  
-      console.log(task, complete, progressTotal, progressCurrent);
-  
+    
       if (complete === true) { // Checking through each object, if complete, puts the "task" in the ARCHIVED div.
         archivedFOBToDoContainer.insertAdjacentHTML('beforeend', `
         <div class='mission-task-container' id='${id}'>
@@ -138,7 +132,6 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
       arrayOfFOBTaskCheckboxes[i].addEventListener('click', (e) => {
         let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
         let checkId = e.target.id; // Grabs the event target's id property.
-        console.log('FOB task checkbox clicked', checkId, checked);
         updateDoc(FOBDocRef, {
           [checkId+".complete"] : checked, // checkId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
         });
