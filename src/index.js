@@ -52,6 +52,7 @@ connectFirestoreEmulator(db, 'localhost', 8080);
 
 onAuthStateChanged(auth, user => {
   if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
+    const userID = user.uid;
     loadPage(user); // Should I put this into the onSnapshot or other listener position?
     const docRefMissionTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoMissions');
     const docRefFOBTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoFOB');
@@ -60,7 +61,7 @@ onAuthStateChanged(auth, user => {
       console.log('Mission Doc HAS CHANGED');
       if (toDoMainMissionsContainer) {
         // populateToDoLists(db, user.uid);
-        populateMissionToDoLists(snapshot, docRefMissionTaskDoc);
+        populateMissionToDoLists(snapshot, docRefMissionTaskDoc, db, userID);
       };
     })
     onSnapshot(docRefFOBTaskDoc, (snapshot) => {
@@ -68,24 +69,13 @@ onAuthStateChanged(auth, user => {
       console.log('doc ref fob changed', snapshot.data());
       if (toDoMainMissionsContainer) {
         // populateToDoLists(db, user.uid);
-        populateFOBToDoLists(snapshot, docRefFOBTaskDoc);
+        populateFOBToDoLists(snapshot, docRefFOBTaskDoc, db, userID);
       };
     })
-
-
-
-
-
 
     // if (dmzMissionsContainer) {
     //   const dmzMissionsS3DocRefLoggedIn = doc(db, 'users', userDoc, 'mw2-trackers', 'dmzMissionsS3');
     //   fullCreateMissionGridLoggedIn(dmzMissionsS3DocRefLoggedIn);
-    // };
-
-
-
-    // if (toDoMainMissionsContainer) {
-    //   populateToDoLists(db, user.uid);
     // };
   }
   else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
@@ -93,19 +83,9 @@ onAuthStateChanged(auth, user => {
   }
 })
 
-// const docRefMissionTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoMissions');
-// console.log(docRefMissionTaskDoc);
-// onSnapshot()
-
-
-
 
 // Testing:
 
-// onSnapshot(docTestRef, (doc) => {
-//   // console.log(doc.data(), doc.id);
-//   // addDMZMissionsS3ObjToDb(db); // Adds the dmzMissionsS3 object to db, mw2-info, dmzMissions.  This is OUTSIDE of the user collection stuff.
-// })
 
 
 // console.log('INDEX.JS CHECK:  END TRIGGERED');
