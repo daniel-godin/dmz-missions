@@ -32,13 +32,17 @@ label {
 
 .mission-task-container {
   display: grid;
-  grid-template-columns: 20px 1fr 30px;
+  grid-template-columns: 15px 1fr 50px;
   gap: 10px;
   align-items: center;
 }
 
 .mission-task-text, .mission-task-progress-text {
   color: white;
+}
+
+.task-complete-strike-through {
+  text-decoration: line-through;
 }
 
 /* Form Stuff */

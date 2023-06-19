@@ -10,6 +10,9 @@ export const toDoMainFobContainer = document.getElementById('toDoMainFobContaine
 export const activeToDoMissionsContainer = document.getElementById('activeToDoMissionsContainer');
 export const activeToDoFobContainer = document.getElementById('activeToDoFobContainer');
 
+export const archivedMissionsToDoContainer = document.getElementById('archivedMissionsToDoContainer');
+export const archivedFOBToDoContainer = document.getElementById('archivedFOBToDoContainer');
+
 export const formAddMissionToDo = document.getElementById('formAddMissionToDo');
 export const formAddFobToDo = document.getElementById('formAddFobToDo');
 
@@ -91,8 +94,7 @@ const populateMissionToDoLists = async (missionDoc) => {
 
 
 
-  // READ THIS NEXT TIME:  CREATE THE ADDHTMLADJACENT UNDER THIS.
-  for (let [key, value] of Object.entries(missionObj)) {
+  for (let [key, value] of Object.entries(missionObj)) { // for loop which loops through each object in the mission tasks doc.
     let id = value.taskUID;
     let task = value.task;
     let complete = value.complete;
@@ -101,7 +103,18 @@ const populateMissionToDoLists = async (missionDoc) => {
 
     console.log(task, complete, progressTotal, progressCurrent);
 
-    activeToDoMissionsContainer.insertAdjacentHTML('beforeend', `
+    if (complete === true) { // Checking through each object, if complete, puts the "task" in the ARCHIVED div.
+      archivedMissionsToDoContainer.insertAdjacentHTML('beforeend', `
+      <div class='mission-task-container' id='${id}'>
+        <input type='checkbox' id='${id}' class='mission-task-checkbox' name='' checked />
+        <p class='mission-task-text task-complete-strike-through'>${task}</p>
+        <div class='mission-task-progress-container'>
+          <p class='mission-task-progress-text'>${progressCurrent} / ${progressTotal}</p>
+        </div>
+      </div>
+    `)
+    } else if (complete === false) { // Checking through each object, if NOT complete, puts the "task" in the ACTIVE div.
+      activeToDoMissionsContainer.insertAdjacentHTML('beforeend', `
       <div class='mission-task-container' id='${id}'>
         <input type='checkbox' id='${id}' class='mission-task-checkbox' name='' />
         <p class='mission-task-text'>${task}</p>
@@ -110,6 +123,10 @@ const populateMissionToDoLists = async (missionDoc) => {
         </div>
       </div>
     `)
+    } else {
+      console.log('neither true or false for complete.  This is only for error checking');
+    }
+
 
     // Put this back into the main function, then pass the object along, and create the html.
   }
