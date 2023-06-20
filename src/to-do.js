@@ -45,7 +45,11 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
           <input type='checkbox' id='${id}' class='mission-task-checkbox' name='' checked />
           <p class='mission-task-text task-complete-strike-through'>${task}</p>
           <div class='mission-task-progress-container'>
-            <p class='mission-task-progress-text'>${progressCurrent} / ${progressTotal}</p>
+            <form class='form-progress-input-mission' data-task-id='${id}'>
+              <input name='progressCurrent' type='number' inputmode='numeric' class='progress-input progress-input-current-mission' data-task-id='${id}' min='0' max='99' step='1' value='${progressCurrent}' />
+              <input name='progressTotal' type='number' inputmode='numeric' class='progress-input progress-input-total-mission' data-task-id='${id}' min='0' max='99' step='1' value='${progressTotal}' />
+              <button type='submit' data-task-id='${id}'>Update</button>
+            </form>
           </div>
         </div>
       `)
@@ -55,7 +59,11 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
           <input type='checkbox' id='${id}' class='mission-task-checkbox' name='' />
           <p class='mission-task-text'>${task}</p>
           <div class='mission-task-progress-container'>
-            <p class='mission-task-progress-text'>${progressCurrent} / ${progressTotal}</p>
+            <form class='form-progress-input-mission' data-task-id='${id}'>
+              <input name='progressCurrent' type='number' inputmode='numeric' class='progress-input progress-input-current-mission' data-task-id='${id}' min='0' max='99' step='1' value='${progressCurrent}' />
+              <input name='progressTotal' type='number' inputmode='numeric' class='progress-input progress-input-total-mission' data-task-id='${id}' min='0' max='99' step='1' value='${progressTotal}' />
+              <button type='submit' data-task-id='${id}'>Update</button>
+            </form>          
           </div>
         </div>
       `)
@@ -75,6 +83,26 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
         });
       })
     }
+
+    const arrayOfFormProgressInputMission = document.getElementsByClassName('form-progress-input-mission');
+
+    for (let i = 0; i < arrayOfFormProgressInputMission.length && i < 200; i++) {
+      arrayOfFormProgressInputMission[i].addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(arrayOfFormProgressInputMission[i]); // Creates an object named data, with all FormData.
+
+        let progressCurrent = data.get('progressCurrent');
+        let progressTotal = data.get('progressTotal');
+        let taskId = e.target.dataset.taskId;
+
+        console.log(progressCurrent, progressTotal, taskId);
+
+        updateDoc(missionDocRef, {
+          [taskId+".progress.progressCurrent"] : progressCurrent,
+          [taskId+".progress.progressTotal"] : progressTotal,
+        });
+      })
+    };
 
   } else {
     // console.log('The DMZ To Do Missions Doc Does Not Exist.  Creating Now.')
@@ -109,7 +137,11 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
           <input type='checkbox' id='${id}' class='fob-task-checkbox' name='' checked />
           <p class='mission-task-text task-complete-strike-through'>${task}</p>
           <div class='mission-task-progress-container'>
-            <p class='mission-task-progress-text'>${progressCurrent} / ${progressTotal}</p>
+            <form class='form-progress-input-fob' data-task-id='${id}'>
+              <input name='progressCurrent' type='number' inputmode='numeric' class='progress-input progress-input-current-fob' data-task-id='${id}' min='0' max='99' step='1' value='${progressCurrent}' />
+              <input name='progressTotal' type='number' inputmode='numeric' class='progress-input progress-input-total-fob' data-task-id='${id}' min='0' max='99' step='1' value='${progressTotal}' />
+              <button type='submit' data-task-id='${id}'>Update</button>
+            </form>
           </div>
         </div>
       `)
@@ -119,7 +151,11 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
           <input type='checkbox' id='${id}' class='fob-task-checkbox' name='' />
           <p class='mission-task-text'>${task}</p>
           <div class='mission-task-progress-container'>
-            <p class='mission-task-progress-text'>${progressCurrent} / ${progressTotal}</p>
+            <form class='form-progress-input-fob' data-task-id='${id}'>
+              <input name='progressCurrent' type='number' inputmode='numeric' class='progress-input progress-input-current-fob' data-task-id='${id}' min='0' max='99' step='1' value='${progressCurrent}' />
+              <input name='progressTotal' type='number' inputmode='numeric' class='progress-input progress-input-total-fob' data-task-id='${id}' min='0' max='99' step='1' value='${progressTotal}' />
+              <button type='submit' data-task-id='${id}'>Update</button>
+            </form>
           </div>
         </div>
       `)
@@ -127,7 +163,9 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
         console.log('neither true or false for complete.  This is only for error checking');
       }
     }
+
     const arrayOfFOBTaskCheckboxes = document.getElementsByClassName('fob-task-checkbox');
+
     for (let i = 0; i < arrayOfFOBTaskCheckboxes.length && i < 200; i++) {
       arrayOfFOBTaskCheckboxes[i].addEventListener('click', (e) => {
         let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
@@ -136,7 +174,29 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
           [checkId+".complete"] : checked, // checkId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
         });
       })
-    }
+    };
+
+    const arrayOfFormProgressInputFOB = document.getElementsByClassName('form-progress-input-fob');
+
+    for (let i = 0; i < arrayOfFormProgressInputFOB.length && i < 200; i++) {
+      arrayOfFormProgressInputFOB[i].addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(arrayOfFormProgressInputFOB[i]); // Creates an object named data, with all FormData.
+
+        let progressCurrent = data.get('progressCurrent');
+        let progressTotal = data.get('progressTotal');
+        let taskId = e.target.dataset.taskId;
+
+        console.log(progressCurrent, progressTotal, taskId);
+
+        updateDoc(FOBDocRef, {
+          [taskId+".progress.progressCurrent"] : progressCurrent,
+          [taskId+".progress.progressTotal"] : progressTotal,
+        });
+      })
+    };
+
+
   } else {
     console.log('The DMZ FOB TO DO Doc Does Not Exist.  Creating Now.')
     await setDoc(doc(database, 'users', uid, 'to-do-trackers', 'DMZToDoFOB'), dataDMZToDoFOB)
