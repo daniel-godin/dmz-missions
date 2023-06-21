@@ -89,7 +89,6 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
     }
 
     const arrayOfFormProgressInputMission = document.getElementsByClassName('form-progress-input-mission');
-
     for (let i = 0; i < arrayOfFormProgressInputMission.length && i < 200; i++) {
       arrayOfFormProgressInputMission[i].addEventListener('submit', (e) => {
         e.preventDefault();
@@ -107,6 +106,15 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
         });
       })
     };
+
+    const archiveCompleteHeaders = document.getElementsByClassName('header-archived-to-do'); // THIS CURRENTLY WORKS FOR BOTH SIDES, BUT IT MAY GIVE AN ERROR LATER.  WILL NEED TO CREATE ONE FOR EACH FUNCTION, OR PUT IN A FUNCTION "ABOVE" THIS ONE.
+    for (let i = 0; i < archiveCompleteHeaders.length && i < 10; i++) {
+      archiveCompleteHeaders[i].addEventListener('click', (e) => {
+        // When clicked, should show/hide the archived list below it.  Parent.Parent.Second(last)Child
+        let archivedTaskContainer = e.target.parentNode.parentNode.lastElementChild; // This is the target to hide/show.
+        archivedTaskContainer.classList.toggle('hide'); // Toggles class 'none', which has a CSS property display:none.
+      })
+    }
 
   } else {
     // console.log('The DMZ To Do Missions Doc Does Not Exist.  Creating Now.')
@@ -275,6 +283,8 @@ onAuthStateChanged(auth, user => {
     console.log('user not logged in, this is triggered from to-do.js for pages that is not the to do page.')
   }
 })
+
+
 
 export const randomTaskIdGenerator = (id) => { // Creates a random string and concats a prefix if wanted.  Can reuse this throughout the website.
   let result = crypto.randomUUID();

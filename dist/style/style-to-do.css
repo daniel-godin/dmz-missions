@@ -113,9 +113,17 @@ label {
 
 
 
+.header-archived-to-do:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
-
-.archived-container {
+.archived-to-do-container {
   height: 200px;
   border: 1px dashed red;
+}
+
+.hide {
+  /* This class is for toggling display none to hide something from user or showing it. */
+  display: none; /* Default: display none.  When clicked by user changes to 'block' for now.  If I create a grid or flex, change it to that */
 }
