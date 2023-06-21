@@ -17,7 +17,7 @@ export const archivedMissionsToDoContainer = document.getElementById('archivedMi
 export const archivedFOBToDoContainer = document.getElementById('archivedFOBToDoContainer');
 
 export const formAddMissionToDo = document.getElementById('formAddMissionToDo');
-export const formAddFobToDo = document.getElementById('formAddFobToDo');
+export const formAddFOBToDo = document.getElementById('formAddFOBToDo');
 
 export const populateMissionToDoLists = async (missionDoc, missionDocRef, database, uid) => { 
   // This function does:  
@@ -210,43 +210,68 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
 
 
 onAuthStateChanged(auth, user => {
-  if (formAddMissionToDo) {
-    formAddMissionToDo.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      let UID = user.uid;
-      const docRefMissionTaskDoc = doc(db, 'users', UID, 'to-do-trackers', 'DMZToDoMissions');
-  
-      // let missionTask = document.getElementById('inputMissionTextToDo').value;
-      // let missionProgressTotalAmount = Number(document.getElementById('inputMissionNumberToDo').value);
+  if (user) {
+    const UID = user.uid;
+
+    if (formAddMissionToDo) {
+      formAddMissionToDo.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const docRefMissionTaskDoc = doc(db, 'users', UID, 'to-do-trackers', 'DMZToDoMissions');
+        
+        let randomTaskId = randomTaskIdGenerator('task-mission');
+
+        updateDoc(docRefMissionTaskDoc, {
+          [randomTaskId] : {
+            taskUID: randomTaskId, // Randomly generated.  Need to implement later.
+            userUID: UID, // Users UID.  For easier tracking/moving later.
+            dateTimeCreated: serverTimestamp(), // Date and Time when to-do task was created.  This is for sorting.  Oldest top to newest bottom at first.
+            type: "Mission", // type mission or type fob.  For organizing later.
+            task: document.getElementById('inputMissionTextToDo').value, // string which is the text the user inputted for their "to do task".
+            complete: false, // true/false complete/incomplete
+            progress: { // For later.  User should be able to "update" their progress on a task.  For example... especially in FOB... Exfil with 10 Gold Bars, Skulls, GPU's.  This takes a while and user will want to update and see what they really need.
+              progressCurrent: 0, // This should be a Number.  For example.  Exfil with 10 Gold Bars, and the user currently has extracted with 4/10, this would be 4.
+              progressTotal: Number(document.getElementById('inputMissionNumberToDo').value), // This should be a Number.  For example.  Exfil with 10 Gold Bars, this should be 10.
+            },
+          } 
+        }); // adds submitted task as an object to firestore db document missionDoc whatever.
     
-      let randomTaskId = randomTaskIdGenerator('task');
+        activeMissionsToDoContainer.innerHTML = ""; // Clears both div's for adding a new set from the db.
+        archivedMissionsToDoContainer.innerHTML = "";  
 
-      console.log(randomTaskId);
+        formAddMissionToDo.reset();  // Resets/Clears the form after submission.
+      });
+    }
 
-      // let randomTaskId = "jlfdaj89hwjoai3jq;jaoi9f";
+    if (formAddFOBToDo) {
+      formAddFOBToDo.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const docRefFOBTaskDoc = doc(db, 'users', UID, 'to-do-trackers', 'DMZToDoFOB');
+        
+        let randomTaskId = randomTaskIdGenerator('task-fob');
 
-      updateDoc(docRefMissionTaskDoc, {
-        [randomTaskId] : {
-          taskUID: randomTaskId, // Randomly generated.  Need to implement later.
-          userUID: UID, // Users UID.  For easier tracking/moving later.
-          dateTimeCreated: serverTimestamp(), // Date and Time when to-do task was created.  This is for sorting.  Oldest top to newest bottom at first.
-          type: "Mission", // type mission or type fob.  For organizing later.
-          task: document.getElementById('inputMissionTextToDo').value, // string which is the text the user inputted for their "to do task".
-          complete: false, // true/false complete/incomplete
-          progress: { // For later.  User should be able to "update" their progress on a task.  For example... especially in FOB... Exfil with 10 Gold Bars, Skulls, GPU's.  This takes a while and user will want to update and see what they really need.
-            progressCurrent: 0, // This should be a Number.  For example.  Exfil with 10 Gold Bars, and the user currently has extracted with 4/10, this would be 4.
-            progressTotal: Number(document.getElementById('inputMissionNumberToDo').value), // This should be a Number.  For example.  Exfil with 10 Gold Bars, this should be 10.
-          },
-        } 
-      }); // adds submitted task as an object to firestore db document missionDoc whatever.
+        updateDoc(docRefFOBTaskDoc, {
+          [randomTaskId] : {
+            taskUID: randomTaskId, // Randomly generated.  Need to implement later.
+            userUID: UID, // Users UID.  For easier tracking/moving later.
+            dateTimeCreated: serverTimestamp(), // Date and Time when to-do task was created.  This is for sorting.  Oldest top to newest bottom at first.
+            type: "FOB", // type mission or type fob.  For organizing later.
+            task: document.getElementById('inputFobTextToDo').value, // string which is the text the user inputted for their "to do task".
+            complete: false, // true/false complete/incomplete
+            progress: { // For later.  User should be able to "update" their progress on a task.  For example... especially in FOB... Exfil with 10 Gold Bars, Skulls, GPU's.  This takes a while and user will want to update and see what they really need.
+              progressCurrent: 0, // This should be a Number.  For example.  Exfil with 10 Gold Bars, and the user currently has extracted with 4/10, this would be 4.
+              progressTotal: Number(document.getElementById('inputFobNumberToDo').value), // This should be a Number.  For example.  Exfil with 10 Gold Bars, this should be 10.
+            },
+          } 
+        }); // adds submitted task as an object to firestore db document missionDoc whatever.
+    
+        activeFOBToDoContainer.innerHTML = ""; // Clears both div's for adding a new set from the db.
+        archivedFOBToDoContainer.innerHTML = "";  
+
+        formAddFOBToDo.reset();  // Resets/Clears the form after submission.
+      });
+    }
   
-      activeMissionsToDoContainer.innerHTML = ""; // Clears both div's for adding a new set from the db.
-      archivedMissionsToDoContainer.innerHTML = "";  
-
-      formAddMissionToDo.reset();
-    });
   }
-  
 })
 
 export const randomTaskIdGenerator = (id) => { // Creates a random string and concats a prefix if wanted.  Can reuse this throughout the website.
