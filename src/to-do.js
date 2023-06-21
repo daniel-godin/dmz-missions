@@ -1,11 +1,12 @@
 // This is code for the to-do.html web app.
 
-import { dataDMZToDoMissions, dataDMZToDoFOB } from './data/data-dmz-to-do-s4';
-
 import { doc, getDoc, setDoc, updateDoc, onSnapshot, serverTimestamp, } from 'firebase/firestore';
-
 import { auth, db } from './firebase';
 import { onAuthStateChanged } from 'firebase/auth';
+
+import { dataDMZToDoMissions, dataDMZToDoFOB } from './data/data-dmz-to-do-s4';
+
+import { logInRequiredFunction } from './dmz-missions-ui';
 
 export const toDoMainMissionsContainer = document.getElementById('toDoMainMissionsContainer');
 export const toDoMainFobContainer = document.getElementById('toDoMainFobContainer');
@@ -206,14 +207,11 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
   };
 }
 
-// const docRefFOBTaskDoc = doc(db, 'users', UID, 'to-do-trackers', 'DMZToDoFOB');  
-
-
 onAuthStateChanged(auth, user => {
-  if (user) {
+  if (user) { // If user exists > Do these.  Else > show div for user to go log in/sign up.
     const UID = user.uid;
 
-    if (formAddMissionToDo) {
+    if (formAddMissionToDo) { // If this form exists > If form submitted, add the data to the mission task doc in firestore.
       formAddMissionToDo.addEventListener('submit', async (e) => {
         e.preventDefault();
         const docRefMissionTaskDoc = doc(db, 'users', UID, 'to-do-trackers', 'DMZToDoMissions');
@@ -242,7 +240,7 @@ onAuthStateChanged(auth, user => {
       });
     }
 
-    if (formAddFOBToDo) {
+    if (formAddFOBToDo) { // If this form exists > If form submitted, add the data to the FOB task doc in firestore.
       formAddFOBToDo.addEventListener('submit', async (e) => {
         e.preventDefault();
         const docRefFOBTaskDoc = doc(db, 'users', UID, 'to-do-trackers', 'DMZToDoFOB');
@@ -270,7 +268,11 @@ onAuthStateChanged(auth, user => {
         formAddFOBToDo.reset();  // Resets/Clears the form after submission.
       });
     }
-  
+  } else if (toDoMainMissionsContainer) { // Might add second parameter check:  if the page needs a required sign in to work, open this.
+    console.log('to do page, and no user found triggered');
+    logInRequiredFunction();
+  } else {
+    console.log('user not logged in, this is triggered from to-do.js for pages that is not the to do page.')
   }
 })
 
