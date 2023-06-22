@@ -4,6 +4,10 @@
 
 }
 
+html {
+  color: aliceblue;
+}
+
 .main-content-container {
   width: 95%;
   display: grid;
@@ -32,7 +36,8 @@ label {
 
 .mission-task-container {
   display: grid;
-  grid-template-columns: 15px 3fr minmax(130px, 1fr); /* I need to fix these values to be flexible.  At least the middle and last. */
+  /* grid-template-columns: 15px 3fr minmax(130px, 1fr); I need to fix these values to be flexible.  At least the middle and last. */
+  grid-template-columns: 15px 1fr; /* This is the new version with changing between the form and just text visible */
   gap: 10px;
   align-items: center;
   height: min-content;
@@ -40,7 +45,7 @@ label {
 
 .mission-task-text, .mission-task-progress-text {
   color: white;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .mission-task-progress-text:hover {
@@ -48,21 +53,46 @@ label {
 }
 
 .mission-task-progress-container {
-  justify-self: right;
+  display: grid;
+  /* grid-template-columns: 1fr 10px 5px 10px 50px; */
+  grid-template-columns: 1fr repeat(4, min-content);
+
+  gap: 5px;
+  align-items: center;
+  height: min-content;
+}
+
+.mission-task-progress-form-container, .mission-task-progress-container {
+  padding: 5px;
+  
   
 }
 
-.progress-input {
-  -moz-appearance: textfield;
+.form-progress-input-mission, .form-progress-input-fob {
+  display: grid;
+  grid-template-columns: 1fr 35px 35px 50px;
+  gap: 5px;
+}
+
+
+
+.progress-input-text .progress-input-number {
   border: 1px solid grey;
+  border-radius: 10px;
+  padding: .3rem;
+}
+
+.progress-input-number {
+  -moz-appearance: textfield;
   width: 35px;
-  padding: .5rem;
+  /* border: 1px solid grey;
   border-radius: 5px;
+  padding: .25rem; */
 }
 
 /* Chrome, Safari, Edge, Opera */
-.progress-input::-webkit-outer-spin-button,
-.progress-input::-webkit-inner-spin-button {
+.progress-input-number::-webkit-outer-spin-button,
+.progress-input-number::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
