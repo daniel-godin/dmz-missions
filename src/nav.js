@@ -16,9 +16,9 @@ export async function loadNavigation(user) {
     <nav class='nav'>
       <ul class='nav-links'>
         <li class='nav-link'><a href='./dmz-standard-missions-s4.html'>DMZ Missions Page</a></li>
+        <li class='nav-link'><a href='./to-do.html'>To-Do Page</a></li>
         <li class='nav-link'><a href='./auth.html'>Log In</a></li>
         <li class='nav-link'><a href='./sign-up.html'>Sign Up</a></li>
-        <li class='nav-link'><a href='./to-do.html'>To-Do Page</a></li>
       </ul>
       <div id='profileLinkContainer'>
         <button type='button' id='btnSignOut'>Sign Out</button>
@@ -32,9 +32,9 @@ export async function loadNavigation(user) {
     <nav class='nav'>
       <ul class='nav-links'>
         <li class='nav-link'><a href='./dmz-standard-missions-s4.html'>DMZ Missions Page</a></li>
+        <li class='nav-link'><a href='./to-do.html'>To-Do Page</a></li>
         <li class='nav-link'><a href='./auth.html'>Log In</a></li>
         <li class='nav-link'><a href='./sign-up.html'>Sign Up</a></li>
-        <li class='nav-link'><a href='./to-do.html'>To-Do Page</a></li>
       </ul>
       <div id='profileLinkContainer'>
       </div>
