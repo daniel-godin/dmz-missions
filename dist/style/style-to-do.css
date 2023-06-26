@@ -8,21 +8,26 @@ html {
   color: aliceblue;
 }
 
-.main-content-container {
+#mainToDoContentContainer {
   width: 95%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 25px;
   justify-self: center;
 }
 
 .to-do-container {
-  border: 1px solid purple;
-  height: 100%;
+  /* Has 4 elements inside, stacked on top of each other. */
+  display: grid; 
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, min-content);
+  gap: 1.25rem;
+  justify-items: center;
 }
 
 h2 {
   color: aliceblue;
+  text-decoration: underline;
 }
 
 label {
@@ -31,6 +36,7 @@ label {
 
 .active-to-do-container {
   height: 200px;
+  width: 100%;
   border: 1px dashed blue;
 }
 
@@ -106,6 +112,7 @@ label {
   height: min-content;
   border: 1px solid green;
   padding: 10px;
+  width: 100%;
 }
 
 .form-add-to-do {
@@ -113,6 +120,7 @@ label {
   grid-template-columns: 1fr 75px 75px;
   grid-template-rows: 25px 50px;
   gap: 5px;
+  width: 100%;
 }
 
 .label-input-text-to-do {
@@ -141,15 +149,25 @@ label {
 }
 
 
-
+.archived-container {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
 
 .header-archived-to-do:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
+.archived-header-small-text {
+  font-size: .75rem;
+  text-align: center;
+}
+
 .archived-to-do-container {
   height: 200px;
+  width: 100%;
   border: 1px dashed red;
 }
 
