@@ -80,7 +80,7 @@ export function loadPage(user) {
     if (dmzMissionsContainer) {
       loadNavigation();
       showDMZHeaderAuthStatus();
-      fullCreateMissionGridLoggedOut(dmzMissionsS3);
+      // fullCreateMissionGridLoggedOut(dmzMissionsS3);
     } else {
       loadNavigation();
     }

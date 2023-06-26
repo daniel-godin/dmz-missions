@@ -10,6 +10,7 @@ export const profileLinkContainer = document.getElementById('profileLinkContaine
 
 export async function loadNavigation(user) {
   // Inserts HTML first thing inside of the navContainer div
+  navContainer.innerHTML = ""; // "Resets" the navContainer with nothing, and then creates the nav bar depending on if a user is signed in or not.  This works, but is a little clunky.  This is a fix to the nav bar duplicating on the page after user has signed-in or signed-up, etc.
   if (user) {
     navContainer.insertAdjacentHTML('afterbegin', `
     <header class='logo'><a href='./index.html'>DMZ-Missions</a></header>
