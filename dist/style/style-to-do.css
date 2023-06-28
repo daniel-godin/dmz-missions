@@ -1,7 +1,19 @@
 /* This is styling for just the to-do.html page. */
 
 :root {
+  /* CSS Variables */
+  /* Realtime Colors link for selected colors: https://realtimecolors.com/?colors=f8f7fd-000000-1ba8d0-ffffff-0f5f75 */
+  /* Dark Theme Color Variables */
+  --color-primary: rgb(248, 247, 253);
+  --color-secondary: rgb(0, 0, 0);
+  --color-btn-primary:  rgb(27, 168, 208);
+  --color-btn-secondary: rgb(255, 255, 255);
+  --color-accent:  rgb(15, 95, 117);
 
+  /* Other Variables */
+  /* Dark Theme Color Variables.  Need to add a kind of 'switch' later. */
+  --color-bg-color: var(--color-secondary);
+  --color-font-color: var(--color-primary);
 }
 
 html {

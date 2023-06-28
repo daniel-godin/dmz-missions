@@ -305,10 +305,12 @@ export const showDMZHeaderAuthStatus = async (user) => {
 export const logInRequiredFunction = async () => {
   // const logInRequiredContainer = document.querySelector('logInRequiredContainer')
   const logInRequiredContainer = document.getElementById('loggedInConfirmContainer');
-  const contentContainer = document.getElementById('contentContainer');
+  // const contentContainer = document.getElementById('contentContainer');
+
+  const contentContainer = document.getElementsByClassName('main-content-container');
 
   logInRequiredContainer.style.display = 'flex';
-  contentContainer.style.display = 'none';
+  contentContainer[0].style.display = 'none';
 
   logInRequiredContainer.insertAdjacentHTML('afterbegin', `
     <h2>This page requires an account to work correctly.  
