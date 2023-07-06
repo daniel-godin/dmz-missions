@@ -30,15 +30,15 @@ export const dataDmzStandardMissionsS4 = {
           progressTotal: 1, // This should be a Number.  For example.  Exfil with 10 Gold Bars, this should be 10.
         },      
       },
-      // objective3: {
-      //   objectiveText: "",
-      //   complete: false,
-      //   exists: false,
-      //   progress: { // For later.  User should be able to "update" their progress on a task.  For example... especially in FOB... Exfil with 10 Gold Bars, Skulls, GPU's.  This takes a while and user will want to update and see what they really need.
-      //     progressCurrent: 1, // This should be a Number.  For example.  Exfil with 10 Gold Bars, and the user currently has extracted with 4/10, this would be 4.
-      //     progressTotal: 1, // This should be a Number.  For example.  Exfil with 10 Gold Bars, this should be 10.
-      //   },      
-      // },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: { // For later.  User should be able to "update" their progress on a task.  For example... especially in FOB... Exfil with 10 Gold Bars, Skulls, GPU's.  This takes a while and user will want to update and see what they really need.
+          progressCurrent: 1, // This should be a Number.  For example.  Exfil with 10 Gold Bars, and the user currently has extracted with 4/10, this would be 4.
+          progressTotal: 1, // This should be a Number.  For example.  Exfil with 10 Gold Bars, this should be 10.
+        },      
+      },
     },
     rewards: {
       rewardItem: {
@@ -77,15 +77,15 @@ export const dataDmzStandardMissionsS4 = {
           progressTotal: 5, // This should be a Number.  For example.  Exfil with 10 Gold Bars, this should be 10.
         },
       },
-      // objective3: {
-      //   objectiveText: "",
-      //   complete: true,
-      //   exists: false,
-      //   progress: { // For later.  User should be able to "update" their progress on a task.  For example... especially in FOB... Exfil with 10 Gold Bars, Skulls, GPU's.  This takes a while and user will want to update and see what they really need.
-      //     progressCurrent: 0, // This should be a Number.  For example.  Exfil with 10 Gold Bars, and the user currently has extracted with 4/10, this would be 4.
-      //     progressTotal: 1, // This should be a Number.  For example.  Exfil with 10 Gold Bars, this should be 10.
-      //   },
-      // },
+      objective3: {
+        objectiveText: "",
+        complete: true,
+        exists: false,
+        progress: { // For later.  User should be able to "update" their progress on a task.  For example... especially in FOB... Exfil with 10 Gold Bars, Skulls, GPU's.  This takes a while and user will want to update and see what they really need.
+          progressCurrent: 0, // This should be a Number.  For example.  Exfil with 10 Gold Bars, and the user currently has extracted with 4/10, this would be 4.
+          progressTotal: 1, // This should be a Number.  For example.  Exfil with 10 Gold Bars, this should be 10.
+        },
+      },
     },
     rewards: {
       rewardItem: {
@@ -104,30 +104,40 @@ export const dataDmzStandardMissionsS4 = {
     title: "Exfiltration",
     complete: false,
     unlocked: true,
+    description: "Hopefully this isn't your first time into the exclusion zone, but all of our contractors need to be seasoned in the art of exfiltration.  We've hired a team to help get you out when you're ready.  Find a designated exfil site on your map.  It'll be marked with green smoke.  Fire a flare and we'll cal in a team to extract you.",
     objectives: {
       objective1: {
-        objectiveText: "",
+        objectiveText: "Call in an exfil chopper at an exfil site marked with green smoke.",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: true,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 1,
+        },
       },
       objective2: {
-        objectiveText: "",
+        objectiveText: "Exfil using the helicopter.",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: true,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 1,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },      
       },
     },
     rewards: {
       rewardItem: {
-        itemType: "",
-        item: "",
+        itemType: "Token",
+        item: "Double XP Token",
       },
       rewardXP: 5000, // Number:  Amount of XP rewarded.
       rewardFaction: {
@@ -136,6 +146,11 @@ export const dataDmzStandardMissionsS4 = {
       },
     },
   },
+
+
+
+
+  // Currently Updated To: (Change When You Work On This):
   10104: {
     id: 10104,
     title: "Information Seeker",
@@ -145,8 +160,11 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
