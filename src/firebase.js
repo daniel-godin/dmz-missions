@@ -54,5 +54,5 @@ export const auth = getAuth(app);
 export const db = getFirestore(app);
 
 // Local Emulators
-connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
-connectFirestoreEmulator(db, 'localhost', 8080);
+// connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
+// connectFirestoreEmulator(db, 'localhost', 8080);
