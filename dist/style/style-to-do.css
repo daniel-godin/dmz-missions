@@ -14,6 +14,8 @@
   /* Dark Theme Color Variables.  Need to add a kind of 'switch' later. */
   --color-bg-color: var(--color-secondary);
   --color-font-color: var(--color-primary);
+
+  font-size: 14px;
 }
 
 html {
@@ -47,9 +49,13 @@ label {
 }
 
 .active-to-do-container {
-  min-height: 200px;
+  min-height: 50px;
   height: min-content;
   width: 100%;
+  display: grid;
+  row-gap: 3px;
+
+
   border: 1px dashed blue;
 }
 
@@ -82,8 +88,23 @@ label {
 }
 
 .mission-task-progress-form-container, .mission-task-progress-container {
-  padding: 5px;
+  /* padding: 5px; */
 }
+
+.mission-task-checkbox, .fob-task-checkbox {
+  height: 10px;
+  width: 10px;
+}
+
+.btn-edit-task {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+
+
+/* Middle Form Element: */
 
 .form-progress-input-mission, .form-progress-input-fob {
   display: grid;
@@ -176,7 +197,7 @@ label {
 }
 
 .archived-to-do-container {
-  
+  min-height: 50px;
   height: min-content;
   width: 100%;
   border: 1px dashed red;
