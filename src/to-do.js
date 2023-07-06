@@ -20,6 +20,21 @@ export const archivedFOBToDoContainer = document.getElementById('archivedFOBToDo
 export const formAddMissionToDo = document.getElementById('formAddMissionToDo');
 export const formAddFOBToDo = document.getElementById('formAddFOBToDo');
 
+export const toDoEventListeners = async () => {
+  const arrayOfBtnEditTask = document.getElementsByClassName('btn-edit-task'); // Probably need to move this out of just the mission side, because it applies to both mission and FOB tasks.
+  for (let i = 0; i < arrayOfBtnEditTask.length && i < 200; i++) {
+    arrayOfBtnEditTask[i].addEventListener('click', (e) => {
+      e.preventDefault();
+      e.target.parentNode.classList.toggle('hide');
+      e.target.parentNode.nextElementSibling.classList.toggle('hide');
+    })
+  }
+
+
+
+
+}
+
 export const populateMissionToDoLists = async (missionDoc, missionDocRef, database, uid) => { 
   // This function does:  
   // Checks to see if a missionDoc exists, if not, creates it.
@@ -45,22 +60,22 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
     
       if (complete === true) { // Checking through each object, if complete, puts the "task" in the ARCHIVED div.
         archivedMissionsToDoContainer.insertAdjacentHTML('beforeend', `
-        <div class='mission-task-container' id='${id}'>
+        <div class='task-container' id='${id}'>
           <input type='checkbox' id='${id}' class='mission-task-checkbox' name='' checked />
 
           <div class='mission-task-progress-container'>
-            <p class='mission-task-text task-complete-strike-through'>${task}</p>
-            <p class='mission-task-progress-current task-complete-strike-through'>${progressCurrent}</p>
+            <p class='mission-task-progress-current task-complete-strike-through'>(${progressCurrent}</p>
             <p class='task-complete-strike-through'> / </p>
-            <p class='mission-task-progress-total task-complete-strike-through'>${progressTotal}</p>
+            <p class='mission-task-progress-total task-complete-strike-through'>${progressTotal})</p>
+            <p class='mission-task-text task-complete-strike-through'>${task}</p>
             <button type='button' class='btn-edit-task' id='${id}'>Edit</button>
           </div>
 
           <div class='mission-task-progress-form-container hide'>
             <form class='form-progress-input-mission' data-task-id='${id}'>
-              <input name='missionText' type='text' class='progress-input-text' data-task-id='${id}' value='${task}' placeholder='${task}' />
               <input name='progressCurrent' type='number' inputmode='numeric' class='progress-input progress-input-current-mission' data-task-id='${id}' min='0' max='99' step='1' value='${progressCurrent}' />
               <input name='progressTotal' type='number' inputmode='numeric' class='progress-input progress-input-total-mission' data-task-id='${id}' min='0' max='99' step='1' value='${progressTotal}' />
+              <input name='missionText' type='text' class='progress-input-text' data-task-id='${id}' value='${task}' placeholder='${task}' />
               <button type='submit' data-task-id='${id}'>Update</button>
             </form>
           </div>
@@ -68,22 +83,22 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
       `)  
       } else if (complete === false) { // Checking through each object, if NOT complete, puts the "task" in the ACTIVE div.
         activeMissionsToDoContainer.insertAdjacentHTML('beforeend', `
-        <div class='mission-task-container' id='${id}'>
+        <div class='task-container' id='${id}'>
           <input type='checkbox' id='${id}' class='mission-task-checkbox' name='' />
 
           <div class='mission-task-progress-container'>
-            <p class='mission-task-text'>${task}</p>
-            <p class='mission-task-progress-current'>${progressCurrent}</p>
+            <p class='mission-task-progress-current'>(${progressCurrent}</p>
             <p> / </p>
-            <p class='mission-task-progress-total'>${progressTotal}</p>
+            <p class='mission-task-progress-total'>${progressTotal})</p>
+            <p class='mission-task-text'>${task}</p>
             <button type='button' class='btn-edit-task' id='${id}'>Edit</button>
           </div>
             
           <div class='mission-task-progress-form-container hide'>
             <form class='form-progress-input-mission' data-task-id='${id}'>
-              <input name='missionText' type='text' class='progress-input-text' data-task-id='${id}' value='${task}' placeholder='${task}' />
               <input name='progressCurrent' type='number' inputmode='numeric' class='progress-input-number progress-input-current-mission' data-task-id='${id}' min='0' max='99' step='1' value='${progressCurrent}' />
               <input name='progressTotal' type='number' inputmode='numeric' class='progress-input-number progress-input-total-mission' data-task-id='${id}' min='0' max='99' step='1' value='${progressTotal}' />
+              <input name='missionText' type='text' class='progress-input-text' data-task-id='${id}' value='${task}' placeholder='${task}' />
               <button type='submit' data-task-id='${id}'>Update</button>
             </form>          
           </div>
@@ -106,14 +121,15 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
       })
     }
 
-    const arrayOfBtnEditTask = document.getElementsByClassName('btn-edit-task'); // Probably need to move this out of just the mission side, because it applies to both mission and FOB tasks.
-    for (let i = 0; i < arrayOfBtnEditTask.length && i < 200; i++) {
-      arrayOfBtnEditTask[i].addEventListener('click', (e) => {
-        e.preventDefault();
-        e.target.parentNode.classList.toggle('hide');
-        e.target.parentNode.nextElementSibling.classList.toggle('hide');
-      })
-    }
+    // const arrayOfBtnEditTask = document.getElementsByClassName('btn-edit-task'); // Probably need to move this out of just the mission side, because it applies to both mission and FOB tasks.
+    // for (let i = 0; i < arrayOfBtnEditTask.length && i < 200; i++) {
+    //   arrayOfBtnEditTask[i].addEventListener('click', (e) => {
+    //     e.preventDefault();
+    //     console.log('edit button clicked');
+    //     e.target.parentNode.classList.toggle('hide');
+    //     e.target.parentNode.nextElementSibling.classList.toggle('hide');
+    //   })
+    // }
 
     const arrayOfFormProgressInputMission = document.getElementsByClassName('form-progress-input-mission');
     for (let i = 0; i < arrayOfFormProgressInputMission.length && i < 200; i++) {
@@ -179,22 +195,22 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
     
       if (complete === true) { // Checking through each object, if complete, puts the "task" in the ARCHIVED div.
         archivedFOBToDoContainer.insertAdjacentHTML('beforeend', `
-        <div class='mission-task-container' id='${id}'>
+        <div class='task-container' id='${id}'>
           <input type='checkbox' id='${id}' class='fob-task-checkbox' name='' checked />
 
           <div class='mission-task-progress-container'>
-            <p class='mission-task-text task-complete-strike-through'>${task}</p>
-            <p class='mission-task-progress-current task-complete-strike-through'>${progressCurrent}</p>
+            <p class='mission-task-progress-current task-complete-strike-through'>(${progressCurrent}</p>
             <p class='task-complete-strike-through'> / </p>
-            <p class='mission-task-progress-total task-complete-strike-through'>${progressTotal}</p>
+            <p class='mission-task-progress-total task-complete-strike-through'>${progressTotal})</p>
+            <p class='mission-task-text task-complete-strike-through'>${task}</p>
             <button type='button' class='btn-edit-task' id='${id}'>Edit</button>
           </div>
 
           <div class='mission-task-progress-form-container hide'>
             <form class='form-progress-input-fob' data-task-id='${id}'>
-              <input name='missionText' type='text' class='progress-input-text' data-task-id='${id}' value='${task}' placeholder='${task}' />
               <input name='progressCurrent' type='number' inputmode='numeric' class='progress-input-number progress-input-current-fob' data-task-id='${id}' min='0' max='99' step='1' value='${progressCurrent}' />
               <input name='progressTotal' type='number' inputmode='numeric' class='progress-input-number progress-input-total-fob' data-task-id='${id}' min='0' max='99' step='1' value='${progressTotal}' />
+              <input name='missionText' type='text' class='progress-input-text' data-task-id='${id}' value='${task}' placeholder='${task}' />
               <button type='submit' data-task-id='${id}'>Update</button>
             </form>
           </div>
@@ -202,22 +218,22 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
       `)
       } else if (complete === false) { // Checking through each object, if NOT complete, puts the "task" in the ACTIVE div.
         activeFOBToDoContainer.insertAdjacentHTML('beforeend', `
-        <div class='mission-task-container' id='${id}'>
+        <div class='task-container' id='${id}'>
           <input type='checkbox' id='${id}' class='fob-task-checkbox' name='' />
 
           <div class='mission-task-progress-container'>
-            <p class='mission-task-text'>${task}</p>
-            <p class='mission-task-progress-current'>${progressCurrent}</p>
+            <p class='mission-task-progress-current'>(${progressCurrent}</p>
             <p> / </p>
-            <p class='mission-task-progress-total'>${progressTotal}</p>
+            <p class='mission-task-progress-total'>${progressTotal})</p>
+            <p class='mission-task-text'>${task}</p>
             <button type='button' class='btn-edit-task' id='${id}'>Edit</button>
           </div>
 
           <div class='mission-task-progress-form-container hide'>
             <form class='form-progress-input-fob' data-task-id='${id}'>
+              <input name='progressTotal' type='number' inputmode='numeric' class='progress-input-number progress-input-total-fob' data-task-id='${id}' min='0' max='99' step='1' value='${progressTotal}' />
               <input name='missionText' type='text' class='progress-input-text' data-task-id='${id}' value='${task}' placeholder='${task}' />
               <input name='progressCurrent' type='number' inputmode='numeric' class='progress-input-number progress-input-current-fob' data-task-id='${id}' min='0' max='99' step='1' value='${progressCurrent}' />
-              <input name='progressTotal' type='number' inputmode='numeric' class='progress-input-number progress-input-total-fob' data-task-id='${id}' min='0' max='99' step='1' value='${progressTotal}' />
               <button type='submit' data-task-id='${id}'>Update</button>
             </form>
           </div>
@@ -239,14 +255,14 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
       })
     };
 
-    const arrayOfBtnEditTask = document.getElementsByClassName('btn-edit-task'); // Probably need to move this out of just the mission side, because it applies to both mission and FOB tasks.
-    for (let i = 0; i < arrayOfBtnEditTask.length && i < 200; i++) {
-      arrayOfBtnEditTask[i].addEventListener('click', (e) => {
-        e.preventDefault();
-        e.target.parentNode.classList.toggle('hide');
-        e.target.parentNode.nextElementSibling.classList.toggle('hide');
-      })
-    }
+    // const arrayOfBtnEditTask = document.getElementsByClassName('btn-edit-task'); // Probably need to move this out of just the mission side, because it applies to both mission and FOB tasks.
+    // for (let i = 0; i < arrayOfBtnEditTask.length && i < 200; i++) {
+    //   arrayOfBtnEditTask[i].addEventListener('click', (e) => {
+    //     e.preventDefault();
+    //     e.target.parentNode.classList.toggle('hide');
+    //     e.target.parentNode.nextElementSibling.classList.toggle('hide');
+    //   })
+    // }
 
     const arrayOfFormProgressInputFOB = document.getElementsByClassName('form-progress-input-fob');
     for (let i = 0; i < arrayOfFormProgressInputFOB.length && i < 200; i++) {
@@ -281,6 +297,8 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
 onAuthStateChanged(auth, user => {
   if (user) { // If user exists > Do these.  Else > show div for user to go log in/sign up.
     const UID = user.uid;
+
+    
 
     if (formAddMissionToDo) { // If this form exists > If form submitted, add the data to the mission task doc in firestore.
       formAddMissionToDo.addEventListener('submit', async (e) => {

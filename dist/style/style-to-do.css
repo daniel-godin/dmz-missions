@@ -47,12 +47,13 @@ label {
 }
 
 .active-to-do-container {
-  height: 200px;
+  min-height: 200px;
+  height: min-content;
   width: 100%;
   border: 1px dashed blue;
 }
 
-.mission-task-container {
+.task-container {
   display: grid;
   /* grid-template-columns: 15px 3fr minmax(130px, 1fr); I need to fix these values to be flexible.  At least the middle and last. */
   grid-template-columns: 15px 1fr; /* This is the new version with changing between the form and just text visible */
@@ -73,7 +74,7 @@ label {
 .mission-task-progress-container {
   display: grid;
   /* grid-template-columns: 1fr 10px 5px 10px 50px; */
-  grid-template-columns: 1fr repeat(4, min-content);
+  grid-template-columns: repeat(3, min-content) 1fr min-content;
 
   gap: 5px;
   align-items: center;
@@ -82,17 +83,14 @@ label {
 
 .mission-task-progress-form-container, .mission-task-progress-container {
   padding: 5px;
-  
-  
 }
 
 .form-progress-input-mission, .form-progress-input-fob {
   display: grid;
-  grid-template-columns: 1fr 35px 35px 50px;
+  grid-template-columns: 35px 35px 1fr 50px;
   gap: 5px;
+  text-align: center;
 }
-
-
 
 .progress-input-text .progress-input-number {
   border: 1px solid grey;
@@ -178,7 +176,8 @@ label {
 }
 
 .archived-to-do-container {
-  height: 200px;
+  
+  height: min-content;
   width: 100%;
   border: 1px dashed red;
 }

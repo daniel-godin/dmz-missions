@@ -28,7 +28,7 @@ import { dataDmzFobS4 } from "./data/data-dmz-fob-s4"; // DMZ Forward Operating 
 
 import { addDMZMissionsS3ObjToDb, } from "./db-creation";
 
-import { toDoMainMissionsContainer, toDoMainFobContainer, populateToDoLists, addDMZToDoDocs, refreshTaskPage, populateMissionToDoLists, populateFOBToDoLists } from "./to-do";
+import { toDoMainMissionsContainer, toDoMainFobContainer, populateToDoLists, addDMZToDoDocs, refreshTaskPage, populateMissionToDoLists, populateFOBToDoLists, toDoEventListeners, } from "./to-do";
 
 import {
   loadPage,
@@ -43,8 +43,8 @@ import { auth, db } from "./firebase";
 import { } from "./auth";
 
 // Local Emulators
-// connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
-// connectFirestoreEmulator(db, 'localhost', 8080);
+connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
+connectFirestoreEmulator(db, 'localhost', 8080);
 
 // console.log('INDEX.JS CHECK:  beginning triggered');
 
@@ -60,12 +60,13 @@ onAuthStateChanged(auth, user => {
     onSnapshot(docRefMissionTaskDoc, (snapshot) => {
       if (toDoMainMissionsContainer) {
         populateMissionToDoLists(snapshot, docRefMissionTaskDoc, db, userID);
+        toDoEventListeners();
       };
     })
     onSnapshot(docRefFOBTaskDoc, (snapshot) => {
-
       if (toDoMainMissionsContainer) {
         populateFOBToDoLists(snapshot, docRefFOBTaskDoc, db, userID);
+        toDoEventListeners();
       };
     })
 

@@ -314,7 +314,7 @@ export const logInRequiredFunction = async () => {
 
   logInRequiredContainer.insertAdjacentHTML('afterbegin', `
     <h2>This page requires an account to work correctly.  
-    Please <a href='./auth.html'>Log In</a> or <a href='./sign-up'>Sign Up</a>.</h2>
+    Please <a href='./auth.html'>Log In</a> or <a href='./sign-up.html'>Sign Up</a>.</h2>
   `)
 
 }
