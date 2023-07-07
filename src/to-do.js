@@ -378,8 +378,9 @@ onAuthStateChanged(auth, user => {
 })
 
 
-
+// Maybe add a 'date' string in front of it to make sorting easier?
 export const randomTaskIdGenerator = (id) => { // Creates a random string and concats a prefix if wanted.  Can reuse this throughout the website.
   let result = crypto.randomUUID();
-  return `${id}-` + `${result}`;
+  let time = Date.now();
+  return `${id}-` + `${time}-` + `${result}`;
 }
