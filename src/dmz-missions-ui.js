@@ -1,6 +1,6 @@
 import { AuthErrorCodes } from "firebase/auth";
 
-import { doc, getDoc, getDocs, onSnapshot, updateDoc} from "firebase/firestore";
+import { doc, getDoc, getDocs, onSnapshot, updateDoc, setDoc, } from "firebase/firestore";
 import { dataDmzStandardMissionsS4 } from "./data/data-dmz-standard-missions-s4";
 import { dataDmzFobS4 } from "./data/data-dmz-fob-s4";
 
@@ -74,12 +74,10 @@ export const phalanxTier5Container = document.getElementById('phalanxTier5Missio
 export function loadPage(user) {
   // showLoginState();
   if (user) {
-    showDMZHeaderAuthStatus(user);
     loadNavigation(user);
   } else {
     if (dmzMissionsContainer) {
       loadNavigation();
-      showDMZHeaderAuthStatus();
       // fullCreateMissionGridLoggedOut(dmzMissionsS3);
     } else {
       loadNavigation();
@@ -147,10 +145,11 @@ export function fullCreateMissionGridLoggedOut (obj) { // THIS IS THE NOT-LOGGED
   }
 }
 
-export function fullCreateMissionGridLoggedIn (docRef) { // THIS IS THE LOGGED IN VERSION.  THE CHECKBOXES ARE CREATED.
-  getDoc(docRef)
-  .then((doc) => {
-    let obj = doc.data();
+// New Version:  Testing:
+export const fullCreateMissionGridLoggedIn = async (userMissionsGridDoc, userMissionsGridDocRef, database, uid) => { // THIS IS THE LOGGED IN VERSION.  THE CHECKBOXES ARE CREATED.
+  if (userMissionsGridDoc.exists()) { // Checks to see if the Missions To-Do Doc exists.  If it does not, it creates it, if it does, it does nothing.
+    console.log('user mission grid doc exists');
+    let obj = userMissionsGridDoc.data(); // converts firebase doc into an object which I can iterate on.
     for (let [key, value] of Object.entries(obj)) {
       let title = value.title;
       let id = value.id;
@@ -206,8 +205,8 @@ export function fullCreateMissionGridLoggedIn (docRef) { // THIS IS THE LOGGED I
         } else if (id >= 50501 && id <=50507) {
           createMissionGridLoggedIn(crownTier5Container, value);
         } 
-      }
-    
+    }
+
     // This adds eventlistener and update Doc to all the checkboxes.
     const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
 
@@ -217,13 +216,95 @@ export function fullCreateMissionGridLoggedIn (docRef) { // THIS IS THE LOGGED I
         let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
         let checkId = Number(e.target.id); // Grabs the event target's id property, makes it into a Number (integar) from a string.
         // console.log('checkbox listener working');
-        // const docRefS3 = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'); // Document Reference to a users Season 3 dmz Missions Doc
-        updateDoc(docRef, {
+        updateDoc(userMissionsGridDocRef, {
           [checkId+".complete"] : checked, // checkId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
         });
-    })}
-  })
+      })
+    }  
+  } else { // If the user's mission grid doc doe snot exists, it creates it.  This entire function should only trigger if the user is detected.  If user is not detected, it should trigger the non-logged in version, but later... I'd like to combine this all.
+    console.log('Users mission grid doc does not exist.  Creating now');
+    await setDoc(doc(database, 'users', uid, 'mw2-trackers', 'DMZStandardMissionsS4'), dataDmzStandardMissionsS4);
+  }
 }
+
+
+// export function fullCreateMissionGridLoggedIn (docRef) { // THIS IS THE LOGGED IN VERSION.  THE CHECKBOXES ARE CREATED.
+//   getDoc(docRef)
+//   .then((doc) => {
+//     let obj = doc.data();
+//     for (let [key, value] of Object.entries(obj)) {
+//       let title = value.title;
+//       let id = value.id;
+//       let complete = value.complete;
+//         if (id >= 10101 && id <=10107) {
+//           createMissionGridLoggedIn(redactedTier1Container, value);
+//         } else if (id >= 10201 && id <=10207) {
+//           createMissionGridLoggedIn(redactedTier2Container, value);
+//         } else if (id >= 10301 && id <=10307) {
+//           createMissionGridLoggedIn(redactedTier3Container, value);
+//         } else if (id >= 10401 && id <=10407) {
+//           createMissionGridLoggedIn(redactedTier4Container, value);
+//         } else if (id >= 10501 && id <=10507) {
+//           createMissionGridLoggedIn(redactedTier5Container, value);
+//         } else if (id >= 20101 && id <=20107) {
+//           createMissionGridLoggedIn(whiteLotusTier1Container, value);
+//         } else if (id >= 20201 && id <=20207) {
+//           createMissionGridLoggedIn(whiteLotusTier2Container, value);
+//         } else if (id >= 20301 && id <=20307) {
+//           createMissionGridLoggedIn(whiteLotusTier3Container, value);
+//         } else if (id >= 20401 && id <=20407) {
+//           createMissionGridLoggedIn(whiteLotusTier4Container, value);
+//         } else if (id >= 20501 && id <=20507) {
+//           createMissionGridLoggedIn(whiteLotusTier5Container, value);
+//         } else if (id >= 30101 && id <=30107) {
+//           createMissionGridLoggedIn(legionTier1Container, value);
+//         } else if (id >= 30201 && id <=30207) {
+//           createMissionGridLoggedIn(legionTier2Container, value);
+//         } else if (id >= 30301 && id <=30307) {
+//           createMissionGridLoggedIn(legionTier3Container, value);
+//         } else if (id >= 30401 && id <=30407) {
+//           createMissionGridLoggedIn(legionTier4Container, value);
+//         } else if (id >= 30501 && id <=30507) {
+//           createMissionGridLoggedIn(legionTier5Container, value);
+//         } else if (id >= 40101 && id <=40107) {
+//           createMissionGridLoggedIn(blackMousTier1Container, value);
+//         } else if (id >= 40201 && id <=40207) {
+//           createMissionGridLoggedIn(blackMousTier2Container, value);
+//         } else if (id >= 40301 && id <=40307) {
+//           createMissionGridLoggedIn(blackMousTier3Container, value);
+//         } else if (id >= 40401 && id <=40407) {
+//           createMissionGridLoggedIn(blackMousTier4Container, value);
+//         } else if (id >= 40501 && id <=40507) {
+//           createMissionGridLoggedIn(blackMousTier5Container, value);
+//         } else if (id >= 50101 && id <=50107) {
+//           createMissionGridLoggedIn(crownTier1Container, value);
+//         } else if (id >= 50201 && id <=50207) {
+//           createMissionGridLoggedIn(crownTier2Container, value);
+//         } else if (id >= 50301 && id <=50307) {
+//           createMissionGridLoggedIn(crownTier3Container, value);
+//         } else if (id >= 50401 && id <=50407) {
+//           createMissionGridLoggedIn(crownTier4Container, value);
+//         } else if (id >= 50501 && id <=50507) {
+//           createMissionGridLoggedIn(crownTier5Container, value);
+//         } 
+//       }
+    
+//     // This adds eventlistener and update Doc to all the checkboxes.
+//     const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
+
+//     for (let i = 0; i < arrayOfMissionCheckboxes.length; i++) {
+//       arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
+//         // e.preventDefault();
+//         let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
+//         let checkId = Number(e.target.id); // Grabs the event target's id property, makes it into a Number (integar) from a string.
+//         // console.log('checkbox listener working');
+//         // const docRefS3 = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'); // Document Reference to a users Season 3 dmz Missions Doc
+//         updateDoc(docRef, {
+//           [checkId+".complete"] : checked, // checkId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
+//         });
+//     })}
+//   })
+// }
 
 export function createMissionGridLoggedOut (tierContainer, title) {
   tierContainer.insertAdjacentHTML('beforeend', `
@@ -269,36 +350,6 @@ export function createMissionGridLoggedIn (tierContainer, value) {
         <input type="checkbox" name="" id="${id}" class="mission-progress mission-locked-checkbox">
       </div>`)
     }
-  }
-}
-
-export const showDMZHeaderAuthStatus = async (user) => {
-  if (user && dmzPageHeader) {
-    let email = user.email;
-    // console.log('showDMZHeaderAuthStatus Triggered with USER SIGNED IN');
-    // console.log(user);
-    dmzPageHeader.insertAdjacentHTML('afterbegin', `
-      <header class='dmz-header' id='dmzHeaderSignedIn'>Welcome Back ${email}.  Thank you for signing in.</header>
-      <button type='button' class='btn-hide' id='btnHideHeader'>Hide This Message</button>
-    `)
-    // insert html to header welcoming a logged in user.
-  } else if (dmzPageHeader) {
-    // console.log('showDMZHeaderAuthStatus Triggered with USER SIGNED OUT')
-    dmzPageHeader.insertAdjacentHTML('afterbegin', `
-      <header class='dmz-header' id='dmzHeaderSignedOut'>Thank you for visiting.  Please <a href='./auth.html'>Sign In or Sign Up</a> for full funcationality in tracking your progress.</header>
-      <button type='button' class='btn-hide' id='btnHideHeader'>Hide This Message</button>
-      `)
-    // Insert HTML to header asking user to sign up for full functionality.  Importantly... Checkboxes don't appear with this one.
-  } else {
-    // Does Nothing because user is not in the dmz-missions.html page.
-    // console.log('dmz show header do nothing'); // Testing purposes.
-  }
-  const btnHideHeader = document.getElementById('btnHideHeader');
-  if (btnHideHeader && dmzPageHeader) {
-    // Currently, hiding this doesn't save this into a user preference.  Later, I will do that.
-    btnHideHeader.addEventListener('click', () => {
-      dmzPageHeader.style.display = 'none';
-    });
   }
 }
 

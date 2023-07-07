@@ -54,19 +54,32 @@ onAuthStateChanged(auth, user => {
   if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
     const userID = user.uid;
     loadPage(user); // Should I put this into the onSnapshot or other listener position?
-    const docRefMissionTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoMissions');
-    const docRefFOBTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoFOB');
     
+    const docRefMissionGridS4 = doc(db, 'users', user.uid, 'mw2-trackers', 'DMZStandardMissionsS4')
+    onSnapshot(docRefMissionGridS4, (snapshot) => {
+      if (dmzMissionsContainer) {
+        // If this container exists, it means the user is on the dmzMissions page.  Then it should trigger the function which populates the DOM.
+        fullCreateMissionGridLoggedIn(snapshot, docRefMissionGridS4, db, userID);
+      }
+    })
+
+
+
+    const docRefMissionTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoMissions');
     onSnapshot(docRefMissionTaskDoc, (snapshot) => {
       if (toDoMainMissionsContainer) {
         populateMissionToDoLists(snapshot, docRefMissionTaskDoc, db, userID);
       };
     })
+
+    const docRefFOBTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoFOB');
     onSnapshot(docRefFOBTaskDoc, (snapshot) => {
       if (toDoMainMissionsContainer) {
         populateFOBToDoLists(snapshot, docRefFOBTaskDoc, db, userID);
       };
     })
+
+
 
     // if (dmzMissionsContainer) {
     //   const dmzMissionsS3DocRefLoggedIn = doc(db, 'users', userDoc, 'mw2-trackers', 'dmzMissionsS3');
