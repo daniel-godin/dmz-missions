@@ -43,8 +43,8 @@ import { auth, db } from "./firebase";
 import { } from "./auth";
 
 // Local Emulators
-// connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
-// connectFirestoreEmulator(db, 'localhost', 8080);
+connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
+connectFirestoreEmulator(db, 'localhost', 8080);
 
 // console.log('INDEX.JS CHECK:  beginning triggered');
 
