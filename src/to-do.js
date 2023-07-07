@@ -231,9 +231,9 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
 
           <div class='mission-task-progress-form-container hide'>
             <form class='form-progress-input-fob' data-task-id='${id}'>
+              <input name='progressCurrent' type='number' inputmode='numeric' class='progress-input-number progress-input-current-fob' data-task-id='${id}' min='0' max='99' step='1' value='${progressCurrent}' />
               <input name='progressTotal' type='number' inputmode='numeric' class='progress-input-number progress-input-total-fob' data-task-id='${id}' min='0' max='99' step='1' value='${progressTotal}' />
               <input name='missionText' type='text' class='progress-input-text' data-task-id='${id}' value='${task}' placeholder='${task}' />
-              <input name='progressCurrent' type='number' inputmode='numeric' class='progress-input-number progress-input-current-fob' data-task-id='${id}' min='0' max='99' step='1' value='${progressCurrent}' />
               <button type='submit' data-task-id='${id}'>Update</button>
             </form>
           </div>
