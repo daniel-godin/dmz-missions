@@ -60,13 +60,11 @@ onAuthStateChanged(auth, user => {
     onSnapshot(docRefMissionTaskDoc, (snapshot) => {
       if (toDoMainMissionsContainer) {
         populateMissionToDoLists(snapshot, docRefMissionTaskDoc, db, userID);
-        toDoEventListeners();
       };
     })
     onSnapshot(docRefFOBTaskDoc, (snapshot) => {
       if (toDoMainMissionsContainer) {
         populateFOBToDoLists(snapshot, docRefFOBTaskDoc, db, userID);
-        toDoEventListeners();
       };
     })
 

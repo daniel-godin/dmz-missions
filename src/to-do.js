@@ -20,20 +20,6 @@ export const archivedFOBToDoContainer = document.getElementById('archivedFOBToDo
 export const formAddMissionToDo = document.getElementById('formAddMissionToDo');
 export const formAddFOBToDo = document.getElementById('formAddFOBToDo');
 
-export const toDoEventListeners = async () => {
-  const arrayOfBtnEditTask = document.getElementsByClassName('btn-edit-task'); // Probably need to move this out of just the mission side, because it applies to both mission and FOB tasks.
-  for (let i = 0; i < arrayOfBtnEditTask.length && i < 200; i++) {
-    arrayOfBtnEditTask[i].addEventListener('click', (e) => {
-      e.preventDefault();
-      e.target.parentNode.classList.toggle('hide');
-      e.target.parentNode.nextElementSibling.classList.toggle('hide');
-    })
-  }
-
-
-
-
-}
 
 export const populateMissionToDoLists = async (missionDoc, missionDocRef, database, uid) => { 
   // This function does:  
@@ -73,7 +59,7 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
             <p class='task-complete-strike-through'> / </p>
             <p class='mission-task-progress-total task-complete-strike-through'>${progressTotal})</p>
             <p class='mission-task-text task-complete-strike-through'>${task}</p>
-            <button type='button' class='btn-edit-task' id='${id}'>Edit</button>
+            <button type='button' class='btn-edit-task btn-edit-mission-task' id='${id}'>Edit</button>
           </div>
 
           <div class='mission-task-progress-form-container hide'>
@@ -96,7 +82,7 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
             <p> / </p>
             <p class='mission-task-progress-total'>${progressTotal})</p>
             <p class='mission-task-text'>${task}</p>
-            <button type='button' class='btn-edit-task' id='${id}'>Edit</button>
+            <button type='button' class='btn-edit-task btn-edit-mission-task' id='${id}'>Edit</button>
           </div>
             
           <div class='mission-task-progress-form-container hide'>
@@ -126,15 +112,14 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
       })
     }
 
-    // const arrayOfBtnEditTask = document.getElementsByClassName('btn-edit-task'); // Probably need to move this out of just the mission side, because it applies to both mission and FOB tasks.
-    // for (let i = 0; i < arrayOfBtnEditTask.length && i < 200; i++) {
-    //   arrayOfBtnEditTask[i].addEventListener('click', (e) => {
-    //     e.preventDefault();
-    //     console.log('edit button clicked');
-    //     e.target.parentNode.classList.toggle('hide');
-    //     e.target.parentNode.nextElementSibling.classList.toggle('hide');
-    //   })
-    // }
+    const arrayOfBtnEditTask = document.getElementsByClassName('btn-edit-mission-task'); // Probably need to move this out of just the mission side, because it applies to both mission and FOB tasks.
+    for (let i = 0; i < arrayOfBtnEditTask.length && i < 200; i++) {
+      arrayOfBtnEditTask[i].addEventListener('click', (e) => {
+        e.preventDefault();
+        e.target.parentNode.classList.toggle('hide');
+        e.target.parentNode.nextElementSibling.classList.toggle('hide');
+      })
+    }
 
     const arrayOfFormProgressInputMission = document.getElementsByClassName('form-progress-input-mission');
     for (let i = 0; i < arrayOfFormProgressInputMission.length && i < 200; i++) {
@@ -147,7 +132,7 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
         let missionText = data.get('missionText');
         let taskId = e.target.dataset.taskId;
 
-        console.log(progressCurrent, progressTotal, taskId);
+        // console.log(progressCurrent, progressTotal, taskId); // For error and information checking
 
         updateDoc(missionDocRef, {
           [taskId+".task"] : missionText,
@@ -215,7 +200,7 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
             <p class='task-complete-strike-through'> / </p>
             <p class='mission-task-progress-total task-complete-strike-through'>${progressTotal})</p>
             <p class='mission-task-text task-complete-strike-through'>${task}</p>
-            <button type='button' class='btn-edit-task' id='${id}'>Edit</button>
+            <button type='button' class='btn-edit-task btn-edit-fob-task' id='${id}'>Edit</button>
           </div>
 
           <div class='mission-task-progress-form-container hide'>
@@ -238,7 +223,7 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
             <p> / </p>
             <p class='mission-task-progress-total'>${progressTotal})</p>
             <p class='mission-task-text'>${task}</p>
-            <button type='button' class='btn-edit-task' id='${id}'>Edit</button>
+            <button type='button' class='btn-edit-task btn-edit-fob-task' id='${id}'>Edit</button>
           </div>
 
           <div class='mission-task-progress-form-container hide'>
@@ -267,14 +252,14 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
       })
     };
 
-    // const arrayOfBtnEditTask = document.getElementsByClassName('btn-edit-task'); // Probably need to move this out of just the mission side, because it applies to both mission and FOB tasks.
-    // for (let i = 0; i < arrayOfBtnEditTask.length && i < 200; i++) {
-    //   arrayOfBtnEditTask[i].addEventListener('click', (e) => {
-    //     e.preventDefault();
-    //     e.target.parentNode.classList.toggle('hide');
-    //     e.target.parentNode.nextElementSibling.classList.toggle('hide');
-    //   })
-    // }
+    const arrayOfBtnEditTask = document.getElementsByClassName('btn-edit-fob-task'); // Probably need to move this out of just the mission side, because it applies to both mission and FOB tasks.
+    for (let i = 0; i < arrayOfBtnEditTask.length && i < 200; i++) {
+      arrayOfBtnEditTask[i].addEventListener('click', (e) => {
+        e.preventDefault();
+        e.target.parentNode.classList.toggle('hide');
+        e.target.parentNode.nextElementSibling.classList.toggle('hide');
+      })
+    }
 
     const arrayOfFormProgressInputFOB = document.getElementsByClassName('form-progress-input-fob');
     for (let i = 0; i < arrayOfFormProgressInputFOB.length && i < 200; i++) {
@@ -286,7 +271,7 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
         let progressTotal = data.get('progressTotal');
         let taskId = e.target.dataset.taskId;
 
-        console.log(progressCurrent, progressTotal, taskId);
+        // console.log(progressCurrent, progressTotal, taskId); // For error and information checking.
 
         updateDoc(FOBDocRef, {
           [taskId+".progress.progressCurrent"] : progressCurrent,
@@ -301,7 +286,7 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
 
 
   } else {
-    console.log('The DMZ FOB TO DO Doc Does Not Exist.  Creating Now.')
+    // console.log('The DMZ FOB TO DO Doc Does Not Exist.  Creating Now.') // For error and information checking.
     await setDoc(doc(database, 'users', uid, 'to-do-trackers', 'DMZToDoFOB'), dataDMZToDoFOB)
   };
 }
@@ -382,10 +367,10 @@ onAuthStateChanged(auth, user => {
       });
     }
   } else if (toDoMainMissionsContainer) { // Might add second parameter check:  if the page needs a required sign in to work, open this.
-    console.log('to do page, and no user found triggered');
+    // console.log('to do page, and no user found triggered');
     logInRequiredFunction();
   } else {
-    console.log('user not logged in, this is triggered from to-do.js for pages that is not the to do page.')
+    // console.log('user not logged in, this is triggered from to-do.js for pages that is not the to do page.')
   }
 })
 
