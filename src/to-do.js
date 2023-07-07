@@ -51,7 +51,12 @@ export const populateMissionToDoLists = async (missionDoc, missionDocRef, databa
 
     let missionObj = missionDoc.data();
 
-    for (let [key, value] of Object.entries(missionObj)) { // for loop which loops through each object in the mission tasks doc.
+    let objSorted = Object.entries(missionObj).sort((a, b) => a[0].localeCompare(b[0]));
+
+    for (let [key, value] of objSorted) { // for loop that is already sorted and creates the list in the DOM.
+
+    // This is the original with object.entries
+    // for (let [key, value] of Object.entries(missionObj)) { // for loop which loops through each object in the mission tasks doc.
       let id = value.taskUID;
       let task = value.task;
       let complete = value.complete;
@@ -185,8 +190,15 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
     archivedFOBToDoContainer.innerHTML = "";
   
     let FOBObj = FOBDoc.data();
-  
-    for (let [key, value] of Object.entries(FOBObj)) { // for loop which loops through each object in the mission tasks doc.
+
+    // sorts object descending (oldest first beacuse it has the smallest number?  z > a, 9 > 1)
+    let objSorted = Object.entries(FOBObj).sort((a, b) => a[0].localeCompare(b[0]));
+
+    for (let [key, value] of objSorted) { // For loop which takes the sorted object and creates the list in the DOM.
+
+    // Original, don't fuck with this.
+    
+    // for (let [key, value] of Object.entries(FOBObj)) { // for loop which loops through each object in the mission tasks doc.
       let id = value.taskUID;
       let task = value.task;
       let complete = value.complete;
