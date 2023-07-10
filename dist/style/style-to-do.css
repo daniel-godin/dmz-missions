@@ -53,7 +53,7 @@ label {
   height: min-content;
   width: 100%;
   display: grid;
-  row-gap: 3px;
+  row-gap: 5px;
 
 
   border: 1px dashed blue;
