@@ -5,7 +5,6 @@ import {
   connectAuthEmulator,
   onAuthStateChanged,
   signOut,
-  
 } from "firebase/auth";
 import { 
   getFirestore,
@@ -26,17 +25,14 @@ import {
 import { dataDmzStandardMissionsS4 } from "./data/data-dmz-standard-missions-s4"; // DMZ Missions Import
 import { dataDmzFobS4 } from "./data/data-dmz-fob-s4"; // DMZ Forward Operating Base (FOB) Import
 
-import { addDMZMissionsS3ObjToDb, } from "./db-creation";
-
 import { toDoMainMissionsContainer, toDoMainFobContainer, populateToDoLists, addDMZToDoDocs, refreshTaskPage, populateMissionToDoLists, populateFOBToDoLists, toDoEventListeners, } from "./to-do";
 
 import {
-  loadPage,
   fullCreateMissionGridLoggedIn, fullCreateMissionGridLoggedOut,
-  profileLinkContainer,
   dmzMissionsContainer,
-  showLoginState,
-} from "./dmz-missions-ui";
+} from "./dmz-missions";
+
+import { loadPage } from "./ui";
 
 import { auth, db } from "./firebase";
 
@@ -54,33 +50,38 @@ onAuthStateChanged(auth, user => {
   if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
     const userID = user.uid;
     loadPage(user); // Should I put this into the onSnapshot or other listener position?
-    const docRefMissionTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoMissions');
-    const docRefFOBTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoFOB');
     
+    const docRefMissionGridS4 = doc(db, 'users', user.uid, 'mw2-trackers', 'DMZStandardMissionsS4')
+    onSnapshot(docRefMissionGridS4, (snapshot) => {
+      if (dmzMissionsContainer) {
+        // If this container exists, it means the user is on the dmzMissions page.  Then it should trigger the function which populates the DOM.
+        fullCreateMissionGridLoggedIn(snapshot, docRefMissionGridS4, db, userID);
+      }
+    })
+
+    const docRefMissionTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoMissions');
     onSnapshot(docRefMissionTaskDoc, (snapshot) => {
       if (toDoMainMissionsContainer) {
         populateMissionToDoLists(snapshot, docRefMissionTaskDoc, db, userID);
       };
     })
+
+    const docRefFOBTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoFOB');
     onSnapshot(docRefFOBTaskDoc, (snapshot) => {
       if (toDoMainMissionsContainer) {
         populateFOBToDoLists(snapshot, docRefFOBTaskDoc, db, userID);
       };
     })
 
-    // if (dmzMissionsContainer) {
-    //   const dmzMissionsS3DocRefLoggedIn = doc(db, 'users', userDoc, 'mw2-trackers', 'dmzMissionsS3');
-    //   fullCreateMissionGridLoggedIn(dmzMissionsS3DocRefLoggedIn);
-    // };
-  }
-  else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
+  } else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
     loadPage(); // No user sent as a parameter.
+    if (dmzMissionsContainer) {
+      fullCreateMissionGridLoggedOut(dataDmzStandardMissionsS4);
+    }
   }
 })
 
 
 // Testing:
-
-
 
 // console.log('INDEX.JS CHECK:  END TRIGGERED');

@@ -11,11 +11,7 @@ import {
   AuthErrorCodes,
   signOut,
   onAuthStateChanged,
-
 } from "firebase/auth";
-
-import { dmzMissionsS3, dmzMissionsS4, dataDmzStandardMissionsS4 } from "./data/data-dmz-standard-missions-s4";
-import { btnSignOut } from "./nav";
 
 // DOM Element Variables:
 export const authContainer = document.getElementById('authContainer');
@@ -78,7 +74,6 @@ const createUserDocs = async (user) => { // Creates an initial setup for each us
     userRegion: "",
   }
   await setDoc(doc(db, 'users', user.uid), userDocObj ); // Creates a doc in db > users > (unique user id [PRIVATE DOC])
-  // await setDoc(doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'), dmzMissionsS3); // Creates a doc in db > users > UID > mw2-trackers > dmzMissionsS3 (This is the doc that tracks a users Mission Progress in Season 3)
 }
 
 // Log in Function:
