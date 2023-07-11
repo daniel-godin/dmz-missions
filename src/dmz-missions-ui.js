@@ -1,31 +1,6 @@
-import { AuthErrorCodes } from "firebase/auth";
-
 import { doc, getDoc, getDocs, onSnapshot, updateDoc, setDoc, } from "firebase/firestore";
 import { dataDmzStandardMissionsS4 } from "./data/data-dmz-standard-missions-s4";
 import { dataDmzFobS4 } from "./data/data-dmz-fob-s4";
-
-import { loadNavigation, navContainer } from "./nav";
-
-export const arrayOfMissionTitles = document.getElementsByClassName('mission-title');
-export const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
-
-export const authContainer = document.getElementById('authContainer');
-export const txtEmail = document.getElementById('txtEmail');
-export const txtPassword = document.getElementById('txtPassword');
-export const txtName = document.getElementById('txtName');
-
-export const errorContainer = document.getElementById('errorContainer');
-export const errorMessage = document.getElementById('errorMessage');
-
-export const btnLogIn = document.getElementById('btnLogIn');
-export const btnSignUp = document.getElementById('btnSignUp');
-export const btnHandleGoogle = document.getElementById('btnHandleGoogle');
-
-export const btnAuthLink = document.getElementById('btnAuthLink');
-
-export const dmzPageHeader = document.getElementById('dmzPageHeader');
-
-export const profileLinkContainer = document.getElementById('profileLinkContainer');
 
 export const dmzMissionsContainer = document.getElementById('dmzMissionsContainer');
 
@@ -243,21 +218,21 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
 
 // TESTING:
 
-export const createMissionGrid = async () => {
-  // Goal:  First, figure out if user is logged in or logged out.
-  // 2:  If user logged out... use createMissionGridDOM with logged-out parameter to create the mission grid DOM.
-  // 3:  if user logged in... use createMissionGridDOM with logged-in parameter to create the mission grid DOM.
+// export const createMissionGrid = async () => {
+//   // Goal:  First, figure out if user is logged in or logged out.
+//   // 2:  If user logged out... use createMissionGridDOM with logged-out parameter to create the mission grid DOM.
+//   // 3:  if user logged in... use createMissionGridDOM with logged-in parameter to create the mission grid DOM.
 
-  // Basically, I want to combine BOTH logged in and logged out functions into one easy function.
+//   // Basically, I want to combine BOTH logged in and logged out functions into one easy function.
 
-  // Project for later.  Need to make progress on other things for now.
-
-
+//   // Project for later.  Need to make progress on other things for now.
 
 
 
 
 
 
-}
+
+
+// }
 
