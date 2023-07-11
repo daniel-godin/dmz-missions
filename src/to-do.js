@@ -6,7 +6,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 
 import { dataDMZToDoMissions, dataDMZToDoFOB } from './data/data-dmz-to-do-s4';
 
-import { logInRequiredFunction } from './dmz-missions-ui';
+import { logInRequiredFunction } from './ui';
 
 export const toDoMainMissionsContainer = document.getElementById('toDoMainMissionsContainer');
 export const toDoMainFobContainer = document.getElementById('toDoMainFobContainer');

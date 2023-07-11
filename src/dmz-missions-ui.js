@@ -63,50 +63,50 @@ export const fullCreateMissionGridLoggedOut = async (obj) => { // THIS IS THE NO
     let title = value.title;
     let id = value.id;
       if (id >= 10101 && id <=10107) {
-        createMissionGrid("logged-out", blackMousTier1Container, value);
+        createMissionGridDOM("logged-out", blackMousTier1Container, value);
       } else if (id >= 10201 && id <=10207) {
-        createMissionGrid("logged-out", blackMousTier2Container, value);
+        createMissionGridDOM("logged-out", blackMousTier2Container, value);
       } else if (id >= 10301 && id <=10307) {
-        createMissionGrid("logged-out", blackMousTier3Container, value);
+        createMissionGridDOM("logged-out", blackMousTier3Container, value);
       } else if (id >= 10401 && id <=10407) {
-        createMissionGrid("logged-out", blackMousTier4Container, value);
+        createMissionGridDOM("logged-out", blackMousTier4Container, value);
       } else if (id >= 10501 && id <=10507) {
-        createMissionGrid("logged-out", blackMousTier5Container, value);
+        createMissionGridDOM("logged-out", blackMousTier5Container, value);
       } else if (id >= 20101 && id <=20107) {
-        createMissionGrid("logged-out", whiteLotusTier1Container, value);
+        createMissionGridDOM("logged-out", whiteLotusTier1Container, value);
       } else if (id >= 20201 && id <=20207) {
-        createMissionGrid("logged-out", whiteLotusTier2Container, value);
+        createMissionGridDOM("logged-out", whiteLotusTier2Container, value);
       } else if (id >= 20301 && id <=20307) {
-        createMissionGrid("logged-out", whiteLotusTier3Container, value);
+        createMissionGridDOM("logged-out", whiteLotusTier3Container, value);
       } else if (id >= 20401 && id <=20407) {
-        createMissionGrid("logged-out", whiteLotusTier4Container, value);
+        createMissionGridDOM("logged-out", whiteLotusTier4Container, value);
       } else if (id >= 20501 && id <=20507) {
-        createMissionGrid("logged-out", whiteLotusTier5Container, value);
+        createMissionGridDOM("logged-out", whiteLotusTier5Container, value);
       } else if (id >= 30101 && id <=30107) {
-        createMissionGrid("logged-out", phalanxTier1Container, value);
+        createMissionGridDOM("logged-out", phalanxTier1Container, value);
       } else if (id >= 30201 && id <=30207) {
-        createMissionGrid("logged-out", phalanxTier2Container, value);
+        createMissionGridDOM("logged-out", phalanxTier2Container, value);
       } else if (id >= 30301 && id <=30307) {
-        createMissionGrid("logged-out", phalanxTier3Container, value);
+        createMissionGridDOM("logged-out", phalanxTier3Container, value);
       } else if (id >= 30401 && id <=30407) {
-        createMissionGrid("logged-out", phalanxTier4Container, value);
+        createMissionGridDOM("logged-out", phalanxTier4Container, value);
       } else if (id >= 30501 && id <=30507) {
-        createMissionGrid("logged-out", phalanxTier5Container, value);
+        createMissionGridDOM("logged-out", phalanxTier5Container, value);
       } else if (id >= 40101 && id <=40107) {
-        createMissionGrid("logged-out", crownTier1Container, value);
+        createMissionGridDOM("logged-out", crownTier1Container, value);
       } else if (id >= 40201 && id <=40207) {
-        createMissionGrid("logged-out", crownTier2Container, value);
+        createMissionGridDOM("logged-out", crownTier2Container, value);
       } else if (id >= 40301 && id <=40307) {
-        createMissionGrid("logged-out", crownTier3Container, value);
+        createMissionGridDOM("logged-out", crownTier3Container, value);
       } else if (id >= 40401 && id <=40407) {
-        createMissionGrid("logged-out", crownTier4Container, value);
+        createMissionGridDOM("logged-out", crownTier4Container, value);
       } else if (id >= 40501 && id <=40507) {
-        createMissionGrid("logged-out", crownTier5Container, value);
+        createMissionGridDOM("logged-out", crownTier5Container, value);
       } 
   } 
 }
 
-// New Version:  Testing:
+// Function to create the full mission grid if the user is logged in.
 export const fullCreateMissionGridLoggedIn = async (userMissionsGridDoc, userMissionsGridDocRef, database, uid) => { // THIS IS THE LOGGED IN VERSION.  THE CHECKBOXES ARE CREATED.
   if (userMissionsGridDoc.exists()) { // Checks to see if the Missions To-Do Doc exists.  If it does not, it creates it, if it does, it does nothing.
     console.log('user mission grid doc exists');
@@ -116,45 +116,45 @@ export const fullCreateMissionGridLoggedIn = async (userMissionsGridDoc, userMis
       let id = value.id;
       let complete = value.complete;
         if (id >= 10101 && id <=10107) {
-          createMissionGrid("logged-in", blackMousTier1Container, value);
+          createMissionGridDOM("logged-in", blackMousTier1Container, value);
         } else if (id >= 10201 && id <=10207) {
-          createMissionGrid("logged-in", blackMousTier2Container, value);
+          createMissionGridDOM("logged-in", blackMousTier2Container, value);
         } else if (id >= 10301 && id <=10307) {
-          createMissionGrid("logged-in", blackMousTier3Container, value);
+          createMissionGridDOM("logged-in", blackMousTier3Container, value);
         } else if (id >= 10401 && id <=10407) {
-          createMissionGrid("logged-in", blackMousTier4Container, value);
+          createMissionGridDOM("logged-in", blackMousTier4Container, value);
         } else if (id >= 10501 && id <=10507) {
-          createMissionGrid("logged-in", blackMousTier5Container, value);
+          createMissionGridDOM("logged-in", blackMousTier5Container, value);
         } else if (id >= 20101 && id <=20107) {
-          createMissionGrid("logged-in", whiteLotusTier1Container, value);
+          createMissionGridDOM("logged-in", whiteLotusTier1Container, value);
         } else if (id >= 20201 && id <=20207) {
-          createMissionGrid("logged-in", whiteLotusTier2Container, value);
+          createMissionGridDOM("logged-in", whiteLotusTier2Container, value);
         } else if (id >= 20301 && id <=20307) {
-          createMissionGrid("logged-in", whiteLotusTier3Container, value);
+          createMissionGridDOM("logged-in", whiteLotusTier3Container, value);
         } else if (id >= 20401 && id <=20407) {
-          createMissionGrid("logged-in", whiteLotusTier4Container, value);
+          createMissionGridDOM("logged-in", whiteLotusTier4Container, value);
         } else if (id >= 20501 && id <=20507) {
-          createMissionGrid("logged-in", whiteLotusTier5Container, value);
+          createMissionGridDOM("logged-in", whiteLotusTier5Container, value);
         } else if (id >= 30101 && id <=30107) {
-          createMissionGrid("logged-in", phalanxTier1Container, value);
+          createMissionGridDOM("logged-in", phalanxTier1Container, value);
         } else if (id >= 30201 && id <=30207) {
-          createMissionGrid("logged-in", phalanxTier2Container, value);
+          createMissionGridDOM("logged-in", phalanxTier2Container, value);
         } else if (id >= 30301 && id <=30307) {
-          createMissionGrid("logged-in", phalanxTier3Container, value);
+          createMissionGridDOM("logged-in", phalanxTier3Container, value);
         } else if (id >= 30401 && id <=30407) {
-          createMissionGrid("logged-in", phalanxTier4Container, value);
+          createMissionGridDOM("logged-in", phalanxTier4Container, value);
         } else if (id >= 30501 && id <=30507) {
-          createMissionGrid("logged-in", phalanxTier5Container, value);
+          createMissionGridDOM("logged-in", phalanxTier5Container, value);
         } else if (id >= 40101 && id <=40107) {
-          createMissionGrid("logged-in", crownTier1Container, value);
+          createMissionGridDOM("logged-in", crownTier1Container, value);
         } else if (id >= 40201 && id <=40207) {
-          createMissionGrid("logged-in", crownTier2Container, value);
+          createMissionGridDOM("logged-in", crownTier2Container, value);
         } else if (id >= 40301 && id <=40307) {
-          createMissionGrid("logged-in", crownTier3Container, value);
+          createMissionGridDOM("logged-in", crownTier3Container, value);
         } else if (id >= 40401 && id <=40407) {
-          createMissionGrid("logged-in", crownTier4Container, value);
+          createMissionGridDOM("logged-in", crownTier4Container, value);
         } else if (id >= 40501 && id <=40507) {
-          createMissionGrid("logged-in", crownTier5Container, value);
+          createMissionGridDOM("logged-in", crownTier5Container, value);
         } 
     } 
 
@@ -178,7 +178,7 @@ export const fullCreateMissionGridLoggedIn = async (userMissionsGridDoc, userMis
   }
 }
 
-const createMissionGrid = async (status, tierContainer, objValue) => {
+const createMissionGridDOM = async (status, tierContainer, objValue) => {
   // Takes in:
   // tierContainer, which is the place to put the created HTML
   // objValue, which takes in each objects value from either hard coded JS object, or the user's mission grid doc.
@@ -234,30 +234,14 @@ const createMissionGrid = async (status, tierContainer, objValue) => {
       }
     }
   
-
   } else {
     console.log('error, createMissionGrid not working properly.')
   }
-
-}
-
-export const logInRequiredFunction = async () => {
-  // const logInRequiredContainer = document.querySelector('logInRequiredContainer')
-  const logInRequiredContainer = document.getElementById('loggedInConfirmContainer');
-  // const contentContainer = document.getElementById('contentContainer');
-
-  const contentContainer = document.getElementsByClassName('main-content-container');
-
-  logInRequiredContainer.style.display = 'flex';
-  contentContainer[0].style.display = 'none';
-
-  logInRequiredContainer.insertAdjacentHTML('afterbegin', `
-    <h2>This page requires an account to work correctly.  
-    Please <a href='./auth.html'>Log In</a> or <a href='./sign-up.html'>Sign Up</a>.</h2>
-  `)
 }
 
 // console.log('End of dmz-missions-ui triggered');
 
 // TESTING:
+
+
 
