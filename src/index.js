@@ -30,7 +30,7 @@ import { toDoMainMissionsContainer, toDoMainFobContainer, populateToDoLists, add
 import {
   fullCreateMissionGridLoggedIn, fullCreateMissionGridLoggedOut,
   dmzMissionsContainer,
-} from "./dmz-missions-ui";
+} from "./dmz-missions";
 
 import { loadPage } from "./ui";
 
