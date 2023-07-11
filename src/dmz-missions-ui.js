@@ -32,41 +32,29 @@ export const profileLinkContainer = document.getElementById('profileLinkContaine
 
 export const dmzMissionsContainer = document.getElementById('dmzMissionsContainer');
 
-export const redactedTier1Container = document.getElementById('redactedTier1MissionsContainer');
-export const redactedTier2Container = document.getElementById('redactedTier2MissionsContainer');
-export const redactedTier3Container = document.getElementById('redactedTier3MissionsContainer');
-export const redactedTier4Container = document.getElementById('redactedTier4MissionsContainer');
-export const redactedTier5Container = document.getElementById('redactedTier5MissionsContainer');
+const blackMousTier1Container = document.getElementById('blackMousTier1MissionsContainer');
+const blackMousTier2Container = document.getElementById('blackMousTier2MissionsContainer');
+const blackMousTier3Container = document.getElementById('blackMousTier3MissionsContainer');
+const blackMousTier4Container = document.getElementById('blackMousTier4MissionsContainer');
+const blackMousTier5Container = document.getElementById('blackMousTier5MissionsContainer');
 
-export const whiteLotusTier1Container = document.getElementById('whiteLotusTier1MissionsContainer');
-export const whiteLotusTier2Container = document.getElementById('whiteLotusTier2MissionsContainer');
-export const whiteLotusTier3Container = document.getElementById('whiteLotusTier3MissionsContainer');
-export const whiteLotusTier4Container = document.getElementById('whiteLotusTier4MissionsContainer');
-export const whiteLotusTier5Container = document.getElementById('whiteLotusTier5MissionsContainer');
+const whiteLotusTier1Container = document.getElementById('whiteLotusTier1MissionsContainer');
+const whiteLotusTier2Container = document.getElementById('whiteLotusTier2MissionsContainer');
+const whiteLotusTier3Container = document.getElementById('whiteLotusTier3MissionsContainer');
+const whiteLotusTier4Container = document.getElementById('whiteLotusTier4MissionsContainer');
+const whiteLotusTier5Container = document.getElementById('whiteLotusTier5MissionsContainer');
 
-export const legionTier1Container = document.getElementById('legionTier1MissionsContainer');
-export const legionTier2Container = document.getElementById('legionTier2MissionsContainer');
-export const legionTier3Container = document.getElementById('legionTier3MissionsContainer');
-export const legionTier4Container = document.getElementById('legionTier4MissionsContainer');
-export const legionTier5Container = document.getElementById('legionTier5MissionsContainer');
+const crownTier1Container = document.getElementById('crownTier1MissionsContainer');
+const crownTier2Container = document.getElementById('crownTier2MissionsContainer');
+const crownTier3Container = document.getElementById('crownTier3MissionsContainer');
+const crownTier4Container = document.getElementById('crownTier4MissionsContainer');
+const crownTier5Container = document.getElementById('crownTier5MissionsContainer');
 
-export const blackMousTier1Container = document.getElementById('blackMousTier1MissionsContainer');
-export const blackMousTier2Container = document.getElementById('blackMousTier2MissionsContainer');
-export const blackMousTier3Container = document.getElementById('blackMousTier3MissionsContainer');
-export const blackMousTier4Container = document.getElementById('blackMousTier4MissionsContainer');
-export const blackMousTier5Container = document.getElementById('blackMousTier5MissionsContainer');
-
-export const crownTier1Container = document.getElementById('crownTier1MissionsContainer');
-export const crownTier2Container = document.getElementById('crownTier2MissionsContainer');
-export const crownTier3Container = document.getElementById('crownTier3MissionsContainer');
-export const crownTier4Container = document.getElementById('crownTier4MissionsContainer');
-export const crownTier5Container = document.getElementById('crownTier5MissionsContainer');
-
-export const phalanxTier1Container = document.getElementById('phalanxTier1MissionsContainer');
-export const phalanxTier2Container = document.getElementById('phalanxTier2MissionsContainer');
-export const phalanxTier3Container = document.getElementById('phalanxTier3MissionsContainer');
-export const phalanxTier4Container = document.getElementById('phalanxTier4MissionsContainer');
-export const phalanxTier5Container = document.getElementById('phalanxTier5MissionsContainer');
+const phalanxTier1Container = document.getElementById('phalanxTier1MissionsContainer');
+const phalanxTier2Container = document.getElementById('phalanxTier2MissionsContainer');
+const phalanxTier3Container = document.getElementById('phalanxTier3MissionsContainer');
+const phalanxTier4Container = document.getElementById('phalanxTier4MissionsContainer');
+const phalanxTier5Container = document.getElementById('phalanxTier5MissionsContainer');
 
 
 // console.log('Beginning of dmz-missions-ui triggered.  After variables'); // For Testing Purposes
