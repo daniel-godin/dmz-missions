@@ -95,6 +95,4 @@ onAuthStateChanged(auth, user => {
 
 // Testing:
 
-
-
 // console.log('INDEX.JS CHECK:  END TRIGGERED');

@@ -9,9 +9,6 @@ import { loadNavigation, navContainer } from "./nav";
 export const arrayOfMissionTitles = document.getElementsByClassName('mission-title');
 export const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
 
-// export const navSignedIn = document.getElementById('navSignedIn');
-// export const navSignedOut = document.getElementById('navSignedOut');
-
 export const authContainer = document.getElementById('authContainer');
 export const txtEmail = document.getElementById('txtEmail');
 export const txtPassword = document.getElementById('txtPassword');
@@ -119,15 +116,15 @@ export const fullCreateMissionGridLoggedIn = async (userMissionsGridDoc, userMis
       let id = value.id;
       let complete = value.complete;
         if (id >= 10101 && id <=10107) {
-          createMissionGridLoggedIn(redactedTier1Container, value);
+          createMissionGridLoggedIn(blackMousTier1Container, value);
         } else if (id >= 10201 && id <=10207) {
-          createMissionGridLoggedIn(redactedTier2Container, value);
+          createMissionGridLoggedIn(blackMousTier2Container, value);
         } else if (id >= 10301 && id <=10307) {
-          createMissionGridLoggedIn(redactedTier3Container, value);
+          createMissionGridLoggedIn(blackMousTier3Container, value);
         } else if (id >= 10401 && id <=10407) {
-          createMissionGridLoggedIn(redactedTier4Container, value);
+          createMissionGridLoggedIn(blackMousTier4Container, value);
         } else if (id >= 10501 && id <=10507) {
-          createMissionGridLoggedIn(redactedTier5Container, value);
+          createMissionGridLoggedIn(blackMousTier5Container, value);
         } else if (id >= 20101 && id <=20107) {
           createMissionGridLoggedIn(whiteLotusTier1Container, value);
         } else if (id >= 20201 && id <=20207) {
@@ -139,41 +136,30 @@ export const fullCreateMissionGridLoggedIn = async (userMissionsGridDoc, userMis
         } else if (id >= 20501 && id <=20507) {
           createMissionGridLoggedIn(whiteLotusTier5Container, value);
         } else if (id >= 30101 && id <=30107) {
-          createMissionGridLoggedIn(legionTier1Container, value);
+          createMissionGridLoggedIn(phalanxTier1Container, value);
         } else if (id >= 30201 && id <=30207) {
-          createMissionGridLoggedIn(legionTier2Container, value);
+          createMissionGridLoggedIn(phalanxTier2Container, value);
         } else if (id >= 30301 && id <=30307) {
-          createMissionGridLoggedIn(legionTier3Container, value);
+          createMissionGridLoggedIn(phalanxTier3Container, value);
         } else if (id >= 30401 && id <=30407) {
-          createMissionGridLoggedIn(legionTier4Container, value);
+          createMissionGridLoggedIn(phalanxTier4Container, value);
         } else if (id >= 30501 && id <=30507) {
-          createMissionGridLoggedIn(legionTier5Container, value);
+          createMissionGridLoggedIn(phalanxTier5Container, value);
         } else if (id >= 40101 && id <=40107) {
-          createMissionGridLoggedIn(blackMousTier1Container, value);
-        } else if (id >= 40201 && id <=40207) {
-          createMissionGridLoggedIn(blackMousTier2Container, value);
-        } else if (id >= 40301 && id <=40307) {
-          createMissionGridLoggedIn(blackMousTier3Container, value);
-        } else if (id >= 40401 && id <=40407) {
-          createMissionGridLoggedIn(blackMousTier4Container, value);
-        } else if (id >= 40501 && id <=40507) {
-          createMissionGridLoggedIn(blackMousTier5Container, value);
-        } else if (id >= 50101 && id <=50107) {
           createMissionGridLoggedIn(crownTier1Container, value);
-        } else if (id >= 50201 && id <=50207) {
+        } else if (id >= 40201 && id <=40207) {
           createMissionGridLoggedIn(crownTier2Container, value);
-        } else if (id >= 50301 && id <=50307) {
+        } else if (id >= 40301 && id <=40307) {
           createMissionGridLoggedIn(crownTier3Container, value);
-        } else if (id >= 50401 && id <=50407) {
+        } else if (id >= 40401 && id <=40407) {
           createMissionGridLoggedIn(crownTier4Container, value);
-        } else if (id >= 50501 && id <=50507) {
+        } else if (id >= 40501 && id <=40507) {
           createMissionGridLoggedIn(crownTier5Container, value);
         } 
-    }
+    } 
 
     // This adds eventlistener and update Doc to all the checkboxes.
     const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
-
     for (let i = 0; i < arrayOfMissionCheckboxes.length; i++) {
       arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
         // e.preventDefault();
@@ -185,90 +171,12 @@ export const fullCreateMissionGridLoggedIn = async (userMissionsGridDoc, userMis
         });
       })
     }  
+
   } else { // If the user's mission grid doc doe snot exists, it creates it.  This entire function should only trigger if the user is detected.  If user is not detected, it should trigger the non-logged in version, but later... I'd like to combine this all.
     console.log('Users mission grid doc does not exist.  Creating now');
     await setDoc(doc(database, 'users', uid, 'mw2-trackers', 'DMZStandardMissionsS4'), dataDmzStandardMissionsS4);
   }
 }
-
-
-// export function fullCreateMissionGridLoggedIn (docRef) { // THIS IS THE LOGGED IN VERSION.  THE CHECKBOXES ARE CREATED.
-//   getDoc(docRef)
-//   .then((doc) => {
-//     let obj = doc.data();
-//     for (let [key, value] of Object.entries(obj)) {
-//       let title = value.title;
-//       let id = value.id;
-//       let complete = value.complete;
-//         if (id >= 10101 && id <=10107) {
-//           createMissionGridLoggedIn(redactedTier1Container, value);
-//         } else if (id >= 10201 && id <=10207) {
-//           createMissionGridLoggedIn(redactedTier2Container, value);
-//         } else if (id >= 10301 && id <=10307) {
-//           createMissionGridLoggedIn(redactedTier3Container, value);
-//         } else if (id >= 10401 && id <=10407) {
-//           createMissionGridLoggedIn(redactedTier4Container, value);
-//         } else if (id >= 10501 && id <=10507) {
-//           createMissionGridLoggedIn(redactedTier5Container, value);
-//         } else if (id >= 20101 && id <=20107) {
-//           createMissionGridLoggedIn(whiteLotusTier1Container, value);
-//         } else if (id >= 20201 && id <=20207) {
-//           createMissionGridLoggedIn(whiteLotusTier2Container, value);
-//         } else if (id >= 20301 && id <=20307) {
-//           createMissionGridLoggedIn(whiteLotusTier3Container, value);
-//         } else if (id >= 20401 && id <=20407) {
-//           createMissionGridLoggedIn(whiteLotusTier4Container, value);
-//         } else if (id >= 20501 && id <=20507) {
-//           createMissionGridLoggedIn(whiteLotusTier5Container, value);
-//         } else if (id >= 30101 && id <=30107) {
-//           createMissionGridLoggedIn(legionTier1Container, value);
-//         } else if (id >= 30201 && id <=30207) {
-//           createMissionGridLoggedIn(legionTier2Container, value);
-//         } else if (id >= 30301 && id <=30307) {
-//           createMissionGridLoggedIn(legionTier3Container, value);
-//         } else if (id >= 30401 && id <=30407) {
-//           createMissionGridLoggedIn(legionTier4Container, value);
-//         } else if (id >= 30501 && id <=30507) {
-//           createMissionGridLoggedIn(legionTier5Container, value);
-//         } else if (id >= 40101 && id <=40107) {
-//           createMissionGridLoggedIn(blackMousTier1Container, value);
-//         } else if (id >= 40201 && id <=40207) {
-//           createMissionGridLoggedIn(blackMousTier2Container, value);
-//         } else if (id >= 40301 && id <=40307) {
-//           createMissionGridLoggedIn(blackMousTier3Container, value);
-//         } else if (id >= 40401 && id <=40407) {
-//           createMissionGridLoggedIn(blackMousTier4Container, value);
-//         } else if (id >= 40501 && id <=40507) {
-//           createMissionGridLoggedIn(blackMousTier5Container, value);
-//         } else if (id >= 50101 && id <=50107) {
-//           createMissionGridLoggedIn(crownTier1Container, value);
-//         } else if (id >= 50201 && id <=50207) {
-//           createMissionGridLoggedIn(crownTier2Container, value);
-//         } else if (id >= 50301 && id <=50307) {
-//           createMissionGridLoggedIn(crownTier3Container, value);
-//         } else if (id >= 50401 && id <=50407) {
-//           createMissionGridLoggedIn(crownTier4Container, value);
-//         } else if (id >= 50501 && id <=50507) {
-//           createMissionGridLoggedIn(crownTier5Container, value);
-//         } 
-//       }
-    
-//     // This adds eventlistener and update Doc to all the checkboxes.
-//     const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
-
-//     for (let i = 0; i < arrayOfMissionCheckboxes.length; i++) {
-//       arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
-//         // e.preventDefault();
-//         let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
-//         let checkId = Number(e.target.id); // Grabs the event target's id property, makes it into a Number (integar) from a string.
-//         // console.log('checkbox listener working');
-//         // const docRefS3 = doc(db, 'users', user.uid, 'mw2-trackers', 'dmzMissionsS3'); // Document Reference to a users Season 3 dmz Missions Doc
-//         updateDoc(docRef, {
-//           [checkId+".complete"] : checked, // checkId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
-//         });
-//     })}
-//   })
-// }
 
 export function createMissionGridLoggedOut (tierContainer, title) {
   tierContainer.insertAdjacentHTML('beforeend', `
