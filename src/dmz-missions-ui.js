@@ -243,5 +243,21 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
 
 // TESTING:
 
+export const createMissionGrid = async () => {
+  // Goal:  First, figure out if user is logged in or logged out.
+  // 2:  If user logged out... use createMissionGridDOM with logged-out parameter to create the mission grid DOM.
+  // 3:  if user logged in... use createMissionGridDOM with logged-in parameter to create the mission grid DOM.
 
+  // Basically, I want to combine BOTH logged in and logged out functions into one easy function.
+
+  // Project for later.  Need to make progress on other things for now.
+
+
+
+
+
+
+
+
+}
 
