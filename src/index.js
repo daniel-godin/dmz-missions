@@ -5,7 +5,6 @@ import {
   connectAuthEmulator,
   onAuthStateChanged,
   signOut,
-  
 } from "firebase/auth";
 import { 
   getFirestore,
@@ -25,8 +24,6 @@ import {
 
 import { dataDmzStandardMissionsS4 } from "./data/data-dmz-standard-missions-s4"; // DMZ Missions Import
 import { dataDmzFobS4 } from "./data/data-dmz-fob-s4"; // DMZ Forward Operating Base (FOB) Import
-
-import { addDMZMissionsS3ObjToDb, } from "./db-creation";
 
 import { toDoMainMissionsContainer, toDoMainFobContainer, populateToDoLists, addDMZToDoDocs, refreshTaskPage, populateMissionToDoLists, populateFOBToDoLists, toDoEventListeners, } from "./to-do";
 
@@ -62,8 +59,6 @@ onAuthStateChanged(auth, user => {
       }
     })
 
-
-
     const docRefMissionTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoMissions');
     onSnapshot(docRefMissionTaskDoc, (snapshot) => {
       if (toDoMainMissionsContainer) {
@@ -78,12 +73,6 @@ onAuthStateChanged(auth, user => {
       };
     })
 
-
-
-    // if (dmzMissionsContainer) {
-    //   const dmzMissionsS3DocRefLoggedIn = doc(db, 'users', userDoc, 'mw2-trackers', 'dmzMissionsS3');
-    //   fullCreateMissionGridLoggedIn(dmzMissionsS3DocRefLoggedIn);
-    // };
   } else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
     loadPage(); // No user sent as a parameter.
     if (dmzMissionsContainer) {
