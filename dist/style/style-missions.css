@@ -124,7 +124,6 @@ nav {
   height: min-content;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(2, 1fr); */
   gap: .5rem;
   border: 2px solid red;
   justify-self: center;

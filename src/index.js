@@ -31,12 +31,11 @@ import { addDMZMissionsS3ObjToDb, } from "./db-creation";
 import { toDoMainMissionsContainer, toDoMainFobContainer, populateToDoLists, addDMZToDoDocs, refreshTaskPage, populateMissionToDoLists, populateFOBToDoLists, toDoEventListeners, } from "./to-do";
 
 import {
-  loadPage,
   fullCreateMissionGridLoggedIn, fullCreateMissionGridLoggedOut,
-  profileLinkContainer,
   dmzMissionsContainer,
-  showLoginState,
 } from "./dmz-missions-ui";
+
+import { loadPage } from "./ui";
 
 import { auth, db } from "./firebase";
 
@@ -85,9 +84,11 @@ onAuthStateChanged(auth, user => {
     //   const dmzMissionsS3DocRefLoggedIn = doc(db, 'users', userDoc, 'mw2-trackers', 'dmzMissionsS3');
     //   fullCreateMissionGridLoggedIn(dmzMissionsS3DocRefLoggedIn);
     // };
-  }
-  else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
+  } else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
     loadPage(); // No user sent as a parameter.
+    if (dmzMissionsContainer) {
+      fullCreateMissionGridLoggedOut(dataDmzStandardMissionsS4);
+    }
   }
 })
 
