@@ -21,6 +21,10 @@
   /* Other Root Items */
 }
 
+p {
+  color: var(--color-font-color);
+}
+
 
 /* Class Selectors */
 
@@ -94,13 +98,25 @@
   gap: .5rem;
 }
 
+/* The logged in and out versions will need to be different.  Logged in includes checkboxes. */
 .mission-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5px;
+}
+
+.mission-header-container {
   display: flex;
   justify-content: space-between;
 }
 
 .mission-title {
   color: var(--color-font-color);
+  font-size: 1.1rem;
+}
+
+.mission-title:hover {
+  text-decoration: underline;
 }
 
 /* .mission-locked {
@@ -122,6 +138,28 @@
 
 .mission-progress-checkbox:checked {
   outline: 2px solid yellow;
+}
+
+.mission-details {
+  border: 1px dashed orange;
+}
+
+.objectives-container {
+  display: grid;
+  gap: 10px;
+  border: 1px dotted blue;
+  padding: 3px;
+}
+
+.objective-container {
+  display: grid;
+  grid-template-columns: minmax(15px, min-content) minmax(30px, min-content) 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.objective-text {
+  color: var(--color-font-color);
 }
 
 /* Keep This LAST -- Possibly use a unique toggle class for this particular page.

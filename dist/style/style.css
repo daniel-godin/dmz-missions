@@ -70,14 +70,6 @@ nav {
   justify-content: space-evenly;
 }
 
-#navSignedIn {
-
-}
-
-#navSignedOut {
-
-}
-
 .main-content-container {
   /* display: block  -- This should be chosen by each individual page's needs, like 2 columns, 5 columns etc. */
   width: 95%;

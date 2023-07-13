@@ -211,7 +211,9 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
 
     tierContainer.insertAdjacentHTML('beforeend', `
     <div class="mission-container">
-      <header class="mission-title">${title}</header>
+      <div class="mission-header-container">
+        <header class="mission-title">${title}</header>
+      </div>
       <div class='mission-details'>
         <div class='objectives-container'>
           <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
@@ -260,28 +262,36 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
       if (unlocked === true) {
         tierContainer.insertAdjacentHTML('beforeend', `
         <div class="mission-container">
-          <header class="mission-title">${title}</header>
-          <input type="checkbox" name="" id="${id}" class="mission-progress" checked>
+          <div class="mission-header-container">
+            <header class="mission-title">${title}</header>
+            <input type="checkbox" name="" id="${id}" class="mission-progress" checked>
+          </div>
         </div>`)
       } else if (unlocked === false) {
         tierContainer.insertAdjacentHTML('beforeend', `
         <div class="mission-container">
-          <header class="mission-title mission-locked">${title}</header>
-          <input type="checkbox" name="" id="${id}" class="mission-progress mission-locked-checkbox" checked>
+          <div class="mission-header-container">
+            <header class="mission-title mission-locked">${title}</header>
+            <input type="checkbox" name="" id="${id}" class="mission-progress mission-locked-checkbox" checked>
+          </div>
         </div>`)
       }
     } else {
       if (unlocked === true) {
         tierContainer.insertAdjacentHTML('beforeend', `
         <div class="mission-container">
-          <header class="mission-title">${title}</header>
-          <input type="checkbox" name="" id="${id}" class="mission-progress">
+          <div class="mission-header-container">
+            <header class="mission-title">${title}</header>
+            <input type="checkbox" name="" id="${id}" class="mission-progress">
+          </div>
         </div>`)
       } else if (unlocked === false) {
         tierContainer.insertAdjacentHTML('beforeend', `
         <div class="mission-container">
-          <header class="mission-title mission-locked">${title}</header>
-          <input type="checkbox" name="" id="${id}" class="mission-progress mission-locked-checkbox">
+          <div class="mission-header-container">
+            <header class="mission-title mission-locked">${title}</header>
+            <input type="checkbox" name="" id="${id}" class="mission-progress mission-locked-checkbox">
+          </div>
         </div>`)
       }
     }
