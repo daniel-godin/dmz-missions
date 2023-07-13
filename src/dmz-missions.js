@@ -79,6 +79,17 @@ export const fullCreateMissionGridLoggedOut = async (obj) => { // THIS IS THE NO
         createMissionGridDOM("logged-out", crownTier5Container, value);
       } 
   } 
+
+  // This adds an eventListener click to all mission titles.  Purpose is to show/hide mission details below each mission title.
+  const arrayOfMissionTitles = document.getElementsByClassName('mission-title');
+  for (let i = 0; i < arrayOfMissionTitles.length && i < 300; i++) {
+    arrayOfMissionTitles[i].addEventListener('click', (e) => {
+      e.target.parentNode.nextElementSibling.classList.toggle('hide');
+
+      //  e.target.parentNode.classList.toggle('hide');
+      //  e.target.parentNode.nextElementSibling.classList.toggle('hide');
+    })
+  }
 }
 
 // Function to create the full mission grid if the user is logged in.
@@ -167,11 +178,9 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
     let title = objValue.title;
     let description = objValue.description;
 
-    // console.table(objValue.objectives);
-    console.log(objValue.objectives.objective1.objectiveText);
+    // console.table(objValue.objectives); // For Testing Purposes
+    // console.log(objValue.objectives.objective1.objectiveText); // For Testing Purposes
     
-
-
     let objective1Text = objValue.objectives.objective1.objectiveText;
     let objective2Text = objValue.objectives.objective2.objectiveText;
     let objective3Text = objValue.objectives.objective3.objectiveText;
@@ -214,7 +223,7 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
       <div class="mission-header-container">
         <header class="mission-title">${title}</header>
       </div>
-      <div class='mission-details'>
+      <div class='mission-details hide'>
         <div class='objectives-container'>
           <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
   

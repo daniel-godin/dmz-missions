@@ -117,6 +117,7 @@ p {
 
 .mission-title:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 /* .mission-locked {
@@ -162,9 +163,8 @@ p {
   color: var(--color-font-color);
 }
 
-/* Keep This LAST -- Possibly use a unique toggle class for this particular page.
-/* .hidden {
-  /* class to hide content where applicable. 
-  /* display: none;
-  visibility: none; 
-} */
+/* Keep This LAST -- Possibly use a unique toggle class for this particular page. */
+.hide {
+  /* This class is for toggling display none to hide something from user or showing it. */
+  display: none; /* Default: display none.  When clicked by user changes to 'block' for now.  If I create a grid or flex, change it to that */
+}
