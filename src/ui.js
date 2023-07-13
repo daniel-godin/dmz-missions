@@ -5,12 +5,7 @@ export function loadPage(user) {
   if (user) {
     loadNavigation(user);
   } else {
-    if (dmzMissionsContainer) {
-      loadNavigation();
-      // fullCreateMissionGridLoggedOut(dmzMissionsS3);
-    } else {
-      loadNavigation();
-    }
+    loadNavigation();
   }
 }
 

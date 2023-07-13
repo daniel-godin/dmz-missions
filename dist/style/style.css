@@ -89,6 +89,10 @@ nav {
   padding: .5rem;
 }
 
+.main-page-header {
+  color: var(--color-font-color);
+}
+
 .log-in-required {
   border: 1px solid green;
   color: white;
@@ -97,26 +101,60 @@ nav {
   display: none;
 }
 
-#dmzPageHeader {
-  margin: 20px 0 20px 0;
-  justify-self: center;
-  display: flex;
-  justify-content: center;
+#indexWelcomeContainer {
+  display: grid;
+  width: 100%;
   align-items: center;
-  border: 1px solid pink;
-  border-radius: 10px;
-  background-color: lightpink;
-  width: 50%;
-  height: 40px;
-  padding: 2rem;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  row-gap: 1rem;
 }
 
-#dmzGridLastUpdated {
+.site-description {
   color: var(--color-font-color);
-  margin: 5px;
-  position: relative;
-  text-align: right;
-  padding-right: 5%;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  border: 1px solid salmon;
+  border-radius: 10px;
+}
+
+#indexContentLinks {
+  display: grid;
+  width: 100%;
+  /* Might need to have a min-max for columns, or possibly use flex to push them into a column if width is too small. */
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: min-content;
+  align-items: center;
+  justify-items: center;
+  list-style-type: none;
+  gap: 1rem;
+
+}
+
+.index-link-btn {
+  background-color: var(--color-btn-primary);
+  min-width: 100px;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: var(--color-secondary);
+  border-radius: 5px; 
+}
+
+/* .index-link-btn::after {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+} */
+
+.index-link-btn:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 7px 2px var(--color-btn-secondary);
+
+
 }
 
 #displayLoggedInContainer {
