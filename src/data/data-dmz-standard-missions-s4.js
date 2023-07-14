@@ -169,14 +169,20 @@ export const dataDmzStandardMissionsS4 = {
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -201,20 +207,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -239,20 +254,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -277,20 +301,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -315,20 +348,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -353,20 +395,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -391,20 +442,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -429,20 +489,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -467,20 +536,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -505,20 +583,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -543,20 +630,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -581,20 +677,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -619,20 +724,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -657,20 +771,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -695,20 +818,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -733,20 +865,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -771,20 +912,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -809,20 +959,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -934,20 +1093,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -971,20 +1139,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1008,20 +1185,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1045,20 +1231,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1082,20 +1277,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1119,20 +1323,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1156,20 +1369,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1368,20 +1590,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1407,20 +1638,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1446,20 +1686,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1485,20 +1734,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1524,20 +1782,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1563,20 +1830,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1602,20 +1878,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1813,20 +2098,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1851,20 +2145,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1889,20 +2192,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1927,20 +2239,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -1965,20 +2286,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -2003,20 +2333,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
@@ -2041,20 +2380,29 @@ export const dataDmzStandardMissionsS4 = {
       objective1: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective2: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
       objective3: {
         objectiveText: "",
         complete: false,
-        // exists:  true/false to add later, not exactly sure how to handle this.  Basically, some missions only have 1 or 2 objectives, and some have 3.  Max is 3.
-        // progress: For Later:  Ability to keep track of your progress in the objective.  Some objectives are long.  Example:  Extract 15 super rare item.
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
       },
     },
     rewards: {
