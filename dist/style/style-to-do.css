@@ -82,8 +82,7 @@ label {
 
 .mission-task-progress-container {
   display: grid;
-  /* grid-template-columns: 1fr 10px 5px 10px 50px; */
-  grid-template-columns: repeat(3, min-content) 1fr min-content;
+  grid-template-columns: min-content repeat(3, min-content) 1fr; /* editBtn 3*p taskText */
 
   gap: 5px;
   align-items: center;
@@ -111,7 +110,7 @@ label {
 
 .form-progress-input-mission, .form-progress-input-fob {
   display: grid;
-  grid-template-columns: 35px 35px 1fr 50px;
+  grid-template-columns: min-content 35px 35px 1fr; /* SubmitBtn CurrentNumber totalNumber EditText */
   gap: 5px;
   text-align: center;
 }
