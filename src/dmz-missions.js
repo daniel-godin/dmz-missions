@@ -191,10 +191,6 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
 
 
     if (objective1Exists === true && objective2Exists === true && objective3Exists === true) { // If mission has 3 objects:
-      if (objective1Status === true) { obj1Checked = "checked"; }
-      if (objective2Status === true) { obj2Checked = "checked"; }
-      if (objective3Status === true) { obj3Checked = "checked"; }
-
       tierContainer.insertAdjacentHTML('beforeend', `
         <div class="mission-container">
           <div class="mission-header-container">
@@ -205,26 +201,14 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
               <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
       
               <div class='objective-container obj-1'>
-                <input type='checkbox' class='objective-checkbox obj-1-checkbox' ${obj1Checked} />
-                <div class='objective-progress-container'>
-                  <p>0 / 1</p> <!-- Will need to fix this up later. -->
-                </div>
                 <p class='objective-text'>${objective1Text}</p>
               </div>
         
               <div class='objective-container obj-2'>
-                <input type='checkbox' class='objective-checkbox obj-2-checkbox' ${obj2Checked}/>
-                <div class='objective-progress-container'>
-                  <p>0 / 2</p> <!-- Will need to fix this up later. -->
-                </div>
                 <p class='objective-text'>${objective2Text}</p>
               </div>
         
               <div class='objective-container obj-3'>
-                <input type='checkbox' class='objective-checkbox obj-3-checkbox' ${obj3Checked}/>
-                <div class='objective-progress-container'>
-                  <p>0 / 3</p> <!-- Will need to fix this up later. -->
-                </div>
                 <p class='objective-text'>${objective3Text}</p>
               </div>
             </div>
@@ -237,8 +221,6 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
         </div>
       `)
     } else if (objective1Exists === true && objective2Exists === true) { // if mission has 2 objectives:
-      if (objective1Status === true) { obj1Checked = "checked"; }
-      if (objective2Status === true) { obj2Checked = "checked"; }
       tierContainer.insertAdjacentHTML('beforeend', `
       <div class="mission-container">
         <div class="mission-header-container">
@@ -249,18 +231,10 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
             <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
     
             <div class='objective-container obj-1'>
-              <input type='checkbox' class='objective-checkbox obj-1-checkbox' ${obj1Checked} />
-              <div class='objective-progress-container'>
-                <p>0 / 1</p> <!-- Will need to fix this up later. -->
-              </div>
               <p class='objective-text'>${objective1Text}</p>
             </div>
       
             <div class='objective-container obj-2'>
-              <input type='checkbox' class='objective-checkbox obj-2-checkbox' ${obj2Checked}/>
-              <div class='objective-progress-container'>
-                <p>0 / 2</p> <!-- Will need to fix this up later. -->
-              </div>
               <p class='objective-text'>${objective2Text}</p>
             </div>
           </div>
@@ -273,7 +247,6 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
       </div>
     `)
     } else if (objective1Exists === true) { // if mission has 1 objective
-      if (objective1Status === true) { obj1Checked = "checked"; }
       tierContainer.insertAdjacentHTML('beforeend', `
       <div class="mission-container">
         <div class="mission-header-container">
@@ -284,10 +257,6 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
             <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
     
             <div class='objective-container obj-1'>
-              <input type='checkbox' class='objective-checkbox obj-1-checkbox' ${obj1Checked} />
-              <div class='objective-progress-container'>
-                <p>0 / 1</p> <!-- Will need to fix this up later. -->
-              </div>
               <p class='objective-text'>${objective1Text}</p>
             </div>
           </div>
@@ -312,7 +281,6 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
       </div>
     `)
     }
-  
   } 
   else if (status === "logged-in") { // Logged-in version of creating the Mission DOM
     // These are the same variables as logged-out version:
