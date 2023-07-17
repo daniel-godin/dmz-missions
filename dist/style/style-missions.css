@@ -177,3 +177,11 @@ p {
   /* This class is for toggling display none to hide something from user or showing it. */
   display: none; /* Default: display none.  When clicked by user changes to 'block' for now.  If I create a grid or flex, change it to that */
 }
+
+.underlined {
+  text-decoration: underline;
+}
+
+.underlined:hover {
+  text-decoration: none;
+}

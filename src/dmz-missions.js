@@ -85,6 +85,7 @@ export const fullCreateMissionGridLoggedOut = async (obj) => { // THIS IS THE NO
   for (let i = 0; i < arrayOfMissionTitles.length && i < 300; i++) {
     arrayOfMissionTitles[i].addEventListener('click', (e) => {
       e.target.parentNode.nextElementSibling.classList.toggle('hide');
+      e.target.classList.toggle('underlined');
 
       //  e.target.parentNode.classList.toggle('hide');
       //  e.target.parentNode.nextElementSibling.classList.toggle('hide');
@@ -157,6 +158,18 @@ export const fullCreateMissionGridLoggedIn = async (userMissionsGridDoc, userMis
         });
       })
     }  
+
+    // This adds an eventListener click to all mission titles.  Purpose is to show/hide mission details below each mission title.
+    const arrayOfMissionTitles = document.getElementsByClassName('mission-title');
+    for (let i = 0; i < arrayOfMissionTitles.length && i < 300; i++) {
+      arrayOfMissionTitles[i].addEventListener('click', (e) => {
+        e.target.parentNode.nextElementSibling.classList.toggle('hide');
+
+        //  e.target.parentNode.classList.toggle('hide');
+        //  e.target.parentNode.nextElementSibling.classList.toggle('hide');
+      })
+    }
+
 
   } else { // If the user's mission grid doc doe snot exists, it creates it.  This entire function should only trigger if the user is detected.  If user is not detected, it should trigger the non-logged in version, but later... I'd like to combine this all.
     console.log('Users mission grid doc does not exist.  Creating now');
