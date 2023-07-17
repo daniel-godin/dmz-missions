@@ -154,6 +154,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Information Seeker",
     complete: false,
     unlocked: true,
+    description: "",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -201,6 +202,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Convenience",
     complete: false,
     unlocked: true,
+    description: "",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -248,6 +250,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Committed Shopper",
     complete: false,
     unlocked: true,
+    description: "",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -295,6 +298,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Laswell's Story (STORY)",
     complete: false,
     unlocked: false,
+    description: "",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -342,6 +346,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Hostage Rescue",
     complete: false,
     unlocked: false,
+    description: "",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -389,6 +394,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Team Player",
     complete: false,
     unlocked: false,
+    description: " ",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -436,6 +442,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Anti-Air",
     complete: false,
     unlocked: false,
+    description: " ",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -483,6 +490,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Down and Out",
     complete: false,
     unlocked: false,
+    description: " ",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -530,6 +538,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Badge of Honor",
     complete: false,
     unlocked: false,
+    description: " ",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -577,6 +586,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Close-Quarters",
     complete: false,
     unlocked: false,
+    description: " ",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -624,6 +634,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Icebreaker (STORY)",
     complete: false,
     unlocked: false,
+    description: " ",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -671,6 +682,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Operators In Need",
     complete: false,
     unlocked: false,
+    description: " ",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -718,6 +730,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Bedrock",
     complete: false,
     unlocked: false,
+    description: " ",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -765,6 +778,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Unarmed and Dangerous",
     complete: false,
     unlocked: false,
+    description: " ",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -812,6 +826,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Double Crossed",
     complete: false,
     unlocked: false,
+    description: " ",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -859,6 +874,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Substantial Findings",
     complete: false,
     unlocked: false,
+    description: " ",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -906,6 +922,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Researcher's Dilemma",
     complete: false,
     unlocked: false,
+    description: " ",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -953,6 +970,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Spetnaz Exposed (STORY)",
     complete: false,
     unlocked: false,
+    description: " ",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -998,87 +1016,661 @@ export const dataDmzStandardMissionsS4 = {
   // Current Limit Of My Progress: 2023.06.16 (8:00am)
   10401: {
     id: 10401,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "", // Faction that earns the faction points.
+      },
+    },
   },
   10402: {
     id: 10402,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "", // Faction that earns the faction points.
+      },
+    },
   },
   10403: {
     id: 10403,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "", // Faction that earns the faction points.
+      },
+    },
   },
   10404: {
     id: 10404,
-    title: " ",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "", // Faction that earns the faction points.
+      },
+    },
   },
   10405: {
     id: 10405,
-    title: "  ",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "", // Faction that earns the faction points.
+      },
+    },
   },
   10406: {
     id: 10406,
-    title: " ",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "", // Faction that earns the faction points.
+      },
+    },
   },
   10407: {
     id: 10407,
-    title: " ()",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "", // Faction that earns the faction points.
+      },
+    },
   },  
   10501: {
     id: 10501,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "", // Faction that earns the faction points.
+      },
+    },
   },
   10502: {
     id: 10502,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "", // Faction that earns the faction points.
+      },
+    },
   },
   10503: {
     id: 10503,
-    title: " ",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "", // Faction that earns the faction points.
+      },
+    },
   },
   10504: {
     id: 10504,
-    title: " ",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "", // Faction that earns the faction points.
+      },
+    },
   },
   10505: {
     id: 10505,
-    title: " ",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "", // Faction that earns the faction points.
+      },
+    },
   },
   10506: {
     id: 10506,
-    title: " ",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "", // Faction that earns the faction points.
+      },
+    },
   },
   10507: {
     id: 10507,
-    title: "  ()",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "", // Faction that earns the faction points.
+      },
+    },
   },
 
 // White Lotus:
@@ -1087,6 +1679,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Ashika Recon",
     complete: false,
     unlocked: true,
+    description: "",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -1133,6 +1726,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Fuel Shortage",
     complete: false,
     unlocked: true,
+    description: "",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -1179,6 +1773,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Shadow Company Intel",
     complete: false,
     unlocked: true,
+    description: "",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -1225,6 +1820,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Air Support",
     complete: false,
     unlocked: true,
+    description: "",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -1271,6 +1867,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Upgraded Arsenal",
     complete: false,
     unlocked: true,
+    description: "",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -1317,6 +1914,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Commanding Intel",
     complete: false,
     unlocked: true,
+    description: "",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -1363,6 +1961,7 @@ export const dataDmzStandardMissionsS4 = {
     title: "Look Out (STORY)",
     complete: false,
     unlocked: false,
+    description: "",
     objectives: {
       objective1: {
         objectiveText: "",
@@ -1409,171 +2008,1319 @@ export const dataDmzStandardMissionsS4 = {
   // Current Faction Limit.  2023.06.16 (8:00am)
   20201: {
     id: 20201,
-    title: " ",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20202: {
     id: 20202,
-    title: " ",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20203: {
     id: 20203,
-    title: "  ",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20204: {
     id: 20204,
-    title: " ",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20205: {
     id: 20205,
-    title: " ",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20206: {
     id: 20206,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20207: {
     id: 20207,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },  
   20301: {
     id: 20301,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20302: {
     id: 20302,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20303: {
     id: 20303,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20304: {
     id: 20304,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20305: {
     id: 20305,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20306: {
     id: 20306,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20307: {
     id: 20307,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },  
   20401: {
     id: 20401,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20402: {
     id: 20402,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20403: {
     id: 20403,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20404: {
     id: 20404,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20405: {
     id: 20405,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20406: {
     id: 20406,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20407: {
     id: 20407,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },  
   20501: {
     id: 20501,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20502: {
     id: 20502,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20503: {
     id: 20503,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20504: {
     id: 20504,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20505: {
     id: 20505,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20506: {
     id: 20506,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   20507: {
     id: 20507,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
 
 
@@ -1917,171 +3664,1319 @@ export const dataDmzStandardMissionsS4 = {
   // Current Phalanx Faction Limit.  2023.06.16 (8:00am)
   30201: {
     id: 30201,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30202: {
     id: 30202,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30203: {
     id: 30203,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30204: {
     id: 30204,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30205: {
     id: 30205,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30206: {
     id: 30206,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30207: {
     id: 30207,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },  
   30301: {
     id: 30301,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30302: {
     id: 30302,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30303: {
     id: 30303,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30304: {
     id: 30304,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30305: {
     id: 30305,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30306: {
     id: 30306,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30307: {
     id: 30307,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },  
   30401: {
     id: 30401,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30402: {
     id: 30402,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30403: {
     id: 30403,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30404: {
     id: 30404,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30405: {
     id: 30405,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30406: {
     id: 30406,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30407: {
     id: 30407,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },  
   30501: {
     id: 30501,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30502: {
     id: 30502,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30503: {
     id: 30503,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30504: {
     id: 30504,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30505: {
     id: 30505,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30506: {
     id: 30506,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   30507: {
     id: 30507,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
 
   
@@ -2419,170 +5314,1318 @@ export const dataDmzStandardMissionsS4 = {
   // Current Crown Faction Limit.  2023.06.16 (8:00am)
   40201: {
     id: 40201,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40202: {
     id: 40202,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40203: {
     id: 40203,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40204: {
     id: 40204,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40205: {
     id: 40205,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40206: {
     id: 40206,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40207: {
     id: 40207,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },  
   40301: {
     id: 40301,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40302: {
     id: 40302,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40303: {
     id: 40303,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40304: {
     id: 40304,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40305: {
     id: 40305,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40306: {
     id: 40306,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40307: {
     id: 40307,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },  
   40401: {
     id: 40401,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40402: {
     id: 40402,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40403: {
     id: 40403,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40404: {
     id: 40404,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40405: {  
     id: 40405,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40406: {
     id: 40406,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40407: {
     id: 40407,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },  
   40501: {
     id: 40501,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40502: {
     id: 40502,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40503: {
     id: 40503,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40504: {
     id: 40504,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40505: {
     id: 40505,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40506: {
     id: 40506,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   },
   40507: {
     id: 40507,
-    title: "",
+    title: "Title",
     complete: false,
     unlocked: false,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 0, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 0, // Number:  Amount of faction points awarded
+        faction: "White Lotus", // Faction that earns the faction points.
+      },
+    },
   }, 
 }
