@@ -200,15 +200,15 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
             <div class='objectives-container'>
               <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
       
-              <div class='objective-container obj-1'>
+              <div class='objective-container-logged-out obj-1'>
                 <p class='objective-text'>${objective1Text}</p>
               </div>
         
-              <div class='objective-container obj-2'>
+              <div class='objective-container-logged-out obj-2'>
                 <p class='objective-text'>${objective2Text}</p>
               </div>
         
-              <div class='objective-container obj-3'>
+              <div class='objective-container-logged-out obj-3'>
                 <p class='objective-text'>${objective3Text}</p>
               </div>
             </div>
@@ -230,11 +230,11 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
           <div class='objectives-container'>
             <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
     
-            <div class='objective-container obj-1'>
+            <div class='objective-container-logged-out obj-1'>
               <p class='objective-text'>${objective1Text}</p>
             </div>
       
-            <div class='objective-container obj-2'>
+            <div class='objective-container-logged-out obj-2'>
               <p class='objective-text'>${objective2Text}</p>
             </div>
           </div>
@@ -256,7 +256,7 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
           <div class='objectives-container'>
             <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
     
-            <div class='objective-container obj-1'>
+            <div class='objective-container-logged-out obj-1'>
               <p class='objective-text'>${objective1Text}</p>
             </div>
           </div>

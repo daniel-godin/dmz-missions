@@ -154,6 +154,13 @@ p {
   padding: 3px;
 }
 
+.objective-container-logged-out {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
 .objective-container {
   display: grid;
   grid-template-columns: minmax(15px, min-content) minmax(30px, min-content) 1fr;
