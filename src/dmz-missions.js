@@ -181,39 +181,19 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
     let title = objValue.title;
     let description = objValue.description;
     
-
-    // console.table(objValue.objectives); // For Testing Purposes
-    // console.log(objValue.objectives.objective1.objectiveText); // For Testing Purposes
+    let objective1Exists = objValue.objectives.objective1.exists;
+    let objective2Exists = objValue.objectives.objective2.exists;
+    let objective3Exists = objValue.objectives.objective3.exists;
 
     let objective1Text = objValue.objectives.objective1.objectiveText;
     let objective2Text = objValue.objectives.objective2.objectiveText;
     let objective3Text = objValue.objectives.objective3.objectiveText;
 
-    let objective1Status = objValue.objectives.objective1.complete;
-    let objective2Status = objValue.objectives.objective2.complete;
-    let objective3Status = objValue.objectives.objective3.complete;
 
-    let obj1checked = " ";
-    let obj2checked = " ";
-    let obj3checked = " ";
-
-    let objective1Exists = objValue.objectives.objective1.exists;
-    let objective2Exists = objValue.objectives.objective2.exists;
-    let objective3Exists = objValue.objectives.objective3.exists;
-
-    let objective1ProgressCurrent = objValue.objectives.objective1.progress.progressCurrent;
-    let objective1ProgressTotal = objValue.objectives.objective1.progress.progressTotal;
-
-    let objective2ProgressCurrent = objValue.objectives.objective2.progress.progressCurrent;
-    let objective2ProgressTotal = objValue.objectives.objective2.progress.progressTotal;
-
-    let objective3ProgressCurrent = objValue.objectives.objective3.progress.progressCurrent;
-    let objective3ProgressTotal = objValue.objectives.objective3.progress.progressTotal;
- 
     if (objective1Exists === true && objective2Exists === true && objective3Exists === true) { // If mission has 3 objects:
-      if (objective1Status === true) { obj1checked = "checked"; }
-      if (objective2Status === true) { obj2checked = "checked"; }
-      if (objective3Status === true) { obj3checked = "checked"; }
+      if (objective1Status === true) { obj1Checked = "checked"; }
+      if (objective2Status === true) { obj2Checked = "checked"; }
+      if (objective3Status === true) { obj3Checked = "checked"; }
 
       tierContainer.insertAdjacentHTML('beforeend', `
         <div class="mission-container">
@@ -225,7 +205,7 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
               <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
       
               <div class='objective-container obj-1'>
-                <input type='checkbox' class='objective-checkbox obj-1-checkbox' ${obj1checked} />
+                <input type='checkbox' class='objective-checkbox obj-1-checkbox' ${obj1Checked} />
                 <div class='objective-progress-container'>
                   <p>0 / 1</p> <!-- Will need to fix this up later. -->
                 </div>
@@ -233,7 +213,7 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
               </div>
         
               <div class='objective-container obj-2'>
-                <input type='checkbox' class='objective-checkbox obj-2-checkbox' ${obj2checked}/>
+                <input type='checkbox' class='objective-checkbox obj-2-checkbox' ${obj2Checked}/>
                 <div class='objective-progress-container'>
                   <p>0 / 2</p> <!-- Will need to fix this up later. -->
                 </div>
@@ -241,7 +221,7 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
               </div>
         
               <div class='objective-container obj-3'>
-                <input type='checkbox' class='objective-checkbox obj-3-checkbox' ${obj3checked}/>
+                <input type='checkbox' class='objective-checkbox obj-3-checkbox' ${obj3Checked}/>
                 <div class='objective-progress-container'>
                   <p>0 / 3</p> <!-- Will need to fix this up later. -->
                 </div>
@@ -257,8 +237,8 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
         </div>
       `)
     } else if (objective1Exists === true && objective2Exists === true) { // if mission has 2 objectives:
-      if (objective1Status === true) { obj1checked = "checked"; }
-      if (objective2Status === true) { obj2checked = "checked"; }
+      if (objective1Status === true) { obj1Checked = "checked"; }
+      if (objective2Status === true) { obj2Checked = "checked"; }
       tierContainer.insertAdjacentHTML('beforeend', `
       <div class="mission-container">
         <div class="mission-header-container">
@@ -269,7 +249,7 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
             <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
     
             <div class='objective-container obj-1'>
-              <input type='checkbox' class='objective-checkbox obj-1-checkbox' ${obj1checked} />
+              <input type='checkbox' class='objective-checkbox obj-1-checkbox' ${obj1Checked} />
               <div class='objective-progress-container'>
                 <p>0 / 1</p> <!-- Will need to fix this up later. -->
               </div>
@@ -277,7 +257,7 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
             </div>
       
             <div class='objective-container obj-2'>
-              <input type='checkbox' class='objective-checkbox obj-2-checkbox' ${obj2checked}/>
+              <input type='checkbox' class='objective-checkbox obj-2-checkbox' ${obj2Checked}/>
               <div class='objective-progress-container'>
                 <p>0 / 2</p> <!-- Will need to fix this up later. -->
               </div>
@@ -293,7 +273,7 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
       </div>
     `)
     } else if (objective1Exists === true) { // if mission has 1 objective
-      if (objective1Status === true) { obj1checked = "checked"; }
+      if (objective1Status === true) { obj1Checked = "checked"; }
       tierContainer.insertAdjacentHTML('beforeend', `
       <div class="mission-container">
         <div class="mission-header-container">
@@ -304,7 +284,7 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
             <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
     
             <div class='objective-container obj-1'>
-              <input type='checkbox' class='objective-checkbox obj-1-checkbox' ${obj1checked} />
+              <input type='checkbox' class='objective-checkbox obj-1-checkbox' ${obj1Checked} />
               <div class='objective-progress-container'>
                 <p>0 / 1</p> <!-- Will need to fix this up later. -->
               </div>
@@ -333,55 +313,175 @@ const createMissionGridDOM = async (status, tierContainer, objValue) => {
     `)
     }
   
-
-
-  } else if (status === "logged-in") { // Logged-in version of creating the Mission DOM
+  } 
+  else if (status === "logged-in") { // Logged-in version of creating the Mission DOM
+    // These are the same variables as logged-out version:
     let title = objValue.title;
+    let description = objValue.description;
+
+    // These are logged-in variables:
     let id = objValue.id;
     let complete = objValue.complete;
-    let unlocked = objValue.unlocked;
+
+    // let unlocked = objValue.unlocked; // For Later.  Checks whether a mission is locked or unlocked.  This is from Faction Level and/or Previous Tier Story Mission Complete.
+
+    // Objective(s) Variables:
+    let objective1Status = objValue.objectives.objective1.complete;
+    let objective2Status = objValue.objectives.objective2.complete;
+    let objective3Status = objValue.objectives.objective3.complete;
+
+    let completeChecked = "";
+    let obj1Checked = " ";
+    let obj2Checked = " ";
+    let obj3Checked = " ";
   
-    // console.log(title, id, complete, unlocked);
-  
-    if (complete) {
-      if (unlocked === true) {
-        tierContainer.insertAdjacentHTML('beforeend', `
+    let objective1ProgressCurrent = objValue.objectives.objective1.progress.progressCurrent;
+    let objective1ProgressTotal = objValue.objectives.objective1.progress.progressTotal;
+
+    let objective2ProgressCurrent = objValue.objectives.objective2.progress.progressCurrent;
+    let objective2ProgressTotal = objValue.objectives.objective2.progress.progressTotal;
+
+    let objective3ProgressCurrent = objValue.objectives.objective3.progress.progressCurrent;
+    let objective3ProgressTotal = objValue.objectives.objective3.progress.progressTotal;
+
+       
+
+
+    if (objective1Exists === true && objective2Exists === true && objective3Exists === true) { // If mission has 3 objects:
+      if (complete === true) { completeChecked = "checked"; } // Checks Whether Mission is complete or not.  If complete, checkbox is checked.  If not, checkbox is open.
+      if (objective1Status === true) { obj1Checked = "checked"; }
+      if (objective2Status === true) { obj2Checked = "checked"; }
+      if (objective3Status === true) { obj3Checked = "checked"; }
+
+      tierContainer.insertAdjacentHTML('beforeend', `
         <div class="mission-container">
           <div class="mission-header-container">
             <header class="mission-title">${title}</header>
-            <input type="checkbox" name="" id="${id}" class="mission-progress" checked>
+            <input type="checkbox" name="" id="${id}" class="mission-progress" ${completeChecked}>
           </div>
-        </div>`)
-      } else if (unlocked === false) {
-        tierContainer.insertAdjacentHTML('beforeend', `
-        <div class="mission-container">
-          <div class="mission-header-container">
-            <header class="mission-title mission-locked">${title}</header>
-            <input type="checkbox" name="" id="${id}" class="mission-progress mission-locked-checkbox" checked>
+          <div class='mission-details hide'>
+            <div class='objectives-container'>
+              <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
+      
+              <div class='objective-container obj-1'>
+                <input type='checkbox' class='objective-checkbox obj-1-checkbox' ${obj1Checked} />
+                <div class='objective-progress-container'>
+                  <p>0 / 1</p> <!-- Will need to fix this up later. -->
+                </div>
+                <p class='objective-text'>${objective1Text}</p>
+              </div>
+        
+              <div class='objective-container obj-2'>
+                <input type='checkbox' class='objective-checkbox obj-2-checkbox' ${obj2Checked}/>
+                <div class='objective-progress-container'>
+                  <p>0 / 2</p> <!-- Will need to fix this up later. -->
+                </div>
+                <p class='objective-text'>${objective2Text}</p>
+              </div>
+        
+              <div class='objective-container obj-3'>
+                <input type='checkbox' class='objective-checkbox obj-3-checkbox' ${obj3Checked}/>
+                <div class='objective-progress-container'>
+                  <p>0 / 3</p> <!-- Will need to fix this up later. -->
+                </div>
+                <p class='objective-text'>${objective3Text}</p>
+              </div>
+            </div>
+      
+          <p class='mission-description'>
+            ${description}
+          </p>
+      
           </div>
-        </div>`)
-      }
-    } else {
-      if (unlocked === true) {
-        tierContainer.insertAdjacentHTML('beforeend', `
-        <div class="mission-container">
-          <div class="mission-header-container">
-            <header class="mission-title">${title}</header>
-            <input type="checkbox" name="" id="${id}" class="mission-progress">
+        </div>
+      `)
+    } else if (objective1Exists === true && objective2Exists === true) { // if mission has 2 objectives:
+      if (complete === true) { completeChecked = "checked"; } // Checks Whether Mission is complete or not.  If complete, checkbox is checked.  If not, checkbox is open.
+      if (objective1Status === true) { obj1Checked = "checked"; }
+      if (objective2Status === true) { obj2Checked = "checked"; }
+      tierContainer.insertAdjacentHTML('beforeend', `
+      <div class="mission-container">
+        <div class="mission-header-container">
+          <header class="mission-title">${title}</header>
+          <input type="checkbox" name="" id="${id}" class="mission-progress" ${completeChecked}>
+        </div>
+        <div class='mission-details hide'>
+          <div class='objectives-container'>
+            <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
+    
+            <div class='objective-container obj-1'>
+              <input type='checkbox' class='objective-checkbox obj-1-checkbox' ${obj1Checked} />
+              <div class='objective-progress-container'>
+                <p>0 / 1</p> <!-- Will need to fix this up later. -->
+              </div>
+              <p class='objective-text'>${objective1Text}</p>
+            </div>
+      
+            <div class='objective-container obj-2'>
+              <input type='checkbox' class='objective-checkbox obj-2-checkbox' ${obj2Checked}/>
+              <div class='objective-progress-container'>
+                <p>0 / 2</p> <!-- Will need to fix this up later. -->
+              </div>
+              <p class='objective-text'>${objective2Text}</p>
+            </div>
           </div>
-        </div>`)
-      } else if (unlocked === false) {
-        tierContainer.insertAdjacentHTML('beforeend', `
-        <div class="mission-container">
-          <div class="mission-header-container">
-            <header class="mission-title mission-locked">${title}</header>
-            <input type="checkbox" name="" id="${id}" class="mission-progress mission-locked-checkbox">
+    
+        <p class='mission-description'>
+          ${description}
+        </p>
+    
+        </div>
+      </div>
+    `)
+    } else if (objective1Exists === true) { // if mission has 1 objective
+      if (complete === true) { completeChecked = "checked"; } // Checks Whether Mission is complete or not.  If complete, checkbox is checked.  If not, checkbox is open.
+      if (objective1Status === true) { obj1Checked = "checked"; }
+      tierContainer.insertAdjacentHTML('beforeend', `
+      <div class="mission-container">
+        <div class="mission-header-container">
+          <header class="mission-title">${title}</header>
+          <input type="checkbox" name="" id="${id}" class="mission-progress" ${completeChecked}>
+        </div>
+        <div class='mission-details hide'>
+          <div class='objectives-container'>
+            <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
+    
+            <div class='objective-container obj-1'>
+              <input type='checkbox' class='objective-checkbox obj-1-checkbox' ${obj1Checked} />
+              <div class='objective-progress-container'>
+                <p>0 / 1</p> <!-- Will need to fix this up later. -->
+              </div>
+              <p class='objective-text'>${objective1Text}</p>
+            </div>
           </div>
-        </div>`)
-      }
+    
+        <p class='mission-description'>
+          ${description}
+        </p>
+    
+        </div>
+      </div>
+    `)
+
+    } else { // if mission doesn't have an objective yet, just print the mission title
+      if (complete === true) { completeChecked = "checked"; } // Checks Whether Mission is complete or not.  If complete, checkbox is checked.  If not, checkbox is open.
+      tierContainer.insertAdjacentHTML('beforeend', `
+      <div class="mission-container">
+        <div class="mission-header-container">
+          <header class="mission-title">${title}</header>
+          <input type="checkbox" name="" id="${id}" class="mission-progress" ${completeChecked}>
+        </div>
+        <div class='mission-details hide'>
+  
+        </div>
+      </div>
+    `)
     }
   
-  } else {
+      
+  
+  
+  } else { // If neither logged-in nor logged-out are send, this is an error catch.
     console.log('error, createMissionGrid not working properly.')
   }
 }
