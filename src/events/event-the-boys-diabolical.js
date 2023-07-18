@@ -90,39 +90,22 @@ export const createEventGrid = async (dataObj) => {
   for (let i = 0; i < arrayOfFormUpdateProgress.length && i < 20; i++) {
     arrayOfFormUpdateProgress[i].addEventListener('submit', (e) => {
       e.preventDefault();
+
       // const data = new FormData(arrayOfFormUpdateProgress[i]); // Creates an object named data, with all FormData.
 
+      // let progressCurrent = data.get('progressCurrent');
+      // let progressTotal = data.get('progressTotal');
+      // let taskId = e.target.dataset.taskId;
 
-
-      
+      // updateDoc(docRef, {
+      //   [taskId+".progressCurrent"] : progressCurrent,
+      // });
 
       e.target.parentNode.classList.toggle('hidden'); // Toggles (Hides) form div container.
       e.target.parentNode.previousElementSibling.classList.toggle('hidden'); // Toggles (Shows) text-only task information.
 
     })
   }
-
-  // const arrayOfFormProgressInputFOB = document.getElementsByClassName('form-progress-input-fob');
-  //   for (let i = 0; i < arrayOfFormProgressInputFOB.length && i < 200; i++) {
-  //     arrayOfFormProgressInputFOB[i].addEventListener('submit', (e) => {
-  //       e.preventDefault();
-  //       const data = new FormData(arrayOfFormProgressInputFOB[i]); // Creates an object named data, with all FormData.
-
-  //       let progressCurrent = data.get('progressCurrent');
-  //       let progressTotal = data.get('progressTotal');
-  //       let taskId = e.target.dataset.taskId;
-
-  //       // console.log(progressCurrent, progressTotal, taskId); // For error and information checking.
-
-  //       updateDoc(FOBDocRef, {
-  //         [taskId+".progress.progressCurrent"] : progressCurrent,
-  //         [taskId+".progress.progressTotal"] : progressTotal,
-  //       });
-  //       e.target.parentNode.classList.toggle('hide'); // Toggles (Hides) form div container.
-  //       e.target.parentNode.previousElementSibling.classList.toggle('hide'); // Toggles (Shows) text-only task information.
-  //     })
-  //   };
-
 
 
 }

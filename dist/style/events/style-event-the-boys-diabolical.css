@@ -27,7 +27,13 @@
 }
 
 .form-event-task-update {
-
+  border: 1px dashed purple;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: min-content 50px 5px 25px 1fr 15px;
+  column-gap: 5px;
+  padding: 5px;
+  align-items: center;
 
 }
 
