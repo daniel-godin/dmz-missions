@@ -1,0 +1,35 @@
+/* style-auth.css is for styling log-in, log-out, and other authentication pages */
+
+#formDMZLogIn, #formDMZSignUp {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.75rem;
+}
+
+input[type='email'], input[type='password'], input[type='text'] {
+  width: 100%;
+  padding: 0.25rem;
+  /* margin: .25rem; */
+}
+
+#btnSignUp, #btnLogIn {
+  align-self: center;
+  width: 75%;
+  padding: 0.5rem;
+}
+
+#errorContainer {
+  /* Sign Up and/or Sign In Div Container */
+  padding: 1rem;
+}
+
+#errorMessage {
+  /* p Element inside of errorContainer for Sign Up and/or Sign In Div */
+  /* Displays Error Message From Firebase Auth */
+  color: var(--color-font-color);
+
+}
+
+.log-in-sign-up-link {
+  text-align: center;
+}
