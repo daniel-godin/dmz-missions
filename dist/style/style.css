@@ -44,6 +44,9 @@ body {
   margin-top: 50px;
   margin-bottom: 50px;
   justify-items: center;
+  align-content: start;
+  gap: 1rem;
+  color: var(--color-font-color);
 }
 
 .nav-container {
@@ -78,6 +81,15 @@ nav {
 
 #navSignedOut {
 
+}
+
+.header-container {
+  border: 1px solid red;
+  height: min-content;
+}
+
+.page-h1-header {
+  color: var(--color-font-color);
 }
 
 .main-content-container {

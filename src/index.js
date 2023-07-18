@@ -38,6 +38,8 @@ import { auth, db } from "./firebase";
 
 import { } from "./auth";
 
+import { } from "./events/event-the-boys-diabolical";
+
 // Local Emulators
 connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
 connectFirestoreEmulator(db, 'localhost', 8080);

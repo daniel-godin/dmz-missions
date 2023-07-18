@@ -1,0 +1,41 @@
+
+
+
+
+
+#mainContentContainerEventTheBoys {
+  display: grid;
+  /* 1-3 columns, depending on width of screen.  Learn how to do this in CSS Grid.  For: phone, tablet, computer */
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 10px;
+
+}
+
+.event-task-container {
+  border: 1px dashed green;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: min-content 20px 5px 25px 1fr;
+  column-gap: 5px;
+  padding: 5px;
+  align-items: center;
+}
+
+.event-task-form-container {
+
+
+}
+
+.form-event-task-update {
+
+
+}
+
+
+/* Last */
+
+.hidden {
+    /* This class is for toggling display none to hide something from user or showing it. */
+    display: none; /* Default: display none.  When clicked by user changes to 'block' for now.  If I create a grid or flex, change it to that */
+
+}
