@@ -110,12 +110,44 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
       let progressCurrent = data.get('progressCurrent');
       let progressTotal = data.get('progressTotal');
       let taskId = e.target.dataset.taskId;
-      let status = '';
+      let status = false;
 
-      if (progressCurrent >= totalProgress) {
+      console.log("1st form log:", status, totalProgress, progressCurrent, taskId);
+
+
+      if (progressCurrent == totalProgress) {
         status = true;
-      } else if (progressCurrent < totalProgress) {
-        status = false;
+      }
+
+      console.log("2nd form log:", status, totalProgress, progressCurrent, taskId);
+
+
+      updateDoc(docRef, {
+        [taskId+".progressCurrent"] : progressCurrent,
+        [taskId+".complete"] : status,
+      });
+
+      console.log("3rd form log:", status, totalProgress, progressCurrent, taskId);
+
+
+      e.target.parentNode.classList.toggle('hidden'); // Toggles (Hides) form div container.
+      e.target.parentNode.previousElementSibling.classList.toggle('hidden'); // Toggles (Shows) text-only task information.
+    })
+  }
+
+  const arrayOfCheckboxes = document.getElementsByClassName('event-task-checkbox');
+  for (let i = 0; i < arrayOfCheckboxes.length && i < 20; i++) {
+    arrayOfCheckboxes[i].addEventListener('click', (e) => {
+      e.preventDefault();
+      let status = e.target.checked;
+      let totalProgress = e.target.previousElementSibling.children[3].innerText;
+      let progressCurrent = e.target.previousElementSibling.children[1].value;
+      let taskId = e.target.id;
+
+      console.log(status, totalProgress, progressCurrent, taskId);
+
+      if (status === true) {
+        progressCurrent = totalProgress;
       } else {
         status = false;
       }
@@ -129,29 +161,4 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
       e.target.parentNode.previousElementSibling.classList.toggle('hidden'); // Toggles (Shows) text-only task information.
     })
   }
-
-  // const arrayOfCheckboxes = document.getElementsByClassName('event-task-checkbox');
-  // for (let i = 0; i < arrayOfCheckboxes.length && i < 20; i++) {
-  //   arrayOfCheckboxes[i].addEventListener('click', (e) => {
-  //     e.preventDefault();
-  //     let status = e.target.checked;
-  //     let totalProgress = e.target.previousElementSibling.previousElementSibling.innerText;
-  //     let progressCurrent = e.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.value;
-  //     let taskId = e.target.id;
-
-  //     if (status === true) {
-  //       progressCurrent = totalProgress;
-  //     } else if (status === false) {
-  //       status = false;
-  //     }
-
-  //     updateDoc(docRef, {
-  //       [taskId+".progressCurrent"] : progressCurrent,
-  //       [taskId+".complete"] : status,
-  //     });
-
-  //     e.target.parentNode.parentNode.classList.toggle('hidden'); // Toggles (Hides) form div container.
-  //     e.target.parentNode.parentNode.previousElementSibling.classList.toggle('hidden'); // Toggles (Shows) text-only task information.
-  //   })
-  // }
 }
