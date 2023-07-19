@@ -89,7 +89,7 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
           <p> / </p>
           <p class='event-task-progress-total'>${progressTotal}</p>
           <p class='event-task-text'>${task}</p>
-          <input type='checkbox' id='${id} class='event-task-checkbox ${checkbox} />
+          <input type='checkbox' id='${id}' class='event-task-checkbox' ${checkbox} />
         </form>
       </div>
     `)
@@ -134,6 +134,40 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
 
       e.target.parentNode.classList.toggle('hidden'); // Toggles (Hides) form div container.
       e.target.parentNode.previousElementSibling.classList.toggle('hidden'); // Toggles (Shows) text-only task information.
+
+    })
+  }
+
+  const arrayOfCheckboxes = document.getElementsByClassName('event-task-checkbox');
+  for (let i = 0; i < arrayOfCheckboxes.length && i < 20; i++) {
+    arrayOfCheckboxes[i].addEventListener('click', (e) => {
+      e.preventDefault();
+
+      console.log('checkbox clicked');
+
+      let status = e.target.checked;
+
+      let totalProgress = e.target.previousElementSibling.previousElementSibling.innerText;
+
+      let progressCurrent = e.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.value;
+
+      console.log(progressCurrent);
+
+      let taskId = e.target.id;
+
+      if (status === true) {
+        progressCurrent = totalProgress;
+      } else if (status === false) {
+        status = false;
+      }
+
+      updateDoc(docRef, {
+        [taskId+".progressCurrent"] : progressCurrent,
+        [taskId+".complete"] : status,
+      });
+
+      e.target.parentNode.parentNode.classList.toggle('hidden'); // Toggles (Hides) form div container.
+      e.target.parentNode.parentNode.previousElementSibling.classList.toggle('hidden'); // Toggles (Shows) text-only task information.
 
     })
   }
