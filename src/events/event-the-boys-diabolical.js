@@ -103,19 +103,19 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
     arrayOfFormUpdateProgress[i].addEventListener('submit', (e) => {
       e.preventDefault();
 
-      let totalProgress = e.target.children[3].innerText;
+      let totalProgress = Number(e.target.children[3].innerText);
 
       const data = new FormData(arrayOfFormUpdateProgress[i]); // Creates an object named data, with all FormData.
 
-      let progressCurrent = data.get('progressCurrent');
-      let progressTotal = data.get('progressTotal');
+      let progressCurrent = Number(data.get('progressCurrent'));
+      let progressTotal = Number(data.get('progressTotal'));
       let taskId = e.target.dataset.taskId;
       let status = false;
 
       console.log("1st form log:", status, totalProgress, progressCurrent, taskId);
 
 
-      if (progressCurrent == totalProgress) {
+      if (progressCurrent >= totalProgress) {
         status = true;
       }
 
@@ -140,14 +140,17 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
     arrayOfCheckboxes[i].addEventListener('click', (e) => {
       e.preventDefault();
       let status = e.target.checked;
-      let totalProgress = e.target.previousElementSibling.children[3].innerText;
-      let progressCurrent = e.target.previousElementSibling.children[1].value;
+      let totalProgress = Number(e.target.previousElementSibling.children[3].innerText);
+      let progressCurrent = Number(e.target.previousElementSibling.children[1].value);
       let taskId = e.target.id;
 
       console.log(status, totalProgress, progressCurrent, taskId);
 
       if (status === true) {
         progressCurrent = totalProgress;
+      } else if (status == false) {
+        progressCurrent = 0;
+        status = false;
       } else {
         status = false;
       }
