@@ -1,7 +1,7 @@
 import { onAuthStateChanged } from "firebase/auth";
 import { dataEventTheBoysDiabolical } from "../data/events/data-event-the-boys-diabolical";
 import { auth, db } from "../firebase";
-import { doc, setDoc, getDoc, onSnapshot } from "firebase/firestore";
+import { doc, setDoc, updateDoc, onSnapshot } from "firebase/firestore";
 // Variables:
 
 const mainContentContainerEventTheBoys = document.getElementById('mainContentContainerEventTheBoys');
@@ -29,6 +29,8 @@ onAuthStateChanged(auth, user => { // onAuthStateChanged for COD Event: The Boys
 
 export const createEventGrid = async (user, dataObj, docRef, db) => { // Main function to create the event grid.
 
+  mainContentContainerEventTheBoys.innerHTML = '';
+
   if (user) { // This if statement checks whether a user is logged in, if yes, checks if document exists. If no, creates it and reloads page.  If yes, changes doc into an object with .data() method.
     if (dataObj.exists()) {
       // create doc in user's database if user is logged in and doesn't have the doc yet.
@@ -52,6 +54,7 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
     let checkbox = '';
     let hide = '';
     let eventTaskContainer = '';
+    let status = '';
 
     if (user === undefined) { // If user is undefined, it means not logged in.
       // I need to add a class of hidden for the changeable elements, and also change the css properties to just display the text with 1fr.
@@ -66,12 +69,12 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
     if (complete === true) {
       // background of event-task-container should be green, and checkbox
       checkbox = "checked";
-      // background color changed if complete.
+      status = "task-complete";
     }
 
 
     mainContentContainerEventTheBoys.insertAdjacentHTML('beforeend', `
-      <div class='${eventTaskContainer}' id='${id}'>
+      <div class='${eventTaskContainer} ${status}' id='${id}'>
         <button type='button' class='btn-edit-event-task ${hide}' id='${id}'>Edit</button>
         <p class='event-task-progress-current  ${hide}'>${progressCurrent}</p>
         <p class='${hide}'> / </p>
@@ -79,7 +82,7 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
         <p class='event-task-text'>${task}</p>
       </div>
 
-      <div class='event-task-form-container hidden' id='${id}'>
+      <div class='event-task-form-container ${status} hidden' id='${id}'>
         <form class='form-event-task-update' data-task-id='${id}'>
           <button type='submit' data-task-id="${id}">Update</button>
           <input name='progressCurrent' type='number' inputmode='numeric' class='input-current-progress' data-task-id="${id}" min='0' max='${progressTotal}' step='1' value='${progressCurrent}' />
@@ -106,15 +109,28 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
     arrayOfFormUpdateProgress[i].addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // const data = new FormData(arrayOfFormUpdateProgress[i]); // Creates an object named data, with all FormData.
+      let totalProgress = e.target.children[3].innerText;
+      let checkedProgress = e.target.children[5].checked;
 
-      // let progressCurrent = data.get('progressCurrent');
-      // let progressTotal = data.get('progressTotal');
-      // let taskId = e.target.dataset.taskId;
+      console.log(checkedProgress);
 
-      // updateDoc(docRef, {
-      //   [taskId+".progressCurrent"] : progressCurrent,
-      // });
+      const data = new FormData(arrayOfFormUpdateProgress[i]); // Creates an object named data, with all FormData.
+
+      let progressCurrent = data.get('progressCurrent');
+      let progressTotal = data.get('progressTotal');
+      let taskId = e.target.dataset.taskId;
+      let status = '';
+
+      if (progressCurrent >= totalProgress) {
+        status = true;
+      } else {
+        status = false;
+      }
+
+      updateDoc(docRef, {
+        [taskId+".progressCurrent"] : progressCurrent,
+        [taskId+".complete"] : status,
+      });
 
       e.target.parentNode.classList.toggle('hidden'); // Toggles (Hides) form div container.
       e.target.parentNode.previousElementSibling.classList.toggle('hidden'); // Toggles (Shows) text-only task information.

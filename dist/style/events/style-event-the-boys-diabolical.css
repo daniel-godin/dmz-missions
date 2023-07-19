@@ -31,6 +31,10 @@
   align-items: center;
 }
 
+.task-complete {
+  background-color: rgba(64, 220, 64, 0.499);
+}
+
 .event-task-form-container {
 
 
