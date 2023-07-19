@@ -11,18 +11,13 @@ const mainContentContainerEventTheBoys = document.getElementById('mainContentCon
 
 onAuthStateChanged(auth, user => { // onAuthStateChanged for COD Event: The Boys.
   if (user && mainContentContainerEventTheBoys) { // If user is true, it means there is a logged-in user.
-    console.log('The Boys Event - User is true')
     const docRefEventS4TheBoys = doc(db, 'users', user.uid, 'mw2-trackers', 'eventS4TheBoys');
     onSnapshot(docRefEventS4TheBoys, (snapshot) => { // Listener for changed in the doc reference.
       createEventGrid(user, snapshot, docRefEventS4TheBoys, db); 
     });
   }
   else if (mainContentContainerEventTheBoys) { // Basically, if no user exists (logged out) AND the boys id container exists, it means user is on the correct page, but not logged in.
-    console.log('event no user triggered');
     createEventGrid(undefined, dataEventTheBoysDiabolical, undefined, undefined); // Creates the grid, but without any user trackables.  Just a basic read.  This is created from the JS object.
-  }
-  else {
-    console.log('The Boys main content container not detected.  DELETE THIS AFTER DONE.')
   }
 })
 
@@ -34,7 +29,6 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
   if (user) { // This if statement checks whether a user is logged in, if yes, checks if document exists. If no, creates it and reloads page.  If yes, changes doc into an object with .data() method.
     if (dataObj.exists()) {
       // create doc in user's database if user is logged in and doesn't have the doc yet.
-      console.log('document exists!')
       dataObj = dataObj.data();
     } else {
       setDoc(doc(db, 'users', user.uid, 'mw2-trackers', 'eventS4TheBoys'), dataEventTheBoysDiabolical);
@@ -89,8 +83,8 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
           <p> / </p>
           <p class='event-task-progress-total'>${progressTotal}</p>
           <p class='event-task-text'>${task}</p>
-          <input type='checkbox' id='${id}' class='event-task-checkbox' ${checkbox} />
         </form>
+        <input type='checkbox' id='${id}' class='event-task-checkbox' ${checkbox} />
       </div>
     `)
   }
@@ -110,9 +104,6 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
       e.preventDefault();
 
       let totalProgress = e.target.children[3].innerText;
-      let checkedProgress = e.target.children[5].checked;
-
-      console.log(checkedProgress);
 
       const data = new FormData(arrayOfFormUpdateProgress[i]); // Creates an object named data, with all FormData.
 
@@ -123,6 +114,8 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
 
       if (progressCurrent >= totalProgress) {
         status = true;
+      } else if (progressCurrent < totalProgress) {
+        status = false;
       } else {
         status = false;
       }
@@ -134,41 +127,31 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
 
       e.target.parentNode.classList.toggle('hidden'); // Toggles (Hides) form div container.
       e.target.parentNode.previousElementSibling.classList.toggle('hidden'); // Toggles (Shows) text-only task information.
-
     })
   }
 
-  const arrayOfCheckboxes = document.getElementsByClassName('event-task-checkbox');
-  for (let i = 0; i < arrayOfCheckboxes.length && i < 20; i++) {
-    arrayOfCheckboxes[i].addEventListener('click', (e) => {
-      e.preventDefault();
+  // const arrayOfCheckboxes = document.getElementsByClassName('event-task-checkbox');
+  // for (let i = 0; i < arrayOfCheckboxes.length && i < 20; i++) {
+  //   arrayOfCheckboxes[i].addEventListener('click', (e) => {
+  //     e.preventDefault();
+  //     let status = e.target.checked;
+  //     let totalProgress = e.target.previousElementSibling.previousElementSibling.innerText;
+  //     let progressCurrent = e.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.value;
+  //     let taskId = e.target.id;
 
-      console.log('checkbox clicked');
+  //     if (status === true) {
+  //       progressCurrent = totalProgress;
+  //     } else if (status === false) {
+  //       status = false;
+  //     }
 
-      let status = e.target.checked;
+  //     updateDoc(docRef, {
+  //       [taskId+".progressCurrent"] : progressCurrent,
+  //       [taskId+".complete"] : status,
+  //     });
 
-      let totalProgress = e.target.previousElementSibling.previousElementSibling.innerText;
-
-      let progressCurrent = e.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.value;
-
-      console.log(progressCurrent);
-
-      let taskId = e.target.id;
-
-      if (status === true) {
-        progressCurrent = totalProgress;
-      } else if (status === false) {
-        status = false;
-      }
-
-      updateDoc(docRef, {
-        [taskId+".progressCurrent"] : progressCurrent,
-        [taskId+".complete"] : status,
-      });
-
-      e.target.parentNode.parentNode.classList.toggle('hidden'); // Toggles (Hides) form div container.
-      e.target.parentNode.parentNode.previousElementSibling.classList.toggle('hidden'); // Toggles (Shows) text-only task information.
-
-    })
-  }
+  //     e.target.parentNode.parentNode.classList.toggle('hidden'); // Toggles (Hides) form div container.
+  //     e.target.parentNode.parentNode.previousElementSibling.classList.toggle('hidden'); // Toggles (Shows) text-only task information.
+  //   })
+  // }
 }
