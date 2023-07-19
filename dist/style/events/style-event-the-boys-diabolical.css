@@ -21,6 +21,16 @@
   align-items: center;
 }
 
+.event-task-container-logged-out {
+  border: 1px dashed green;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr; /* Only task text shown.  Take the whole container. */
+  column-gap: 5px;
+  padding: 5px;
+  align-items: center;
+}
+
 .event-task-form-container {
 
 

@@ -11,3 +11,6 @@ Welcome to DMZ-Missions.  This website/application is designed to help you keep 
 
 More to come in this readme soon.
 
+### Event:  The Boys Diabolical
+- CSS Grid repeat(auto-fill, minmax(300px, 1fr)) <-- This was very important and I need to potentially use this in my mission and FOB grids.  I can also use auto-fit where applicable.  Took me a while to figure this out and it's so much better than using @media queries.
+

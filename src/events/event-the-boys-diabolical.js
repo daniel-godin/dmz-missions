@@ -1,6 +1,7 @@
 import { onAuthStateChanged } from "firebase/auth";
 import { dataEventTheBoysDiabolical } from "../data/events/data-event-the-boys-diabolical";
 import { auth, db } from "../firebase";
+import { doc, setDoc, getDoc, onSnapshot } from "firebase/firestore";
 // Variables:
 
 const mainContentContainerEventTheBoys = document.getElementById('mainContentContainerEventTheBoys');
@@ -8,36 +9,39 @@ const mainContentContainerEventTheBoys = document.getElementById('mainContentCon
 
 
 
-// onAuthStateChanged(auth, user => {
-//   if (user) {
-//     onSnapshot(docRefEventTheBoys, (snapshot) => {
-//       if (mainContentContainerEventTheBoys) {
-//         createEventGrid(user, snapshot, docRefEventTheBoys, db)
-//       }
-//     }) // event doc load
-//   }
-//   else {
-//     console.log('event no user triggered');
-//     createEventGrid(undefined, dataEventTheBoysDiabolical, undefined, undefined);
-//   }
-// })
+onAuthStateChanged(auth, user => { // onAuthStateChanged for COD Event: The Boys.
+  if (user && mainContentContainerEventTheBoys) { // If user is true, it means there is a logged-in user.
+    console.log('The Boys Event - User is true')
+    const docRefEventS4TheBoys = doc(db, 'users', user.uid, 'mw2-trackers', 'eventS4TheBoys');
+    onSnapshot(docRefEventS4TheBoys, (snapshot) => { // Listener for changed in the doc reference.
+      createEventGrid(user, snapshot, docRefEventS4TheBoys, db); 
+    });
+  }
+  else if (mainContentContainerEventTheBoys) { // Basically, if no user exists (logged out) AND the boys id container exists, it means user is on the correct page, but not logged in.
+    console.log('event no user triggered');
+    createEventGrid(undefined, dataEventTheBoysDiabolical, undefined, undefined); // Creates the grid, but without any user trackables.  Just a basic read.  This is created from the JS object.
+  }
+  else {
+    console.log('The Boys main content container not detected.  DELETE THIS AFTER DONE.')
+  }
+})
 
 
+export const createEventGrid = async (user, dataObj, docRef, db) => { // Main function to create the event grid.
 
-
-export const createEventGrid = async (dataObj) => {
-
-  // if (user && dataRef === undefined) {
-  //   // create doc in user's database if user is logged in and doesn't have the doc yet.
-  // } else {
-  //   // create the event grid with either created doc, or from the JS object.
-  // }
-
-
-  // let data = dataObj;
-
+  if (user) { // This if statement checks whether a user is logged in, if yes, checks if document exists. If no, creates it and reloads page.  If yes, changes doc into an object with .data() method.
+    if (dataObj.exists()) {
+      // create doc in user's database if user is logged in and doesn't have the doc yet.
+      console.log('document exists!')
+      dataObj = dataObj.data();
+    } else {
+      setDoc(doc(db, 'users', user.uid, 'mw2-trackers', 'eventS4TheBoys'), dataEventTheBoysDiabolical);
+      reload();
+    }
+  }
+  // create the event grid with either created doc, or from the JS object.
   let dataSorted = Object.entries(dataObj).sort((a, b) => a[0].localeCompare(b[0]));
-
+  
   for (let [key, value] of dataSorted) {
     let id = value.id;
     let complete = value.complete;
@@ -45,22 +49,33 @@ export const createEventGrid = async (dataObj) => {
     let progressTotal = value.progressTotal;
     let progressCurrent = value.progressCurrent;
 
-    let checkbox = "";
-    
+    let checkbox = '';
+    let hide = '';
+    let eventTaskContainer = '';
+
+    if (user === undefined) { // If user is undefined, it means not logged in.
+      // I need to add a class of hidden for the changeable elements, and also change the css properties to just display the text with 1fr.
+      eventTaskContainer = 'event-task-container-logged-out';
+      hide = 'hidden';
+    } else if (user) {
+      eventTaskContainer = 'event-task-container';
+    } else {
+      console.log('no user detected.  This is an error catch.')
+    }
+
     if (complete === true) {
       // background of event-task-container should be green, and checkbox
       checkbox = "checked";
+      // background color changed if complete.
     }
-
-    // if (no user) { // no edit button }
 
 
     mainContentContainerEventTheBoys.insertAdjacentHTML('beforeend', `
-      <div class='event-task-container' id='${id}'>
-        <button type='button' class='btn-edit-event-task' id='${id}'>Edit</button>
-        <p class='event-task-progress-current'>${progressCurrent}</p>
-        <p> / </p>
-        <p class='event-task-progress-total'>${progressTotal}</p>
+      <div class='${eventTaskContainer}' id='${id}'>
+        <button type='button' class='btn-edit-event-task ${hide}' id='${id}'>Edit</button>
+        <p class='event-task-progress-current  ${hide}'>${progressCurrent}</p>
+        <p class='${hide}'> / </p>
+        <p class='event-task-progress-total ${hide}'>${progressTotal}</p>
         <p class='event-task-text'>${task}</p>
       </div>
 
@@ -106,8 +121,4 @@ export const createEventGrid = async (dataObj) => {
 
     })
   }
-
-
 }
-
-createEventGrid(dataEventTheBoysDiabolical);
