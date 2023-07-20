@@ -53,13 +53,13 @@ onAuthStateChanged(auth, user => {
     const userID = user.uid;
     loadPage(user); // Should I put this into the onSnapshot or other listener position?
     
-    const docRefMissionGridS4 = doc(db, 'users', user.uid, 'mw2-trackers', 'DMZStandardMissionsS4')
-    onSnapshot(docRefMissionGridS4, (snapshot) => {
-      if (dmzMissionsContainer) {
-        // If this container exists, it means the user is on the dmzMissions page.  Then it should trigger the function which populates the DOM.
-        fullCreateMissionGridLoggedIn(snapshot, docRefMissionGridS4, db, userID);
-      }
-    })
+    // const docRefMissionGridS4 = doc(db, 'users', user.uid, 'mw2-trackers', 'DMZStandardMissionsS4')
+    // onSnapshot(docRefMissionGridS4, (snapshot) => {
+    //   if (dmzMissionsContainer) {
+    //     // If this container exists, it means the user is on the dmzMissions page.  Then it should trigger the function which populates the DOM.
+    //     fullCreateMissionGridLoggedIn(snapshot, docRefMissionGridS4, db, userID);
+    //   }
+    // })
 
     const docRefMissionTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoMissions');
     onSnapshot(docRefMissionTaskDoc, (snapshot) => {
@@ -77,9 +77,9 @@ onAuthStateChanged(auth, user => {
 
   } else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
     loadPage(); // No user sent as a parameter.
-    if (dmzMissionsContainer) {
-      fullCreateMissionGridLoggedOut(dataDmzStandardMissionsS4);
-    }
+    // if (dmzMissionsContainer) {
+    //   fullCreateMissionGridLoggedOut(dataDmzStandardMissionsS4);
+    // }
   }
 })
 
