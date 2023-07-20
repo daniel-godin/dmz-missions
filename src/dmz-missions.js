@@ -1,6 +1,8 @@
 import { doc, getDoc, getDocs, onSnapshot, updateDoc, setDoc, } from "firebase/firestore";
 import { dataDmzStandardMissionsS4 } from "./data/data-dmz-standard-missions-s4";
 import { dataDmzFobS4 } from "./data/data-dmz-fob-s4";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth, db } from "./firebase";
 
 export const dmzMissionsContainer = document.getElementById('dmzMissionsContainer');
 
@@ -30,6 +32,22 @@ const phalanxTier5Container = document.getElementById('phalanxTier5MissionsConta
 
 
 // console.log('Beginning of dmz-missions.js triggered.  After variables'); // For Testing Purposes
+
+onAuthStateChanged(auth, user => {
+  if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
+    const docRefMissionGridS4 = doc(db, 'users', user.uid, 'mw2-trackers', 'DMZStandardMissionsS4')
+    onSnapshot(docRefMissionGridS4, (snapshot) => {
+      if (dmzMissionsContainer) {
+        // If this container exists, it means the user is on the dmzMissions page.  Then it should trigger the function which populates the DOM.
+        fullCreateMissionGridLoggedIn(snapshot, docRefMissionGridS4, db, user.uid);
+      }
+    })
+  } else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
+    if (dmzMissionsContainer) {
+      fullCreateMissionGridLoggedOut(dataDmzStandardMissionsS4);
+    }
+  }
+})
 
 // New Logged Out Mission Grid Creation: 2023.07.11
 export const fullCreateMissionGridLoggedOut = async (obj) => { // THIS IS THE NOT-LOGGED IN VERSION.  THE CHECKBOXES ARE NOT CREATED.
