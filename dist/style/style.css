@@ -127,6 +127,9 @@ nav {
   color: var(--color-font-color);
   text-align: center;
   text-decoration: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 #dmzPageHeader {
@@ -307,3 +310,7 @@ input[type='email'], input[type='password'], input[type='text'] {
   /* display: none;
   visibility: none; 
 } */
+
+.hide {
+  display: none;
+}

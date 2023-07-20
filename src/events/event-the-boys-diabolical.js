@@ -2,6 +2,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { dataEventTheBoysDiabolical } from "../data/events/data-event-the-boys-diabolical";
 import { auth, db } from "../firebase";
 import { doc, setDoc, updateDoc, onSnapshot } from "firebase/firestore";
+import { recommendLogInBox } from "../ui";
 // Variables:
 
 const mainContentContainerEventTheBoys = document.getElementById('mainContentContainerEventTheBoys');
@@ -18,6 +19,7 @@ onAuthStateChanged(auth, user => { // onAuthStateChanged for COD Event: The Boys
   }
   else if (mainContentContainerEventTheBoys) { // Basically, if no user exists (logged out) AND the boys id container exists, it means user is on the correct page, but not logged in.
     createEventGrid(undefined, dataEventTheBoysDiabolical, undefined, undefined); // Creates the grid, but without any user trackables.  Just a basic read.  This is created from the JS object.
+    recommendLogInBox(mainContentContainerEventTheBoys);
   }
 })
 

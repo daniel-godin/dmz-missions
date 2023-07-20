@@ -25,3 +25,21 @@ export const logInRequiredFunction = async () => {
     Please <a href='./auth.html'>Log In</a> or <a href='./sign-up.html'>Sign Up</a>.</h2>
   `)
 }
+
+export const recommendLogInBox = async (attachmentPoint) => {
+
+  attachmentPoint.insertAdjacentHTML('beforebegin', `
+    <div class='log-in-recommended-container'>
+      <h3 class='log-in-recommended-h3'>
+        It is recommended to <a href='../auth.html'>LOG IN</a> or <a href='../sign-up.html'>SIGN UP</a> to get the full features of this page.</h2>
+      </h3>
+      <button type='button' id='btnHideRecommendedLogInBox'>Hide This</button>
+    </div>
+  `)
+
+  const btnHideRecommendedLogInBox = document.getElementById('btnHideRecommendedLogInBox');
+  btnHideRecommendedLogInBox.addEventListener('click', (e) => {
+    e.target.parentNode.classList.toggle('hide');
+  })
+
+}
