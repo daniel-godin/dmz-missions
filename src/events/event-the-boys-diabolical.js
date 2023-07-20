@@ -1,15 +1,14 @@
+// Imports:
 import { onAuthStateChanged } from "firebase/auth";
 import { dataEventTheBoysDiabolical } from "../data/events/data-event-the-boys-diabolical";
 import { auth, db } from "../firebase";
 import { doc, setDoc, updateDoc, onSnapshot } from "firebase/firestore";
 import { recommendLogInBox } from "../ui";
-// Variables:
 
+// Variables:
 const mainContentContainerEventTheBoys = document.getElementById('mainContentContainerEventTheBoys');
 
-
-
-
+// Auth:  Logged In or Logged Out?  Creates Page Depending.
 onAuthStateChanged(auth, user => { // onAuthStateChanged for COD Event: The Boys.
   if (user && mainContentContainerEventTheBoys) { // If user is true, it means there is a logged-in user.
     const docRefEventS4TheBoys = doc(db, 'users', user.uid, 'mw2-trackers', 'eventS4TheBoys');
@@ -23,10 +22,10 @@ onAuthStateChanged(auth, user => { // onAuthStateChanged for COD Event: The Boys
   }
 })
 
-
+// Main function to create the event grid.
 export const createEventGrid = async (user, dataObj, docRef, db) => { // Main function to create the event grid.
 
-  mainContentContainerEventTheBoys.innerHTML = '';
+  mainContentContainerEventTheBoys.innerHTML = ''; // Resets the main content container, so it doesn't double up when things are changed.
 
   if (user) { // This if statement checks whether a user is logged in, if yes, checks if document exists. If no, creates it and reloads page.  If yes, changes doc into an object with .data() method.
     if (dataObj.exists()) {
@@ -68,7 +67,7 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
       status = "task-complete";
     }
 
-
+    // DOM Creation:
     mainContentContainerEventTheBoys.insertAdjacentHTML('beforeend', `
       <div class='${eventTaskContainer} ${status}' id='${id}'>
         <button type='button' class='btn-edit-event-task ${hide}' id='${id}'>Edit</button>
@@ -91,6 +90,7 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
     `)
   }
 
+  // Listener Events.
   const arrayOfBtnEditEventTask = document.getElementsByClassName('btn-edit-event-task');
   for (let i = 0; i < arrayOfBtnEditEventTask.length && i < 20; i++) {
     arrayOfBtnEditEventTask[i].addEventListener('click', (e) => {
@@ -114,23 +114,14 @@ export const createEventGrid = async (user, dataObj, docRef, db) => { // Main fu
       let taskId = e.target.dataset.taskId;
       let status = false;
 
-      console.log("1st form log:", status, totalProgress, progressCurrent, taskId);
-
-
       if (progressCurrent >= totalProgress) {
         status = true;
       }
-
-      console.log("2nd form log:", status, totalProgress, progressCurrent, taskId);
-
 
       updateDoc(docRef, {
         [taskId+".progressCurrent"] : progressCurrent,
         [taskId+".complete"] : status,
       });
-
-      console.log("3rd form log:", status, totalProgress, progressCurrent, taskId);
-
 
       e.target.parentNode.classList.toggle('hidden'); // Toggles (Hides) form div container.
       e.target.parentNode.previousElementSibling.classList.toggle('hidden'); // Toggles (Shows) text-only task information.

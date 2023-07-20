@@ -1,14 +1,8 @@
-
-
-
-
-
+/* CSS File for the Call of Duty Event: The Boys (Diabolical) in July 2023 */
 #mainContentContainerEventTheBoys {
   display: grid;
-  /* 1-3 columns, depending on width of screen.  Learn how to do this in CSS Grid.  For: phone, tablet, computer */
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 10px;
-
 }
 
 .event-task-container {
@@ -52,11 +46,8 @@
   align-items: center;
 }
 
-
 /* Last */
-
 .hidden {
     /* This class is for toggling display none to hide something from user or showing it. */
     display: none; /* Default: display none.  When clicked by user changes to 'block' for now.  If I create a grid or flex, change it to that */
-
 }
