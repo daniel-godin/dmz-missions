@@ -22,26 +22,18 @@ import {
   onSnapshot,
 } from 'firebase/firestore';
 
-import { dataDmzFobS4 } from "./data/data-dmz-fob-s4"; // DMZ Forward Operating Base (FOB) Import
-
 import { toDoMainMissionsContainer, toDoMainFobContainer, populateToDoLists, addDMZToDoDocs, refreshTaskPage, populateMissionToDoLists, populateFOBToDoLists, toDoEventListeners, } from "./to-do";
-
 import { } from "./dmz-missions";
-
 import { loadPage } from "./ui";
-
 import { auth, db } from "./firebase";
-
 import { } from "./auth";
-
 import { } from "./events/event-the-boys-diabolical";
 
 // Local Emulators
 connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
 connectFirestoreEmulator(db, 'localhost', 8080);
 
-// console.log('INDEX.JS CHECK:  beginning triggered');
-
+// console.log('INDEX.JS CHECK:  beginning triggered'); // For Error Checking
 // Page Loads and Listener Triggers
 
 onAuthStateChanged(auth, user => {
@@ -68,7 +60,4 @@ onAuthStateChanged(auth, user => {
   }
 })
 
-
-// Testing:
-
-// console.log('INDEX.JS CHECK:  END TRIGGERED');
+// console.log('INDEX.JS CHECK:  END TRIGGERED'); // For Error Checking
