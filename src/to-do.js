@@ -22,23 +22,18 @@ export const formAddFOBToDo = document.getElementById('formAddFOBToDo');
 
 onAuthStateChanged(auth, user => {
   if (user) { // If user exists > Do these.  Else > show div for user to go log in/sign up.
-    const UID = user.uid;
-
     const docRefMissionTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoMissions');
     onSnapshot(docRefMissionTaskDoc, (snapshot) => {
       if (toDoMainMissionsContainer) {
-        populateMissionToDoLists(snapshot, docRefMissionTaskDoc, db, userID);
+        populateMissionToDoLists(snapshot, docRefMissionTaskDoc, db, user.uid);
       };
     })
-
     const docRefFOBTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoFOB');
     onSnapshot(docRefFOBTaskDoc, (snapshot) => {
       if (toDoMainMissionsContainer) {
-        populateFOBToDoLists(snapshot, docRefFOBTaskDoc, db, userID);
+        populateFOBToDoLists(snapshot, docRefFOBTaskDoc, db, user.uid);
       };
     })
-
-    
     if (formAddMissionToDo) { // If this form exists > If form submitted, add the data to the mission task doc in firestore.
       formAddMissionToDo.addEventListener('submit', async (e) => {
         // First:  Confirmation box for user to confirm whether they input text correctly.  Also, as a fail-safe in case user accidentally clicks add task too early.

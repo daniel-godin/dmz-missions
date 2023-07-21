@@ -12,9 +12,6 @@ onAuthStateChanged(auth, user => {
   }
 })
 
-
-
-
 function loadPage(user) {
   // showLoginState();
   if (user) {

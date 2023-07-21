@@ -56,12 +56,13 @@ const createMissionGrid = async (dataObj, docRef, user, db) => {
       dataObj = dataObj.data();
     } else { // creates doc in user's database if user is logged in and doesn't have the doc yet.
       setDoc(doc(db, 'users', user.uid, 'mw2-trackers', 'DMZStandardMissionsS4'), dataDmzStandardMissionsS4);
-      location.reload();
+      // location.reload();
     }
   }
 
   for (let [key, value] of Object.entries(dataObj)) {
     let id = value.id;
+    // console.log(id, "checking id"); // For error checking
       if (id >= 10101 && id <=10107) {
         createMissionGridDOM(user, blackMousTier1Container, value);
       } else if (id >= 10201 && id <=10207) {
