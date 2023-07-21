@@ -1,8 +1,8 @@
 import { doc, getDoc, getDocs, onSnapshot, updateDoc, setDoc, } from "firebase/firestore";
 import { dataDmzStandardMissionsS4 } from "./data/data-dmz-standard-missions-s4";
-import { dataDmzFobS4 } from "./data/data-dmz-fob-s4";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth, db } from "./firebase";
+import { recommendLogInBox } from "./ui";
 
 export const dmzMissionsContainer = document.getElementById('dmzMissionsContainer');
 
@@ -42,7 +42,7 @@ onAuthStateChanged(auth, user => { // NEW VERSION
       })
     } else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
       createMissionGrid(dataDmzStandardMissionsS4, undefined, undefined, undefined);
-      // recommendLogInBox(dmzMissionsContainer);
+      recommendLogInBox(dmzMissionsContainer);
     }
   }
 })
