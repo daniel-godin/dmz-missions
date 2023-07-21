@@ -6,7 +6,6 @@ export function loadPage(user) {
     loadNavigation(user);
   } else {
     loadNavigation();
-    
   }
 }
 

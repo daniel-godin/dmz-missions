@@ -22,15 +22,11 @@ import {
   onSnapshot,
 } from 'firebase/firestore';
 
-import { dataDmzStandardMissionsS4 } from "./data/data-dmz-standard-missions-s4"; // DMZ Missions Import
 import { dataDmzFobS4 } from "./data/data-dmz-fob-s4"; // DMZ Forward Operating Base (FOB) Import
 
 import { toDoMainMissionsContainer, toDoMainFobContainer, populateToDoLists, addDMZToDoDocs, refreshTaskPage, populateMissionToDoLists, populateFOBToDoLists, toDoEventListeners, } from "./to-do";
 
-import {
-  fullCreateMissionGridLoggedIn, fullCreateMissionGridLoggedOut,
-  dmzMissionsContainer,
-} from "./dmz-missions";
+import { } from "./dmz-missions";
 
 import { loadPage } from "./ui";
 
@@ -53,14 +49,6 @@ onAuthStateChanged(auth, user => {
     const userID = user.uid;
     loadPage(user); // Should I put this into the onSnapshot or other listener position?
     
-    // const docRefMissionGridS4 = doc(db, 'users', user.uid, 'mw2-trackers', 'DMZStandardMissionsS4')
-    // onSnapshot(docRefMissionGridS4, (snapshot) => {
-    //   if (dmzMissionsContainer) {
-    //     // If this container exists, it means the user is on the dmzMissions page.  Then it should trigger the function which populates the DOM.
-    //     fullCreateMissionGridLoggedIn(snapshot, docRefMissionGridS4, db, userID);
-    //   }
-    // })
-
     const docRefMissionTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoMissions');
     onSnapshot(docRefMissionTaskDoc, (snapshot) => {
       if (toDoMainMissionsContainer) {
@@ -77,9 +65,6 @@ onAuthStateChanged(auth, user => {
 
   } else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
     loadPage(); // No user sent as a parameter.
-    // if (dmzMissionsContainer) {
-    //   fullCreateMissionGridLoggedOut(dataDmzStandardMissionsS4);
-    // }
   }
 })
 

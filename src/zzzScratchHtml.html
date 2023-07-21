@@ -1,0 +1,38 @@
+<!-- Logged Out Version: -->
+<div class="mission-container">
+  <header class="mission-title">${title}</header>
+  <div class='mission-details'>
+    <div class='objectives-container'>
+      <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
+
+      <div class='objective-container obj-1'>
+        <input type='checkbox' class='objective-checkbox obj-1-checkbox' />
+        <div class='objective-progress-container'>
+          <p>0 / 1</p> <!-- Will need to fix this up later. -->
+        </div>
+        <p class='objective-text'>${objectiveText1}</p>
+      </div>
+
+      <div class='objective-container obj-2'>
+        <input type='checkbox' class='objective-checkbox obj-2-checkbox' />
+        <div class='objective-progress-container'>
+          <p>0 / 2</p> <!-- Will need to fix this up later. -->
+        </div>
+        <p class='objective-text'>${objectiveText2}</p>
+      </div>
+
+      <div class='objective-container obj-3'>
+        <input type='checkbox' class='objective-checkbox obj-3-checkbox' />
+        <div class='objective-progress-container'>
+          <p>0 / 3</p> <!-- Will need to fix this up later. -->
+        </div>
+        <p class='objective-text'>${objectiveText3}</p>
+      </div>
+    </div>
+
+    <p class='mission-description'>
+      ${description}
+    </p>
+
+  </div>
+</div>
