@@ -49,12 +49,14 @@ onAuthStateChanged(auth, user => { // NEW VERSION
 
 const createMissionGrid = async (dataObj, docRef, user, db) => {
 
+  // dmzMissionsContainer.innerHTML = '';
+
   if (user) { // This if statement checks whether a user is logged in, if yes, checks if document exists. If no, creates it and reloads page.  If yes, changes doc into an object with .data() method.
     if (dataObj.exists()) { // If doc exists, then converts to a JS object that I can use.
       dataObj = dataObj.data();
     } else { // creates doc in user's database if user is logged in and doesn't have the doc yet.
       setDoc(doc(db, 'users', user.uid, 'mw2-trackers', 'DMZStandardMissionsS4'), dataDmzStandardMissionsS4);
-      // location.reload();
+      location.reload();
     }
   }
 
@@ -119,15 +121,14 @@ const createMissionGrid = async (dataObj, docRef, user, db) => {
     const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
     for (let i = 0; i < arrayOfMissionCheckboxes.length; i++) {
       arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
-        let checkId = e.target.dataId; // Grabs the event target's id property, makes it into a Number (integar) from a string.
-        console.log('checkbox listener working');
-        console.log(checked, checkId);
+        let checkId = e.target.dataset.id; // Grabs the event target's id property, makes it into a Number (integar) from a string.
+        // console.log('checkbox listener working'); // For Error Checking
+        // console.log(checked, checkId); // For Error Checking
         updateDoc(docRef, {
           [checkId+".complete"] : checked, // checkId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
         });
-        // location.reload();
       })
     }
   }
@@ -136,7 +137,7 @@ const createMissionGrid = async (dataObj, docRef, user, db) => {
 // ----------------- END OF FIRST FUNCTION, START OF SECOND:
 
 const createMissionGridDOM = async (user, tierContainer, objValue) => {
-  console.log(user, tierContainer, objValue);
+  // console.log(user, tierContainer, objValue);
 
   let title = objValue.title;
   let description = objValue.description;
@@ -191,6 +192,7 @@ const createMissionGridDOM = async (user, tierContainer, objValue) => {
   } 
 
   if (objective1Exists === true) { // If mission has objectives:
+
     tierContainer.insertAdjacentHTML('beforeend', `
       <div class="mission-container">
         <div class="mission-header-container">

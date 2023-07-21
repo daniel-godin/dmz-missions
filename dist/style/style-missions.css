@@ -27,12 +27,12 @@ p {
 
 
 /* Class Selectors */
-
 #dmzMissionsContainer {
   width: 95%;
   height: min-content;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns:  repeat(auto-fill, minmax(300px, 1fr));
   gap: .5rem;
   border: 2px solid red;
   justify-self: center;
@@ -115,11 +115,12 @@ p {
 .mission-title {
   color: var(--color-font-color);
   font-size: 1.1rem;
+  cursor: pointer;
 }
 
 .mission-title:hover {
   text-decoration: underline;
-  cursor: pointer;
+  
 }
 
 /* .mission-locked {x
