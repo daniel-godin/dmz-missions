@@ -1016,7 +1016,7 @@ export const dataDmzStandardMissionsS4 = {
   // Current Limit Of My Progress: 2023.06.16 (8:00am)
   10401: {
     id: 10401,
-    title: "Title",
+    title: "Profit and Pain",
     complete: false,
     unlocked: false,
     description: "",
@@ -1063,7 +1063,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   10402: {
     id: 10402,
-    title: "Title",
+    title: "Eye in the Sky",
     complete: false,
     unlocked: false,
     description: "",
@@ -1110,7 +1110,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   10403: {
     id: 10403,
-    title: "Title",
+    title: "Eyes and Ears",
     complete: false,
     unlocked: false,
     description: "",
@@ -1157,7 +1157,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   10404: {
     id: 10404,
-    title: "Title",
+    title: "Labs Investigation",
     complete: false,
     unlocked: false,
     description: "",
@@ -1204,7 +1204,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   10405: {
     id: 10405,
-    title: "Title",
+    title: "Failed Bombing",
     complete: false,
     unlocked: false,
     description: "",
@@ -1251,7 +1251,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   10406: {
     id: 10406,
-    title: "Title",
+    title: "Disguised Assassin",
     complete: false,
     unlocked: false,
     description: "",
@@ -1298,7 +1298,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   10407: {
     id: 10407,
-    title: "Title",
+    title: "Title Deed (STORY)",
     complete: false,
     unlocked: false,
     description: "",
@@ -1345,7 +1345,7 @@ export const dataDmzStandardMissionsS4 = {
   },  
   10501: {
     id: 10501,
-    title: "Title",
+    title: "The Client is King",
     complete: false,
     unlocked: false,
     description: "",
@@ -1392,7 +1392,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   10502: {
     id: 10502,
-    title: "Title",
+    title: "Untouchable",
     complete: false,
     unlocked: false,
     description: "",
@@ -1439,7 +1439,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   10503: {
     id: 10503,
-    title: "Title",
+    title: "Breaking the Bunker",
     complete: false,
     unlocked: false,
     description: "",
@@ -1486,7 +1486,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   10504: {
     id: 10504,
-    title: "Title",
+    title: "Delivery Problem",
     complete: false,
     unlocked: false,
     description: "",
@@ -1533,7 +1533,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   10505: {
     id: 10505,
-    title: "Title",
+    title: "Flight Plans",
     complete: false,
     unlocked: false,
     description: "",
@@ -1580,7 +1580,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   10506: {
     id: 10506,
-    title: "Title",
+    title: "Lone Hunter",
     complete: false,
     unlocked: false,
     description: "",
@@ -1627,7 +1627,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   10507: {
     id: 10507,
-    title: "Title",
+    title: "Crack the Code (STORY)",
     complete: false,
     unlocked: false,
     description: "",
@@ -2008,7 +2008,7 @@ export const dataDmzStandardMissionsS4 = {
   // Current Faction Limit.  2023.06.16 (8:00am)
   20201: {
     id: 20201,
-    title: "Title",
+    title: "Operation Black Gold",
     complete: false,
     unlocked: false,
     description: "",
@@ -2055,7 +2055,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20202: {
     id: 20202,
-    title: "Title",
+    title: "Unknown Shipping",
     complete: false,
     unlocked: false,
     description: "",
@@ -2102,7 +2102,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20203: {
     id: 20203,
-    title: "Title",
+    title: "Key Elimination",
     complete: false,
     unlocked: false,
     description: "",
@@ -2149,7 +2149,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20204: {
     id: 20204,
-    title: "Title",
+    title: "Demolitions",
     complete: false,
     unlocked: false,
     description: "",
@@ -2196,7 +2196,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20205: {
     id: 20205,
-    title: "Title",
+    title: "NIght Operation",
     complete: false,
     unlocked: false,
     description: "",
@@ -2243,7 +2243,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20206: {
     id: 20206,
-    title: "Title",
+    title: "Medical Mule",
     complete: false,
     unlocked: false,
     description: "",
@@ -2290,7 +2290,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20207: {
     id: 20207,
-    title: "Title",
+    title: "Eavesdrop (STORY)",
     complete: false,
     unlocked: false,
     description: "",
@@ -2337,7 +2337,7 @@ export const dataDmzStandardMissionsS4 = {
   },  
   20301: {
     id: 20301,
-    title: "Title",
+    title: "Pacific Foothold",
     complete: false,
     unlocked: false,
     description: "",
@@ -2384,7 +2384,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20302: {
     id: 20302,
-    title: "Title",
+    title: "Fast and Strong",
     complete: false,
     unlocked: false,
     description: "",
@@ -2431,7 +2431,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20303: {
     id: 20303,
-    title: "Title",
+    title: "Pathfinder",
     complete: false,
     unlocked: false,
     description: "",
@@ -2478,7 +2478,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20304: {
     id: 20304,
-    title: "Title",
+    title: "Vondel Investigation",
     complete: false,
     unlocked: false,
     description: "",
@@ -2525,7 +2525,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20305: {
     id: 20305,
-    title: "Title",
+    title: "Fuel Sabotage",
     complete: false,
     unlocked: false,
     description: "",
@@ -2572,7 +2572,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20306: {
     id: 20306,
-    title: "Title",
+    title: "Intel Exchange",
     complete: false,
     unlocked: false,
     description: "",
@@ -2619,7 +2619,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20307: {
     id: 20307,
-    title: "Title",
+    title: "Quid Pro Quo (STORY)",
     complete: false,
     unlocked: false,
     description: "",
@@ -2666,7 +2666,7 @@ export const dataDmzStandardMissionsS4 = {
   },  
   20401: {
     id: 20401,
-    title: "Title",
+    title: "Break Check",
     complete: false,
     unlocked: false,
     description: "",
@@ -2713,7 +2713,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20402: {
     id: 20402,
-    title: "Title",
+    title: "Air Supremacy",
     complete: false,
     unlocked: false,
     description: "",
@@ -2760,7 +2760,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20403: {
     id: 20403,
-    title: "Title",
+    title: "Caved In",
     complete: false,
     unlocked: false,
     description: "",
@@ -2807,7 +2807,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20404: {
     id: 20404,
-    title: "Title",
+    title: "Deadlines",
     complete: false,
     unlocked: false,
     description: "",
@@ -2854,7 +2854,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20405: {
     id: 20405,
-    title: "Title",
+    title: "Shopkeeper's Request",
     complete: false,
     unlocked: false,
     description: "",
@@ -2901,7 +2901,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20406: {
     id: 20406,
-    title: "Title",
+    title: "Gear Up",
     complete: false,
     unlocked: false,
     description: "",
@@ -2948,7 +2948,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20407: {
     id: 20407,
-    title: "Title",
+    title: "Chemist's Sources (STORY)",
     complete: false,
     unlocked: false,
     description: "",
@@ -2995,7 +2995,7 @@ export const dataDmzStandardMissionsS4 = {
   },  
   20501: {
     id: 20501,
-    title: "Title",
+    title: "Crunch",
     complete: false,
     unlocked: false,
     description: "",
@@ -3042,7 +3042,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20502: {
     id: 20502,
-    title: "Title",
+    title: "Unknown Threat",
     complete: false,
     unlocked: false,
     description: "",
@@ -3089,7 +3089,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20503: {
     id: 20503,
-    title: "Title",
+    title: "Exfil Party",
     complete: false,
     unlocked: false,
     description: "",
@@ -3136,7 +3136,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20504: {
     id: 20504,
-    title: "Title",
+    title: "The Route Forward",
     complete: false,
     unlocked: false,
     description: "",
@@ -3183,7 +3183,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20505: {
     id: 20505,
-    title: "Title",
+    title: "Clean House",
     complete: false,
     unlocked: false,
     description: "",
@@ -3230,7 +3230,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20506: {
     id: 20506,
-    title: "Title",
+    title: "Firing Power",
     complete: false,
     unlocked: false,
     description: "",
@@ -3277,7 +3277,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   20507: {
     id: 20507,
-    title: "Title",
+    title: "Russian Gas (STORY)",
     complete: false,
     unlocked: false,
     description: "",
@@ -3664,7 +3664,7 @@ export const dataDmzStandardMissionsS4 = {
   // Current Phalanx Faction Limit.  2023.06.16 (8:00am)
   30201: {
     id: 30201,
-    title: "Title",
+    title: "Going Green",
     complete: false,
     unlocked: false,
     description: "",
@@ -3711,7 +3711,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30202: {
     id: 30202,
-    title: "Title",
+    title: "No One Left Behind",
     complete: false,
     unlocked: false,
     description: "",
@@ -3758,7 +3758,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30203: {
     id: 30203,
-    title: "Title",
+    title: "On The Spot",
     complete: false,
     unlocked: false,
     description: "",
@@ -3805,7 +3805,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30204: {
     id: 30204,
-    title: "Title",
+    title: "Street Smarts",
     complete: false,
     unlocked: false,
     description: "",
@@ -3852,7 +3852,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30205: {
     id: 30205,
-    title: "Title",
+    title: "Security Checkpoint",
     complete: false,
     unlocked: false,
     description: "",
@@ -3899,7 +3899,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30206: {
     id: 30206,
-    title: "Title",
+    title: "Gone Phishing",
     complete: false,
     unlocked: false,
     description: "",
@@ -3946,7 +3946,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30207: {
     id: 30207,
-    title: "Title",
+    title: "Long Distance (STORY)",
     complete: false,
     unlocked: false,
     description: "",
@@ -3993,7 +3993,7 @@ export const dataDmzStandardMissionsS4 = {
   },  
   30301: {
     id: 30301,
-    title: "Title",
+    title: "Passive Income",
     complete: false,
     unlocked: false,
     description: "",
@@ -4040,7 +4040,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30302: {
     id: 30302,
-    title: "Title",
+    title: "Strike Team",
     complete: false,
     unlocked: false,
     description: "",
@@ -4087,7 +4087,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30303: {
     id: 30303,
-    title: "Title",
+    title: "Test Drive",
     complete: false,
     unlocked: false,
     description: "",
@@ -4134,7 +4134,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30304: {
     id: 30304,
-    title: "Title",
+    title: "The Transporter",
     complete: false,
     unlocked: false,
     description: "",
@@ -4181,7 +4181,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30305: {
     id: 30305,
-    title: "Title",
+    title: "Dark Water",
     complete: false,
     unlocked: false,
     description: "",
@@ -4228,7 +4228,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30306: {
     id: 30306,
-    title: "Title",
+    title: "World Trip Souvenirs",
     complete: false,
     unlocked: false,
     description: "",
@@ -4275,7 +4275,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30307: {
     id: 30307,
-    title: "Title",
+    title: "Go For A Drive (STORY)",
     complete: false,
     unlocked: false,
     description: "",
@@ -4322,7 +4322,7 @@ export const dataDmzStandardMissionsS4 = {
   },  
   30401: {
     id: 30401,
-    title: "Title",
+    title: "Frogicide",
     complete: false,
     unlocked: false,
     description: "",
@@ -4369,7 +4369,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30402: {
     id: 30402,
-    title: "Title",
+    title: "Hunter",
     complete: false,
     unlocked: false,
     description: "",
@@ -4416,7 +4416,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30403: {
     id: 30403,
-    title: "Title",
+    title: "Stress Test",
     complete: false,
     unlocked: false,
     description: "",
@@ -4463,7 +4463,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30404: {
     id: 30404,
-    title: "Title",
+    title: "Bruiser",
     complete: false,
     unlocked: false,
     description: "",
@@ -4510,7 +4510,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30405: {
     id: 30405,
-    title: "Title",
+    title: "Turn The Tide",
     complete: false,
     unlocked: false,
     description: "",
@@ -4557,7 +4557,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30406: {
     id: 30406,
-    title: "Title",
+    title: "Contract Killer",
     complete: false,
     unlocked: false,
     description: "",
@@ -4604,7 +4604,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30407: {
     id: 30407,
-    title: "Title",
+    title: "Fearless (STORY)",
     complete: false,
     unlocked: false,
     description: "",
@@ -4651,7 +4651,7 @@ export const dataDmzStandardMissionsS4 = {
   },  
   30501: {
     id: 30501,
-    title: "Title",
+    title: "Last Line of Defense",
     complete: false,
     unlocked: false,
     description: "",
@@ -4698,7 +4698,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30502: {
     id: 30502,
-    title: "Title",
+    title: "Final Countdown",
     complete: false,
     unlocked: false,
     description: "",
@@ -4745,7 +4745,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30503: {
     id: 30503,
-    title: "Title",
+    title: "Contractual Obligations",
     complete: false,
     unlocked: false,
     description: "",
@@ -4792,7 +4792,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30504: {
     id: 30504,
-    title: "Title",
+    title: "Spice of Life",
     complete: false,
     unlocked: false,
     description: "",
@@ -4839,7 +4839,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30505: {
     id: 30505,
-    title: "Title",
+    title: "Rifle Some Feathers",
     complete: false,
     unlocked: false,
     description: "",
@@ -4886,7 +4886,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30506: {
     id: 30506,
-    title: "Title",
+    title: "Firearm Regulation",
     complete: false,
     unlocked: false,
     description: "",
@@ -4933,7 +4933,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   30507: {
     id: 30507,
-    title: "Title",
+    title: "Cut the Head (STORY)",
     complete: false,
     unlocked: false,
     description: "",
@@ -5314,7 +5314,7 @@ export const dataDmzStandardMissionsS4 = {
   // Current Crown Faction Limit.  2023.06.16 (8:00am)
   40201: {
     id: 40201,
-    title: "Title",
+    title: "Sample Platter",
     complete: false,
     unlocked: false,
     description: "",
@@ -5361,7 +5361,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40202: {
     id: 40202,
-    title: "Title",
+    title: "Scavenger In Vondel",
     complete: false,
     unlocked: false,
     description: "",
@@ -5408,7 +5408,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40203: {
     id: 40203,
-    title: "Title",
+    title: "Low-Light Combat Training",
     complete: false,
     unlocked: false,
     description: "",
@@ -5455,7 +5455,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40204: {
     id: 40204,
-    title: "Title",
+    title: "The Oasis Route",
     complete: false,
     unlocked: false,
     description: "",
@@ -5502,7 +5502,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40205: {
     id: 40205,
-    title: "Title",
+    title: "Vehicular Philanthropy",
     complete: false,
     unlocked: false,
     description: "",
@@ -5549,7 +5549,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40206: {
     id: 40206,
-    title: "Title",
+    title: "Golden Ticket",
     complete: false,
     unlocked: false,
     description: "",
@@ -5596,7 +5596,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40207: {
     id: 40207,
-    title: "Title",
+    title: "X Marks The Spot (STORY)",
     complete: false,
     unlocked: false,
     description: "",
@@ -5643,7 +5643,7 @@ export const dataDmzStandardMissionsS4 = {
   },  
   40301: {
     id: 40301,
-    title: "Title",
+    title: "Bryson Long Rifle Weapons Testing",
     complete: false,
     unlocked: false,
     description: "",
@@ -5690,7 +5690,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40302: {
     id: 40302,
-    title: "Title",
+    title: "False Alarm",
     complete: false,
     unlocked: false,
     description: "",
@@ -5737,7 +5737,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40303: {
     id: 40303,
-    title: "Title",
+    title: "Flyboy",
     complete: false,
     unlocked: false,
     description: "",
@@ -5784,7 +5784,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40304: {
     id: 40304,
-    title: "Title",
+    title: "Chemical Sourcing",
     complete: false,
     unlocked: false,
     description: "",
@@ -5831,7 +5831,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40305: {
     id: 40305,
-    title: "Title",
+    title: "Exposé",
     complete: false,
     unlocked: false,
     description: "",
@@ -5878,7 +5878,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40306: {
     id: 40306,
-    title: "Title",
+    title: "Bottom of the Barrel",
     complete: false,
     unlocked: false,
     description: "",
@@ -5925,7 +5925,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40307: {
     id: 40307,
-    title: "Title",
+    title: "Triple Clear (STORY)",
     complete: false,
     unlocked: false,
     description: "",
@@ -5972,7 +5972,7 @@ export const dataDmzStandardMissionsS4 = {
   },  
   40401: {
     id: 40401,
-    title: "Title",
+    title: "The Deadliest Sin",
     complete: false,
     unlocked: false,
     description: "",
@@ -6019,7 +6019,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40402: {
     id: 40402,
-    title: "Title",
+    title: "Explosive Ordnance Disposal",
     complete: false,
     unlocked: false,
     description: "",
@@ -6066,7 +6066,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40403: {
     id: 40403,
-    title: "Title",
+    title: "Koschei Surveillance",
     complete: false,
     unlocked: false,
     description: "",
@@ -6113,7 +6113,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40404: {
     id: 40404,
-    title: "Title",
+    title: "Explosives Sources",
     complete: false,
     unlocked: false,
     description: "",
@@ -6160,7 +6160,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40405: {  
     id: 40405,
-    title: "Title",
+    title: "Infrared",
     complete: false,
     unlocked: false,
     description: "",
@@ -6207,7 +6207,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40406: {
     id: 40406,
-    title: "Title",
+    title: "Hunting Party",
     complete: false,
     unlocked: false,
     description: "",
@@ -6254,7 +6254,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40407: {
     id: 40407,
-    title: "Title",
+    title: "Exit Through The Sector Alpha (STORY)",
     complete: false,
     unlocked: false,
     description: "",
@@ -6301,7 +6301,7 @@ export const dataDmzStandardMissionsS4 = {
   },  
   40501: {
     id: 40501,
-    title: "Title",
+    title: "All's Fair",
     complete: false,
     unlocked: false,
     description: "",
@@ -6348,7 +6348,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40502: {
     id: 40502,
-    title: "Title",
+    title: "Charged Interaction",
     complete: false,
     unlocked: false,
     description: "",
@@ -6395,7 +6395,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40503: {
     id: 40503,
-    title: "Title",
+    title: "Exfil Tracking",
     complete: false,
     unlocked: false,
     description: "",
@@ -6442,7 +6442,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40504: {
     id: 40504,
-    title: "Title",
+    title: "Outsourcing",
     complete: false,
     unlocked: false,
     description: "",
@@ -6489,7 +6489,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40505: {
     id: 40505,
-    title: "Title",
+    title: "Predator",
     complete: false,
     unlocked: false,
     description: "",
@@ -6536,7 +6536,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40506: {
     id: 40506,
-    title: "Title",
+    title: "Case by Case",
     complete: false,
     unlocked: false,
     description: "",
@@ -6583,7 +6583,7 @@ export const dataDmzStandardMissionsS4 = {
   },
   40507: {
     id: 40507,
-    title: "Title",
+    title: "Emergency Exit (STORY)",
     complete: false,
     unlocked: false,
     description: "",
