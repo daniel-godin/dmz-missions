@@ -116,6 +116,14 @@ const createMissionGrid = async (dataObj, docRef, user, db) => {
     })
   }
 
+  const arrayOfTierHeaders = document.getElementsByClassName('tier-header');
+  for (let i = 0; i < arrayOfTierHeaders.length && i < 100; i++) {
+    arrayOfTierHeaders[i].addEventListener('click', (e) => {
+      console.log(e.target, 'tier header clicked');
+      e.target.parentNode.nextElementSibling.classList.toggle('hide');
+    })
+  }
+
   if (user) {
     // This adds eventlistener and update Doc to all the checkboxes.
     const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
