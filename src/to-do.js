@@ -23,6 +23,21 @@ export const formAddFOBToDo = document.getElementById('formAddFOBToDo');
 onAuthStateChanged(auth, user => {
   if (user) { // If user exists > Do these.  Else > show div for user to go log in/sign up.
     const UID = user.uid;
+
+    const docRefMissionTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoMissions');
+    onSnapshot(docRefMissionTaskDoc, (snapshot) => {
+      if (toDoMainMissionsContainer) {
+        populateMissionToDoLists(snapshot, docRefMissionTaskDoc, db, userID);
+      };
+    })
+
+    const docRefFOBTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoFOB');
+    onSnapshot(docRefFOBTaskDoc, (snapshot) => {
+      if (toDoMainMissionsContainer) {
+        populateFOBToDoLists(snapshot, docRefFOBTaskDoc, db, userID);
+      };
+    })
+
     
     if (formAddMissionToDo) { // If this form exists > If form submitted, add the data to the mission task doc in firestore.
       formAddMissionToDo.addEventListener('submit', async (e) => {

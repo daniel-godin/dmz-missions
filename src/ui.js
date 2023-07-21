@@ -1,6 +1,21 @@
 import { loadNavigation, navContainer } from "./nav";
+import { auth, db } from "./firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
-export function loadPage(user) {
+
+onAuthStateChanged(auth, user => {
+  if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
+    const userID = user.uid;
+    loadPage(user); // Should I put this into the onSnapshot or other listener position?
+  } else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
+    loadPage(); // No user sent as a parameter.
+  }
+})
+
+
+
+
+function loadPage(user) {
   // showLoginState();
   if (user) {
     loadNavigation(user);
