@@ -109,18 +109,16 @@ const createMissionGrid = async (dataObj, docRef, user, db) => {
   const arrayOfMissionTitles = document.getElementsByClassName('mission-title');
   for (let i = 0; i < arrayOfMissionTitles.length && i < 300; i++) {
     arrayOfMissionTitles[i].addEventListener('click', (e) => {
+      // console.log(e.target, "Mission Title Clicked") // For Error Checking
       e.target.parentNode.nextElementSibling.classList.toggle('hide');
-
-      //  e.target.parentNode.classList.toggle('hide');
-      //  e.target.parentNode.nextElementSibling.classList.toggle('hide');
     })
   }
 
   const arrayOfTierHeaders = document.getElementsByClassName('tier-header');
   for (let i = 0; i < arrayOfTierHeaders.length && i < 100; i++) {
     arrayOfTierHeaders[i].addEventListener('click', (e) => {
-      console.log(e.target, 'tier header clicked');
-      e.target.parentNode.nextElementSibling.classList.toggle('hide');
+      // console.log(e.target, 'tier header clicked'); // For Error Checking
+      e.target.parentNode.nextElementSibling.classList.toggle('hide'); // Target == Clicked Title, then it goes up one parent, then to the "missions-container" div to toggle hide.
     })
   }
 
@@ -129,6 +127,7 @@ const createMissionGrid = async (dataObj, docRef, user, db) => {
     const arrayOfMissionCheckboxes = document.getElementsByClassName('mission-progress');
     for (let i = 0; i < arrayOfMissionCheckboxes.length; i++) {
       arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
+        // console.log(e.target, "Mission Checkbox Clicked") // For Error Checking
         // e.preventDefault();
         let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
         let checkId = e.target.dataset.id; // Grabs the event target's id property, makes it into a Number (integar) from a string.
