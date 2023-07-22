@@ -52,7 +52,6 @@ export const loadNavigation = async (user) => {
   if (user) { // Function should only trigger if user is logged in.
    createSignOutButtonFunction();
   }
-  
 }
 
 

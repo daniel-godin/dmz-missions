@@ -1,5 +1,5 @@
 // "Standard" Missions in DMZ mode for Season 4 - Last Updated:  2023.06.16
-export const dataDmzStandardMissionsS4 = {
+export const dataDMZStandardMissionsS4 = {
   // Code = First Number is Faction, 2nd/3rd are Tier, 4th/5th are missions
   // 10304 = Redacted, Tier 3, Mission 4
   // 1 = Redacted, 2 = White Lotus, 3 = Legion, 4 = Black Mous, 5 = Crown

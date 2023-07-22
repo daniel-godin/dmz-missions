@@ -1,5 +1,5 @@
 import { doc, getDoc, getDocs, onSnapshot, updateDoc, setDoc, } from "firebase/firestore";
-import { dataDmzStandardMissionsS4 } from "./data/data-dmz-standard-missions-s4";
+import { dataDMZStandardMissionsS4 } from "./data/data-dmz-standard-missions-s4";
 import { auth, db } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { recommendLogInBox } from "./ui";
@@ -30,18 +30,21 @@ const phalanxTier3Container = document.getElementById('phalanxTier3MissionsConta
 const phalanxTier4Container = document.getElementById('phalanxTier4MissionsContainer');
 const phalanxTier5Container = document.getElementById('phalanxTier5MissionsContainer');
 
-
 // console.log('Beginning of dmz-missions.js triggered.  After variables'); // For Testing Purposes
+
+// I should only need to change these two variables each season.  Current DMZ Standard Missions JavaScript Object.
+export const currentDMZStandardMissions = dataDMZStandardMissionsS4; // CHANGE THIS EACH SEASON.
+const currentDMZSeasonDocName = 'DMZStandardMissionsS4'; // CHANGE THIS EACH SEASON AS WELL.
 
 onAuthStateChanged(auth, user => { // NEW VERSION
   if (dmzMissionsContainer) { // If this variable exists, it means the user is on the dmz missions page.
     if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
-      const docRefMissionGridS4 = doc(db, 'users', user.uid, 'mw2-trackers', 'DMZStandardMissionsS4')
-      onSnapshot(docRefMissionGridS4, (snapshot) => {
-        createMissionGrid(snapshot, docRefMissionGridS4, user, db);
+      const docRefStandardMissionGrid = doc(db, 'users', user.uid, 'mw2-trackers', `${currentDMZSeasonDocName}`)
+      onSnapshot(docRefStandardMissionGrid, (snapshot) => {
+        createMissionGrid(snapshot, docRefStandardMissionGrid, user, db);
       })
     } else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
-      createMissionGrid(dataDmzStandardMissionsS4, undefined, undefined, undefined);
+      createMissionGrid(currentDMZStandardMissions, undefined, undefined, undefined);
       recommendLogInBox(dmzMissionsContainer);
     }
   }
