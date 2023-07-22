@@ -113,19 +113,20 @@ const createMissionGrid = async (dataObj, docRef, user, db) => {
         createMissionGridDOM(user, crownTier5Container, value);
       } 
   } 
-  
+
   // This adds an eventListener click to all mission titles.  Purpose is to show/hide mission details below each mission title.
   const arrayOfMissionTitles = document.getElementsByClassName('mission-title');
   for (let i = 0; i < arrayOfMissionTitles.length && i < 300; i++) {
     arrayOfMissionTitles[i].addEventListener('click', (e) => {
       // console.log(e.target, "Mission Title Clicked") // For Error Checking
       e.target.parentNode.nextElementSibling.classList.toggle('hide');
-      e.target.classList.toggle('underlined')
+      e.target.classList.toggle('underlined');
+      e.target.parentNode.parentNode.classList.toggle('mission-container-active');
     })
   }
 
   const arrayOfTierHeaders = document.getElementsByClassName('tier-header');
-  for (let i = 0; i < arrayOfTierHeaders.length && i < 100; i++) {
+  for (let i = 0; i < arrayOfTierHeaders.length && i < 75; i++) {
     arrayOfTierHeaders[i].addEventListener('click', (e) => {
       // console.log(e.target, 'tier header clicked'); // For Error Checking
       e.target.parentNode.nextElementSibling.classList.toggle('hide'); // Target == Clicked Title, then it goes up one parent, then to the "missions-container" div to toggle hide.
@@ -189,6 +190,7 @@ const createMissionGridDOM = async (user, tierContainer, objValue) => {
   let objective3Text = objValue.objectives.objective3.objectiveText;
 
   let completeChecked = "";
+  let missionCompleteBackground = "";
   let obj1Checked = "";
   let obj2Checked = "";
   let obj3Checked = "";
@@ -214,7 +216,7 @@ const createMissionGridDOM = async (user, tierContainer, objValue) => {
     let objective3ProgressCurrent = objValue.objectives.objective3.progress.progressCurrent;
     let objective3ProgressTotal = objValue.objectives.objective3.progress.progressTotal;
 
-    if (complete === true) { completeChecked = "checked"; } // Checks Whether Mission is complete or not.  If complete, checkbox is checked.  If not, checkbox is open.
+    if (complete === true) { completeChecked = "checked"; missionCompleteBackground = "green" } // Checks Whether Mission is complete or not.  If complete, checkbox is checked.  If not, checkbox is open.
     if (objective1Status === true) { obj1Checked = "checked"; }
     if (objective2Status === true) { obj2Checked = "checked"; }
     if (objective3Status === true) { obj3Checked = "checked"; }

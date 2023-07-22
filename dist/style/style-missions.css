@@ -114,7 +114,21 @@ p {
 .mission-container {
   display: grid;
   grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
   row-gap: 5px;
+  padding: 3px;
+}
+
+.mission-container-active {
+  background-color: var(--color-bg-color);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.green {
+  background-color: green;
+  border-radius: 5px;
 }
 
 .mission-header-container {
@@ -155,14 +169,21 @@ p {
 }
 
 .mission-details {
-  border: 1px dashed orange;
+  display: grid;
+  justify-self: center;
+  width: 95%;
+  row-gap: 10px;
 }
 
 .objectives-container {
   display: grid;
   gap: 10px;
-  border: 1px dotted blue;
-  padding: 3px;
+}
+
+.objectives-container, .mission-description {
+  background-color: var(--color-content-bg-color);
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .objective-container-logged-out {
