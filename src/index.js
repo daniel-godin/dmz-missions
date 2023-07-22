@@ -13,3 +13,5 @@ import { } from "./to-do";
 // Local Emulators
 connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
 connectFirestoreEmulator(db, 'localhost', 8080);
+
+// console.log("Error Check:  End of Index.JS file.") // For Error Checking.

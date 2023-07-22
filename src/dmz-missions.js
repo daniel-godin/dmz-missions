@@ -33,7 +33,7 @@ const phalanxTier5Container = document.getElementById('phalanxTier5MissionsConta
 // console.log('Beginning of dmz-missions.js triggered.  After variables'); // For Testing Purposes
 
 // I should only need to change these two variables each season.  Current DMZ Standard Missions JavaScript Object.
-export const currentDMZStandardMissions = dataDMZStandardMissionsS4; // CHANGE THIS EACH SEASON.
+const currentDMZStandardMissions = dataDMZStandardMissionsS4; // CHANGE THIS EACH SEASON.
 const currentDMZSeasonDocName = 'DMZStandardMissionsS4'; // CHANGE THIS EACH SEASON AS WELL.
 
 onAuthStateChanged(auth, user => { // NEW VERSION
@@ -52,16 +52,19 @@ onAuthStateChanged(auth, user => { // NEW VERSION
 
 const createMissionGrid = async (dataObj, docRef, user, db) => {
 
+
   // dmzMissionsContainer.innerHTML = '';
 
-  if (user) { // This if statement checks whether a user is logged in, if yes, checks if document exists. If no, creates it and reloads page.  If yes, changes doc into an object with .data() method.
-    if (dataObj.exists()) { // If doc exists, then converts to a JS object that I can use.
-      dataObj = dataObj.data();
-    } else { // creates doc in user's database if user is logged in and doesn't have the doc yet.
-      setDoc(doc(db, 'users', user.uid, 'mw2-trackers', 'DMZStandardMissionsS4'), dataDmzStandardMissionsS4);
-      // location.reload();
-    }
+  if (user && dataObj.exists()) { // This if statement checks whether a user is logged in, if yes, checks if document exists. If no, creates it and reloads page.  If yes, changes doc into an object with .data() method.
+    dataObj = dataObj.data();
+    // console.log("doc exists, converting to object that I can use.") // For Error Checking.
+  } else if (user && dataObj.exists() === false) {
+    setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentDMZSeasonDocName}`), currentDMZStandardMissions);
+    // console.log("user logged in, no object doc exists.  Creating Doc."); // For Error Checking.
+  } else {
+    console.log("No User Logged In"); // For Error Checking, but should trigger if no user is logged in, every time.
   }
+
 
   for (let [key, value] of Object.entries(dataObj)) {
     let id = value.id;
