@@ -30,13 +30,12 @@ const crownTier3Container = document.getElementById('crownTier3MissionsContainer
 const crownTier4Container = document.getElementById('crownTier4MissionsContainer');
 const crownTier5Container = document.getElementById('crownTier5MissionsContainer');
 
-
-
 // console.log('Beginning of dmz-missions.js triggered.  After variables'); // For Testing Purposes
 
 // I should only need to change these two variables each season.  Current DMZ Standard Missions JavaScript Object.
 const currentDMZStandardMissions = dataDMZStandardMissionsS4; // CHANGE THIS EACH SEASON.
 const currentDMZSeasonDocName = 'DMZStandardMissionsS4'; // CHANGE THIS EACH SEASON AS WELL.
+const currentDMZSeasonNumberOfMissions = 140;
 
 onAuthStateChanged(auth, user => { // NEW VERSION
   if (dmzMissionsContainer) { // If this variable exists, it means the user is on the dmz missions page.
@@ -62,8 +61,15 @@ const createMissionGrid = async (dataObj, docRef, user, db) => {
 
   resetGrid(); // Resets each tier's missions div container.  Basically this prevents the duplication when the onSnapshot event happens during either:  doc creation OR a change in the doc by checking a checkbox, etc.
 
+  let missionsComplete = 0;
+  let totalMissions = currentDMZSeasonNumberOfMissions;
+
   for (let [key, value] of Object.entries(dataObj)) {
     let id = value.id;
+    let missionComplete = value.complete;
+    if (missionComplete) {
+      missionsComplete++;
+    }
     // console.log(id, "checking id"); // For error checking
       if (id >= 10101 && id <=10107) {
         createMissionGridDOM(user, blackMousTier1Container, value);
@@ -107,13 +113,14 @@ const createMissionGrid = async (dataObj, docRef, user, db) => {
         createMissionGridDOM(user, crownTier5Container, value);
       } 
   } 
-
+  
   // This adds an eventListener click to all mission titles.  Purpose is to show/hide mission details below each mission title.
   const arrayOfMissionTitles = document.getElementsByClassName('mission-title');
   for (let i = 0; i < arrayOfMissionTitles.length && i < 300; i++) {
     arrayOfMissionTitles[i].addEventListener('click', (e) => {
       // console.log(e.target, "Mission Title Clicked") // For Error Checking
       e.target.parentNode.nextElementSibling.classList.toggle('hide');
+      e.target.classList.toggle('underlined')
     })
   }
 
@@ -141,6 +148,18 @@ const createMissionGrid = async (dataObj, docRef, user, db) => {
         });
       })
     }
+
+    let percentComplete = Math.floor((missionsComplete / totalMissions) * 100) + "%";
+
+    // dmzMissionsContainer.insertAdjacentHTML('beforebegin', `
+    //   <div id='missionsCompleteContainer'>
+    //     <p>Missions Complete:</p>
+    //     <p id='missionsComplete'>${missionsComplete}</p>
+    //     <p> / </p>
+    //     <p id='totalMissions'>${totalMissions}</p>
+    //     <p id='percentComplete'>(${percentComplete})</p>
+    //   </div>
+    // `)
   }
 }
 

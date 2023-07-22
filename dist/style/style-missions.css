@@ -12,12 +12,12 @@
   /* Dark Theme Color Variables.  Need to add a kind of 'switch' later. */
   --color-bg-color: var(--color-secondary);
   --color-font-color: var(--color-primary);
+  --color-content-bg-color: rgba(51, 51, 51, 0.8);
+  --color-tier-header: salmon;
+
 
   /* Font Variables */
   font-size: 16px;
-  --font--size-tier-header: 1.1rem;
-
-
   /* Other Root Items */
 }
 
@@ -25,22 +25,35 @@ p {
   color: var(--color-font-color);
 }
 
-
 /* Class Selectors */
 #dmzMissionsContainer {
   width: 95%;
   height: min-content;
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns:  repeat(auto-fill, minmax(300px, 1fr));
   gap: .5rem;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   justify-self: center;
   justify-items: center;
 }
 
+#missionsCompleteContainer {
+  border: 1px solid var(--color-accent);
+  border-radius: 10px;
+  left: 5%;
+  padding: .5rem;
+  width: fit-content;
+  background-color: var(--color-content-bg-color);
+  color: var(--color-font-color);
+  text-decoration: none;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 5px;
+}
+
 .faction-container {
-  border: 1px solid blue;
+  border: 1px solid var(--color-accent);
+  border-radius: 10px;
   padding: .25rem;
   display: grid;
   align-content: start; /* This makes sure each faction column doesn't "spread" out top to bottom when one faction or another gets really tall. */
@@ -50,35 +63,30 @@ p {
 }
 
 .tier-container {
-  border: 1px solid white;
+  /* border: 1px solid salmon; */
+  border-radius: 10px;
+  background-color: var(--color-content-bg-color);
   display: grid;
   width: 100%;
   height: min-content;
   padding: .5rem;
-  row-gap: 1rem;
+  /* row-gap: 1rem; */
   /* height: 200px; */
   /* height: min-content; */
 }
 
-/* .header-container {
-  border: 1px solid orange;
-  border-width: 0 0 medium 0;
-  border-bottom-style: dotted;
-  align-self: center;
-  display: flex;
-  justify-content: space-between;
-  padding: .5rem 0 .5rem 0;
-} */
-
 .tier-header-container {
-  border: 1px solid orange;
+  /* border-bottom: 1px solid orange; */
+  background-color: var(--color-bg-color);
+  border-radius: 10px;
+  padding: .6rem;
   display: flex;
   justify-content: space-between;
 }
 
 .tier-header {
-  color: var(--color-font-color);
-  font-size: var(--font--size-tier-header);
+  color: var(--color-tier-header);
+  font-size: 1.2rem;
   cursor: pointer;
   text-align: center;
 }
@@ -98,6 +106,8 @@ p {
   /* border: 1px solid brown; */
   display: grid;
   gap: .5rem;
+  padding: .5rem;
+  padding-top: 1rem;
 }
 
 /* The logged in and out versions will need to be different.  Logged in includes checkboxes. */
@@ -173,16 +183,20 @@ p {
   color: var(--color-font-color);
 }
 
-/* Keep This LAST -- Possibly use a unique toggle class for this particular page. */
-.hide {
-  /* This class is for toggling display none to hide something from user or showing it. */
-  display: none; /* Default: display none.  When clicked by user changes to 'block' for now.  If I create a grid or flex, change it to that */
-}
-
 .underlined {
   text-decoration: underline;
 }
 
+.underlined::after {
+  content: ":";
+}
+
 .underlined:hover {
   text-decoration: none;
+}
+
+/* Keep This LAST -- Possibly use a unique toggle class for this particular page. */
+.hide {
+  /* This class is for toggling display none to hide something from user or showing it. */
+  display: none; /* Default: display none.  When clicked by user changes to 'block' for now.  If I create a grid or flex, change it to that */
 }
