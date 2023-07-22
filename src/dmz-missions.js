@@ -1,4 +1,4 @@
-import { doc, getDoc, getDocs, onSnapshot, updateDoc, setDoc, } from "firebase/firestore";
+import { doc, getDoc, onSnapshot, updateDoc, setDoc, } from "firebase/firestore";
 import { dataDMZStandardMissionsS4 } from "./data/data-dmz-standard-missions-s4";
 import { auth, db } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
@@ -18,17 +18,19 @@ const whiteLotusTier3Container = document.getElementById('whiteLotusTier3Mission
 const whiteLotusTier4Container = document.getElementById('whiteLotusTier4MissionsContainer');
 const whiteLotusTier5Container = document.getElementById('whiteLotusTier5MissionsContainer');
 
+const phalanxTier1Container = document.getElementById('phalanxTier1MissionsContainer');
+const phalanxTier2Container = document.getElementById('phalanxTier2MissionsContainer');
+const phalanxTier3Container = document.getElementById('phalanxTier3MissionsContainer');
+const phalanxTier4Container = document.getElementById('phalanxTier4MissionsContainer');
+const phalanxTier5Container = document.getElementById('phalanxTier5MissionsContainer');
+
 const crownTier1Container = document.getElementById('crownTier1MissionsContainer');
 const crownTier2Container = document.getElementById('crownTier2MissionsContainer');
 const crownTier3Container = document.getElementById('crownTier3MissionsContainer');
 const crownTier4Container = document.getElementById('crownTier4MissionsContainer');
 const crownTier5Container = document.getElementById('crownTier5MissionsContainer');
 
-const phalanxTier1Container = document.getElementById('phalanxTier1MissionsContainer');
-const phalanxTier2Container = document.getElementById('phalanxTier2MissionsContainer');
-const phalanxTier3Container = document.getElementById('phalanxTier3MissionsContainer');
-const phalanxTier4Container = document.getElementById('phalanxTier4MissionsContainer');
-const phalanxTier5Container = document.getElementById('phalanxTier5MissionsContainer');
+
 
 // console.log('Beginning of dmz-missions.js triggered.  After variables'); // For Testing Purposes
 
@@ -41,7 +43,13 @@ onAuthStateChanged(auth, user => { // NEW VERSION
     if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
       const docRefStandardMissionGrid = doc(db, 'users', user.uid, 'mw2-trackers', `${currentDMZSeasonDocName}`)
       onSnapshot(docRefStandardMissionGrid, (snapshot) => {
-        createMissionGrid(snapshot, docRefStandardMissionGrid, user, db);
+        // console.log(snapshot.exists()); // For Error Checking
+        if (snapshot.exists()) {
+          snapshot = snapshot.data();
+          createMissionGrid(snapshot, docRefStandardMissionGrid, user, db);
+        } else if (!snapshot.exists()) {
+          setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentDMZSeasonDocName}`), currentDMZStandardMissions);
+        }
       })
     } else { // IF USER IS FALSE, MEAING IF USER IS NOT LOGGED IN
       createMissionGrid(currentDMZStandardMissions, undefined, undefined, undefined);
@@ -52,19 +60,7 @@ onAuthStateChanged(auth, user => { // NEW VERSION
 
 const createMissionGrid = async (dataObj, docRef, user, db) => {
 
-
-  // dmzMissionsContainer.innerHTML = '';
-
-  if (user && dataObj.exists()) { // This if statement checks whether a user is logged in, if yes, checks if document exists. If no, creates it and reloads page.  If yes, changes doc into an object with .data() method.
-    dataObj = dataObj.data();
-    // console.log("doc exists, converting to object that I can use.") // For Error Checking.
-  } else if (user && dataObj.exists() === false) {
-    setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentDMZSeasonDocName}`), currentDMZStandardMissions);
-    // console.log("user logged in, no object doc exists.  Creating Doc."); // For Error Checking.
-  } else {
-    console.log("No User Logged In"); // For Error Checking, but should trigger if no user is logged in, every time.
-  }
-
+  resetGrid(); // Resets each tier's missions div container.  Basically this prevents the duplication when the onSnapshot event happens during either:  doc creation OR a change in the doc by checking a checkbox, etc.
 
   for (let [key, value] of Object.entries(dataObj)) {
     let id = value.id;
@@ -262,5 +258,34 @@ const createMissionGridDOM = async (user, tierContainer, objValue) => {
     </div>
   `)
   }
+}
+
+const resetGrid = async () => {
+  // console.log('resetGrid triggered'); // For Error Checking
+
+  blackMousTier1Container.innerHTML = '';
+  blackMousTier2Container.innerHTML = '';
+  blackMousTier3Container.innerHTML = '';
+  blackMousTier4Container.innerHTML = '';
+  blackMousTier5Container.innerHTML = '';
+
+  whiteLotusTier1Container.innerHTML = '';
+  whiteLotusTier2Container.innerHTML = '';
+  whiteLotusTier3Container.innerHTML = '';
+  whiteLotusTier4Container.innerHTML = '';
+  whiteLotusTier5Container.innerHTML = '';
+
+  phalanxTier1Container.innerHTML = '';
+  phalanxTier2Container.innerHTML = '';
+  phalanxTier3Container.innerHTML = '';
+  phalanxTier4Container.innerHTML = '';
+  phalanxTier5Container.innerHTML = '';
+
+  crownTier1Container.innerHTML = '';
+  crownTier2Container.innerHTML = '';
+  crownTier3Container.innerHTML = '';
+  crownTier4Container.innerHTML = '';
+  crownTier5Container.innerHTML = '';
+
 }
 // console.log('End of dmz-missions.js triggered');
