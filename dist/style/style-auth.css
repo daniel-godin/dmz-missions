@@ -27,9 +27,29 @@ input[type='email'], input[type='password'], input[type='text'] {
   /* p Element inside of errorContainer for Sign Up and/or Sign In Div */
   /* Displays Error Message From Firebase Auth */
   color: var(--color-font-color);
-
 }
 
 .log-in-sign-up-link {
   text-align: center;
+}
+
+#displayLoggedInContainer {
+  display: none;
+  border: 1px solid blue;
+  background-color: beige;
+  width: 500px;
+  height: min-content;
+  justify-self: center;
+  align-self: center;
+  padding: 2rem;
+}
+
+#authContainer {
+  border: 1px solid red;
+  background-color: beige;
+  width: 500px;
+  height: min-content;
+  justify-self: center;
+  align-self: center;
+  padding: 2rem;
 }
