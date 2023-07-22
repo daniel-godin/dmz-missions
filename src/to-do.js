@@ -1,13 +1,12 @@
 // This is code for the to-do.html web app.
-
+// Imports:
 import { doc, getDoc, setDoc, updateDoc, onSnapshot, serverTimestamp, } from 'firebase/firestore';
 import { auth, db } from './firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-
 import { dataDMZToDoMissions, dataDMZToDoFOB } from './data/data-dmz-to-do-s4';
-
 import { logInRequiredFunction } from './ui';
 
+// Variables:
 export const toDoMainMissionsContainer = document.getElementById('toDoMainMissionsContainer');
 export const toDoMainFobContainer = document.getElementById('toDoMainFobContainer');
 
@@ -20,6 +19,8 @@ export const archivedFOBToDoContainer = document.getElementById('archivedFOBToDo
 export const formAddMissionToDo = document.getElementById('formAddMissionToDo');
 export const formAddFOBToDo = document.getElementById('formAddFOBToDo');
 
+
+// Start of Functional Code:
 onAuthStateChanged(auth, user => {
   if (user) { // If user exists > Do these.  Else > show div for user to go log in/sign up.
     const docRefMissionTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoMissions');
