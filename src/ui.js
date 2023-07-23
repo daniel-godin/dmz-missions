@@ -4,6 +4,11 @@ import { createSignOutButtonFunction } from "./auth";
 
 export const navContainer = document.getElementById('navContainer');
 export const profileLinkContainer = document.getElementById('profileLinkContainer');
+const footerContainer = document.getElementById('footerContainer');
+
+// Variables That Change:
+const lastUpdated = "(2023.07.22)";
+const currentWebAppVersion = "version: 0.1" + " " + lastUpdated;
 
 // console.log('Error Checking:  Beginning of UI.js File');
 
@@ -20,10 +25,10 @@ function loadPage(user) {
   // showLoginState();
   if (user) {
     createNavigation(user);
-    createFooter();
+    createFooter(currentWebAppVersion);
   } else {
     createNavigation();
-    createFooter();
+    createFooter(currentWebAppVersion);
   }
 }
 
@@ -57,7 +62,10 @@ const createNavigation = async (user) => {
 }
 
 const createFooter = async (version) => {
-
+  footerContainer.insertAdjacentHTML('afterbegin', `
+    <p>Created by Daniel Godin</p>
+    <p id='appVersion'>${version}</p>
+  `)
 }
 
 export const logInRequiredFunction = async () => {
