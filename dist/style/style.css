@@ -26,12 +26,15 @@
 }
 
 html {
+  height: 100vh;
+  width: 100vw;
   background-color: var(--color-bg-color);
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -46,8 +49,9 @@ a:hover {
 /* Class Selectors */
 .page-container {
   display: grid;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   width: 100%;
+  height: 100%;
   margin-top: 50px;
   margin-bottom: 50px;
   justify-items: center;
@@ -186,17 +190,24 @@ nav {
   justify-self: none;
 }
 
-.footer {
-  display: none;
+#footerContainer {
+  position: static;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  /* width: 100vw; Should I use 100% or 100vw?? */
+  height: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 
-/* Keep This LAST 
-/* .hidden {
-  /* class to hide content where applicable. 
-  /* display: none;
-  visibility: none; 
-} */
-
+/* Keep This LAST */
 .hide {
   display: none;
 }
