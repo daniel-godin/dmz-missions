@@ -68,11 +68,13 @@ a:hover {
 } 
 
 .nav-container {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   height: var(--size-nav-bar);
+  min-width: 100vw;
+  width: 100%;
   display: grid;
   grid-template-columns: 200px 1fr;
   align-content: center;
