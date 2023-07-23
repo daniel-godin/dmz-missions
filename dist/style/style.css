@@ -63,15 +63,26 @@ a:hover {
   color: var(--color-font-color);
 }
 
+
+
 #navContainer, #footerContainer {
  background-color: var(--color-nav-foot-bg-color);
 } 
+
+#btnNavDropDownMenu {
+border: 1px solid red;
+border-radius: 50%;
+width: 50px;
+height: 100%;
+}
 
 .nav-container {
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
   height: var(--size-nav-bar);
   min-width: 100vw;
   width: 100%;

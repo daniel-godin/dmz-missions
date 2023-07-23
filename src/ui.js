@@ -1,6 +1,7 @@
 import { auth, } from "./firebase";
 import { onAuthStateChanged, } from "firebase/auth";
 import { createSignOutButtonFunction } from "./auth";
+// import { menu.svg } from "./resources"
 
 export const navContainer = document.getElementById('navContainer');
 export const profileLinkContainer = document.getElementById('profileLinkContainer');
@@ -35,27 +36,44 @@ function loadPage(user) {
 const createNavigation = async (user) => {
   // Inserts HTML first thing inside of the navContainer div
   navContainer.innerHTML = ""; // "Resets" the navContainer with nothing, and then creates the nav bar depending on if a user is signed in or not.  This works, but is a little clunky.  This is a fix to the nav bar duplicating on the page after user has signed-in or signed-up, etc.
-  let status;
+  let btnSignOutStatus;
+  let btnSignInStatus;
+  let btnSignUpStatus;
   if (user) { // If user is true (meaning logged in), no change to variable status.  If logged out, variable status becomes string "hide", which is a class that will hide the log out button container.
-    status = "";
+    btnSignOutStatus = "";
+    btnSignInStatus = "hide";
+    btnSignUpStatus = "hide";
   } else {
-    status = "hide";
+    btnSignOutStatus = "hide";
+    btnSignInStatus = "";
+    btnSignUpStatus = "";
   }
   navContainer.insertAdjacentHTML('afterbegin', `
   <header class='logo'><a href='./index.html'>DMZ-Missions</a></header>
-  <nav class='nav'>
-    <ul class='nav-links'>
-      <li class='nav-link'><a href='../dmz-missions.html'>DMZ Missions Page</a></li>
-      <li class='nav-link'><a href='../to-do.html'>To-Do Page</a></li>
-      <li class='nav-link'><a href='../events/event-the-boys-diabolical.html'>Event: S4 The Boys</a></li>
-      <li class='nav-link'><a href='../auth.html'>Log In</a></li>
-      <li class='nav-link'><a href='../sign-up.html'>Sign Up</a></li>
-    </ul>
-    <div id='profileLinkContainer' class='${status}'>
-      <button type='button' id='btnSignOut'>Sign Out</button>
-    </div>
-  </nav>
+  <div id='btnNavDropDownMenu'>
+    <nav class='nav-drop-down-menu hide' id='navDropDownMenu'>
+      <ul class='nav-links'>
+        <li class='nav-link'><a href='../dmz-missions.html'>DMZ Missions Page</a></li>
+        <li class='nav-link'><a href='../to-do.html'>To-Do Page</a></li>
+        <li class='nav-link'><a href='../events/event-the-boys-diabolical.html'>Event: S4 The Boys</a></li>
+        <li class='nav-link'><a href='../auth.html'>Log In</a></li>
+        <li class='nav-link'><a href='../sign-up.html'>Sign Up</a></li>
+      </ul>
+      <div id='profileLinkContainer' class=''>
+        <button type='button' id='btnSignOut' class='btn btn-auth ${btnSignOutStatus}'>Sign Out</button>
+        <button type='button' id='btnSignIn' class='btn btn-auth ${btnSignInStatus}'>Sign In</button>
+        <button type='button' id='btnSignUp' class='btn btn-auth  ${btnSignUpStatus}'>Sign Up</button>
+      </div>
+    </nav>
+  </div>
   `)
+
+  const btnNavDropDownMenu = document.getElementById('navDropDownMenu');
+  btnNavDropDownMenu.addEventListener('click', (e) => {
+    // I'll need to have it toggle class hide.
+    e.target.children[0].classList.toggle('hide');
+  })
+
   if (user) { // Function should only trigger if user is logged in.
    createSignOutButtonFunction();
   }
