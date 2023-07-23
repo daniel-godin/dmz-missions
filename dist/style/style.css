@@ -13,6 +13,7 @@
   --color-bg-color: var(--color-secondary);
   --color-font-color: var(--color-primary);
   --color-content-bg-color: rgba(51, 51, 51, 0.8);
+  --color-nav-foot-bg-color: rgba(139, 206, 226, 0.996);
 
   /* Other Root Items */
   font-size: 16px;
@@ -55,13 +56,16 @@ a:hover {
   color: var(--color-font-color);
 }
 
+#navContainer, #footerContainer {
+ background-color: var(--color-nav-foot-bg-color);
+} 
+
 .nav-container {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: min-content;
-  background-color: lightblue;
   display: grid;
   grid-template-columns: 200px 1fr;
   align-content: center;

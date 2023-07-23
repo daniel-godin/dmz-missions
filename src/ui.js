@@ -19,13 +19,15 @@ onAuthStateChanged(auth, user => {
 function loadPage(user) {
   // showLoginState();
   if (user) {
-    loadNavigation(user);
+    createNavigation(user);
+    createFooter();
   } else {
-    loadNavigation();
+    createNavigation();
+    createFooter();
   }
 }
 
-export const loadNavigation = async (user) => {
+const createNavigation = async (user) => {
   // Inserts HTML first thing inside of the navContainer div
   navContainer.innerHTML = ""; // "Resets" the navContainer with nothing, and then creates the nav bar depending on if a user is signed in or not.  This works, but is a little clunky.  This is a fix to the nav bar duplicating on the page after user has signed-in or signed-up, etc.
   let status;
@@ -54,6 +56,9 @@ export const loadNavigation = async (user) => {
   }
 }
 
+const createFooter = async (version) => {
+
+}
 
 export const logInRequiredFunction = async () => {
   // const logInRequiredContainer = document.querySelector('logInRequiredContainer')
@@ -88,5 +93,7 @@ export const recommendLogInBox = async (attachmentPoint) => {
   })
 
 }
+
+
 
 // console.log('Error Checking:  End of UI.js File');
