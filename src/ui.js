@@ -51,7 +51,7 @@ const createNavigation = async (user) => {
   navContainer.insertAdjacentHTML('afterbegin', `
   <header class='logo'><a href='./index.html'>DMZ-Missions</a></header>
   <div id='middleNavbarSpecialSpace'><a class='nav-link special-link' href='../events/event-the-boys-diabolical.html'>Event: The Boys (July 2023)</a></div>
-  <div id='btnNavDropDownMenu'>
+  <div id='dropDownMenuContainer'>
     <nav class='nav-drop-down-menu hide' id='navDropDownMenu'>
       <ul class='nav-links'>
         <li class='nav-link'><a href='../dmz-missions.html'>DMZ Missions Page</a></li>

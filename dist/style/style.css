@@ -67,13 +67,6 @@ a:hover {
  background-color: var(--color-nav-foot-bg-color);
 } 
 
-#btnNavDropDownMenu {
-border: 1px solid red;
-border-radius: 50%;
-width: 50px;
-height: 100%;
-}
-
 #navContainer {
   position: sticky;
   top: 0;
@@ -85,9 +78,9 @@ height: 100%;
   min-width: 100vw;
   width: 100%;
   display: grid;
-  grid-template-columns: 100px 1fr 100px;
+  grid-template-columns: 100px 1fr min-content;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
 }
 
 #middleNavbarSpecialSpace {
@@ -95,8 +88,18 @@ height: 100%;
   place-items: center;
 }
 
-#navDropDownMenu {
-  
+#dropDownMenuContainer {
+  background-image: url(../assets/img/drop-down-menu.svg);
+  height: var(--size-nav-bar);
+  width: var(--size-nav-bar);
+}
+
+#dropDownMenuContainer:hover {
+  background-image: url(../assets/img/drop-down-menu-active.svg);
+}
+
+svg:hover {
+  fill: white;
 }
 
 .nav-links {
