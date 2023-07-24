@@ -63,8 +63,6 @@ a:hover {
   color: var(--color-font-color);
 }
 
-
-
 #navContainer, #footerContainer {
  background-color: var(--color-nav-foot-bg-color);
 } 
@@ -76,7 +74,7 @@ width: 50px;
 height: 100%;
 }
 
-.nav-container {
+#navContainer {
   position: sticky;
   top: 0;
   left: 0;
@@ -87,15 +85,18 @@ height: 100%;
   min-width: 100vw;
   width: 100%;
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 100px 1fr 100px;
+  justify-content: space-between;
   align-content: center;
-  align-items: center;
 }
 
-nav {
+#middleNavbarSpecialSpace {
   display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 200px;
+  place-items: center;
+}
+
+#navDropDownMenu {
+  
 }
 
 .nav-links {
