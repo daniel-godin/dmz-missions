@@ -53,8 +53,17 @@ const createNavigation = async (user) => {
 
   <div id='middleNavbarSpecialSpace'><a class='nav-link special-link' href='../events/event-the-boys-diabolical.html'>Event: The Boys (July 2023)</a></div>
 
-  <svg id='dropDownMenuInactive' class='svg-drop-down-menu' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
-  <svg id='dropDownMenuActive' class='svg-drop-down-menu active hide'  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+  <button id='btnMenuClosed' class='btn-drop-down-menu'>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+    </svg>
+  </button>
+
+  <button id='btnMenuOpen' class='btn-drop-down-menu hide'>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" />
+    </svg>
+  </button>
   
   <nav class='nav-drop-down-menu hide' id='navDropDownMenu'>
     <ul class='nav-links'>
@@ -72,11 +81,18 @@ const createNavigation = async (user) => {
   </nav>
   `)
 
-  const btnNavDropDownMenu = document.getElementById('navDropDownMenu');
-  btnNavDropDownMenu.addEventListener('click', (e) => {
-    // I'll need to have it toggle class hide.
-    e.target.children[0].classList.toggle('hide');
-  })
+  const btnMenuClosed = document.getElementById('btnMenuClosed');
+  const btnMenuOpen = document.getElementById('btnMenuOpen');
+  const dropDownMenuButtons = document.getElementsByClassName('btn-drop-down-menu');
+  for (let i = 0; i < dropDownMenuButtons.length && i < 10; i++) {
+    dropDownMenuButtons[i].addEventListener('click', (e) => {
+      // I'll need to have it toggle class hide.
+      console.log('drop down menu clicked');
+      btnMenuClosed.classList.toggle('hide');
+      btnMenuOpen.classList.toggle('hide');
+    })
+  }
+
 
   if (user) { // Function should only trigger if user is logged in.
    createSignOutButtonFunction();

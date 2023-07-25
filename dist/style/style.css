@@ -88,18 +88,24 @@ a:hover {
   place-items: center;
 }
 
-.svg-drop-down-menu {
+.btn-drop-down-menu {
   height: var(--size-nav-bar);
   width: var(--size-nav-bar);
+  background: transparent;
+  border: none;
+}
+
+svg:hover {
+  fill: white;
 }
 
 #dropDownMenuInactive {
 
 }
 
-#dropDownMenuInactive:hover {
+/* #dropDownMenuInactive:hover {
   fill: white;
-}
+} */
 
 #dropDownMenuActive {
   
