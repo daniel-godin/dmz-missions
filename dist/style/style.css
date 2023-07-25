@@ -156,7 +156,17 @@ svg:hover {
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  justify-content: center;
+  justify-items: center;
+}
+
+.btn-link {
+
+}
+
+.btn {
+  height: 2rem;
+  width: 5rem;
+  padding: .5rem;
 }
 
 .header-container {

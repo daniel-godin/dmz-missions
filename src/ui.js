@@ -73,8 +73,8 @@ const createNavigation = async (user) => {
     </ul>
     <div id='profileLinkContainer' class=''>
       <button type='button' id='btnSignOut' class='btn btn-auth ${btnSignOutStatus}'>Sign Out</button>
-      <button type='button' id='btnSignIn' href='../auth.html' class='btn btn-auth ${btnSignInStatus}'>Sign In</button>
-      <button type='button' id='btnSignUp' href='../sign-up.html' class='btn btn-auth  ${btnSignUpStatus}'>Sign Up</button>
+      <a href='../auth.html' class='btn-link'><button type='button' id='btnSignInLink' class='btn btn-auth ${btnSignInStatus}'>Sign In</button></a>
+      <a href='../sign-up.html' class='btn-link'><button type='button' id='btnSignUpLink' class='btn btn-auth  ${btnSignUpStatus}'>Sign Up</button></a>
     </div>
   </nav>
   `)
