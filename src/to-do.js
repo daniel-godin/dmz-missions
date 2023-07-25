@@ -48,7 +48,7 @@ onAuthStateChanged(auth, user => {
           updateDoc(docRefMissionTaskDoc, { // adds submitted task as an object to firestore db document missionDoc whatever.
             [randomTaskId] : {
               taskUID: randomTaskId, // Randomly generated.  Need to implement later.
-              userUID: UID, // Users UID.  For easier tracking/moving later.
+              userUID: user.uid, // Users UID.  For easier tracking/moving later.
               dateTimeCreated: serverTimestamp(), // Date and Time when to-do task was created.  This is for sorting.  Oldest top to newest bottom at first.
               type: "Mission", // type mission or type fob.  For organizing later.
               task: document.getElementById('inputMissionTextToDo').value, // string which is the text the user inputted for their "to do task".
@@ -82,7 +82,7 @@ onAuthStateChanged(auth, user => {
           updateDoc(docRefFOBTaskDoc, { // adds submitted task as an object to firestore db document missionDoc whatever.
             [randomTaskId] : {
               taskUID: randomTaskId, // Randomly generated.  Need to implement later.
-              userUID: UID, // Users UID.  For easier tracking/moving later.
+              userUID: user.uid, // Users UID.  For easier tracking/moving later.
               dateTimeCreated: serverTimestamp(), // Date and Time when to-do task was created.  This is for sorting.  Oldest top to newest bottom at first.
               type: "FOB", // type mission or type fob.  For organizing later.
               task: document.getElementById('inputFobTextToDo').value, // string which is the text the user inputted for their "to do task".
