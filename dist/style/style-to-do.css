@@ -14,8 +14,6 @@
   /* Dark Theme Color Variables.  Need to add a kind of 'switch' later. */
   --color-bg-color: var(--color-secondary);
   --color-font-color: var(--color-primary);
-
-  font-size: 14px;
 }
 
 html {
