@@ -41,7 +41,7 @@ onAuthStateChanged(auth, user => {
         if (confirm(`Is This Correct?\n${document.getElementById('inputMissionTextToDo').value}`) == true) {
           e.preventDefault();
 
-          const docRefMissionTaskDoc = doc(db, 'users', UID, 'to-do-trackers', 'DMZToDoMissions');
+          const docRefMissionTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoMissions');
           
           let randomTaskId = randomTaskIdGenerator('task-mission');
   
@@ -75,7 +75,7 @@ onAuthStateChanged(auth, user => {
       formAddFOBToDo.addEventListener('submit', async (e) => {
         if (confirm(`Is This Correct?\n${document.getElementById('inputFobTextToDo').value}`) == true) {
           e.preventDefault();
-          const docRefFOBTaskDoc = doc(db, 'users', UID, 'to-do-trackers', 'DMZToDoFOB');
+          const docRefFOBTaskDoc = doc(db, 'users', user.uid, 'to-do-trackers', 'DMZToDoFOB');
           
           let randomTaskId = randomTaskIdGenerator('task-fob');
   
