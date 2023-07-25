@@ -73,8 +73,8 @@ const createNavigation = async (user) => {
     </ul>
     <div id='profileLinkContainer' class=''>
       <button type='button' id='btnSignOut' class='btn btn-auth ${btnSignOutStatus}'>Sign Out</button>
-      <a href='../auth.html' class='btn-link'><button type='button' id='btnSignInLink' class='btn btn-auth ${btnSignInStatus}'>Sign In</button></a>
-      <a href='../sign-up.html' class='btn-link'><button type='button' id='btnSignUpLink' class='btn btn-auth  ${btnSignUpStatus}'>Sign Up</button></a>
+      <a href='../auth.html' class='btn-link ${btnSignInStatus}'><button type='button' id='btnSignInLink' class='btn btn-auth ${btnSignInStatus}'>Sign In</button></a>
+      <a href='../sign-up.html' class='btn-link ${btnSignUpStatus}'><button type='button' id='btnSignUpLink' class='btn btn-auth ${btnSignUpStatus}'>Sign Up</button></a>
     </div>
   </nav>
   `)
@@ -87,8 +87,8 @@ const createNavigation = async (user) => {
     dropDownMenuButtons[i].addEventListener('click', (e) => {
       // I'll need to have it toggle class hide.
       console.log('drop down menu clicked');
-      btnMenuClosed.classList.toggle('hide');
-      btnMenuOpen.classList.toggle('hide');
+      btnMenuClosed.parentElement.classList.toggle('hide');
+      btnMenuOpen.parentElement.classList.toggle('hide');
       navDropDownMenu.classList.toggle('hide');
     })
   }
