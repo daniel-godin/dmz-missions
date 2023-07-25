@@ -51,7 +51,7 @@ const createNavigation = async (user) => {
   navContainer.insertAdjacentHTML('afterbegin', `
   <header class='logo'><a href='./index.html'>DMZ-Missions</a></header>
 
-  <div id='middleNavbarSpecialSpace'><a class='nav-link special-link' href='../events/event-the-boys-diabolical.html'>Event: The Boys (July 2023)</a></div>
+  <div id='middleNavbarSpecialSpace'><a class='nav-link special-link event-link' href='../events/event-the-boys-diabolical.html'>Event: The Boys (July 2023)</a></div>
 
   <button id='btnMenuClosed' class='btn-drop-down-menu'>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -65,24 +65,23 @@ const createNavigation = async (user) => {
     </svg>
   </button>
   
-  <nav class='nav-drop-down-menu hide' id='navDropDownMenu'>
+  <nav class='nav-drop-down-menu' id='navDropDownMenu'>
     <ul class='nav-links'>
+      <li class='nav-link'><a class='event-link' href='../events/event-the-boys-diabolical.html'>Event: S4 The Boys</a></li>
       <li class='nav-link'><a href='../dmz-missions.html'>DMZ Missions Page</a></li>
       <li class='nav-link'><a href='../to-do.html'>To-Do Page</a></li>
-      <li class='nav-link'><a href='../events/event-the-boys-diabolical.html'>Event: S4 The Boys</a></li>
-      <li class='nav-link'><a href='../auth.html'>Log In</a></li>
-      <li class='nav-link'><a href='../sign-up.html'>Sign Up</a></li>
     </ul>
     <div id='profileLinkContainer' class=''>
       <button type='button' id='btnSignOut' class='btn btn-auth ${btnSignOutStatus}'>Sign Out</button>
-      <button type='button' id='btnSignIn' class='btn btn-auth ${btnSignInStatus}'>Sign In</button>
-      <button type='button' id='btnSignUp' class='btn btn-auth  ${btnSignUpStatus}'>Sign Up</button>
+      <button type='button' id='btnSignIn' href='../auth.html' class='btn btn-auth ${btnSignInStatus}'>Sign In</button>
+      <button type='button' id='btnSignUp' href='../sign-up.html' class='btn btn-auth  ${btnSignUpStatus}'>Sign Up</button>
     </div>
   </nav>
   `)
 
   const btnMenuClosed = document.getElementById('btnMenuClosed');
   const btnMenuOpen = document.getElementById('btnMenuOpen');
+  const navDropDownMenu = document.getElementById('navDropDownMenu');
   const dropDownMenuButtons = document.getElementsByClassName('btn-drop-down-menu');
   for (let i = 0; i < dropDownMenuButtons.length && i < 10; i++) {
     dropDownMenuButtons[i].addEventListener('click', (e) => {
@@ -90,6 +89,7 @@ const createNavigation = async (user) => {
       console.log('drop down menu clicked');
       btnMenuClosed.classList.toggle('hide');
       btnMenuOpen.classList.toggle('hide');
+      navDropDownMenu.classList.toggle('hide');
     })
   }
 
