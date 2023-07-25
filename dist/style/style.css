@@ -72,8 +72,8 @@ a:hover {
   top: 0;
   left: 0;
   right: 0;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   height: var(--size-nav-bar);
   min-width: 100vw;
   width: 100%;
@@ -88,18 +88,21 @@ a:hover {
   place-items: center;
 }
 
-#dropDownMenuContainer {
-  background-image: url(../assets/img/drop-down-menu.svg);
+.svg-drop-down-menu {
   height: var(--size-nav-bar);
   width: var(--size-nav-bar);
 }
 
-#dropDownMenuContainer:hover {
-  background-image: url(../assets/img/drop-down-menu-active.svg);
+#dropDownMenuInactive {
+
 }
 
-svg:hover {
+#dropDownMenuInactive:hover {
   fill: white;
+}
+
+#dropDownMenuActive {
+  
 }
 
 .nav-links {

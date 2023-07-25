@@ -50,23 +50,26 @@ const createNavigation = async (user) => {
   }
   navContainer.insertAdjacentHTML('afterbegin', `
   <header class='logo'><a href='./index.html'>DMZ-Missions</a></header>
+
   <div id='middleNavbarSpecialSpace'><a class='nav-link special-link' href='../events/event-the-boys-diabolical.html'>Event: The Boys (July 2023)</a></div>
-  <div id='dropDownMenuContainer'>
-    <nav class='nav-drop-down-menu hide' id='navDropDownMenu'>
-      <ul class='nav-links'>
-        <li class='nav-link'><a href='../dmz-missions.html'>DMZ Missions Page</a></li>
-        <li class='nav-link'><a href='../to-do.html'>To-Do Page</a></li>
-        <li class='nav-link'><a href='../events/event-the-boys-diabolical.html'>Event: S4 The Boys</a></li>
-        <li class='nav-link'><a href='../auth.html'>Log In</a></li>
-        <li class='nav-link'><a href='../sign-up.html'>Sign Up</a></li>
-      </ul>
-      <div id='profileLinkContainer' class=''>
-        <button type='button' id='btnSignOut' class='btn btn-auth ${btnSignOutStatus}'>Sign Out</button>
-        <button type='button' id='btnSignIn' class='btn btn-auth ${btnSignInStatus}'>Sign In</button>
-        <button type='button' id='btnSignUp' class='btn btn-auth  ${btnSignUpStatus}'>Sign Up</button>
-      </div>
-    </nav>
-  </div>
+
+  <svg id='dropDownMenuInactive' class='svg-drop-down-menu' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+  <svg id='dropDownMenuActive' class='svg-drop-down-menu active hide'  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+  
+  <nav class='nav-drop-down-menu hide' id='navDropDownMenu'>
+    <ul class='nav-links'>
+      <li class='nav-link'><a href='../dmz-missions.html'>DMZ Missions Page</a></li>
+      <li class='nav-link'><a href='../to-do.html'>To-Do Page</a></li>
+      <li class='nav-link'><a href='../events/event-the-boys-diabolical.html'>Event: S4 The Boys</a></li>
+      <li class='nav-link'><a href='../auth.html'>Log In</a></li>
+      <li class='nav-link'><a href='../sign-up.html'>Sign Up</a></li>
+    </ul>
+    <div id='profileLinkContainer' class=''>
+      <button type='button' id='btnSignOut' class='btn btn-auth ${btnSignOutStatus}'>Sign Out</button>
+      <button type='button' id='btnSignIn' class='btn btn-auth ${btnSignInStatus}'>Sign In</button>
+      <button type='button' id='btnSignUp' class='btn btn-auth  ${btnSignUpStatus}'>Sign Up</button>
+    </div>
+  </nav>
   `)
 
   const btnNavDropDownMenu = document.getElementById('navDropDownMenu');
