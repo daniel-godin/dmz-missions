@@ -30,10 +30,9 @@ p {
   width: 95%;
   height: min-content;
   display: grid;
-  grid-template-columns:  repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: .5rem;
   /* border: 2px solid red; */
-  justify-self: center;
   justify-items: center;
 }
 

@@ -56,13 +56,14 @@ a:hover {
   width: 100%;
   max-width: 100vw;
 
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: calc(var(--size-nav-bar) + 5px);
+  margin-bottom: calc(var(--size-nav-bar) + 5px);
 
   display: grid;
   justify-items: center;
   align-content: start;
   gap: 1rem;
+
   color: var(--color-font-color);
 }
 
