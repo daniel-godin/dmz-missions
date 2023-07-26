@@ -2,7 +2,13 @@
 
 
 // Should I break this apart into 4 different objects?  Probably...
-export const dataDmzFobS4Stash = { // Stash, Weapons Locker, Bounty Board, Communications Station
+export const dataDMZFOBS4 = { // Stash, Weapons Locker, Bounty Board, Communications Station
+  
+  // !!!!  I need to re-do this whole object.
+  
+  
+  
+  
   wallet: {
     unlockWallet: {
       title: "Unlock Wallet",
@@ -43,16 +49,4 @@ export const dataDmzFobS4Stash = { // Stash, Weapons Locker, Bounty Board, Commu
       },
     }
   }
-}
-
-export const dataDmzFobS4WeaponsLocker = { // Stash, Weapons Locker, Bounty Board, Communications Station
-
-}
-
-export const dataDmzFobS4BountyBoard = { // Stash, Weapons Locker, Bounty Board, Communications Station
-
-}
-
-export const dataDmzFobS4CommunicationsStation = { // Stash, Weapons Locker, Bounty Board, Communications Station
-
 }
