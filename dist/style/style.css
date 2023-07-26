@@ -149,6 +149,7 @@ svg:hover {
 
 .event-link {
   color: red;
+  font-weight: bold;
 }
 
 #profileLinkContainer {
