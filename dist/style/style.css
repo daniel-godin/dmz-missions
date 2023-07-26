@@ -216,14 +216,17 @@ svg:hover {
   border: 1px solid white;
   border-radius: 10px;
   padding: .5rem;
-  width: 80%;
+  width: auto;
+  min-width: 30vw;
+  max-width: 95vw;
   background-color: var(--color-content-bg-color);
   color: var(--color-font-color);
   text-align: center;
   text-decoration: none;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 #indexWelcomeContainer {
