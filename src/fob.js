@@ -49,7 +49,7 @@ const createFOBGrid = async (obj, docRef, user, db) => {
     for (let i = 0; i < arrayOfPassiveTasks.length && i < 15; i++) {
         DMZFOBContainer.insertAdjacentHTML('beforeend', `
             <div class='fob-column' data-fob-column-id='${arrayOfPassiveTasks[i]}'>
-
+                <header>${arrayOfPassiveTasks[i]}</header>
             </div>
         `);
 
