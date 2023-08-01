@@ -28,8 +28,6 @@ onAuthStateChanged(auth, user => {
             })
         } else {
             // Create logged OUT FOB grid.
-            console.log("dmz fob container and not logged in");
-            const currentFOBSectionsArray = currentFOBTasks.arrayOfFOBSections;
             createFOBGrid(currentFOBTasks, undefined, undefined, undefined);
             recommendLogInBox(DMZFOBContainer);
         }
@@ -49,7 +47,6 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                 <header>${obj.arrayOfFOBSections[i]}</header>
             </div>
         `);
-
     }
 
 
