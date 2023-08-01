@@ -6,7 +6,11 @@ export const dataDMZFOBS4 = { // Stash, Weapons Locker, Bounty Board, Communicat
   
   // !!!!  I need to re-do this whole object.
   
-  
+  arrayOfFOBSections: [
+      "Wallet", "Stash", "Wallet (Crown)", "Stash (Crown)",
+      "1st Insured Slot", "2nd Insured Slot", "3rd Insured Slot", "Contraband Stash", "Contraband Stash (Crown)",
+      "Bounty Board", "Communications Station",
+  ],
   
   
   wallet: {

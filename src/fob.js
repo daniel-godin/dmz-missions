@@ -10,6 +10,7 @@ const DMZFOBContainer = document.getElementById('DMZFOBContainer');
 
 const currentFOBTasks = dataDMZFOBS4;
 const currentFOBDocName = 'DMZFOBS4';
+
 // const currentFOBSeasonNumberOfTasks = 99; // 99 IS NOT TRUE, IT'S A PLACEHOLDER
 
 onAuthStateChanged(auth, user => {
@@ -28,6 +29,7 @@ onAuthStateChanged(auth, user => {
         } else {
             // Create logged OUT FOB grid.
             console.log("dmz fob container and not logged in");
+            const currentFOBSectionsArray = currentFOBTasks.arrayOfFOBSections;
             createFOBGrid(currentFOBTasks, undefined, undefined, undefined);
             recommendLogInBox(DMZFOBContainer);
         }
@@ -40,16 +42,11 @@ const createFOBGrid = async (obj, docRef, user, db) => {
     const arrayOfPassiveMissionScreens = ["Stash", "Weapons Locker", "Bounty Board", "Communications Station", ]
     // Move this array into the main data object later.
     // 11 items.  11 columns.
-    const arrayOfPassiveTasks = [
-       "Wallet", "Stash", "Wallet (Crown)", "Stash (Crown)",
-        "1st Insured Slot", "2nd Insured Slot", "3rd Insured Slot", "Contraband Stash", "Contraband Stash (Crown)",
-        "Bounty Board", "Communications Station",
-    ];
 
-    for (let i = 0; i < arrayOfPassiveTasks.length && i < 15; i++) {
+    for (let i = 0; i < obj.arrayOfFOBSections.length && i < 15; i++) {
         DMZFOBContainer.insertAdjacentHTML('beforeend', `
-            <div class='fob-column' data-fob-column-id='${arrayOfPassiveTasks[i]}'>
-                <header>${arrayOfPassiveTasks[i]}</header>
+            <div class='fob-column' data-fob-column-id='${obj.arrayOfFOBSections[i]}'>
+                <header>${obj.arrayOfFOBSections[i]}</header>
             </div>
         `);
 
