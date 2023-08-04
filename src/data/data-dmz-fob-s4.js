@@ -661,7 +661,64 @@ export const dataDMZFOBS4 = { // Stash, Weapons Locker, Bounty Board, Communicat
   },
 
   firstInsuredSlot: {
-
+    firstInsuredSlotCooldownReduction1: {
+      title: "1st Insured Slot Cooldown Reduction 1",
+      complete: false, // true/false complete/incomplete
+      factionRequirement: "Phalanx (3)", // Amount of Faction Needed to "Unlock"
+      reward: "Reduce the cooldown of the 1st insured slot by 25%.",
+      tasks: {
+        task1: {
+          task: "Extract 4 bottles of gun oil.",
+          progressCurrent: 0,
+          progressTotal: 4,
+          complete: false, // true/false complete/incomplete
+        },
+        task2: {
+          task: "Extract 3 classified documents.",
+          progressCurrent: 0,
+          progressTotal: 3,
+          complete: false, // true/false complete/incomplete
+        },
+        task3: {
+          task: "Extract 400k in cash.",
+          progressCurrent: 0,
+          progressTotal: 400,
+          complete: false, // true/false complete/incomplete
+        },
+      },
+    },
+    firstInsuredSlotCooldownReduction2: {
+      title: "1st Insured Slot Cooldown Reduction 2",
+      complete: false, // true/false complete/incomplete
+      factionRequirement: "Phalanx (9)", // Amount of Faction Needed to "Unlock"
+      reward: "Reduce the cooldown of the 1st insured slot by an additional 25% (50% total).",
+      tasks: {
+        task1: {
+          task: "Extract 12 tubes of toothpaste.",
+          progressCurrent: 0,
+          progressTotal: 12,
+          complete: false, // true/false complete/incomplete
+        },
+        task2: {
+          task: "Extract 15 bottles of fresh water.",
+          progressCurrent: 0,
+          progressTotal: 15,
+          complete: false, // true/false complete/incomplete
+        },
+        task3: {
+          task: "Extract 7 light bulbs.",
+          progressCurrent: 0,
+          progressTotal: 7,
+          complete: false, // true/false complete/incomplete
+        },
+        task4: {
+          task: "Extract 5 enemy operator's weapons.",
+          progressCurrent: 0,
+          progressTotal: 5,
+          complete: false, // true/false complete/incomplete
+        }, 
+      },
+    },
   },
 
   secondInsuredSlot: {
