@@ -9,6 +9,7 @@ export const dataDMZFOBS4 = { // Stash, Weapons Locker, Bounty Board, Communicat
   arrayOfFOBSections: [
       "Wallet", "Stash", "Wallet (Crown)", "Stash (Crown)",
       "1st Insured Slot", "2nd Insured Slot", "3rd Insured Slot", "Contraband Stash", "Contraband Stash (Crown)",
+      "Increased Starting Armor", "Unlock Rebreather", "Starting Solo Self Revive", 
       "Bounty Board", "Communications Station",
   ],
 
