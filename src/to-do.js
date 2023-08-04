@@ -351,8 +351,11 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
         e.preventDefault();
         const data = new FormData(arrayOfFormProgressInputFOB[i]); // Creates an object named data, with all FormData.
 
+        console.log(data);
+
         let progressCurrent = data.get('progressCurrent');
         let progressTotal = data.get('progressTotal');
+        // let task = data.get('')
         let taskId = e.target.dataset.taskId;
 
         // console.log(progressCurrent, progressTotal, taskId); // For error and information checking.
