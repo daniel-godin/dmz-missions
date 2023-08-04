@@ -349,7 +349,168 @@ export const dataDMZFOBS4 = { // Stash, Weapons Locker, Bounty Board, Communicat
   },
 
   walletCrown: {
+    walletExpansion1Crown: {
+      title: "Wallet Expansion 1 (CROWN)",
+      complete: false, // true/false complete/incomplete
+      factionRequirement: "Crown (4)", // Amount of Faction Needed to "Unlock"
+      reward: "Expand the wallet's capacity by $100k.",
+      tasks: {
+        task1: {
+          task: "Extract 5 batteries.",
+          progressCurrent: 0,
+          progressTotal: 5,
+          complete: false, // true/false complete/incomplete
+        },
+        task2: {
+          task: "Extract 2 drills.",
+          progressCurrent: 0,
+          progressTotal: 2,
+          complete: false, // true/false complete/incomplete
+        },
+        task3: {
+          task: "Extract 3 bottles of oil.",
+          progressCurrent: 0,
+          progressTotal: 3,
+          complete: false, // true/false complete/incomplete
+        },
+      },
+    },
+    walletExpansion2Crown: {
+      title: "Wallet Expansion 2 (CROWN)",
+      complete: false, // true/false complete/incomplete
+      factionRequirement: "Crown (5)", // Amount of Faction Needed to "Unlock"
+      reward: "Expand the wallet's capacity by $50k.",
+      tasks: {
+        task1: {
+          task: "Extract 8 rolls of electrical tape.",
+          progressCurrent: 0,
+          progressTotal: 8,
+          complete: false, // true/false complete/incomplete
+        },
+        task2: {
+          task: "Extract 3 car batteries.",
+          progressCurrent: 0,
+          progressTotal: 3,
+          complete: false, // true/false complete/incomplete
+        },
+        task3: {
+          task: "Extract 6 jumper cables.",
+          progressCurrent: 0,
+          progressTotal: 6,
+          complete: false, // true/false complete/incomplete
+        },
+      },
+    },
+    walletExpansion3Crown: {
+      title: "Wallet Expansion 3 (CROWN)",
+      complete: false, // true/false complete/incomplete
+      factionRequirement: "Crown (6)", // Amount of Faction Needed to "Unlock"
+      reward: "Expand the wallet's capacity by $50k.",
+      tasks: {
+        task1: {
+          task: "Extract 5 AQ laptops.",
+          progressCurrent: 0,
+          progressTotal: 5,
+          complete: false, // true/false complete/incomplete
+        },
+        task2: {
+          task: "Extract 10 screwdrivers.",
+          progressCurrent: 0,
+          progressTotal: 10,
+          complete: false, // true/false complete/incomplete
+        },
+        task3: {
+          task: "Extract 4 encrypted hard drives.",
+          progressCurrent: 0,
+          progressTotal: 4,
+          complete: false, // true/false complete/incomplete
+        },
+        task4: {
+          task: "Extract 500k in cash.",
+          progressCurrent: 0,
+          progressTotal: 500,
+          complete: false, // true/false complete/incomplete
+        }, 
+      },
+    },
+    walletExpansion4Crown: {
+      title: "Wallet Expansion 4 (CROWN)",
+      complete: false, // true/false complete/incomplete
+      factionRequirement: "Crown (8)", // Amount of Faction Needed to "Unlock"
+      reward: "Expand the wallet's capacity by $50k.",
+      tasks: {
+        task1: {
+          task: "Extract 4 GPUs.",
+          progressCurrent: 0,
+          progressTotal: 4,
+          complete: false, // true/false complete/incomplete
+        },
+        task2: {
+          task: "Extract 10 game consoles.",
+          progressCurrent: 0,
+          progressTotal: 10,
+          complete: false, // true/false complete/incomplete
+        },
+        task3: {
+          task: "Extract 10 VCRs.",
+          progressCurrent: 0,
+          progressTotal: 10,
+          complete: false, // true/false complete/incomplete
+        },
+        task4: {
+          task: "Extract 6 encrypted thumb drives.",
+          progressCurrent: 0,
+          progressTotal: 6,
+          complete: false, // true/false complete/incomplete
+        }, 
+      },
+    },
 
+    // Not unlocked yet for me
+    walletExpansion5Crown: {
+      title: "Wallet Expansion 5 (CROWN)",
+      complete: false, // true/false complete/incomplete
+      factionRequirement: "Crown (10)", // Amount of Faction Needed to "Unlock"
+      reward: "Expand the wallet's capacity by $50k.",
+      tasks: {
+        task1: {
+          task: "",
+          progressCurrent: 0,
+          progressTotal: 1,
+          complete: false, // true/false complete/incomplete
+        },
+        task2: {
+          task: "",
+          progressCurrent: 0,
+          progressTotal: 1,
+          complete: false, // true/false complete/incomplete
+        },
+        task3: {
+          task: "",
+          progressCurrent: 0,
+          progressTotal: 1,
+          complete: false, // true/false complete/incomplete
+        },
+        task4: {
+          task: "",
+          progressCurrent: 0,
+          progressTotal: 1,
+          complete: false, // true/false complete/incomplete
+        }, 
+        task5: {
+          task: "",
+          progressCurrent: 0,
+          progressTotal: 1,
+          complete: false, // true/false complete/incomplete
+        },
+        task6: {
+          task: "",
+          progressCurrent: 0,
+          progressTotal: 1,
+          complete: false, // true/false complete/incomplete
+        },
+      },
+    },
   },
 
   stashCrown: {
