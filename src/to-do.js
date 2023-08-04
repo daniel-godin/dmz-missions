@@ -355,7 +355,7 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
 
         let progressCurrent = data.get('progressCurrent');
         let progressTotal = data.get('progressTotal');
-        // let task = data.get('')
+        let task = data.get('missionText');
         let taskId = e.target.dataset.taskId;
 
         // console.log(progressCurrent, progressTotal, taskId); // For error and information checking.
@@ -363,6 +363,7 @@ export const populateFOBToDoLists = async (FOBDoc, FOBDocRef, database, uid) => 
         updateDoc(FOBDocRef, {
           [taskId+".progress.progressCurrent"] : progressCurrent,
           [taskId+".progress.progressTotal"] : progressTotal,
+          [taskId+".task"] : task,
         });
         e.target.parentNode.classList.toggle('hide'); // Toggles (Hides) form div container.
         e.target.parentNode.previousElementSibling.classList.toggle('hide'); // Toggles (Shows) text-only task information.
