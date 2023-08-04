@@ -167,6 +167,8 @@ export const dataDMZFOBS4 = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
       },
     },
+
+    // I haven't gotten to wallet expansion 5 yet.
     walletExpansion5: {
       title: "Wallet Expansion 5",
       complete: false, // true/false complete/incomplete
@@ -293,37 +295,25 @@ export const dataDMZFOBS4 = { // Stash, Weapons Locker, Bounty Board, Communicat
       reward: "Expand the mission item and key stashes by an additional 3 slots each.",
       tasks: {
         task1: {
-          task: "",
+          task: "Extract 5 screwdrivers.",
           progressCurrent: 0,
-          progressTotal: 1,
+          progressTotal: 5,
           complete: false, // true/false complete/incomplete
         },
         task2: {
-          task: "",
+          task: "Extract 5 wrenches.",
           progressCurrent: 0,
-          progressTotal: 1,
+          progressTotal: 5,
           complete: false, // true/false complete/incomplete
         },
         task3: {
-          task: "",
+          task: "Extract 1 RGL-80.",
           progressCurrent: 0,
           progressTotal: 1,
           complete: false, // true/false complete/incomplete
         },
         task4: {
-          task: "",
-          progressCurrent: 0,
-          progressTotal: 1,
-          complete: false, // true/false complete/incomplete
-        }, 
-        task5: {
-          task: "",
-          progressCurrent: 0,
-          progressTotal: 1,
-          complete: false, // true/false complete/incomplete
-        },
-        task6: {
-          task: "",
+          task: "Extract 3 dog tags.",
           progressCurrent: 0,
           progressTotal: 1,
           complete: false, // true/false complete/incomplete
@@ -337,39 +327,21 @@ export const dataDMZFOBS4 = { // Stash, Weapons Locker, Bounty Board, Communicat
       reward: "Expand the mission item and key stashes by an additional 3 slots each.",
       tasks: {
         task1: {
-          task: "",
+          task: "Extract 40 documents.",
           progressCurrent: 0,
-          progressTotal: 1,
+          progressTotal: 40,
           complete: false, // true/false complete/incomplete
         },
         task2: {
-          task: "",
+          task: "Extract 16 sensitive documents.",
           progressCurrent: 0,
-          progressTotal: 1,
+          progressTotal: 16,
           complete: false, // true/false complete/incomplete
         },
         task3: {
-          task: "",
+          task: "Extract 8 classified documents.",
           progressCurrent: 0,
-          progressTotal: 1,
-          complete: false, // true/false complete/incomplete
-        },
-        task4: {
-          task: "",
-          progressCurrent: 0,
-          progressTotal: 1,
-          complete: false, // true/false complete/incomplete
-        }, 
-        task5: {
-          task: "",
-          progressCurrent: 0,
-          progressTotal: 1,
-          complete: false, // true/false complete/incomplete
-        },
-        task6: {
-          task: "",
-          progressCurrent: 0,
-          progressTotal: 1,
+          progressTotal: 8,
           complete: false, // true/false complete/incomplete
         },
       },
@@ -401,6 +373,18 @@ export const dataDMZFOBS4 = { // Stash, Weapons Locker, Bounty Board, Communicat
   },
 
   contrabandStashCrown: {
+
+  },
+
+  increasedStartingArmor: {
+
+  },
+
+  unlockRebreather: {
+
+  },
+
+  startingSoloSelfRevive: {
 
   },
 
