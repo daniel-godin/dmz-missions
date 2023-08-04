@@ -514,7 +514,150 @@ export const dataDMZFOBS4 = { // Stash, Weapons Locker, Bounty Board, Communicat
   },
 
   stashCrown: {
+    stashExpansion1Crown: {
+      title: "Stash Expansion 1 (CROWN)",
+      complete: false, // true/false complete/incomplete
+      factionRequirement: "Crown (4)", // Amount of Faction Needed to "Unlock"
+      reward: "Expand the mission item and key stashes by an additional 3 slots each.",
+      tasks: {
+        task1: {
+          task: "Extract 8 bandages.",
+          progressCurrent: 0,
+          progressTotal: 8,
+          complete: false, // true/false complete/incomplete
+        },
+        task2: {
+          task: "Extract 4 IFAKs.",
+          progressCurrent: 0,
+          progressTotal: 4,
+          complete: false, // true/false complete/incomplete
+        },
+        task3: {
+          task: "Extract 1 bottle of radiation blockers.",
+          progressCurrent: 0,
+          progressTotal: 1,
+          complete: false, // true/false complete/incomplete
+        },
+      },
+    },
+    stashExpansion2Crown: {
+      title: "Stash Expansion 2 (CROWN)",
+      complete: false, // true/false complete/incomplete
+      factionRequirement: "Crown (5)", // Amount of Faction Needed to "Unlock"
+      reward: "Expand the mission item and key stashes by an additional 3 slots each.",
+      tasks: {
+        task1: {
+          task: "Extract 6 vases from Ashika Island.",
+          progressCurrent: 0,
+          progressTotal: 6,
+          complete: false, // true/false complete/incomplete
+        },
+        task2: {
+          task: "Extract 3 Japanese liquor bottles.",
+          progressCurrent: 0,
+          progressTotal: 3,
+          complete: false, // true/false complete/incomplete
+        },
+      },
+    },
+    stashExpansion3Crown: {
+      title: "Stash Expansion 3 (CROWN)",
+      complete: false, // true/false complete/incomplete
+      factionRequirement: "Crown (6)", // Amount of Faction Needed to "Unlock"
+      reward: "Expand the mission item and key stashes by an additional 2 slots each.",
+      tasks: {
+        task1: {
+          task: "Extract 8 bottles of fresh water.",
+          progressCurrent: 0,
+          progressTotal: 8,
+          complete: false, // true/false complete/incomplete
+        },
+        task2: {
+          task: "Extract 7 food rations.",
+          progressCurrent: 0,
+          progressTotal: 7,
+          complete: false, // true/false complete/incomplete
+        },
+        task3: {
+          task: "Extract 3 gas cans.",
+          progressCurrent: 0,
+          progressTotal: 3,
+          complete: false, // true/false complete/incomplete
+        },
+        task4: {
+          task: "Extract 8 cans of food.",
+          progressCurrent: 0,
+          progressTotal: 8,
+          complete: false, // true/false complete/incomplete
+        }, 
+      },
+    },
+    stashExpansion4Crown: {
+      title: "Stash Expansion 4 (CROWN)",
+      complete: false, // true/false complete/incomplete
+      factionRequirement: "Crown (8)", // Amount of Faction Needed to "Unlock"
+      reward: "Expand the mission item and key stashes by an additional 1 slots each.",
+      tasks: {
+        task1: {
+          task: "Extract 8 aspirin bottles.",
+          progressCurrent: 0,
+          progressTotal: 8,
+          complete: false, // true/false complete/incomplete
+        },
+        task2: {
+          task: "Extract 8 large medical bags.",
+          progressCurrent: 0,
+          progressTotal: 8,
+          complete: false, // true/false complete/incomplete
+        },
+      },
+    },
 
+    // I haven't reached this yet.
+    stashExpansion5Crown: {
+      title: "Stash Expansion 5 (CROWN)",
+      complete: false, // true/false complete/incomplete
+      factionRequirement: "Crown (10)", // Amount of Faction Needed to "Unlock"
+      reward: "Expand the mission item and key stashes by an additional 1 slots each.",
+      tasks: {
+        task1: {
+          task: "",
+          progressCurrent: 0,
+          progressTotal: 1,
+          complete: false, // true/false complete/incomplete
+        },
+        task2: {
+          task: "",
+          progressCurrent: 0,
+          progressTotal: 1,
+          complete: false, // true/false complete/incomplete
+        },
+        task3: {
+          task: "",
+          progressCurrent: 0,
+          progressTotal: 1,
+          complete: false, // true/false complete/incomplete
+        },
+        task4: {
+          task: "",
+          progressCurrent: 0,
+          progressTotal: 1,
+          complete: false, // true/false complete/incomplete
+        }, 
+        task5: {
+          task: "",
+          progressCurrent: 0,
+          progressTotal: 1,
+          complete: false, // true/false complete/incomplete
+        },
+        task6: {
+          task: "",
+          progressCurrent: 0,
+          progressTotal: 1,
+          complete: false, // true/false complete/incomplete
+        },
+      },
+    },
   },
 
   firstInsuredSlot: {
