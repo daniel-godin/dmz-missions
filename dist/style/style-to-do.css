@@ -54,13 +54,13 @@ p {
 .active-to-do-container {
   min-height: 25px;
   height: min-content;
-  max-height: 65vh;
+  max-height: 70vh;
   width: 100%;
   display: grid;
 
 
   /* grid-auto-flow: column; */
-  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
   /* grid-template-rows: 1fr; */
 
 
