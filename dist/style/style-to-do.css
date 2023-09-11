@@ -37,7 +37,7 @@ p {
 #mainToDoContentContainer {
   width: 95%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 25px;
   justify-self: center;
 }
@@ -51,13 +51,19 @@ p {
   justify-items: center;
 }
 
-
-
 .active-to-do-container {
   min-height: 25px;
   height: min-content;
+  max-height: 65vh;
   width: 100%;
   display: grid;
+
+
+  /* grid-auto-flow: column; */
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  /* grid-template-rows: 1fr; */
+
+
   row-gap: 5px;
   border: 1px dashed blue;
 }
