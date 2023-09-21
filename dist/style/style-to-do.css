@@ -20,10 +20,24 @@ html {
   color: aliceblue;
 }
 
+h2 {
+  color: aliceblue;
+  text-decoration: underline;
+}
+
+label {
+  color: aliceblue;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
 #mainToDoContentContainer {
   width: 95%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 25px;
   justify-self: center;
 }
@@ -37,20 +51,19 @@ html {
   justify-items: center;
 }
 
-h2 {
-  color: aliceblue;
-  text-decoration: underline;
-}
-
-label {
-  color: aliceblue;
-}
-
 .active-to-do-container {
-  min-height: 50px;
+  min-height: 25px;
   height: min-content;
+  max-height: 65vh;
   width: 100%;
   display: grid;
+
+
+  /* grid-auto-flow: column; */
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  /* grid-template-rows: 1fr; */
+
+
   row-gap: 5px;
   border: 1px dashed blue;
 }
@@ -82,9 +95,9 @@ label {
   display: grid;
   grid-template-columns: min-content repeat(3, min-content) 1fr; /* editBtn 3*p taskText */
 
-  gap: 5px;
+  column-gap: 5px;
   align-items: center;
-  height: min-content;
+  height: auto;
 }
 
 .mission-task-progress-form-container, .mission-task-progress-container {
