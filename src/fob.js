@@ -17,30 +17,47 @@ onAuthStateChanged(auth, user => {
     if (!DMZFOBContainer) { console.log("not on fob page"); return; };
 
     if (!user) {
-        console.log("no user logged in, creating non-user fob grid");
         createFOBGrid(currentFOBTasks, undefined, undefined, undefined);
         recommendLogInBox(DMZFOBContainer);
-        console.log("no user logged in, CREATED GRID");
         return;
     }
 
     const docRefFOBGrid = doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`);
 
-    // console.log(docRefFOBGrid);
-
     onSnapshot(docRefFOBGrid, (snapshot) => {
         if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), currentFOBTasks); }
         let snapObj = snapshot.data();
         createFOBGrid(snapObj, docRefFOBGrid, user, db);
-    })
-    
+    }) 
 })
 
 const createFOBGrid = async (obj, docRef, user, db) => {
-
     console.log(obj);
 
-    // const arrayOfPassiveMissionScreens = ["Stash", "Weapons Locker", "Bounty Board", "Communications Station", ]
+    DMZFOBContainer.insertAdjacentHTML('afterbegin', `
+        <div class='fob-header-select' id='DMZFOBHeaderSelect'></div>
+        <div class='fob-information-container' id='DMZFOBInformationContainer'></div>
+    `)
+
+    const arrayOfFOBSections = ["All", "Stash", "Weapons Locker", "Equipment", "Bounty Board", "Communications Station", ];
+
+    const DMZFOBHeaderSelect = document.getElementById('DMZFOBHeaderSelect');
+
+    for (let i = 0; i < arrayOfFOBSections.length && i < 10; i++) {
+        DMZFOBHeaderSelect.insertAdjacentHTML('beforeend', `
+            <div class='fob-header' data-fob-header='${arrayOfFOBSections}'>
+                <header>${arrayOfFOBSections[i]}</header>
+            </div>
+        `)
+
+    }
+
+
+
+
+
+
+
     // // Move this array into the main data object later.
     // // 11 items.  11 columns.
 
