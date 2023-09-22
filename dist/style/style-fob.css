@@ -5,15 +5,52 @@
 
 #DMZFOBHeaderSelect {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-columns: repeat(6, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
 }
 
-/* .fob-column {
-    border: 1px solid red;
-    height: 400px;
-    width: 100px;
-} */
-
-.fob-header {
+.fob-header-select {
+    display: grid;
+    place-items: center;
     color: orange;
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+}
+
+.fob-header-select > header {
+    align-self: center;
+}
+
+#DMZFOBInformationContainer {
+    border: 1px solid pink;
+    padding-top: .5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    height: min-content;
+    gap: .5rem;
+    justify-items: center;
+}
+
+.fob-section-container {
+    height: 500px;
+    border: 1px solid gold;
+    min-width: 250px;
+    
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: 1fr;
+}
+
+.fob-section-header {
+    border: 1px dashed green;
+    width: 100%;
+    text-align: center;
+}
+
+.fob-section-info-container {
+    border: 3px dotted blue;
+    width: 100%;
+
 }

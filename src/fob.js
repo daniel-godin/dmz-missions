@@ -7,7 +7,6 @@ import { recommendLogInBox } from "./ui";
 
 const DMZFOBContainer = document.getElementById('DMZFOBContainer');
 
-
 const currentFOBTasks = dataDMZFOBS4;
 const currentFOBDocName = 'DMZFOBS4';
 
@@ -34,26 +33,31 @@ onAuthStateChanged(auth, user => {
 const createFOBGrid = async (obj, docRef, user, db) => {
     console.log(obj);
 
-    DMZFOBContainer.insertAdjacentHTML('afterbegin', `
-        <div class='fob-header-select' id='DMZFOBHeaderSelect'></div>
-        <div class='fob-information-container' id='DMZFOBInformationContainer'></div>
-    `)
-
     const arrayOfFOBSections = ["All", "Stash", "Weapons Locker", "Equipment", "Bounty Board", "Communications Station", ];
 
     const DMZFOBHeaderSelect = document.getElementById('DMZFOBHeaderSelect');
 
     for (let i = 0; i < arrayOfFOBSections.length && i < 10; i++) {
         DMZFOBHeaderSelect.insertAdjacentHTML('beforeend', `
-            <div class='fob-header' data-fob-header='${arrayOfFOBSections}'>
+            <div class='fob-header-select' data-fob-header='${arrayOfFOBSections[i]}'>
                 <header>${arrayOfFOBSections[i]}</header>
             </div>
         `)
-
     }
 
+    const DMZFOBInformationContainer = document.getElementById('DMZFOBInformationContainer');
 
+    
+    for (let i = 1; i < arrayOfFOBSections.length && i < 10; i++) {
+        DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
+            <div class='fob-section-container' data-fob-section='${arrayOfFOBSections[i]}'>
+                <header class='fob-section-header'>${arrayOfFOBSections[i]}</header>
+                <div class='fob-section-info-container' data-fob-section-info='${arrayOfFOBSections[i]}'></div>
+            </div>
+        `)
+    }
 
+    // Here's where I use a loop to run through the data object and put each thing inside of the fob-section-info-containers.
 
 
 
