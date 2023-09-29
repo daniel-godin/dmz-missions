@@ -1,5 +1,4 @@
 import { doc, getDoc, onSnapshot, updateDoc, setDoc, } from "firebase/firestore";
-import { dataDMZStandardMissionsS4, } from "./data/data-dmz-standard-missions-s4";
 import { dataS6DMZStandardMissions } from "./data/data-s6-dmz-standard-missions";
 import { dataS6DMZFOB } from "./data/data-s6-dmz-fob";
 import { auth, db } from "./firebase";
