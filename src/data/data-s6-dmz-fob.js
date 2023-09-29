@@ -1795,11 +1795,4 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
   communicationsStation: {
 
   },
-
-
-
-
-
-
-
 }
