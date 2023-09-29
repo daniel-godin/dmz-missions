@@ -1511,7 +1511,281 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
   },
 
   equipment: {
-
+    increasedStartingArmor: {
+      increasedStartingArmor1: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Increased Starting Armor",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Start deployments with 3 armor plates.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Dead Drop 8 stronghold keycards.",
+                progressCurrent: 0,
+                progressTotal: 8,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "Dead drop 1 skeleton key.",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      increasedStartingArmor2: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Increased Starting Armor II",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "Shadow Company", // Shadow Company, Black Mous, etc.
+        factionRequirement: 5, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Start deployments with 4 armor plates.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Dead drop 10 killstreaks.",
+                progressCurrent: 0,
+                progressTotal: 10,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "Extract 5 NVGs.",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      increasedStartingArmor3: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Increased Starting Armor III",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "Shadow Company", // Shadow Company, Black Mous, etc.
+        factionRequirement: 9, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Start deployments with 5 armor plates.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Extract 5 heart lockets.",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "Extract 5 vials of insulin.",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "Extract 5 small dolls.",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task4: {
+                task: "Extract 5 lucky cat statues.",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task5: {
+                task: "Extract 5 dog bank statues.",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+    },
+    unlockRebreather: {
+      unlockRebreather1: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Unlock Rebreather",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "Shadow Company", // Shadow Company, Black Mous, etc.
+        factionRequirement: 3, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Unlock Rebreather",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Extract 12 rebreathers.",
+                progressCurrent: 0,
+                progressTotal: 12,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "Extract 15 rolls of electrical tape.",
+                progressCurrent: 0,
+                progressTotal: 15,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "Extract 8 light bulbs.",
+                progressCurrent: 0,
+                progressTotal: 8,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task4: {
+                task: "Extract 8 bottles of gun oil.",
+                progressCurrent: 0,
+                progressTotal: 8,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task5: {
+                task: "Extract 5 blow torches.",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task6: {
+                task: "Extract 1 GPU.",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      unlockArmorBox: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Unlock Armor Box",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "Shadow Company", // Shadow Company, Black Mous, etc.
+        factionRequirement: 7, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Unlock Armor Box.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Extract 8 armor boxes.",
+                progressCurrent: 0,
+                progressTotal: 81,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "Extract 4 drills.",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "Extract 5 screwdrivers.",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task4: {
+                task: "Extract 8 batteries.",
+                progressCurrent: 0,
+                progressTotal: 8,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task5: {
+                task: "Extract 16 electronic components.",
+                progressCurrent: 0,
+                progressTotal: 16,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task6: {
+                task: "Extract 5 plastic explosive bricks.",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+    },
+  
+    startingSoloSelfRevive: {
+      startingSoloSelfRevive1: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Starting Solo Self Revive",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Start solo deployments with a self revive.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Dead drop 40 self revives.",
+                progressCurrent: 0,
+                progressTotal: 40,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+    },
   },
 
   bountyBoard: {
@@ -1519,31 +1793,6 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
   },
 
   communicationsStation: {
-
-  },
-
-
-  
-
-
-
-  increasedStartingArmor: {
-
-  },
-
-  unlockRebreather: {
-
-  },
-
-  startingSoloSelfRevive: {
-
-  },
-
-  bountyBoard: {
-
-  },
-
-  communicationStation: {
 
   },
 
