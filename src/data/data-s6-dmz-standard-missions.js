@@ -6628,53 +6628,54 @@ export const dataS6DMZStandardMissions = {
       },
     },
   }, 
+
+  // Shadow Company Faction:
+  50101: {
+    id: 40101,
+    title: "Al Mazrah's Threat",
+    complete: false,
+    unlocked: true,
+    description: "",
+    objectives: {
+      objective1: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective2: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+      objective3: {
+        objectiveText: "",
+        complete: false,
+        exists: false,
+        progress: {
+          progressCurrent: 0,
+          progressTotal: 0,
+        },
+      },
+    },
+    rewards: {
+      rewardItem: {
+        itemType: "",
+        item: "",
+      },
+      rewardXP: 1000, // Number:  Amount of XP rewarded.
+      rewardFaction: {
+        amount: 100, // Number:  Amount of faction points awarded
+        faction: "Crown", // Faction that earns the faction points.
+      },
+    },
+  },
 }
 
-// Shadow Company Faction:
-40101: {
-  id: 40101,
-  title: "Al Mazrah's Threat",
-  complete: false,
-  unlocked: true,
-  description: "",
-  objectives: {
-    objective1: {
-      objectiveText: "",
-      complete: false,
-      exists: false,
-      progress: {
-        progressCurrent: 0,
-        progressTotal: 0,
-      },
-    },
-    objective2: {
-      objectiveText: "",
-      complete: false,
-      exists: false,
-      progress: {
-        progressCurrent: 0,
-        progressTotal: 0,
-      },
-    },
-    objective3: {
-      objectiveText: "",
-      complete: false,
-      exists: false,
-      progress: {
-        progressCurrent: 0,
-        progressTotal: 0,
-      },
-    },
-  },
-  rewards: {
-    rewardItem: {
-      itemType: "",
-      item: "",
-    },
-    rewardXP: 1000, // Number:  Amount of XP rewarded.
-    rewardFaction: {
-      amount: 100, // Number:  Amount of faction points awarded
-      faction: "Crown", // Faction that earns the faction points.
-    },
-  },
-},

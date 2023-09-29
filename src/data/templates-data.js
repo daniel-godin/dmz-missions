@@ -80,6 +80,7 @@ templateNameOfFOBPage: {
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "",
             maps: {
                 allMaps: false,
