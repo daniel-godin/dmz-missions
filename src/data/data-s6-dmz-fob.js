@@ -1124,14 +1124,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     },
   
     contrabandStash: {
-      templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-        title: "",
+      contrabandStash1: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Contraband Stash Expansion 1",
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-        faction: "", // Shadow Company, Black Mous, etc.
-        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-        reward: "",
+        faction: "Black Mous", // Shadow Company, Black Mous, etc.
+        factionRequirement: 5, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Expand the contraband stash by 5 slots.",
         maps: {
             allMaps: false,
             alMazrah: false,
@@ -1142,57 +1142,29 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         tasks: {
             task1: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 1,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task2: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 2,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task3: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 3,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task4: {
-                task: "",
+                task: "Extract 4 thumb drives.",
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task5: {
-                task: "",
+            task2: {
+                task: "Extract 5 hard drives.",
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task6: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 6,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
         },
       },
-      templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-        title: "",
+      contrabandStash2: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Contraband Stash Expansion 2",
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-        faction: "", // Shadow Company, Black Mous, etc.
-        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-        reward: "",
+        faction: "Black Mous", // Shadow Company, Black Mous, etc.
+        factionRequirement: 7, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Expand the contraband stash by an additional 5 slots.",
         maps: {
             allMaps: false,
             alMazrah: false,
@@ -1203,57 +1175,29 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         tasks: {
             task1: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 1,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task2: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 2,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task3: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 3,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task4: {
-                task: "",
+                task: "Extract 4 dog tags.",
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task5: {
-                task: "",
+            task2: {
+                task: "Extract 4 pieces of Black Mous intel from Rohan Oil.",
                 progressCurrent: 0,
-                progressTotal: 5,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task6: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 6,
+                progressTotal: 4,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
         },
       },
-      templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-        title: "",
+      contrabandStash3: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Contraband Stash Expansion 3",
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-        faction: "", // Shadow Company, Black Mous, etc.
-        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-        reward: "",
+        faction: "Black Mous", // Shadow Company, Black Mous, etc.
+        factionRequirement: 9, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Expand the contraband stash by an additional 4 slots.",
         maps: {
             allMaps: false,
             alMazrah: false,
@@ -1264,57 +1208,29 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         tasks: {
             task1: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 1,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task2: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 2,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task3: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 3,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task4: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 4,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task5: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 5,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task6: {
-                task: "",
+                task: "Extract 6 Ashika Island masks.",
                 progressCurrent: 0,
                 progressTotal: 6,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
+            task2: {
+                task: "Extract 1 original Ashika Island mask.",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
         },
       },
-      templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-        title: "",
+      contrabandStash4: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Contraband Stash Expansion 4",
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-        faction: "", // Shadow Company, Black Mous, etc.
-        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-        reward: "",
+        faction: "Black Mous", // Shadow Company, Black Mous, etc.
+        factionRequirement: 12, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 4, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Expand the contraband stash by an additional 3 slots.",
         maps: {
             allMaps: false,
             alMazrah: false,
@@ -1325,57 +1241,36 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         tasks: {
             task1: {
-                task: "",
+                task: "Extract 15 armor plates.",
                 progressCurrent: 0,
-                progressTotal: 1,
+                progressTotal: 15,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
             task2: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 2,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task3: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 3,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task4: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 4,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task5: {
-                task: "",
+                task: "Extract 5 three-plate carriers.",
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task6: {
-                task: "",
+            task3: {
+                task: "Extract 3 armor plate boxes.",
                 progressCurrent: 0,
-                progressTotal: 6,
+                progressTotal: 3,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
         },
       },
-      templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-        title: "",
+      contrabandStash5: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Contraband Stash Expansion 5",
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-        faction: "", // Shadow Company, Black Mous, etc.
-        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-        reward: "",
+        faction: "Black Mous", // Shadow Company, Black Mous, etc.
+        factionRequirement: 15, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 5, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Expand the contraband stash by an additional 3 slots.",
         maps: {
             allMaps: false,
             alMazrah: false,
@@ -1386,56 +1281,336 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         tasks: {
             task1: {
-                task: "",
+                task: "Extract 10 UAVs or advanced UAVs.",
                 progressCurrent: 0,
-                progressTotal: 1,
+                progressTotal: 10,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
             task2: {
-                task: "",
+                task: "Extract 12 anti-armor round boxes.",
                 progressCurrent: 0,
-                progressTotal: 2,
+                progressTotal: 12,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
             task3: {
-                task: "",
+                task: "Extract 20 encrypted hard drives.",
                 progressCurrent: 0,
-                progressTotal: 3,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task4: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 4,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task5: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 5,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task6: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 6,
+                progressTotal: 20,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
         },
       },
-      
-    
-
     },
   
     contrabandStashCrown: {
-  
+      contrabandStashCrown1: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 2,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 3,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task4: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task5: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task6: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 6,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      contrabandStashCrown2: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 2,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 3,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task4: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task5: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task6: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 6,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      contrabandStashCrown3: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 2,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 3,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task4: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task5: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task6: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 6,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      contrabandStashCrown4: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 2,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 3,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task4: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task5: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task6: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 6,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      contrabandStashCrown5: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 2,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 3,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task4: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task5: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task6: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 6,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
     },
   
   },
