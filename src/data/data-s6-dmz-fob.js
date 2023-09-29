@@ -12,6 +12,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Black Mous Level 2", // Amount of Faction Needed to "Unlock"
         reward: "Unlock the wallet to store extracted cash.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 100k in Cash.",
@@ -26,6 +34,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "White Lotus Level 3", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by $150k",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 10 bottles of liquor.",
@@ -52,6 +68,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "White Lotus Level 4", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by an additional $150k.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 2 encrypted hard drives.",
@@ -84,6 +108,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "White Lotus Level 6", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by an additional 100k.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 2 GPUs.",
@@ -98,6 +130,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "White Lotus Level 8", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by an additional $100k.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 6 vintage wine bottles.",
@@ -120,6 +160,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "White Lotus Level 10", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by an additional $100k.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "",
@@ -167,6 +215,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Black Mous (4)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by 5 slots each.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 10 nuclear fuel rods.",
@@ -187,6 +243,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Black Mous (5)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 5 slots each.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 9 cigar boxes.",
@@ -213,6 +277,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Black Mous (6)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 4 slots each.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 5 large medical bags.",
@@ -239,6 +311,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Black Mous (8)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 3 slots each.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 5 screwdrivers.",
@@ -271,6 +351,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Black Mous (10)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 3 slots each.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 40 documents.",
@@ -301,6 +389,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (4)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by $100k.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 5 batteries.",
@@ -327,6 +423,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (5)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by $50k.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 8 rolls of electrical tape.",
@@ -353,6 +457,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (6)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by $50k.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 5 AQ laptops.",
@@ -385,6 +497,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (8)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by $50k.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 4 GPUs.",
@@ -419,6 +539,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (10)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by $50k.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "",
@@ -466,6 +594,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (4)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 3 slots each.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 8 bandages.",
@@ -492,6 +628,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (5)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 3 slots each.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 6 vases from Ashika Island.",
@@ -512,6 +656,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (6)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 2 slots each.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 8 bottles of fresh water.",
@@ -544,6 +696,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (8)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 1 slots each.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 8 aspirin bottles.",
@@ -566,6 +726,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (10)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 1 slots each.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "",
