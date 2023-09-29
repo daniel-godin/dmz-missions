@@ -855,7 +855,135 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     },
   
     secondInsuredSlot: {
-  
+      unlockSecondInsuredSlot: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Unlock 2nd Insured Slot",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "Black Mous", // Shadow Company, Black Mous, etc.
+        factionRequirement: 4, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Unlock the 2nd insured weapon slot.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Extract 3 IFAKs found at hospitals.",
+                progressCurrent: 0,
+                progressTotal: 3,
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "Extract 1 AFAK or large medical bag.",
+                progressCurrent: 0,
+                progressTotal: 1,
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "Extract 1 enemy operator's weapon.",
+                progressCurrent: 0,
+                progressTotal: 1,
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      secondInsuredSlotCooldownReduction1: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "2nd Insured Slot Cooldown Reduction 1",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "Phalanx", // Shadow Company, Black Mous, etc.
+        factionRequirement: 5, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Reduce the cooldown of the 2nd insured slot by 25%.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Extract 8 bags of imported tea.",
+                progressCurrent: 0,
+                progressTotal: 8,
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "Extract 8 jars of soothing hand cream.",
+                progressCurrent: 0,
+                progressTotal: 8,
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "Extract 4 bottles of aged of vintage wine.",
+                progressCurrent: 0,
+                progressTotal: 4,
+                complete: false, // true/false complete/incomplete
+            },
+          },
+      },
+      secondInsuredSlotCooldownReduction2: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "2nd Insured Slot Cooldown Reduction 2",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "Phalanx", // Shadow Company, Black Mous, etc.
+        factionRequirement: 12, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Reduce the cooldown of the 2nd insured slot by an additional 25% (50% total).",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Extract 4 jugs of chlorine.",
+                progressCurrent: 0,
+                progressTotal: 4,
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "Extract 4 jugs of formaldehyde.",
+                progressCurrent: 0,
+                progressTotal: 4,
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "Extract 4 bottles of cephalexin.",
+                progressCurrent: 0,
+                progressTotal: 4,
+                complete: false, // true/false complete/incomplete
+            },
+            task4: {
+                task: "Extract 4 bottles of hydrochloride.",
+                progressCurrent: 0,
+                progressTotal: 4,
+                complete: false, // true/false complete/incomplete
+            },
+            task5: {
+                task: "Extract 4 bottles of acetone.",
+                progressCurrent: 0,
+                progressTotal: 4,
+                complete: false, // true/false complete/incomplete
+            },
+            task6: {
+                task: "Extract 4 bottles of hydrogen peroxide.",
+                progressCurrent: 0,
+                progressTotal: 4,
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
     },
   
     thirdInsuredSlot: {

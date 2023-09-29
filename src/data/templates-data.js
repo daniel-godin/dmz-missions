@@ -94,19 +94,43 @@ templateNameOfFOBPage: {
                 task1: {
                     task: "",
                     progressCurrent: 0,
-                    progressTotal: 4,
+                    progressTotal: 1,
+                    tags: [],
                     complete: false, // true/false complete/incomplete
                 },
                 task2: {
                     task: "",
                     progressCurrent: 0,
-                    progressTotal: 3,
+                    progressTotal: 2,
+                    tags: [],
                     complete: false, // true/false complete/incomplete
                 },
                 task3: {
                     task: "",
                     progressCurrent: 0,
-                    progressTotal: 400,
+                    progressTotal: 3,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task4: {
+                    task: "",
+                    progressCurrent: 0,
+                    progressTotal: 4,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task5: {
+                    task: "",
+                    progressCurrent: 0,
+                    progressTotal: 5,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task6: {
+                    task: "",
+                    progressCurrent: 0,
+                    progressTotal: 6,
+                    tags: [],
                     complete: false, // true/false complete/incomplete
                 },
             },
