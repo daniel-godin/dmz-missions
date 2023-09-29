@@ -1307,13 +1307,13 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
   
     contrabandStashCrown: {
       contrabandStashCrown1: { // Example:  firstInsuredSlotCooldownReduction1
-        title: "",
+        title: "Contraband Stash Expansion (CROWN) 1",
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-        faction: "", // Shadow Company, Black Mous, etc.
-        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-        reward: "",
+        faction: "Crown", // Shadow Company, Black Mous, etc.
+        factionRequirement: 5, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Expand the contraband stash by an additional 3 slots.",
         maps: {
             allMaps: false,
             alMazrah: false,
@@ -1324,42 +1324,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         tasks: {
             task1: {
-                task: "",
+                task: "Extract 9 stims.",
                 progressCurrent: 0,
-                progressTotal: 1,
+                progressTotal: 9,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
             task2: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 2,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task3: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 3,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task4: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 4,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task5: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 5,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task6: {
-                task: "",
+                task: "Extract 6 bandages.",
                 progressCurrent: 0,
                 progressTotal: 6,
                 tags: [],
@@ -1368,13 +1340,13 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
       },
       contrabandStashCrown2: { // Example:  firstInsuredSlotCooldownReduction1
-        title: "",
+        title: "Contraband Stash Expansion (CROWN) 2",
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-        faction: "", // Shadow Company, Black Mous, etc.
-        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-        reward: "",
+        faction: "Crown", // Shadow Company, Black Mous, etc.
+        factionRequirement: 7, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Expand the contraband stash by an additional 3 slots.",
         maps: {
             allMaps: false,
             alMazrah: false,
@@ -1385,57 +1357,29 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         tasks: {
             task1: {
-                task: "",
+                task: "Extract 15 lighters, comic books cigar boxes, or documents.",
                 progressCurrent: 0,
-                progressTotal: 1,
+                progressTotal: 15,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
             task2: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 2,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task3: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 3,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task4: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 4,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task5: {
-                task: "",
+                task: "Extract 5 gas cans.",
                 progressCurrent: 0,
                 progressTotal: 5,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task6: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 6,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
         },
       },
       contrabandStashCrown3: { // Example:  firstInsuredSlotCooldownReduction1
-        title: "",
+        title: "Contraband Stash Expansion (CROWN) 3",
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-        faction: "", // Shadow Company, Black Mous, etc.
-        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-        reward: "",
+        faction: "Crown", // Shadow Company, Black Mous, etc.
+        factionRequirement: 9, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Expand the contraband stash by an additional 3 slots.",
         maps: {
             allMaps: false,
             alMazrah: false,
@@ -1446,57 +1390,36 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         tasks: {
             task1: {
-                task: "",
+                task: "Extract 16 blow torches.",
                 progressCurrent: 0,
-                progressTotal: 1,
+                progressTotal: 16,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
             task2: {
-                task: "",
+                task: "Extract 12 jumper cables.",
                 progressCurrent: 0,
-                progressTotal: 2,
+                progressTotal: 12,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
             task3: {
-                task: "",
+                task: "Extract 8 car batteries.",
                 progressCurrent: 0,
-                progressTotal: 3,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task4: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 4,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task5: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 5,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task6: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 6,
+                progressTotal: 8,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
         },
       },
       contrabandStashCrown4: { // Example:  firstInsuredSlotCooldownReduction1
-        title: "",
+        title: "Contraband Stash Expansion (CROWN) 4",
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-        faction: "", // Shadow Company, Black Mous, etc.
-        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-        reward: "",
+        faction: "Crown", // Shadow Company, Black Mous, etc.
+        factionRequirement: 12, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 4, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Expand the contraband stash by an additional 3 slots.",
         maps: {
             allMaps: false,
             alMazrah: false,
@@ -1507,57 +1430,50 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         tasks: {
             task1: {
-                task: "",
+                task: "Extract 3,500 rounds of pistol or SMG ammo.",
                 progressCurrent: 0,
-                progressTotal: 1,
+                progressTotal: 3_500,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
             task2: {
-                task: "",
+                task: "Extract 6,500 rounds of AR or LMG ammo.",
                 progressCurrent: 0,
-                progressTotal: 2,
+                progressTotal: 6_500,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
             task3: {
-                task: "",
+                task: "Extract 1,200 shells of shotgun ammo.",
                 progressCurrent: 0,
-                progressTotal: 3,
+                progressTotal: 1_200,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
             task4: {
-                task: "",
+                task: "Extract 120 shells of launcher ammo.",
                 progressCurrent: 0,
-                progressTotal: 4,
+                progressTotal: 120,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
             task5: {
-                task: "",
+                task: "Extract 800 rounds of sniper ammo.",
                 progressCurrent: 0,
-                progressTotal: 5,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task6: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 6,
+                progressTotal: 800,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
         },
       },
       contrabandStashCrown5: { // Example:  firstInsuredSlotCooldownReduction1
-        title: "",
+        title: "Contraband Stash Expansion (CROWN) 5",
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-        faction: "", // Shadow Company, Black Mous, etc.
-        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-        positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-        reward: "",
+        faction: "Crown", // Shadow Company, Black Mous, etc.
+        factionRequirement: 15, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 5, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Expand the contraband stash by an additional 3 slots.",
         maps: {
             allMaps: false,
             alMazrah: false,
@@ -1568,44 +1484,23 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         tasks: {
             task1: {
-                task: "",
+                task: "Extract 30 gas masks.",
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
             task2: {
-                task: "",
+                task: "Extract 10 durable gas masks.",
                 progressCurrent: 0,
                 progressTotal: 2,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
             task3: {
-                task: "",
+                task: "Extract 15 radiation blocker bottles.",
                 progressCurrent: 0,
                 progressTotal: 3,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task4: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 4,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task5: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 5,
-                tags: [],
-                complete: false, // true/false complete/incomplete
-            },
-            task6: {
-                task: "",
-                progressCurrent: 0,
-                progressTotal: 6,
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
