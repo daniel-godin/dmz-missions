@@ -783,6 +783,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Phalanx (3)", // Amount of Faction Needed to "Unlock"
         reward: "Reduce the cooldown of the 1st insured slot by 25%.",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 4 bottles of gun oil.",
@@ -809,6 +817,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         complete: false, // true/false complete/incomplete
         factionRequirement: "Phalanx (9)", // Amount of Faction Needed to "Unlock"
         reward: "Reduce the cooldown of the 1st insured slot by an additional 25% (50% total).",
+        maps: {
+          allMaps: false,
+          alMazrah: false,
+          ashikaIsland: false,
+          building21: false,
+          koscheiComplex: false,
+          vondel: false,
+        },
         tasks: {
           task1: {
             task: "Extract 12 tubes of toothpaste.",

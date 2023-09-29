@@ -3,8 +3,8 @@
 
 // maybe do 6 properties. Have an allMaps property set to true or false. If true, works with all.
 
-// Standard Missions Template
-export const tempDataStandardMissionsObject = {
+// Standard Missions Templates
+const templateDataStandardMissionsObject = {
 // Example const name = dataS6DMZStandardMissions
 
     // Need to change the way I create these object "numbers", but this is what I'm doing for now.
@@ -66,5 +66,52 @@ export const tempDataStandardMissionsObject = {
         },
         },
     },
+
+}
+
+// FOB Missions Templates
+const templateDataFOBMissionsObject = { // Stash, Weapons Locker, Bounty Board, Communications Station
+// Example Name:  dataS6DMZFOB
+templateNameOfFOBPage: {
+    templateNameOfFOBMissionsSection: {
+        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "",
+            complete: false, // true/false complete/incomplete
+            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+            faction: "", // Shadow Company, Black Mous, etc.
+            factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+            reward: "",
+            maps: {
+                allMaps: false,
+                alMazrah: false,
+                ashikaIsland: false,
+                building21: false,
+                koscheiComplex: false,
+                vondel: false,
+            },
+            tasks: {
+                task1: {
+                    task: "",
+                    progressCurrent: 0,
+                    progressTotal: 4,
+                    complete: false, // true/false complete/incomplete
+                },
+                task2: {
+                    task: "",
+                    progressCurrent: 0,
+                    progressTotal: 3,
+                    complete: false, // true/false complete/incomplete
+                },
+                task3: {
+                    task: "",
+                    progressCurrent: 0,
+                    progressTotal: 400,
+                    complete: false, // true/false complete/incomplete
+                },
+            },
+        },
+    },
+},
+
 
 }
