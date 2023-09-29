@@ -1,5 +1,7 @@
 import { doc, getDoc, onSnapshot, updateDoc, setDoc, } from "firebase/firestore";
 import { dataDMZFOBS4 } from "./data/data-dmz-fob-s4";
+import { dataS6DMZFOB } from "./data/data-s6-dmz-fob";
+import { dataS6DMZStandardMissions } from "./data/data-s6-dmz-standard-missions";
 import { auth, db } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { recommendLogInBox } from "./ui";
@@ -7,8 +9,9 @@ import { recommendLogInBox } from "./ui";
 
 const DMZFOBContainer = document.getElementById('DMZFOBContainer');
 
-const currentFOBTasks = dataDMZFOBS4;
-const currentFOBDocName = 'DMZFOBS4';
+// Change this at the beginning of each season.
+const currentFOBTasks = dataS6DMZFOB;
+const currentFOBDocName = 'DMZFOBS6';
 
 // const currentFOBSeasonNumberOfTasks = 99; // 99 IS NOT TRUE, IT'S A PLACEHOLDER
 
@@ -49,6 +52,7 @@ const createFOBGrid = async (obj, docRef, user, db) => {
 
     
     for (let i = 1; i < arrayOfFOBSections.length && i < 10; i++) {
+        // Starting at i = 1, so it doesn't include "All".
         DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
             <div class='fob-section-container' data-fob-section='${arrayOfFOBSections[i]}'>
                 <header class='fob-section-header'>${arrayOfFOBSections[i]}</header>
