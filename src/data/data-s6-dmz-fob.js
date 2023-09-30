@@ -1789,6 +1789,783 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
   },
 
   bountyBoard: {
+    personalExfil: {
+      personalExfils: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Personal Exfils",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "White Lotus", // Shadow Company, Black Mous, etc.
+        factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Unlock purchasing personal exfils.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Helo Commander.",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      personalExfilDiscount1: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Personal Exfil Discount 1",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "10% reduced cost of personal exfils.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Helo Commander 4 times.",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      personalExfilDiscount2: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Personal Exfil Discount 2",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Additional 10% reduced cost of personal exfils.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Helo Commander 5 times.",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      personalExfilDiscount3: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Personal Exfil Discount 3",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 4, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Additional 5% reduced cost of personal exfils.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Helo Commander 10 times.",
+                progressCurrent: 0,
+                progressTotal: 10,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+    },
+
+    revivePistolBarter: {
+      revivePistolBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Revive Pistol Barter",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "White Lotus", // Shadow Company, Black Mous, etc.
+        factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Unlock the barter trade for Revive Pistols.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Chemist.",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+    },
+
+    commsPlateCarrierBarter: {
+      commsPlateCarrierBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Comms Plate Carrier Barter",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "White Lotus", // Shadow Company, Black Mous, etc.
+        factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Unlock the barter trade for Communications Plate Carriers.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Wheelson.",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+    },
+
+    stealthPlatecarrierBarter: {
+      stealthPlateCarrierBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Stealth Plate Carrier Barter",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "White Lotus", // Shadow Company, Black Mous, etc.
+        factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Unlock the barter trade for Stealth Plate Carriers.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Sniper.",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      workbenchDiscount1: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Workbench Discount 1",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "10% reduced cost of adding attachments to weapons at a workbench.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Sniper or the Rhino 4 times.",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      // I don't know tasks for workbenchDiscount2 or 3.
+      workbenchDiscount2: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Workbench Discount 2",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Additional 10% reduced cost of adding attachments to weapons at a workbench.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 2,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 3,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task4: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task5: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task6: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 6,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      workbenchDiscount3: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Workbench Discount 3",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 4, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Additional 5% reduced cost of adding attachments to weapons at a workbench.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 2,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 3,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task4: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task5: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task6: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 6,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+    },
+
+    temperedPlateCarrierBarter: {
+      temperedPlateCarrierBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Tempered Plate Carrier Barter",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "White Lotus", // Shadow Company, Black Mous, etc.
+        factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Unlock the barter trade for Tempered Plate Carriers.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Armored Commander.",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+    },
+
+    medicPlateCarrierBarter: {
+      medicPlateCarrierBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Medic Plate Carrior Barter",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "White Lotus", // Shadow Company, Black Mous, etc.
+        factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Unlock the barter trade for Medic Plate Carriers.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Pyro.",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      armorPlateDiscount1: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Armor Plate Discount 1",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Armor plates are $50 cheaper.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Pyro 4 times.",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      // I don't know the tasks for armorPlateDiscount 2 or 3.
+      armorPlateDiscount2: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Armor Plate Discount 2",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Armor plates are an additional $50 cheaper.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 2,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 3,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task4: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task5: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task6: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 6,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      armorPlateDiscount3: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Armor Plate Discount 3",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 4, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Armor plates are an additional $50 cheaper.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 2,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 3,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task4: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task5: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task6: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 6,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+    },
+
+    scavengerBackpackBarter: {
+      scavengerBackpackBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Scavenger Backpack Barter",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "White Lotus", // Shadow Company, Black Mous, etc.
+        factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Unlock the barter trade for Scavenger Backpacks.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Scavenger.",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      secureBackpackBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Secure Backpack Barter",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Unlock the barter trade for Secure Backpacks.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Scavenger 9 times.",
+                progressCurrent: 0,
+                progressTotal: 9,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+    },
+
+    skeletonKeyBarter: {
+      skeletonKeyBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Skeleton Key Barter",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "White Lotus", // Shadow Company, Black Mous, etc.
+        factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Unlock the barter trades for skeleton keys.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill Velikan in Building 21.",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      // I don't know mk32barterunlock tasks yet.
+      MK32BarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "MK32 Barter",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Unlock the barter trade for the MK32.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task2: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 2,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task3: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 3,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task4: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task5: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 5,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+            task6: {
+                task: "",
+                progressCurrent: 0,
+                progressTotal: 6,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+    },
+
+    killstreakDiscount: {
+      killstreakDiscount1: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Killstreak Discount 1",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "White Lotus", // Shadow Company, Black Mous, etc.
+        factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "10% reduced cost of killstreaks at buy stations.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Bomb Maker.",
+                progressCurrent: 0,
+                progressTotal: 1,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      killstreakDiscount2: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Killstreak Discount 2",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Additional 10% reduced cost of killstreaks at buy stations.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Bomb Maker 4 times.",
+                progressCurrent: 0,
+                progressTotal: 4,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+      killstreakDiscount3: { // Example:  firstInsuredSlotCooldownReduction1
+        title: "Killstreak Discount 3",
+        complete: false, // true/false complete/incomplete
+        unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+        faction: "", // Shadow Company, Black Mous, etc.
+        factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+        positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
+        reward: "Additional 5% reduced cost of killstreaks at buy stations.",
+        maps: {
+            allMaps: false,
+            alMazrah: false,
+            ashikaIsland: false,
+            building21: false,
+            koscheiComplex: false,
+            vondel: false,
+        },
+        tasks: {
+            task1: {
+                task: "Kill the Bomb Maker 6 times.",
+                progressCurrent: 0,
+                progressTotal: 6,
+                tags: [],
+                complete: false, // true/false complete/incomplete
+            },
+        },
+      },
+    },
+
 
   },
 
