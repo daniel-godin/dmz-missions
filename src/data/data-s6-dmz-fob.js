@@ -2841,14 +2841,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
     },
     increasedCommanderIntel: {
-        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-            title: "",
+        increasedCommanderIntelUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased Commander Intel",
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-            reward: "",
+            positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Increases Commander Intel Contract Rewards.",
             maps: {
                 allMaps: false,
                 alMazrah: false,
@@ -2859,42 +2859,21 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             tasks: {
                 task1: {
-                    task: "",
+                    task: "Extract 15 laptops.",
                     progressCurrent: 0,
-                    progressTotal: 1,
+                    progressTotal: 15,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
                 task2: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 2,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task3: {
-                    task: "",
+                    task: "Extract 3 encrypted hard drives.",
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task4: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 4,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task5: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 5,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task6: {
-                    task: "",
+                task3: {
+                    task: "Extract 6 encrypted thumb drives.",
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -2904,14 +2883,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
     },
     increasedSafeIntel: {
-        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-            title: "",
+        increasedSafeIntelUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased Safe Intel",
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-            reward: "",
+            positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Increased Safe Intel Contract Rewards.",
             maps: {
                 allMaps: false,
                 alMazrah: false,
@@ -2922,44 +2901,23 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             tasks: {
                 task1: {
-                    task: "",
+                    task: "Extract 6 bricks of plastic explosives.",
                     progressCurrent: 0,
-                    progressTotal: 1,
+                    progressTotal: 6,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
                 task2: {
-                    task: "",
+                    task: "Extract 20 electrical components.",
                     progressCurrent: 0,
-                    progressTotal: 2,
+                    progressTotal: 20,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
                 task3: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 3,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task4: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 4,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task5: {
-                    task: "",
+                    task: "Extract 5 VCRs.",
                     progressCurrent: 0,
                     progressTotal: 5,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task6: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 6,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
@@ -2967,14 +2925,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
     },
     increasedWeaponStashIntel: {
-        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-            title: "",
+        increasedWeaponStashIntelUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased Weapon Stash Intel",
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-            reward: "",
+            positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Increased Weapon Stash Intel Contract Rewards.",
             maps: {
                 allMaps: false,
                 alMazrah: false,
@@ -2985,44 +2943,23 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             tasks: {
                 task1: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 1,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task2: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 2,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task3: {
-                    task: "",
+                    task: "Dead drop 3 RGL-80s.",
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task4: {
-                    task: "",
+                task2: {
+                    task: "Dead drop 20 weapons.",
                     progressCurrent: 0,
-                    progressTotal: 4,
+                    progressTotal: 20,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task5: {
-                    task: "",
+                task3: {
+                    task: "Dead drop 10 enemy weapons.",
                     progressCurrent: 0,
-                    progressTotal: 5,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task6: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 6,
+                    progressTotal: 10,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
@@ -3030,14 +2967,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
     },
     increasedSafeContents: {
-        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-            title: "",
+        increasedSafeContentsUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased Safe Contents",
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-            reward: "",
+            positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Increased Safe Contents Contract Rewards.",
             maps: {
                 allMaps: false,
                 alMazrah: false,
@@ -3048,44 +2985,16 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             tasks: {
                 task1: {
-                    task: "",
+                    task: "Extract 8 sensitive or classified documents.",
                     progressCurrent: 0,
-                    progressTotal: 1,
+                    progressTotal: 8,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
                 task2: {
-                    task: "",
+                    task: "Dead drop $1 million in cash.",
                     progressCurrent: 0,
-                    progressTotal: 2,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task3: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 3,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task4: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 4,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task5: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 5,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task6: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 6,
+                    progressTotal: 1_000_000,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
@@ -3093,14 +3002,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
     },
     increasedSupplyCacheContents: {
-        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-            title: "",
+        increasedSupplyCacheContentsUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased Supply Cache Contents",
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-            reward: "",
+            positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Increased Supply Cache Contents Contract Rewards.",
             maps: {
                 allMaps: false,
                 alMazrah: false,
@@ -3111,42 +3020,21 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             tasks: {
                 task1: {
-                    task: "",
+                    task: "Dead drop 10 armor plate carriers.",
                     progressCurrent: 0,
-                    progressTotal: 1,
+                    progressTotal: 10,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
                 task2: {
-                    task: "",
+                    task: "Dead drop 6 3-plate carriers.",
                     progressCurrent: 0,
-                    progressTotal: 2,
+                    progressTotal: 6,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
                 task3: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 3,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task4: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 4,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task5: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 5,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task6: {
-                    task: "",
+                    task: "Dead drop 6 self revives.",
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -3156,13 +3044,68 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
     },
     increasedExfilChopperSpeed: {
-        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-            title: "",
+        increasedExfilChopperSpeedUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased Exfil Chopper Speed",
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
+            positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Increased Exfil Chopper Speed.",
+            maps: {
+                allMaps: false,
+                alMazrah: false,
+                ashikaIsland: false,
+                building21: false,
+                koscheiComplex: false,
+                vondel: false,
+            },
+            tasks: {
+                task1: {
+                    task: "Extract 100k in cash on final exfils 10 times.",
+                    progressCurrent: 0,
+                    progressTotal: 10,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+            },
+        },
+    },
+    increasedContractPayment: {
+        increasedContractPayment1: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased Contract Payment I",
+            complete: false, // true/false complete/incomplete
+            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+            faction: "", // Shadow Company, Black Mous, etc.
+            factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+            positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "",
+            maps: {
+                allMaps: false,
+                alMazrah: false,
+                ashikaIsland: false,
+                building21: false,
+                koscheiComplex: false,
+                vondel: false,
+            },
+            tasks: {
+                task1: {
+                    task: "Complete 100 contracts.",
+                    progressCurrent: 0,
+                    progressTotal: 100,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+            },
+        },
+        // I don't have the tasks for increasedContractPayment2 and 3.
+        increasedContractPayment2: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased Contract Payment II",
+            complete: false, // true/false complete/incomplete
+            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+            faction: "", // Shadow Company, Black Mous, etc.
+            factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+            positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "",
             maps: {
                 allMaps: false,
@@ -3217,15 +3160,13 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
             },
         },
-    },
-    increasedContractPayment: {
-        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-            title: "",
+        increasedContractPayment3: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased Contract Payment III",
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
+            positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "",
             maps: {
                 allMaps: false,
@@ -3282,13 +3223,122 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
     },
     increasedUAVTowerDuration: {
-        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-            title: "",
+        increasedUAVTowerDuration1: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased UAV Tower Duration I",
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
+            positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "",
+            maps: {
+                allMaps: false,
+                alMazrah: false,
+                ashikaIsland: false,
+                building21: false,
+                koscheiComplex: false,
+                vondel: false,
+            },
+            tasks: {
+                task1: {
+                    task: "Extract 4 drills.",
+                    progressCurrent: 0,
+                    progressTotal: 4,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task2: {
+                    task: "Extract 5 screwdrivers.",
+                    progressCurrent: 0,
+                    progressTotal: 5,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task3: {
+                    task: "Extract 3 wrenches.",
+                    progressCurrent: 0,
+                    progressTotal: 3,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task4: {
+                    task: "Extract 4 hard drives.",
+                    progressCurrent: 0,
+                    progressTotal: 4,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task5: {
+                    task: "Extract 3 rolls of electrical tape.",
+                    progressCurrent: 0,
+                    progressTotal: 3,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task6: {
+                    task: "Extract 3 batteries.",
+                    progressCurrent: 0,
+                    progressTotal: 3,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+            },
+        },
+        increasedUAVTowerDuration2: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased UAV Tower Duration II",
+            complete: false, // true/false complete/incomplete
+            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+            faction: "", // Shadow Company, Black Mous, etc.
+            factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+            positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "",
+            maps: {
+                allMaps: false,
+                alMazrah: false,
+                ashikaIsland: false,
+                building21: false,
+                koscheiComplex: false,
+                vondel: false,
+            },
+            tasks: {
+                task1: {
+                    task: "Extract 4 bottles of vintage wine.",
+                    progressCurrent: 0,
+                    progressTotal: 4,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task2: {
+                    task: "Extract 10 jars of soothing hand cream.",
+                    progressCurrent: 0,
+                    progressTotal: 10,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task3: {
+                    task: "Extract 10 cigar boxes.",
+                    progressCurrent: 0,
+                    progressTotal: 10,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task4: {
+                    task: "Extract 10 lighters.",
+                    progressCurrent: 0,
+                    progressTotal: 10,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+            },
+        },
+        // I don't know the tasks for increasedUAVTowerDuration3.  I need shadow company lvl 15 to see it.
+        increasedUAVTowerDuration3: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased UAV Tower Duration III",
+            complete: false, // true/false complete/incomplete
+            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+            faction: "Shadow Company", // Shadow Company, Black Mous, etc.
+            factionRequirement: 15, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+            positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "",
             maps: {
                 allMaps: false,
@@ -3344,14 +3394,102 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
     },
-    increasedincreasedSamSiteDuration: {
-        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-            title: "",
+    increasedSamSiteDuration: {
+        increasedSamSiteDuration1: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased Sam Site Duration I",
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
+            positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "",
+            maps: {
+                allMaps: false,
+                alMazrah: false,
+                ashikaIsland: false,
+                building21: false,
+                koscheiComplex: false,
+                vondel: false,
+            },
+            tasks: {
+                task1: {
+                    task: "Extract 8 aged or vintage wine bottles.",
+                    progressCurrent: 0,
+                    progressTotal: 8,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task2: {
+                    task: "Extract 15 bottles of fresh water.",
+                    progressCurrent: 0,
+                    progressTotal: 15,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task3: {
+                    task: "Extract 10 bottles of Ashika liquor.",
+                    progressCurrent: 0,
+                    progressTotal: 10,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+            },
+        },
+        increasedSamSiteDuration2: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased Sam Site Duration II",
+            complete: false, // true/false complete/incomplete
+            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+            faction: "", // Shadow Company, Black Mous, etc.
+            factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+            positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "",
+            maps: {
+                allMaps: false,
+                alMazrah: false,
+                ashikaIsland: false,
+                building21: false,
+                koscheiComplex: false,
+                vondel: false,
+            },
+            tasks: {
+                task1: {
+                    task: "Extract 8 laptops from Ashika Island.",
+                    progressCurrent: 0,
+                    progressTotal: 8,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task2: {
+                    task: "Extract 5 game consoles.",
+                    progressCurrent: 0,
+                    progressTotal: 5,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task3: {
+                    task: "Extract 6 VCRs.",
+                    progressCurrent: 0,
+                    progressTotal: 6,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+                task4: {
+                    task: "Extract 1 GPU.",
+                    progressCurrent: 0,
+                    progressTotal: 1,
+                    tags: [],
+                    complete: false, // true/false complete/incomplete
+                },
+            },
+        },
+        // I don't know the tasks for increasedSamSiteDuration3.  I haven't finished 2 yet.
+        increasedSamSiteDuration3: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Increased Sam Site Duration III",
+            complete: false, // true/false complete/incomplete
+            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+            faction: "", // Shadow Company, Black Mous, etc.
+            factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+            positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "",
             maps: {
                 allMaps: false,
