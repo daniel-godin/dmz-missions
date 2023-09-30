@@ -2571,14 +2571,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
 
   communicationsStation: {
     urgentMissionsBlackMous: {
-        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-            title: "",
+        unlockBlackMousDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Unlock Black Mous Daily Urgent Missions",
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-            reward: "",
+            positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Unlocks Black Mous Daily Urgent Missions.",
             maps: {
                 allMaps: false,
                 alMazrah: false,
@@ -2589,44 +2589,35 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             tasks: {
                 task1: {
-                    task: "",
+                    task: "Extract with a full backpack with each slot filled.",
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
-                    task: "",
+            },
+        },
+        unlockBlackMousWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Unlock Black Mous Weekly Urgent Missions",
+            complete: false, // true/false complete/incomplete
+            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+            faction: "", // Shadow Company, Black Mous, etc.
+            factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+            positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Unlocks Black Mous Weekly Urgent Missions.",
+            maps: {
+                allMaps: false,
+                alMazrah: false,
+                ashikaIsland: false,
+                building21: false,
+                koscheiComplex: false,
+                vondel: false,
+            },
+            tasks: {
+                task1: {
+                    task: "Extract 12 Scavenger calling cards.",
                     progressCurrent: 0,
-                    progressTotal: 2,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task3: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 3,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task4: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 4,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task5: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 5,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task6: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 6,
+                    progressTotal: 12,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
@@ -2634,14 +2625,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
     },
     urgentMissionsWhiteLotus: {
-        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-            title: "",
+        unlockWhiteLotusDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Unlock White Lotus Daily Urgent Missions",
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-            reward: "",
+            positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Unlocks White Lotus Daily Urgent Missions.",
             maps: {
                 allMaps: false,
                 alMazrah: false,
@@ -2652,44 +2643,35 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             tasks: {
                 task1: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 1,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task2: {
-                    task: "",
+                    task: "Extract 2 Al Qatala Planning Diagrams or Images.",
                     progressCurrent: 0,
                     progressTotal: 2,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task3: {
-                    task: "",
+            },
+        },
+        unlockWhiteLotusWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Unlock White Lotus Weekly Urgent Missions",
+            complete: false, // true/false complete/incomplete
+            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+            faction: "", // Shadow Company, Black Mous, etc.
+            factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+            positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Unlocks White Lotus Weekly Urgent Missions.",
+            maps: {
+                allMaps: false,
+                alMazrah: false,
+                ashikaIsland: false,
+                building21: false,
+                koscheiComplex: false,
+                vondel: false,
+            },
+            tasks: {
+                task1: {
+                    task: "Extract 10 jugs of liquid nitrogen.",
                     progressCurrent: 0,
-                    progressTotal: 3,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task4: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 4,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task5: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 5,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task6: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 6,
+                    progressTotal: 10,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
@@ -2697,14 +2679,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
     },
     urgentMissionsCrown: {
-        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-            title: "",
+        unlockCrownDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Unlock Crown Daily Urgent Missions",
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-            reward: "",
+            positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Unlocks Crown Daily Urgent Missions",
             maps: {
                 allMaps: false,
                 alMazrah: false,
@@ -2715,44 +2697,35 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             tasks: {
                 task1: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 1,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task2: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 2,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task3: {
-                    task: "",
+                    task: "Extract 3 classified documents.",
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task4: {
-                    task: "",
+            },
+        },
+        unlockCrownWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Unlock Crown Weekly Urgent Missions",
+            complete: false, // true/false complete/incomplete
+            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+            faction: "", // Shadow Company, Black Mous, etc.
+            factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+            positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Unlocks Crown Weekly Urgent Missions.",
+            maps: {
+                allMaps: false,
+                alMazrah: false,
+                ashikaIsland: false,
+                building21: false,
+                koscheiComplex: false,
+                vondel: false,
+            },
+            tasks: {
+                task1: {
+                    task: "Extract 10 cans of heavy chopper fuel.",
                     progressCurrent: 0,
-                    progressTotal: 4,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task5: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 5,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task6: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 6,
+                    progressTotal: 10,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
@@ -2760,14 +2733,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
     },
     urgentMissionsPhalanx: {
-        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-            title: "",
+        unlockPhalanxDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Unlock Phalanx Daily Urgent Missions",
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-            reward: "",
+            positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Unlocks Phalanx Daily Urgent Missions.",
             maps: {
                 allMaps: false,
                 alMazrah: false,
@@ -2778,44 +2751,35 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             tasks: {
                 task1: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 1,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task2: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 2,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task3: {
-                    task: "",
+                    task: "Extract 3 bottles of hydrogen peroxide, cephalexin, or aceton.",
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task4: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 4,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task5: {
-                    task: "",
+            },
+        },
+        unlockPhalanxWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Unlock Phalanx Weekly Urgent Missions",
+            complete: false, // true/false complete/incomplete
+            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+            faction: "", // Shadow Company, Black Mous, etc.
+            factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+            positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Unlocks Phalanx Weekly Urgent Missions.",
+            maps: {
+                allMaps: false,
+                alMazrah: false,
+                ashikaIsland: false,
+                building21: false,
+                koscheiComplex: false,
+                vondel: false,
+            },
+            tasks: {
+                task1: {
+                    task: "Extract 5 origami horses.",
                     progressCurrent: 0,
                     progressTotal: 5,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task6: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 6,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
@@ -2823,14 +2787,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
     },
     urgentMissionsShadowCompany: {
-        templateNameOfFOBMissionObject: { // Example:  firstInsuredSlotCooldownReduction1
-            title: "",
+        unlockShadowCompanyDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Unlock Shadow Company Daily Urgent Missions",
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-            positionInTier: 0, // Number. 1-?? or 01-??.  Position in the DOM list.
-            reward: "",
+            positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Unlocks Shadow Company Daily Urgent Missions.",
             maps: {
                 allMaps: false,
                 alMazrah: false,
@@ -2841,44 +2805,35 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             tasks: {
                 task1: {
-                    task: "",
+                    task: "Dead drop 10 keys.",
                     progressCurrent: 0,
-                    progressTotal: 1,
+                    progressTotal: 10,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
-                    task: "",
+            },
+        },
+        unlockShadowCompanyWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+            title: "Unlock Shadow Company Weekly Urgent Missions",
+            complete: false, // true/false complete/incomplete
+            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+            faction: "", // Shadow Company, Black Mous, etc.
+            factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+            positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+            reward: "Unlocks Shadow Company Weekly Urgent Missions.",
+            maps: {
+                allMaps: false,
+                alMazrah: false,
+                ashikaIsland: false,
+                building21: false,
+                koscheiComplex: false,
+                vondel: false,
+            },
+            tasks: {
+                task1: {
+                    task: "Extract 10 encrypted hard drives from Building 21.",
                     progressCurrent: 0,
-                    progressTotal: 2,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task3: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 3,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task4: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 4,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task5: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 5,
-                    tags: [],
-                    complete: false, // true/false complete/incomplete
-                },
-                task6: {
-                    task: "",
-                    progressCurrent: 0,
-                    progressTotal: 6,
+                    progressTotal: 10,
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
