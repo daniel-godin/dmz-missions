@@ -33,32 +33,44 @@ onAuthStateChanged(auth, user => {
 })
 
 const createFOBGrid = async (obj, docRef, user, db) => {
-    console.log(obj);
+    // console.log(obj); // For Testing Purposes.
 
-    const arrayOfFOBSections = ["All", "Stash", "Weapons Locker", "Equipment", "Bounty Board", "Communications Station", ];
+    const DMZFOBInformationContainer = document.getElementById('DMZFOBInformationContainer'); // DOM ID of div container for FOB Grid.
 
-    const DMZFOBHeaderSelect = document.getElementById('DMZFOBHeaderSelect');
+    // Change CSS rules to create the number of section boxes you need.  Doing this, so it's easy to add a new object in future seasons.
+    // document.getElementById('DMZFOBInformationContainer').style.gridTemplateColumns = "repeat(auto-fit, minmax(300px, 1fr))";
+    // I might not actually need to do this, because it doesn't need a specific number, it just repeats with as many boxes as I create.
 
-    for (let i = 0; i < arrayOfFOBSections.length && i < 10; i++) {
-        DMZFOBHeaderSelect.insertAdjacentHTML('beforeend', `
-            <div class='fob-header-select' data-fob-header='${arrayOfFOBSections[i]}'>
-                <header>${arrayOfFOBSections[i]}</header>
-            </div>
-        `)
+    const createMainSectionContainers = (obj) => {
+        console.log(obj);
+
+        const arrayOfObjectKeyNames = Object.keys(obj); // Create an array of the property key names.  This serves 2 purposes:  1: Get the count, number of properties.  2:  Use the property name as a way to access it later in function/DOM creation.
+
+        for (let i = 0; i < arrayOfObjectKeyNames.length && i < 20; i++) {
+            DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
+                <div class='fob-section-container' data-fob-section='${arrayOfObjectKeyNames[i]}'>
+                    <header class='fob-section-header'>${arrayOfObjectKeyNames[i]}</header>
+                    <div class='fob-section-info-container' data-fob-section-info='${arrayOfObjectKeyNames[i]}'></div>
+                </div>
+            `)
+        }
     }
 
-    const DMZFOBInformationContainer = document.getElementById('DMZFOBInformationContainer');
+    createMainSectionContainers(obj);
 
     
-    for (let i = 1; i < arrayOfFOBSections.length && i < 10; i++) {
-        // Starting at i = 1, so it doesn't include "All".
-        DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
-            <div class='fob-section-container' data-fob-section='${arrayOfFOBSections[i]}'>
-                <header class='fob-section-header'>${arrayOfFOBSections[i]}</header>
-                <div class='fob-section-info-container' data-fob-section-info='${arrayOfFOBSections[i]}'></div>
-            </div>
-        `)
-    }
+    
+    // Create actual div boxes for each section.  Add data-${propertyKey} so you can access these later.
+    
+    // for (let i = 1; i < arrayOfFOBSections.length && i < 10; i++) {
+    //     // Starting at i = 1, so it doesn't include "All".
+    //     DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
+    //         <div class='fob-section-container' data-fob-section='${arrayOfFOBSections[i]}'>
+    //             <header class='fob-section-header'>${arrayOfFOBSections[i]}</header>
+    //             <div class='fob-section-info-container' data-fob-section-info='${arrayOfFOBSections[i]}'></div>
+    //         </div>
+    //     `)
+    // }
 
     // Here's where I use a loop to run through the data object and put each thing inside of the fob-section-info-containers.
 
@@ -79,3 +91,20 @@ const createFOBGrid = async (obj, docRef, user, db) => {
 
 
 }
+
+const getNumberOfProperties = (obj) => { // Use this re-usable function to get the number of properties, to change CSS rules and create div container boxes for each section.
+    return Object.keys(obj).length;
+}
+
+    // For Later Feature:  Having selectable headers to show all or just one section at a time.
+    // const arrayOfFOBSections = ["All", "Stash", "Weapons Locker", "Equipment", "Bounty Board", "Communications Station", ];
+
+    // const DMZFOBHeaderSelect = document.getElementById('DMZFOBHeaderSelect');
+
+    // for (let i = 0; i < arrayOfFOBSections.length && i < 10; i++) {
+    //     DMZFOBHeaderSelect.insertAdjacentHTML('beforeend', `
+    //         <div class='fob-header-select' data-fob-header='${arrayOfFOBSections[i]}'>
+    //             <header>${arrayOfFOBSections[i]}</header>
+    //         </div>
+    //     `)
+    // }
