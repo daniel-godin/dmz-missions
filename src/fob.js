@@ -42,7 +42,7 @@ const createFOBGrid = async (obj, docRef, user, db) => {
     // I might not actually need to do this, because it doesn't need a specific number, it just repeats with as many boxes as I create.
 
     const createMainSectionContainers = (obj) => {
-        console.log(obj);
+        // console.log(obj);
 
         const arrayOfObjectKeyNames = Object.keys(obj); // Create an array of the property key names.  This serves 2 purposes:  1: Get the count, number of properties.  2:  Use the property name as a way to access it later in function/DOM creation.
 
@@ -57,6 +57,22 @@ const createFOBGrid = async (obj, docRef, user, db) => {
     }
 
     createMainSectionContainers(obj);
+
+    const createSectionsForEachMainSection = (obj) => {
+        console.log(obj);
+
+        const arrayOfObjectKeyNames = Object.keys(obj); // For Testing.
+
+        for (let key in obj) {
+            for (let key2 in obj[key]) {
+                console.log(key2);
+            }
+        }
+
+
+    }
+
+    createSectionsForEachMainSection(obj);
 
     
     
