@@ -59,17 +59,106 @@ const createFOBGrid = async (obj, docRef, user, db) => {
     createMainSectionContainers(obj);
 
     const createSectionsForEachMainSection = (obj) => {
-        console.log(obj);
+        // console.log(obj); // For Testing
 
         const arrayOfObjectKeyNames = Object.keys(obj); // For Testing.
 
-        for (let key in obj) {
-            for (let key2 in obj[key]) {
-                console.log(key2);
+        for (let key in obj) { // This grabs stash, weaponsLocker, etc.
+
+            // console.log(key);
+
+            for (let key2 in obj[key]) { // This grabs in stash (and the rest): wallet, stashExpansion, etc.
+
+                let DOMAttachmentPoint = document.querySelector(`[data-fob-section-info="${key}"]`);
+
+                DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                    <div class='test-class'></div>
+                `)
+                
+
+                // let array = Object.keys(obj[key]);
+
+                // console.log(array);
+
+                // for (let i = 0; i < array.length; i++) {
+                //     DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                //     <div class='test-class'></div>
+                //     `)
+
+                // }
+
+                for (let key3 in obj[key][key2]) { // This should grab: stashExpansion1, stashExpansion 2, etc. Objects
+
+                    // console.log(key);
+
+                    let objShort = obj[key][key2][key3]; // This should grab:  title, complete, etc.
+
+                    let title = objShort.title;
+                    let complete = objShort.complete;
+                    let unlocked = objShort.unlocked;
+                    let factionRequirement = objShort.factionRequirement;
+                    let reward = objShort.reward;
+
+                    // console.log("title:", title, "complete?:", complete, unlocked, factionRequirement, reward);
+
+                    // Here's where you push the data to the DOM.
+
+                    // let DOMAttachmentPoint = document.querySelector(`[data-fob-section-info="${key}"]`);
+
+                    // for (let i = 0; i < Object.keys(obj[key][key2]).length && i < 10; i++) {
+                    //     DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                    //         <div class='test-class'>${key3}</div>
+                    //     `)
+                    // }
+
+                    // const arrayOfObjectKeyNames = Object.keys(obj); // Create an array of the property key names.  This serves 2 purposes:  1: Get the count, number of properties.  2:  Use the property name as a way to access it later in function/DOM creation.
+
+                    // for (let i = 0; i < objShort.length && i < 99; i++) {
+                    //     DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
+                    //         <div class='fob-section-container' data-fob-section='${arrayOfObjectKeyNames[i]}'>
+                    //             <header class='fob-section-header'>${arrayOfObjectKeyNames[i]}</header>
+                    //             <div class='fob-section-info-container' data-fob-section-info='${arrayOfObjectKeyNames[i]}'></div>
+                    //         </div>
+                    //     `)
+                    // }
+
+
+
+
+
+
+
+
+
+
+
+
+                    for (let key4 in obj[key][key2][key3].tasks) { // This should grab:  task1, task2, task3
+
+                        // console.log(key4); // For Testing
+
+                        let taskShort = obj[key][key2][key3].tasks[key4];
+
+                        let task = taskShort.task;
+                        let progressCurrent = taskShort.progressCurrent;
+                        let progressTotal = taskShort.progressTotal;
+                        let complete = taskShort.complete;
+
+                        // console.log(task, progressCurrent, progressTotal, complete); // For Testing
+
+
+
+
+
+
+
+
+
+
+                    }
+                }
             }
         }
-
-
     }
 
     createSectionsForEachMainSection(obj);

@@ -34,7 +34,7 @@
 }
 
 .fob-section-container {
-    height: 500px;
+    height: min-content;
     border: 1px solid gold;
     min-width: 250px;
     
@@ -53,4 +53,10 @@
     border: 3px dotted blue;
     width: 100%;
 
+}
+
+.test-class {
+    border: 3px solid purple;
+    height: 100px;
+    width: 100%;
 }
