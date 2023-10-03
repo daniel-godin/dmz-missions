@@ -60,3 +60,9 @@
     height: 100px;
     width: 100%;
 }
+
+.test-class-2 {
+    border: 2px dotted green;
+    height: 50px;
+    width: 100%;
+}

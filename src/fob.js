@@ -72,20 +72,8 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                 let DOMAttachmentPoint = document.querySelector(`[data-fob-section-info="${key}"]`);
 
                 DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                    <div class='test-class'></div>
+                    <div class='test-class' data-attachment-id="${key2}"></div>
                 `)
-                
-
-                // let array = Object.keys(obj[key]);
-
-                // console.log(array);
-
-                // for (let i = 0; i < array.length; i++) {
-                //     DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                //     <div class='test-class'></div>
-                //     `)
-
-                // }
 
                 for (let key3 in obj[key][key2]) { // This should grab: stashExpansion1, stashExpansion 2, etc. Objects
 
@@ -103,24 +91,11 @@ const createFOBGrid = async (obj, docRef, user, db) => {
 
                     // Here's where you push the data to the DOM.
 
-                    // let DOMAttachmentPoint = document.querySelector(`[data-fob-section-info="${key}"]`);
+                    let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${key2}"]`);
 
-                    // for (let i = 0; i < Object.keys(obj[key][key2]).length && i < 10; i++) {
-                    //     DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                    //         <div class='test-class'>${key3}</div>
-                    //     `)
-                    // }
-
-                    // const arrayOfObjectKeyNames = Object.keys(obj); // Create an array of the property key names.  This serves 2 purposes:  1: Get the count, number of properties.  2:  Use the property name as a way to access it later in function/DOM creation.
-
-                    // for (let i = 0; i < objShort.length && i < 99; i++) {
-                    //     DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
-                    //         <div class='fob-section-container' data-fob-section='${arrayOfObjectKeyNames[i]}'>
-                    //             <header class='fob-section-header'>${arrayOfObjectKeyNames[i]}</header>
-                    //             <div class='fob-section-info-container' data-fob-section-info='${arrayOfObjectKeyNames[i]}'></div>
-                    //         </div>
-                    //     `)
-                    // }
+                    DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                        <div class='test-class-2' data-attachment-id="${key3}"></div>
+                    `)
 
 
 
