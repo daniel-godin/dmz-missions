@@ -94,19 +94,14 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                     let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${key2}"]`);
 
                     DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                        <div class='test-class-2' data-attachment-id="${key3}"></div>
+                        <div class='fob-mission-container'>
+                            <div class='fob-mission-title'>${title} - complete/incomplete</div>
+                            <div class='fob-mission-info-container'>
+                                <div class='fob-mission-info-reward'>${reward}</div>
+                                <div class='fob-mission-tasks-container' data-attachment-id="${key3}"></div>
+                            </div>
+                        </div>
                     `)
-
-
-
-
-
-
-
-
-
-
-
 
                     for (let key4 in obj[key][key2][key3].tasks) { // This should grab:  task1, task2, task3
 
@@ -121,8 +116,16 @@ const createFOBGrid = async (obj, docRef, user, db) => {
 
                         // console.log(task, progressCurrent, progressTotal, complete); // For Testing
 
+                        let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${key3}"]`);
 
+                        DOMAttachmentPoint.insertAdjacentHTML('beforebegin', `
+                            <ul>
+                                <li>${task}</li>
+                                <li>Current Progress: ${progressCurrent}</li>
+                                <li>Total Needed: ${progressTotal}</li>
+                            </ul>
 
+                        `)
 
 
 
