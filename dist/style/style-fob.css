@@ -76,6 +76,25 @@
 
 .fob-mission-tasks-container {
     border: 2px solid blue;
-    height: 50px;
+    height: min-content;
     width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.fob-mission-tasks-container > ul {
+    margin: 0;
+    padding: 0;
+}
+
+.fob-mission-tasks-container > ul > li > p {
+    margin: 0;
+    padding: 0;
+}
+
+.fob-mission-task-container {
+    display: grid;
+    grid-template-columns: 1fr min-content min-content min-content;
+    margin: 0;
+    padding: .5rem;
 }

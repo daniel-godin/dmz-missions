@@ -116,13 +116,13 @@ const createFOBGrid = async (obj, docRef, user, db) => {
 
                         // console.log(task, progressCurrent, progressTotal, complete); // For Testing
 
+                        let missionTaskListKey = obj[key][key2][key3].tasks
+
                         let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${key3}"]`);
 
-                        DOMAttachmentPoint.insertAdjacentHTML('beforebegin', `
+                        DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                             <ul>
-                                <li>${task}</li>
-                                <li>Current Progress: ${progressCurrent}</li>
-                                <li>Total Needed: ${progressTotal}</li>
+                                <li class="fob-mission-task-container" data-task-id=""><p>${task}</p><p>${progressCurrent}</p><p> / </p><p>${progressTotal}</p></li>
                             </ul>
 
                         `)
