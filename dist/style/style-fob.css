@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 #DMZFOBContainer {
     display: grid;
     grid-template-rows: 1fr; /* When introducing selectable header feature, use 100px, 1fr */
@@ -27,16 +32,18 @@
     border: 1px solid pink;
     padding-top: .5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+
     height: min-content;
-    gap: .5rem;
-    justify-items: center;
+    gap: 1rem;
+    justify-content: space-around;
 }
 
 .fob-section-container {
     height: min-content;
     border: 1px solid gold;
-    min-width: 250px;
+    /* min-width: 300px; */
     
     display: grid;
     grid-template-rows: min-content 1fr;
@@ -52,6 +59,10 @@
 .fob-section-info-container {
     border: 3px dotted blue;
     width: 100%;
+    padding: 1rem;
+    
+    display: grid;
+    gap: 1rem;
 
 }
 
@@ -67,11 +78,14 @@
     width: 100%;
 }
 
-.fob-mission-title {
-    border: 1px dashed pink;
-    height: 35px;
+.fob-mission-title-container {
+    border: 3px dashed pink;
+    height: min-content;
     width: 100%;
     padding: 5px;
+
+    display: grid;
+    grid-template-columns: 1fr min-content;
 }
 
 .fob-mission-tasks-container {

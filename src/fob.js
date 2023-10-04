@@ -95,7 +95,7 @@ const createFOBGrid = async (obj, docRef, user, db) => {
 
                     DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                         <div class='fob-mission-container'>
-                            <div class='fob-mission-title'>${title} - complete/incomplete</div>
+                            <div class='fob-mission-title-container'><h3 class='fob-mission-title'>${title}</h3><div class='fob-mission-complete-container'><input type="checkbox" /></div></div>
                             <div class='fob-mission-info-container'>
                                 <div class='fob-mission-info-reward'>${reward}</div>
                                 <div class='fob-mission-tasks-container' data-attachment-id="${key3}"></div>
