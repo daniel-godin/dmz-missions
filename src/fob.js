@@ -72,7 +72,7 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                 let DOMAttachmentPoint = document.querySelector(`[data-fob-section-info="${key}"]`);
 
                 DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                    <div class='test-class' data-attachment-id="${key2}"></div>
+                    <div class='full-fob-mission-container' data-attachment-id="${key2}"></div>
                 `)
 
                 for (let key3 in obj[key][key2]) { // This should grab: stashExpansion1, stashExpansion 2, etc. Objects

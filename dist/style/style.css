@@ -13,11 +13,13 @@
   --color-bg-color: var(--color-secondary);
   --color-font-color: var(--color-primary);
   --color-content-bg-color: rgba(51, 51, 51, 0.8);
+  --color-content-bg-color-extra: rgba(51, 51, 51, 1);
   --color-nav-foot-bg-color: rgba(139, 206, 226, 0.996);
 
   /* Size Variables: */
   font-size: 16px; /* Which means 1rem = 16px, 2rem = 32px) */
   --size-nav-bar: 2rem;
+  --size-border-radius-content: 10px;
   /* Other Root Items */
   
 }
