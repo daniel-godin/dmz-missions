@@ -121,6 +121,12 @@
 
     display: grid;
     grid-template-columns: 1fr min-content;
+    justify-items: center;
+
+}
+
+.fob-mission-title {
+    text-decoration: underline;
 }
 
 .fob-mission-tasks-container {
