@@ -132,10 +132,6 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                             complete = "";
                         }
 
-                        console.log(taskId);
-
-                        // console.log(task, progressCurrent, progressTotal, complete); // For Testing
-
                         let missionTaskListKey = obj[key][key2][key3].tasks
 
                         let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${key3}"]`);
