@@ -81,6 +81,8 @@ const createFOBGrid = async (obj, docRef, user, db) => {
 
                     let objShort = obj[key][key2][key3]; // This should grab:  title, complete, etc.
 
+                    // console.log(objShort);
+
                     let title = objShort.title;
                     let missionId = objShort.missionID;
                     let complete = objShort.complete;
@@ -105,7 +107,7 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                         <div class='fob-mission-container'>
                             <div class='fob-mission-title-container'>
                                 <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
-                                <div class='fob-mission-complete-container'><input type="checkbox" class='fob-mission-checkbox' ${complete} /></div>
+                                <div class='fob-mission-complete-container'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-object-notation='${key}.${key2}.${key3}' ${complete} /></div>
                             </div>
                             <div class='fob-mission-info-container'>
                                 <div class='fob-mission-tasks-container' data-attachment-id="${key3}"></div>
@@ -179,6 +181,21 @@ const createFOBGrid = async (obj, docRef, user, db) => {
         for (let i = 0; i < arrayOfMissionCheckboxes.length && i < 300; i++) {
             arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
                 console.log(e.target);
+                let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
+                let checkboxId = e.target.dataset.fobMissionId; // Grabs the event target's id property, makes it into a Number (integar) from a string.
+
+                let objectNotation = e.target.dataset.objectNotation;
+
+                console.log(objectNotation);
+
+
+
+
+                // console.log(checked, checkboxId);
+
+                updateDoc(docRef, {
+                    [objectNotation+".complete"] : checked,// checkboxId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
+                })
             })
         }
 
