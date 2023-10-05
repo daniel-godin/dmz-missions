@@ -33,7 +33,9 @@ onAuthStateChanged(auth, user => {
 })
 
 const createFOBGrid = async (obj, docRef, user, db) => {
-    // console.log(obj); // For Testing Purposes.
+    console.log(obj); // For Testing Purposes.
+
+    resetFOBGrid(); // resets the innerHTML for the FOB Grid.  This is a clunky way to fix to duplication that is happening when a user clicks a checkbox, etc.
 
     const DMZFOBInformationContainer = document.getElementById('DMZFOBInformationContainer'); // DOM ID of div container for FOB Grid.
 
@@ -219,6 +221,10 @@ const createFOBGrid = async (obj, docRef, user, db) => {
     createListenerEvents();
 
 
+}
+
+const resetFOBGrid = async () => {
+    DMZFOBInformationContainer.innerHTML = '';
 }
 
 const getNumberOfProperties = (obj) => { // Use this re-usable function to get the number of properties, to change CSS rules and create div container boxes for each section.

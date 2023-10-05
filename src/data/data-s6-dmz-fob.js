@@ -1,10 +1,10 @@
 // This is the Call of Duty: Modern Warfare II: DMZ Foward Operating Base (FOB) Object with all data.
 
-export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communications Station
+export const dataS6DMZFOB = [
   
-  stash: {
-    wallet: {
-      unlockWallet: {
+  ["stash", 
+    ["wallet", 
+      {
         title: "Unlock Wallet",
         missionID: 536302,
         complete: true, // true/false complete/incomplete
@@ -18,17 +18,17 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 100k in Cash.",
             taskID:  848490,
             progressCurrent: 0,
             progressTotal: 100_000,
             complete: false, // true/false complete/incomplete
           },
-        },
+        ],
       },
-      walletExpansion1: {
+      {
         title: "Wallet Expansion 1",
         missionID: 781282,
         complete: false, // true/false complete/incomplete
@@ -66,7 +66,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-      walletExpansion2: {
+      {
         title: "Wallet Expansion 2",
         missionID: 224097,
         complete: false, // true/false complete/incomplete
@@ -111,7 +111,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           }, 
         },
       },
-      walletExpansion3: {
+      {
         title: "Wallet Expansion 3",
         missionID: 528243,
         complete: false, // true/false complete/incomplete
@@ -135,7 +135,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-      walletExpansion4: {
+      {
         title: "Wallet Expansion 4",
         missionID: 674971,
         complete: false, // true/false complete/incomplete
@@ -168,7 +168,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
   
       // I haven't gotten to wallet expansion 5 yet.
-      walletExpansion5: {
+      {
         title: "Wallet Expansion 5",
         missionID: 228593,
         complete: false, // true/false complete/incomplete
@@ -227,10 +227,10 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-    },
+    ],
   
-    stashExpansion: {
-      stashExpansion1: {
+    ["stashExpansion", 
+      {
         title: "Stash Expansion 1",
         missionID: 299126,
         complete: false, // true/false complete/incomplete
@@ -261,7 +261,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-      stashExpansion2: {
+      {
         title: "Stash Expansion 2",
         missionID: 903743,
         complete: false, // true/false complete/incomplete
@@ -299,7 +299,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-      stashExpansion3: {
+      {
         title: "Stash Expansion 3",
         missionID: 146777,
         complete: false, // true/false complete/incomplete
@@ -337,7 +337,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-      stashExpansion4: {
+      {
         title: "Stash Expansion 4",
         missionID: 726352,
         complete: false, // true/false complete/incomplete
@@ -382,7 +382,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-      stashExpansion5: {
+      {
         title: "Stash Expansion 5",
         missionID: 562066,
         complete: false, // true/false complete/incomplete
@@ -420,10 +420,10 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-    },
+    ],
 
-    walletCrown: {
-      walletExpansion1Crown: {
+    ["walletCrown",
+      {
         title: "Wallet Expansion 1 (CROWN)",
         missionID: 700672,
         complete: false, // true/false complete/incomplete
@@ -461,7 +461,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-      walletExpansion2Crown: {
+      {
         title: "Wallet Expansion 2 (CROWN)",
         missionID: 191716,
         complete: false, // true/false complete/incomplete
@@ -499,7 +499,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-      walletExpansion3Crown: {
+      {
         title: "Wallet Expansion 3 (CROWN)",
         missionID: 803545,
         complete: false, // true/false complete/incomplete
@@ -544,7 +544,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           }, 
         },
       },
-      walletExpansion4Crown: {
+      {
         title: "Wallet Expansion 4 (CROWN)",
         missionID: 959746,
         complete: false, // true/false complete/incomplete
@@ -591,7 +591,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
   
       // Not unlocked yet for me
-      walletExpansion5Crown: {
+      {
         title: "Wallet Expansion 5 (CROWN)",
         missionID: 246759,
         complete: false, // true/false complete/incomplete
@@ -650,10 +650,10 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-    },
+    ],
 
-    stashExpansionCrown: {
-      stashExpansion1Crown: {
+    ["stashExpansionCrown", 
+      {
         title: "Stash Expansion 1 (CROWN)",
         missionID: 838099,
         complete: false, // true/false complete/incomplete
@@ -691,7 +691,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-      stashExpansion2Crown: {
+      {
         title: "Stash Expansion 2 (CROWN)",
         missionID: 543199,
         complete: false, // true/false complete/incomplete
@@ -722,7 +722,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-      stashExpansion3Crown: {
+      {
         title: "Stash Expansion 3 (CROWN)",
         missionID: 553251,
         complete: false, // true/false complete/incomplete
@@ -767,7 +767,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           }, 
         },
       },
-      stashExpansion4Crown: {
+      {
         title: "Stash Expansion 4 (CROWN)",
         missionID: 120195,
         complete: false, // true/false complete/incomplete
@@ -800,7 +800,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
   
       // I haven't reached this yet.
-      stashExpansion5Crown: {
+      {
         title: "Stash Expansion 5 (CROWN)",
         missionID: 466767,
         complete: false, // true/false complete/incomplete
@@ -859,12 +859,12 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-    },
-  },
+    ],
+  ],
 
-  weaponsLocker: {
-    firstInsuredSlot: {
-      firstInsuredSlotCooldownReduction1: {
+  ["weaponsLocker", 
+    ["firstInsuredSlot",
+      {
         title: "1st Insured Slot Cooldown Reduction 1",
         missionID: 119318,
         complete: false, // true/false complete/incomplete
@@ -902,7 +902,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           },
         },
       },
-      firstInsuredSlotCooldownReduction2: {
+      {
         title: "1st Insured Slot Cooldown Reduction 2",
         missionID: 745240,
         complete: false, // true/false complete/incomplete
@@ -947,10 +947,10 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
           }, 
         },
       },
-    },
+    ],
   
-    secondInsuredSlot: {
-      unlockSecondInsuredSlot: { // Example:  firstInsuredSlotCooldownReduction1
+    ["secondInsuredSlot",
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Unlock 2nd Insured Slot",
         missionID: 189737,
         complete: false, // true/false complete/incomplete
@@ -991,7 +991,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-      secondInsuredSlotCooldownReduction1: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "2nd Insured Slot Cooldown Reduction 1",
         missionID: 684045,
         complete: false, // true/false complete/incomplete
@@ -1032,7 +1032,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
           },
       },
-      secondInsuredSlotCooldownReduction2: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "2nd Insured Slot Cooldown Reduction 2",
         missionID: 164117,
         complete: false, // true/false complete/incomplete
@@ -1094,10 +1094,10 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-    },
+    ],
   
-    thirdInsuredSlot: {
-      unlockThirdInsuredSlot: { // Example:  firstInsuredSlotCooldownReduction1
+    ["thirdInsuredSlot",
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Unlock 3rd Insured Slot",
         missionID: 576216,
         complete: false, // true/false complete/incomplete
@@ -1149,7 +1149,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-      thirdInsuredSlotCooldownReduction1: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "3rd Insured Slot Cooldown Reduction 1",
         missionID: 741676,
         complete: false, // true/false complete/incomplete
@@ -1185,7 +1185,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-      thirdInsuredSlotCooldownReduction2: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "3rd Insured Slot Cooldown Reduction 2",
         missionID: 792116,
         complete: false, // true/false complete/incomplete
@@ -1245,10 +1245,10 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-    },
+    ],
   
-    contrabandStash: {
-      contrabandStash1: { // Example:  firstInsuredSlotCooldownReduction1
+    ["contrabandStash",
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion 1",
         missionID: 468645,
         complete: false, // true/false complete/incomplete
@@ -1284,7 +1284,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-      contrabandStash2: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion 2",
         missionID: 802168,
         complete: false, // true/false complete/incomplete
@@ -1320,7 +1320,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-      contrabandStash3: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion 3",
         missionID: 295617,
         complete: false, // true/false complete/incomplete
@@ -1356,7 +1356,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-      contrabandStash4: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion 4",
         missionID: 868643,
         complete: false, // true/false complete/incomplete
@@ -1400,7 +1400,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-      contrabandStash5: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion 5",
         missionID: 958670,
         complete: false, // true/false complete/incomplete
@@ -1444,10 +1444,10 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-    },
+    ],
   
-    contrabandStashCrown: {
-      contrabandStashCrown1: { // Example:  firstInsuredSlotCooldownReduction1
+    ["contrabandStashCrown",
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion (CROWN) 1",
         missionID: 814733,
         complete: false, // true/false complete/incomplete
@@ -1483,7 +1483,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-      contrabandStashCrown2: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion (CROWN) 2",
         missionID: 784173,
         complete: false, // true/false complete/incomplete
@@ -1519,7 +1519,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-      contrabandStashCrown3: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion (CROWN) 3",
         missionID: 549167,
         complete: false, // true/false complete/incomplete
@@ -1563,7 +1563,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-      contrabandStashCrown4: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion (CROWN) 4",
         missionID: 432265,
         complete: false, // true/false complete/incomplete
@@ -1623,7 +1623,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-      contrabandStashCrown5: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion (CROWN) 5",
         missionID: 388290,
         complete: false, // true/false complete/incomplete
@@ -1667,13 +1667,12 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-    },
-  
-  },
+    ],
+  ],
 
-  equipment: {
-    increasedStartingArmor: {
-      increasedStartingArmor1: { // Example:  firstInsuredSlotCooldownReduction1
+  ["equipment", 
+    ["increasedStartingArmor",
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Increased Starting Armor",
         missionID: 217615,
         complete: false, // true/false complete/incomplete
@@ -1709,7 +1708,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-      increasedStartingArmor2: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Increased Starting Armor II",
         missionID: 774256,
         complete: false, // true/false complete/incomplete
@@ -1745,7 +1744,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-      increasedStartingArmor3: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Increased Starting Armor III",
         missionID: 208774,
         complete: false, // true/false complete/incomplete
@@ -1805,9 +1804,9 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-    },
-    unlockRebreather: {
-      unlockRebreather1: { // Example:  firstInsuredSlotCooldownReduction1
+    ],
+    ["unlockRebreather",
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Unlock Rebreather",
         missionID: 467290,
         complete: false, // true/false complete/incomplete
@@ -1875,7 +1874,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-      unlockArmorBox: { // Example:  firstInsuredSlotCooldownReduction1
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Unlock Armor Box",
         missionID: 602308,
         complete: false, // true/false complete/incomplete
@@ -1943,10 +1942,10 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-    },
+    ],
   
-    startingSoloSelfRevive: {
-      startingSoloSelfRevive1: { // Example:  firstInsuredSlotCooldownReduction1
+    ["startingSoloSelfRevive",
+      { // Example:  firstInsuredSlotCooldownReduction1
         title: "Starting Solo Self Revive",
         missionID: 804660,
         complete: false, // true/false complete/incomplete
@@ -1974,10 +1973,10 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
       },
-    },
-  },
+    ],
+  ],
 
-  bountyBoard: {
+  ["bountyBoard", {
     personalExfil: {
       personalExfils: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Personal Exfils",
@@ -2825,9 +2824,9 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     },
 
 
-  },
+  ],
 
-  communicationsStation: {
+  ["communicationsStation", {
     urgentMissionsBlackMous: {
         unlockBlackMousDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Unlock Black Mous Daily Urgent Missions",
@@ -3895,6 +3894,6 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
         },
     },
-  },
+  ],
 
-}
+];
