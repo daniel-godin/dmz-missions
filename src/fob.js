@@ -97,8 +97,8 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                         <div class='fob-mission-container'>
                             <div class='fob-mission-title-container'><h3 class='fob-mission-title'>${title}</h3><div class='fob-mission-complete-container'><input type="checkbox" /></div></div>
                             <div class='fob-mission-info-container'>
-                                <div class='fob-mission-info-reward'>${reward}</div>
                                 <div class='fob-mission-tasks-container' data-attachment-id="${key3}"></div>
+                                <div class='fob-mission-info-reward'><p>Reward:  ${reward}</p></div>
                             </div>
                         </div>
                     `)
@@ -140,37 +140,6 @@ const createFOBGrid = async (obj, docRef, user, db) => {
     }
 
     createSectionsForEachMainSection(obj);
-
-    
-    
-    // Create actual div boxes for each section.  Add data-${propertyKey} so you can access these later.
-    
-    // for (let i = 1; i < arrayOfFOBSections.length && i < 10; i++) {
-    //     // Starting at i = 1, so it doesn't include "All".
-    //     DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
-    //         <div class='fob-section-container' data-fob-section='${arrayOfFOBSections[i]}'>
-    //             <header class='fob-section-header'>${arrayOfFOBSections[i]}</header>
-    //             <div class='fob-section-info-container' data-fob-section-info='${arrayOfFOBSections[i]}'></div>
-    //         </div>
-    //     `)
-    // }
-
-    // Here's where I use a loop to run through the data object and put each thing inside of the fob-section-info-containers.
-
-
-
-
-    // // Move this array into the main data object later.
-    // // 11 items.  11 columns.
-
-    // for (let i = 0; i < obj.arrayOfFOBSections.length && i < 15; i++) {
-    //     DMZFOBContainer.insertAdjacentHTML('beforeend', `
-    //         <div class='fob-column' data-fob-column-id='${obj.arrayOfFOBSections[i]}'>
-    //             <header>${obj.arrayOfFOBSections[i]}</header>
-    //         </div>
-    //     `);
-    // }
-
 
 
 }
