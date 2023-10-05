@@ -105,7 +105,7 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                         <div class='fob-mission-container'>
                             <div class='fob-mission-title-container'>
                                 <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
-                                <div class='fob-mission-complete-container'><input type="checkbox" ${complete} /></div>
+                                <div class='fob-mission-complete-container'><input type="checkbox" class='fob-mission-checkbox' ${complete} /></div>
                             </div>
                             <div class='fob-mission-info-container'>
                                 <div class='fob-mission-tasks-container' data-attachment-id="${key3}"></div>
@@ -171,6 +171,14 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                 // e.target.parentNode.parentNode.classList.toggle('mission-container-active');
 
 
+            })
+        }
+
+        const arrayOfMissionCheckboxes = document.getElementsByClassName('fob-mission-checkbox');
+
+        for (let i = 0; i < arrayOfMissionCheckboxes.length && i < 300; i++) {
+            arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
+                console.log(e.target);
             })
         }
 
