@@ -7,7 +7,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       unlockWallet: {
         title: "Unlock Wallet",
         missionID: 536302,
-        complete: false, // true/false complete/incomplete
+        complete: true, // true/false complete/incomplete
         factionRequirement: "Black Mous Level 2", // Amount of Faction Needed to "Unlock"
         reward: "Unlock the wallet to store extracted cash.",
         maps: {
@@ -55,7 +55,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             taskID:  689929,
             progressCurrent: 0,
             progressTotal: 6,
-            complete: false, // true/false complete/incomplete
+            complete: true, // true/false complete/incomplete
           },
           task3: {
             task: "Extract 2 aged or vintage wine bottles.",

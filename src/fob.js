@@ -88,6 +88,12 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                     let factionRequirement = objShort.factionRequirement;
                     let reward = objShort.reward;
 
+                    if (complete == true) {
+                        complete = "checked";
+                    } else {
+                        complete = "";
+                    }
+
 
                     // console.log("title:", title, "complete?:", complete, unlocked, factionRequirement, reward);
 
@@ -99,7 +105,7 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                         <div class='fob-mission-container'>
                             <div class='fob-mission-title-container'>
                                 <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
-                                <div class='fob-mission-complete-container'><input type="checkbox" /></div>
+                                <div class='fob-mission-complete-container'><input type="checkbox" ${complete} /></div>
                             </div>
                             <div class='fob-mission-info-container'>
                                 <div class='fob-mission-tasks-container' data-attachment-id="${key3}"></div>
@@ -120,6 +126,12 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                         let progressTotal = taskShort.progressTotal;
                         let complete = taskShort.complete;
 
+                        if (complete == true) {
+                            complete = "checked";
+                        } else {
+                            complete = "";
+                        }
+
                         console.log(taskId);
 
                         // console.log(task, progressCurrent, progressTotal, complete); // For Testing
@@ -131,7 +143,7 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                         DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                             <ul>
                                 <li class="fob-mission-task-container" data-task-id="">
-                                    <input type='checkbox' class='task-checkbox' data-task-id='${taskId};' />
+                                    <input type='checkbox' class='task-checkbox' data-task-id='${taskId};' ${complete} />
                                     <div class='mission-task'>
                                         <p>${task}</p><p>${progressCurrent}</p><p> / </p><p>${progressTotal}</p>
                                     </div>
