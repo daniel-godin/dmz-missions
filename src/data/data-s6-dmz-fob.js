@@ -1,15 +1,12 @@
 // This is the Call of Duty: Modern Warfare II: DMZ Foward Operating Base (FOB) Object with all data.
 
-
-// Should I break this apart into 4 different objects?  Probably...
 export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communications Station
   
-  // !!!!  I need to re-do this whole object.
   stash: {
     wallet: {
       unlockWallet: {
         title: "Unlock Wallet",
-        missionID: 0,
+        missionID: 536302,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Black Mous Level 2", // Amount of Faction Needed to "Unlock"
         reward: "Unlock the wallet to store extracted cash.",
@@ -24,7 +21,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 100k in Cash.",
-            taskID: 0,
+            taskID:  848490,
             progressCurrent: 0,
             progressTotal: 100_000,
             complete: false, // true/false complete/incomplete
@@ -33,7 +30,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       walletExpansion1: {
         title: "Wallet Expansion 1",
-        missionID: 0,
+        missionID: 781282,
         complete: false, // true/false complete/incomplete
         factionRequirement: "White Lotus Level 3", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by $150k",
@@ -48,21 +45,21 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 10 bottles of liquor.",
-            taskID: 0,
+            taskID:  479699,
             progressCurrent: 0,
             progressTotal: 10,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 6 wine bottles.",
-            taskID: 0,
+            taskID:  689929,
             progressCurrent: 0,
             progressTotal: 6,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "Extract 2 aged or vintage wine bottles.",
-            taskID: 0,
+            taskID:  807135,
             progressCurrent: 0,
             progressTotal: 2,
             complete: false, // true/false complete/incomplete
@@ -71,7 +68,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       walletExpansion2: {
         title: "Wallet Expansion 2",
-        missionID: 0,
+        missionID: 224097,
         complete: false, // true/false complete/incomplete
         factionRequirement: "White Lotus Level 4", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by an additional $150k.",
@@ -86,28 +83,28 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 2 encrypted hard drives.",
-            taskID: 0,
+            taskID:  540358,
             progressCurrent: 0,
             progressTotal: 2,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 8 hard drives.",
-            taskID: 0,
+            taskID:  955670,
             progressCurrent: 0,
             progressTotal: 8,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "Extract 4 thumb drives.",
-            taskID: 0,
+            taskID:  918958,
             progressCurrent: 0,
             progressTotal: 4,
             complete: false, // true/false complete/incomplete
           },
           task4: {
             task: "Extract 4 laptops.",
-            taskID: 0,
+            taskID:  776282,
             progressCurrent: 0,
             progressTotal: 4,
             complete: false, // true/false complete/incomplete
@@ -116,7 +113,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       walletExpansion3: {
         title: "Wallet Expansion 3",
-        missionID: 0,
+        missionID: 528243,
         complete: false, // true/false complete/incomplete
         factionRequirement: "White Lotus Level 6", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by an additional 100k.",
@@ -131,7 +128,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 2 GPUs.",
-            taskID: 0,
+            taskID:  391812,
             progressCurrent: 0,
             progressTotal: 2,
             complete: false, // true/false complete/incomplete
@@ -140,7 +137,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       walletExpansion4: {
         title: "Wallet Expansion 4",
-        missionID: 0,
+        missionID: 674971,
         complete: false, // true/false complete/incomplete
         factionRequirement: "White Lotus Level 8", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by an additional $100k.",
@@ -155,14 +152,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 6 vintage wine bottles.",
-            taskID: 0,
+            taskID:  352358,
             progressCurrent: 0,
             progressTotal: 6,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 10 bottles of Japanese liquor.",
-            taskID: 0,
+            taskID:  787753,
             progressCurrent: 0,
             progressTotal: 10,
             complete: false, // true/false complete/incomplete
@@ -173,7 +170,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       // I haven't gotten to wallet expansion 5 yet.
       walletExpansion5: {
         title: "Wallet Expansion 5",
-        missionID: 0,
+        missionID: 228593,
         complete: false, // true/false complete/incomplete
         factionRequirement: "White Lotus Level 10", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by an additional $100k.",
@@ -188,42 +185,42 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "",
-            taskID: 0,
+            taskID:  740005,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "",
-            taskID: 0,
+            taskID:  589005,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "",
-            taskID: 0,
+            taskID:  442270,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
           task4: {
             task: "",
-            taskID: 0,
+            taskID:  719450,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           }, 
           task5: {
             task: "",
-            taskID: 0,
+            taskID:  834546,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
           task6: {
             task: "",
-            taskID: 0,
+            taskID:  687578,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
@@ -235,7 +232,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     stashExpansion: {
       stashExpansion1: {
         title: "Stash Expansion 1",
-        missionID: 0,
+        missionID: 299126,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Black Mous (4)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by 5 slots each.",
@@ -250,14 +247,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 10 nuclear fuel rods.",
-            taskID: 0,
+            taskID:  727520,
             progressCurrent: 0,
             progressTotal: 10,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 2 radiation blocker bottles.",
-            taskID: 0,
+            taskID:  240020,
             progressCurrent: 0,
             progressTotal: 2,
             complete: false, // true/false complete/incomplete
@@ -266,7 +263,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       stashExpansion2: {
         title: "Stash Expansion 2",
-        missionID: 0,
+        missionID: 903743,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Black Mous (5)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 5 slots each.",
@@ -281,21 +278,21 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 9 cigar boxes.",
-            taskID: 0,
+            taskID:  601904,
             progressCurrent: 0,
             progressTotal: 9,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 5 comic books.",
-            taskID: 0,
+            taskID:  131839,
             progressCurrent: 0,
             progressTotal: 5,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "Extract 3 bottles of aspirin.",
-            taskID: 0,
+            taskID:  973954,
             progressCurrent: 0,
             progressTotal: 3,
             complete: false, // true/false complete/incomplete
@@ -304,7 +301,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       stashExpansion3: {
         title: "Stash Expansion 3",
-        missionID: 0,
+        missionID: 146777,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Black Mous (6)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 4 slots each.",
@@ -319,21 +316,21 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 5 large medical bags.",
-            taskID: 0,
+            taskID:  204572,
             progressCurrent: 0,
             progressTotal: 5,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 10 AFAKs.",
-            taskID: 0,
+            taskID:  641703,
             progressCurrent: 0,
             progressTotal: 10,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "Extraft 15 IFAKs.",
-            taskID: 0,
+            taskID:  365220,
             progressCurrent: 0,
             progressTotal: 15,
             complete: false, // true/false complete/incomplete
@@ -342,7 +339,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       stashExpansion4: {
         title: "Stash Expansion 4",
-        missionID: 0,
+        missionID: 726352,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Black Mous (8)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 3 slots each.",
@@ -357,28 +354,28 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 5 screwdrivers.",
-            taskID: 0,
+            taskID:  555264,
             progressCurrent: 0,
             progressTotal: 5,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 5 wrenches.",
-            taskID: 0,
+            taskID:  276009,
             progressCurrent: 0,
             progressTotal: 5,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "Extract 1 RGL-80.",
-            taskID: 0,
+            taskID:  152358,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
           task4: {
             task: "Extract 3 dog tags.",
-            taskID: 0,
+            taskID:  684728,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
@@ -387,7 +384,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       stashExpansion5: {
         title: "Stash Expansion 5",
-        missionID: 0,
+        missionID: 562066,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Black Mous (10)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 3 slots each.",
@@ -402,34 +399,33 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 40 documents.",
-            taskID: 0,
+            taskID:  622594,
             progressCurrent: 0,
             progressTotal: 40,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 16 sensitive documents.",
-            taskID: 0,
+            taskID:  794951,
             progressCurrent: 0,
             progressTotal: 16,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "Extract 8 classified documents.",
-            taskID: 0,
+            taskID:  909019,
             progressCurrent: 0,
             progressTotal: 8,
             complete: false, // true/false complete/incomplete
           },
         },
       },
-
     },
 
     walletCrown: {
       walletExpansion1Crown: {
         title: "Wallet Expansion 1 (CROWN)",
-        missionID: 0,
+        missionID: 700672,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (4)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by $100k.",
@@ -444,21 +440,21 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 5 batteries.",
-            taskID: 0,
+            taskID:  849893,
             progressCurrent: 0,
             progressTotal: 5,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 2 drills.",
-            taskID: 0,
+            taskID:  853435,
             progressCurrent: 0,
             progressTotal: 2,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "Extract 3 bottles of oil.",
-            taskID: 0,
+            taskID:  726311,
             progressCurrent: 0,
             progressTotal: 3,
             complete: false, // true/false complete/incomplete
@@ -467,7 +463,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       walletExpansion2Crown: {
         title: "Wallet Expansion 2 (CROWN)",
-        missionID: 0,
+        missionID: 191716,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (5)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by $50k.",
@@ -482,21 +478,21 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 8 rolls of electrical tape.",
-            taskID: 0,
+            taskID:  383450,
             progressCurrent: 0,
             progressTotal: 8,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 3 car batteries.",
-            taskID: 0,
+            taskID:  486788,
             progressCurrent: 0,
             progressTotal: 3,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "Extract 6 jumper cables.",
-            taskID: 0,
+            taskID:  140872,
             progressCurrent: 0,
             progressTotal: 6,
             complete: false, // true/false complete/incomplete
@@ -505,7 +501,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       walletExpansion3Crown: {
         title: "Wallet Expansion 3 (CROWN)",
-        missionID: 0,
+        missionID: 803545,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (6)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by $50k.",
@@ -520,28 +516,28 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 5 AQ laptops.",
-            taskID: 0,
+            taskID:  364751,
             progressCurrent: 0,
             progressTotal: 5,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 10 screwdrivers.",
-            taskID: 0,
+            taskID:  442773,
             progressCurrent: 0,
             progressTotal: 10,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "Extract 4 encrypted hard drives.",
-            taskID: 0,
+            taskID:  595707,
             progressCurrent: 0,
             progressTotal: 4,
             complete: false, // true/false complete/incomplete
           },
           task4: {
             task: "Extract 500k in cash.",
-            taskID: 0,
+            taskID:  560890,
             progressCurrent: 0,
             progressTotal: 500,
             complete: false, // true/false complete/incomplete
@@ -550,7 +546,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       walletExpansion4Crown: {
         title: "Wallet Expansion 4 (CROWN)",
-        missionID: 0,
+        missionID: 959746,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (8)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by $50k.",
@@ -565,28 +561,28 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 4 GPUs.",
-            taskID: 0,
+            taskID:  409832,
             progressCurrent: 0,
             progressTotal: 4,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 10 game consoles.",
-            taskID: 0,
+            taskID:  528830,
             progressCurrent: 0,
             progressTotal: 10,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "Extract 10 VCRs.",
-            taskID: 0,
+            taskID:  340410,
             progressCurrent: 0,
             progressTotal: 10,
             complete: false, // true/false complete/incomplete
           },
           task4: {
             task: "Extract 6 encrypted thumb drives.",
-            taskID: 0,
+            taskID:  771441,
             progressCurrent: 0,
             progressTotal: 6,
             complete: false, // true/false complete/incomplete
@@ -597,7 +593,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       // Not unlocked yet for me
       walletExpansion5Crown: {
         title: "Wallet Expansion 5 (CROWN)",
-        missionID: 0,
+        missionID: 246759,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (10)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the wallet's capacity by $50k.",
@@ -612,42 +608,42 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "",
-            taskID: 0,
+            taskID:  330925,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "",
-            taskID: 0,
+            taskID:  716134,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "",
-            taskID: 0,
+            taskID:  693788,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
           task4: {
             task: "",
-            taskID: 0,
+            taskID:  410846,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           }, 
           task5: {
             task: "",
-            taskID: 0,
+            taskID:  752980,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
           task6: {
             task: "",
-            taskID: 0,
+            taskID:  108684,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
@@ -659,7 +655,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     stashExpansionCrown: {
       stashExpansion1Crown: {
         title: "Stash Expansion 1 (CROWN)",
-        missionID: 0,
+        missionID: 838099,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (4)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 3 slots each.",
@@ -674,21 +670,21 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 8 bandages.",
-            taskID: 0,
+            taskID:  881465,
             progressCurrent: 0,
             progressTotal: 8,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 4 IFAKs.",
-            taskID: 0,
+            taskID:  680861,
             progressCurrent: 0,
             progressTotal: 4,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "Extract 1 bottle of radiation blockers.",
-            taskID: 0,
+            taskID:  614255,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
@@ -697,7 +693,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       stashExpansion2Crown: {
         title: "Stash Expansion 2 (CROWN)",
-        missionID: 0,
+        missionID: 543199,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (5)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 3 slots each.",
@@ -712,14 +708,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 6 vases from Ashika Island.",
-            taskID: 0,
+            taskID:  662786,
             progressCurrent: 0,
             progressTotal: 6,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 3 Japanese liquor bottles.",
-            taskID: 0,
+            taskID:  538157,
             progressCurrent: 0,
             progressTotal: 3,
             complete: false, // true/false complete/incomplete
@@ -728,7 +724,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       stashExpansion3Crown: {
         title: "Stash Expansion 3 (CROWN)",
-        missionID: 0,
+        missionID: 553251,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (6)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 2 slots each.",
@@ -743,28 +739,28 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 8 bottles of fresh water.",
-            taskID: 0,
+            taskID:  464978,
             progressCurrent: 0,
             progressTotal: 8,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 7 food rations.",
-            taskID: 0,
+            taskID:  418681,
             progressCurrent: 0,
             progressTotal: 7,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "Extract 3 gas cans.",
-            taskID: 0,
+            taskID:  410600,
             progressCurrent: 0,
             progressTotal: 3,
             complete: false, // true/false complete/incomplete
           },
           task4: {
             task: "Extract 8 cans of food.",
-            taskID: 0,
+            taskID:  245661,
             progressCurrent: 0,
             progressTotal: 8,
             complete: false, // true/false complete/incomplete
@@ -773,7 +769,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       stashExpansion4Crown: {
         title: "Stash Expansion 4 (CROWN)",
-        missionID: 0,
+        missionID: 120195,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (8)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 1 slots each.",
@@ -788,14 +784,14 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 8 aspirin bottles.",
-            taskID: 0,
+            taskID:  891302,
             progressCurrent: 0,
             progressTotal: 8,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 8 large medical bags.",
-            taskID: 0,
+            taskID:  334802,
             progressCurrent: 0,
             progressTotal: 8,
             complete: false, // true/false complete/incomplete
@@ -806,7 +802,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       // I haven't reached this yet.
       stashExpansion5Crown: {
         title: "Stash Expansion 5 (CROWN)",
-        missionID: 0,
+        missionID: 466767,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Crown (10)", // Amount of Faction Needed to "Unlock"
         reward: "Expand the mission item and key stashes by an additional 1 slots each.",
@@ -821,42 +817,42 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "",
-            taskID: 0,
+            taskID:  312287,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "",
-            taskID: 0,
+            taskID:  906443,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "",
-            taskID: 0,
+            taskID:  512846,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
           task4: {
             task: "",
-            taskID: 0,
+            taskID:  961647,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           }, 
           task5: {
             task: "",
-            taskID: 0,
+            taskID:  297957,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
           task6: {
             task: "",
-            taskID: 0,
+            taskID:  844925,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
@@ -870,7 +866,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     firstInsuredSlot: {
       firstInsuredSlotCooldownReduction1: {
         title: "1st Insured Slot Cooldown Reduction 1",
-        missionID: 0,
+        missionID: 119318,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Phalanx (3)", // Amount of Faction Needed to "Unlock"
         reward: "Reduce the cooldown of the 1st insured slot by 25%.",
@@ -885,21 +881,21 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 4 bottles of gun oil.",
-            taskID: 0,
+            taskID:  497595,
             progressCurrent: 0,
             progressTotal: 4,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 3 classified documents.",
-            taskID: 0,
+            taskID:  221197,
             progressCurrent: 0,
             progressTotal: 3,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "Extract 400k in cash.",
-            taskID: 0,
+            taskID:  601379,
             progressCurrent: 0,
             progressTotal: 400,
             complete: false, // true/false complete/incomplete
@@ -908,7 +904,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       firstInsuredSlotCooldownReduction2: {
         title: "1st Insured Slot Cooldown Reduction 2",
-        missionID: 0,
+        missionID: 745240,
         complete: false, // true/false complete/incomplete
         factionRequirement: "Phalanx (9)", // Amount of Faction Needed to "Unlock"
         reward: "Reduce the cooldown of the 1st insured slot by an additional 25% (50% total).",
@@ -923,28 +919,28 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
           task1: {
             task: "Extract 12 tubes of toothpaste.",
-            taskID: 0,
+            taskID:  939388,
             progressCurrent: 0,
             progressTotal: 12,
             complete: false, // true/false complete/incomplete
           },
           task2: {
             task: "Extract 15 bottles of fresh water.",
-            taskID: 0,
+            taskID:  556786,
             progressCurrent: 0,
             progressTotal: 15,
             complete: false, // true/false complete/incomplete
           },
           task3: {
             task: "Extract 7 light bulbs.",
-            taskID: 0,
+            taskID:  665800,
             progressCurrent: 0,
             progressTotal: 7,
             complete: false, // true/false complete/incomplete
           },
           task4: {
             task: "Extract 5 enemy operator's weapons.",
-            taskID: 0,
+            taskID:  295744,
             progressCurrent: 0,
             progressTotal: 5,
             complete: false, // true/false complete/incomplete
@@ -956,7 +952,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     secondInsuredSlot: {
       unlockSecondInsuredSlot: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Unlock 2nd Insured Slot",
-        missionID: 0,
+        missionID: 189737,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Black Mous", // Shadow Company, Black Mous, etc.
@@ -974,21 +970,21 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 3 IFAKs found at hospitals.",
-                taskID: 0,
+                taskID:  778662,
                 progressCurrent: 0,
                 progressTotal: 3,
                 complete: false, // true/false complete/incomplete
             },
             task2: {
                 task: "Extract 1 AFAK or large medical bag.",
-                taskID: 0,
+                taskID:  862847,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
             },
             task3: {
                 task: "Extract 1 enemy operator's weapon.",
-                taskID: 0,
+                taskID:  675564,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -997,7 +993,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       secondInsuredSlotCooldownReduction1: { // Example:  firstInsuredSlotCooldownReduction1
         title: "2nd Insured Slot Cooldown Reduction 1",
-        missionID: 0,
+        missionID: 684045,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Phalanx", // Shadow Company, Black Mous, etc.
@@ -1015,21 +1011,21 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 8 bags of imported tea.",
-                taskID: 0,
+                taskID:  699570,
                 progressCurrent: 0,
                 progressTotal: 8,
                 complete: false, // true/false complete/incomplete
             },
             task2: {
                 task: "Extract 8 jars of soothing hand cream.",
-                taskID: 0,
+                taskID:  254812,
                 progressCurrent: 0,
                 progressTotal: 8,
                 complete: false, // true/false complete/incomplete
             },
             task3: {
                 task: "Extract 4 bottles of aged of vintage wine.",
-                taskID: 0,
+                taskID:  811077,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
@@ -1038,7 +1034,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       secondInsuredSlotCooldownReduction2: { // Example:  firstInsuredSlotCooldownReduction1
         title: "2nd Insured Slot Cooldown Reduction 2",
-        missionID: 0,
+        missionID: 164117,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Phalanx", // Shadow Company, Black Mous, etc.
@@ -1056,42 +1052,42 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 4 jugs of chlorine.",
-                taskID: 0,
+                taskID:  788532,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
             },
             task2: {
                 task: "Extract 4 jugs of formaldehyde.",
-                taskID: 0,
+                taskID:  854490,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
             },
             task3: {
                 task: "Extract 4 bottles of cephalexin.",
-                taskID: 0,
+                taskID:  538969,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
             },
             task4: {
                 task: "Extract 4 bottles of hydrochloride.",
-                taskID: 0,
+                taskID:  253290,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
             },
             task5: {
                 task: "Extract 4 bottles of acetone.",
-                taskID: 0,
+                taskID:  799494,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
             },
             task6: {
                 task: "Extract 4 bottles of hydrogen peroxide.",
-                taskID: 0,
+                taskID:  636878,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
@@ -1103,7 +1099,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     thirdInsuredSlot: {
       unlockThirdInsuredSlot: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Unlock 3rd Insured Slot",
-        missionID: 0,
+        missionID: 576216,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Black Mous", // Shadow Company, Black Mous, etc.
@@ -1121,7 +1117,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 5 GPUs.",
-                taskID: 0,
+                taskID:  738148,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -1129,7 +1125,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 10 Gold Bars.",
-                taskID: 0,
+                taskID:  117587,
                 progressCurrent: 0,
                 progressTotal: 10,
                 tags: [],
@@ -1137,7 +1133,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "Extract 8 Gold Skulls.",
-                taskID: 0,
+                taskID:  121145,
                 progressCurrent: 0,
                 progressTotal: 8,
                 tags: [],
@@ -1145,7 +1141,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task4: {
                 task: "Extract 10 Enemy Operator's Weapons.",
-                taskID: 0,
+                taskID:  344489,
                 progressCurrent: 0,
                 progressTotal: 10,
                 tags: [],
@@ -1155,7 +1151,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       thirdInsuredSlotCooldownReduction1: { // Example:  firstInsuredSlotCooldownReduction1
         title: "3rd Insured Slot Cooldown Reduction 1",
-        missionID: 0,
+        missionID: 741676,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Phalanx", // Shadow Company, Black Mous, etc.
@@ -1173,7 +1169,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 35 cigar boxes.",
-                taskID: 0,
+                taskID:  714201,
                 progressCurrent: 0,
                 progressTotal: 35,
                 tags: [],
@@ -1181,7 +1177,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 20 lighters.",
-                taskID: 0,
+                taskID:  485497,
                 progressCurrent: 0,
                 progressTotal: 20,
                 tags: [],
@@ -1191,7 +1187,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       thirdInsuredSlotCooldownReduction2: { // Example:  firstInsuredSlotCooldownReduction1
         title: "3rd Insured Slot Cooldown Reduction 2",
-        missionID: 0,
+        missionID: 792116,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Phalanx", // Shadow Company, Black Mous, etc.
@@ -1209,7 +1205,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 10 dog tags.",
-                taskID: 0,
+                taskID:  252132,
                 progressCurrent: 0,
                 progressTotal: 10,
                 tags: [],
@@ -1217,7 +1213,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 1 damascus dog tag.",
-                taskID: 0,
+                taskID:  774551,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -1225,7 +1221,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "Extract 2 gold dog tags.",
-                taskID: 0,
+                taskID:  226648,
                 progressCurrent: 0,
                 progressTotal: 2,
                 tags: [],
@@ -1233,7 +1229,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task4: {
                 task: "Extract 3 silver dog tags.",
-                taskID: 0,
+                taskID:  304916,
                 progressCurrent: 0,
                 progressTotal: 3,
                 tags: [],
@@ -1241,7 +1237,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task5: {
                 task: "Extract 3 weapon cases.",
-                taskID: 0,
+                taskID:  709772,
                 progressCurrent: 0,
                 progressTotal: 3,
                 tags: [],
@@ -1254,7 +1250,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     contrabandStash: {
       contrabandStash1: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion 1",
-        missionID: 0,
+        missionID: 468645,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Black Mous", // Shadow Company, Black Mous, etc.
@@ -1272,7 +1268,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 4 thumb drives.",
-                taskID: 0,
+                taskID:  948569,
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
@@ -1280,7 +1276,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 5 hard drives.",
-                taskID: 0,
+                taskID:  886710,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -1290,7 +1286,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       contrabandStash2: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion 2",
-        missionID: 0,
+        missionID: 802168,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Black Mous", // Shadow Company, Black Mous, etc.
@@ -1308,7 +1304,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 4 dog tags.",
-                taskID: 0,
+                taskID:  920096,
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
@@ -1316,7 +1312,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 4 pieces of Black Mous intel from Rohan Oil.",
-                taskID: 0,
+                taskID:  562618,
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
@@ -1326,7 +1322,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       contrabandStash3: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion 3",
-        missionID: 0,
+        missionID: 295617,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Black Mous", // Shadow Company, Black Mous, etc.
@@ -1344,7 +1340,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 6 Ashika Island masks.",
-                taskID: 0,
+                taskID:  533039,
                 progressCurrent: 0,
                 progressTotal: 6,
                 tags: [],
@@ -1352,7 +1348,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 1 original Ashika Island mask.",
-                taskID: 0,
+                taskID:  857597,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -1362,7 +1358,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       contrabandStash4: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion 4",
-        missionID: 0,
+        missionID: 868643,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Black Mous", // Shadow Company, Black Mous, etc.
@@ -1380,7 +1376,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 15 armor plates.",
-                taskID: 0,
+                taskID:  886581,
                 progressCurrent: 0,
                 progressTotal: 15,
                 tags: [],
@@ -1388,7 +1384,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 5 three-plate carriers.",
-                taskID: 0,
+                taskID:  676178,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -1396,7 +1392,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "Extract 3 armor plate boxes.",
-                taskID: 0,
+                taskID:  211976,
                 progressCurrent: 0,
                 progressTotal: 3,
                 tags: [],
@@ -1406,7 +1402,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       contrabandStash5: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion 5",
-        missionID: 0,
+        missionID: 958670,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Black Mous", // Shadow Company, Black Mous, etc.
@@ -1424,7 +1420,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 10 UAVs or advanced UAVs.",
-                taskID: 0,
+                taskID:  831333,
                 progressCurrent: 0,
                 progressTotal: 10,
                 tags: [],
@@ -1432,7 +1428,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 12 anti-armor round boxes.",
-                taskID: 0,
+                taskID:  461853,
                 progressCurrent: 0,
                 progressTotal: 12,
                 tags: [],
@@ -1440,7 +1436,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "Extract 20 encrypted hard drives.",
-                taskID: 0,
+                taskID:  631563,
                 progressCurrent: 0,
                 progressTotal: 20,
                 tags: [],
@@ -1453,7 +1449,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     contrabandStashCrown: {
       contrabandStashCrown1: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion (CROWN) 1",
-        missionID: 0,
+        missionID: 814733,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Crown", // Shadow Company, Black Mous, etc.
@@ -1471,7 +1467,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 9 stims.",
-                taskID: 0,
+                taskID:  618279,
                 progressCurrent: 0,
                 progressTotal: 9,
                 tags: [],
@@ -1479,7 +1475,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 6 bandages.",
-                taskID: 0,
+                taskID:  262346,
                 progressCurrent: 0,
                 progressTotal: 6,
                 tags: [],
@@ -1489,7 +1485,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       contrabandStashCrown2: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion (CROWN) 2",
-        missionID: 0,
+        missionID: 784173,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Crown", // Shadow Company, Black Mous, etc.
@@ -1507,7 +1503,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 15 lighters, comic books cigar boxes, or documents.",
-                taskID: 0,
+                taskID:  901152,
                 progressCurrent: 0,
                 progressTotal: 15,
                 tags: [],
@@ -1515,7 +1511,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 5 gas cans.",
-                taskID: 0,
+                taskID:  527724,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -1525,7 +1521,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       contrabandStashCrown3: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion (CROWN) 3",
-        missionID: 0,
+        missionID: 549167,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Crown", // Shadow Company, Black Mous, etc.
@@ -1543,7 +1539,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 16 blow torches.",
-                taskID: 0,
+                taskID:  793652,
                 progressCurrent: 0,
                 progressTotal: 16,
                 tags: [],
@@ -1551,7 +1547,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 12 jumper cables.",
-                taskID: 0,
+                taskID:  563323,
                 progressCurrent: 0,
                 progressTotal: 12,
                 tags: [],
@@ -1559,7 +1555,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "Extract 8 car batteries.",
-                taskID: 0,
+                taskID:  840445,
                 progressCurrent: 0,
                 progressTotal: 8,
                 tags: [],
@@ -1569,7 +1565,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       contrabandStashCrown4: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion (CROWN) 4",
-        missionID: 0,
+        missionID: 432265,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Crown", // Shadow Company, Black Mous, etc.
@@ -1587,7 +1583,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 3,500 rounds of pistol or SMG ammo.",
-                taskID: 0,
+                taskID:  239326,
                 progressCurrent: 0,
                 progressTotal: 3_500,
                 tags: [],
@@ -1595,7 +1591,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 6,500 rounds of AR or LMG ammo.",
-                taskID: 0,
+                taskID:  622241,
                 progressCurrent: 0,
                 progressTotal: 6_500,
                 tags: [],
@@ -1603,7 +1599,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "Extract 1,200 shells of shotgun ammo.",
-                taskID: 0,
+                taskID:  843674,
                 progressCurrent: 0,
                 progressTotal: 1_200,
                 tags: [],
@@ -1611,7 +1607,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task4: {
                 task: "Extract 120 shells of launcher ammo.",
-                taskID: 0,
+                taskID:  208720,
                 progressCurrent: 0,
                 progressTotal: 120,
                 tags: [],
@@ -1619,7 +1615,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task5: {
                 task: "Extract 800 rounds of sniper ammo.",
-                taskID: 0,
+                taskID:  908383,
                 progressCurrent: 0,
                 progressTotal: 800,
                 tags: [],
@@ -1629,7 +1625,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       contrabandStashCrown5: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Contraband Stash Expansion (CROWN) 5",
-        missionID: 0,
+        missionID: 388290,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Crown", // Shadow Company, Black Mous, etc.
@@ -1647,7 +1643,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 30 gas masks.",
-                taskID: 0,
+                taskID:  100035,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -1655,7 +1651,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 10 durable gas masks.",
-                taskID: 0,
+                taskID:  672580,
                 progressCurrent: 0,
                 progressTotal: 2,
                 tags: [],
@@ -1663,7 +1659,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "Extract 15 radiation blocker bottles.",
-                taskID: 0,
+                taskID:  258593,
                 progressCurrent: 0,
                 progressTotal: 3,
                 tags: [],
@@ -1679,7 +1675,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     increasedStartingArmor: {
       increasedStartingArmor1: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Increased Starting Armor",
-        missionID: 0,
+        missionID: 217615,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -1697,7 +1693,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Dead Drop 8 stronghold keycards.",
-                taskID: 0,
+                taskID:  545823,
                 progressCurrent: 0,
                 progressTotal: 8,
                 tags: [],
@@ -1705,7 +1701,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Dead drop 1 skeleton key.",
-                taskID: 0,
+                taskID:  349678,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -1715,7 +1711,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       increasedStartingArmor2: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Increased Starting Armor II",
-        missionID: 0,
+        missionID: 774256,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Shadow Company", // Shadow Company, Black Mous, etc.
@@ -1733,7 +1729,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Dead drop 10 killstreaks.",
-                taskID: 0,
+                taskID:  342023,
                 progressCurrent: 0,
                 progressTotal: 10,
                 tags: [],
@@ -1741,7 +1737,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 5 NVGs.",
-                taskID: 0,
+                taskID:  737718,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -1751,7 +1747,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       increasedStartingArmor3: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Increased Starting Armor III",
-        missionID: 0,
+        missionID: 208774,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Shadow Company", // Shadow Company, Black Mous, etc.
@@ -1769,7 +1765,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 5 heart lockets.",
-                taskID: 0,
+                taskID:  152380,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -1777,7 +1773,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 5 vials of insulin.",
-                taskID: 0,
+                taskID:  551283,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -1785,7 +1781,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "Extract 5 small dolls.",
-                taskID: 0,
+                taskID:  651986,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -1793,7 +1789,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task4: {
                 task: "Extract 5 lucky cat statues.",
-                taskID: 0,
+                taskID:  640747,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -1801,7 +1797,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task5: {
                 task: "Extract 5 dog bank statues.",
-                taskID: 0,
+                taskID:  442191,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -1813,7 +1809,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     unlockRebreather: {
       unlockRebreather1: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Unlock Rebreather",
-        missionID: 0,
+        missionID: 467290,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Shadow Company", // Shadow Company, Black Mous, etc.
@@ -1831,7 +1827,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 12 rebreathers.",
-                taskID: 0,
+                taskID:  834308,
                 progressCurrent: 0,
                 progressTotal: 12,
                 tags: [],
@@ -1839,7 +1835,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 15 rolls of electrical tape.",
-                taskID: 0,
+                taskID:  945216,
                 progressCurrent: 0,
                 progressTotal: 15,
                 tags: [],
@@ -1847,7 +1843,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "Extract 8 light bulbs.",
-                taskID: 0,
+                taskID:  852360,
                 progressCurrent: 0,
                 progressTotal: 8,
                 tags: [],
@@ -1855,7 +1851,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task4: {
                 task: "Extract 8 bottles of gun oil.",
-                taskID: 0,
+                taskID:  879443,
                 progressCurrent: 0,
                 progressTotal: 8,
                 tags: [],
@@ -1863,7 +1859,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task5: {
                 task: "Extract 5 blow torches.",
-                taskID: 0,
+                taskID:  972766,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -1871,7 +1867,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task6: {
                 task: "Extract 1 GPU.",
-                taskID: 0,
+                taskID:  983389,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -1881,7 +1877,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       unlockArmorBox: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Unlock Armor Box",
-        missionID: 0,
+        missionID: 602308,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "Shadow Company", // Shadow Company, Black Mous, etc.
@@ -1899,7 +1895,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Extract 8 armor boxes.",
-                taskID: 0,
+                taskID:  107247,
                 progressCurrent: 0,
                 progressTotal: 81,
                 tags: [],
@@ -1907,7 +1903,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "Extract 4 drills.",
-                taskID: 0,
+                taskID:  589039,
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
@@ -1915,7 +1911,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "Extract 5 screwdrivers.",
-                taskID: 0,
+                taskID:  489890,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -1923,7 +1919,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task4: {
                 task: "Extract 8 batteries.",
-                taskID: 0,
+                taskID:  162950,
                 progressCurrent: 0,
                 progressTotal: 8,
                 tags: [],
@@ -1931,7 +1927,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task5: {
                 task: "Extract 16 electronic components.",
-                taskID: 0,
+                taskID:  531880,
                 progressCurrent: 0,
                 progressTotal: 16,
                 tags: [],
@@ -1939,7 +1935,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task6: {
                 task: "Extract 5 plastic explosive bricks.",
-                taskID: 0,
+                taskID:  363321,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -1952,7 +1948,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     startingSoloSelfRevive: {
       startingSoloSelfRevive1: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Starting Solo Self Revive",
-        missionID: 0,
+        missionID: 804660,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -1970,7 +1966,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Dead drop 40 self revives.",
-                taskID: 0,
+                taskID:  635652,
                 progressCurrent: 0,
                 progressTotal: 40,
                 tags: [],
@@ -1985,7 +1981,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     personalExfil: {
       personalExfils: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Personal Exfils",
-        missionID: 0,
+        missionID: 763984,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "White Lotus", // Shadow Company, Black Mous, etc.
@@ -2003,7 +1999,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Helo Commander.",
-                taskID: 0,
+                taskID:  717313,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -2013,7 +2009,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       personalExfilDiscount1: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Personal Exfil Discount 1",
-        missionID: 0,
+        missionID: 871413,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -2031,7 +2027,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Helo Commander 4 times.",
-                taskID: 0,
+                taskID:  853923,
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
@@ -2041,7 +2037,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       personalExfilDiscount2: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Personal Exfil Discount 2",
-        missionID: 0,
+        missionID: 507811,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -2059,7 +2055,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Helo Commander 5 times.",
-                taskID: 0,
+                taskID:  304398,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -2069,7 +2065,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       personalExfilDiscount3: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Personal Exfil Discount 3",
-        missionID: 0,
+        missionID: 832493,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -2087,7 +2083,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Helo Commander 10 times.",
-                taskID: 0,
+                taskID:  672955,
                 progressCurrent: 0,
                 progressTotal: 10,
                 tags: [],
@@ -2100,7 +2096,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     revivePistolBarter: {
       revivePistolBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Revive Pistol Barter",
-        missionID: 0,
+        missionID: 839904,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "White Lotus", // Shadow Company, Black Mous, etc.
@@ -2118,7 +2114,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Chemist.",
-                taskID: 0,
+                taskID:  269814,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -2131,7 +2127,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     commsPlateCarrierBarter: {
       commsPlateCarrierBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Comms Plate Carrier Barter",
-        missionID: 0,
+        missionID: 121842,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "White Lotus", // Shadow Company, Black Mous, etc.
@@ -2149,7 +2145,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Wheelson.",
-                taskID: 0,
+                taskID:  230607,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -2162,7 +2158,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     stealthPlatecarrierBarter: {
       stealthPlateCarrierBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Stealth Plate Carrier Barter",
-        missionID: 0,
+        missionID: 536869,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "White Lotus", // Shadow Company, Black Mous, etc.
@@ -2180,7 +2176,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Sniper.",
-                taskID: 0,
+                taskID:  239390,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -2190,7 +2186,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       workbenchDiscount1: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Workbench Discount 1",
-        missionID: 0,
+        missionID: 888681,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -2208,7 +2204,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Sniper or the Rhino 4 times.",
-                taskID: 0,
+                taskID:  166805,
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
@@ -2219,7 +2215,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       // I don't know tasks for workbenchDiscount2 or 3.
       workbenchDiscount2: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Workbench Discount 2",
-        missionID: 0,
+        missionID: 390694,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -2237,7 +2233,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "",
-                taskID: 0,
+                taskID:  565090,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -2245,7 +2241,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "",
-                taskID: 0,
+                taskID:  305756,
                 progressCurrent: 0,
                 progressTotal: 2,
                 tags: [],
@@ -2253,7 +2249,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "",
-                taskID: 0,
+                taskID:  148999,
                 progressCurrent: 0,
                 progressTotal: 3,
                 tags: [],
@@ -2261,7 +2257,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task4: {
                 task: "",
-                taskID: 0,
+                taskID:  447901,
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
@@ -2269,7 +2265,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task5: {
                 task: "",
-                taskID: 0,
+                taskID:  528621,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -2277,7 +2273,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task6: {
                 task: "",
-                taskID: 0,
+                taskID:  132619,
                 progressCurrent: 0,
                 progressTotal: 6,
                 tags: [],
@@ -2287,7 +2283,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       workbenchDiscount3: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Workbench Discount 3",
-        missionID: 0,
+        missionID: 692141,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -2305,7 +2301,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "",
-                taskID: 0,
+                taskID:  157881,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -2313,7 +2309,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "",
-                taskID: 0,
+                taskID:  178162,
                 progressCurrent: 0,
                 progressTotal: 2,
                 tags: [],
@@ -2321,7 +2317,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "",
-                taskID: 0,
+                taskID:  453283,
                 progressCurrent: 0,
                 progressTotal: 3,
                 tags: [],
@@ -2329,7 +2325,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task4: {
                 task: "",
-                taskID: 0,
+                taskID:  550298,
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
@@ -2337,7 +2333,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task5: {
                 task: "",
-                taskID: 0,
+                taskID:  656813,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -2345,7 +2341,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task6: {
                 task: "",
-                taskID: 0,
+                taskID:  831621,
                 progressCurrent: 0,
                 progressTotal: 6,
                 tags: [],
@@ -2358,7 +2354,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     temperedPlateCarrierBarter: {
       temperedPlateCarrierBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Tempered Plate Carrier Barter",
-        missionID: 0,
+        missionID: 397070,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "White Lotus", // Shadow Company, Black Mous, etc.
@@ -2376,7 +2372,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Armored Commander.",
-                taskID: 0,
+                taskID:  600693,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -2389,7 +2385,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     medicPlateCarrierBarter: {
       medicPlateCarrierBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Medic Plate Carrior Barter",
-        missionID: 0,
+        missionID: 336641,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "White Lotus", // Shadow Company, Black Mous, etc.
@@ -2407,7 +2403,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Pyro.",
-                taskID: 0,
+                taskID:  104522,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -2417,7 +2413,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       armorPlateDiscount1: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Armor Plate Discount 1",
-        missionID: 0,
+        missionID: 349599,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -2435,7 +2431,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Pyro 4 times.",
-                taskID: 0,
+                taskID:  571557,
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
@@ -2446,7 +2442,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       // I don't know the tasks for armorPlateDiscount 2 or 3.
       armorPlateDiscount2: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Armor Plate Discount 2",
-        missionID: 0,
+        missionID: 967217,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -2464,7 +2460,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "",
-                taskID: 0,
+                taskID:  845101,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -2472,7 +2468,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "",
-                taskID: 0,
+                taskID:  323230,
                 progressCurrent: 0,
                 progressTotal: 2,
                 tags: [],
@@ -2480,7 +2476,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "",
-                taskID: 0,
+                taskID:  336981,
                 progressCurrent: 0,
                 progressTotal: 3,
                 tags: [],
@@ -2488,7 +2484,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task4: {
                 task: "",
-                taskID: 0,
+                taskID:  695257,
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
@@ -2496,7 +2492,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task5: {
                 task: "",
-                taskID: 0,
+                taskID:  438739,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -2504,7 +2500,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task6: {
                 task: "",
-                taskID: 0,
+                taskID:  316813,
                 progressCurrent: 0,
                 progressTotal: 6,
                 tags: [],
@@ -2514,7 +2510,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       armorPlateDiscount3: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Armor Plate Discount 3",
-        missionID: 0,
+        missionID: 223929,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -2532,7 +2528,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "",
-                taskID: 0,
+                taskID:  457573,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -2540,7 +2536,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "",
-                taskID: 0,
+                taskID:  385515,
                 progressCurrent: 0,
                 progressTotal: 2,
                 tags: [],
@@ -2548,7 +2544,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "",
-                taskID: 0,
+                taskID:  905524,
                 progressCurrent: 0,
                 progressTotal: 3,
                 tags: [],
@@ -2556,7 +2552,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task4: {
                 task: "",
-                taskID: 0,
+                taskID:  338668,
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
@@ -2564,7 +2560,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task5: {
                 task: "",
-                taskID: 0,
+                taskID:  871541,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -2572,7 +2568,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task6: {
                 task: "",
-                taskID: 0,
+                taskID:  831774,
                 progressCurrent: 0,
                 progressTotal: 6,
                 tags: [],
@@ -2585,7 +2581,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     scavengerBackpackBarter: {
       scavengerBackpackBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Scavenger Backpack Barter",
-        missionID: 0,
+        missionID: 326988,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "White Lotus", // Shadow Company, Black Mous, etc.
@@ -2603,7 +2599,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Scavenger.",
-                taskID: 0,
+                taskID:  617450,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -2613,7 +2609,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       secureBackpackBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Secure Backpack Barter",
-        missionID: 0,
+        missionID: 435316,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -2631,7 +2627,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Scavenger 9 times.",
-                taskID: 0,
+                taskID:  998467,
                 progressCurrent: 0,
                 progressTotal: 9,
                 tags: [],
@@ -2644,7 +2640,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     skeletonKeyBarter: {
       skeletonKeyBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Skeleton Key Barter",
-        missionID: 0,
+        missionID: 760337,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "White Lotus", // Shadow Company, Black Mous, etc.
@@ -2662,7 +2658,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill Velikan in Building 21.",
-                taskID: 0,
+                taskID:  604350,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -2673,7 +2669,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       // I don't know mk32barterunlock tasks yet.
       MK32BarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
         title: "MK32 Barter",
-        missionID: 0,
+        missionID: 678791,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -2691,7 +2687,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "",
-                taskID: 0,
+                taskID:  944482,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -2699,7 +2695,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task2: {
                 task: "",
-                taskID: 0,
+                taskID:  138158,
                 progressCurrent: 0,
                 progressTotal: 2,
                 tags: [],
@@ -2707,7 +2703,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task3: {
                 task: "",
-                taskID: 0,
+                taskID:  947421,
                 progressCurrent: 0,
                 progressTotal: 3,
                 tags: [],
@@ -2715,7 +2711,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task4: {
                 task: "",
-                taskID: 0,
+                taskID:  213370,
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
@@ -2723,7 +2719,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task5: {
                 task: "",
-                taskID: 0,
+                taskID:  119585,
                 progressCurrent: 0,
                 progressTotal: 5,
                 tags: [],
@@ -2731,7 +2727,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             },
             task6: {
                 task: "",
-                taskID: 0,
+                taskID:  146367,
                 progressCurrent: 0,
                 progressTotal: 6,
                 tags: [],
@@ -2744,7 +2740,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     killstreakDiscount: {
       killstreakDiscount1: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Killstreak Discount 1",
-        missionID: 0,
+        missionID: 452688,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "White Lotus", // Shadow Company, Black Mous, etc.
@@ -2762,7 +2758,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Bomb Maker.",
-                taskID: 0,
+                taskID:  737603,
                 progressCurrent: 0,
                 progressTotal: 1,
                 tags: [],
@@ -2772,7 +2768,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       killstreakDiscount2: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Killstreak Discount 2",
-        missionID: 0,
+        missionID: 869716,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -2790,7 +2786,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Bomb Maker 4 times.",
-                taskID: 0,
+                taskID:  382177,
                 progressCurrent: 0,
                 progressTotal: 4,
                 tags: [],
@@ -2800,7 +2796,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
       },
       killstreakDiscount3: { // Example:  firstInsuredSlotCooldownReduction1
         title: "Killstreak Discount 3",
-        missionID: 0,
+        missionID: 768385,
         complete: false, // true/false complete/incomplete
         unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
         faction: "", // Shadow Company, Black Mous, etc.
@@ -2818,7 +2814,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         tasks: {
             task1: {
                 task: "Kill the Bomb Maker 6 times.",
-                taskID: 0,
+                taskID:  331773,
                 progressCurrent: 0,
                 progressTotal: 6,
                 tags: [],
@@ -2835,7 +2831,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     urgentMissionsBlackMous: {
         unlockBlackMousDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Unlock Black Mous Daily Urgent Missions",
-            missionID: 0,
+            missionID: 193488,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -2853,7 +2849,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract with a full backpack with each slot filled.",
-                    taskID: 0,
+                    taskID:  271702,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2863,7 +2859,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         unlockBlackMousWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Unlock Black Mous Weekly Urgent Missions",
-            missionID: 0,
+            missionID: 988202,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -2881,7 +2877,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 12 Scavenger calling cards.",
-                    taskID: 0,
+                    taskID:  684708,
                     progressCurrent: 0,
                     progressTotal: 12,
                     tags: [],
@@ -2893,7 +2889,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     urgentMissionsWhiteLotus: {
         unlockWhiteLotusDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Unlock White Lotus Daily Urgent Missions",
-            missionID: 0,
+            missionID: 662102,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -2911,7 +2907,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 2 Al Qatala Planning Diagrams or Images.",
-                    taskID: 0,
+                    taskID:  556447,
                     progressCurrent: 0,
                     progressTotal: 2,
                     tags: [],
@@ -2921,7 +2917,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         unlockWhiteLotusWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Unlock White Lotus Weekly Urgent Missions",
-            missionID: 0,
+            missionID: 168070,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -2939,7 +2935,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 10 jugs of liquid nitrogen.",
-                    taskID: 0,
+                    taskID:  688244,
                     progressCurrent: 0,
                     progressTotal: 10,
                     tags: [],
@@ -2951,7 +2947,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     urgentMissionsCrown: {
         unlockCrownDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Unlock Crown Daily Urgent Missions",
-            missionID: 0,
+            missionID: 722766,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -2969,7 +2965,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 3 classified documents.",
-                    taskID: 0,
+                    taskID:  802967,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -2979,7 +2975,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         unlockCrownWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Unlock Crown Weekly Urgent Missions",
-            missionID: 0,
+            missionID: 260881,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -2997,7 +2993,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 10 cans of heavy chopper fuel.",
-                    taskID: 0,
+                    taskID:  298105,
                     progressCurrent: 0,
                     progressTotal: 10,
                     tags: [],
@@ -3009,7 +3005,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     urgentMissionsPhalanx: {
         unlockPhalanxDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Unlock Phalanx Daily Urgent Missions",
-            missionID: 0,
+            missionID: 673298,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3027,7 +3023,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 3 bottles of hydrogen peroxide, cephalexin, or aceton.",
-                    taskID: 0,
+                    taskID:  770245,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -3037,7 +3033,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         unlockPhalanxWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Unlock Phalanx Weekly Urgent Missions",
-            missionID: 0,
+            missionID: 478600,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3055,7 +3051,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 5 origami horses.",
-                    taskID: 0,
+                    taskID:  419791,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -3067,7 +3063,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     urgentMissionsShadowCompany: {
         unlockShadowCompanyDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Unlock Shadow Company Daily Urgent Missions",
-            missionID: 0,
+            missionID: 398816,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3085,7 +3081,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Dead drop 10 keys.",
-                    taskID: 0,
+                    taskID:  200091,
                     progressCurrent: 0,
                     progressTotal: 10,
                     tags: [],
@@ -3095,7 +3091,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         unlockShadowCompanyWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Unlock Shadow Company Weekly Urgent Missions",
-            missionID: 0,
+            missionID: 629236,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3113,7 +3109,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 10 encrypted hard drives from Building 21.",
-                    taskID: 0,
+                    taskID:  978301,
                     progressCurrent: 0,
                     progressTotal: 10,
                     tags: [],
@@ -3125,7 +3121,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     increasedCommanderIntel: {
         increasedCommanderIntelUnlock: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased Commander Intel",
-            missionID: 0,
+            missionID: 585865,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3143,7 +3139,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 15 laptops.",
-                    taskID: 0,
+                    taskID:  357591,
                     progressCurrent: 0,
                     progressTotal: 15,
                     tags: [],
@@ -3151,7 +3147,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task2: {
                     task: "Extract 3 encrypted hard drives.",
-                    taskID: 0,
+                    taskID:  275898,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -3159,7 +3155,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task3: {
                     task: "Extract 6 encrypted thumb drives.",
-                    taskID: 0,
+                    taskID:  518492,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -3171,7 +3167,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     increasedSafeIntel: {
         increasedSafeIntelUnlock: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased Safe Intel",
-            missionID: 0,
+            missionID: 979666,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3189,7 +3185,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 6 bricks of plastic explosives.",
-                    taskID: 0,
+                    taskID:  259583,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -3197,7 +3193,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task2: {
                     task: "Extract 20 electrical components.",
-                    taskID: 0,
+                    taskID:  954757,
                     progressCurrent: 0,
                     progressTotal: 20,
                     tags: [],
@@ -3205,7 +3201,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task3: {
                     task: "Extract 5 VCRs.",
-                    taskID: 0,
+                    taskID:  482655,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -3217,7 +3213,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     increasedWeaponStashIntel: {
         increasedWeaponStashIntelUnlock: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased Weapon Stash Intel",
-            missionID: 0,
+            missionID: 838893,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3235,7 +3231,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Dead drop 3 RGL-80s.",
-                    taskID: 0,
+                    taskID:  578046,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -3243,7 +3239,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task2: {
                     task: "Dead drop 20 weapons.",
-                    taskID: 0,
+                    taskID:  425294,
                     progressCurrent: 0,
                     progressTotal: 20,
                     tags: [],
@@ -3251,7 +3247,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task3: {
                     task: "Dead drop 10 enemy weapons.",
-                    taskID: 0,
+                    taskID:  176061,
                     progressCurrent: 0,
                     progressTotal: 10,
                     tags: [],
@@ -3263,7 +3259,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     increasedSafeContents: {
         increasedSafeContentsUnlock: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased Safe Contents",
-            missionID: 0,
+            missionID: 987834,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3281,7 +3277,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 8 sensitive or classified documents.",
-                    taskID: 0,
+                    taskID:  441887,
                     progressCurrent: 0,
                     progressTotal: 8,
                     tags: [],
@@ -3289,7 +3285,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task2: {
                     task: "Dead drop $1 million in cash.",
-                    taskID: 0,
+                    taskID:  625313,
                     progressCurrent: 0,
                     progressTotal: 1_000_000,
                     tags: [],
@@ -3301,7 +3297,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     increasedSupplyCacheContents: {
         increasedSupplyCacheContentsUnlock: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased Supply Cache Contents",
-            missionID: 0,
+            missionID: 730045,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3319,7 +3315,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Dead drop 10 armor plate carriers.",
-                    taskID: 0,
+                    taskID:  878948,
                     progressCurrent: 0,
                     progressTotal: 10,
                     tags: [],
@@ -3327,7 +3323,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task2: {
                     task: "Dead drop 6 3-plate carriers.",
-                    taskID: 0,
+                    taskID:  319264,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -3335,7 +3331,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task3: {
                     task: "Dead drop 6 self revives.",
-                    taskID: 0,
+                    taskID:  412111,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -3347,7 +3343,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     increasedExfilChopperSpeed: {
         increasedExfilChopperSpeedUnlock: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased Exfil Chopper Speed",
-            missionID: 0,
+            missionID: 454078,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3365,7 +3361,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 100k in cash on final exfils 10 times.",
-                    taskID: 0,
+                    taskID:  888011,
                     progressCurrent: 0,
                     progressTotal: 10,
                     tags: [],
@@ -3377,7 +3373,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     increasedContractPayment: {
         increasedContractPayment1: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased Contract Payment I",
-            missionID: 0,
+            missionID: 961676,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3395,7 +3391,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Complete 100 contracts.",
-                    taskID: 0,
+                    taskID:  678801,
                     progressCurrent: 0,
                     progressTotal: 100,
                     tags: [],
@@ -3406,7 +3402,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         // I don't have the tasks for increasedContractPayment2 and 3.
         increasedContractPayment2: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased Contract Payment II",
-            missionID: 0,
+            missionID: 425387,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3424,7 +3420,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "",
-                    taskID: 0,
+                    taskID:  639316,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -3432,7 +3428,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task2: {
                     task: "",
-                    taskID: 0,
+                    taskID:  991480,
                     progressCurrent: 0,
                     progressTotal: 2,
                     tags: [],
@@ -3440,7 +3436,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task3: {
                     task: "",
-                    taskID: 0,
+                    taskID:  441290,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -3448,7 +3444,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task4: {
                     task: "",
-                    taskID: 0,
+                    taskID:  613301,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -3456,7 +3452,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task5: {
                     task: "",
-                    taskID: 0,
+                    taskID:  875005,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -3464,7 +3460,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task6: {
                     task: "",
-                    taskID: 0,
+                    taskID:  810489,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -3474,7 +3470,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         increasedContractPayment3: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased Contract Payment III",
-            missionID: 0,
+            missionID: 908803,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3492,7 +3488,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "",
-                    taskID: 0,
+                    taskID:  721364,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -3500,7 +3496,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task2: {
                     task: "",
-                    taskID: 0,
+                    taskID:  140676,
                     progressCurrent: 0,
                     progressTotal: 2,
                     tags: [],
@@ -3508,7 +3504,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task3: {
                     task: "",
-                    taskID: 0,
+                    taskID:  469384,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -3516,7 +3512,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task4: {
                     task: "",
-                    taskID: 0,
+                    taskID:  941498,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -3524,7 +3520,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task5: {
                     task: "",
-                    taskID: 0,
+                    taskID:  883334,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -3532,7 +3528,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task6: {
                     task: "",
-                    taskID: 0,
+                    taskID:  675103,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -3544,7 +3540,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     increasedUAVTowerDuration: {
         increasedUAVTowerDuration1: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased UAV Tower Duration I",
-            missionID: 0,
+            missionID: 709557,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3562,7 +3558,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 4 drills.",
-                    taskID: 0,
+                    taskID:  578153,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -3570,7 +3566,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task2: {
                     task: "Extract 5 screwdrivers.",
-                    taskID: 0,
+                    taskID:  372543,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -3578,7 +3574,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task3: {
                     task: "Extract 3 wrenches.",
-                    taskID: 0,
+                    taskID:  841098,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -3586,7 +3582,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task4: {
                     task: "Extract 4 hard drives.",
-                    taskID: 0,
+                    taskID:  656546,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -3594,7 +3590,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task5: {
                     task: "Extract 3 rolls of electrical tape.",
-                    taskID: 0,
+                    taskID:  615705,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -3602,7 +3598,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task6: {
                     task: "Extract 3 batteries.",
-                    taskID: 0,
+                    taskID:  736039,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -3612,7 +3608,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         increasedUAVTowerDuration2: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased UAV Tower Duration II",
-            missionID: 0,
+            missionID: 559475,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3630,7 +3626,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 4 bottles of vintage wine.",
-                    taskID: 0,
+                    taskID:  460705,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -3638,7 +3634,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task2: {
                     task: "Extract 10 jars of soothing hand cream.",
-                    taskID: 0,
+                    taskID:  203318,
                     progressCurrent: 0,
                     progressTotal: 10,
                     tags: [],
@@ -3646,7 +3642,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task3: {
                     task: "Extract 10 cigar boxes.",
-                    taskID: 0,
+                    taskID:  722634,
                     progressCurrent: 0,
                     progressTotal: 10,
                     tags: [],
@@ -3654,7 +3650,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task4: {
                     task: "Extract 10 lighters.",
-                    taskID: 0,
+                    taskID:  786980,
                     progressCurrent: 0,
                     progressTotal: 10,
                     tags: [],
@@ -3665,7 +3661,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         // I don't know the tasks for increasedUAVTowerDuration3.  I need shadow company lvl 15 to see it.
         increasedUAVTowerDuration3: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased UAV Tower Duration III",
-            missionID: 0,
+            missionID: 853955,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "Shadow Company", // Shadow Company, Black Mous, etc.
@@ -3683,7 +3679,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "",
-                    taskID: 0,
+                    taskID:  795284,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -3691,7 +3687,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task2: {
                     task: "",
-                    taskID: 0,
+                    taskID:  758230,
                     progressCurrent: 0,
                     progressTotal: 2,
                     tags: [],
@@ -3699,7 +3695,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task3: {
                     task: "",
-                    taskID: 0,
+                    taskID:  501373,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -3707,7 +3703,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task4: {
                     task: "",
-                    taskID: 0,
+                    taskID:  663065,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -3715,7 +3711,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task5: {
                     task: "",
-                    taskID: 0,
+                    taskID:  988012,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -3723,7 +3719,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task6: {
                     task: "",
-                    taskID: 0,
+                    taskID:  537156,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -3735,7 +3731,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
     increasedSamSiteDuration: {
         increasedSamSiteDuration1: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased Sam Site Duration I",
-            missionID: 0,
+            missionID: 613890,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3753,7 +3749,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 8 aged or vintage wine bottles.",
-                    taskID: 0,
+                    taskID:  233743,
                     progressCurrent: 0,
                     progressTotal: 8,
                     tags: [],
@@ -3761,7 +3757,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task2: {
                     task: "Extract 15 bottles of fresh water.",
-                    taskID: 0,
+                    taskID:  292230,
                     progressCurrent: 0,
                     progressTotal: 15,
                     tags: [],
@@ -3769,7 +3765,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task3: {
                     task: "Extract 10 bottles of Ashika liquor.",
-                    taskID: 0,
+                    taskID:  695234,
                     progressCurrent: 0,
                     progressTotal: 10,
                     tags: [],
@@ -3779,7 +3775,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
         increasedSamSiteDuration2: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased Sam Site Duration II",
-            missionID: 0,
+            missionID: 174449,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3797,7 +3793,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "Extract 8 laptops from Ashika Island.",
-                    taskID: 0,
+                    taskID:  262659,
                     progressCurrent: 0,
                     progressTotal: 8,
                     tags: [],
@@ -3805,7 +3801,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task2: {
                     task: "Extract 5 game consoles.",
-                    taskID: 0,
+                    taskID:  729062,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -3813,7 +3809,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task3: {
                     task: "Extract 6 VCRs.",
-                    taskID: 0,
+                    taskID:  474258,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -3821,7 +3817,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task4: {
                     task: "Extract 1 GPU.",
-                    taskID: 0,
+                    taskID:  792870,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -3832,7 +3828,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         // I don't know the tasks for increasedSamSiteDuration3.  I haven't finished 2 yet.
         increasedSamSiteDuration3: { // Example:  firstInsuredSlotCooldownReduction1
             title: "Increased Sam Site Duration III",
-            missionID: 0,
+            missionID: 769748,
             complete: false, // true/false complete/incomplete
             unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
@@ -3850,7 +3846,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
             tasks: {
                 task1: {
                     task: "",
-                    taskID: 0,
+                    taskID:  182197,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -3858,7 +3854,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task2: {
                     task: "",
-                    taskID: 0,
+                    taskID:  960143,
                     progressCurrent: 0,
                     progressTotal: 2,
                     tags: [],
@@ -3866,7 +3862,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task3: {
                     task: "",
-                    taskID: 0,
+                    taskID:  622547,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -3874,7 +3870,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task4: {
                     task: "",
-                    taskID: 0,
+                    taskID:  846822,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -3882,7 +3878,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task5: {
                     task: "",
-                    taskID: 0,
+                    taskID:  756694,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -3890,7 +3886,7 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
                 },
                 task6: {
                     task: "",
-                    taskID: 0,
+                    taskID:  112331,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -3900,4 +3896,5 @@ export const dataS6DMZFOB = { // Stash, Weapons Locker, Bounty Board, Communicat
         },
     },
   },
+
 }

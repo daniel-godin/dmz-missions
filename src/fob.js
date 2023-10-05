@@ -1,5 +1,5 @@
 import { doc, getDoc, onSnapshot, updateDoc, setDoc, } from "firebase/firestore";
-import { dataS6DMZFOB } from "./data/data-s6-dmz-fob";
+import { dataS6DMZFOB, } from "./data/data-s6-dmz-fob";
 import { dataS6DMZStandardMissions } from "./data/data-s6-dmz-standard-missions";
 import { auth, db } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
@@ -82,10 +82,12 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                     let objShort = obj[key][key2][key3]; // This should grab:  title, complete, etc.
 
                     let title = objShort.title;
+                    let missionId = objShort.missionID;
                     let complete = objShort.complete;
                     let unlocked = objShort.unlocked;
                     let factionRequirement = objShort.factionRequirement;
                     let reward = objShort.reward;
+
 
                     // console.log("title:", title, "complete?:", complete, unlocked, factionRequirement, reward);
 
@@ -95,7 +97,10 @@ const createFOBGrid = async (obj, docRef, user, db) => {
 
                     DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                         <div class='fob-mission-container'>
-                            <div class='fob-mission-title-container'><h3 class='fob-mission-title'>${title}</h3><div class='fob-mission-complete-container'><input type="checkbox" /></div></div>
+                            <div class='fob-mission-title-container'>
+                                <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
+                                <div class='fob-mission-complete-container'><input type="checkbox" /></div>
+                            </div>
                             <div class='fob-mission-info-container'>
                                 <div class='fob-mission-tasks-container' data-attachment-id="${key3}"></div>
                                 <div class='fob-mission-info-reward'><p>Reward:  ${reward}</p></div>
@@ -110,10 +115,12 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                         let taskShort = obj[key][key2][key3].tasks[key4];
 
                         let task = taskShort.task;
+                        let taskId = taskShort.taskID;
                         let progressCurrent = taskShort.progressCurrent;
                         let progressTotal = taskShort.progressTotal;
                         let complete = taskShort.complete;
-                        let missionId = taskShort.missionId;
+
+                        console.log(taskId);
 
                         // console.log(task, progressCurrent, progressTotal, complete); // For Testing
 
@@ -124,21 +131,13 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                         DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                             <ul>
                                 <li class="fob-mission-task-container" data-task-id="">
-                                    <input type='checkbox' class='task-checkbox' data-mission-id='${missionId};' />
+                                    <input type='checkbox' class='task-checkbox' data-task-id='${taskId};' />
                                     <div class='mission-task'>
                                         <p>${task}</p><p>${progressCurrent}</p><p> / </p><p>${progressTotal}</p>
                                     </div>
                                 </li>
                             </ul>
-
                         `)
-
-
-
-
-
-
-
                     }
                 }
             }
@@ -190,3 +189,7 @@ const getNumberOfProperties = (obj) => { // Use this re-usable function to get t
     //         </div>
     //     `)
     // }
+
+
+
+
