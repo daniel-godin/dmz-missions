@@ -141,7 +141,7 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                         DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                             <ul>
                                 <li class="fob-mission-task-container" data-task-id="">
-                                    <input type='checkbox' class='task-checkbox' data-task-id='${taskId};' ${complete} />
+                                    <input type='checkbox' class='task-checkbox' data-task-id='${taskId}' data-obj-notation='${key}.${key2}.${key3}.tasks.${key4}' ${complete} />
                                     <div class='mission-task'>
                                         <p>${task}</p><p>${progressCurrent}</p><p> / </p><p>${progressTotal}</p>
                                     </div>
@@ -188,13 +188,28 @@ const createFOBGrid = async (obj, docRef, user, db) => {
 
                 console.log(objectNotation);
 
-
-
-
                 // console.log(checked, checkboxId);
 
                 updateDoc(docRef, {
-                    [objectNotation+".complete"] : checked,// checkboxId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
+                    [objectNotation+".complete"] : checked, // checkboxId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
+                })
+            })
+        }
+
+        const arrayOfMissionTaskCheckboxes = document.getElementsByClassName('task-checkbox');
+
+        for (let i = 0; i < arrayOfMissionTaskCheckboxes.length && i < 999; i++) {
+            arrayOfMissionTaskCheckboxes[i].addEventListener('click', (e) => {
+                console.log(e.target);
+
+                let checked = e.target.checked;
+
+                let objNotation = e.target.dataset.objNotation;
+
+                console.log(objNotation);
+
+                updateDoc(docRef, {
+                    [objNotation+".complete"] : checked, 
                 })
             })
         }
