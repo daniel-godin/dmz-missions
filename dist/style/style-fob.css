@@ -162,13 +162,23 @@
 
 .fob-mission-task-container {
     display: grid;
-    grid-template-columns: 1fr min-content min-content min-content;
+    grid-template-columns: min-content 1fr;
+    gap: .5rem;
     margin: 0;
     padding: .5rem;
+}
+
+.mission-task {
+    display: grid;
+    grid-template-columns: 1fr min-content min-content min-content; 
 }
 
 .fob-mission-info-reward {
     border: 1px solid var(--color-accent);
     border-radius: var(--size-border-radius-content);
     padding: .5rem;
+}
+
+.hide {
+    display: none;
 }

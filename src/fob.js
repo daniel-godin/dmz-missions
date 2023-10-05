@@ -113,6 +113,7 @@ const createFOBGrid = async (obj, docRef, user, db) => {
                         let progressCurrent = taskShort.progressCurrent;
                         let progressTotal = taskShort.progressTotal;
                         let complete = taskShort.complete;
+                        let missionId = taskShort.missionId;
 
                         // console.log(task, progressCurrent, progressTotal, complete); // For Testing
 
@@ -122,7 +123,12 @@ const createFOBGrid = async (obj, docRef, user, db) => {
 
                         DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                             <ul>
-                                <li class="fob-mission-task-container" data-task-id=""><p>${task}</p><p>${progressCurrent}</p><p> / </p><p>${progressTotal}</p></li>
+                                <li class="fob-mission-task-container" data-task-id="">
+                                    <input type='checkbox' class='task-checkbox' data-mission-id='${missionId};' />
+                                    <div class='mission-task'>
+                                        <p>${task}</p><p>${progressCurrent}</p><p> / </p><p>${progressTotal}</p>
+                                    </div>
+                                </li>
                             </ul>
 
                         `)
@@ -140,6 +146,30 @@ const createFOBGrid = async (obj, docRef, user, db) => {
     }
 
     createSectionsForEachMainSection(obj);
+
+    const createListenerEvents = () => {
+
+        const arrayOfMissionTitles = document.getElementsByClassName('fob-mission-title');
+
+        for (let i = 0; i < arrayOfMissionTitles.length && i < 300; i++) {
+            arrayOfMissionTitles[i].addEventListener('click', (e) => {
+                console.log(e.target);
+                console.log(e.target.parentNode.nextElementSibling);
+
+                e.target.parentNode.nextElementSibling.classList.toggle('hide');
+                e.target.classList.toggle('underlined');
+
+                // e.target.parentNode.nextElementSibling.classList.toggle('hide');
+                // e.target.classList.toggle('underlined');
+                // e.target.parentNode.parentNode.classList.toggle('mission-container-active');
+
+
+            })
+        }
+
+    }
+
+    createListenerEvents();
 
 
 }
