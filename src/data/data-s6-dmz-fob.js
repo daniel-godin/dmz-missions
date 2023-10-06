@@ -950,7 +950,7 @@ export const dataS6DMZFOB = [
     ],
   
     ["secondInsuredSlot",
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Unlock 2nd Insured Slot",
         missionID: 189737,
         complete: false, // true/false complete/incomplete
@@ -991,7 +991,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "2nd Insured Slot Cooldown Reduction 1",
         missionID: 684045,
         complete: false, // true/false complete/incomplete
@@ -1032,7 +1032,7 @@ export const dataS6DMZFOB = [
             },
           },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "2nd Insured Slot Cooldown Reduction 2",
         missionID: 164117,
         complete: false, // true/false complete/incomplete
@@ -1097,7 +1097,7 @@ export const dataS6DMZFOB = [
     ],
   
     ["thirdInsuredSlot",
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Unlock 3rd Insured Slot",
         missionID: 576216,
         complete: false, // true/false complete/incomplete
@@ -1149,7 +1149,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "3rd Insured Slot Cooldown Reduction 1",
         missionID: 741676,
         complete: false, // true/false complete/incomplete
@@ -1185,7 +1185,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "3rd Insured Slot Cooldown Reduction 2",
         missionID: 792116,
         complete: false, // true/false complete/incomplete
@@ -1248,7 +1248,7 @@ export const dataS6DMZFOB = [
     ],
   
     ["contrabandStash",
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Contraband Stash Expansion 1",
         missionID: 468645,
         complete: false, // true/false complete/incomplete
@@ -1284,7 +1284,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Contraband Stash Expansion 2",
         missionID: 802168,
         complete: false, // true/false complete/incomplete
@@ -1320,7 +1320,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Contraband Stash Expansion 3",
         missionID: 295617,
         complete: false, // true/false complete/incomplete
@@ -1356,7 +1356,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Contraband Stash Expansion 4",
         missionID: 868643,
         complete: false, // true/false complete/incomplete
@@ -1400,7 +1400,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Contraband Stash Expansion 5",
         missionID: 958670,
         complete: false, // true/false complete/incomplete
@@ -1447,7 +1447,7 @@ export const dataS6DMZFOB = [
     ],
   
     ["contrabandStashCrown",
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Contraband Stash Expansion (CROWN) 1",
         missionID: 814733,
         complete: false, // true/false complete/incomplete
@@ -1483,7 +1483,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Contraband Stash Expansion (CROWN) 2",
         missionID: 784173,
         complete: false, // true/false complete/incomplete
@@ -1519,7 +1519,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Contraband Stash Expansion (CROWN) 3",
         missionID: 549167,
         complete: false, // true/false complete/incomplete
@@ -1563,7 +1563,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Contraband Stash Expansion (CROWN) 4",
         missionID: 432265,
         complete: false, // true/false complete/incomplete
@@ -1623,7 +1623,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Contraband Stash Expansion (CROWN) 5",
         missionID: 388290,
         complete: false, // true/false complete/incomplete
@@ -1672,7 +1672,7 @@ export const dataS6DMZFOB = [
 
   ["equipment", 
     ["increasedStartingArmor",
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Increased Starting Armor",
         missionID: 217615,
         complete: false, // true/false complete/incomplete
@@ -1708,7 +1708,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Increased Starting Armor II",
         missionID: 774256,
         complete: false, // true/false complete/incomplete
@@ -1744,7 +1744,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Increased Starting Armor III",
         missionID: 208774,
         complete: false, // true/false complete/incomplete
@@ -1806,7 +1806,7 @@ export const dataS6DMZFOB = [
       },
     ],
     ["unlockRebreather",
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Unlock Rebreather",
         missionID: 467290,
         complete: false, // true/false complete/incomplete
@@ -1874,7 +1874,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Unlock Armor Box",
         missionID: 602308,
         complete: false, // true/false complete/incomplete
@@ -1945,7 +1945,7 @@ export const dataS6DMZFOB = [
     ],
   
     ["startingSoloSelfRevive",
-      { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Starting Solo Self Revive",
         missionID: 804660,
         complete: false, // true/false complete/incomplete
@@ -1976,9 +1976,9 @@ export const dataS6DMZFOB = [
     ],
   ],
 
-  ["bountyBoard", {
-    personalExfil: {
-      personalExfils: { // Example:  firstInsuredSlotCooldownReduction1
+  ["bountyBoard",
+    ["personalExfil",
+      { 
         title: "Personal Exfils",
         missionID: 763984,
         complete: false, // true/false complete/incomplete
@@ -2006,7 +2006,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      personalExfilDiscount1: { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Personal Exfil Discount 1",
         missionID: 871413,
         complete: false, // true/false complete/incomplete
@@ -2034,7 +2034,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      personalExfilDiscount2: { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Personal Exfil Discount 2",
         missionID: 507811,
         complete: false, // true/false complete/incomplete
@@ -2062,7 +2062,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      personalExfilDiscount3: { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Personal Exfil Discount 3",
         missionID: 832493,
         complete: false, // true/false complete/incomplete
@@ -2090,10 +2090,10 @@ export const dataS6DMZFOB = [
             },
         },
       },
-    },
+    ],
 
-    revivePistolBarter: {
-      revivePistolBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+    ["revivePistolBarter",
+      { 
         title: "Revive Pistol Barter",
         missionID: 839904,
         complete: false, // true/false complete/incomplete
@@ -2121,10 +2121,10 @@ export const dataS6DMZFOB = [
             },
         },
       },
-    },
+    ],
 
-    commsPlateCarrierBarter: {
-      commsPlateCarrierBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+    ["commsPlateCarrierBarter",
+      { 
         title: "Comms Plate Carrier Barter",
         missionID: 121842,
         complete: false, // true/false complete/incomplete
@@ -2152,10 +2152,10 @@ export const dataS6DMZFOB = [
             },
         },
       },
-    },
+    ],
 
-    stealthPlatecarrierBarter: {
-      stealthPlateCarrierBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+    ["stealthPlatecarrierBarter",
+      { 
         title: "Stealth Plate Carrier Barter",
         missionID: 536869,
         complete: false, // true/false complete/incomplete
@@ -2183,7 +2183,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      workbenchDiscount1: { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Workbench Discount 1",
         missionID: 888681,
         complete: false, // true/false complete/incomplete
@@ -2211,8 +2211,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      // I don't know tasks for workbenchDiscount2 or 3.
-      workbenchDiscount2: { // Example:  firstInsuredSlotCooldownReduction1
+      { // I don't know tasks for workbenchDiscount2 or 3.
         title: "Workbench Discount 2",
         missionID: 390694,
         complete: false, // true/false complete/incomplete
@@ -2280,7 +2279,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      workbenchDiscount3: { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Workbench Discount 3",
         missionID: 692141,
         complete: false, // true/false complete/incomplete
@@ -2348,10 +2347,10 @@ export const dataS6DMZFOB = [
             },
         },
       },
-    },
+    ],
 
-    temperedPlateCarrierBarter: {
-      temperedPlateCarrierBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+    ["temperedPlateCarrierBarter",
+      { 
         title: "Tempered Plate Carrier Barter",
         missionID: 397070,
         complete: false, // true/false complete/incomplete
@@ -2379,10 +2378,10 @@ export const dataS6DMZFOB = [
             },
         },
       },
-    },
+    ],
 
-    medicPlateCarrierBarter: {
-      medicPlateCarrierBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+    ["medicPlateCarrierBarter",
+      { 
         title: "Medic Plate Carrior Barter",
         missionID: 336641,
         complete: false, // true/false complete/incomplete
@@ -2410,7 +2409,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      armorPlateDiscount1: { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Armor Plate Discount 1",
         missionID: 349599,
         complete: false, // true/false complete/incomplete
@@ -2438,8 +2437,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      // I don't know the tasks for armorPlateDiscount 2 or 3.
-      armorPlateDiscount2: { // Example:  firstInsuredSlotCooldownReduction1
+      { // I don't know the tasks for armorPlateDiscount 2 or 3.
         title: "Armor Plate Discount 2",
         missionID: 967217,
         complete: false, // true/false complete/incomplete
@@ -2507,7 +2505,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      armorPlateDiscount3: { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Armor Plate Discount 3",
         missionID: 223929,
         complete: false, // true/false complete/incomplete
@@ -2575,10 +2573,10 @@ export const dataS6DMZFOB = [
             },
         },
       },
-    },
+    ],
 
-    scavengerBackpackBarter: {
-      scavengerBackpackBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+    ["scavengerBackpackBarter",
+      { 
         title: "Scavenger Backpack Barter",
         missionID: 326988,
         complete: false, // true/false complete/incomplete
@@ -2606,7 +2604,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      secureBackpackBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Secure Backpack Barter",
         missionID: 435316,
         complete: false, // true/false complete/incomplete
@@ -2634,10 +2632,10 @@ export const dataS6DMZFOB = [
             },
         },
       },
-    },
+    ],
 
-    skeletonKeyBarter: {
-      skeletonKeyBarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+    ["skeletonKeyBarter",
+      { 
         title: "Skeleton Key Barter",
         missionID: 760337,
         complete: false, // true/false complete/incomplete
@@ -2665,8 +2663,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      // I don't know mk32barterunlock tasks yet.
-      MK32BarterUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+      { // I don't know mk32barterunlock tasks yet.
         title: "MK32 Barter",
         missionID: 678791,
         complete: false, // true/false complete/incomplete
@@ -2734,10 +2731,10 @@ export const dataS6DMZFOB = [
             },
         },
       },
-    },
+    ],
 
-    killstreakDiscount: {
-      killstreakDiscount1: { // Example:  firstInsuredSlotCooldownReduction1
+    ["killstreakDiscount",
+      { 
         title: "Killstreak Discount 1",
         missionID: 452688,
         complete: false, // true/false complete/incomplete
@@ -2765,7 +2762,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      killstreakDiscount2: { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Killstreak Discount 2",
         missionID: 869716,
         complete: false, // true/false complete/incomplete
@@ -2793,7 +2790,7 @@ export const dataS6DMZFOB = [
             },
         },
       },
-      killstreakDiscount3: { // Example:  firstInsuredSlotCooldownReduction1
+      { 
         title: "Killstreak Discount 3",
         missionID: 768385,
         complete: false, // true/false complete/incomplete
@@ -2821,14 +2818,13 @@ export const dataS6DMZFOB = [
             },
         },
       },
-    },
-
-
+    ],
   ],
 
-  ["communicationsStation", {
-    urgentMissionsBlackMous: {
-        unlockBlackMousDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+  ["communicationsStation",
+
+    ["urgentMissionsBlackMous",
+        { 
             title: "Unlock Black Mous Daily Urgent Missions",
             missionID: 193488,
             complete: false, // true/false complete/incomplete
@@ -2856,7 +2852,7 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-        unlockBlackMousWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+        { 
             title: "Unlock Black Mous Weekly Urgent Missions",
             missionID: 988202,
             complete: false, // true/false complete/incomplete
@@ -2884,9 +2880,10 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-    },
-    urgentMissionsWhiteLotus: {
-        unlockWhiteLotusDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+    ],
+
+    ["urgentMissionsWhiteLotus",
+        { 
             title: "Unlock White Lotus Daily Urgent Missions",
             missionID: 662102,
             complete: false, // true/false complete/incomplete
@@ -2914,7 +2911,7 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-        unlockWhiteLotusWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+        { 
             title: "Unlock White Lotus Weekly Urgent Missions",
             missionID: 168070,
             complete: false, // true/false complete/incomplete
@@ -2942,9 +2939,10 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-    },
-    urgentMissionsCrown: {
-        unlockCrownDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+    ],
+
+    ["urgentMissionsCrown",
+        { 
             title: "Unlock Crown Daily Urgent Missions",
             missionID: 722766,
             complete: false, // true/false complete/incomplete
@@ -2972,7 +2970,7 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-        unlockCrownWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+        { 
             title: "Unlock Crown Weekly Urgent Missions",
             missionID: 260881,
             complete: false, // true/false complete/incomplete
@@ -3000,9 +2998,10 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-    },
-    urgentMissionsPhalanx: {
-        unlockPhalanxDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+    ],
+
+    ["urgentMissionsPhalanx",
+        { 
             title: "Unlock Phalanx Daily Urgent Missions",
             missionID: 673298,
             complete: false, // true/false complete/incomplete
@@ -3030,7 +3029,7 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-        unlockPhalanxWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+        { 
             title: "Unlock Phalanx Weekly Urgent Missions",
             missionID: 478600,
             complete: false, // true/false complete/incomplete
@@ -3058,9 +3057,10 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-    },
-    urgentMissionsShadowCompany: {
-        unlockShadowCompanyDailyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+    ],
+
+    ["urgentMissionsShadowCompany",
+        { 
             title: "Unlock Shadow Company Daily Urgent Missions",
             missionID: 398816,
             complete: false, // true/false complete/incomplete
@@ -3088,7 +3088,7 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-        unlockShadowCompanyWeeklyUrgentMissions: { // Example:  firstInsuredSlotCooldownReduction1
+        { 
             title: "Unlock Shadow Company Weekly Urgent Missions",
             missionID: 629236,
             complete: false, // true/false complete/incomplete
@@ -3116,9 +3116,10 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-    },
-    increasedCommanderIntel: {
-        increasedCommanderIntelUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+    ],
+
+    ["increasedCommanderIntel",
+        { 
             title: "Increased Commander Intel",
             missionID: 585865,
             complete: false, // true/false complete/incomplete
@@ -3162,9 +3163,10 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-    },
-    increasedSafeIntel: {
-        increasedSafeIntelUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+    ],
+
+    ["increasedSafeIntel",
+        { 
             title: "Increased Safe Intel",
             missionID: 979666,
             complete: false, // true/false complete/incomplete
@@ -3208,9 +3210,10 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-    },
-    increasedWeaponStashIntel: {
-        increasedWeaponStashIntelUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+    ],
+
+    ["increasedWeaponStashIntel",
+        { 
             title: "Increased Weapon Stash Intel",
             missionID: 838893,
             complete: false, // true/false complete/incomplete
@@ -3254,9 +3257,10 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-    },
-    increasedSafeContents: {
-        increasedSafeContentsUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+    ],
+
+    ["increasedSafeContents",
+        { 
             title: "Increased Safe Contents",
             missionID: 987834,
             complete: false, // true/false complete/incomplete
@@ -3292,9 +3296,10 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-    },
-    increasedSupplyCacheContents: {
-        increasedSupplyCacheContentsUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+    ],
+
+    ["increasedSupplyCacheContents",
+        { 
             title: "Increased Supply Cache Contents",
             missionID: 730045,
             complete: false, // true/false complete/incomplete
@@ -3338,9 +3343,10 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-    },
-    increasedExfilChopperSpeed: {
-        increasedExfilChopperSpeedUnlock: { // Example:  firstInsuredSlotCooldownReduction1
+    ],
+
+    ["increasedExfilChopperSpeed",
+        { 
             title: "Increased Exfil Chopper Speed",
             missionID: 454078,
             complete: false, // true/false complete/incomplete
@@ -3368,9 +3374,10 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-    },
-    increasedContractPayment: {
-        increasedContractPayment1: { // Example:  firstInsuredSlotCooldownReduction1
+    ],
+
+    ["increasedContractPayment",
+        { 
             title: "Increased Contract Payment I",
             missionID: 961676,
             complete: false, // true/false complete/incomplete
@@ -3397,9 +3404,8 @@ export const dataS6DMZFOB = [
                     complete: false, // true/false complete/incomplete
                 },
             },
-        },
-        // I don't have the tasks for increasedContractPayment2 and 3.
-        increasedContractPayment2: { // Example:  firstInsuredSlotCooldownReduction1
+        }, 
+        { // I don't have the tasks for increasedContractPayment2 and 3.
             title: "Increased Contract Payment II",
             missionID: 425387,
             complete: false, // true/false complete/incomplete
@@ -3467,7 +3473,7 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-        increasedContractPayment3: { // Example:  firstInsuredSlotCooldownReduction1
+        { 
             title: "Increased Contract Payment III",
             missionID: 908803,
             complete: false, // true/false complete/incomplete
@@ -3535,9 +3541,10 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-    },
-    increasedUAVTowerDuration: {
-        increasedUAVTowerDuration1: { // Example:  firstInsuredSlotCooldownReduction1
+    ],
+
+    ["increasedUAVTowerDuration",
+        { 
             title: "Increased UAV Tower Duration I",
             missionID: 709557,
             complete: false, // true/false complete/incomplete
@@ -3605,7 +3612,7 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-        increasedUAVTowerDuration2: { // Example:  firstInsuredSlotCooldownReduction1
+        { 
             title: "Increased UAV Tower Duration II",
             missionID: 559475,
             complete: false, // true/false complete/incomplete
@@ -3657,8 +3664,7 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-        // I don't know the tasks for increasedUAVTowerDuration3.  I need shadow company lvl 15 to see it.
-        increasedUAVTowerDuration3: { // Example:  firstInsuredSlotCooldownReduction1
+        { // I don't know the tasks for increasedUAVTowerDuration3.  I need shadow company lvl 15 to see it.
             title: "Increased UAV Tower Duration III",
             missionID: 853955,
             complete: false, // true/false complete/incomplete
@@ -3726,9 +3732,10 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-    },
-    increasedSamSiteDuration: {
-        increasedSamSiteDuration1: { // Example:  firstInsuredSlotCooldownReduction1
+    ],
+
+    ["increasedSamSiteDuration",
+        { 
             title: "Increased Sam Site Duration I",
             missionID: 613890,
             complete: false, // true/false complete/incomplete
@@ -3772,7 +3779,7 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-        increasedSamSiteDuration2: { // Example:  firstInsuredSlotCooldownReduction1
+        { 
             title: "Increased Sam Site Duration II",
             missionID: 174449,
             complete: false, // true/false complete/incomplete
@@ -3824,8 +3831,7 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-        // I don't know the tasks for increasedSamSiteDuration3.  I haven't finished 2 yet.
-        increasedSamSiteDuration3: { // Example:  firstInsuredSlotCooldownReduction1
+        { // I don't know the tasks for increasedSamSiteDuration3.  I haven't finished 2 yet.
             title: "Increased Sam Site Duration III",
             missionID: 769748,
             complete: false, // true/false complete/incomplete
@@ -3893,7 +3899,8 @@ export const dataS6DMZFOB = [
                 },
             },
         },
-    },
+    ],
+
   ],
 
 ];
