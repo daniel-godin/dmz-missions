@@ -1700,7 +1700,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Increased Starting Armor II",
@@ -1736,7 +1736,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Increased Starting Armor III",
@@ -1796,7 +1796,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
     ["unlockRebreather",
@@ -1866,7 +1866,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Unlock Armor Box",
@@ -1934,7 +1934,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
   
@@ -1965,7 +1965,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
   ],
