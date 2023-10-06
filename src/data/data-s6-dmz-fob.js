@@ -42,29 +42,29 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 10 bottles of liquor.",
             taskID:  479699,
             progressCurrent: 0,
             progressTotal: 10,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 6 wine bottles.",
             taskID:  689929,
             progressCurrent: 0,
             progressTotal: 6,
             complete: true, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "Extract 2 aged or vintage wine bottles.",
             taskID:  807135,
             progressCurrent: 0,
             progressTotal: 2,
             complete: false, // true/false complete/incomplete
           },
-        },
+        ],
       },
       {
         title: "Wallet Expansion 2",
@@ -80,29 +80,29 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 2 encrypted hard drives.",
             taskID:  540358,
             progressCurrent: 0,
             progressTotal: 2,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 8 hard drives.",
             taskID:  955670,
             progressCurrent: 0,
             progressTotal: 8,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "Extract 4 thumb drives.",
             taskID:  918958,
             progressCurrent: 0,
             progressTotal: 4,
             complete: false, // true/false complete/incomplete
           },
-          task4: {
+          {
             task: "Extract 4 laptops.",
             taskID:  776282,
             progressCurrent: 0,
@@ -125,8 +125,8 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 2 GPUs.",
             taskID:  391812,
             progressCurrent: 0,
@@ -149,15 +149,15 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 6 vintage wine bottles.",
             taskID:  352358,
             progressCurrent: 0,
             progressTotal: 6,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 10 bottles of Japanese liquor.",
             taskID:  787753,
             progressCurrent: 0,
@@ -182,43 +182,43 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "",
             taskID:  740005,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "",
             taskID:  589005,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "",
             taskID:  442270,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
-          task4: {
+          {
             task: "",
             taskID:  719450,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           }, 
-          task5: {
+          {
             task: "",
             taskID:  834546,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
-          task6: {
+          {
             task: "",
             taskID:  687578,
             progressCurrent: 0,
@@ -244,15 +244,15 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 10 nuclear fuel rods.",
             taskID:  727520,
             progressCurrent: 0,
             progressTotal: 10,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 2 radiation blocker bottles.",
             taskID:  240020,
             progressCurrent: 0,
@@ -275,22 +275,22 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 9 cigar boxes.",
             taskID:  601904,
             progressCurrent: 0,
             progressTotal: 9,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 5 comic books.",
             taskID:  131839,
             progressCurrent: 0,
             progressTotal: 5,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "Extract 3 bottles of aspirin.",
             taskID:  973954,
             progressCurrent: 0,
@@ -313,22 +313,22 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 5 large medical bags.",
             taskID:  204572,
             progressCurrent: 0,
             progressTotal: 5,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 10 AFAKs.",
             taskID:  641703,
             progressCurrent: 0,
             progressTotal: 10,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "Extraft 15 IFAKs.",
             taskID:  365220,
             progressCurrent: 0,
@@ -351,29 +351,29 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 5 screwdrivers.",
             taskID:  555264,
             progressCurrent: 0,
             progressTotal: 5,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 5 wrenches.",
             taskID:  276009,
             progressCurrent: 0,
             progressTotal: 5,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "Extract 1 RGL-80.",
             taskID:  152358,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
-          task4: {
+          {
             task: "Extract 3 dog tags.",
             taskID:  684728,
             progressCurrent: 0,
@@ -396,22 +396,22 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 40 documents.",
             taskID:  622594,
             progressCurrent: 0,
             progressTotal: 40,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 16 sensitive documents.",
             taskID:  794951,
             progressCurrent: 0,
             progressTotal: 16,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "Extract 8 classified documents.",
             taskID:  909019,
             progressCurrent: 0,
@@ -437,22 +437,22 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 5 batteries.",
             taskID:  849893,
             progressCurrent: 0,
             progressTotal: 5,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 2 drills.",
             taskID:  853435,
             progressCurrent: 0,
             progressTotal: 2,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "Extract 3 bottles of oil.",
             taskID:  726311,
             progressCurrent: 0,
@@ -475,22 +475,22 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 8 rolls of electrical tape.",
             taskID:  383450,
             progressCurrent: 0,
             progressTotal: 8,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 3 car batteries.",
             taskID:  486788,
             progressCurrent: 0,
             progressTotal: 3,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "Extract 6 jumper cables.",
             taskID:  140872,
             progressCurrent: 0,
@@ -513,29 +513,29 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 5 AQ laptops.",
             taskID:  364751,
             progressCurrent: 0,
             progressTotal: 5,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 10 screwdrivers.",
             taskID:  442773,
             progressCurrent: 0,
             progressTotal: 10,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "Extract 4 encrypted hard drives.",
             taskID:  595707,
             progressCurrent: 0,
             progressTotal: 4,
             complete: false, // true/false complete/incomplete
           },
-          task4: {
+          {
             task: "Extract 500k in cash.",
             taskID:  560890,
             progressCurrent: 0,
@@ -558,29 +558,29 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 4 GPUs.",
             taskID:  409832,
             progressCurrent: 0,
             progressTotal: 4,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 10 game consoles.",
             taskID:  528830,
             progressCurrent: 0,
             progressTotal: 10,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "Extract 10 VCRs.",
             taskID:  340410,
             progressCurrent: 0,
             progressTotal: 10,
             complete: false, // true/false complete/incomplete
           },
-          task4: {
+          {
             task: "Extract 6 encrypted thumb drives.",
             taskID:  771441,
             progressCurrent: 0,
@@ -605,43 +605,43 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "",
             taskID:  330925,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "",
             taskID:  716134,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "",
             taskID:  693788,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
-          task4: {
+          {
             task: "",
             taskID:  410846,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           }, 
-          task5: {
+          {
             task: "",
             taskID:  752980,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
-          task6: {
+          {
             task: "",
             taskID:  108684,
             progressCurrent: 0,
@@ -667,22 +667,22 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 8 bandages.",
             taskID:  881465,
             progressCurrent: 0,
             progressTotal: 8,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 4 IFAKs.",
             taskID:  680861,
             progressCurrent: 0,
             progressTotal: 4,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "Extract 1 bottle of radiation blockers.",
             taskID:  614255,
             progressCurrent: 0,
@@ -705,15 +705,15 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 6 vases from Ashika Island.",
             taskID:  662786,
             progressCurrent: 0,
             progressTotal: 6,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 3 Japanese liquor bottles.",
             taskID:  538157,
             progressCurrent: 0,
@@ -736,29 +736,29 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 8 bottles of fresh water.",
             taskID:  464978,
             progressCurrent: 0,
             progressTotal: 8,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 7 food rations.",
             taskID:  418681,
             progressCurrent: 0,
             progressTotal: 7,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "Extract 3 gas cans.",
             taskID:  410600,
             progressCurrent: 0,
             progressTotal: 3,
             complete: false, // true/false complete/incomplete
           },
-          task4: {
+          {
             task: "Extract 8 cans of food.",
             taskID:  245661,
             progressCurrent: 0,
@@ -781,15 +781,15 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 8 aspirin bottles.",
             taskID:  891302,
             progressCurrent: 0,
             progressTotal: 8,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 8 large medical bags.",
             taskID:  334802,
             progressCurrent: 0,
@@ -814,43 +814,43 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "",
             taskID:  312287,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "",
             taskID:  906443,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "",
             taskID:  512846,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
-          task4: {
+          {
             task: "",
             taskID:  961647,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           }, 
-          task5: {
+          {
             task: "",
             taskID:  297957,
             progressCurrent: 0,
             progressTotal: 1,
             complete: false, // true/false complete/incomplete
           },
-          task6: {
+          {
             task: "",
             taskID:  844925,
             progressCurrent: 0,
@@ -878,22 +878,22 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 4 bottles of gun oil.",
             taskID:  497595,
             progressCurrent: 0,
             progressTotal: 4,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 3 classified documents.",
             taskID:  221197,
             progressCurrent: 0,
             progressTotal: 3,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "Extract 400k in cash.",
             taskID:  601379,
             progressCurrent: 0,
@@ -916,29 +916,29 @@ export const dataS6DMZFOB = [
           koscheiComplex: false,
           vondel: false,
         },
-        tasks: {
-          task1: {
+        tasks: [
+          {
             task: "Extract 12 tubes of toothpaste.",
             taskID:  939388,
             progressCurrent: 0,
             progressTotal: 12,
             complete: false, // true/false complete/incomplete
           },
-          task2: {
+          {
             task: "Extract 15 bottles of fresh water.",
             taskID:  556786,
             progressCurrent: 0,
             progressTotal: 15,
             complete: false, // true/false complete/incomplete
           },
-          task3: {
+          {
             task: "Extract 7 light bulbs.",
             taskID:  665800,
             progressCurrent: 0,
             progressTotal: 7,
             complete: false, // true/false complete/incomplete
           },
-          task4: {
+          {
             task: "Extract 5 enemy operator's weapons.",
             taskID:  295744,
             progressCurrent: 0,
@@ -967,22 +967,22 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 3 IFAKs found at hospitals.",
                 taskID:  778662,
                 progressCurrent: 0,
                 progressTotal: 3,
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 1 AFAK or large medical bag.",
                 taskID:  862847,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "Extract 1 enemy operator's weapon.",
                 taskID:  675564,
                 progressCurrent: 0,
@@ -1008,22 +1008,22 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 8 bags of imported tea.",
                 taskID:  699570,
                 progressCurrent: 0,
                 progressTotal: 8,
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 8 jars of soothing hand cream.",
                 taskID:  254812,
                 progressCurrent: 0,
                 progressTotal: 8,
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "Extract 4 bottles of aged of vintage wine.",
                 taskID:  811077,
                 progressCurrent: 0,
@@ -1049,43 +1049,43 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 4 jugs of chlorine.",
                 taskID:  788532,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 4 jugs of formaldehyde.",
                 taskID:  854490,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "Extract 4 bottles of cephalexin.",
                 taskID:  538969,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
             },
-            task4: {
+            {
                 task: "Extract 4 bottles of hydrochloride.",
                 taskID:  253290,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
             },
-            task5: {
+            {
                 task: "Extract 4 bottles of acetone.",
                 taskID:  799494,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
             },
-            task6: {
+            {
                 task: "Extract 4 bottles of hydrogen peroxide.",
                 taskID:  636878,
                 progressCurrent: 0,
@@ -1114,8 +1114,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 5 GPUs.",
                 taskID:  738148,
                 progressCurrent: 0,
@@ -1123,7 +1123,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 10 Gold Bars.",
                 taskID:  117587,
                 progressCurrent: 0,
@@ -1131,7 +1131,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "Extract 8 Gold Skulls.",
                 taskID:  121145,
                 progressCurrent: 0,
@@ -1139,7 +1139,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task4: {
+            {
                 task: "Extract 10 Enemy Operator's Weapons.",
                 taskID:  344489,
                 progressCurrent: 0,
@@ -1166,8 +1166,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 35 cigar boxes.",
                 taskID:  714201,
                 progressCurrent: 0,
@@ -1175,7 +1175,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 20 lighters.",
                 taskID:  485497,
                 progressCurrent: 0,
@@ -1202,8 +1202,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 10 dog tags.",
                 taskID:  252132,
                 progressCurrent: 0,
@@ -1211,7 +1211,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 1 damascus dog tag.",
                 taskID:  774551,
                 progressCurrent: 0,
@@ -1219,7 +1219,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "Extract 2 gold dog tags.",
                 taskID:  226648,
                 progressCurrent: 0,
@@ -1227,7 +1227,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task4: {
+            {
                 task: "Extract 3 silver dog tags.",
                 taskID:  304916,
                 progressCurrent: 0,
@@ -1235,7 +1235,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task5: {
+            {
                 task: "Extract 3 weapon cases.",
                 taskID:  709772,
                 progressCurrent: 0,
@@ -1265,8 +1265,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 4 thumb drives.",
                 taskID:  948569,
                 progressCurrent: 0,
@@ -1274,7 +1274,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 5 hard drives.",
                 taskID:  886710,
                 progressCurrent: 0,
@@ -1301,8 +1301,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 4 dog tags.",
                 taskID:  920096,
                 progressCurrent: 0,
@@ -1310,7 +1310,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 4 pieces of Black Mous intel from Rohan Oil.",
                 taskID:  562618,
                 progressCurrent: 0,
@@ -1337,8 +1337,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 6 Ashika Island masks.",
                 taskID:  533039,
                 progressCurrent: 0,
@@ -1346,7 +1346,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 1 original Ashika Island mask.",
                 taskID:  857597,
                 progressCurrent: 0,
@@ -1373,8 +1373,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 15 armor plates.",
                 taskID:  886581,
                 progressCurrent: 0,
@@ -1382,7 +1382,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 5 three-plate carriers.",
                 taskID:  676178,
                 progressCurrent: 0,
@@ -1390,7 +1390,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "Extract 3 armor plate boxes.",
                 taskID:  211976,
                 progressCurrent: 0,
@@ -1417,8 +1417,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 10 UAVs or advanced UAVs.",
                 taskID:  831333,
                 progressCurrent: 0,
@@ -1426,7 +1426,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 12 anti-armor round boxes.",
                 taskID:  461853,
                 progressCurrent: 0,
@@ -1434,7 +1434,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "Extract 20 encrypted hard drives.",
                 taskID:  631563,
                 progressCurrent: 0,
@@ -1464,8 +1464,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 9 stims.",
                 taskID:  618279,
                 progressCurrent: 0,
@@ -1473,7 +1473,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 6 bandages.",
                 taskID:  262346,
                 progressCurrent: 0,
@@ -1500,8 +1500,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 15 lighters, comic books cigar boxes, or documents.",
                 taskID:  901152,
                 progressCurrent: 0,
@@ -1509,7 +1509,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 5 gas cans.",
                 taskID:  527724,
                 progressCurrent: 0,
@@ -1536,8 +1536,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 16 blow torches.",
                 taskID:  793652,
                 progressCurrent: 0,
@@ -1545,7 +1545,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 12 jumper cables.",
                 taskID:  563323,
                 progressCurrent: 0,
@@ -1553,7 +1553,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "Extract 8 car batteries.",
                 taskID:  840445,
                 progressCurrent: 0,
@@ -1580,8 +1580,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 3,500 rounds of pistol or SMG ammo.",
                 taskID:  239326,
                 progressCurrent: 0,
@@ -1589,7 +1589,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 6,500 rounds of AR or LMG ammo.",
                 taskID:  622241,
                 progressCurrent: 0,
@@ -1597,7 +1597,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "Extract 1,200 shells of shotgun ammo.",
                 taskID:  843674,
                 progressCurrent: 0,
@@ -1605,7 +1605,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task4: {
+            {
                 task: "Extract 120 shells of launcher ammo.",
                 taskID:  208720,
                 progressCurrent: 0,
@@ -1613,7 +1613,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task5: {
+            {
                 task: "Extract 800 rounds of sniper ammo.",
                 taskID:  908383,
                 progressCurrent: 0,
@@ -1640,8 +1640,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 30 gas masks.",
                 taskID:  100035,
                 progressCurrent: 0,
@@ -1649,7 +1649,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 10 durable gas masks.",
                 taskID:  672580,
                 progressCurrent: 0,
@@ -1657,7 +1657,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "Extract 15 radiation blocker bottles.",
                 taskID:  258593,
                 progressCurrent: 0,
@@ -1689,8 +1689,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Dead Drop 8 stronghold keycards.",
                 taskID:  545823,
                 progressCurrent: 0,
@@ -1698,7 +1698,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Dead drop 1 skeleton key.",
                 taskID:  349678,
                 progressCurrent: 0,
@@ -1725,8 +1725,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Dead drop 10 killstreaks.",
                 taskID:  342023,
                 progressCurrent: 0,
@@ -1734,7 +1734,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 5 NVGs.",
                 taskID:  737718,
                 progressCurrent: 0,
@@ -1761,8 +1761,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 5 heart lockets.",
                 taskID:  152380,
                 progressCurrent: 0,
@@ -1770,7 +1770,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 5 vials of insulin.",
                 taskID:  551283,
                 progressCurrent: 0,
@@ -1778,7 +1778,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "Extract 5 small dolls.",
                 taskID:  651986,
                 progressCurrent: 0,
@@ -1786,7 +1786,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task4: {
+            {
                 task: "Extract 5 lucky cat statues.",
                 taskID:  640747,
                 progressCurrent: 0,
@@ -1794,7 +1794,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task5: {
+            {
                 task: "Extract 5 dog bank statues.",
                 taskID:  442191,
                 progressCurrent: 0,
@@ -1823,8 +1823,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 12 rebreathers.",
                 taskID:  834308,
                 progressCurrent: 0,
@@ -1832,7 +1832,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 15 rolls of electrical tape.",
                 taskID:  945216,
                 progressCurrent: 0,
@@ -1840,7 +1840,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "Extract 8 light bulbs.",
                 taskID:  852360,
                 progressCurrent: 0,
@@ -1848,7 +1848,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task4: {
+            {
                 task: "Extract 8 bottles of gun oil.",
                 taskID:  879443,
                 progressCurrent: 0,
@@ -1856,7 +1856,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task5: {
+            {
                 task: "Extract 5 blow torches.",
                 taskID:  972766,
                 progressCurrent: 0,
@@ -1864,7 +1864,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task6: {
+            {
                 task: "Extract 1 GPU.",
                 taskID:  983389,
                 progressCurrent: 0,
@@ -1891,8 +1891,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Extract 8 armor boxes.",
                 taskID:  107247,
                 progressCurrent: 0,
@@ -1900,7 +1900,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "Extract 4 drills.",
                 taskID:  589039,
                 progressCurrent: 0,
@@ -1908,7 +1908,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "Extract 5 screwdrivers.",
                 taskID:  489890,
                 progressCurrent: 0,
@@ -1916,7 +1916,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task4: {
+            {
                 task: "Extract 8 batteries.",
                 taskID:  162950,
                 progressCurrent: 0,
@@ -1924,7 +1924,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task5: {
+            {
                 task: "Extract 16 electronic components.",
                 taskID:  531880,
                 progressCurrent: 0,
@@ -1932,7 +1932,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task6: {
+            {
                 task: "Extract 5 plastic explosive bricks.",
                 taskID:  363321,
                 progressCurrent: 0,
@@ -1962,8 +1962,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Dead drop 40 self revives.",
                 taskID:  635652,
                 progressCurrent: 0,
@@ -1995,8 +1995,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Helo Commander.",
                 taskID:  717313,
                 progressCurrent: 0,
@@ -2023,8 +2023,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Helo Commander 4 times.",
                 taskID:  853923,
                 progressCurrent: 0,
@@ -2051,8 +2051,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Helo Commander 5 times.",
                 taskID:  304398,
                 progressCurrent: 0,
@@ -2079,8 +2079,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Helo Commander 10 times.",
                 taskID:  672955,
                 progressCurrent: 0,
@@ -2110,8 +2110,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Chemist.",
                 taskID:  269814,
                 progressCurrent: 0,
@@ -2141,8 +2141,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Wheelson.",
                 taskID:  230607,
                 progressCurrent: 0,
@@ -2172,8 +2172,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Sniper.",
                 taskID:  239390,
                 progressCurrent: 0,
@@ -2200,8 +2200,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Sniper or the Rhino 4 times.",
                 taskID:  166805,
                 progressCurrent: 0,
@@ -2228,8 +2228,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "",
                 taskID:  565090,
                 progressCurrent: 0,
@@ -2237,7 +2237,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "",
                 taskID:  305756,
                 progressCurrent: 0,
@@ -2245,7 +2245,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "",
                 taskID:  148999,
                 progressCurrent: 0,
@@ -2253,7 +2253,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task4: {
+            {
                 task: "",
                 taskID:  447901,
                 progressCurrent: 0,
@@ -2261,7 +2261,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task5: {
+            {
                 task: "",
                 taskID:  528621,
                 progressCurrent: 0,
@@ -2269,7 +2269,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task6: {
+            {
                 task: "",
                 taskID:  132619,
                 progressCurrent: 0,
@@ -2296,8 +2296,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "",
                 taskID:  157881,
                 progressCurrent: 0,
@@ -2305,7 +2305,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "",
                 taskID:  178162,
                 progressCurrent: 0,
@@ -2313,7 +2313,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "",
                 taskID:  453283,
                 progressCurrent: 0,
@@ -2321,7 +2321,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task4: {
+            {
                 task: "",
                 taskID:  550298,
                 progressCurrent: 0,
@@ -2329,7 +2329,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task5: {
+            {
                 task: "",
                 taskID:  656813,
                 progressCurrent: 0,
@@ -2337,7 +2337,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task6: {
+            {
                 task: "",
                 taskID:  831621,
                 progressCurrent: 0,
@@ -2367,8 +2367,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Armored Commander.",
                 taskID:  600693,
                 progressCurrent: 0,
@@ -2398,8 +2398,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Pyro.",
                 taskID:  104522,
                 progressCurrent: 0,
@@ -2426,8 +2426,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Pyro 4 times.",
                 taskID:  571557,
                 progressCurrent: 0,
@@ -2454,8 +2454,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "",
                 taskID:  845101,
                 progressCurrent: 0,
@@ -2463,7 +2463,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "",
                 taskID:  323230,
                 progressCurrent: 0,
@@ -2471,7 +2471,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "",
                 taskID:  336981,
                 progressCurrent: 0,
@@ -2479,7 +2479,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task4: {
+            {
                 task: "",
                 taskID:  695257,
                 progressCurrent: 0,
@@ -2487,7 +2487,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task5: {
+            {
                 task: "",
                 taskID:  438739,
                 progressCurrent: 0,
@@ -2495,7 +2495,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task6: {
+            {
                 task: "",
                 taskID:  316813,
                 progressCurrent: 0,
@@ -2522,8 +2522,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "",
                 taskID:  457573,
                 progressCurrent: 0,
@@ -2531,7 +2531,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "",
                 taskID:  385515,
                 progressCurrent: 0,
@@ -2539,7 +2539,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "",
                 taskID:  905524,
                 progressCurrent: 0,
@@ -2547,7 +2547,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task4: {
+            {
                 task: "",
                 taskID:  338668,
                 progressCurrent: 0,
@@ -2555,7 +2555,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task5: {
+            {
                 task: "",
                 taskID:  871541,
                 progressCurrent: 0,
@@ -2563,7 +2563,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task6: {
+            {
                 task: "",
                 taskID:  831774,
                 progressCurrent: 0,
@@ -2593,8 +2593,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Scavenger.",
                 taskID:  617450,
                 progressCurrent: 0,
@@ -2621,8 +2621,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Scavenger 9 times.",
                 taskID:  998467,
                 progressCurrent: 0,
@@ -2652,8 +2652,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill Velikan in Building 21.",
                 taskID:  604350,
                 progressCurrent: 0,
@@ -2680,8 +2680,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "",
                 taskID:  944482,
                 progressCurrent: 0,
@@ -2689,7 +2689,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task2: {
+            {
                 task: "",
                 taskID:  138158,
                 progressCurrent: 0,
@@ -2697,7 +2697,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task3: {
+            {
                 task: "",
                 taskID:  947421,
                 progressCurrent: 0,
@@ -2705,7 +2705,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task4: {
+            {
                 task: "",
                 taskID:  213370,
                 progressCurrent: 0,
@@ -2713,7 +2713,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task5: {
+            {
                 task: "",
                 taskID:  119585,
                 progressCurrent: 0,
@@ -2721,7 +2721,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-            task6: {
+            {
                 task: "",
                 taskID:  146367,
                 progressCurrent: 0,
@@ -2751,8 +2751,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Bomb Maker.",
                 taskID:  737603,
                 progressCurrent: 0,
@@ -2779,8 +2779,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Bomb Maker 4 times.",
                 taskID:  382177,
                 progressCurrent: 0,
@@ -2807,8 +2807,8 @@ export const dataS6DMZFOB = [
             koscheiComplex: false,
             vondel: false,
         },
-        tasks: {
-            task1: {
+        tasks: [
+            {
                 task: "Kill the Bomb Maker 6 times.",
                 taskID:  331773,
                 progressCurrent: 0,
@@ -2841,8 +2841,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract with a full backpack with each slot filled.",
                     taskID:  271702,
                     progressCurrent: 0,
@@ -2869,8 +2869,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 12 Scavenger calling cards.",
                     taskID:  684708,
                     progressCurrent: 0,
@@ -2900,8 +2900,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 2 Al Qatala Planning Diagrams or Images.",
                     taskID:  556447,
                     progressCurrent: 0,
@@ -2928,8 +2928,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 10 jugs of liquid nitrogen.",
                     taskID:  688244,
                     progressCurrent: 0,
@@ -2959,8 +2959,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 3 classified documents.",
                     taskID:  802967,
                     progressCurrent: 0,
@@ -2987,8 +2987,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 10 cans of heavy chopper fuel.",
                     taskID:  298105,
                     progressCurrent: 0,
@@ -3018,8 +3018,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 3 bottles of hydrogen peroxide, cephalexin, or aceton.",
                     taskID:  770245,
                     progressCurrent: 0,
@@ -3046,8 +3046,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 5 origami horses.",
                     taskID:  419791,
                     progressCurrent: 0,
@@ -3077,8 +3077,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Dead drop 10 keys.",
                     taskID:  200091,
                     progressCurrent: 0,
@@ -3105,8 +3105,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 10 encrypted hard drives from Building 21.",
                     taskID:  978301,
                     progressCurrent: 0,
@@ -3136,8 +3136,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 15 laptops.",
                     taskID:  357591,
                     progressCurrent: 0,
@@ -3145,7 +3145,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
+                {
                     task: "Extract 3 encrypted hard drives.",
                     taskID:  275898,
                     progressCurrent: 0,
@@ -3153,7 +3153,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task3: {
+                {
                     task: "Extract 6 encrypted thumb drives.",
                     taskID:  518492,
                     progressCurrent: 0,
@@ -3183,8 +3183,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 6 bricks of plastic explosives.",
                     taskID:  259583,
                     progressCurrent: 0,
@@ -3192,7 +3192,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
+                {
                     task: "Extract 20 electrical components.",
                     taskID:  954757,
                     progressCurrent: 0,
@@ -3200,7 +3200,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task3: {
+                {
                     task: "Extract 5 VCRs.",
                     taskID:  482655,
                     progressCurrent: 0,
@@ -3230,8 +3230,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Dead drop 3 RGL-80s.",
                     taskID:  578046,
                     progressCurrent: 0,
@@ -3239,7 +3239,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
+                {
                     task: "Dead drop 20 weapons.",
                     taskID:  425294,
                     progressCurrent: 0,
@@ -3247,7 +3247,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task3: {
+                {
                     task: "Dead drop 10 enemy weapons.",
                     taskID:  176061,
                     progressCurrent: 0,
@@ -3277,8 +3277,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 8 sensitive or classified documents.",
                     taskID:  441887,
                     progressCurrent: 0,
@@ -3286,7 +3286,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
+                {
                     task: "Dead drop $1 million in cash.",
                     taskID:  625313,
                     progressCurrent: 0,
@@ -3316,8 +3316,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Dead drop 10 armor plate carriers.",
                     taskID:  878948,
                     progressCurrent: 0,
@@ -3325,7 +3325,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
+                {
                     task: "Dead drop 6 3-plate carriers.",
                     taskID:  319264,
                     progressCurrent: 0,
@@ -3333,7 +3333,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task3: {
+                {
                     task: "Dead drop 6 self revives.",
                     taskID:  412111,
                     progressCurrent: 0,
@@ -3363,8 +3363,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 100k in cash on final exfils 10 times.",
                     taskID:  888011,
                     progressCurrent: 0,
@@ -3394,8 +3394,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Complete 100 contracts.",
                     taskID:  678801,
                     progressCurrent: 0,
@@ -3422,8 +3422,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "",
                     taskID:  639316,
                     progressCurrent: 0,
@@ -3431,7 +3431,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
+                {
                     task: "",
                     taskID:  991480,
                     progressCurrent: 0,
@@ -3439,7 +3439,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task3: {
+                {
                     task: "",
                     taskID:  441290,
                     progressCurrent: 0,
@@ -3447,7 +3447,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task4: {
+                {
                     task: "",
                     taskID:  613301,
                     progressCurrent: 0,
@@ -3455,7 +3455,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task5: {
+                {
                     task: "",
                     taskID:  875005,
                     progressCurrent: 0,
@@ -3463,7 +3463,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task6: {
+                {
                     task: "",
                     taskID:  810489,
                     progressCurrent: 0,
@@ -3490,8 +3490,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "",
                     taskID:  721364,
                     progressCurrent: 0,
@@ -3499,7 +3499,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
+                {
                     task: "",
                     taskID:  140676,
                     progressCurrent: 0,
@@ -3507,7 +3507,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task3: {
+                {
                     task: "",
                     taskID:  469384,
                     progressCurrent: 0,
@@ -3515,7 +3515,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task4: {
+                {
                     task: "",
                     taskID:  941498,
                     progressCurrent: 0,
@@ -3523,7 +3523,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task5: {
+                {
                     task: "",
                     taskID:  883334,
                     progressCurrent: 0,
@@ -3531,7 +3531,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task6: {
+                {
                     task: "",
                     taskID:  675103,
                     progressCurrent: 0,
@@ -3561,8 +3561,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 4 drills.",
                     taskID:  578153,
                     progressCurrent: 0,
@@ -3570,7 +3570,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
+                {
                     task: "Extract 5 screwdrivers.",
                     taskID:  372543,
                     progressCurrent: 0,
@@ -3578,7 +3578,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task3: {
+                {
                     task: "Extract 3 wrenches.",
                     taskID:  841098,
                     progressCurrent: 0,
@@ -3586,7 +3586,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task4: {
+                {
                     task: "Extract 4 hard drives.",
                     taskID:  656546,
                     progressCurrent: 0,
@@ -3594,7 +3594,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task5: {
+                {
                     task: "Extract 3 rolls of electrical tape.",
                     taskID:  615705,
                     progressCurrent: 0,
@@ -3602,7 +3602,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task6: {
+                {
                     task: "Extract 3 batteries.",
                     taskID:  736039,
                     progressCurrent: 0,
@@ -3629,8 +3629,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 4 bottles of vintage wine.",
                     taskID:  460705,
                     progressCurrent: 0,
@@ -3638,7 +3638,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
+                {
                     task: "Extract 10 jars of soothing hand cream.",
                     taskID:  203318,
                     progressCurrent: 0,
@@ -3646,7 +3646,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task3: {
+                {
                     task: "Extract 10 cigar boxes.",
                     taskID:  722634,
                     progressCurrent: 0,
@@ -3654,7 +3654,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task4: {
+                {
                     task: "Extract 10 lighters.",
                     taskID:  786980,
                     progressCurrent: 0,
@@ -3681,8 +3681,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "",
                     taskID:  795284,
                     progressCurrent: 0,
@@ -3690,7 +3690,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
+                {
                     task: "",
                     taskID:  758230,
                     progressCurrent: 0,
@@ -3698,7 +3698,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task3: {
+                {
                     task: "",
                     taskID:  501373,
                     progressCurrent: 0,
@@ -3706,7 +3706,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task4: {
+                {
                     task: "",
                     taskID:  663065,
                     progressCurrent: 0,
@@ -3714,7 +3714,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task5: {
+                {
                     task: "",
                     taskID:  988012,
                     progressCurrent: 0,
@@ -3722,7 +3722,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task6: {
+                {
                     task: "",
                     taskID:  537156,
                     progressCurrent: 0,
@@ -3752,8 +3752,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 8 aged or vintage wine bottles.",
                     taskID:  233743,
                     progressCurrent: 0,
@@ -3761,7 +3761,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
+                {
                     task: "Extract 15 bottles of fresh water.",
                     taskID:  292230,
                     progressCurrent: 0,
@@ -3769,7 +3769,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task3: {
+                {
                     task: "Extract 10 bottles of Ashika liquor.",
                     taskID:  695234,
                     progressCurrent: 0,
@@ -3796,8 +3796,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "Extract 8 laptops from Ashika Island.",
                     taskID:  262659,
                     progressCurrent: 0,
@@ -3805,7 +3805,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
+                {
                     task: "Extract 5 game consoles.",
                     taskID:  729062,
                     progressCurrent: 0,
@@ -3813,7 +3813,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task3: {
+                {
                     task: "Extract 6 VCRs.",
                     taskID:  474258,
                     progressCurrent: 0,
@@ -3821,7 +3821,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task4: {
+                {
                     task: "Extract 1 GPU.",
                     taskID:  792870,
                     progressCurrent: 0,
@@ -3848,8 +3848,8 @@ export const dataS6DMZFOB = [
                 koscheiComplex: false,
                 vondel: false,
             },
-            tasks: {
-                task1: {
+            tasks: [
+                {
                     task: "",
                     taskID:  182197,
                     progressCurrent: 0,
@@ -3857,7 +3857,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task2: {
+                {
                     task: "",
                     taskID:  960143,
                     progressCurrent: 0,
@@ -3865,7 +3865,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task3: {
+                {
                     task: "",
                     taskID:  622547,
                     progressCurrent: 0,
@@ -3873,7 +3873,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task4: {
+                {
                     task: "",
                     taskID:  846822,
                     progressCurrent: 0,
@@ -3881,7 +3881,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task5: {
+                {
                     task: "",
                     taskID:  756694,
                     progressCurrent: 0,
@@ -3889,7 +3889,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-                task6: {
+                {
                     task: "",
                     taskID:  112331,
                     progressCurrent: 0,
