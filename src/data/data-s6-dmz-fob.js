@@ -1998,7 +1998,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Personal Exfil Discount 1",
@@ -2026,7 +2026,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Personal Exfil Discount 2",
@@ -2054,7 +2054,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Personal Exfil Discount 3",
@@ -2082,7 +2082,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
 
@@ -2113,7 +2113,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
 
@@ -2144,7 +2144,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
 
@@ -2175,7 +2175,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Workbench Discount 1",
@@ -2203,7 +2203,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { // I don't know tasks for workbenchDiscount2 or 3.
         title: "Workbench Discount 2",
@@ -2271,7 +2271,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Workbench Discount 3",
@@ -2339,7 +2339,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
 
@@ -2370,7 +2370,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
 
@@ -2401,7 +2401,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Armor Plate Discount 1",
@@ -2429,7 +2429,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { // I don't know the tasks for armorPlateDiscount 2 or 3.
         title: "Armor Plate Discount 2",
@@ -2497,7 +2497,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Armor Plate Discount 3",
@@ -2565,7 +2565,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
 
@@ -2596,7 +2596,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Secure Backpack Barter",
@@ -2624,7 +2624,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
 
@@ -2655,7 +2655,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { // I don't know mk32barterunlock tasks yet.
         title: "MK32 Barter",
@@ -2723,7 +2723,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
 
@@ -2754,7 +2754,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Killstreak Discount 2",
@@ -2782,7 +2782,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Killstreak Discount 3",
@@ -2810,7 +2810,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
   ],
