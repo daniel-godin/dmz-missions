@@ -2844,7 +2844,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
         { 
             title: "Unlock Black Mous Weekly Urgent Missions",
@@ -2872,7 +2872,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+              ],
         },
     ],
 
@@ -2903,7 +2903,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
         { 
             title: "Unlock White Lotus Weekly Urgent Missions",
@@ -2931,7 +2931,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
     ],
 
@@ -2962,7 +2962,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
         { 
             title: "Unlock Crown Weekly Urgent Missions",
@@ -2990,7 +2990,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
     ],
 
@@ -3021,7 +3021,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
         { 
             title: "Unlock Phalanx Weekly Urgent Missions",
@@ -3049,7 +3049,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
     ],
 
@@ -3080,7 +3080,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
         { 
             title: "Unlock Shadow Company Weekly Urgent Missions",
@@ -3108,7 +3108,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
     ],
 
@@ -3155,7 +3155,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
     ],
 
@@ -3202,7 +3202,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
     ],
 
@@ -3249,7 +3249,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
     ],
 
@@ -3288,7 +3288,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
     ],
 
@@ -3335,7 +3335,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
     ],
 
@@ -3366,7 +3366,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
     ],
 
@@ -3397,7 +3397,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         }, 
         { // I don't have the tasks for increasedContractPayment2 and 3.
             title: "Increased Contract Payment II",
@@ -3465,7 +3465,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
         { 
             title: "Increased Contract Payment III",
@@ -3533,7 +3533,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
     ],
 
@@ -3604,7 +3604,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
         { 
             title: "Increased UAV Tower Duration II",
@@ -3656,7 +3656,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
         { // I don't know the tasks for increasedUAVTowerDuration3.  I need shadow company lvl 15 to see it.
             title: "Increased UAV Tower Duration III",
@@ -3724,7 +3724,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
     ],
 
@@ -3771,7 +3771,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
         { 
             title: "Increased Sam Site Duration II",
@@ -3823,7 +3823,7 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
         { // I don't know the tasks for increasedSamSiteDuration3.  I haven't finished 2 yet.
             title: "Increased Sam Site Duration III",
@@ -3891,10 +3891,8 @@ export const dataS6DMZFOB = [
                     tags: [],
                     complete: false, // true/false complete/incomplete
                 },
-            },
+            ],
         },
     ],
-
   ],
-
 ];
