@@ -894,7 +894,7 @@ export const dataS6DMZFOB = [
             progressTotal: 400,
             complete: false, // true/false complete/incomplete
           },
-        },
+        ],
       },
       {
         title: "1st Insured Slot Cooldown Reduction 2",
@@ -939,7 +939,7 @@ export const dataS6DMZFOB = [
             progressTotal: 5,
             complete: false, // true/false complete/incomplete
           }, 
-        },
+        ],
       },
     ],
   
@@ -983,7 +983,7 @@ export const dataS6DMZFOB = [
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "2nd Insured Slot Cooldown Reduction 1",
@@ -1024,7 +1024,7 @@ export const dataS6DMZFOB = [
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
             },
-          },
+        ],
       },
       { 
         title: "2nd Insured Slot Cooldown Reduction 2",
@@ -1086,7 +1086,7 @@ export const dataS6DMZFOB = [
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
   
@@ -1141,7 +1141,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "3rd Insured Slot Cooldown Reduction 1",
@@ -1177,7 +1177,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "3rd Insured Slot Cooldown Reduction 2",
@@ -1237,7 +1237,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
   
@@ -1276,7 +1276,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Contraband Stash Expansion 2",
@@ -1312,7 +1312,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Contraband Stash Expansion 3",
@@ -1348,7 +1348,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Contraband Stash Expansion 4",
@@ -1392,7 +1392,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Contraband Stash Expansion 5",
@@ -1436,7 +1436,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
   
@@ -1475,7 +1475,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Contraband Stash Expansion (CROWN) 2",
@@ -1511,7 +1511,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Contraband Stash Expansion (CROWN) 3",
@@ -1555,7 +1555,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Contraband Stash Expansion (CROWN) 4",
@@ -1615,7 +1615,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
       { 
         title: "Contraband Stash Expansion (CROWN) 5",
@@ -1659,7 +1659,7 @@ export const dataS6DMZFOB = [
                 tags: [],
                 complete: false, // true/false complete/incomplete
             },
-        },
+        ],
       },
     ],
   ],
