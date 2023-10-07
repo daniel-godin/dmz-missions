@@ -26,7 +26,7 @@ onAuthStateChanged(auth, user => {
     const docRefFOBGrid = doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`);
 
     onSnapshot(docRefFOBGrid, (snapshot) => {
-        if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), currentFOBTasks); }
+        if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), { currentFOBTasks } ); }
         let snapObj = snapshot.data();
         createFOBGrid(snapObj, docRefFOBGrid, user, db);
     }) 
@@ -153,50 +153,50 @@ const createFOBGrid = async (obj, docRef, user, db) => {
         }
 
 
-        // if (user) {
+        if (user) {
 
-        //     // Mission Checkboxes:
-        //     const arrayOfMissionCheckboxes = document.getElementsByClassName('fob-mission-checkbox');
+            // Mission Checkboxes:
+            const arrayOfMissionCheckboxes = document.getElementsByClassName('fob-mission-checkbox');
 
-        //     for (let i = 0; i < arrayOfMissionCheckboxes.length && i < 300; i++) {
-        //         arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
-        //             console.log(e.target);
+            for (let i = 0; i < arrayOfMissionCheckboxes.length && i < 300; i++) {
+                arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
+                    console.log(e.target);
 
-        //             let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
-        //             let checkboxId = e.target.dataset.fobMissionId; // Grabs the event target's id property, makes it into a Number (integar) from a string.
+                    let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
+                    let checkboxId = e.target.dataset.fobMissionId; // Grabs the event target's id property, makes it into a Number (integar) from a string.
     
-        //             let objectNotation = e.target.dataset.objectNotation;
+                    let objectNotation = e.target.dataset.objectNotation;
     
-        //             console.log(objectNotation);
+                    console.log(objectNotation);
     
-        //             // console.log(checked, checkboxId);
+                    // console.log(checked, checkboxId);
 
-        //             // I wonder if it would be easier to do this with a .findIndex method or something.
-        //             updateDoc(docRef, {
-        //                 [objectNotation+".complete"] : checked, // checkboxId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
-        //             })
-        //         })
-        //     }
+                    // I wonder if it would be easier to do this with a .findIndex method or something.
+                    updateDoc(docRef, {
+                        [objectNotation+".complete"] : checked, // checkboxId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
+                    })
+                })
+            }
         
-        //     // Mission Task Checkboxes:
-        //     const arrayOfMissionTaskCheckboxes = document.getElementsByClassName('task-checkbox');
+            // Mission Task Checkboxes:
+            // const arrayOfMissionTaskCheckboxes = document.getElementsByClassName('task-checkbox');
     
-        //     for (let i = 0; i < arrayOfMissionTaskCheckboxes.length && i < 999; i++) {
-        //         arrayOfMissionTaskCheckboxes[i].addEventListener('click', (e) => {
-        //             console.log(e.target);
+            // for (let i = 0; i < arrayOfMissionTaskCheckboxes.length && i < 999; i++) {
+            //     arrayOfMissionTaskCheckboxes[i].addEventListener('click', (e) => {
+            //         console.log(e.target);
     
-        //             let checked = e.target.checked;
+            //         let checked = e.target.checked;
     
-        //             let objNotation = e.target.dataset.objNotation;
+            //         let objNotation = e.target.dataset.objNotation;
     
-        //             console.log(objNotation);
+            //         console.log(objNotation);
     
-        //             updateDoc(docRef, {
-        //                 [objNotation+".complete"] : checked, 
-        //             })
-        //         })
-        //     }
-        // }
+            //         updateDoc(docRef, {
+            //             [objNotation+".complete"] : checked, 
+            //         })
+            //     })
+            // }
+        }
     }
 
     createListenerEvents();
