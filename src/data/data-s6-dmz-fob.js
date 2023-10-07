@@ -2,7 +2,7 @@
 
 export const dataS6DMZFOB = [
   
-  ["stash", 
+  ["Stash", 
     ["wallet", 
       {
         title: "Unlock Wallet",
@@ -856,7 +856,7 @@ export const dataS6DMZFOB = [
     ],
   ],
 
-  ["weaponsLocker", 
+  ["Weapons Locker", 
     ["firstInsuredSlot",
       {
         title: "1st Insured Slot Cooldown Reduction 1",
@@ -1664,7 +1664,7 @@ export const dataS6DMZFOB = [
     ],
   ],
 
-  ["equipment", 
+  ["Equipment", 
     ["increasedStartingArmor",
       { 
         title: "Increased Starting Armor",
@@ -1970,7 +1970,7 @@ export const dataS6DMZFOB = [
     ],
   ],
 
-  ["bountyBoard",
+  ["Bounty Board",
     ["personalExfil",
       { 
         title: "Personal Exfils",
@@ -2815,7 +2815,7 @@ export const dataS6DMZFOB = [
     ],
   ],
 
-  ["communicationsStation",
+  ["Communications Station",
 
     ["urgentMissionsBlackMous",
         { 
