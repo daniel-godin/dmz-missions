@@ -26,7 +26,7 @@ onAuthStateChanged(auth, user => {
     const docRefFOBGrid = doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`);
 
     onSnapshot(docRefFOBGrid, (snapshot) => {
-        if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), { currentFOBTasks } ); }
+        if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), { currentFOBTasks }); }
         let snapObj = snapshot.data();
         createFOBGrid(snapObj, docRefFOBGrid, user, db);
     }) 
