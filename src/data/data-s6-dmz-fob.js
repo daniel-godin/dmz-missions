@@ -1,7 +1,10 @@
 // This is the Call of Duty: Modern Warfare II: DMZ Foward Operating Base (FOB) Object with all data.
 
-export const dataS6DMZFOB = [
-  { stash: [
+
+// New way of setting up the data.  Works with FireStore.
+export const dataS6DMZFOB = {
+  dataS6DMZFOB: [
+    { stash: [
       {
         wallet: [
           { 
@@ -25,19 +28,18 @@ export const dataS6DMZFOB = [
           }
         ]
       }
-  ]},
+    ]},
 
-  { weaponsLocker: [
+    { weaponsLocker: [
     { firstInsuredSlot: [
       { 
         title: "1st Insured Slot Cooldown Reduction 1",
       },
 
     ]}
-  ]}
-]
-
-
+    ]}
+  ],
+}
 
 
 // export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn't accept Arrays as the first data object.  Can I make it an object, and then have arrays???

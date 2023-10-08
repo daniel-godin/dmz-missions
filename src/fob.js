@@ -9,7 +9,7 @@ import { recommendLogInBox } from "./ui";
 const DMZFOBContainer = document.getElementById('DMZFOBContainer');
 
 // Change this at the beginning of each season.
-const currentFOBTasks = dataS6DMZFOB;
+const FOBDataObject = dataS6DMZFOB;
 const currentFOBDocName = 'DMZFOBS6';
 
 // const currentFOBSeasonNumberOfTasks = 99; // 99 IS NOT TRUE, IT'S A PLACEHOLDER
@@ -26,7 +26,7 @@ onAuthStateChanged(auth, user => {
     const docRefFOBGrid = doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`);
 
     onSnapshot(docRefFOBGrid, (snapshot) => {
-        if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), { currentFOBTasks }); }
+        if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), FOBDataObject); }
         let snapObj = snapshot.data();
         createFOBGrid(snapObj, docRefFOBGrid, user, db);
     }) 
