@@ -2008,8 +2008,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         ]},
     ]},
 
-  4:  ["Bounty Board",
-        ["personalExfil",
+    { bountyBoard: [
+        { personalExfil: [
           { 
             title: "Personal Exfils",
             missionID: 763984,
@@ -2122,9 +2122,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 },
             ],
           },
-        ],
+        ]},
 
-        ["revivePistolBarter",
+        { revivePistolBarter: [
           { 
             title: "Revive Pistol Barter",
             missionID: 839904,
@@ -2153,9 +2153,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 },
             ],
           },
-        ],
+        ]},
 
-        ["commsPlateCarrierBarter",
+        { commsPlateCarrierBarter: [
           { 
             title: "Comms Plate Carrier Barter",
             missionID: 121842,
@@ -2184,9 +2184,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 },
             ],
           },
-        ],
+        ]},
 
-        ["stealthPlatecarrierBarter",
+        { stealthPlatecarrierBarter: [
           { 
             title: "Stealth Plate Carrier Barter",
             missionID: 536869,
@@ -2379,9 +2379,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 },
             ],
           },
-        ],
+        ]},
 
-        ["temperedPlateCarrierBarter",
+        { temperedPlateCarrierBarter: [
           { 
             title: "Tempered Plate Carrier Barter",
             missionID: 397070,
@@ -2410,9 +2410,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 },
             ],
           },
-        ],
+        ]},
 
-        ["medicPlateCarrierBarter",
+        { medicPlateCarrierBarter: [
           { 
             title: "Medic Plate Carrior Barter",
             missionID: 336641,
@@ -2605,9 +2605,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 },
             ],
           },
-        ],
+        ]},
 
-        ["scavengerBackpackBarter",
+        { scavengerBackpackBarter: [
           { 
             title: "Scavenger Backpack Barter",
             missionID: 326988,
@@ -2664,9 +2664,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 },
             ],
           },
-        ],
+        ]},
 
-        ["skeletonKeyBarter",
+        { skeletonKeyBarter: [
           { 
             title: "Skeleton Key Barter",
             missionID: 760337,
@@ -2763,9 +2763,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 },
             ],
           },
-        ],
+        ]},
 
-        ["killstreakDiscount",
+        { killstreakDiscount: [
           { 
             title: "Killstreak Discount 1",
             missionID: 452688,
@@ -2850,12 +2850,11 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 },
             ],
           },
-        ],
-      ],
+        ]},
+      ]},
 
-  5:  ["Communications Station",
-
-        ["urgentMissionsBlackMous",
+    { communicationsStation: [
+        { urgentMissionsBlackMous: [
             { 
                 title: "Unlock Black Mous Daily Urgent Missions",
                 missionID: 193488,
@@ -2912,7 +2911,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                     },
                   ],
             },
-        ],
+        ]},
 
         ["urgentMissionsWhiteLotus",
             { 
