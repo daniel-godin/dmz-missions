@@ -1701,8 +1701,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
       ]},
     ]},
 
-  3:  ["Equipment", 
-        ["increasedStartingArmor",
+    { equipment: [
+        { increasedStartingArmor: [
           { 
             title: "Increased Starting Armor",
             missionID: 217615,
@@ -1835,8 +1835,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 },
             ],
           },
-        ],
-        ["unlockRebreather",
+        ]},
+
+        { unlockRebreather: [
           { 
             title: "Unlock Rebreather",
             missionID: 467290,
@@ -1973,9 +1974,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 },
             ],
           },
-        ],
+        ]},
       
-        ["startingSoloSelfRevive",
+        { startingSoloSelfRevive: [
           { 
             title: "Starting Solo Self Revive",
             missionID: 804660,
@@ -2004,8 +2005,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 },
             ],
           },
-        ],
-      ],
+        ]},
+    ]},
 
   4:  ["Bounty Board",
         ["personalExfil",
