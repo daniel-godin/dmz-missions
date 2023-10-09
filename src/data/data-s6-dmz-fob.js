@@ -1,48 +1,5 @@
 // This is the Call of Duty: Modern Warfare II: DMZ Foward Operating Base (FOB) Object with all data.
 
-
-// New way of setting up the data.  Works with FireStore.
-export const testdataS6DMZFOB = {
-  dataS6DMZFOB: [ // Array of Objects.  Objects:  stash, weaponsLocker, etc.
-    { 
-      stash: [ // Array of Objects.  Objects:  wallet, stashExpansion, etc.
-        { 
-          wallet: [ // Array of Objects.  Objects:  mission Objects, with key:values with the data that you actually want.
-            { 
-              title: "Unlock Wallet",
-              missionID: 536302,
-              tasks:  [ // array of Objects.  Each Object holds a task.
-                {
-                  task: "Extract 100k in Cash.",
-                  taskID:  848490,
-                  progressCurrent: 0,
-                  progressTotal: 100_000,
-                  complete: false, // true/false complete/incomplete
-                },
-                {
-                  task: "SECOND TASK, THIS IS A TEST",
-                }
-              ],
-            },
-            { 
-              title: "Wallet Expansion 1",
-            },
-        ]
-      }
-    ]},
-
-    { weaponsLocker: [
-    { firstInsuredSlot: [
-      { 
-        title: "1st Insured Slot Cooldown Reduction 1",
-      },
-
-    ]}
-    ]}
-  ],
-}
-
-
 export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn't accept Arrays as the first data object.  Can I make it an object, and then have arrays???
   newSetUpKey:  [ // Array of Objects.  Objects:  stash, weaponsLocker, etc.
     { stash:  [  // Array of Objects.  Objects:  wallet, stashExpansion, etc.
@@ -2854,1082 +2811,1083 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
       ]},
 
     { communicationsStation: [
-        { urgentMissionsBlackMous: [
-            { 
-                title: "Unlock Black Mous Daily Urgent Missions",
-                missionID: 193488,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Unlocks Black Mous Daily Urgent Missions.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract with a full backpack with each slot filled.",
-                        taskID:  271702,
-                        progressCurrent: 0,
-                        progressTotal: 1,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
+      { urgentMissionsBlackMous: [
+          { 
+              title: "Unlock Black Mous Daily Urgent Missions",
+              missionID: 193488,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Unlocks Black Mous Daily Urgent Missions.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract with a full backpack with each slot filled.",
+                      taskID:  271702,
+                      progressCurrent: 0,
+                      progressTotal: 1,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+          { 
+              title: "Unlock Black Mous Weekly Urgent Missions",
+              missionID: 988202,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Unlocks Black Mous Weekly Urgent Missions.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 12 Scavenger calling cards.",
+                      taskID:  684708,
+                      progressCurrent: 0,
+                      progressTotal: 12,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
                 ],
-            },
-            { 
-                title: "Unlock Black Mous Weekly Urgent Missions",
-                missionID: 988202,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Unlocks Black Mous Weekly Urgent Missions.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 12 Scavenger calling cards.",
-                        taskID:  684708,
-                        progressCurrent: 0,
-                        progressTotal: 12,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                  ],
-            },
-        ]},
+          },
+      ]},
 
-        ["urgentMissionsWhiteLotus",
-            { 
-                title: "Unlock White Lotus Daily Urgent Missions",
-                missionID: 662102,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Unlocks White Lotus Daily Urgent Missions.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 2 Al Qatala Planning Diagrams or Images.",
-                        taskID:  556447,
-                        progressCurrent: 0,
-                        progressTotal: 2,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-            { 
-                title: "Unlock White Lotus Weekly Urgent Missions",
-                missionID: 168070,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Unlocks White Lotus Weekly Urgent Missions.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 10 jugs of liquid nitrogen.",
-                        taskID:  688244,
-                        progressCurrent: 0,
-                        progressTotal: 10,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-        ],
+      { urgentMissionsWhiteLotus: [
+          { 
+              title: "Unlock White Lotus Daily Urgent Missions",
+              missionID: 662102,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Unlocks White Lotus Daily Urgent Missions.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 2 Al Qatala Planning Diagrams or Images.",
+                      taskID:  556447,
+                      progressCurrent: 0,
+                      progressTotal: 2,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+          { 
+              title: "Unlock White Lotus Weekly Urgent Missions",
+              missionID: 168070,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Unlocks White Lotus Weekly Urgent Missions.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 10 jugs of liquid nitrogen.",
+                      taskID:  688244,
+                      progressCurrent: 0,
+                      progressTotal: 10,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+      ]},
 
-        ["urgentMissionsCrown",
-            { 
-                title: "Unlock Crown Daily Urgent Missions",
-                missionID: 722766,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Unlocks Crown Daily Urgent Missions",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 3 classified documents.",
-                        taskID:  802967,
-                        progressCurrent: 0,
-                        progressTotal: 3,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-            { 
-                title: "Unlock Crown Weekly Urgent Missions",
-                missionID: 260881,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Unlocks Crown Weekly Urgent Missions.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 10 cans of heavy chopper fuel.",
-                        taskID:  298105,
-                        progressCurrent: 0,
-                        progressTotal: 10,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-        ],
+      { urgentMissionsCrown: [
+          { 
+              title: "Unlock Crown Daily Urgent Missions",
+              missionID: 722766,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Unlocks Crown Daily Urgent Missions",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 3 classified documents.",
+                      taskID:  802967,
+                      progressCurrent: 0,
+                      progressTotal: 3,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+          { 
+              title: "Unlock Crown Weekly Urgent Missions",
+              missionID: 260881,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Unlocks Crown Weekly Urgent Missions.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 10 cans of heavy chopper fuel.",
+                      taskID:  298105,
+                      progressCurrent: 0,
+                      progressTotal: 10,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+      ]},
 
-        ["urgentMissionsPhalanx",
-            { 
-                title: "Unlock Phalanx Daily Urgent Missions",
-                missionID: 673298,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Unlocks Phalanx Daily Urgent Missions.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 3 bottles of hydrogen peroxide, cephalexin, or aceton.",
-                        taskID:  770245,
-                        progressCurrent: 0,
-                        progressTotal: 3,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-            { 
-                title: "Unlock Phalanx Weekly Urgent Missions",
-                missionID: 478600,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Unlocks Phalanx Weekly Urgent Missions.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 5 origami horses.",
-                        taskID:  419791,
-                        progressCurrent: 0,
-                        progressTotal: 5,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-        ],
+      { urgentMissionsPhalanx: [
+          { 
+              title: "Unlock Phalanx Daily Urgent Missions",
+              missionID: 673298,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Unlocks Phalanx Daily Urgent Missions.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 3 bottles of hydrogen peroxide, cephalexin, or aceton.",
+                      taskID:  770245,
+                      progressCurrent: 0,
+                      progressTotal: 3,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+          { 
+              title: "Unlock Phalanx Weekly Urgent Missions",
+              missionID: 478600,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Unlocks Phalanx Weekly Urgent Missions.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 5 origami horses.",
+                      taskID:  419791,
+                      progressCurrent: 0,
+                      progressTotal: 5,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+      ]},
 
-        ["urgentMissionsShadowCompany",
-            { 
-                title: "Unlock Shadow Company Daily Urgent Missions",
-                missionID: 398816,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Unlocks Shadow Company Daily Urgent Missions.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Dead drop 10 keys.",
-                        taskID:  200091,
-                        progressCurrent: 0,
-                        progressTotal: 10,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-            { 
-                title: "Unlock Shadow Company Weekly Urgent Missions",
-                missionID: 629236,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Unlocks Shadow Company Weekly Urgent Missions.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 10 encrypted hard drives from Building 21.",
-                        taskID:  978301,
-                        progressCurrent: 0,
-                        progressTotal: 10,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-        ],
+      { urgentMissionsShadowCompany: [
+          { 
+              title: "Unlock Shadow Company Daily Urgent Missions",
+              missionID: 398816,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Unlocks Shadow Company Daily Urgent Missions.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Dead drop 10 keys.",
+                      taskID:  200091,
+                      progressCurrent: 0,
+                      progressTotal: 10,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+          { 
+              title: "Unlock Shadow Company Weekly Urgent Missions",
+              missionID: 629236,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Unlocks Shadow Company Weekly Urgent Missions.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 10 encrypted hard drives from Building 21.",
+                      taskID:  978301,
+                      progressCurrent: 0,
+                      progressTotal: 10,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+      ]},
 
-        ["increasedCommanderIntel",
-            { 
-                title: "Increased Commander Intel",
-                missionID: 585865,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Increases Commander Intel Contract Rewards.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 15 laptops.",
-                        taskID:  357591,
-                        progressCurrent: 0,
-                        progressTotal: 15,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 3 encrypted hard drives.",
-                        taskID:  275898,
-                        progressCurrent: 0,
-                        progressTotal: 3,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 6 encrypted thumb drives.",
-                        taskID:  518492,
-                        progressCurrent: 0,
-                        progressTotal: 6,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-        ],
+      { increasedCommanderIntel: [
+          { 
+              title: "Increased Commander Intel",
+              missionID: 585865,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Increases Commander Intel Contract Rewards.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 15 laptops.",
+                      taskID:  357591,
+                      progressCurrent: 0,
+                      progressTotal: 15,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 3 encrypted hard drives.",
+                      taskID:  275898,
+                      progressCurrent: 0,
+                      progressTotal: 3,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 6 encrypted thumb drives.",
+                      taskID:  518492,
+                      progressCurrent: 0,
+                      progressTotal: 6,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+      ]},
 
-        ["increasedSafeIntel",
-            { 
-                title: "Increased Safe Intel",
-                missionID: 979666,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Increased Safe Intel Contract Rewards.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 6 bricks of plastic explosives.",
-                        taskID:  259583,
-                        progressCurrent: 0,
-                        progressTotal: 6,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 20 electrical components.",
-                        taskID:  954757,
-                        progressCurrent: 0,
-                        progressTotal: 20,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 5 VCRs.",
-                        taskID:  482655,
-                        progressCurrent: 0,
-                        progressTotal: 5,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-        ],
+      { increasedSafeIntel: [
+          { 
+              title: "Increased Safe Intel",
+              missionID: 979666,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Increased Safe Intel Contract Rewards.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 6 bricks of plastic explosives.",
+                      taskID:  259583,
+                      progressCurrent: 0,
+                      progressTotal: 6,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 20 electrical components.",
+                      taskID:  954757,
+                      progressCurrent: 0,
+                      progressTotal: 20,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 5 VCRs.",
+                      taskID:  482655,
+                      progressCurrent: 0,
+                      progressTotal: 5,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+      ]},
 
-        ["increasedWeaponStashIntel",
-            { 
-                title: "Increased Weapon Stash Intel",
-                missionID: 838893,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Increased Weapon Stash Intel Contract Rewards.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Dead drop 3 RGL-80s.",
-                        taskID:  578046,
-                        progressCurrent: 0,
-                        progressTotal: 3,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Dead drop 20 weapons.",
-                        taskID:  425294,
-                        progressCurrent: 0,
-                        progressTotal: 20,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Dead drop 10 enemy weapons.",
-                        taskID:  176061,
-                        progressCurrent: 0,
-                        progressTotal: 10,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-        ],
+      { increasedWeaponStashIntel: [
+          { 
+              title: "Increased Weapon Stash Intel",
+              missionID: 838893,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Increased Weapon Stash Intel Contract Rewards.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Dead drop 3 RGL-80s.",
+                      taskID:  578046,
+                      progressCurrent: 0,
+                      progressTotal: 3,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Dead drop 20 weapons.",
+                      taskID:  425294,
+                      progressCurrent: 0,
+                      progressTotal: 20,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Dead drop 10 enemy weapons.",
+                      taskID:  176061,
+                      progressCurrent: 0,
+                      progressTotal: 10,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+      ]},
 
-        ["increasedSafeContents",
-            { 
-                title: "Increased Safe Contents",
-                missionID: 987834,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Increased Safe Contents Contract Rewards.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 8 sensitive or classified documents.",
-                        taskID:  441887,
-                        progressCurrent: 0,
-                        progressTotal: 8,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Dead drop $1 million in cash.",
-                        taskID:  625313,
-                        progressCurrent: 0,
-                        progressTotal: 1_000_000,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-        ],
+      { increasedSafeContents: [
+          { 
+              title: "Increased Safe Contents",
+              missionID: 987834,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Increased Safe Contents Contract Rewards.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 8 sensitive or classified documents.",
+                      taskID:  441887,
+                      progressCurrent: 0,
+                      progressTotal: 8,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Dead drop $1 million in cash.",
+                      taskID:  625313,
+                      progressCurrent: 0,
+                      progressTotal: 1_000_000,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+      ]},
 
-        ["increasedSupplyCacheContents",
-            { 
-                title: "Increased Supply Cache Contents",
-                missionID: 730045,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Increased Supply Cache Contents Contract Rewards.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Dead drop 10 armor plate carriers.",
-                        taskID:  878948,
-                        progressCurrent: 0,
-                        progressTotal: 10,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Dead drop 6 3-plate carriers.",
-                        taskID:  319264,
-                        progressCurrent: 0,
-                        progressTotal: 6,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Dead drop 6 self revives.",
-                        taskID:  412111,
-                        progressCurrent: 0,
-                        progressTotal: 6,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-        ],
+      { increasedSupplyCacheContents: [
+          { 
+              title: "Increased Supply Cache Contents",
+              missionID: 730045,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Increased Supply Cache Contents Contract Rewards.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Dead drop 10 armor plate carriers.",
+                      taskID:  878948,
+                      progressCurrent: 0,
+                      progressTotal: 10,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Dead drop 6 3-plate carriers.",
+                      taskID:  319264,
+                      progressCurrent: 0,
+                      progressTotal: 6,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Dead drop 6 self revives.",
+                      taskID:  412111,
+                      progressCurrent: 0,
+                      progressTotal: 6,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+      ]},
 
-        ["increasedExfilChopperSpeed",
-            { 
-                title: "Increased Exfil Chopper Speed",
-                missionID: 454078,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "Increased Exfil Chopper Speed.",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 100k in cash on final exfils 10 times.",
-                        taskID:  888011,
-                        progressCurrent: 0,
-                        progressTotal: 10,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-        ],
+      { increasedExfilChopperSpeed: [
+          { 
+              title: "Increased Exfil Chopper Speed",
+              missionID: 454078,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "Increased Exfil Chopper Speed.",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 100k in cash on final exfils 10 times.",
+                      taskID:  888011,
+                      progressCurrent: 0,
+                      progressTotal: 10,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+      ]},
 
-        ["increasedContractPayment",
-            { 
-                title: "Increased Contract Payment I",
-                missionID: 961676,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Complete 100 contracts.",
-                        taskID:  678801,
-                        progressCurrent: 0,
-                        progressTotal: 100,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            }, 
-            { // I don't have the tasks for increasedContractPayment2 and 3.
-                title: "Increased Contract Payment II",
-                missionID: 425387,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "",
-                        taskID:  639316,
-                        progressCurrent: 0,
-                        progressTotal: 1,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  991480,
-                        progressCurrent: 0,
-                        progressTotal: 2,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  441290,
-                        progressCurrent: 0,
-                        progressTotal: 3,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  613301,
-                        progressCurrent: 0,
-                        progressTotal: 4,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  875005,
-                        progressCurrent: 0,
-                        progressTotal: 5,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  810489,
-                        progressCurrent: 0,
-                        progressTotal: 6,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-            { 
-                title: "Increased Contract Payment III",
-                missionID: 908803,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "",
-                        taskID:  721364,
-                        progressCurrent: 0,
-                        progressTotal: 1,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  140676,
-                        progressCurrent: 0,
-                        progressTotal: 2,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  469384,
-                        progressCurrent: 0,
-                        progressTotal: 3,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  941498,
-                        progressCurrent: 0,
-                        progressTotal: 4,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  883334,
-                        progressCurrent: 0,
-                        progressTotal: 5,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  675103,
-                        progressCurrent: 0,
-                        progressTotal: 6,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-        ],
+      { increasedContractPayment: [
+          { 
+              title: "Increased Contract Payment I",
+              missionID: 961676,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Complete 100 contracts.",
+                      taskID:  678801,
+                      progressCurrent: 0,
+                      progressTotal: 100,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          }, 
+          { // I don't have the tasks for increasedContractPayment2 and 3.
+              title: "Increased Contract Payment II",
+              missionID: 425387,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "",
+                      taskID:  639316,
+                      progressCurrent: 0,
+                      progressTotal: 1,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  991480,
+                      progressCurrent: 0,
+                      progressTotal: 2,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  441290,
+                      progressCurrent: 0,
+                      progressTotal: 3,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  613301,
+                      progressCurrent: 0,
+                      progressTotal: 4,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  875005,
+                      progressCurrent: 0,
+                      progressTotal: 5,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  810489,
+                      progressCurrent: 0,
+                      progressTotal: 6,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+          { 
+              title: "Increased Contract Payment III",
+              missionID: 908803,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "",
+                      taskID:  721364,
+                      progressCurrent: 0,
+                      progressTotal: 1,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  140676,
+                      progressCurrent: 0,
+                      progressTotal: 2,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  469384,
+                      progressCurrent: 0,
+                      progressTotal: 3,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  941498,
+                      progressCurrent: 0,
+                      progressTotal: 4,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  883334,
+                      progressCurrent: 0,
+                      progressTotal: 5,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  675103,
+                      progressCurrent: 0,
+                      progressTotal: 6,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+      ]},
 
-        ["increasedUAVTowerDuration",
-            { 
-                title: "Increased UAV Tower Duration I",
-                missionID: 709557,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 4 drills.",
-                        taskID:  578153,
-                        progressCurrent: 0,
-                        progressTotal: 4,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 5 screwdrivers.",
-                        taskID:  372543,
-                        progressCurrent: 0,
-                        progressTotal: 5,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 3 wrenches.",
-                        taskID:  841098,
-                        progressCurrent: 0,
-                        progressTotal: 3,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 4 hard drives.",
-                        taskID:  656546,
-                        progressCurrent: 0,
-                        progressTotal: 4,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 3 rolls of electrical tape.",
-                        taskID:  615705,
-                        progressCurrent: 0,
-                        progressTotal: 3,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 3 batteries.",
-                        taskID:  736039,
-                        progressCurrent: 0,
-                        progressTotal: 3,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-            { 
-                title: "Increased UAV Tower Duration II",
-                missionID: 559475,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 4 bottles of vintage wine.",
-                        taskID:  460705,
-                        progressCurrent: 0,
-                        progressTotal: 4,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 10 jars of soothing hand cream.",
-                        taskID:  203318,
-                        progressCurrent: 0,
-                        progressTotal: 10,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 10 cigar boxes.",
-                        taskID:  722634,
-                        progressCurrent: 0,
-                        progressTotal: 10,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 10 lighters.",
-                        taskID:  786980,
-                        progressCurrent: 0,
-                        progressTotal: 10,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-            { // I don't know the tasks for increasedUAVTowerDuration3.  I need shadow company lvl 15 to see it.
-                title: "Increased UAV Tower Duration III",
-                missionID: 853955,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "Shadow Company", // Shadow Company, Black Mous, etc.
-                factionRequirement: 15, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "",
-                        taskID:  795284,
-                        progressCurrent: 0,
-                        progressTotal: 1,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  758230,
-                        progressCurrent: 0,
-                        progressTotal: 2,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  501373,
-                        progressCurrent: 0,
-                        progressTotal: 3,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  663065,
-                        progressCurrent: 0,
-                        progressTotal: 4,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  988012,
-                        progressCurrent: 0,
-                        progressTotal: 5,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  537156,
-                        progressCurrent: 0,
-                        progressTotal: 6,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-        ],
+      { increasedUAVTowerDuration: [
+          { 
+              title: "Increased UAV Tower Duration I",
+              missionID: 709557,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 4 drills.",
+                      taskID:  578153,
+                      progressCurrent: 0,
+                      progressTotal: 4,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 5 screwdrivers.",
+                      taskID:  372543,
+                      progressCurrent: 0,
+                      progressTotal: 5,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 3 wrenches.",
+                      taskID:  841098,
+                      progressCurrent: 0,
+                      progressTotal: 3,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 4 hard drives.",
+                      taskID:  656546,
+                      progressCurrent: 0,
+                      progressTotal: 4,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 3 rolls of electrical tape.",
+                      taskID:  615705,
+                      progressCurrent: 0,
+                      progressTotal: 3,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 3 batteries.",
+                      taskID:  736039,
+                      progressCurrent: 0,
+                      progressTotal: 3,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+          { 
+              title: "Increased UAV Tower Duration II",
+              missionID: 559475,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 4 bottles of vintage wine.",
+                      taskID:  460705,
+                      progressCurrent: 0,
+                      progressTotal: 4,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 10 jars of soothing hand cream.",
+                      taskID:  203318,
+                      progressCurrent: 0,
+                      progressTotal: 10,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 10 cigar boxes.",
+                      taskID:  722634,
+                      progressCurrent: 0,
+                      progressTotal: 10,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 10 lighters.",
+                      taskID:  786980,
+                      progressCurrent: 0,
+                      progressTotal: 10,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+          { // I don't know the tasks for increasedUAVTowerDuration3.  I need shadow company lvl 15 to see it.
+              title: "Increased UAV Tower Duration III",
+              missionID: 853955,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "Shadow Company", // Shadow Company, Black Mous, etc.
+              factionRequirement: 15, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "",
+                      taskID:  795284,
+                      progressCurrent: 0,
+                      progressTotal: 1,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  758230,
+                      progressCurrent: 0,
+                      progressTotal: 2,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  501373,
+                      progressCurrent: 0,
+                      progressTotal: 3,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  663065,
+                      progressCurrent: 0,
+                      progressTotal: 4,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  988012,
+                      progressCurrent: 0,
+                      progressTotal: 5,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  537156,
+                      progressCurrent: 0,
+                      progressTotal: 6,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+      ]},
 
-        ["increasedSamSiteDuration",
-            { 
-                title: "Increased Sam Site Duration I",
-                missionID: 613890,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 8 aged or vintage wine bottles.",
-                        taskID:  233743,
-                        progressCurrent: 0,
-                        progressTotal: 8,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 15 bottles of fresh water.",
-                        taskID:  292230,
-                        progressCurrent: 0,
-                        progressTotal: 15,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 10 bottles of Ashika liquor.",
-                        taskID:  695234,
-                        progressCurrent: 0,
-                        progressTotal: 10,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-            { 
-                title: "Increased Sam Site Duration II",
-                missionID: 174449,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "Extract 8 laptops from Ashika Island.",
-                        taskID:  262659,
-                        progressCurrent: 0,
-                        progressTotal: 8,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 5 game consoles.",
-                        taskID:  729062,
-                        progressCurrent: 0,
-                        progressTotal: 5,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 6 VCRs.",
-                        taskID:  474258,
-                        progressCurrent: 0,
-                        progressTotal: 6,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "Extract 1 GPU.",
-                        taskID:  792870,
-                        progressCurrent: 0,
-                        progressTotal: 1,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-            { // I don't know the tasks for increasedSamSiteDuration3.  I haven't finished 2 yet.
-                title: "Increased Sam Site Duration III",
-                missionID: 769748,
-                complete: false, // true/false complete/incomplete
-                unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-                faction: "", // Shadow Company, Black Mous, etc.
-                factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
-                positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
-                reward: "",
-                maps: {
-                    allMaps: false,
-                    alMazrah: false,
-                    ashikaIsland: false,
-                    building21: false,
-                    koscheiComplex: false,
-                    vondel: false,
-                },
-                tasks: [
-                    {
-                        task: "",
-                        taskID:  182197,
-                        progressCurrent: 0,
-                        progressTotal: 1,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  960143,
-                        progressCurrent: 0,
-                        progressTotal: 2,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  622547,
-                        progressCurrent: 0,
-                        progressTotal: 3,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  846822,
-                        progressCurrent: 0,
-                        progressTotal: 4,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  756694,
-                        progressCurrent: 0,
-                        progressTotal: 5,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                    {
-                        task: "",
-                        taskID:  112331,
-                        progressCurrent: 0,
-                        progressTotal: 6,
-                        tags: [],
-                        complete: false, // true/false complete/incomplete
-                    },
-                ],
-            },
-        ],
-      ],
-}
+      { increasedSamSiteDuration: [
+          { 
+              title: "Increased Sam Site Duration I",
+              missionID: 613890,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 8 aged or vintage wine bottles.",
+                      taskID:  233743,
+                      progressCurrent: 0,
+                      progressTotal: 8,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 15 bottles of fresh water.",
+                      taskID:  292230,
+                      progressCurrent: 0,
+                      progressTotal: 15,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 10 bottles of Ashika liquor.",
+                      taskID:  695234,
+                      progressCurrent: 0,
+                      progressTotal: 10,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+          { 
+              title: "Increased Sam Site Duration II",
+              missionID: 174449,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "Extract 8 laptops from Ashika Island.",
+                      taskID:  262659,
+                      progressCurrent: 0,
+                      progressTotal: 8,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 5 game consoles.",
+                      taskID:  729062,
+                      progressCurrent: 0,
+                      progressTotal: 5,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 6 VCRs.",
+                      taskID:  474258,
+                      progressCurrent: 0,
+                      progressTotal: 6,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "Extract 1 GPU.",
+                      taskID:  792870,
+                      progressCurrent: 0,
+                      progressTotal: 1,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+          { // I don't know the tasks for increasedSamSiteDuration3.  I haven't finished 2 yet.
+              title: "Increased Sam Site Duration III",
+              missionID: 769748,
+              complete: false, // true/false complete/incomplete
+              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
+              faction: "", // Shadow Company, Black Mous, etc.
+              factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
+              positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
+              reward: "",
+              maps: {
+                  allMaps: false,
+                  alMazrah: false,
+                  ashikaIsland: false,
+                  building21: false,
+                  koscheiComplex: false,
+                  vondel: false,
+              },
+              tasks: [
+                  {
+                      task: "",
+                      taskID:  182197,
+                      progressCurrent: 0,
+                      progressTotal: 1,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  960143,
+                      progressCurrent: 0,
+                      progressTotal: 2,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  622547,
+                      progressCurrent: 0,
+                      progressTotal: 3,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  846822,
+                      progressCurrent: 0,
+                      progressTotal: 4,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  756694,
+                      progressCurrent: 0,
+                      progressTotal: 5,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+                  {
+                      task: "",
+                      taskID:  112331,
+                      progressCurrent: 0,
+                      progressTotal: 6,
+                      tags: [],
+                      complete: false, // true/false complete/incomplete
+                  },
+              ],
+          },
+      ]},
+    ]},
+  ], // End of "newSetUpKey" key: property.  property = array of Objects: stash, weaponsLocker, etc.
+};
