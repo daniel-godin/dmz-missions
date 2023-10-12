@@ -196,7 +196,7 @@ const createFOBDOM = async (obj, docRef, user, db) => {
             let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${sectionTitle}"]`);
 
             DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                <div class='full-fob-mission-container' data-attachment-id="">
+                <div class='full-fob-mission-container' data-attachment-id="${subSectionTitles}">
                     <p>${subSectionTitles}</p>
                 </div>
             `)
@@ -220,20 +220,20 @@ const createFOBDOM = async (obj, docRef, user, db) => {
                 if (complete == false) { complete = "" };
                     
 
-                // let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${obj[i][j][0]}"]`);
+                let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${subSectionTitles}"]`);
 
-                // DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                //     <div class='fob-mission-container'>
-                //         <div class='fob-mission-title-container'>
-                //             <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
-                //             <div class='fob-mission-complete-container'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-object-notation='[${i}][${j}][${k}]' ${complete} /></div>
-                //         </div>
-                //         <div class='fob-mission-info-container'>
-                //             <div class='fob-mission-tasks-container' data-attachment-id="${missionId}"></div>
-                //             <div class='fob-mission-info-reward'><p>Reward:  ${reward}</p></div>
-                //         </div>
-                //     </div>
-                // `)
+                DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                    <div class='fob-mission-container'>
+                        <div class='fob-mission-title-container'>
+                            <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
+                            <div class='fob-mission-complete-container'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-object-notation='[${i}][${j}][${k}]' ${complete} /></div>
+                        </div>
+                        <div class='fob-mission-info-container'>
+                            <div class='fob-mission-tasks-container' data-attachment-id="${missionId}"></div>
+                            <div class='fob-mission-info-reward'><p>Reward:  ${reward}</p></div>
+                        </div>
+                    </div>
+                `)
 
                 for (let p = 0; p < arrayThirdLevel.length && p < 10; p++) { // Fourth and Last Loop (NESTED IN THIRD).  Loops Through Each Mission Object's "tasks".  .tasks is an array of objects.
 
