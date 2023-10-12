@@ -69,6 +69,7 @@ const createFOBDOM = async (obj, docRef, user, db) => {
             let arraySecondLevel = arrayFirstLevel[j][subSectionTitles];
 
             let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${sectionTitle}"]`);
+
             DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                 <div class='full-fob-mission-container' data-attachment-id="${subSectionTitles}">
                     <p>${subSectionTitles}</p>
@@ -91,6 +92,7 @@ const createFOBDOM = async (obj, docRef, user, db) => {
                 let arrayThirdLevel = missionDataObject.tasks;
 
                 let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${subSectionTitles}"]`);
+
                 DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                     <div class='fob-mission-container'>
                         <div class='fob-mission-title-container'>
@@ -106,7 +108,7 @@ const createFOBDOM = async (obj, docRef, user, db) => {
 
                 for (let p = 0; p < arrayThirdLevel.length && p < 10; p++) { // Fourth and Last Loop (NESTED IN THIRD).  Loops Through Each Mission Object's "tasks".  .tasks is an array of objects.
 
-                    const taskObj = arrayThirdLevel[p];
+                    let taskObj = arrayThirdLevel[p];
 
                     let task = taskObj.task;
                     let taskId = taskObj.taskID;
@@ -117,6 +119,7 @@ const createFOBDOM = async (obj, docRef, user, db) => {
                         if (complete == false) { complete = "" };
 
                     let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${missionId}"]`);
+                    
                     DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                         <ul>
                             <li class="fob-mission-task-container" data-task-id="">
