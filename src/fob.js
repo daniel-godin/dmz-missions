@@ -1,4 +1,4 @@
-import { doc, getDoc, onSnapshot, updateDoc, setDoc, } from "firebase/firestore";
+import { doc, getDoc, setDoc, onSnapshot, updateDoc, arrayUnion, arrayRemove, } from "firebase/firestore";
 import { dataS6DMZFOB, } from "./data/data-s6-dmz-fob";
 import { dataS6DMZStandardMissions } from "./data/data-s6-dmz-standard-missions";
 import { auth, db } from "./firebase";
@@ -29,7 +29,7 @@ onAuthStateChanged(auth, user => {
     const docRefFOBGrid = doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`);
 
     onSnapshot(docRefFOBGrid, (snapshot) => {
-        if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), FOBDataObject); }
+        if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), FOBDataObject); } // I think I need to put a reload() or return, or something at the end of this.
         let snapObj = snapshot.data();
         snapObj = snapObj.newSetUpKey;
         createFOB(snapObj, docRefFOBGrid, user, db);
@@ -37,13 +37,13 @@ onAuthStateChanged(auth, user => {
 })
 
 const createFOB = async (obj, docRef, user, db) => {
-    console.log("createFOB Function triggered", obj); // For Testing Purposes.
+    // console.log("createFOB Function triggered", obj); // For Testing Purposes.
 
     resetFOBGrid(); // resets the innerHTML for the FOB Grid.  This is a clunky way to fix to duplication that is happening when a user clicks a checkbox, etc.
 
     createFOBDOM(obj, docRef, user, db); // Which one of these parameters do I not need to pass along?
 
-    createListenerEvents(user);
+    createListenerEvents(obj, docRef, user);
 }
 
 const createFOBDOM = async (obj, docRef, user, db) => {
@@ -81,6 +81,8 @@ const createFOBDOM = async (obj, docRef, user, db) => {
 
                 let missionDataObject = arraySecondLevel[k];
 
+                // console.log(missionDataObject);
+
                 let title = missionDataObject.title;
                 let missionId = missionDataObject.missionID;
                 let complete = missionDataObject.complete; // Two below if (statements) change the DOM Mission Checkbox to be "checked" or "not checked".
@@ -92,13 +94,17 @@ const createFOBDOM = async (obj, docRef, user, db) => {
 
                 let arrayThirdLevel = missionDataObject.tasks;
 
+                let missionDotNotation = `[${i}].${sectionTitle}[${j}].${subSectionTitles}[${k}]`;
+
+                // console.log ("dot notation:", missionDotNotation);
+
                 let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${subSectionTitles}"]`);
 
                 DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                     <div class='fob-mission-container'>
                         <div class='fob-mission-title-container'>
                             <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
-                            <div class='fob-mission-complete-container'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-object-notation='[${i}][${j}][${k}]' ${complete} /></div>
+                            <div class='fob-mission-complete-container'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-mission-dot-notation='${missionDotNotation}' ${complete} /></div>
                         </div>
                         <div class='fob-mission-info-container'>
                             <div class='fob-mission-tasks-container' data-attachment-id="${missionId}"></div>
@@ -138,7 +144,13 @@ const createFOBDOM = async (obj, docRef, user, db) => {
 }
 
 // Listener Events:
-const createListenerEvents = (user) => { // Listener Events:  Checkboxes, Titles (minimizing, etc.), etc.
+const createListenerEvents = (obj, docRef, user) => { // Listener Events:  Checkboxes, Titles (minimizing, etc.), etc.
+
+    // let storeObj = obj; // I am going to use this to replace the entire doc in firestore when I make a change.
+
+    // console.log("store Object", storeObj);
+
+    // console.log("2nd array object", storeObj[0].stash[0].wallet[0]);
 
     const arrayOfMissionTitles = document.getElementsByClassName('fob-mission-title');
 
@@ -150,7 +162,6 @@ const createListenerEvents = (user) => { // Listener Events:  Checkboxes, Titles
     }
 
     if (user) {
-
         // Mission Checkboxes:
         const arrayOfMissionCheckboxes = document.getElementsByClassName('fob-mission-checkbox');
 
@@ -158,19 +169,37 @@ const createListenerEvents = (user) => { // Listener Events:  Checkboxes, Titles
             arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
                 console.log(e.target);
 
+                const storeObj = obj;
+
                 let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
                 let checkboxId = e.target.dataset.fobMissionId; // Grabs the event target's id property, makes it into a Number (integar) from a string.
 
-                let objectNotation = e.target.dataset.objectNotation;
+                let notation = e.target.dataset.missionDotNotation;
 
-                console.log(objectNotation);
+                console.log(notation);
+
+                // console.log(typeof notation);
+
+                console.log(typeof storeObj);
+
+                console.log("storeObj in loop", storeObj);
+
+                console.log("storeObj[notation]", storeObj+notation);
+
+                console.log("2nd array object", storeObj[0].stash[0].wallet[0]);
+
+
+                // console.log("array, objects, notation:", `${storeObj}"${notation}"`);
+
+                // console.log(docRef);
 
                 // console.log(checked, checkboxId);
 
                 // I wonder if it would be easier to do this with a .findIndex method or something.
-                updateDoc(docRef, {
-                    [objectNotation+".complete"] : checked, // checkboxId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
-                })
+                // updateDoc(docRef, {
+                //     ["newSetUpKey"+notation+".complete"] : checked, // checkboxId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
+
+                // })
             })
         }
     
