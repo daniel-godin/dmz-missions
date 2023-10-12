@@ -170,44 +170,11 @@ const createFOBDOM = async (obj, docRef, user, db) => {
     // START OF NEW DOM CREATION.  USING data FOB Object, which is a mix of arrays and objects.
     for (let i = 0; i < obj.length && i < 20; i++) { // First Loop:
 
-        // console.log("obj[i]", obj[i]);
-
-        // let key1 = Object.keys(obj[i]);
-
-        // let name = key1[0];
-
-        // console.log("key1", key1);
-
-        // console.log("name", name);
-
-
-        // This is an Array of Objects.
-        // obj[0] === object.
-        // obj[0].key1 === stash
-
-        // let key1 = Object.keys(obj[i]);
-
-        // console.log("object.keys(obj[i])", Object.keys(obj[i]));
-
-        // console.log(obj);
-
-        // console.log(obj[i]);
-
-        // console.log(obj[i].stash);
-
-
-        // Using the above console.log tests, create the DOM.
         const arrayOfSectionTitle = Object.keys(obj[i]);
 
         const sectionTitle = arrayOfSectionTitle[0];
 
         const arrayFirstLevel = obj[i][sectionTitle];
-
-        // console.log("second level", obj[i].sectionTitle[0]);
-
-        // console.log("section Title:", sectionTitle);
-
-        // console.log(`obj[i][sectionTitle]`, obj[i][sectionTitle]);
 
         DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
             <div class='fob-section-container' data-fob-section='${sectionTitle}'>
@@ -226,9 +193,7 @@ const createFOBDOM = async (obj, docRef, user, db) => {
 
             let arraySecondLevel = arrayFirstLevel[j][subSectionTitles];
 
-            // console.log(arraySecondLevel);
 
-            // console.log("sub-section Titles:", subSectionTitles);
 
             // let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${obj[i][0]}"]`);
 
@@ -241,9 +206,6 @@ const createFOBDOM = async (obj, docRef, user, db) => {
             for (let k = 0; k < arraySecondLevel.length && k < 20; k++) { // THIRD LOOP (NESTED IN 2ND): Once again, starting at 1, to "skip" [0], which is a string of the sub-section title.
 
                 // array of objects.  These objects contain the actual mission information.
-
-                // console.log("mission Object I think", obj[i][sectionTitle][j][subSectionTitles][k]);
-
 
 
 
@@ -258,15 +220,9 @@ const createFOBDOM = async (obj, docRef, user, db) => {
 
                 let arrayThirdLevel = missionDataObject.tasks;
 
-                // console.table(title, missionId, complete, unlocked, factionRequirement, reward);
-
-                // console.log(missionDataObject.tasks[0]);
-
-                // if (complete == true) {
-                //     complete = "checked";
-                // } else {
-                //     complete = "";
-                // }
+                if (complete == true) { complete = "checked"; };
+                if (complete == false) { complete = "" };
+                    
 
                 // let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${obj[i][j][0]}"]`);
 
@@ -295,11 +251,8 @@ const createFOBDOM = async (obj, docRef, user, db) => {
                     let progressTotal = taskObj.progressTotal;
                     let complete = taskObj.complete;
 
-                    // if (complete == true) {
-                    //     complete = "checked";
-                    // } else {
-                    //     complete = "";
-                    // }
+                    if (complete == true) { complete = "checked"; }
+                    if (complete == false) { complete = "" };
 
                     // let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${missionId}"]`);
 
