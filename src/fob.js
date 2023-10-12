@@ -37,211 +37,11 @@ const createFOBGrid = async (obj, docRef, user, db) => {
 
     resetFOBGrid(); // resets the innerHTML for the FOB Grid.  This is a clunky way to fix to duplication that is happening when a user clicks a checkbox, etc.
 
-    const DMZFOBInformationContainer = document.getElementById('DMZFOBInformationContainer'); // DOM ID of div container for FOB Grid.
+    createFOBDOM(obj, docRef, user, db); // Which one of these parameters do I not need to pass along?
 
-    // START OF NEW DOM CREATION.  USING data FOB Object, which is a mix of arrays and objects.
+    createListenerEvents(user);
 
-    for (let i = 0; i < obj.length && i < 20; i++) { // First Loop:
-
-        // console.log(obj[i][0]) // console.logs every main section "title"
-        // console.log(obj[i][1]) // console logs every FIRST array in each section.  Have "1" changed to a variable would let me access second, third, fourth arrays, etc.
-        // console.log(obj[i][1][0]) // console logs every first array sub-section title;
-        // console.log(obj[i][1][1]) // console logs every first array subsection OBJECT (where the data is).
-        // console.log(obj[i][1][1].tasks) // console logs the tasks array
-        // console.log(obj[i][1][1].tasks[0]) // console logs the first task object.
-        // console.log(obj[i][1][1].tasks[0].task) // console logs the first task object task "string" ie. what the task is.
-
-        // Using the above console.log tests, create the DOM.
-        const sectionTitle = obj[i][0];
-
-        DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
-            <div class='fob-section-container' data-fob-section='${sectionTitle}'>
-                <header class='fob-section-header'>${sectionTitle}</header>
-                <div class='fob-section-info-container' data-attachment-id='${sectionTitle}'></div>
-            </div>
-        `)
-
-        for (let j = 1; j < obj[i].length && j < 20; j++) { // Second Loop (NESTED IN FIRST):  Starting at 1, to avoid starting at 0.  0 = sectionTitle. 1, 2, 3, 4 are arrays.
-            let subSectionTitles = obj[i][j][0];
-
-            let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${obj[i][0]}"]`);
-
-            DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                <div class='full-fob-mission-container' data-attachment-id="${obj[i][j][0]}">
-                    <p>${subSectionTitles}</p>
-                </div>
-            `)
-
-            for (let k = 1; k < obj[i][j].length && k < 20; k++) { // THIRD LOOP (NESTED IN 2ND): Once again, starting at 1, to "skip" [0], which is a string of the sub-section title.
-                let missionDataObject = obj[i][j][k];
-
-                let title = missionDataObject.title;
-                let missionId = missionDataObject.missionID;
-                let complete = missionDataObject.complete;
-                let unlocked = missionDataObject.unlocked;
-                let factionRequirement = missionDataObject.factionRequirement;
-                let reward = missionDataObject.reward;
-
-                if (complete == true) {
-                    complete = "checked";
-                } else {
-                    complete = "";
-                }
-
-                let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${obj[i][j][0]}"]`);
-
-                DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                    <div class='fob-mission-container'>
-                        <div class='fob-mission-title-container'>
-                            <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
-                            <div class='fob-mission-complete-container'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-object-notation='[${i}][${j}][${k}]' ${complete} /></div>
-                        </div>
-                        <div class='fob-mission-info-container'>
-                            <div class='fob-mission-tasks-container' data-attachment-id="${missionId}"></div>
-                            <div class='fob-mission-info-reward'><p>Reward:  ${reward}</p></div>
-                        </div>
-                    </div>
-                `)
-
-                for (let p = 0; p < obj[i][j][k].tasks.length && p < 10; p++) { // Fourth and Last Loop (NESTED IN THIRD).  Loops Through Each Mission Object's "tasks".  .tasks is an array of objects.
-
-                    let taskObj = obj[i][j][k].tasks[p];
-
-                    let task = taskObj.task;
-                    let taskId = taskObj.taskID;
-                    let progressCurrent = taskObj.progressCurrent;
-                    let progressTotal = taskObj.progressTotal;
-                    let complete = taskObj.complete;
-
-                    if (complete == true) {
-                        complete = "checked";
-                    } else {
-                        complete = "";
-                    }
-
-                    let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${missionId}"]`);
-
-                    DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                        <ul>
-                            <li class="fob-mission-task-container" data-task-id="">
-                                <input type='checkbox' class='task-checkbox' data-task-id='${taskId}' data-obj-notation='[${i}][${j}][${k}].tasks[${p}]' ${complete} />
-                                <div class='mission-task'>
-                                    <p>${task}</p><p>${progressCurrent}</p><p> / </p><p>${progressTotal}</p>
-                                </div>
-                            </li>
-                        </ul>
-                    `)
-                }
-            }
-        }
-    }
-
-    // Listener Events:
-    const createListenerEvents = () => { // Listener Events:  Checkboxes, Titles (minimizing, etc.), etc.
-
-
-        const arrayOfMissionTitles = document.getElementsByClassName('fob-mission-title');
-
-        for (let i = 0; i < arrayOfMissionTitles.length && i < 500; i++) {
-            arrayOfMissionTitles[i].addEventListener('click', (e) => {
-                // console.log(e.target);
-                // console.log(e.target.parentNode.nextElementSibling);
-
-                e.target.parentNode.nextElementSibling.classList.toggle('hide');
-                e.target.classList.toggle('underlined');
-            })
-        }
-
-
-        if (user) {
-
-            // Mission Checkboxes:
-            const arrayOfMissionCheckboxes = document.getElementsByClassName('fob-mission-checkbox');
-
-            for (let i = 0; i < arrayOfMissionCheckboxes.length && i < 300; i++) {
-                arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
-                    console.log(e.target);
-
-                    let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
-                    let checkboxId = e.target.dataset.fobMissionId; // Grabs the event target's id property, makes it into a Number (integar) from a string.
-    
-                    let objectNotation = e.target.dataset.objectNotation;
-    
-                    console.log(objectNotation);
-    
-                    // console.log(checked, checkboxId);
-
-                    // I wonder if it would be easier to do this with a .findIndex method or something.
-                    updateDoc(docRef, {
-                        [objectNotation+".complete"] : checked, // checkboxId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
-                    })
-                })
-            }
-        
-            // Mission Task Checkboxes:
-            // const arrayOfMissionTaskCheckboxes = document.getElementsByClassName('task-checkbox');
-    
-            // for (let i = 0; i < arrayOfMissionTaskCheckboxes.length && i < 999; i++) {
-            //     arrayOfMissionTaskCheckboxes[i].addEventListener('click', (e) => {
-            //         console.log(e.target);
-    
-            //         let checked = e.target.checked;
-    
-            //         let objNotation = e.target.dataset.objNotation;
-    
-            //         console.log(objNotation);
-    
-            //         updateDoc(docRef, {
-            //             [objNotation+".complete"] : checked, 
-            //         })
-            //     })
-            // }
-        }
-    }
-
-    createListenerEvents();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // IMPORTANT:  BELOW IS THE OLD CODE FOR THE OLD OBJECT WAY.  NOW I NEED TO LOOP THROUGH ARRAYS ABOVE.  PROBABLY NEED TO SAVE THE LISTENER EVENTS FUNCTION THOUGH.
+    // IMPORTANT:  DELETE THIS AFTER FIXING createFOBDOM function.  BELOW IS THE OLD CODE FOR THE OLD OBJECT WAY.  NOW I NEED TO LOOP THROUGH ARRAYS ABOVE.  PROBABLY NEED TO SAVE THE LISTENER EVENTS FUNCTION THOUGH.
 
     // const createMainSectionContainers = (obj) => {
     //     // console.log(obj);
@@ -357,8 +157,169 @@ const createFOBGrid = async (obj, docRef, user, db) => {
     // }
 
     // createSectionsForEachMainSection(obj);
+}
+
+const createFOBDOM = async (obj, docRef, user, db) => {
+    const DMZFOBInformationContainer = document.getElementById('DMZFOBInformationContainer'); // DOM ID of div container for FOB Grid.
+
+    // START OF NEW DOM CREATION.  USING data FOB Object, which is a mix of arrays and objects.
+    for (let i = 0; i < obj.length && i < 20; i++) { // First Loop:
+
+        // console.log(obj[i][0]) // console.logs every main section "title"
+        // console.log(obj[i][1]) // console logs every FIRST array in each section.  Have "1" changed to a variable would let me access second, third, fourth arrays, etc.
+        // console.log(obj[i][1][0]) // console logs every first array sub-section title;
+        // console.log(obj[i][1][1]) // console logs every first array subsection OBJECT (where the data is).
+        // console.log(obj[i][1][1].tasks) // console logs the tasks array
+        // console.log(obj[i][1][1].tasks[0]) // console logs the first task object.
+        // console.log(obj[i][1][1].tasks[0].task) // console logs the first task object task "string" ie. what the task is.
+
+        // Using the above console.log tests, create the DOM.
+        const sectionTitle = obj[i][0];
+
+        DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
+            <div class='fob-section-container' data-fob-section='${sectionTitle}'>
+                <header class='fob-section-header'>${sectionTitle}</header>
+                <div class='fob-section-info-container' data-attachment-id='${sectionTitle}'></div>
+            </div>
+        `)
+
+        for (let j = 1; j < obj[i].length && j < 20; j++) { // Second Loop (NESTED IN FIRST):  Starting at 1, to avoid starting at 0.  0 = sectionTitle. 1, 2, 3, 4 are arrays.
+            let subSectionTitles = obj[i][j][0];
+
+            let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${obj[i][0]}"]`);
+
+            DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                <div class='full-fob-mission-container' data-attachment-id="${obj[i][j][0]}">
+                    <p>${subSectionTitles}</p>
+                </div>
+            `)
+
+            for (let k = 1; k < obj[i][j].length && k < 20; k++) { // THIRD LOOP (NESTED IN 2ND): Once again, starting at 1, to "skip" [0], which is a string of the sub-section title.
+                let missionDataObject = obj[i][j][k];
+
+                let title = missionDataObject.title;
+                let missionId = missionDataObject.missionID;
+                let complete = missionDataObject.complete;
+                let unlocked = missionDataObject.unlocked;
+                let factionRequirement = missionDataObject.factionRequirement;
+                let reward = missionDataObject.reward;
+
+                if (complete == true) {
+                    complete = "checked";
+                } else {
+                    complete = "";
+                }
+
+                let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${obj[i][j][0]}"]`);
+
+                DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                    <div class='fob-mission-container'>
+                        <div class='fob-mission-title-container'>
+                            <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
+                            <div class='fob-mission-complete-container'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-object-notation='[${i}][${j}][${k}]' ${complete} /></div>
+                        </div>
+                        <div class='fob-mission-info-container'>
+                            <div class='fob-mission-tasks-container' data-attachment-id="${missionId}"></div>
+                            <div class='fob-mission-info-reward'><p>Reward:  ${reward}</p></div>
+                        </div>
+                    </div>
+                `)
+
+                for (let p = 0; p < obj[i][j][k].tasks.length && p < 10; p++) { // Fourth and Last Loop (NESTED IN THIRD).  Loops Through Each Mission Object's "tasks".  .tasks is an array of objects.
+
+                    let taskObj = obj[i][j][k].tasks[p];
+
+                    let task = taskObj.task;
+                    let taskId = taskObj.taskID;
+                    let progressCurrent = taskObj.progressCurrent;
+                    let progressTotal = taskObj.progressTotal;
+                    let complete = taskObj.complete;
+
+                    if (complete == true) {
+                        complete = "checked";
+                    } else {
+                        complete = "";
+                    }
+
+                    let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${missionId}"]`);
+
+                    DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                        <ul>
+                            <li class="fob-mission-task-container" data-task-id="">
+                                <input type='checkbox' class='task-checkbox' data-task-id='${taskId}' data-obj-notation='[${i}][${j}][${k}].tasks[${p}]' ${complete} />
+                                <div class='mission-task'>
+                                    <p>${task}</p><p>${progressCurrent}</p><p> / </p><p>${progressTotal}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    `)
+                }
+            }
+        }
+    }
+
+}
+
+// Listener Events:
+const createListenerEvents = (user) => { // Listener Events:  Checkboxes, Titles (minimizing, etc.), etc.
+
+    const arrayOfMissionTitles = document.getElementsByClassName('fob-mission-title');
+
+    for (let i = 0; i < arrayOfMissionTitles.length && i < 500; i++) {
+        arrayOfMissionTitles[i].addEventListener('click', (e) => {
+            // console.log(e.target);
+            // console.log(e.target.parentNode.nextElementSibling);
+
+            e.target.parentNode.nextElementSibling.classList.toggle('hide');
+            e.target.classList.toggle('underlined');
+        })
+    }
 
 
+    if (user) {
+
+        // Mission Checkboxes:
+        const arrayOfMissionCheckboxes = document.getElementsByClassName('fob-mission-checkbox');
+
+        for (let i = 0; i < arrayOfMissionCheckboxes.length && i < 300; i++) {
+            arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
+                console.log(e.target);
+
+                let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
+                let checkboxId = e.target.dataset.fobMissionId; // Grabs the event target's id property, makes it into a Number (integar) from a string.
+
+                let objectNotation = e.target.dataset.objectNotation;
+
+                console.log(objectNotation);
+
+                // console.log(checked, checkboxId);
+
+                // I wonder if it would be easier to do this with a .findIndex method or something.
+                updateDoc(docRef, {
+                    [objectNotation+".complete"] : checked, // checkboxId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
+                })
+            })
+        }
+    
+        // Mission Task Checkboxes:
+        // const arrayOfMissionTaskCheckboxes = document.getElementsByClassName('task-checkbox');
+
+        // for (let i = 0; i < arrayOfMissionTaskCheckboxes.length && i < 999; i++) {
+        //     arrayOfMissionTaskCheckboxes[i].addEventListener('click', (e) => {
+        //         console.log(e.target);
+
+        //         let checked = e.target.checked;
+
+        //         let objNotation = e.target.dataset.objNotation;
+
+        //         console.log(objNotation);
+
+        //         updateDoc(docRef, {
+        //             [objNotation+".complete"] : checked, 
+        //         })
+        //     })
+        // }
+    }
 }
 
 const resetFOBGrid = async () => {
