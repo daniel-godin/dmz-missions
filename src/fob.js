@@ -18,7 +18,7 @@ onAuthStateChanged(auth, user => {
     if (!DMZFOBContainer) { console.log("not on fob page"); return; };
 
     if (!user) {
-        createFOBGrid(currentFOBTasks, undefined, undefined, undefined);
+        createFOB(currentFOBTasks, undefined, undefined, undefined);
         recommendLogInBox(DMZFOBContainer);
         return;
     }
@@ -28,11 +28,11 @@ onAuthStateChanged(auth, user => {
     onSnapshot(docRefFOBGrid, (snapshot) => {
         if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), FOBDataObject); }
         let snapObj = snapshot.data();
-        createFOBGrid(snapObj, docRefFOBGrid, user, db);
+        createFOB(snapObj, docRefFOBGrid, user, db);
     }) 
 })
 
-const createFOBGrid = async (obj, docRef, user, db) => {
+const createFOB = async (obj, docRef, user, db) => {
     // console.log(obj); // For Testing Purposes.
 
     resetFOBGrid(); // resets the innerHTML for the FOB Grid.  This is a clunky way to fix to duplication that is happening when a user clicks a checkbox, etc.
