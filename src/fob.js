@@ -193,21 +193,17 @@ const createFOBDOM = async (obj, docRef, user, db) => {
 
             let arraySecondLevel = arrayFirstLevel[j][subSectionTitles];
 
+            let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${sectionTitle}"]`);
 
-
-            // let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${obj[i][0]}"]`);
-
-            // DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-            //     <div class='full-fob-mission-container' data-attachment-id="${obj[i][j][0]}">
-            //         <p>${subSectionTitles}</p>
-            //     </div>
-            // `)
+            DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                <div class='full-fob-mission-container' data-attachment-id="">
+                    <p>${subSectionTitles}</p>
+                </div>
+            `)
 
             for (let k = 0; k < arraySecondLevel.length && k < 20; k++) { // THIRD LOOP (NESTED IN 2ND): Once again, starting at 1, to "skip" [0], which is a string of the sub-section title.
 
                 // array of objects.  These objects contain the actual mission information.
-
-
 
                 let missionDataObject = arraySecondLevel[k];
 
@@ -243,7 +239,7 @@ const createFOBDOM = async (obj, docRef, user, db) => {
 
                     let taskObj = arrayThirdLevel[p];
 
-                    console.log(taskObj);
+                    // console.log(taskObj);
 
                     let task = taskObj.task;
                     let taskId = taskObj.taskID;
