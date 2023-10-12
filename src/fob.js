@@ -18,7 +18,7 @@ onAuthStateChanged(auth, user => {
     if (!DMZFOBContainer) { console.log("not on fob page"); return; };
 
     if (!user) {
-        createFOB(currentFOBTasks, undefined, undefined, undefined);
+        createFOB(FOBDataObject, undefined, undefined, undefined);
         recommendLogInBox(DMZFOBContainer);
         return;
     }
@@ -164,6 +164,8 @@ const createFOBDOM = async (obj, docRef, user, db) => {
 
     // START OF NEW DOM CREATION.  USING data FOB Object, which is a mix of arrays and objects.
     for (let i = 0; i < obj.length && i < 20; i++) { // First Loop:
+
+        console.log(obj);
 
         // console.log(obj[i][0]) // console.logs every main section "title"
         // console.log(obj[i][1]) // console logs every FIRST array in each section.  Have "1" changed to a variable would let me access second, third, fourth arrays, etc.
