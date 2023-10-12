@@ -144,9 +144,6 @@ const createListenerEvents = (user) => { // Listener Events:  Checkboxes, Titles
 
     for (let i = 0; i < arrayOfMissionTitles.length && i < 500; i++) {
         arrayOfMissionTitles[i].addEventListener('click', (e) => {
-            // console.log(e.target);
-            // console.log(e.target.parentNode.nextElementSibling);
-
             e.target.parentNode.nextElementSibling.classList.toggle('hide');
             e.target.classList.toggle('underlined');
         })
