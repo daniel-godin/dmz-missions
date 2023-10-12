@@ -18,7 +18,10 @@ onAuthStateChanged(auth, user => {
     if (!DMZFOBContainer) { console.log("not on fob page"); return; };
 
     if (!user) {
-        createFOB(FOBDataObject, undefined, undefined, undefined);
+
+        let newDataObject = FOBDataObject.newSetUpKey;
+
+        createFOB(newDataObject, undefined, undefined, undefined);
         recommendLogInBox(DMZFOBContainer);
         return;
     }
@@ -33,7 +36,7 @@ onAuthStateChanged(auth, user => {
 })
 
 const createFOB = async (obj, docRef, user, db) => {
-    // console.log(obj); // For Testing Purposes.
+    console.log("createFOB Function triggered", obj); // For Testing Purposes.
 
     resetFOBGrid(); // resets the innerHTML for the FOB Grid.  This is a clunky way to fix to duplication that is happening when a user clicks a checkbox, etc.
 
@@ -162,21 +165,47 @@ const createFOB = async (obj, docRef, user, db) => {
 const createFOBDOM = async (obj, docRef, user, db) => {
     const DMZFOBInformationContainer = document.getElementById('DMZFOBInformationContainer'); // DOM ID of div container for FOB Grid.
 
+    // console.log("createFOBDOM function triggered", obj);
+
     // START OF NEW DOM CREATION.  USING data FOB Object, which is a mix of arrays and objects.
     for (let i = 0; i < obj.length && i < 20; i++) { // First Loop:
 
-        console.log(obj);
+        // console.log("obj[i]", obj[i]);
 
-        // console.log(obj[i][0]) // console.logs every main section "title"
-        // console.log(obj[i][1]) // console logs every FIRST array in each section.  Have "1" changed to a variable would let me access second, third, fourth arrays, etc.
-        // console.log(obj[i][1][0]) // console logs every first array sub-section title;
-        // console.log(obj[i][1][1]) // console logs every first array subsection OBJECT (where the data is).
-        // console.log(obj[i][1][1].tasks) // console logs the tasks array
-        // console.log(obj[i][1][1].tasks[0]) // console logs the first task object.
-        // console.log(obj[i][1][1].tasks[0].task) // console logs the first task object task "string" ie. what the task is.
+        // let key1 = Object.keys(obj[i]);
+
+        // let name = key1[0];
+
+        // console.log("key1", key1);
+
+        // console.log("name", name);
+
+
+        // This is an Array of Objects.
+        // obj[0] === object.
+        // obj[0].key1 === stash
+
+        // let key1 = Object.keys(obj[i]);
+
+        // console.log("object.keys(obj[i])", Object.keys(obj[i]));
+
+        // console.log(obj);
+
+        // console.log(obj[i]);
+
+        // console.log(obj[i].stash);
+
 
         // Using the above console.log tests, create the DOM.
-        const sectionTitle = obj[i][0];
+        const arrayOfSectionTitle = Object.keys(obj[i]);
+
+        const sectionTitle = arrayOfSectionTitle[0];
+
+        // console.log("second level", obj[i].sectionTitle[0]);
+
+        // console.log("section Title:", sectionTitle);
+
+        // console.log(`obj[i][sectionTitle]`, obj[i][sectionTitle]);
 
         DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
             <div class='fob-section-container' data-fob-section='${sectionTitle}'>
@@ -185,19 +214,34 @@ const createFOBDOM = async (obj, docRef, user, db) => {
             </div>
         `)
 
-        for (let j = 1; j < obj[i].length && j < 20; j++) { // Second Loop (NESTED IN FIRST):  Starting at 1, to avoid starting at 0.  0 = sectionTitle. 1, 2, 3, 4 are arrays.
-            let subSectionTitles = obj[i][j][0];
+        for (let j = 0; j < obj[i][sectionTitle].length && j < 20; j++) { // Second Loop (NESTED IN FIRST):
 
-            let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${obj[i][0]}"]`);
+            // console.log("test", obj[i][sectionTitle][j]);
 
-            DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                <div class='full-fob-mission-container' data-attachment-id="${obj[i][j][0]}">
-                    <p>${subSectionTitles}</p>
-                </div>
-            `)
+            let arrayOfSubSectionTitles = Object.keys(obj[i][sectionTitle][j]);
 
-            for (let k = 1; k < obj[i][j].length && k < 20; k++) { // THIRD LOOP (NESTED IN 2ND): Once again, starting at 1, to "skip" [0], which is a string of the sub-section title.
-                let missionDataObject = obj[i][j][k];
+            let subSectionTitles = arrayOfSubSectionTitles[0];
+
+            // console.log("sub-section Titles:", subSectionTitles);
+
+            // let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${obj[i][0]}"]`);
+
+            // DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+            //     <div class='full-fob-mission-container' data-attachment-id="${obj[i][j][0]}">
+            //         <p>${subSectionTitles}</p>
+            //     </div>
+            // `)
+
+            for (let k = 0; k < obj[i][sectionTitle][j][subSectionTitles].length && k < 20; k++) { // THIRD LOOP (NESTED IN 2ND): Once again, starting at 1, to "skip" [0], which is a string of the sub-section title.
+
+                // array of objects.  These objects contain the actual mission information.
+
+                // console.log("mission Object I think", obj[i][sectionTitle][j][subSectionTitles][k]);
+
+
+
+
+                let missionDataObject = obj[i][sectionTitle][j][subSectionTitles][k];
 
                 let title = missionDataObject.title;
                 let missionId = missionDataObject.missionID;
@@ -206,30 +250,36 @@ const createFOBDOM = async (obj, docRef, user, db) => {
                 let factionRequirement = missionDataObject.factionRequirement;
                 let reward = missionDataObject.reward;
 
-                if (complete == true) {
-                    complete = "checked";
-                } else {
-                    complete = "";
-                }
+                // console.table(title, missionId, complete, unlocked, factionRequirement, reward);
 
-                let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${obj[i][j][0]}"]`);
+                // console.log(missionDataObject.tasks[0]);
 
-                DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                    <div class='fob-mission-container'>
-                        <div class='fob-mission-title-container'>
-                            <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
-                            <div class='fob-mission-complete-container'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-object-notation='[${i}][${j}][${k}]' ${complete} /></div>
-                        </div>
-                        <div class='fob-mission-info-container'>
-                            <div class='fob-mission-tasks-container' data-attachment-id="${missionId}"></div>
-                            <div class='fob-mission-info-reward'><p>Reward:  ${reward}</p></div>
-                        </div>
-                    </div>
-                `)
+                // if (complete == true) {
+                //     complete = "checked";
+                // } else {
+                //     complete = "";
+                // }
 
-                for (let p = 0; p < obj[i][j][k].tasks.length && p < 10; p++) { // Fourth and Last Loop (NESTED IN THIRD).  Loops Through Each Mission Object's "tasks".  .tasks is an array of objects.
+                // let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${obj[i][j][0]}"]`);
 
-                    let taskObj = obj[i][j][k].tasks[p];
+                // DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                //     <div class='fob-mission-container'>
+                //         <div class='fob-mission-title-container'>
+                //             <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
+                //             <div class='fob-mission-complete-container'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-object-notation='[${i}][${j}][${k}]' ${complete} /></div>
+                //         </div>
+                //         <div class='fob-mission-info-container'>
+                //             <div class='fob-mission-tasks-container' data-attachment-id="${missionId}"></div>
+                //             <div class='fob-mission-info-reward'><p>Reward:  ${reward}</p></div>
+                //         </div>
+                //     </div>
+                // `)
+
+                for (let p = 0; p < missionDataObject.tasks.length && p < 10; p++) { // Fourth and Last Loop (NESTED IN THIRD).  Loops Through Each Mission Object's "tasks".  .tasks is an array of objects.
+
+                    let taskObj = missionDataObject.tasks[p];
+
+                    console.log(taskObj);
 
                     let task = taskObj.task;
                     let taskId = taskObj.taskID;
@@ -237,24 +287,24 @@ const createFOBDOM = async (obj, docRef, user, db) => {
                     let progressTotal = taskObj.progressTotal;
                     let complete = taskObj.complete;
 
-                    if (complete == true) {
-                        complete = "checked";
-                    } else {
-                        complete = "";
-                    }
+                    // if (complete == true) {
+                    //     complete = "checked";
+                    // } else {
+                    //     complete = "";
+                    // }
 
-                    let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${missionId}"]`);
+                    // let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${missionId}"]`);
 
-                    DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                        <ul>
-                            <li class="fob-mission-task-container" data-task-id="">
-                                <input type='checkbox' class='task-checkbox' data-task-id='${taskId}' data-obj-notation='[${i}][${j}][${k}].tasks[${p}]' ${complete} />
-                                <div class='mission-task'>
-                                    <p>${task}</p><p>${progressCurrent}</p><p> / </p><p>${progressTotal}</p>
-                                </div>
-                            </li>
-                        </ul>
-                    `)
+                    // DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                    //     <ul>
+                    //         <li class="fob-mission-task-container" data-task-id="">
+                    //             <input type='checkbox' class='task-checkbox' data-task-id='${taskId}' data-obj-notation='[${i}][${j}][${k}].tasks[${p}]' ${complete} />
+                    //             <div class='mission-task'>
+                    //                 <p>${task}</p><p>${progressCurrent}</p><p> / </p><p>${progressTotal}</p>
+                    //             </div>
+                    //         </li>
+                    //     </ul>
+                    // `)
                 }
             }
         }
