@@ -201,6 +201,8 @@ const createFOBDOM = async (obj, docRef, user, db) => {
 
         const sectionTitle = arrayOfSectionTitle[0];
 
+        const arrayFirstLevel = obj[i][sectionTitle];
+
         // console.log("second level", obj[i].sectionTitle[0]);
 
         // console.log("section Title:", sectionTitle);
@@ -214,13 +216,17 @@ const createFOBDOM = async (obj, docRef, user, db) => {
             </div>
         `)
 
-        for (let j = 0; j < obj[i][sectionTitle].length && j < 20; j++) { // Second Loop (NESTED IN FIRST):
+        for (let j = 0; j < arrayFirstLevel.length && j < 20; j++) { // Second Loop (NESTED IN FIRST):
 
             // console.log("test", obj[i][sectionTitle][j]);
 
-            let arrayOfSubSectionTitles = Object.keys(obj[i][sectionTitle][j]);
+            let arrayOfSubSectionTitles = Object.keys(arrayFirstLevel[j]);
 
             let subSectionTitles = arrayOfSubSectionTitles[0];
+
+            let arraySecondLevel = arrayFirstLevel[j][subSectionTitles];
+
+            // console.log(arraySecondLevel);
 
             // console.log("sub-section Titles:", subSectionTitles);
 
@@ -232,7 +238,7 @@ const createFOBDOM = async (obj, docRef, user, db) => {
             //     </div>
             // `)
 
-            for (let k = 0; k < obj[i][sectionTitle][j][subSectionTitles].length && k < 20; k++) { // THIRD LOOP (NESTED IN 2ND): Once again, starting at 1, to "skip" [0], which is a string of the sub-section title.
+            for (let k = 0; k < arraySecondLevel.length && k < 20; k++) { // THIRD LOOP (NESTED IN 2ND): Once again, starting at 1, to "skip" [0], which is a string of the sub-section title.
 
                 // array of objects.  These objects contain the actual mission information.
 
@@ -241,7 +247,7 @@ const createFOBDOM = async (obj, docRef, user, db) => {
 
 
 
-                let missionDataObject = obj[i][sectionTitle][j][subSectionTitles][k];
+                let missionDataObject = arraySecondLevel[k];
 
                 let title = missionDataObject.title;
                 let missionId = missionDataObject.missionID;
@@ -249,6 +255,8 @@ const createFOBDOM = async (obj, docRef, user, db) => {
                 let unlocked = missionDataObject.unlocked;
                 let factionRequirement = missionDataObject.factionRequirement;
                 let reward = missionDataObject.reward;
+
+                let arrayThirdLevel = missionDataObject.tasks;
 
                 // console.table(title, missionId, complete, unlocked, factionRequirement, reward);
 
@@ -275,9 +283,9 @@ const createFOBDOM = async (obj, docRef, user, db) => {
                 //     </div>
                 // `)
 
-                for (let p = 0; p < missionDataObject.tasks.length && p < 10; p++) { // Fourth and Last Loop (NESTED IN THIRD).  Loops Through Each Mission Object's "tasks".  .tasks is an array of objects.
+                for (let p = 0; p < arrayThirdLevel.length && p < 10; p++) { // Fourth and Last Loop (NESTED IN THIRD).  Loops Through Each Mission Object's "tasks".  .tasks is an array of objects.
 
-                    let taskObj = missionDataObject.tasks[p];
+                    let taskObj = arrayThirdLevel[p];
 
                     console.log(taskObj);
 
