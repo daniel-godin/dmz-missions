@@ -31,12 +31,13 @@ onAuthStateChanged(auth, user => {
     onSnapshot(docRefFOBGrid, (snapshot) => {
         if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), FOBDataObject); }
         let snapObj = snapshot.data();
+        snapObj = snapObj.newSetUpKey;
         createFOB(snapObj, docRefFOBGrid, user, db);
     }) 
 })
 
 const createFOB = async (obj, docRef, user, db) => {
-    // console.log("createFOB Function triggered", obj); // For Testing Purposes.
+    console.log("createFOB Function triggered", obj); // For Testing Purposes.
 
     resetFOBGrid(); // resets the innerHTML for the FOB Grid.  This is a clunky way to fix to duplication that is happening when a user clicks a checkbox, etc.
 
@@ -119,7 +120,7 @@ const createFOBDOM = async (obj, docRef, user, db) => {
                         if (complete == false) { complete = "" };
 
                     let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${missionId}"]`);
-                    
+
                     DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                         <ul>
                             <li class="fob-mission-task-container" data-task-id="">
@@ -150,7 +151,6 @@ const createListenerEvents = (user) => { // Listener Events:  Checkboxes, Titles
             e.target.classList.toggle('underlined');
         })
     }
-
 
     if (user) {
 
