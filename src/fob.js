@@ -104,13 +104,18 @@ const createFOBDOM = async (obj, user) => {
 
                 let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${subSectionTitles}"]`);
 
+                let missionTitleMinimizeStatus = localStorage.getItem(`${missionId}`)
+                if (missionTitleMinimizeStatus == 'hideBox') { missionTitleMinimizeStatus = 'hide' }
+                if (missionTitleMinimizeStatus == 'showBox') { missionTitleMinimizeStatus = '' }
+
+
                 DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                     <div class='fob-mission-container'>
                         <div class='fob-mission-title-container'>
                             <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
                             <div class='fob-mission-complete-container ${userStatus}'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-mission-dot-notation="${missionDotNotation}" ${complete} /></div>
                         </div>
-                        <div class='fob-mission-info-container'>
+                        <div class='fob-mission-info-container ${missionTitleMinimizeStatus}'>
                             <div class='fob-mission-tasks-container' data-attachment-id="${missionId}"></div>
                             <div class='fob-mission-info-reward'><p>Reward:  ${reward}</p></div>
                         </div>
@@ -163,6 +168,24 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
         arrayOfMissionTitles[i].addEventListener('click', (e) => {
             e.target.parentNode.nextElementSibling.classList.toggle('hide');
             e.target.classList.toggle('underlined');
+
+            let storageKey = e.target.dataset.missionId;
+
+            if (e.target.parentNode.nextElementSibling.classList.contains("hide")) { 
+                console.log('Contains Class Hide.') 
+                localStorage.setItem(`${storageKey}`, `hideBox`);
+            }
+
+            if (!e.target.parentNode.nextElementSibling.classList.contains("hide")) { 
+                console.log('Does NOT Contain Class Hide.') 
+                localStorage.setItem(`${storageKey}`, `showBox`);
+            }
+            
+
+            
+
+            // console.log(storageKey);
+
         })
     }
 
