@@ -169,12 +169,12 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
             arrayOfMissionCheckboxes[q].addEventListener('click', (e) => {
 
                 let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked.  This value will be passed to the data object for updating.
+                let notation = e.target.dataset.missionDotNotation;
+
+                let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
 
                 let currentObj = obj;
                 currentObj = currentObj.newSetUpKey;
-
-                let notation = e.target.dataset.missionDotNotation;
-                let notationArray = notation.split('.');
 
                 for (let u = 0; u < notationArray.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
                     let key = notationArray[u];
@@ -194,23 +194,38 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
         }
     
         // Mission *Task* Checkboxes:
-        // const arrayOfMissionTaskCheckboxes = document.getElementsByClassName('task-checkbox');
+        const arrayOfMissionTaskCheckboxes = document.getElementsByClassName('task-checkbox');
 
-        // for (let i = 0; i < arrayOfMissionTaskCheckboxes.length && i < 999; i++) {
-        //     arrayOfMissionTaskCheckboxes[i].addEventListener('click', (e) => {
-        //         console.log(e.target);
+        for (let t = 0; t < arrayOfMissionTaskCheckboxes.length && t < 999; t++) {
+            arrayOfMissionTaskCheckboxes[t].addEventListener('click', (e) => {
+                console.log(e.target);
 
-        //         let checked = e.target.checked;
+                let checked = e.target.checked;
+                let notation = e.target.dataset.objNotation;
+                console.log("test: notation", notation);
 
-        //         let objNotation = e.target.dataset.objNotation;
+                let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
+                console.log("test: notationArray:", notationArray);
 
-        //         console.log(objNotation);
+                let currentObj = obj;
+                currentObj = currentObj.newSetUpKey;
 
-        //         updateDoc(docRef, {
-        //             [objNotation+".complete"] : checked, 
-        //         })
-        //     })
-        // }
+                for (let u = 0; u < notationArray.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
+                    let key = notationArray[u];
+                    if (currentObj && currentObj[key]) {
+                        currentObj = currentObj[key];
+                        // console.log(storeObj);
+                    } else {
+                        console.log("nested property not found.");
+                        break;
+                    }
+                }
+
+                currentObj.complete = checked;
+
+                setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
+            })
+        }
     }
 }
 
