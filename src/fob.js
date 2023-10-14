@@ -18,9 +18,6 @@ onAuthStateChanged(auth, user => {
     if (!DMZFOBContainer) { console.log("not on fob page"); return; };
 
     if (!user) {
-
-        // let newDataObject = FOBDataObject.newSetUpKey;
-
         createFOB(FOBDataObject, undefined, undefined, undefined);
         recommendLogInBox(DMZFOBContainer);
         return;
@@ -31,7 +28,6 @@ onAuthStateChanged(auth, user => {
     onSnapshot(docRefFOBGrid, (snapshot) => {
         if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), FOBDataObject); } // I think I need to put a reload() or return, or something at the end of this.
         let snapObj = snapshot.data();
-        // snapObj = snapObj.newSetUpKey;
         createFOB(snapObj, docRefFOBGrid, user, db);
     }) 
 })
