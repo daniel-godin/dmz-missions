@@ -124,8 +124,13 @@ export const logInRequiredFunction = async () => {
 
 export const recommendLogInBox = async (attachmentPoint) => {
 
+  let status;
+  if (localStorage.getItem(`btnHideRecommendedLogInBoxStatus`) == `hideBox`) { status = 'hide' }
+  if (!localStorage.getItem(`btnHideRecommendedLogInBoxStatus`) == `hideBox`) { status = '' }
+
+
   attachmentPoint.insertAdjacentHTML('beforebegin', `
-    <div class='log-in-recommended-container'>
+    <div class='log-in-recommended-container ${status}'>
       <h3 class='log-in-recommended-h3'>
         It is recommended to <a href='../auth.html'>LOG IN</a> or <a href='../sign-up.html'>SIGN UP</a> to get the full features of this page.</h2>
       </h3>
@@ -136,10 +141,10 @@ export const recommendLogInBox = async (attachmentPoint) => {
   const btnHideRecommendedLogInBox = document.getElementById('btnHideRecommendedLogInBox');
   btnHideRecommendedLogInBox.addEventListener('click', (e) => {
     e.target.parentNode.classList.toggle('hide');
+
+    if (e.target.parentNode.classList.contains('hide')) { localStorage.setItem(`btnHideRecommendedLogInBoxStatus`, `hideBox`)};
   })
 
 }
-
-
 
 // console.log('Error Checking:  End of UI.js File');

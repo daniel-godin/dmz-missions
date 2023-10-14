@@ -104,7 +104,7 @@ const createFOBDOM = async (obj, user) => {
 
                 let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${subSectionTitles}"]`);
 
-                let missionTitleMinimizeStatus = localStorage.getItem(`${missionId}`)
+                let missionTitleMinimizeStatus = localStorage.getItem(`${missionId}`) // This is using a mission specific identifier of "missionId" as the key in localStorage.  Then grabbing the value of that key, using that value to set whether a title should be minimized or not.
                 if (missionTitleMinimizeStatus == 'hideBox') { missionTitleMinimizeStatus = 'hide' }
                 if (missionTitleMinimizeStatus == 'showBox') { missionTitleMinimizeStatus = '' }
 
@@ -171,21 +171,8 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
             let storageKey = e.target.dataset.missionId;
 
-            if (e.target.parentNode.nextElementSibling.classList.contains("hide")) { 
-                console.log('Contains Class Hide.') 
-                localStorage.setItem(`${storageKey}`, `hideBox`);
-            }
-
-            if (!e.target.parentNode.nextElementSibling.classList.contains("hide")) { 
-                console.log('Does NOT Contain Class Hide.') 
-                localStorage.setItem(`${storageKey}`, `showBox`);
-            }
-            
-
-            
-
-            // console.log(storageKey);
-
+            if (e.target.parentNode.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `hideBox`); };
+            if (!e.target.parentNode.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `showBox`); };
         })
     }
 
