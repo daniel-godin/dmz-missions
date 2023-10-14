@@ -123,12 +123,14 @@ const createFOBDOM = async (obj, docRef, user, db) => {
                         if (complete == true) { complete = "checked"; }
                         if (complete == false) { complete = "" };
 
+                    let missionTaskDotNotation = `${i}.${sectionTitle}.${j}.${subSectionTitles}.${k}.tasks.${p}`
+
                     let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${missionId}"]`);
 
                     DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                         <ul>
                             <li class="fob-mission-task-container" data-task-id="">
-                                <input type='checkbox' class='task-checkbox' data-task-id='${taskId}' data-obj-notation='[${i}][${j}][${k}].tasks[${p}]' ${complete} />
+                                <input type='checkbox' class='task-checkbox' data-task-id='${taskId}' data-obj-notation='${missionTaskDotNotation}' ${complete} />
                                 <div class='mission-task'>
                                     <p>${task}</p><p>${progressCurrent}</p><p> / </p><p>${progressTotal}</p>
                                 </div>
