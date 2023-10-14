@@ -94,7 +94,7 @@ const createFOBDOM = async (obj, docRef, user, db) => {
 
                 let arrayThirdLevel = missionDataObject.tasks;
 
-                let missionDotNotation = `[${i}].${sectionTitle}[${j}].${subSectionTitles}[${k}]`;
+                let missionDotNotation = `${i}.${sectionTitle}.${j}.${subSectionTitles}.${k}`;
 
                 // console.log ("dot notation:", missionDotNotation);
 
@@ -104,7 +104,7 @@ const createFOBDOM = async (obj, docRef, user, db) => {
                     <div class='fob-mission-container'>
                         <div class='fob-mission-title-container'>
                             <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
-                            <div class='fob-mission-complete-container'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-mission-dot-notation='${missionDotNotation}' ${complete} /></div>
+                            <div class='fob-mission-complete-container'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-mission-dot-notation="${missionDotNotation}" ${complete} /></div>
                         </div>
                         <div class='fob-mission-info-container'>
                             <div class='fob-mission-tasks-container' data-attachment-id="${missionId}"></div>
@@ -165,41 +165,44 @@ const createListenerEvents = (obj, docRef, user) => { // Listener Events:  Check
         // Mission Checkboxes:
         const arrayOfMissionCheckboxes = document.getElementsByClassName('fob-mission-checkbox');
 
-        for (let i = 0; i < arrayOfMissionCheckboxes.length && i < 300; i++) {
-            arrayOfMissionCheckboxes[i].addEventListener('click', (e) => {
-                console.log(e.target);
-
-                const storeObj = obj;
+        for (let q = 0; q < arrayOfMissionCheckboxes.length && q < 300; q++) {
+            arrayOfMissionCheckboxes[q].addEventListener('click', (e) => {
+                // console.log(e.target);
 
                 let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
                 let checkboxId = e.target.dataset.fobMissionId; // Grabs the event target's id property, makes it into a Number (integar) from a string.
 
+                let storeObj = obj;
                 let notation = e.target.dataset.missionDotNotation;
+                // console.log(notation);
+                let notationArray = notation.split('.');
+                // console.log("notation array:", notationArray);
 
-                console.log(notation);
+                // console.log("first obj", storeObj);
 
-                // console.log(typeof notation);
+                for (let u = 0; u < notationArray.length; u++) {
+                    let key = notationArray[u];
+                    if (storeObj && storeObj[key]) {
+                        storeObj = storeObj[key];
+                        // console.log(storeObj);
+                    } else {
+                        console.log("nested property not found.");
+                        break;
+                    }
+                }
 
-                console.log(typeof storeObj);
+                storeObj.complete = checked;
 
-                console.log("storeObj in loop", storeObj);
+                console.log("storeObj", storeObj);
 
-                console.log("storeObj[notation]", storeObj+notation);
-
-                console.log("2nd array object", storeObj[0].stash[0].wallet[0]);
+                console.log ("obj", obj);
 
 
-                // console.log("array, objects, notation:", `${storeObj}"${notation}"`);
 
-                // console.log(docRef);
 
-                // console.log(checked, checkboxId);
-
-                // I wonder if it would be easier to do this with a .findIndex method or something.
-                // updateDoc(docRef, {
-                //     ["newSetUpKey"+notation+".complete"] : checked, // checkboxId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
-
-                // })
+                updateDoc(docRef, {
+                    path // checkboxId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
+                })
             })
         }
     
