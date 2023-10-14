@@ -12,8 +12,6 @@ const DMZFOBContainer = document.getElementById('DMZFOBContainer');
 const FOBDataObject = dataS6DMZFOB;
 const currentFOBDocName = 'DMZFOBS6';
 
-// const currentFOBSeasonNumberOfTasks = 99; // 99 IS NOT TRUE, IT'S A PLACEHOLDER
-
 onAuthStateChanged(auth, user => {
     if (!DMZFOBContainer) { console.log("not on fob page"); return; };
 
@@ -32,20 +30,19 @@ onAuthStateChanged(auth, user => {
     }) 
 })
 
-const createFOB = async (obj, docRef, user, db) => {
-    // console.log("createFOB Function triggered", obj); // For Testing Purposes.
+const createFOB = async (obj, docRef, user) => {
 
     resetFOBGrid(); // resets the innerHTML for the FOB Grid.  This is a clunky way to fix to duplication that is happening when a user clicks a checkbox, etc.
 
-    createFOBDOM(obj, docRef, user, db); // Which one of these parameters do I not need to pass along?
+    createFOBDOM(obj); // Which one of these parameters do I not need to pass along?
 
     createListenerEvents(obj, docRef, user);
 }
 
-const createFOBDOM = async (obj, docRef, user, db) => {
+const createFOBDOM = async (obj) => {
     const DMZFOBInformationContainer = document.getElementById('DMZFOBInformationContainer'); // DOM ID of div container for FOB Grid.
 
-    obj = obj.newSetUpKey;
+    obj = obj.newSetUpKey; // This is a hacky way to get around FireStore's limitations of not allow nested arrays, nor having a document start with arrays.  Basically, newSetUpKey is the only key to the data Object, and it's value is an array with all the data.
 
     // START OF NEW DOM CREATION.  USING data FOB Object, which is a mix of arrays and objects.
     for (let i = 0; i < obj.length && i < 20; i++) { // First Loop:
@@ -75,11 +72,9 @@ const createFOBDOM = async (obj, docRef, user, db) => {
                 </div>
             `)
 
-            for (let k = 0; k < arraySecondLevel.length && k < 20; k++) { // THIRD LOOP (NESTED IN 2ND): Once again, starting at 1, to "skip" [0], which is a string of the sub-section title.
+            for (let k = 0; k < arraySecondLevel.length && k < 20; k++) { // THIRD LOOP (NESTED IN 2ND LOOP).  Loops through each Mission Object.
 
                 let missionDataObject = arraySecondLevel[k];
-
-                // console.log(missionDataObject);
 
                 let title = missionDataObject.title;
                 let missionId = missionDataObject.missionID;
@@ -93,8 +88,6 @@ const createFOBDOM = async (obj, docRef, user, db) => {
                 let arrayThirdLevel = missionDataObject.tasks;
 
                 let missionDotNotation = `${i}.${sectionTitle}.${j}.${subSectionTitles}.${k}`;
-
-                // console.log ("dot notation:", missionDotNotation);
 
                 let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${subSectionTitles}"]`);
 
@@ -111,7 +104,7 @@ const createFOBDOM = async (obj, docRef, user, db) => {
                     </div>
                 `)
 
-                for (let p = 0; p < arrayThirdLevel.length && p < 10; p++) { // Fourth and Last Loop (NESTED IN THIRD).  Loops Through Each Mission Object's "tasks".  .tasks is an array of objects.
+                for (let p = 0; p < arrayThirdLevel.length && p < 10; p++) { // Fourth and Last Loop (NESTED IN THIRD).  Loops Through Each Mission Object's "tasks" key.  .tasks is an array of objects.
 
                     let taskObj = arrayThirdLevel[p];
 
@@ -146,12 +139,8 @@ const createFOBDOM = async (obj, docRef, user, db) => {
 // Listener Events:
 const createListenerEvents = async (obj, docRef, user) => { // Listener Events:  Checkboxes, Titles (minimizing, etc.), etc.
 
-    // let storeObj = obj; // I am going to use this to replace the entire doc in firestore when I make a change.
-
-    // console.log("store Object", storeObj);
-
-    // console.log("2nd array object", storeObj[0].stash[0].wallet[0]);
-
+    // These are Listener events that don't require someone to be logged in:
+    // Mission Titles Listener Event.  User clicks on the mission title to minimize all the data below it.  Making the data "dissapear", helps readability.
     const arrayOfMissionTitles = document.getElementsByClassName('fob-mission-title');
 
     for (let i = 0; i < arrayOfMissionTitles.length && i < 500; i++) {
@@ -227,24 +216,3 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 const resetFOBGrid = async () => {
     DMZFOBInformationContainer.innerHTML = '';
 }
-
-const getNumberOfProperties = (obj) => { // Use this re-usable function to get the number of properties, to change CSS rules and create div container boxes for each section.
-    return Object.keys(obj).length;
-}
-
-    // For Later Feature:  Having selectable headers to show all or just one section at a time.
-    // const arrayOfFOBSections = ["All", "Stash", "Weapons Locker", "Equipment", "Bounty Board", "Communications Station", ];
-
-    // const DMZFOBHeaderSelect = document.getElementById('DMZFOBHeaderSelect');
-
-    // for (let i = 0; i < arrayOfFOBSections.length && i < 10; i++) {
-    //     DMZFOBHeaderSelect.insertAdjacentHTML('beforeend', `
-    //         <div class='fob-header-select' data-fob-header='${arrayOfFOBSections[i]}'>
-    //             <header>${arrayOfFOBSections[i]}</header>
-    //         </div>
-    //     `)
-    // }
-
-
-
-
