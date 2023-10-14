@@ -180,7 +180,6 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                     let key = notationArray[u];
                     if (currentObj && currentObj[key]) {
                         currentObj = currentObj[key];
-                        // console.log(storeObj);
                     } else {
                         console.log("nested property not found.");
                         break;
@@ -193,19 +192,16 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
             })
         }
     
-        // Mission *Task* Checkboxes:
+        // Mission *Tasks* Checkboxes:
         const arrayOfMissionTaskCheckboxes = document.getElementsByClassName('task-checkbox');
 
         for (let t = 0; t < arrayOfMissionTaskCheckboxes.length && t < 999; t++) {
             arrayOfMissionTaskCheckboxes[t].addEventListener('click', (e) => {
-                console.log(e.target);
 
                 let checked = e.target.checked;
                 let notation = e.target.dataset.objNotation;
-                console.log("test: notation", notation);
 
                 let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
-                console.log("test: notationArray:", notationArray);
 
                 let currentObj = obj;
                 currentObj = currentObj.newSetUpKey;
@@ -214,7 +210,6 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                     let key = notationArray[u];
                     if (currentObj && currentObj[key]) {
                         currentObj = currentObj[key];
-                        // console.log(storeObj);
                     } else {
                         console.log("nested property not found.");
                         break;
