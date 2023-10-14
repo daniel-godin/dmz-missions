@@ -138,7 +138,10 @@ const createFOBDOM = async (obj, user) => {
                             <li class="task-list" data-task-id="">
                                 <input type='checkbox' class='task-checkbox ${userStatus}' data-task-id='${taskId}' data-obj-notation='${missionTaskDotNotation}' ${complete} />
                                 <div class='mission-task'>
-                                    <p>${task}</p><p class='${userStatus}'>${progressCurrent}</p><p class='${userStatus}'> / </p><p class='${userStatus}'>${progressTotal}</p>
+                                    <p>${task}</p>
+                                    <div class='progress-container ${userStatus}'>
+                                        <p class=''>${progressCurrent}</p><p class=''> / </p><p class=''>${progressTotal}</p>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
