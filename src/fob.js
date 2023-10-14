@@ -170,7 +170,10 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                 let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
                 let checkboxId = e.target.dataset.fobMissionId; // Grabs the event target's id property, makes it into a Number (integar) from a string.
 
-                let storeObj = obj;
+                let currentObj = obj;
+                currentObj = currentObj.newSetUpKey;
+
+
                 let notation = e.target.dataset.missionDotNotation;
                 // console.log(notation);
                 let notationArray = notation.split('.');
@@ -180,8 +183,8 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
                 for (let u = 0; u < notationArray.length; u++) {
                     let key = notationArray[u];
-                    if (storeObj && storeObj[key]) {
-                        storeObj = storeObj[key];
+                    if (currentObj && currentObj[key]) {
+                        currentObj = currentObj[key];
                         // console.log(storeObj);
                     } else {
                         console.log("nested property not found.");
@@ -189,13 +192,11 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                     }
                 }
 
-                storeObj.complete = checked;
+                currentObj.complete = checked;
 
-                console.log("storeObj", storeObj);
+                console.log("currentObj", currentObj);
 
                 console.log ("obj", obj);
-
-
 
                 setDoc(docRef,  obj , { merge:true });
 
