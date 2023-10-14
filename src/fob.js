@@ -19,9 +19,9 @@ onAuthStateChanged(auth, user => {
 
     if (!user) {
 
-        let newDataObject = FOBDataObject.newSetUpKey;
+        // let newDataObject = FOBDataObject.newSetUpKey;
 
-        createFOB(newDataObject, undefined, undefined, undefined);
+        createFOB(FOBDataObject, undefined, undefined, undefined);
         recommendLogInBox(DMZFOBContainer);
         return;
     }
@@ -31,7 +31,7 @@ onAuthStateChanged(auth, user => {
     onSnapshot(docRefFOBGrid, (snapshot) => {
         if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), FOBDataObject); } // I think I need to put a reload() or return, or something at the end of this.
         let snapObj = snapshot.data();
-        snapObj = snapObj.newSetUpKey;
+        // snapObj = snapObj.newSetUpKey;
         createFOB(snapObj, docRefFOBGrid, user, db);
     }) 
 })
@@ -48,6 +48,8 @@ const createFOB = async (obj, docRef, user, db) => {
 
 const createFOBDOM = async (obj, docRef, user, db) => {
     const DMZFOBInformationContainer = document.getElementById('DMZFOBInformationContainer'); // DOM ID of div container for FOB Grid.
+
+    obj = obj.newSetUpKey;
 
     // START OF NEW DOM CREATION.  USING data FOB Object, which is a mix of arrays and objects.
     for (let i = 0; i < obj.length && i < 20; i++) { // First Loop:
@@ -144,7 +146,7 @@ const createFOBDOM = async (obj, docRef, user, db) => {
 }
 
 // Listener Events:
-const createListenerEvents = (obj, docRef, user) => { // Listener Events:  Checkboxes, Titles (minimizing, etc.), etc.
+const createListenerEvents = async (obj, docRef, user) => { // Listener Events:  Checkboxes, Titles (minimizing, etc.), etc.
 
     // let storeObj = obj; // I am going to use this to replace the entire doc in firestore when I make a change.
 
@@ -199,14 +201,16 @@ const createListenerEvents = (obj, docRef, user) => { // Listener Events:  Check
 
 
 
+                setDoc(docRef,  obj , { merge:true });
 
-                updateDoc(docRef, {
-                    path // checkboxId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
-                })
+
+                // updateDoc(docRef, {
+                //     path // checkboxId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
+                // })
             })
         }
     
-        // Mission Task Checkboxes:
+        // Mission *Task* Checkboxes:
         // const arrayOfMissionTaskCheckboxes = document.getElementsByClassName('task-checkbox');
 
         // for (let i = 0; i < arrayOfMissionTaskCheckboxes.length && i < 999; i++) {
