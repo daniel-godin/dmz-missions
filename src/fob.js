@@ -13,7 +13,7 @@ const FOBDataObject = dataS6DMZFOB;
 const currentFOBDocName = 'DMZFOBS6';
 
 onAuthStateChanged(auth, user => {
-    if (!DMZFOBContainer) { console.log("not on fob page"); return; };
+    if (!DMZFOBContainer) { return; };
 
     if (!user) {
         createFOB(FOBDataObject, undefined, undefined, undefined);
@@ -87,13 +87,15 @@ const createFOBDOM = async (obj, user) => {
 
             for (let k = 0; k < arraySecondLevel.length && k < 20; k++) { // THIRD LOOP (NESTED IN 2ND LOOP).  Loops through each Mission Object.
 
+                let missionTitleStatus;
+
                 let missionDataObject = arraySecondLevel[k];
 
                 let title = missionDataObject.title;
                 let missionId = missionDataObject.missionID;
                 let complete = missionDataObject.complete; // Two below if (statements) change the DOM Mission Checkbox to be "checked" or "not checked".
-                    if (complete == true) { complete = "checked"; };
-                    if (complete == false) { complete = "" };
+                    if (complete == true) { missionTitleStatus = 'mission-complete'; complete = "checked"; };
+                    if (complete == false) { missionTitleStatus = ''; complete = "" };
                 let unlocked = missionDataObject.unlocked;
                 let factionRequirement = missionDataObject.factionRequirement;
                 let reward = missionDataObject.reward;
@@ -110,7 +112,7 @@ const createFOBDOM = async (obj, user) => {
 
 
                 DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                    <div class='fob-mission-container'>
+                    <div class='fob-mission-container ${missionTitleStatus}'>
                         <div class='fob-mission-title-container'>
                             <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
                             <div class='fob-mission-complete-container ${userStatus}'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-mission-dot-notation="${missionDotNotation}" ${complete} /></div>
@@ -126,13 +128,15 @@ const createFOBDOM = async (obj, user) => {
 
                     let taskObj = arrayThirdLevel[p];
 
+                    let strikeThrough;
+
                     let task = taskObj.task;
                     let taskId = taskObj.taskID;
                     let progressCurrent = taskObj.progressCurrent;
                     let progressTotal = taskObj.progressTotal;
                     let complete = taskObj.complete; // Two below if (statements) change the DOM Task Checkbox to be "checked" or "not checked".
-                        if (complete == true) { complete = "checked"; }
-                        if (complete == false) { complete = "" };
+                        if (complete == true) { strikeThrough = 'strike-through'; complete = "checked"; }
+                        if (complete == false) { strikeThrough = ''; complete = "" };
 
                     let missionTaskDotNotation = `${i}.${sectionTitle}.${j}.${subSectionTitles}.${k}.tasks.${p}`
 
@@ -143,9 +147,9 @@ const createFOBDOM = async (obj, user) => {
                             <li class="task-list" data-task-id="">
                                 <input type='checkbox' class='task-checkbox ${userStatus}' data-task-id='${taskId}' data-obj-notation='${missionTaskDotNotation}' ${complete} />
                                 <div class='mission-task'>
-                                    <p>${task}</p>
+                                    <p class='${strikeThrough}'>${task}</p>
                                     <div class='progress-container ${userStatus}'>
-                                        <p class=''>${progressCurrent}</p><p class=''> / </p><p class=''>${progressTotal}</p>
+                                        <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
                                     </div>
                                 </div>
                             </li>
