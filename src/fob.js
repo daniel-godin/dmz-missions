@@ -165,23 +165,16 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
         for (let q = 0; q < arrayOfMissionCheckboxes.length && q < 300; q++) {
             arrayOfMissionCheckboxes[q].addEventListener('click', (e) => {
-                // console.log(e.target);
 
-                let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked
-                let checkboxId = e.target.dataset.fobMissionId; // Grabs the event target's id property, makes it into a Number (integar) from a string.
+                let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked.  This value will be passed to the data object for updating.
 
                 let currentObj = obj;
                 currentObj = currentObj.newSetUpKey;
 
-
                 let notation = e.target.dataset.missionDotNotation;
-                // console.log(notation);
                 let notationArray = notation.split('.');
-                // console.log("notation array:", notationArray);
 
-                // console.log("first obj", storeObj);
-
-                for (let u = 0; u < notationArray.length; u++) {
+                for (let u = 0; u < notationArray.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
                     let key = notationArray[u];
                     if (currentObj && currentObj[key]) {
                         currentObj = currentObj[key];
@@ -194,16 +187,7 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
                 currentObj.complete = checked;
 
-                console.log("currentObj", currentObj);
-
-                console.log ("obj", obj);
-
-                setDoc(docRef,  obj , { merge:true });
-
-
-                // updateDoc(docRef, {
-                //     path // checkboxId variable finds the object, then +".complete" finds the key of complete.  Then : checked gives the boolean value of true or false, depending on variable checked.
-                // })
+                setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
             })
         }
     
