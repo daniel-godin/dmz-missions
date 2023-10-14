@@ -34,15 +34,28 @@ const createFOB = async (obj, docRef, user) => {
 
     resetFOBGrid(); // resets the innerHTML for the FOB Grid.  This is a clunky way to fix to duplication that is happening when a user clicks a checkbox, etc.
 
-    createFOBDOM(obj); // Which one of these parameters do I not need to pass along?
+    createFOBDOM(obj, user); // Which one of these parameters do I not need to pass along?
 
     createListenerEvents(obj, docRef, user);
 }
 
-const createFOBDOM = async (obj) => {
-    const DMZFOBInformationContainer = document.getElementById('DMZFOBInformationContainer'); // DOM ID of div container for FOB Grid.
+const createFOBDOM = async (obj, user) => {
 
     obj = obj.newSetUpKey; // This is a hacky way to get around FireStore's limitations of not allow nested arrays, nor having a document start with arrays.  Basically, newSetUpKey is the only key to the data Object, and it's value is an array with all the data.
+
+    let userStatus;
+    let TaskContainerClass;
+    if (!user) { 
+        userStatus = "hide"; 
+        TaskContainerClass = "fob-mission-task-container-logged-out";
+    };
+    if (user) { 
+        userStatus = "" 
+        TaskContainerClass = "fob-mission-task-container"
+    };
+
+
+    const DMZFOBInformationContainer = document.getElementById('DMZFOBInformationContainer'); // DOM ID of div container for FOB Grid.
 
     // START OF NEW DOM CREATION.  USING data FOB Object, which is a mix of arrays and objects.
     for (let i = 0; i < obj.length && i < 20; i++) { // First Loop:
@@ -95,7 +108,7 @@ const createFOBDOM = async (obj) => {
                     <div class='fob-mission-container'>
                         <div class='fob-mission-title-container'>
                             <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
-                            <div class='fob-mission-complete-container'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-mission-dot-notation="${missionDotNotation}" ${complete} /></div>
+                            <div class='fob-mission-complete-container ${userStatus}'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-mission-dot-notation="${missionDotNotation}" ${complete} /></div>
                         </div>
                         <div class='fob-mission-info-container'>
                             <div class='fob-mission-tasks-container' data-attachment-id="${missionId}"></div>
@@ -122,10 +135,10 @@ const createFOBDOM = async (obj) => {
 
                     DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                         <ul>
-                            <li class="fob-mission-task-container" data-task-id="">
-                                <input type='checkbox' class='task-checkbox' data-task-id='${taskId}' data-obj-notation='${missionTaskDotNotation}' ${complete} />
+                            <li class="task-list" data-task-id="">
+                                <input type='checkbox' class='task-checkbox ${userStatus}' data-task-id='${taskId}' data-obj-notation='${missionTaskDotNotation}' ${complete} />
                                 <div class='mission-task'>
-                                    <p>${task}</p><p>${progressCurrent}</p><p> / </p><p>${progressTotal}</p>
+                                    <p>${task}</p><p class='${userStatus}'>${progressCurrent}</p><p class='${userStatus}'> / </p><p class='${userStatus}'>${progressTotal}</p>
                                 </div>
                             </li>
                         </ul>

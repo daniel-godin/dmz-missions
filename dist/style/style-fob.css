@@ -143,7 +143,6 @@
 .fob-mission-tasks-container {
     border: 2px solid var(--color-accent);
     border-radius: var(--size-border-radius-content);
-
     height: min-content;
     width: 100%;
     padding: 0;
@@ -168,9 +167,23 @@
     padding: .5rem;
 }
 
+/* .fob-mission-task-container-logged-out {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5rem;
+    margin: 0;
+    padding: .5rem;
+} */
+
+.task-list {
+    list-style-type: none;
+}
+
 .mission-task {
     display: grid;
     grid-template-columns: 1fr min-content min-content min-content; 
+    row-gap: .5rem;
+    padding: .5rem;
 }
 
 .fob-mission-info-reward {
