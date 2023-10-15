@@ -73,6 +73,12 @@
     /* border: 1px dashed green; */
     width: 100%;
     text-align: center;
+    text-decoration: none;
+}
+
+.fob-section-header:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .fob-section-info-container {

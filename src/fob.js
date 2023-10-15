@@ -66,7 +66,7 @@ const createFOBDOM = async (obj, user) => {
 
         DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
             <div class='fob-section-container' data-fob-section='${sectionTitle}'>
-                <header class='fob-section-header'>${sectionTitle}</header>
+                <h2 class='fob-section-header'>${sectionTitle}</h2>
                 <div class='fob-section-info-container' data-attachment-id='${sectionTitle}'></div>
             </div>
         `)
@@ -188,9 +188,9 @@ const createFOBDOM = async (obj, user) => {
 const createListenerEvents = async (obj, docRef, user) => { // Listener Events:  Checkboxes, Titles (minimizing, etc.), etc.
 
     // These are Listener events that don't require someone to be logged in:
+
     // Mission Titles Listener Event.  User clicks on the mission title to minimize all the data below it.  Making the data "dissapear", helps readability.
     const arrayOfMissionTitles = document.getElementsByClassName('fob-mission-title');
-
     for (let i = 0; i < arrayOfMissionTitles.length && i < 500; i++) {
         arrayOfMissionTitles[i].addEventListener('click', (e) => {
             e.target.parentNode.nextElementSibling.classList.toggle('hide');
@@ -204,19 +204,17 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
         })
     }
 
+    // Sub-Section Titles Listener Event.  User Clicks On Title and "hides" all missions inside of it.  Improving readability.
     const arrayOfSubSectionTitles = document.getElementsByClassName('sub-section-titles');
-
     for (let i = 0; i < arrayOfSubSectionTitles.length && i < 100; i++) {
         arrayOfSubSectionTitles[i].addEventListener('click', (e) => {
             e.target.nextElementSibling.classList.toggle('hide');
-            console.log("subSectionTitle Clicked:"); // For testing purposes.
-
+            
             let storageKey = e.target.dataset.storageKey;
 
             // These are to keep a user's minimized preferences stored across sessions.
             if (e.target.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `hideBox`); };
             if (!e.target.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `showBox`); };
-
         })
     }
 
