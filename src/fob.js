@@ -64,13 +64,14 @@ const createFOBDOM = async (obj, user) => {
         let sectionTitle = arrayOfSectionTitle[0];
         let arrayFirstLevel = obj[i][sectionTitle];
 
+        let sectionHeaderClass = 'fob-section-container';
         let sectionHeaderMinimizeStatus = localStorage.getItem(`${sectionTitle}`) // This is using a mission specific identifier of "missionId" as the key in localStorage.  Then grabbing the value of that key, using that value to set whether a title should be minimized or not.
-        if (sectionHeaderMinimizeStatus == 'hideBox') { sectionHeaderMinimizeStatus = 'hide' }
-        if (sectionHeaderMinimizeStatus == 'showBox') { sectionHeaderMinimizeStatus = '' }
+        if (sectionHeaderMinimizeStatus == 'hideBox') { sectionHeaderClass = 'fob-section-container-minimized'; sectionHeaderMinimizeStatus = 'hide' }
+        if (sectionHeaderMinimizeStatus == 'showBox') { sectionHeaderClass = 'fob-section-container'; sectionHeaderMinimizeStatus = '' }
 
 
         DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
-            <div class='fob-section-container' data-fob-section='${sectionTitle}'>
+            <div class='${sectionHeaderClass}' data-fob-section='${sectionTitle}'>
                 <h2 class='fob-section-header' data-storage-key='${sectionTitle}'>${sectionTitle}</h2>
                 <div class='fob-section-info-container ${sectionHeaderMinimizeStatus}' data-attachment-id='${sectionTitle}'></div>
             </div>
@@ -223,11 +224,12 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
         })
     }
 
-    // Sub-Section Titles Listener Event.  User Clicks On Title and "hides" all missions inside of it.  Improving readability.
+    // Main Section Titles Listener Event.  User Clicks On Title and "hides" all missions inside of it.  Improving readability.
     const arrayOfSectionHeaders = document.getElementsByClassName('fob-section-header');
     for (let i = 0; i < arrayOfSectionHeaders.length && i < 100; i++) {
         arrayOfSectionHeaders[i].addEventListener('click', (e) => {
             e.target.nextElementSibling.classList.toggle('hide');
+            e.target.parentNode.classList.toggle('fob-section-container-minimized');
 
             console.log("Section Header Clicked"); // For Testing Purposes.
             
