@@ -101,6 +101,7 @@
 }
 
 .fob-section-info-container {
+    height: min-content;
     width: 100%;
     padding: 1rem;
     /* background-color: var(--color-second-main); */
