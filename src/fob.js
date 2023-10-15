@@ -64,10 +64,15 @@ const createFOBDOM = async (obj, user) => {
         let sectionTitle = arrayOfSectionTitle[0];
         let arrayFirstLevel = obj[i][sectionTitle];
 
+        let sectionHeaderMinimizeStatus = localStorage.getItem(`${sectionTitle}`) // This is using a mission specific identifier of "missionId" as the key in localStorage.  Then grabbing the value of that key, using that value to set whether a title should be minimized or not.
+        if (sectionHeaderMinimizeStatus == 'hideBox') { sectionHeaderMinimizeStatus = 'hide' }
+        if (sectionHeaderMinimizeStatus == 'showBox') { sectionHeaderMinimizeStatus = '' }
+
+
         DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
             <div class='fob-section-container' data-fob-section='${sectionTitle}'>
-                <h2 class='fob-section-header'>${sectionTitle}</h2>
-                <div class='fob-section-info-container' data-attachment-id='${sectionTitle}'></div>
+                <h2 class='fob-section-header' data-storage-key='${sectionTitle}'>${sectionTitle}</h2>
+                <div class='fob-section-info-container ${sectionHeaderMinimizeStatus}' data-attachment-id='${sectionTitle}'></div>
             </div>
         `)
 
@@ -209,6 +214,22 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
     for (let i = 0; i < arrayOfSubSectionTitles.length && i < 100; i++) {
         arrayOfSubSectionTitles[i].addEventListener('click', (e) => {
             e.target.nextElementSibling.classList.toggle('hide');
+
+            let storageKey = e.target.dataset.storageKey;
+
+            // These are to keep a user's minimized preferences stored across sessions.
+            if (e.target.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `hideBox`); };
+            if (!e.target.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `showBox`); };
+        })
+    }
+
+    // Sub-Section Titles Listener Event.  User Clicks On Title and "hides" all missions inside of it.  Improving readability.
+    const arrayOfSectionHeaders = document.getElementsByClassName('fob-section-header');
+    for (let i = 0; i < arrayOfSectionHeaders.length && i < 100; i++) {
+        arrayOfSectionHeaders[i].addEventListener('click', (e) => {
+            e.target.nextElementSibling.classList.toggle('hide');
+
+            console.log("Section Header Clicked"); // For Testing Purposes.
             
             let storageKey = e.target.dataset.storageKey;
 
@@ -217,6 +238,7 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
             if (!e.target.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `showBox`); };
         })
     }
+    
 
 
     // Listener Events That Require User To Be Logged In:
