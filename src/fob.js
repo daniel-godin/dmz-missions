@@ -74,14 +74,20 @@ const createFOBDOM = async (obj, user) => {
         for (let j = 0; j < arrayFirstLevel.length && j < 20; j++) { // Second Loop (NESTED IN FIRST):
 
             let arrayOfSubSectionTitles = Object.keys(arrayFirstLevel[j]);
-            let subSectionTitles = arrayOfSubSectionTitles[0];
-            let arraySecondLevel = arrayFirstLevel[j][subSectionTitles];
+            let subSectionTitle = arrayOfSubSectionTitles[0];
+            let arraySecondLevel = arrayFirstLevel[j][subSectionTitle];
+
+            let subSectionTitleMinimizeStatus = localStorage.getItem(`${subSectionTitle}`) // This is using a mission specific identifier of "missionId" as the key in localStorage.  Then grabbing the value of that key, using that value to set whether a title should be minimized or not.
+            if (subSectionTitleMinimizeStatus == 'hideBox') { subSectionTitleMinimizeStatus = 'hide' }
+            if (subSectionTitleMinimizeStatus == 'showBox') { subSectionTitleMinimizeStatus = '' }
+
 
             let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${sectionTitle}"]`);
 
             DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                <div class='full-fob-mission-container' data-attachment-id="${subSectionTitles}">
-                    <p>${subSectionTitles}</p>
+                <div class='full-fob-mission-container'>
+                    <h2 class='sub-section-titles' data-storage-key='${subSectionTitle}'>${subSectionTitle}</h2>
+                    <div class='fob-missions-container ${subSectionTitleMinimizeStatus}' data-attachment-id="${subSectionTitle}">
                 </div>
             `)
 
@@ -102,13 +108,14 @@ const createFOBDOM = async (obj, user) => {
 
                 let arrayThirdLevel = missionDataObject.tasks;
 
-                let missionDotNotation = `${i}.${sectionTitle}.${j}.${subSectionTitles}.${k}`;
+                let missionDotNotation = `${i}.${sectionTitle}.${j}.${subSectionTitle}.${k}`;
 
-                let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${subSectionTitles}"]`);
 
                 let missionTitleMinimizeStatus = localStorage.getItem(`${missionId}`) // This is using a mission specific identifier of "missionId" as the key in localStorage.  Then grabbing the value of that key, using that value to set whether a title should be minimized or not.
                 if (missionTitleMinimizeStatus == 'hideBox') { missionTitleMinimizeStatus = 'hide' }
                 if (missionTitleMinimizeStatus == 'showBox') { missionTitleMinimizeStatus = '' }
+
+                let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${subSectionTitle}"]`);
 
 
                 DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
@@ -138,23 +145,39 @@ const createFOBDOM = async (obj, user) => {
                         if (complete == true) { strikeThrough = 'strike-through'; complete = "checked"; }
                         if (complete == false) { strikeThrough = ''; complete = "" };
 
-                    let missionTaskDotNotation = `${i}.${sectionTitle}.${j}.${subSectionTitles}.${k}.tasks.${p}`
+                    let missionTaskDotNotation = `${i}.${sectionTitle}.${j}.${subSectionTitle}.${k}.tasks.${p}`
 
                     let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${missionId}"]`);
 
                     DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                        <ul>
-                            <li class="task-list" data-task-id="">
+                    <ul class='task-list'>
+                        <li class="task-item" data-task-id="">
+                            <label class='mission-task'>
                                 <input type='checkbox' class='task-checkbox ${userStatus}' data-task-id='${taskId}' data-obj-notation='${missionTaskDotNotation}' ${complete} />
-                                <div class='mission-task'>
-                                    <p class='${strikeThrough}'>${task}</p>
-                                    <div class='progress-container ${userStatus}'>
-                                        <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    `)
+                                <span class='${strikeThrough}'>${task}</span>
+                            </label>
+
+                            <div class='progress-container ${userStatus}'>
+                                <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
+                            </div>
+                        </li>
+                    </ul>
+                `)
+
+                    // Saving Commented Code.  This works.  Updating above.
+                    // DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                    //     <ul>
+                    //         <li class="task-list" data-task-id="">
+                    //             <input type='checkbox' class='task-checkbox ${userStatus}' data-task-id='${taskId}' data-obj-notation='${missionTaskDotNotation}' ${complete} />
+                    //             <div class='mission-task'>
+                    //                 <p class='${strikeThrough}'>${task}</p>
+                    //                 <div class='progress-container ${userStatus}'>
+                    //                     <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
+                    //                 </div>
+                    //             </div>
+                    //         </li>
+                    //     </ul>
+                    // `)
                 }
             }
         }
@@ -175,11 +198,30 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
             let storageKey = e.target.dataset.missionId;
 
+            // These are to keep a user's minimized preferences stored across sessions.
             if (e.target.parentNode.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `hideBox`); };
             if (!e.target.parentNode.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `showBox`); };
         })
     }
 
+    const arrayOfSubSectionTitles = document.getElementsByClassName('sub-section-titles');
+
+    for (let i = 0; i < arrayOfSubSectionTitles.length && i < 100; i++) {
+        arrayOfSubSectionTitles[i].addEventListener('click', (e) => {
+            e.target.nextElementSibling.classList.toggle('hide');
+            console.log("subSectionTitle Clicked:"); // For testing purposes.
+
+            let storageKey = e.target.dataset.storageKey;
+
+            // These are to keep a user's minimized preferences stored across sessions.
+            if (e.target.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `hideBox`); };
+            if (!e.target.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `showBox`); };
+
+        })
+    }
+
+
+    // Listener Events That Require User To Be Logged In:
     if (user) {
         // Mission Checkboxes:
         const arrayOfMissionCheckboxes = document.getElementsByClassName('fob-mission-checkbox');
