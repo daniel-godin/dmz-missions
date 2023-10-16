@@ -261,23 +261,39 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
     const arrayOfTabs = document.getElementsByClassName('fob-tab-bar-items');
     for (let i = 0; i < arrayOfTabs.length && i < 10; i++) {
         arrayOfTabs[i].addEventListener('click', (e) => {
-            console.log("Tab clicked", e.target);
+            // console.log("Tab clicked", e.target);
 
-            let storageKey = e.target.dataset.storageKey;
-            let sectionTarget = document.getElementById(`section${storageKey}`);
+            const storageKey = e.target.dataset.storageKey;
+            const sectionTarget = document.getElementById(`section${storageKey}`);
 
+            // console.log("storageKey:", storageKey, "sectionTarget", sectionTarget);
 
-            console.log("section target", sectionTarget);
-            console.log("Tab Storage Key", storageKey);
+            if (storageKey == 'all') { 
+                console.log("All Button Cicked");
+                e.target.classList.toggle('fob-tab-bar-items-hidden');
 
+                if (e.target.classList.contains('fob-tab-bar-items-hidden')) {
+                    console.log("All Contains Hidden");
+                    for (let i = 0; i < arrayOfTabs.length && i < 10; i++) {
+                        arrayOfTabs[i].classList.remove('fob-tab-bar-items-hidden');
+                    }
+                }
+                
+            
+            }
 
-            e.target.classList.toggle('fob-tab-bar-items-hidden');
-            sectionTarget.classList.toggle('hide');
+            if (storageKey !== 'all') {
+                // console.log("testsssss");
+                e.target.classList.toggle('fob-tab-bar-items-hidden');
+                sectionTarget.classList.toggle('hide');
 
-            // These are to keep a user's minimized preferences stored across sessions.
-            if (sectionTarget.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `hideBox`); };
-            if (!sectionTarget.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `showBox`); };
-
+                // console.log("Not all button clicked");
+    
+                // These are to keep a user's minimized preferences stored across sessions.
+                if (sectionTarget.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `hideBox`); };
+                if (!sectionTarget.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `showBox`); };
+    
+            }
 
         })
     }
