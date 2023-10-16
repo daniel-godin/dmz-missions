@@ -85,7 +85,7 @@ const createFOBDOM = async (obj, user) => {
 
         let sectionHeaderMinimizeStatus = localStorage.getItem(`${sectionTitle}`) // This is using a mission specific identifier of "missionId" as the key in localStorage.  Then grabbing the value of that key, using that value to set whether a title should be minimized or not.
         if (sectionHeaderMinimizeStatus == 'hideBox') { sectionHeaderMinimizeStatus = 'hide' }
-        if (sectionHeaderMinimizeStatus == 'showBox') { sectionHeaderMinimizeStatus = '' }
+        if (sectionHeaderMinimizeStatus == 'showBox' || 'null') { sectionHeaderMinimizeStatus = '' }
 
 
         DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
