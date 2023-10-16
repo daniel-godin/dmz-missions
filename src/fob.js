@@ -64,14 +64,13 @@ const createFOBDOM = async (obj, user) => {
         let sectionTitle = arrayOfSectionTitle[0];
         let arrayFirstLevel = obj[i][sectionTitle];
 
-        let sectionHeaderClass = 'fob-section-container';
         let sectionHeaderMinimizeStatus = localStorage.getItem(`${sectionTitle}`) // This is using a mission specific identifier of "missionId" as the key in localStorage.  Then grabbing the value of that key, using that value to set whether a title should be minimized or not.
-        if (sectionHeaderMinimizeStatus == 'hideBox') { sectionHeaderClass = 'fob-section-container-minimized'; sectionHeaderMinimizeStatus = 'hide' }
-        if (sectionHeaderMinimizeStatus == 'showBox') { sectionHeaderClass = 'fob-section-container'; sectionHeaderMinimizeStatus = '' }
+        if (sectionHeaderMinimizeStatus == 'hideBox') { sectionHeaderMinimizeStatus = 'hide' }
+        if (sectionHeaderMinimizeStatus == 'showBox') { sectionHeaderMinimizeStatus = '' }
 
 
         DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
-            <div class='${sectionHeaderClass}' data-fob-section='${sectionTitle}'>
+            <div class='fob-section-container' data-fob-section='${sectionTitle}'>
                 <h2 class='fob-section-header' data-storage-key='${sectionTitle}'>${sectionTitle}</h2>
                 <div class='fob-section-info-container ${sectionHeaderMinimizeStatus}' data-attachment-id='${sectionTitle}'></div>
             </div>
