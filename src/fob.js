@@ -49,8 +49,12 @@ const createFOBDOM = async (obj, user) => {
 
         let camelCaseTitle = camelCase(mainSectionTitle);
 
+        let tabMinimizeStatus = localStorage.getItem(`${camelCaseTitle}`) // This is using a mission specific identifier of "missionId" as the key in localStorage.  Then grabbing the value of that key, using that value to set whether a title should be minimized or not.
+        if (tabMinimizeStatus == 'hideBox') { tabMinimizeStatus = 'fob-tab-bar-items-hidden' }
+        if (tabMinimizeStatus == 'showBox') { tabMinimizeStatus = '' }
+
         DMZFOBTabBar.insertAdjacentHTML('beforeend', `
-            <div class='fob-tab-bar-items' data-storage-key='${camelCaseTitle}'>${mainSectionTitle}</div>
+            <div class='fob-tab-bar-items ${tabMinimizeStatus}' data-storage-key='${camelCaseTitle}'>${mainSectionTitle}</div>
         `)
 
     }
@@ -265,7 +269,14 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
             console.log("section target", sectionTarget);
             console.log("Tab Storage Key", storageKey);
 
+
+            e.target.classList.toggle('fob-tab-bar-items-hidden');
             sectionTarget.classList.toggle('hide');
+
+            // These are to keep a user's minimized preferences stored across sessions.
+            if (sectionTarget.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `hideBox`); };
+            if (!sectionTarget.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `showBox`); };
+
 
         })
     }
