@@ -72,7 +72,8 @@
 }
 
 .fob-section-container {
-    height: 95%;
+    height: min-content;
+    /* height: 95%; Looks better when min-content for now. */
 
     border: 2px solid var(--color-accent);
     border-radius:  var(--size-border-radius-content);

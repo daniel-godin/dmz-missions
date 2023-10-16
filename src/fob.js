@@ -50,9 +50,8 @@ const createFOBDOM = async (obj, user) => {
         let camelCaseTitle = camelCase(mainSectionTitle);
 
         let tabMinimizeStatus = localStorage.getItem(`${camelCaseTitle}`) // This is using a mission specific identifier of "missionId" as the key in localStorage.  Then grabbing the value of that key, using that value to set whether a title should be minimized or not.
-        if (!tabMinimizeStatus) { tabMinimizeStatus = '' };
         if (tabMinimizeStatus == 'hideBox') { tabMinimizeStatus = 'fob-tab-bar-items-hidden' }
-        if (tabMinimizeStatus == 'showBox') { tabMinimizeStatus = '' }
+        if (tabMinimizeStatus == 'showBox' || 'null') { tabMinimizeStatus = '' }
 
         DMZFOBTabBar.insertAdjacentHTML('beforeend', `
             <div class='fob-tab-bar-items ${tabMinimizeStatus}' data-storage-key='${camelCaseTitle}'>${mainSectionTitle}</div>
@@ -242,21 +241,22 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
         })
     }
 
+    // ********** TEMPORARILY DISABLILNG SECTION HEADER CLICKING.  EVERYTHING I WOULD NEED TO DO HERE, I CAN DO IN THE TAB GROUP *********
     // Main Section Titles Listener Event.  User Clicks On Title and "hides" all missions inside of it.  Improving readability.
-    const arrayOfSectionHeaders = document.getElementsByClassName('fob-section-header');
-    for (let i = 0; i < arrayOfSectionHeaders.length && i < 100; i++) {
-        arrayOfSectionHeaders[i].addEventListener('click', (e) => {
-            e.target.nextElementSibling.classList.toggle('hide');
+    // const arrayOfSectionHeaders = document.getElementsByClassName('fob-section-header');
+    // for (let i = 0; i < arrayOfSectionHeaders.length && i < 100; i++) {
+    //     arrayOfSectionHeaders[i].addEventListener('click', (e) => {
+    //         e.target.nextElementSibling.classList.toggle('hide');
 
-            console.log("Section Header Clicked"); // For Testing Purposes.
+    //         console.log("Section Header Clicked"); // For Testing Purposes.
             
-            let storageKey = e.target.dataset.storageKey;
+    //         let storageKey = e.target.dataset.storageKey;
 
-            // These are to keep a user's minimized preferences stored across sessions.
-            if (e.target.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `hideBox`); };
-            if (!e.target.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `showBox`); };
-        })
-    }
+    //         // These are to keep a user's minimized preferences stored across sessions.
+    //         if (e.target.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `hideBox`); };
+    //         if (!e.target.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `showBox`); };
+    //     })
+    // }
 
     const arrayOfTabs = document.getElementsByClassName('fob-tab-bar-items');
     for (let i = 0; i < arrayOfTabs.length && i < 10; i++) {
@@ -269,21 +269,28 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
             // console.log("storageKey:", storageKey, "sectionTarget", sectionTarget);
 
             if (storageKey == 'showAll') { 
-                console.log("All Button Cicked");
+                // console.log("All Button Cicked");
                 e.target.classList.toggle('fob-tab-bar-items-hidden');
 
                 if (e.target.classList.contains('fob-tab-bar-items-hidden')) {
-                    console.log("All Contains Hidden");
+                    // console.log("All Contains Hidden");
                     for (let i = 0; i < arrayOfTabs.length && i < 10; i++) {
                         arrayOfTabs[i].classList.remove('fob-tab-bar-items-hidden');
                     }
                     const arrayOfSectionContainers = document.getElementsByClassName('fob-section-container');
                     for (let i = 0; i < arrayOfSectionContainers.length && i < 10; i++) {
                         arrayOfSectionContainers[i].classList.remove('hide');
+
+                        let innerStorageKey = arrayOfSectionContainers[i].dataset.fobSection;
+
+                        // console.log("innerStorageKey", innerStorageKey);
+
+                        localStorage.setItem(`${innerStorageKey}`, 'showBox');
+
+
+
                     }
                 }
-                
-                // fob-section-container
             
             }
 
