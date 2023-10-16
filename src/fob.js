@@ -277,8 +277,13 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                     for (let i = 0; i < arrayOfTabs.length && i < 10; i++) {
                         arrayOfTabs[i].classList.remove('fob-tab-bar-items-hidden');
                     }
+                    const arrayOfSectionContainers = document.getElementsByClassName('fob-section-container');
+                    for (let i = 0; i < arrayOfSectionContainers.length && i < 10; i++) {
+                        arrayOfSectionContainers[i].classList.remove('hide');
+                    }
                 }
                 
+                // fob-section-container
             
             }
 
