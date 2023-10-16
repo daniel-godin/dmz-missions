@@ -12,7 +12,7 @@ const DMZFOBTabBar = document.getElementById('DMZFOBTabBar');
 // Change this at the beginning of each season.
 const FOBDataObject = dataS6DMZFOB;
 const currentFOBDocName = 'DMZFOBS6';
-const mainSectionArrayTitles = ["All", "Stash", "Weapons Locker", "Equipment", "Bounty Board", "Communications Station"];
+const mainSectionArrayTitles = ["Show All", "Stash", "Weapons Locker", "Equipment", "Bounty Board", "Communications Station"];
 
 onAuthStateChanged(auth, user => {
     if (!DMZFOBContainer) { return; };
@@ -103,7 +103,7 @@ const createFOBDOM = async (obj, user) => {
 
             let subSectionTitleMinimizeStatus = localStorage.getItem(`${subSectionTitle}`) // This is using a mission specific identifier of "missionId" as the key in localStorage.  Then grabbing the value of that key, using that value to set whether a title should be minimized or not.
             if (subSectionTitleMinimizeStatus == 'hideBox') { subSectionTitleMinimizeStatus = 'hide' }
-            if (subSectionTitleMinimizeStatus == 'showBox') { subSectionTitleMinimizeStatus = '' }
+            if (subSectionTitleMinimizeStatus == 'showBox' || 'null') { subSectionTitleMinimizeStatus = '' }
 
 
             let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${sectionTitle}"]`);
@@ -137,7 +137,7 @@ const createFOBDOM = async (obj, user) => {
 
                 let missionTitleMinimizeStatus = localStorage.getItem(`${missionId}`) // This is using a mission specific identifier of "missionId" as the key in localStorage.  Then grabbing the value of that key, using that value to set whether a title should be minimized or not.
                 if (missionTitleMinimizeStatus == 'hideBox') { missionTitleMinimizeStatus = 'hide' }
-                if (missionTitleMinimizeStatus == 'showBox') { missionTitleMinimizeStatus = '' }
+                if (missionTitleMinimizeStatus == 'showBox' || 'null') { missionTitleMinimizeStatus = '' }
 
                 let DOMAttachmentPoint = document.querySelector(`[data-attachment-id="${subSectionTitle}"]`);
 
@@ -268,7 +268,7 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
             // console.log("storageKey:", storageKey, "sectionTarget", sectionTarget);
 
-            if (storageKey == 'all') { 
+            if (storageKey == 'showAll') { 
                 console.log("All Button Cicked");
                 e.target.classList.toggle('fob-tab-bar-items-hidden');
 
@@ -287,7 +287,7 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
             
             }
 
-            if (storageKey !== 'all') {
+            if (storageKey !== 'showAll') {
                 // console.log("testsssss");
                 e.target.classList.toggle('fob-tab-bar-items-hidden');
                 sectionTarget.classList.toggle('hide');
