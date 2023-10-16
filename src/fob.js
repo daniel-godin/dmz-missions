@@ -50,6 +50,7 @@ const createFOBDOM = async (obj, user) => {
         let camelCaseTitle = camelCase(mainSectionTitle);
 
         let tabMinimizeStatus = localStorage.getItem(`${camelCaseTitle}`) // This is using a mission specific identifier of "missionId" as the key in localStorage.  Then grabbing the value of that key, using that value to set whether a title should be minimized or not.
+        if (!tabMinimizeStatus) { tabMinimizeStatus = '' };
         if (tabMinimizeStatus == 'hideBox') { tabMinimizeStatus = 'fob-tab-bar-items-hidden' }
         if (tabMinimizeStatus == 'showBox') { tabMinimizeStatus = '' }
 
