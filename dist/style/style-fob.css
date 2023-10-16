@@ -21,27 +21,38 @@
 }
 
 #DMZFOBContainer {
-    /* display: grid;
-    grid-template-rows: 1fr; When introducing selectable header feature, use 100px, 1fr */
+    display: grid;
+    grid-template-rows: 50px 1fr;
 }
 
-/* #DMZFOBHeaderSelect {
+#DMZFOBTabBar {
     display: grid;
     grid-template-columns: repeat(6, 1fr); 
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-
+    gap: .5rem;
 }
 
-.fob-header-select {
-    display: grid;
-    place-items: center;
-    color: orange;
-    border: 1px solid red;
+.fob-tab-bar-items {
     width: 100%;
     height: 100%;
+
+    color: orange;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--size-border-radius-content);
+
+    display: grid;
+    place-items: center;
+
+
 }
 
-.fob-header-select > header {
+.fob-tab-bar-items:hover {
+    background-color: orange;
+    color: black;
+    cursor: pointer;
+}
+
+/* .fob-header-select > header {
     align-self: center;
 } */
 

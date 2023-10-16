@@ -7,10 +7,12 @@ import { recommendLogInBox } from "./ui";
 
 
 const DMZFOBContainer = document.getElementById('DMZFOBContainer');
+const DMZFOBTabBar = document.getElementById('DMZFOBTabBar');
 
 // Change this at the beginning of each season.
 const FOBDataObject = dataS6DMZFOB;
 const currentFOBDocName = 'DMZFOBS6';
+const mainSectionArrayTitles = ["All", "Stash", "Weapons Locker", "Equipment", "Bounty Board", "Communications Station"];
 
 onAuthStateChanged(auth, user => {
     if (!DMZFOBContainer) { return; };
@@ -41,6 +43,19 @@ const createFOB = async (obj, docRef, user) => {
 
 const createFOBDOM = async (obj, user) => {
 
+    // Creation of the Tab Bar.
+    for (let i = 0; i < mainSectionArrayTitles.length && i < 10; i++) {
+        let mainSectionTitle = mainSectionArrayTitles[i];
+
+        let camelCaseTitle = camelCase(mainSectionTitle);
+
+        DMZFOBTabBar.insertAdjacentHTML('beforeend', `
+            <div class='fob-tab-bar-items' data-storage-key='${camelCaseTitle}'>${mainSectionTitle}</div>
+        `)
+
+    }
+    
+
     obj = obj.newSetUpKey; // This is a hacky way to get around FireStore's limitations of not allow nested arrays, nor having a document start with arrays.  Basically, newSetUpKey is the only key to the data Object, and it's value is an array with all the data.
 
     let userStatus;
@@ -54,10 +69,9 @@ const createFOBDOM = async (obj, user) => {
         TaskContainerClass = "fob-mission-task-container"
     };
 
-
     const DMZFOBInformationContainer = document.getElementById('DMZFOBInformationContainer'); // DOM ID of div container for FOB Grid.
 
-    // START OF NEW DOM CREATION.  USING data FOB Object, which is a mix of arrays and objects.
+    // START OF FULL DOM CREATION FROM DATA OBJECT.
     for (let i = 0; i < obj.length && i < 20; i++) { // First Loop:
 
         let arrayOfSectionTitle = Object.keys(obj[i]);
@@ -70,7 +84,7 @@ const createFOBDOM = async (obj, user) => {
 
 
         DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
-            <div class='fob-section-container' data-fob-section='${sectionTitle}'>
+            <div class='fob-section-container' data-fob-section='${sectionTitle}' id='section${sectionTitle}'>
                 <h2 class='fob-section-header' data-storage-key='${sectionTitle}'>${sectionTitle}</h2>
                 <div class='fob-section-info-container ${sectionHeaderMinimizeStatus}' data-attachment-id='${sectionTitle}'></div>
             </div>
@@ -228,7 +242,6 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
     for (let i = 0; i < arrayOfSectionHeaders.length && i < 100; i++) {
         arrayOfSectionHeaders[i].addEventListener('click', (e) => {
             e.target.nextElementSibling.classList.toggle('hide');
-            e.target.parentNode.classList.toggle('fob-section-container-minimized');
 
             console.log("Section Header Clicked"); // For Testing Purposes.
             
@@ -239,7 +252,23 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
             if (!e.target.nextElementSibling.classList.contains("hide")) { localStorage.setItem(`${storageKey}`, `showBox`); };
         })
     }
-    
+
+    const arrayOfTabs = document.getElementsByClassName('fob-tab-bar-items');
+    for (let i = 0; i < arrayOfTabs.length && i < 10; i++) {
+        arrayOfTabs[i].addEventListener('click', (e) => {
+            console.log("Tab clicked", e.target);
+
+            let storageKey = e.target.dataset.storageKey;
+            let sectionTarget = document.getElementById(`section${storageKey}`);
+
+
+            console.log("section target", sectionTarget);
+            console.log("Tab Storage Key", storageKey);
+
+            sectionTarget.classList.toggle('hide');
+
+        })
+    }
 
 
     // Listener Events That Require User To Be Logged In:
@@ -308,4 +337,12 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
 const resetFOBGrid = async () => {
     DMZFOBInformationContainer.innerHTML = '';
+}
+
+const camelCase = (str) => {
+    let answer = str.toLowerCase();
+
+    // Changing to camelCase:
+    return answer.split(" ").reduce((s, c) => 
+        s + (c.charAt(0).toUpperCase() + c.slice(1)));
 }
