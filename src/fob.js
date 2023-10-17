@@ -180,9 +180,9 @@ const createFOBDOM = async (obj, user) => {
                             </label>
 
                             <div class='progress-container ${userStatus}'>
-                                <button class='btn-task-change-amount' id='btnMinus${taskId}' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
+                                <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
                                 <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
-                                <button class='btn-task-change-amount' id='btnPlus${taskId}' data-obj-notation='${missionTaskDotNotation}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
+                                <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
                             </div>
                         </li>
                     </ul>
@@ -377,26 +377,19 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
         const arrayofMissionTaskButtons = document.getElementsByClassName('btn-task-change-amount');
         for (let i = 0; i < arrayofMissionTaskButtons.length && i < 10000; i++) {
             arrayofMissionTaskButtons[i].addEventListener('click', (e) => {
-                // console.log(e.target);
 
-                console.log("first object check:", obj);
-
-                let tempObj = obj;
-                tempObj = tempObj.newSetUpKey;
-
-                console.log('first temp object check', tempObj);
-
-                let btnId = e.target.id;
+                // Variables From Clicked Target:
                 let progressCurrent = Number(e.target.dataset.progressCurrent);
                 let progressTotal = Number(e.target.dataset.progressTotal);
                 let btnType = e.target.dataset.btnType;
                 let notation = e.target.dataset.objNotation;
 
+                // Variables For Other Uses:
+                let tempObj = obj;
+                tempObj = tempObj.newSetUpKey;
                 let notationArray = notation.split('.');
 
-                console.log("notation array", notationArray);
-
-                for (let u = 0; u < notationArray.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
+                for (let u = 0; u < notationArray.length; u++) { // Loops through the Notation Array and combines them back into a notation for the tempObj notation.
                     let key = notationArray[u];
                     if (tempObj && tempObj[key]) {
                         tempObj = tempObj[key];
@@ -406,48 +399,16 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                     }
                 }
 
-                console.log("temp obj", tempObj)
-
-                // console.log(notation);
-
-                // console.log("currentProgress:", progressCurrent, "totalProgress", progressTotal, "btnType", btnType);
-
                 function changeProgressAmount (num, operator) {
-                    console.log("function:", "progressCurrent", num, "operator", operator);
-
-                    if (operator == '-') { 
-                        console.log("minus operator");
-                        --num };
-                    if (operator == '+') { 
-                        console.log("plus operator");
-                        ++num };
-
-                    console.log(num);
-
+                    if (operator == '-') { --num };
+                    if (operator == '+') { ++num };
                     return num;
-
                 }
 
                 let newNum = changeProgressAmount(progressCurrent, btnType);
-
                 tempObj.progressCurrent = newNum; // Does this return a number or a string? Should return a Number, not a "string".
 
-                console.log("tempObj After Everything", tempObj);
-
-                console.log("LAST OBJECT CHECK", obj);
-
                 setDoc(docRef, obj, { merge:true });  // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
-
-
-
-
-
-                // console.log("After Function Progress", newNum);
-
-
-
-
-
             })
         }
     }
