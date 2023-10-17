@@ -434,6 +434,10 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
                 console.log("tempObj After Everything", tempObj);
 
+                console.log("LAST OBJECT CHECK", obj);
+
+                setDoc(docRef, obj, { merge:true });  // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
+
 
 
 
