@@ -387,6 +387,30 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                 // console.log(btnId);
                 console.log("currentProgress:", progressCurrent, "totalProgress", progressTotal, "btnType", btnType);
 
+                function changeProgressAmount (num, operator) {
+                    console.log("function:", "progressCurrent", num, "operator", operator);
+
+                    if (operator == '-') { 
+                        console.log("minus operator");
+                        --num };
+                    if (operator == '+') { 
+                        console.log("plus operator");
+                        ++num };
+
+                    console.log(num);
+
+                    return num;
+
+                }
+
+                let newNum = changeProgressAmount(progressCurrent, btnType);
+
+                console.log("After Function Progress", newNum);
+
+
+
+
+
             })
         }
     }
