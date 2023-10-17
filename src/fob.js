@@ -385,7 +385,7 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                 let notation = e.target.dataset.objNotation;
 
                 // Variables For Other Uses:
-                let newNum = changeProgressAmount(progressCurrent, btnType); // Calls function to increment or decrement number by 1.  Stores in new variable.
+                let newNum = changeProgressAmount(progressCurrent, progressTotal, btnType); // Calls function to increment or decrement number by 1.  Stores in new variable.
                 let tempObj = obj;
                 tempObj = tempObj.newSetUpKey;
                 let notationArray = notation.split('.');
@@ -404,10 +404,12 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
                 setDoc(docRef, obj, { merge:true });  // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
 
-                function changeProgressAmount (num, operator) {
-                    if (operator == '-') { --num };
-                    if (operator == '+') { ++num };
-                    return num;
+                function changeProgressAmount (numCurrent, numTotal, operator) {
+                    if (operator == '-') { --numCurrent };
+                    if (operator == '+') { ++numCurrent };
+
+                    if (numCurrent < 0) { numCurrent = 0; console.log("Cannot Go Below 0") }
+                    return numCurrent;
                 }
             })
         }
