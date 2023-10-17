@@ -385,6 +385,7 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                 let notation = e.target.dataset.objNotation;
 
                 // Variables For Other Uses:
+                let newNum = changeProgressAmount(progressCurrent, btnType); // Calls function to increment or decrement number by 1.  Stores in new variable.
                 let tempObj = obj;
                 tempObj = tempObj.newSetUpKey;
                 let notationArray = notation.split('.');
@@ -399,16 +400,15 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                     }
                 }
 
+                tempObj.progressCurrent = newNum; // Takes incremented/decremented progressCurrent Number and updates it in the data object.
+
+                setDoc(docRef, obj, { merge:true });  // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
+
                 function changeProgressAmount (num, operator) {
                     if (operator == '-') { --num };
                     if (operator == '+') { ++num };
                     return num;
                 }
-
-                let newNum = changeProgressAmount(progressCurrent, btnType);
-                tempObj.progressCurrent = newNum; // Does this return a number or a string? Should return a Number, not a "string".
-
-                setDoc(docRef, obj, { merge:true });  // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
             })
         }
     }
