@@ -43,6 +43,8 @@ const createFOB = async (obj, docRef, user) => {
 
 const createFOBDOM = async (obj, user) => {
 
+    obj = obj.newSetUpKey; // This is a hacky way to get around FireStore's limitations of not allow nested arrays, nor having a document start with arrays.  Basically, newSetUpKey is the only key to the data Object, and it's value is an array with all the data.
+
     // Creation of the Tab Bar.
     for (let i = 0; i < mainSectionArrayTitles.length && i < 10; i++) {
         let mainSectionTitle = mainSectionArrayTitles[i];
@@ -56,12 +58,9 @@ const createFOBDOM = async (obj, user) => {
         DMZFOBTabBar.insertAdjacentHTML('beforeend', `
             <div class='fob-tab-bar-items ${tabMinimizeStatus}' data-storage-key='${camelCaseTitle}'>${mainSectionTitle}</div>
         `)
-
     }
     
-
-    obj = obj.newSetUpKey; // This is a hacky way to get around FireStore's limitations of not allow nested arrays, nor having a document start with arrays.  Basically, newSetUpKey is the only key to the data Object, and it's value is an array with all the data.
-
+    // I'm not sure how much either of these variables are effecting the function.
     let userStatus;
     let TaskContainerClass;
     if (!user) { 
@@ -181,7 +180,9 @@ const createFOBDOM = async (obj, user) => {
                             </label>
 
                             <div class='progress-container ${userStatus}'>
+                                <button class='btn-task-change-amount' id='btnMinus${taskId}'>-</button>
                                 <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
+                                <button class='btn-task-change-amount' id='btnPlus${taskId}'>+</button>
                             </div>
                         </li>
                     </ul>
@@ -345,7 +346,6 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
     
         // Mission *Tasks* Checkboxes:
         const arrayOfMissionTaskCheckboxes = document.getElementsByClassName('task-checkbox');
-
         for (let t = 0; t < arrayOfMissionTaskCheckboxes.length && t < 999; t++) {
             arrayOfMissionTaskCheckboxes[t].addEventListener('click', (e) => {
 
@@ -370,6 +370,15 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                 currentObj.complete = checked;
 
                 setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
+            })
+        }
+
+        // Mission *Task* Buttons:  Increase or Decrease currentProgress.
+        const arrayofMissionTaskButtons = document.getElementsByClassName('btn-task-change-amount');
+        for (let i = 0; i < arrayofMissionTaskButtons.length && i < 10000; i++) {
+            arrayofMissionTaskButtons[i].addEventListener('click', (e) => {
+                console.log(e.target);
+
             })
         }
     }

@@ -237,7 +237,12 @@
 
 .progress-container {
     display: grid;
-    grid-template-columns: repeat(3, min-content);
+    grid-template-columns: repeat(5, min-content);
+}
+
+.btn-task-change-amount {
+    padding: 5px;
+
 }
 
 .strike-through {
