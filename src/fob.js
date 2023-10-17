@@ -180,9 +180,9 @@ const createFOBDOM = async (obj, user) => {
                             </label>
 
                             <div class='progress-container ${userStatus}'>
-                                <button class='btn-task-change-amount' id='btnMinus${taskId}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
+                                <button class='btn-task-change-amount' id='btnMinus${taskId}' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
                                 <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
-                                <button class='btn-task-change-amount' id='btnPlus${taskId}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
+                                <button class='btn-task-change-amount' id='btnPlus${taskId}' data-obj-notation='${missionTaskDotNotation}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
                             </div>
                         </li>
                     </ul>
@@ -379,13 +379,38 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
             arrayofMissionTaskButtons[i].addEventListener('click', (e) => {
                 // console.log(e.target);
 
+                console.log("first object check:", obj);
+
+                let tempObj = obj;
+                tempObj = tempObj.newSetUpKey;
+
+                console.log('first temp object check', tempObj);
+
                 let btnId = e.target.id;
                 let progressCurrent = Number(e.target.dataset.progressCurrent);
                 let progressTotal = Number(e.target.dataset.progressTotal);
                 let btnType = e.target.dataset.btnType;
+                let notation = e.target.dataset.objNotation;
 
-                // console.log(btnId);
-                console.log("currentProgress:", progressCurrent, "totalProgress", progressTotal, "btnType", btnType);
+                let notationArray = notation.split('.');
+
+                console.log("notation array", notationArray);
+
+                for (let u = 0; u < notationArray.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
+                    let key = notationArray[u];
+                    if (tempObj && tempObj[key]) {
+                        tempObj = tempObj[key];
+                    } else {
+                        console.log("nested property not found.");
+                        break;
+                    }
+                }
+
+                console.log("temp obj", tempObj)
+
+                // console.log(notation);
+
+                // console.log("currentProgress:", progressCurrent, "totalProgress", progressTotal, "btnType", btnType);
 
                 function changeProgressAmount (num, operator) {
                     console.log("function:", "progressCurrent", num, "operator", operator);
@@ -405,7 +430,15 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
                 let newNum = changeProgressAmount(progressCurrent, btnType);
 
-                console.log("After Function Progress", newNum);
+                tempObj.progressCurrent = newNum; // Does this return a number or a string? Should return a Number, not a "string".
+
+                console.log("tempObj After Everything", tempObj);
+
+
+
+
+
+                // console.log("After Function Progress", newNum);
 
 
 
