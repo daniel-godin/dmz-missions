@@ -368,6 +368,7 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                 }
 
                 currentObj.complete = checked;
+                currentObj.progressCurrent = currentObj.progressTotal;
 
                 setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
             })
@@ -385,7 +386,6 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                 let notation = e.target.dataset.objNotation;
 
                 // Variables For Other Uses:
-                let newNum = changeProgressAmount(progressCurrent, progressTotal, btnType); // Calls function to increment or decrement number by 1.  Stores in new variable.
                 let tempObj = obj;
                 tempObj = tempObj.newSetUpKey;
                 let notationArray = notation.split('.');
@@ -400,14 +400,23 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                     }
                 }
 
+                let newNum = changeProgressAmount(progressCurrent, progressTotal, btnType, tempObj); // Calls function to increment or decrement number by 1.  Stores in new variable.
                 tempObj.progressCurrent = newNum; // Takes incremented/decremented progressCurrent Number and updates it in the data object.
 
                 setDoc(docRef, obj, { merge:true });  // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
 
-                function changeProgressAmount (numCurrent, numTotal, operator) {
+                function changeProgressAmount (numCurrent, numTotal, operator, obj) {
                     if (operator == '-') { --numCurrent };
                     if (operator == '+') { ++numCurrent };
 
+                    if (numCurrent < numTotal) { console.log("Task Not Complete Yet"), obj.complete = false; }
+                    if (numCurrent >= numTotal) { 
+                        numCurrent = numTotal; 
+                        console.log("You've Completed This Task.  Congrats!")
+                        // Possibly put in a window.alert or window.prompt here to confirm the user wants to "complete" this task.
+                        // FOR NOW:  Just change the task Object.complete = true; (or false if the decrement);
+                        obj.complete = true;
+                    }
                     if (numCurrent < 0) { numCurrent = 0; console.log("Cannot Go Below 0") }
                     return numCurrent;
                 }
