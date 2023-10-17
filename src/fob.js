@@ -368,7 +368,9 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                 }
 
                 currentObj.complete = checked;
-                currentObj.progressCurrent = currentObj.progressTotal;
+                if (checked == true) { currentObj.progressCurrent = currentObj.progressTotal; }
+
+                if (checked == false && currentObj.progressCurrent >= currentObj.progressTotal) { currentObj.progressCurrent = 0 }
 
                 setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
             })
