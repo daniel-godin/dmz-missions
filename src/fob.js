@@ -368,9 +368,8 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                 }
 
                 currentObj.complete = checked;
-                if (checked == true) { currentObj.progressCurrent = currentObj.progressTotal; }
-
-                if (checked == false && currentObj.progressCurrent >= currentObj.progressTotal) { currentObj.progressCurrent = 0 }
+                if (checked == true) { currentObj.progressCurrent = currentObj.progressTotal; } // Updates object's progressCurrent number to match the progressTotal.
+                if (checked == false && currentObj.progressCurrent >= currentObj.progressTotal) { currentObj.progressCurrent = 0 } // Later, I want this to go back to whatever it was in a previous state.  Unsure of how to do this right now.
 
                 setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
             })
