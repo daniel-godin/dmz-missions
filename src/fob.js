@@ -32,7 +32,7 @@ onAuthStateChanged(auth, user => {
     }) 
 })
 
-const createFOB = async (obj, docRef, user) => {
+const createFOB = (obj, docRef, user) => {
 
     resetFOBGrid(); // resets the innerHTML for the FOB Grid.  This is a clunky way to fix to duplication that is happening when a user clicks a checkbox, etc.
 
@@ -453,8 +453,9 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
     }
 }
 
-const resetFOBGrid = async () => {
+const resetFOBGrid = () => { // ???  Should I put in a parameter that accepts an array of variables to reset them all?
     DMZFOBInformationContainer.innerHTML = '';
+    DMZFOBTabBar.innerHTML = '';
 }
 
 const camelCase = (str) => {
