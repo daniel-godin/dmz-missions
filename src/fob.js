@@ -180,9 +180,9 @@ const createFOBDOM = async (obj, user) => {
                             </label>
 
                             <div class='progress-container ${userStatus}'>
-                                <button class='btn-task-change-amount' id='btnMinus${taskId}'>-</button>
+                                <button class='btn-task-change-amount' id='btnMinus${taskId}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
                                 <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
-                                <button class='btn-task-change-amount' id='btnPlus${taskId}'>+</button>
+                                <button class='btn-task-change-amount' id='btnPlus${taskId}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
                             </div>
                         </li>
                     </ul>
@@ -377,7 +377,15 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
         const arrayofMissionTaskButtons = document.getElementsByClassName('btn-task-change-amount');
         for (let i = 0; i < arrayofMissionTaskButtons.length && i < 10000; i++) {
             arrayofMissionTaskButtons[i].addEventListener('click', (e) => {
-                console.log(e.target);
+                // console.log(e.target);
+
+                let btnId = e.target.id;
+                let progressCurrent = Number(e.target.dataset.progressCurrent);
+                let progressTotal = Number(e.target.dataset.progressTotal);
+                let btnType = e.target.dataset.btnType;
+
+                // console.log(btnId);
+                console.log("currentProgress:", progressCurrent, "totalProgress", progressTotal, "btnType", btnType);
 
             })
         }
