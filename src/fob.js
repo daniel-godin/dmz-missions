@@ -335,12 +335,13 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                 let notationArrayOfNextMissionObject = [...notationArray];
 
                 if (notationArrayOfNextMissionObject.length > 0) { // Basically an error check.
-                    let num = Number(notationArrayOfNextMissionObject[notationArrayOfNextMissionObject.length - 1]);
-                    num++;
+                    let num = Number(notationArrayOfNextMissionObject[notationArrayOfNextMissionObject.length - 1]) + 1;
                     console.log("num", num);
                     notationArrayOfNextMissionObject[notationArrayOfNextMissionObject.length - 1] = num.toString();
                     console.log(notationArrayOfNextMissionObject);
                 }
+
+                console.log("outside of if statement, new array", notationArrayOfNextMissionObject);
 
                 // console.log("Next Mission Array:", notationArrayOfNextMissionObject);
 
