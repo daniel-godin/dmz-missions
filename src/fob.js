@@ -117,6 +117,7 @@ const createFOBDOM = async (obj, user) => {
             for (let k = 0; k < arraySecondLevel.length && k < 20; k++) { // THIRD LOOP (NESTED IN 2ND LOOP).  Loops through each Mission Object.
 
                 let missionTitleStatus;
+                let missionUnlockedStatus;
 
                 let missionDataObject = arraySecondLevel[k];
 
@@ -126,6 +127,11 @@ const createFOBDOM = async (obj, user) => {
                     if (complete == true) { missionTitleStatus = 'mission-complete'; complete = "checked"; };
                     if (complete == false) { missionTitleStatus = ''; complete = "" };
                 let unlocked = missionDataObject.unlocked;
+                // console.log('user status', user);
+                if (user) { // If no user, there's no point to having an "unlocked" change, because it can't be saved.
+                    if (unlocked == true) { missionUnlockedStatus = '' };
+                    if (unlocked == false) { missionUnlockedStatus = 'section-locked'}
+                }
                 let factionRequirement = missionDataObject.factionRequirement;
                 let reward = missionDataObject.reward;
 
@@ -142,7 +148,7 @@ const createFOBDOM = async (obj, user) => {
 
 
                 DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                    <div class='fob-mission-container ${missionTitleStatus}'>
+                    <div class='fob-mission-container ${missionUnlockedStatus} ${missionTitleStatus}'>
                         <div class='fob-mission-title-container'>
                             <h3 class='fob-mission-title' data-mission-id='${missionId}'>${title}</h3>
                             <div class='fob-mission-complete-container ${userStatus}'><input type="checkbox" class='fob-mission-checkbox' data-fob-mission-id='${missionId}' data-mission-dot-notation="${missionDotNotation}" ${complete} /></div>

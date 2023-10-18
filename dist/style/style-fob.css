@@ -260,6 +260,7 @@
 .section-locked {
     border: 2px solid red;
     border-radius: var(--size-border-radius-content);
+    background-color: rgba(255, 0, 0, 0.5);
 }
 
 .hide {
