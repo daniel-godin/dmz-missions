@@ -332,38 +332,72 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
                 let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
 
-                let notationArrayOfNextMissionObject = [...notationArray];
+                // let notationArrayOfNextMissionObject = [...notationArray];
 
-                if (notationArrayOfNextMissionObject.length > 0) { // Basically an error check.
-                    let num = Number(notationArrayOfNextMissionObject[notationArrayOfNextMissionObject.length - 1]) + 1;
-                    console.log("num", num);
-                    notationArrayOfNextMissionObject[notationArrayOfNextMissionObject.length - 1] = num.toString();
-                    console.log(notationArrayOfNextMissionObject);
-                }
+                // if (notationArrayOfNextMissionObject.length > 0) { // Basically an error check.
+                //     let num = Number(notationArrayOfNextMissionObject[notationArrayOfNextMissionObject.length - 1]) + 1;
+                //     notationArrayOfNextMissionObject[notationArrayOfNextMissionObject.length - 1] = num.toString();
+                // }
 
-                console.log("outside of if statement, new array", notationArrayOfNextMissionObject);
-
-                // console.log("Next Mission Array:", notationArrayOfNextMissionObject);
-
-
-                // console.log("Checking notation array to figure out how to create a second array to update next mission object", notationArray);
+                // Check if there is a "next" mission object".
 
                 let currentObj = obj;
                 currentObj = currentObj.newSetUpKey;
 
-                for (let u = 0; u < notationArray.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
-                    let key = notationArray[u];
-                    if (currentObj && currentObj[key]) {
-                        currentObj = currentObj[key];
-                    } else {
-                        console.log("nested property not found.");
-                        break;
+                unlockMission(currentObj, notationArray);
+
+                function unlockMission(obj, arr) {
+                    if (arr.length > 0) { // Basically an error check.
+                        let num = Number(arr[arr.length - 1]) + 1;
+                        arr[arr.length - 1] = num.toString();
                     }
+                    for (let u = 0; u < arr.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
+                        let key = arr[u];
+                        if (obj && obj[key]) {
+                            obj = obj[key];
+                        } else {
+                            console.log("nested property not found.");
+                            break;
+                        }
+                    }
+                    if (typeof obj !== 'object') { console.log("NOT AN OBJECT, BREAK/STOP FUNCTION")}
+                    console.log("Inside Function Object Check:", obj);
+                    console.log("typeof obj", typeof obj);
                 }
 
-                currentObj.complete = checked;
 
-                setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
+                // for (let u = 0; u < notationArrayOfNextMissionObject.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
+                //     let key = notationArrayOfNextMissionObject[u];
+                //     if (currentObj && currentObj[key]) {
+                //         currentObj = currentObj[key];
+                //     } else {
+                //         console.log("nested property not found.");
+                //         break;
+                //     }
+                // }
+
+                console.log("Next Mission Object Accessed:", currentObj);
+
+                console.log("next object unlocked value:", currentObj.unlocked);
+
+
+
+                // let currentObj = obj;
+                // currentObj = currentObj.newSetUpKey;
+
+                // for (let u = 0; u < notationArray.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
+                //     let key = notationArray[u];
+                //     if (currentObj && currentObj[key]) {
+                //         currentObj = currentObj[key];
+                //     } else {
+                //         console.log("nested property not found.");
+                //         break;
+                //     }
+                // }
+
+                // currentObj.complete = checked;
+
+                // setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
             })
         }
     
