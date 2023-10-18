@@ -257,6 +257,11 @@
     padding: 1rem;
 }
 
+.section-locked {
+    border: 2px solid red;
+    border-radius: var(--size-border-radius-content);
+}
+
 .hide {
     display: none;
 }

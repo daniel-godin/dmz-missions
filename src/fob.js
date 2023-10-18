@@ -87,7 +87,6 @@ const createFOBDOM = async (obj, user) => {
         if (sectionHeaderMinimizeStatus == 'hideBox') { sectionHeaderMinimizeStatus = 'hide' }
         if (sectionHeaderMinimizeStatus == 'showBox' || 'null') { sectionHeaderMinimizeStatus = '' }
 
-
         DMZFOBInformationContainer.insertAdjacentHTML('beforeend', `
             <div class='fob-section-container' data-fob-section='${sectionTitle}' id='section${sectionTitle}'>
                 <h2 class='fob-section-header' data-storage-key='${sectionTitle}'>${sectionTitle}</h2>

@@ -6,6 +6,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
       { wallet:  [  // Array of Objects.  Objects:  mission Objects, with key:values with the data that you actually want.
           { title: "Unlock Wallet",
             missionID: 536302,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Black Mous Level 2", // Amount of Faction Needed to "Unlock"
             reward: "Unlock the wallet to store extracted cash.",
@@ -29,6 +30,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           },
           { title: "Wallet Expansion 1",
             missionID: 781282,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "White Lotus Level 3", // Amount of Faction Needed to "Unlock"
             reward: "Expand the wallet's capacity by $150k",
@@ -66,6 +68,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           },
           { title: "Wallet Expansion 2",
             missionID: 224097,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "White Lotus Level 4", // Amount of Faction Needed to "Unlock"
             reward: "Expand the wallet's capacity by an additional $150k.",
@@ -110,6 +113,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           },
           { title: "Wallet Expansion 3",
             missionID: 528243,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "White Lotus Level 6", // Amount of Faction Needed to "Unlock"
             reward: "Expand the wallet's capacity by an additional 100k.",
@@ -133,6 +137,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           },
           { title: "Wallet Expansion 4",
             missionID: 674971,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "White Lotus Level 8", // Amount of Faction Needed to "Unlock"
             reward: "Expand the wallet's capacity by an additional $100k.",
@@ -163,6 +168,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           },
           { title: "Wallet Expansion 5", // I haven't gotten to wallet expansion 5 yet.
             missionID: 228593,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "White Lotus Level 10", // Amount of Faction Needed to "Unlock"
             reward: "Expand the wallet's capacity by an additional $100k.",
@@ -225,6 +231,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           {
             title: "Stash Expansion 1",
             missionID: 299126,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Black Mous (4)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the mission item and key stashes by 5 slots each.",
@@ -256,6 +263,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           {
             title: "Stash Expansion 2",
             missionID: 903743,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Black Mous (5)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the mission item and key stashes by an additional 5 slots each.",
@@ -294,6 +302,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           {
             title: "Stash Expansion 3",
             missionID: 146777,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Black Mous (6)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the mission item and key stashes by an additional 4 slots each.",
@@ -332,6 +341,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           {
             title: "Stash Expansion 4",
             missionID: 726352,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Black Mous (8)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the mission item and key stashes by an additional 3 slots each.",
@@ -377,6 +387,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           {
             title: "Stash Expansion 5",
             missionID: 562066,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Black Mous (10)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the mission item and key stashes by an additional 3 slots each.",
@@ -418,6 +429,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           {
             title: "Wallet Expansion 1 (CROWN)",
             missionID: 700672,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Crown (4)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the wallet's capacity by $100k.",
@@ -456,6 +468,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           {
             title: "Wallet Expansion 2 (CROWN)",
             missionID: 191716,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Crown (5)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the wallet's capacity by $50k.",
@@ -494,6 +507,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           {
             title: "Wallet Expansion 3 (CROWN)",
             missionID: 803545,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Crown (6)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the wallet's capacity by $50k.",
@@ -539,6 +553,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           {
             title: "Wallet Expansion 4 (CROWN)",
             missionID: 959746,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Crown (8)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the wallet's capacity by $50k.",
@@ -584,6 +599,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { // Not unlocked yet for me
             title: "Wallet Expansion 5 (CROWN)",
             missionID: 246759,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Crown (10)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the wallet's capacity by $50k.",
@@ -646,6 +662,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           {
             title: "Stash Expansion 1 (CROWN)",
             missionID: 838099,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Crown (4)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the mission item and key stashes by an additional 3 slots each.",
@@ -684,6 +701,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           {
             title: "Stash Expansion 2 (CROWN)",
             missionID: 543199,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Crown (5)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the mission item and key stashes by an additional 3 slots each.",
@@ -715,6 +733,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           {
             title: "Stash Expansion 3 (CROWN)",
             missionID: 553251,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Crown (6)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the mission item and key stashes by an additional 2 slots each.",
@@ -760,6 +779,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           {
             title: "Stash Expansion 4 (CROWN)",
             missionID: 120195,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Crown (8)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the mission item and key stashes by an additional 1 slots each.",
@@ -791,6 +811,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { // I haven't reached this yet.
             title: "Stash Expansion 5 (CROWN)",
             missionID: 466767,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Crown (10)", // Amount of Faction Needed to "Unlock"
             reward: "Expand the mission item and key stashes by an additional 1 slots each.",
@@ -855,6 +876,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         {
           title: "1st Insured Slot Cooldown Reduction 1",
           missionID: 119318,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
           factionRequirement: "Phalanx (3)", // Amount of Faction Needed to "Unlock"
           reward: "Reduce the cooldown of the 1st insured slot by 25%.",
@@ -893,6 +915,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         {
           title: "1st Insured Slot Cooldown Reduction 2",
           missionID: 745240,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
           factionRequirement: "Phalanx (9)", // Amount of Faction Needed to "Unlock"
           reward: "Reduce the cooldown of the 1st insured slot by an additional 25% (50% total).",
@@ -941,9 +964,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "Unlock 2nd Insured Slot",
           missionID: 189737,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Black Mous", // Shadow Company, Black Mous, etc.
+          ion: "Black Mous", // Shadow Company, Black Mous, etc.
           factionRequirement: 4, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Unlock the 2nd insured weapon slot.",
@@ -982,9 +1005,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "2nd Insured Slot Cooldown Reduction 1",
           missionID: 684045,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Phalanx", // Shadow Company, Black Mous, etc.
+          ion: "Phalanx", // Shadow Company, Black Mous, etc.
           factionRequirement: 5, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Reduce the cooldown of the 2nd insured slot by 25%.",
@@ -1023,9 +1046,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "2nd Insured Slot Cooldown Reduction 2",
           missionID: 164117,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Phalanx", // Shadow Company, Black Mous, etc.
+          ion: "Phalanx", // Shadow Company, Black Mous, etc.
           factionRequirement: 12, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Reduce the cooldown of the 2nd insured slot by an additional 25% (50% total).",
@@ -1088,9 +1111,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "Unlock 3rd Insured Slot",
           missionID: 576216,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Black Mous", // Shadow Company, Black Mous, etc.
+          ion: "Black Mous", // Shadow Company, Black Mous, etc.
           factionRequirement: 4, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Unlock the 3rd insured weapon slot.",
@@ -1140,9 +1163,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "3rd Insured Slot Cooldown Reduction 1",
           missionID: 741676,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Phalanx", // Shadow Company, Black Mous, etc.
+          ion: "Phalanx", // Shadow Company, Black Mous, etc.
           factionRequirement: 7, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Reduce the cooldown of the 3rd insured slot by 25%.",
@@ -1176,9 +1199,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "3rd Insured Slot Cooldown Reduction 2",
           missionID: 792116,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Phalanx", // Shadow Company, Black Mous, etc.
+          ion: "Phalanx", // Shadow Company, Black Mous, etc.
           factionRequirement: 15, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Reduce the cooldown of the 3rd insured slot by an additional 25% (50% total).",
@@ -1239,9 +1262,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "Contraband Stash Expansion 1",
           missionID: 468645,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Black Mous", // Shadow Company, Black Mous, etc.
+          ion: "Black Mous", // Shadow Company, Black Mous, etc.
           factionRequirement: 5, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Expand the contraband stash by 5 slots.",
@@ -1275,9 +1298,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "Contraband Stash Expansion 2",
           missionID: 802168,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Black Mous", // Shadow Company, Black Mous, etc.
+          ion: "Black Mous", // Shadow Company, Black Mous, etc.
           factionRequirement: 7, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Expand the contraband stash by an additional 5 slots.",
@@ -1311,9 +1334,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "Contraband Stash Expansion 3",
           missionID: 295617,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Black Mous", // Shadow Company, Black Mous, etc.
+          ion: "Black Mous", // Shadow Company, Black Mous, etc.
           factionRequirement: 9, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Expand the contraband stash by an additional 4 slots.",
@@ -1347,9 +1370,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "Contraband Stash Expansion 4",
           missionID: 868643,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Black Mous", // Shadow Company, Black Mous, etc.
+          ion: "Black Mous", // Shadow Company, Black Mous, etc.
           factionRequirement: 12, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 4, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Expand the contraband stash by an additional 3 slots.",
@@ -1391,9 +1414,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "Contraband Stash Expansion 5",
           missionID: 958670,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Black Mous", // Shadow Company, Black Mous, etc.
+          ion: "Black Mous", // Shadow Company, Black Mous, etc.
           factionRequirement: 15, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 5, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Expand the contraband stash by an additional 3 slots.",
@@ -1438,9 +1461,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "Contraband Stash Expansion (CROWN) 1",
           missionID: 814733,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Crown", // Shadow Company, Black Mous, etc.
+          ion: "Crown", // Shadow Company, Black Mous, etc.
           factionRequirement: 5, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Expand the contraband stash by an additional 3 slots.",
@@ -1474,9 +1497,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "Contraband Stash Expansion (CROWN) 2",
           missionID: 784173,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Crown", // Shadow Company, Black Mous, etc.
+          ion: "Crown", // Shadow Company, Black Mous, etc.
           factionRequirement: 7, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Expand the contraband stash by an additional 3 slots.",
@@ -1510,9 +1533,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "Contraband Stash Expansion (CROWN) 3",
           missionID: 549167,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Crown", // Shadow Company, Black Mous, etc.
+          ion: "Crown", // Shadow Company, Black Mous, etc.
           factionRequirement: 9, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Expand the contraband stash by an additional 3 slots.",
@@ -1554,9 +1577,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "Contraband Stash Expansion (CROWN) 4",
           missionID: 432265,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Crown", // Shadow Company, Black Mous, etc.
+          ion: "Crown", // Shadow Company, Black Mous, etc.
           factionRequirement: 12, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 4, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Expand the contraband stash by an additional 3 slots.",
@@ -1614,9 +1637,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
         { 
           title: "Contraband Stash Expansion (CROWN) 5",
           missionID: 388290,
+          unlocked: false, 
           complete: false, // true/false complete/incomplete
-          unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-          faction: "Crown", // Shadow Company, Black Mous, etc.
+          ion: "Crown", // Shadow Company, Black Mous, etc.
           factionRequirement: 15, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
           positionInTier: 5, // Number. 1-?? or 01-??.  Position in the DOM list.
           reward: "Expand the contraband stash by an additional 3 slots.",
@@ -1663,9 +1686,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Increased Starting Armor",
             missionID: 217615,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-            faction: "", // Shadow Company, Black Mous, etc.
+            ction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "Start deployments with 3 armor plates.",
@@ -1699,9 +1722,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Increased Starting Armor II",
             missionID: 774256,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-            faction: "Shadow Company", // Shadow Company, Black Mous, etc.
+            ction: "Shadow Company", // Shadow Company, Black Mous, etc.
             factionRequirement: 5, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "Start deployments with 4 armor plates.",
@@ -1735,9 +1758,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Increased Starting Armor III",
             missionID: 208774,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-            faction: "Shadow Company", // Shadow Company, Black Mous, etc.
+            ction: "Shadow Company", // Shadow Company, Black Mous, etc.
             factionRequirement: 9, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "Start deployments with 5 armor plates.",
@@ -1798,9 +1821,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Unlock Rebreather",
             missionID: 467290,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-            faction: "Shadow Company", // Shadow Company, Black Mous, etc.
+            ction: "Shadow Company", // Shadow Company, Black Mous, etc.
             factionRequirement: 3, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "Unlock Rebreather",
@@ -1866,9 +1889,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Unlock Armor Box",
             missionID: 602308,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-            faction: "Shadow Company", // Shadow Company, Black Mous, etc.
+            ction: "Shadow Company", // Shadow Company, Black Mous, etc.
             factionRequirement: 7, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "Unlock Armor Box.",
@@ -1937,9 +1960,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Starting Solo Self Revive",
             missionID: 804660,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-            faction: "", // Shadow Company, Black Mous, etc.
+            ction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "Start solo deployments with a self revive.",
@@ -1970,8 +1993,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Personal Exfils",
             missionID: 763984,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "White Lotus", // Shadow Company, Black Mous, etc.
             factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -1998,8 +2021,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Personal Exfil Discount 1",
             missionID: 871413,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2026,8 +2049,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Personal Exfil Discount 2",
             missionID: 507811,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2054,8 +2077,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Personal Exfil Discount 3",
             missionID: 832493,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 4, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2085,9 +2108,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Revive Pistol Barter",
             missionID: 839904,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-            faction: "White Lotus", // Shadow Company, Black Mous, etc.
+            ction: "White Lotus", // Shadow Company, Black Mous, etc.
             factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "Unlock the barter trade for Revive Pistols.",
@@ -2116,9 +2139,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Comms Plate Carrier Barter",
             missionID: 121842,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-            faction: "White Lotus", // Shadow Company, Black Mous, etc.
+            ction: "White Lotus", // Shadow Company, Black Mous, etc.
             factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "Unlock the barter trade for Communications Plate Carriers.",
@@ -2147,9 +2170,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Stealth Plate Carrier Barter",
             missionID: 536869,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-            faction: "White Lotus", // Shadow Company, Black Mous, etc.
+            ction: "White Lotus", // Shadow Company, Black Mous, etc.
             factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "Unlock the barter trade for Stealth Plate Carriers.",
@@ -2175,9 +2198,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Workbench Discount 1",
             missionID: 888681,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-            faction: "", // Shadow Company, Black Mous, etc.
+            ction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "10% reduced cost of adding attachments to weapons at a workbench.",
@@ -2203,9 +2226,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { // I don't know tasks for workbenchDiscount2 or 3.
             title: "Workbench Discount 2",
             missionID: 390694,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-            faction: "", // Shadow Company, Black Mous, etc.
+            ction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "Additional 10% reduced cost of adding attachments to weapons at a workbench.",
@@ -2271,9 +2294,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Workbench Discount 3",
             missionID: 692141,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-            faction: "", // Shadow Company, Black Mous, etc.
+            ction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 4, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "Additional 5% reduced cost of adding attachments to weapons at a workbench.",
@@ -2342,8 +2365,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Tempered Plate Carrier Barter",
             missionID: 397070,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "White Lotus", // Shadow Company, Black Mous, etc.
             factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2373,8 +2396,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Medic Plate Carrior Barter",
             missionID: 336641,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "White Lotus", // Shadow Company, Black Mous, etc.
             factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2401,8 +2424,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Armor Plate Discount 1",
             missionID: 349599,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2429,8 +2452,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { // I don't know the tasks for armorPlateDiscount 2 or 3.
             title: "Armor Plate Discount 2",
             missionID: 967217,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2497,8 +2520,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Armor Plate Discount 3",
             missionID: 223929,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 4, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2568,8 +2591,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Scavenger Backpack Barter",
             missionID: 326988,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "White Lotus", // Shadow Company, Black Mous, etc.
             factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2596,8 +2619,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Secure Backpack Barter",
             missionID: 435316,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2627,8 +2650,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Skeleton Key Barter",
             missionID: 760337,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "White Lotus", // Shadow Company, Black Mous, etc.
             factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2655,9 +2678,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { // I don't know mk32barterunlock tasks yet.
             title: "MK32 Barter",
             missionID: 678791,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-            faction: "", // Shadow Company, Black Mous, etc.
+            ction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "Unlock the barter trade for the MK32.",
@@ -2726,9 +2749,9 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Killstreak Discount 1",
             missionID: 452688,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
-            faction: "White Lotus", // Shadow Company, Black Mous, etc.
+            ction: "White Lotus", // Shadow Company, Black Mous, etc.
             factionRequirement: 2, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
             reward: "10% reduced cost of killstreaks at buy stations.",
@@ -2754,8 +2777,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Killstreak Discount 2",
             missionID: 869716,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2782,8 +2805,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
             title: "Killstreak Discount 3",
             missionID: 768385,
+            unlocked: false, 
             complete: false, // true/false complete/incomplete
-            unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
             faction: "", // Shadow Company, Black Mous, etc.
             factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
             positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2815,8 +2838,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Unlock Black Mous Daily Urgent Missions",
               missionID: 193488,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2843,8 +2866,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Unlock Black Mous Weekly Urgent Missions",
               missionID: 988202,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2874,8 +2897,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Unlock White Lotus Daily Urgent Missions",
               missionID: 662102,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2902,8 +2925,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Unlock White Lotus Weekly Urgent Missions",
               missionID: 168070,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2933,8 +2956,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Unlock Crown Daily Urgent Missions",
               missionID: 722766,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2961,8 +2984,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Unlock Crown Weekly Urgent Missions",
               missionID: 260881,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -2992,8 +3015,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Unlock Phalanx Daily Urgent Missions",
               missionID: 673298,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3020,8 +3043,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Unlock Phalanx Weekly Urgent Missions",
               missionID: 478600,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3051,8 +3074,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Unlock Shadow Company Daily Urgent Missions",
               missionID: 398816,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3079,8 +3102,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Unlock Shadow Company Weekly Urgent Missions",
               missionID: 629236,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3110,8 +3133,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Increased Commander Intel",
               missionID: 585865,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3157,8 +3180,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Increased Safe Intel",
               missionID: 979666,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3204,8 +3227,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Increased Weapon Stash Intel",
               missionID: 838893,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3251,8 +3274,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Increased Safe Contents",
               missionID: 987834,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3290,8 +3313,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Increased Supply Cache Contents",
               missionID: 730045,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3337,8 +3360,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Increased Exfil Chopper Speed",
               missionID: 454078,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3368,8 +3391,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Increased Contract Payment I",
               missionID: 961676,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3396,8 +3419,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { // I don't have the tasks for increasedContractPayment2 and 3.
               title: "Increased Contract Payment II",
               missionID: 425387,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3464,8 +3487,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Increased Contract Payment III",
               missionID: 908803,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3535,8 +3558,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Increased UAV Tower Duration I",
               missionID: 709557,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3603,8 +3626,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Increased UAV Tower Duration II",
               missionID: 559475,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3655,8 +3678,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { // I don't know the tasks for increasedUAVTowerDuration3.  I need shadow company lvl 15 to see it.
               title: "Increased UAV Tower Duration III",
               missionID: 853955,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "Shadow Company", // Shadow Company, Black Mous, etc.
               factionRequirement: 15, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3726,8 +3749,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Increased Sam Site Duration I",
               missionID: 613890,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 1, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3770,8 +3793,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { 
               title: "Increased Sam Site Duration II",
               missionID: 174449,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 2, // Number. 1-?? or 01-??.  Position in the DOM list.
@@ -3822,8 +3845,8 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           { // I don't know the tasks for increasedSamSiteDuration3.  I haven't finished 2 yet.
               title: "Increased Sam Site Duration III",
               missionID: 769748,
+              unlocked: false, 
               complete: false, // true/false complete/incomplete
-              unlocked: false, // true/false.  Will need:  correct amount of faction, and to have completed the previous mission.
               faction: "", // Shadow Company, Black Mous, etc.
               factionRequirement: 0, // Amount of Faction Needed to "Unlock" - Using a Number, not a "string"
               positionInTier: 3, // Number. 1-?? or 01-??.  Position in the DOM list.
