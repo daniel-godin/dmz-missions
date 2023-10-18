@@ -6,7 +6,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
       { wallet:  [  // Array of Objects.  Objects:  mission Objects, with key:values with the data that you actually want.
           { title: "Unlock Wallet",
             missionID: 536302,
-            unlocked: false, 
+            unlocked: true, 
             complete: false, // true/false complete/incomplete
             factionRequirement: "Black Mous Level 2", // Amount of Faction Needed to "Unlock"
             reward: "Unlock the wallet to store extracted cash.",

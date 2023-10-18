@@ -332,6 +332,21 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
                 let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
 
+                let notationArrayOfNextMissionObject = [...notationArray];
+
+                if (notationArrayOfNextMissionObject.length > 0) { // Basically an error check.
+                    let num = Number(notationArrayOfNextMissionObject[notationArrayOfNextMissionObject.length - 1]);
+                    num++;
+                    console.log("num", num);
+                    notationArrayOfNextMissionObject[notationArrayOfNextMissionObject.length - 1] = num.toString();
+                    console.log(notationArrayOfNextMissionObject);
+                }
+
+                // console.log("Next Mission Array:", notationArrayOfNextMissionObject);
+
+
+                // console.log("Checking notation array to figure out how to create a second array to update next mission object", notationArray);
+
                 let currentObj = obj;
                 currentObj = currentObj.newSetUpKey;
 
