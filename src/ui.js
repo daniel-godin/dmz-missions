@@ -86,7 +86,7 @@ const createNavigation = async (user) => {
   for (let i = 0; i < dropDownMenuButtons.length && i < 10; i++) {
     dropDownMenuButtons[i].addEventListener('click', (e) => {
       // I'll need to have it toggle class hide.
-      console.log('drop down menu clicked');
+      // console.log('drop down menu clicked'); // For Testing Purposes.
       btnMenuClosed.parentElement.classList.toggle('hide');
       btnMenuOpen.parentElement.classList.toggle('hide');
       navDropDownMenu.classList.toggle('hide');
