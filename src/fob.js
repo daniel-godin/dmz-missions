@@ -325,7 +325,6 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
         for (let q = 0; q < arrayOfMissionCheckboxes.length && q < 300; q++) {
             arrayOfMissionCheckboxes[q].addEventListener('click', (e) => {
-                console.log("TEST: First Object:", obj);
                 // e.Target local scope variables:
                 let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked.  This value will be passed to the data object for updating.
                 let notation = e.target.dataset.missionDotNotation;
@@ -372,15 +371,8 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                     if (completeStatus == false) { newObj.unlocked = false; }
                     if (completeStatus == true) { newObj.unlocked = true; }
 
-                    // Need to figure out how what to return from this function.  I think the object.  Then I need to figure out how to merge that.
-
                     return newObj;
                 };
-
-                // ********** I think I need to store these in a localStorage variable FIRST.
-
-
-                console.log("obj:", obj);
 
                 setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
             })
@@ -452,7 +444,7 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                     if (operator == '-') { --numCurrent };
                     if (operator == '+') { ++numCurrent };
 
-                    if (numCurrent < numTotal) { console.log("Task Not Complete Yet"), obj.complete = false; }
+                    if (numCurrent < numTotal) { obj.complete = false; } // console.log("Task Not Complete Yet")
                     if (numCurrent >= numTotal) { 
                         numCurrent = numTotal; 
                         console.log("You've Completed This Task.  Congrats!")
