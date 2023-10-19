@@ -328,8 +328,8 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
             arrayOfMissionCheckboxes[q].addEventListener('click', (e) => {
 
                 // Global/Larger Scoped Variables:
-                let currentObj = obj;
-                currentObj = currentObj.newSetUpKey;
+                // let currentObj = obj;
+                // currentObj = currentObj.newSetUpKey;
 
                 // e.Target local scope variables:
                 let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked.  This value will be passed to the data object for updating.
@@ -338,17 +338,42 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                 let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
 
                 // Check if there is a "next" mission object".
-                unlockMission(currentObj, notationArray, checked);
+                const completeThisMission = completeMission(obj, notationArray, checked);
+                // Make Sure completeMission function runs FIRST.  Otherwise they become the same.
+                const unlockNextMission = unlockMission(obj, notationArray, checked);
+
+
+                // console.log("UnlockNextMission Variable:", unlockNextMission);
+
+                function completeMission(obj, arr, completeStatus) {
+                    console.log("COMPLETE MISSION, BEFORE Set Up Key", obj);
+                    let newObj = obj.newSetUpKey;
+                    console.log("COMPLETE MISSION, after Set Up Key", obj);
+                    for (let u = 0; u < arr.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
+                        let key = arr[u];
+                        if (newObj && newObj[key]) {
+                            newObj = newObj[key];
+                        } else {
+                            console.log("nested property not found.");
+                            break;
+                        }
+                    }
+
+                    newObj.complete = completeStatus;
+
+                    return newObj;
+                };
 
                 function unlockMission(obj, arr, completeStatus) {
+                    let newObj = obj.newSetUpKey;
                     if (arr.length > 0) { // Basically an error check if statement.  If true:  Changes the target array's last element to be 1 more, so it has notation for next mission object.
                         let num = Number(arr[arr.length - 1]) + 1; 
                         arr[arr.length - 1] = num.toString();
                     }
                     for (let u = 0; u < arr.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
                         let key = arr[u];
-                        if (obj && obj[key]) {
-                            obj = obj[key];
+                        if (newObj && newObj[key]) {
+                            newObj = newObj[key];
                         } else {
                             console.log("nested property not found.");
                             break;
@@ -357,35 +382,16 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
                     if (Array.isArray(obj)) { return; } // This checks to see if there is an object after the current mission object.  Basically, if there is no object, it means it's the last mission in the line, thus, you cannot unlocked = true, because it doesn't exist.
 
+                    if (completeStatus == false) { newObj.unlocked = false; }
+                    if (completeStatus == true) { newObj.unlocked = true; }
 
+                    // Need to figure out how what to return from this function.  I think the object.  Then I need to figure out how to merge that.
 
-                    console.log("TEST: ", obj);
+                    return newObj;
+                };
 
-                    if (completeStatus == false) {
-                        console.log('complete status == false');
-                        // Probably return unaltered obj or no object at all.
-                        obj.unlocked = false;
+                console.log("unlockMissionObj", unlockNextMission, "completeThisMissionObj", completeThisMission);
 
-                     }
-                    if (completeStatus == true) {
-                        console.log('complete status == true')
-                        obj.unlocked = true;
-                     }
-                    
-                     console.log("TEST: post-unlocked change", obj);
-                }
-
-                // for (let u = 0; u < notationArray.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
-                //     let key = notationArray[u];
-                //     if (currentObj && currentObj[key]) {
-                //         currentObj = currentObj[key];
-                //     } else {
-                //         console.log("nested property not found.");
-                //         break;
-                //     }
-                // }
-
-                // currentObj.complete = checked;
 
                 // setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
             })
