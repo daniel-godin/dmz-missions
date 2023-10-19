@@ -327,28 +327,22 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
         for (let q = 0; q < arrayOfMissionCheckboxes.length && q < 300; q++) {
             arrayOfMissionCheckboxes[q].addEventListener('click', (e) => {
 
+                // Global/Larger Scoped Variables:
+                let currentObj = obj;
+                currentObj = currentObj.newSetUpKey;
+
+                // e.Target local scope variables:
                 let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked.  This value will be passed to the data object for updating.
                 let notation = e.target.dataset.missionDotNotation;
 
                 let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
 
-                // let notationArrayOfNextMissionObject = [...notationArray];
-
-                // if (notationArrayOfNextMissionObject.length > 0) { // Basically an error check.
-                //     let num = Number(notationArrayOfNextMissionObject[notationArrayOfNextMissionObject.length - 1]) + 1;
-                //     notationArrayOfNextMissionObject[notationArrayOfNextMissionObject.length - 1] = num.toString();
-                // }
-
                 // Check if there is a "next" mission object".
+                unlockMission(currentObj, notationArray, checked);
 
-                let currentObj = obj;
-                currentObj = currentObj.newSetUpKey;
-
-                unlockMission(currentObj, notationArray);
-
-                function unlockMission(obj, arr) {
-                    if (arr.length > 0) { // Basically an error check.
-                        let num = Number(arr[arr.length - 1]) + 1;
+                function unlockMission(obj, arr, completeStatus) {
+                    if (arr.length > 0) { // Basically an error check if statement.  If true:  Changes the target array's last element to be 1 more, so it has notation for next mission object.
+                        let num = Number(arr[arr.length - 1]) + 1; 
                         arr[arr.length - 1] = num.toString();
                     }
                     for (let u = 0; u < arr.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
@@ -360,9 +354,28 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                             break;
                         }
                     }
-                    if (typeof obj !== 'object') { console.log("NOT AN OBJECT, BREAK/STOP FUNCTION")}
-                    console.log("Inside Function Object Check:", obj);
-                    console.log("typeof obj", typeof obj);
+                    console.log("TEST:  Internal Obj (notation?)", obj);
+
+                    if (completeStatus == false) {
+                        console.log('complete status == false');
+                        // Probably return unaltered obj or no object at all.
+                        obj.unlocked = false;
+
+
+
+                     }
+                    if (completeStatus == true) {
+                        console.log('complete status == true')
+                        obj.unlocked = true;
+                     }
+                    
+                     console.log("TEST: post-unlocked change", obj);
+
+
+
+                    if (!obj.missionId) { console.log("NOT AN OBJECT, BREAK/STOP FUNCTION")}
+                    // console.log("Inside Function Object Check:", obj);
+                    // console.log("typeof obj", typeof obj);
                 }
 
 
@@ -376,9 +389,9 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                 //     }
                 // }
 
-                console.log("Next Mission Object Accessed:", currentObj);
+                // console.log("Next Mission Object Accessed:", currentObj);
 
-                console.log("next object unlocked value:", currentObj.unlocked);
+                // console.log("next object unlocked value:", currentObj.unlocked);
 
 
 
