@@ -326,29 +326,19 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 
         for (let q = 0; q < arrayOfMissionCheckboxes.length && q < 300; q++) {
             arrayOfMissionCheckboxes[q].addEventListener('click', (e) => {
-
-                // Global/Larger Scoped Variables:
-                // let currentObj = obj;
-                // currentObj = currentObj.newSetUpKey;
-
+                console.log("TEST: First Object:", obj);
                 // e.Target local scope variables:
                 let checked = e.target.checked; // checked = boolean true or false depending on checked or not checked.  This value will be passed to the data object for updating.
                 let notation = e.target.dataset.missionDotNotation;
 
                 let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
 
-                // Check if there is a "next" mission object".
-                const completeThisMission = completeMission(obj, notationArray, checked);
+                completeMission(obj, notationArray, checked);
                 // Make Sure completeMission function runs FIRST.  Otherwise they become the same.
-                const unlockNextMission = unlockMission(obj, notationArray, checked);
-
-
-                // console.log("UnlockNextMission Variable:", unlockNextMission);
+                unlockMission(obj, notationArray, checked);
 
                 function completeMission(obj, arr, completeStatus) {
-                    console.log("COMPLETE MISSION, BEFORE Set Up Key", obj);
                     let newObj = obj.newSetUpKey;
-                    console.log("COMPLETE MISSION, after Set Up Key", obj);
                     for (let u = 0; u < arr.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
                         let key = arr[u];
                         if (newObj && newObj[key]) {
@@ -358,9 +348,7 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                             break;
                         }
                     }
-
                     newObj.complete = completeStatus;
-
                     return newObj;
                 };
 
@@ -380,7 +368,7 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                         }
                     }
 
-                    if (Array.isArray(obj)) { return; } // This checks to see if there is an object after the current mission object.  Basically, if there is no object, it means it's the last mission in the line, thus, you cannot unlocked = true, because it doesn't exist.
+                    if (Array.isArray(newObj)) { return; } // This checks to see if there is an object after the current mission object.  Basically, if there is no object, it means it's the last mission in the line, thus, you cannot unlocked = true, because it doesn't exist.
 
                     if (completeStatus == false) { newObj.unlocked = false; }
                     if (completeStatus == true) { newObj.unlocked = true; }
@@ -390,10 +378,12 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                     return newObj;
                 };
 
-                console.log("unlockMissionObj", unlockNextMission, "completeThisMissionObj", completeThisMission);
+                // ********** I think I need to store these in a localStorage variable FIRST.
 
 
-                // setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
+                console.log("Updated Obj:", obj);
+
+                setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
             })
         }
     
