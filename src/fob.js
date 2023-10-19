@@ -127,7 +127,6 @@ const createFOBDOM = async (obj, user) => {
                     if (complete == true) { missionTitleStatus = 'mission-complete'; complete = "checked"; };
                     if (complete == false) { missionTitleStatus = ''; complete = "" };
                 let unlocked = missionDataObject.unlocked;
-                // console.log('user status', user);
                 if (user) { // If no user, there's no point to having an "unlocked" change, because it can't be saved.
                     if (unlocked == true) { missionUnlockedStatus = '' };
                     if (unlocked == false) { missionUnlockedStatus = 'section-locked'}
@@ -381,7 +380,7 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                 // ********** I think I need to store these in a localStorage variable FIRST.
 
 
-                console.log("Updated Obj:", obj);
+                console.log("obj:", obj);
 
                 setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
             })
