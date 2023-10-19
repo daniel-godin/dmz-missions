@@ -1,3 +1,68 @@
+import { doc, setDoc, onSnapshot, } from "firebase/firestore";
+import { dataS6DMZFOB, } from "./data/data-s6-dmz-fob";
+import { dataS6DMZStandardMissions } from "./data/data-s6-dmz-standard-missions";
+import { auth, db } from "./firebase";
+import { onAuthStateChanged } from "firebase/auth";
+import { recommendLogInBox } from "./ui";
+
+const activeTasksContainer = document.getElementById('activeTasksContainer');
+
+// I actually don't like how this works at all, but I'm set on doing it this way for the others.  Fix this later.  REFACTOR.
+// Change this at the beginning of each season.
+const dataObjectFOB = dataS6DMZFOB;
+const currentFOBDocName = 'DMZFOBS6';
+const dataObjectStandardMissions = dataS6DMZStandardMissions;
+const currentStandardMissionsDocName = 'iDontKnow';
+
+onAuthStateChanged(auth, user => {
+    if (!activeTasksContainer) { return; };
+
+    if (!user) {
+        // createFOB(FOBDataObject, undefined, undefined, undefined);
+        // recommendLogInBox(DMZFOBContainer);
+        // return;
+        console.log("There's no point for a non-user to see/use this page.");
+        return;
+    }
+
+    const docRefFOB = doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`);
+
+    onSnapshot(docRefFOB, (snapshot) => {
+        if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), FOBDataObject); } // I think I need to put a reload() or return, or something at the end of this.
+        let snapObj = snapshot.data();
+        createActiveTasks(snapObj, docRefFOB, user, db);
+    }) 
+
+    const docRefStandardMissions = doc(db, 'users', user.uid, 'mw2-trackers', `${currentStandardMissionsDocName}`);
+
+    onSnapshot(docRefStandardMissions, (snapshot) => {
+        if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentStandardMissionsDocName}`), FOBDataObject); } // I think I need to put a reload() or return, or something at the end of this.
+        let snapObj = snapshot.data();
+        createActiveTasks(snapObj, docRefStandardMissions, user, db);
+    }) 
+})
+
+
+const createActiveTasks = () => {
+    resetDOM();
+    createDOM();
+    createListenerEvents();
+}
+
+const createDOM = () => {
+
+}
+
+const createListenerEvents = () => {
+
+}
+
+const resetDOM = () => {
+
+}
+
+
+
 // const createFOB = (obj, docRef, user) => {
 
 //     resetFOBGrid(); // resets the innerHTML for the FOB Grid.  This is a clunky way to fix to duplication that is happening when a user clicks a checkbox, etc.
