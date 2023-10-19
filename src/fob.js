@@ -354,7 +354,12 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                             break;
                         }
                     }
-                    // console.log("TEST:  Internal Obj (notation?)", obj);
+
+                    if (Array.isArray(obj)) { return; } // This checks to see if there is an object after the current mission object.  Basically, if there is no object, it means it's the last mission in the line, thus, you cannot unlocked = true, because it doesn't exist.
+
+
+
+                    console.log("TEST: ", obj);
 
                     if (completeStatus == false) {
                         console.log('complete status == false');
