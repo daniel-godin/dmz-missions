@@ -67,8 +67,8 @@ const createNavigation = async (user) => {
   
   <nav id='navDropDownMenu' class='nav-drop-down-menu hide'>
     <ul class='nav-links'>
-      <li class='nav-link'><a class='event-link' href='../events/event-the-boys-diabolical.html'>Event: S4 The Boys</a></li>
       <li class='nav-link'><a href='../dmz-missions.html'>DMZ Missions Page</a></li>
+      <li class='nav-link'><a href='../fob.html'>FOB Missions Page</a></li>
       <li class='nav-link'><a href='../to-do.html'>To-Do Page</a></li>
     </ul>
     <div id='profileLinkContainer' class=''>
