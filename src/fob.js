@@ -354,14 +354,12 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                             break;
                         }
                     }
-                    console.log("TEST:  Internal Obj (notation?)", obj);
+                    // console.log("TEST:  Internal Obj (notation?)", obj);
 
                     if (completeStatus == false) {
                         console.log('complete status == false');
                         // Probably return unaltered obj or no object at all.
                         obj.unlocked = false;
-
-
 
                      }
                     if (completeStatus == true) {
@@ -370,33 +368,7 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                      }
                     
                      console.log("TEST: post-unlocked change", obj);
-
-
-
-                    if (!obj.missionId) { console.log("NOT AN OBJECT, BREAK/STOP FUNCTION")}
-                    // console.log("Inside Function Object Check:", obj);
-                    // console.log("typeof obj", typeof obj);
                 }
-
-
-                // for (let u = 0; u < notationArrayOfNextMissionObject.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
-                //     let key = notationArrayOfNextMissionObject[u];
-                //     if (currentObj && currentObj[key]) {
-                //         currentObj = currentObj[key];
-                //     } else {
-                //         console.log("nested property not found.");
-                //         break;
-                //     }
-                // }
-
-                // console.log("Next Mission Object Accessed:", currentObj);
-
-                // console.log("next object unlocked value:", currentObj.unlocked);
-
-
-
-                // let currentObj = obj;
-                // currentObj = currentObj.newSetUpKey;
 
                 // for (let u = 0; u < notationArray.length; u++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
                 //     let key = notationArray[u];
