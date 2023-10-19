@@ -1,5 +1,6 @@
 import { doc, getDoc, onSnapshot, updateDoc, setDoc, } from "firebase/firestore";
-import { dataDMZStandardMissionsS4 } from "./data/data-dmz-standard-missions-s4";
+import { dataS6DMZStandardMissions } from "./data/data-s6-dmz-standard-missions";
+import { dataS6DMZFOB } from "./data/data-s6-dmz-fob";
 import { auth, db } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { recommendLogInBox } from "./ui";
@@ -33,9 +34,9 @@ const crownTier5Container = document.getElementById('crownTier5MissionsContainer
 // console.log('Beginning of dmz-missions.js triggered.  After variables'); // For Testing Purposes
 
 // I should only need to change these two variables each season.  Current DMZ Standard Missions JavaScript Object.
-const currentDMZStandardMissions = dataDMZStandardMissionsS4; // CHANGE THIS EACH SEASON.
-const currentDMZSeasonDocName = 'DMZStandardMissionsS4'; // CHANGE THIS EACH SEASON AS WELL.
-const currentDMZSeasonNumberOfMissions = 140;
+const currentDMZStandardMissions = dataS6DMZStandardMissions; // CHANGE THIS EACH SEASON.
+const currentDMZSeasonDocName = 'DMZStandardMissionsS6'; // CHANGE THIS EACH SEASON AS WELL.
+const currentDMZSeasonNumberOfMissions = 175;
 
 onAuthStateChanged(auth, user => { // NEW VERSION
   if (dmzMissionsContainer) { // If this variable exists, it means the user is on the dmz missions page.

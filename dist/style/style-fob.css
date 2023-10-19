@@ -1,0 +1,268 @@
+:root {
+    --color-primary: rgba(248, 247, 253);
+    --color-secondary: rgba(0, 0, 0);
+    --color-btn-primary:  rgb(27, 168, 208);
+    --color-btn-secondary: rgb(255, 255, 255);
+    --color-accent:  rgb(15, 95, 117);
+    --color-bg-color: var(--color-secondary);
+    --color-font-color: var(--color-primary);
+    --color-content-bg-color: rgba(51, 51, 51, 0.8);
+    --color-content-bg-color-extra: rgba(51, 51, 51, 1);
+    --color-nav-foot-bg-color: rgba(139, 206, 226, 0.996);
+
+    --color-complete: rgb(15, 150, 15);
+
+    --size-border-radius-content: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#DMZFOBContainer {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+
+#DMZFOBTabBar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: .5rem;
+}
+
+.fob-tab-bar-items {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(57, 231, 57, 0.9);
+    border: 1px solid var(--color-accent);
+    border-radius: var(--size-border-radius-content);
+
+    display: grid;
+    place-items: center;
+
+
+}
+
+.fob-tab-bar-items:hover {
+    background-color: orange;
+    color: black;
+    cursor: pointer;
+}
+
+.fob-tab-bar-items-hidden {
+    background-color: red;
+}
+
+/* .fob-header-select > header {
+    align-self: center;
+} */
+
+#DMZFOBInformationContainer {
+    height: min-content;
+    width: 100%;
+
+    padding-top: .5rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
+}
+
+.fob-section-container {
+    height: min-content;
+    /* height: 95%; Looks better when min-content for now. */
+
+    border: 2px solid var(--color-accent);
+    border-radius:  var(--size-border-radius-content);
+    background-color: var(--color-content-bg-color-extra);   
+
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: 1fr;
+}
+
+.fob-section-header {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fob-section-header:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.fob-section-info-container {
+    height: min-content;
+    width: 100%;
+    padding: 1rem;
+    /* background-color: var(--color-second-main); */
+    
+    display: grid;
+    gap: 2rem;
+
+}
+
+.full-fob-mission-container {
+    border: 3px solid var(--color-accent);
+    border-radius: var(--size-border-radius-content);
+    height: min-content;
+    width: 100%;
+    padding: 1rem;
+
+    display: grid;
+    gap: 1rem;
+}
+
+.fob-missions-container {
+    /* border: 3px solid var(--color-accent);
+    border-radius: var(--size-border-radius-content); */
+    height: min-content;
+    width: 100%;
+    /* padding: 1rem; */
+
+    display: grid;
+    gap: 1rem;
+}
+
+.sub-section-titles {
+    text-decoration: underline;
+}
+
+.sub-section-titles:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fob-mission-container {
+    /* border: 2px dotted green; */
+    border: 2px solid var(--color-accent);
+    border-radius: var(--size-border-radius-content);
+    height: min-content;
+    width: 100%;
+
+
+    display: grid;
+    gap: 1rem;
+    padding: .5rem;
+}
+
+.fob-mission-title-container {
+    border: 1px solid var(--color-accent);
+    border-radius: var(--size-border-radius-content);
+
+    background-color: var(--color-bg-color);
+
+    height: min-content;
+
+    width: 100%;
+    padding: .5rem;
+
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    justify-items: center;
+
+}
+
+.mission-complete {
+    border: 2px solid var(--color-complete);
+    background-color: var(--color-complete);
+}
+
+.fob-mission-title {
+    text-decoration: underline;
+    /* Next Up Here.  Hover to underline/not underline.  Also click to "minimize", which will save in the user's localStorage. */
+}
+
+.fob-mission-title:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fob-mission-info-container {
+    display: grid;
+    gap: .5rem;
+}
+
+.fob-mission-tasks-container {
+    background-color: var(--color-content-bg-color-extra);
+    border: 2px solid var(--color-accent);
+    border-radius: var(--size-border-radius-content);
+    height: min-content;
+    width: 100%;
+    padding: .5rem;
+    margin: 0;
+}
+
+.fob-mission-tasks-container > ul {
+    margin: 0;
+    padding: 0;
+}
+
+.fob-mission-tasks-container > ul > li > p {
+    margin: 0;
+    padding: 0;
+}
+
+.fob-mission-task-container {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: .5rem;
+    margin: 0;
+    padding: .5rem;
+}
+
+.task-list {
+    list-style-type: none;
+
+}
+
+.task-item {
+    /* list-style-type: none; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr min-content; 
+    padding: .5rem;
+}
+
+.mission-task {
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+    padding: .5rem;
+}
+
+.progress-container {
+    display: grid;
+    grid-template-columns: repeat(5, min-content);
+}
+
+.btn-task-change-amount {
+    padding: 5px;
+
+}
+
+.strike-through {
+    text-decoration: line-through;
+    color: green;
+}
+
+.fob-mission-info-reward {
+    background-color: var(--color-content-bg-color-extra);
+    border: 1px solid var(--color-accent);
+    border-radius: var(--size-border-radius-content);
+    padding: 1rem;
+}
+
+.section-locked {
+    border: 2px solid red;
+    border-radius: var(--size-border-radius-content);
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.hide {
+    display: none;
+}

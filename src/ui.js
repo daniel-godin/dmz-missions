@@ -51,7 +51,7 @@ const createNavigation = async (user) => {
   navContainer.insertAdjacentHTML('afterbegin', `
   <header class='logo'><a href='./index.html'>DMZ-Missions</a></header>
 
-  <div id='middleNavbarSpecialSpace'><a class='nav-link special-link event-link' href='../events/event-the-boys-diabolical.html'>Event: The Boys (July 2023)</a></div>
+  <div id='middleNavbarSpecialSpace'><a class='nav-link special-link event-link' href='../fob.html'>FOB (Forward Operating Base)</a></div>
 
   <button id='btnMenuClosed' class='btn-drop-down-menu'>
     <svg class='svg-menu' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -67,8 +67,8 @@ const createNavigation = async (user) => {
   
   <nav id='navDropDownMenu' class='nav-drop-down-menu hide'>
     <ul class='nav-links'>
-      <li class='nav-link'><a class='event-link' href='../events/event-the-boys-diabolical.html'>Event: S4 The Boys</a></li>
       <li class='nav-link'><a href='../dmz-missions.html'>DMZ Missions Page</a></li>
+      <li class='nav-link'><a href='../fob.html'>FOB Missions Page</a></li>
       <li class='nav-link'><a href='../to-do.html'>To-Do Page</a></li>
     </ul>
     <div id='profileLinkContainer' class=''>
@@ -86,7 +86,7 @@ const createNavigation = async (user) => {
   for (let i = 0; i < dropDownMenuButtons.length && i < 10; i++) {
     dropDownMenuButtons[i].addEventListener('click', (e) => {
       // I'll need to have it toggle class hide.
-      console.log('drop down menu clicked');
+      // console.log('drop down menu clicked'); // For Testing Purposes.
       btnMenuClosed.parentElement.classList.toggle('hide');
       btnMenuOpen.parentElement.classList.toggle('hide');
       navDropDownMenu.classList.toggle('hide');
@@ -124,8 +124,13 @@ export const logInRequiredFunction = async () => {
 
 export const recommendLogInBox = async (attachmentPoint) => {
 
+  let status;
+  if (localStorage.getItem(`btnHideRecommendedLogInBoxStatus`) == `hideBox`) { status = 'hide' }
+  if (!localStorage.getItem(`btnHideRecommendedLogInBoxStatus`) == `hideBox`) { status = '' }
+
+
   attachmentPoint.insertAdjacentHTML('beforebegin', `
-    <div class='log-in-recommended-container'>
+    <div class='log-in-recommended-container ${status}'>
       <h3 class='log-in-recommended-h3'>
         It is recommended to <a href='../auth.html'>LOG IN</a> or <a href='../sign-up.html'>SIGN UP</a> to get the full features of this page.</h2>
       </h3>
@@ -136,10 +141,10 @@ export const recommendLogInBox = async (attachmentPoint) => {
   const btnHideRecommendedLogInBox = document.getElementById('btnHideRecommendedLogInBox');
   btnHideRecommendedLogInBox.addEventListener('click', (e) => {
     e.target.parentNode.classList.toggle('hide');
+
+    if (e.target.parentNode.classList.contains('hide')) { localStorage.setItem(`btnHideRecommendedLogInBoxStatus`, `hideBox`)};
   })
 
 }
-
-
 
 // console.log('Error Checking:  End of UI.js File');
