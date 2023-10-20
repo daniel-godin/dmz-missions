@@ -145,14 +145,7 @@ const createDOM = (dataObj, docRef, user, db) => {
 
                     // if (missionDataObject.unlocked == true && missionDataObject.complete == false) { console.log("mission data object", missionDataObject); }
 
-
-
-
-
-
-
-
-                    let strikeThrough;
+                    let strikeThrough = '';
 
                     let task = taskObj.task;
                     let taskId = taskObj.taskID;
@@ -167,7 +160,19 @@ const createDOM = (dataObj, docRef, user, db) => {
                     if (missionDataObject.complete == false && missionDataObject.unlocked == true && complete == false) { 
                         console.table("Incomplete, Available Tasks:", taskObj);
 
-                        let DOMAttachmentPoint = document.getElementById('activeTasksContainer');
+                        let DOMAttachmentPointLoop4 = document.querySelector(`[data-dom-attachment-point="${missionId}"]`);
+
+                        DOMAttachmentPointLoop4.insertAdjacentHTML('beforeend', `
+                            <div class='active-tasks-task-container'>
+                                <div class='active-tasks-task-checkbox'><input type='checkbox'></div>
+                                <div class='active-tasks-task-description'>${task}</div>
+                                <div class='active-tasks-progress-container'>
+                                    <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
+                                    <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
+                                    <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
+                                </div>
+                            </div>
+                        `)
 
                         // DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
                         //     <div class='test-task-container'>

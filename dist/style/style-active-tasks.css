@@ -41,7 +41,7 @@
 .active-tasks-mission-container {
     margin: 0;
     padding: 0;
-    height: 30px;
+    height: min-content;
     width: 95%;
 
     border: 1px solid var(--active-tasks-color-mission-accent);
@@ -50,11 +50,36 @@
     display: grid;
     grid-template-columns: 1fr;
 
+    justify-items: center;
+
 
 
 }
 
 .active-tasks-mission-title {
     color: var(--active-tasks-color-mission-accent);
-    /* justify-self: end; */
+    justify-self: start;
+}
+
+.active-tasks-task-container {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 95%;
+
+    border: 2px solid var(--active-tasks-color-task-accent);
+    border-radius: var(--size-border-radius-content);
+
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+}
+
+.active-tasks-progress-container {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    /* width: auto; */
+
+    display: flex;
+
 }
