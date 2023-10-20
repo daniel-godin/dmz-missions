@@ -48,7 +48,7 @@ const createActiveTasks = (docName, dataObj, docRef, user, db, ) => { // I think
     if (docName == currentFOBDocName) { console.log("FOB DOC"); } // Trigger CreateDOM??? 
     if (docName == currentStandardMissionsDocName) { console.log("Standard Missions DOC"); } // Trigger CreateDOM??? 
     createDOM(dataObj, docRef, user, db);
-    createListenerEvents(dataObj, docRefFOB, user, db);
+    // createListenerEvents(dataObj, docRefFOB, user, db);
 }
 
 const createDOM = (dataObj, docRef, user, db) => {
@@ -110,6 +110,10 @@ const createDOM = (dataObj, docRef, user, db) => {
                 let factionRequirement = missionDataObject.factionRequirement;
                 let reward = missionDataObject.reward;
 
+                const missionUnlocked = unlocked;
+
+                // console.log("MissionUnlocked", missionUnlocked);
+
                 let arrayThirdLevel = missionDataObject.tasks;
 
                 let missionDotNotation = `${i}.${sectionTitle}.${j}.${subSectionTitle}.${k}`;
@@ -125,6 +129,15 @@ const createDOM = (dataObj, docRef, user, db) => {
 
                     // console.log("taskObj:", taskObj);
 
+                    // if (missionDataObject.unlocked == true && missionDataObject.complete == false) { console.log("mission data object", missionDataObject); }
+
+
+
+
+
+
+
+
                     let strikeThrough;
 
                     let task = taskObj.task;
@@ -137,24 +150,52 @@ const createDOM = (dataObj, docRef, user, db) => {
 
                     let missionTaskDotNotation = `${i}.${sectionTitle}.${j}.${subSectionTitle}.${k}.tasks.${p}`
 
+                    if (missionDataObject.complete == false && missionDataObject.unlocked == true && complete == false) { 
+                        console.table("Incomplete, Available Tasks:", taskObj);
 
+                        let DOMAttachmentPoint = document.getElementById('activeTasksContainer');
 
-                    let DOMAttachmentPoint = document.getElementById('activeTasksContainer');
-
-                    DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                        <div class='test-task-container'>
-                            <label class='test-mission-task'>
-                                <input type='checkbox' class='task-checkbox ${userStatus}' data-task-id='${taskId}' data-obj-notation='${missionTaskDotNotation}' ${complete} />
-                                <span class='${strikeThrough}'>${task}</span>
-                            </label>
-
-                            <div class='progress-container ${userStatus}'>
-                                <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
-                                <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
-                                <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
+                        DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                            <div class='test-task-container'>
+                                <label class='test-mission-task'>
+                                    <input type='checkbox' class='task-checkbox ${userStatus}' data-task-id='${taskId}' data-obj-notation='${missionTaskDotNotation}' ${complete} />
+                                    <span class='${strikeThrough}'>${task}</span>
+                                </label>
+    
+                                <div class='progress-container ${userStatus}'>
+                                    <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
+                                    <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
+                                    <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
+                                </div>
                             </div>
-                        </div>
-                    `)
+                        `);
+                    
+                    
+                    
+                    
+                    
+                    };
+
+                    
+
+
+
+                    // let DOMAttachmentPoint = document.getElementById('activeTasksContainer');
+
+                    // DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                    //     <div class='test-task-container'>
+                    //         <label class='test-mission-task'>
+                    //             <input type='checkbox' class='task-checkbox ${userStatus}' data-task-id='${taskId}' data-obj-notation='${missionTaskDotNotation}' ${complete} />
+                    //             <span class='${strikeThrough}'>${task}</span>
+                    //         </label>
+
+                    //         <div class='progress-container ${userStatus}'>
+                    //             <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
+                    //             <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
+                    //             <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
+                    //         </div>
+                    //     </div>
+                    // `)
                 } // End of Fourth (and final) Loop.
             } // End of Third Loop.
         } // End of Second Loop.
