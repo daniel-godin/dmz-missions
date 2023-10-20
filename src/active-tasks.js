@@ -123,7 +123,7 @@ const createDOM = (dataObj, docRef, user, db) => {
 
                     DOMAttachmentPointLoop3.insertAdjacentHTML('beforeend', `
                         <div class='active-tasks-mission-container' data-dom-attachment-point='${missionId}' data-mission-dot-notation='${missionDotNotation}'>
-                            <div class='active-tasks-mission-title-container'><header class='active-tasks-mission-title'>${title}</header></div>
+                            <header class='active-tasks-mission-title'>${title}</header>
                         </div>
                     `)
                 }
