@@ -1,38 +1,18 @@
-<!-- Logged Out Version: -->
-<div class="mission-container">
-  <header class="mission-title">${title}</header>
-  <div class='mission-details'>
-    <div class='objectives-container'>
-      <!-- I will need to dynamically create each of these objective containers.  If objects 2 and 3 don't exist for the mission, don't create it in the DOM. -->
+<!-- For Active Tasks: -->
 
-      <div class='objective-container obj-1'>
-        <input type='checkbox' class='objective-checkbox obj-1-checkbox' />
-        <div class='objective-progress-container'>
-          <p>0 / 1</p> <!-- Will need to fix this up later. -->
-        </div>
-        <p class='objective-text'>${objectiveText1}</p>
-      </div>
+<div class='active-tasks-mission-container' data-dom-attachment-point='unique-id maybe mission id or notation'>
+    <div class='active-tasks-mission-title-container'><header class='active-tasks-mission-title'>Mission Title</header></div>
+</div>
 
-      <div class='objective-container obj-2'>
-        <input type='checkbox' class='objective-checkbox obj-2-checkbox' />
-        <div class='objective-progress-container'>
-          <p>0 / 2</p> <!-- Will need to fix this up later. -->
-        </div>
-        <p class='objective-text'>${objectiveText2}</p>
-      </div>
 
-      <div class='objective-container obj-3'>
-        <input type='checkbox' class='objective-checkbox obj-3-checkbox' />
-        <div class='objective-progress-container'>
-          <p>0 / 3</p> <!-- Will need to fix this up later. -->
-        </div>
-        <p class='objective-text'>${objectiveText3}</p>
-      </div>
+<!-- This goes INSIDE of active-tasks-mission-container -->
+
+<div class='active-tasks-task-container'>
+    <div class='active-tasks-task-checkbox'><input type='checkbox'></div>
+    <div class='active-tasks-task-description'></div>
+    <div class='active-tasks-progress-container'>
+        <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
+        <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
+        <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
     </div>
-
-    <p class='mission-description'>
-      ${description}
-    </p>
-
-  </div>
 </div>

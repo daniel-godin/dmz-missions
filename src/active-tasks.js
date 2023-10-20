@@ -118,6 +118,20 @@ const createDOM = (dataObj, docRef, user, db) => {
 
                 let missionDotNotation = `${i}.${sectionTitle}.${j}.${subSectionTitle}.${k}`;
 
+                if (missionDataObject.complete == false && missionDataObject.unlocked == true) { 
+                    let DOMAttachmentPointLoop3 = document.getElementById('activeTasksContainer');
+
+                    DOMAttachmentPointLoop3.insertAdjacentHTML('beforeend', `
+                        <div class='active-tasks-mission-container' data-dom-attachment-point='${missionId}' data-mission-dot-notation='${missionDotNotation}'>
+                            <div class='active-tasks-mission-title-container'><header class='active-tasks-mission-title'>${title}</header></div>
+                        </div>
+                    `)
+                }
+
+
+    
+                
+
 
                 // let missionTitleMinimizeStatus = localStorage.getItem(`${missionId}`) // This is using a mission specific identifier of "missionId" as the key in localStorage.  Then grabbing the value of that key, using that value to set whether a title should be minimized or not.
                 // if (missionTitleMinimizeStatus == 'hideBox') { missionTitleMinimizeStatus = 'hide' }
@@ -155,20 +169,20 @@ const createDOM = (dataObj, docRef, user, db) => {
 
                         let DOMAttachmentPoint = document.getElementById('activeTasksContainer');
 
-                        DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
-                            <div class='test-task-container'>
-                                <label class='test-mission-task'>
-                                    <input type='checkbox' class='task-checkbox ${userStatus}' data-task-id='${taskId}' data-obj-notation='${missionTaskDotNotation}' ${complete} />
-                                    <span class='${strikeThrough}'>${task}</span>
-                                </label>
+                        // DOMAttachmentPoint.insertAdjacentHTML('beforeend', `
+                        //     <div class='test-task-container'>
+                        //         <label class='test-mission-task'>
+                        //             <input type='checkbox' class='task-checkbox ${userStatus}' data-task-id='${taskId}' data-obj-notation='${missionTaskDotNotation}' ${complete} />
+                        //             <span class='${strikeThrough}'>${task}</span>
+                        //         </label>
     
-                                <div class='progress-container ${userStatus}'>
-                                    <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
-                                    <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
-                                    <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
-                                </div>
-                            </div>
-                        `);
+                        //         <div class='progress-container ${userStatus}'>
+                        //             <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
+                        //             <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
+                        //             <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
+                        //         </div>
+                        //     </div>
+                        // `);
                     
                     
                     
