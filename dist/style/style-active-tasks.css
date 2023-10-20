@@ -26,9 +26,14 @@
     font-size: 16px; /* Which means 1rem = 16px, 2rem = 32px) */
     --size-nav-bar: 2rem;
     --size-border-radius-content: 10px;
+    --size-padding-standard: .5rem;
     /* Other Root Items */
     
-  }
+}
+
+html {
+
+}
 
 #activeTasksContainer {
     /* margin: 0;
@@ -36,11 +41,13 @@
 
     display: grid;
     justify-items: center;
+    gap: var(--size-padding-standard);
+
 }
 
 .active-tasks-mission-container {
     margin: 0;
-    padding: 0;
+    padding: var(--size-padding-standard);
     height: min-content;
     width: 95%;
 
@@ -51,19 +58,29 @@
     grid-template-columns: 1fr;
 
     justify-items: center;
+    gap: .3rem;
 
 
 
 }
 
 .active-tasks-mission-title {
+    margin: 0;
+    padding: 0;
+
+    padding-bottom: var(--size-padding-standard);
+
+
+
     color: var(--active-tasks-color-mission-accent);
+    text-decoration: underline;
+
     justify-self: start;
 }
 
 .active-tasks-task-container {
     margin: 0;
-    padding: 0;
+    padding: var(--size-padding-standard);
     height: auto;
     width: 95%;
 
@@ -72,6 +89,16 @@
 
     display: grid;
     grid-template-columns: min-content 1fr min-content;
+
+    align-items: center;
+}
+
+.active-tasks-task-checkbox {
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    place-items: center;
 }
 
 .active-tasks-progress-container {
@@ -81,5 +108,22 @@
     /* width: auto; */
 
     display: flex;
+    align-items: center;
 
+}
+
+.btn-task-change-amount {
+    margin: 0;
+    padding: 0;
+
+    height: 25px;
+    width: 25px;
+    border-radius: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+
+    font-size: 1rem;
 }
