@@ -28,7 +28,11 @@ onAuthStateChanged(auth, user => {
     const docRefFOB = doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`);
 
     onSnapshot(docRefFOB, (snapshot) => {
-        if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), dataObjectFOB); } // I think I need to put a reload() or return, or something at the end of this.
+        if (!snapshot.exists()) { 
+            createActiveTasks(currentFOBDocName, dataObjectFOB, docRefFOB, user, db);
+            setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), dataObjectFOB); 
+            return;
+        } // I think I need to put a reload() or return, or something at the end of this.
         let snapObj = snapshot.data();
         createActiveTasks(currentFOBDocName, snapObj, docRefFOB, user, db);
     }) 
