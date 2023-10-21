@@ -34,8 +34,8 @@ const crownTier5Container = document.getElementById('crownTier5MissionsContainer
 // console.log('Beginning of dmz-missions.js triggered.  After variables'); // For Testing Purposes
 
 // I should only need to change these two variables each season.  Current DMZ Standard Missions JavaScript Object.
-const currentDMZStandardMissions = dataS6DMZStandardMissions; // CHANGE THIS EACH SEASON.
-const currentDMZSeasonDocName = 'DMZStandardMissionsS6'; // CHANGE THIS EACH SEASON AS WELL.
+export const currentDMZStandardMissions = dataS6DMZStandardMissions; // CHANGE THIS EACH SEASON.
+export const currentDMZSeasonDocName = 'DMZStandardMissionsS6'; // CHANGE THIS EACH SEASON AS WELL.
 const currentDMZSeasonNumberOfMissions = 175;
 
 onAuthStateChanged(auth, user => { // NEW VERSION

@@ -1,6 +1,8 @@
 import { doc, setDoc, onSnapshot, } from "firebase/firestore";
-import { dataS6DMZFOB, } from "./data/data-s6-dmz-fob";
-import { dataS6DMZStandardMissions } from "./data/data-s6-dmz-standard-missions";
+// import { dataS6DMZFOB, } from "./data/data-s6-dmz-fob";
+// import { dataS6DMZStandardMissions } from "./data/data-s6-dmz-standard-missions";
+import { FOBDataObject, currentFOBDocName } from "./fob";
+import { currentDMZStandardMissions, currentDMZSeasonDocName } from "./dmz-missions";
 import { auth, db } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { recommendLogInBox } from "./ui";
@@ -9,10 +11,10 @@ const activeTasksContainer = document.getElementById('activeTasksContainer');
 
 // I actually don't like how this works at all, but I'm set on doing it this way for the others.  Fix this later.  REFACTOR.
 // Change this at the beginning of each season.
-const dataObjectFOB = dataS6DMZFOB;
-const currentFOBDocName = 'dataFOBS6';
-const dataObjectStandardMissions = dataS6DMZStandardMissions;
-const currentStandardMissionsDocName = 'dataStandardMissionsS6';
+const dataObjectFOB = FOBDataObject;
+const FOBDocName = currentFOBDocName;
+const dataObjectStandardMissions = currentDMZStandardMissions;
+const currentStandardMissionsDocName = currentDMZSeasonDocName;
 
 onAuthStateChanged(auth, user => {
     if (!activeTasksContainer) { return; };
@@ -25,16 +27,16 @@ onAuthStateChanged(auth, user => {
         return;
     }
 
-    const docRefFOB = doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`);
+    const docRefFOB = doc(db, 'users', user.uid, 'mw2-trackers', `${FOBDocName}`);
 
     onSnapshot(docRefFOB, (snapshot) => {
         if (!snapshot.exists()) { 
-            createActiveTasks(currentFOBDocName, dataObjectFOB, docRefFOB, user, db);
+            createActiveTasks(FOBDocName, dataObjectFOB, docRefFOB, user, db);
             setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), dataObjectFOB); 
             return;
         } // I think I need to put a reload() or return, or something at the end of this.
         let snapObj = snapshot.data();
-        createActiveTasks(currentFOBDocName, snapObj, docRefFOB, user, db);
+        createActiveTasks(FOBDocName, snapObj, docRefFOB, user, db);
     }) 
 
     // const docRefStandardMissions = doc(db, 'users', user.uid, 'mw2-trackers', `${currentStandardMissionsDocName}`);

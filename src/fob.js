@@ -11,8 +11,9 @@ const DMZFOBInformationContainer = document.getElementById('DMZFOBInformationCon
 
 
 // Change this at the beginning of each season.
-const FOBDataObject = dataS6DMZFOB;
-const currentFOBDocName = 'DMZFOBS6';
+export const FOBDataObject = dataS6DMZFOB;
+export const currentFOBDocName = 'dataFOBS6';
+
 const mainSectionArrayTitles = ["Show All", "Stash", "Weapons Locker", "Equipment", "Bounty Board", "Communications Station"];
 
 onAuthStateChanged(auth, user => {
@@ -24,17 +25,17 @@ onAuthStateChanged(auth, user => {
         return;
     }
 
-    const docRefFOBGrid = doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`);
+    const docRefFOB = doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`);
 
-    onSnapshot(docRefFOBGrid, (snapshot) => {
+    onSnapshot(docRefFOB, (snapshot) => {
         if (!snapshot.exists()) { 
-            createFOB(FOBDataObject, docRefFOBGrid, user, db);
+            createFOB(FOBDataObject, docRefFOB, user, db);
             setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), FOBDataObject);
             return;
         }; // I think I need to put a reload() or return, or something at the end of this.
         if (snapshot.exists()) {
             let snapObj = snapshot.data();
-            createFOB(snapObj, docRefFOBGrid, user, db);
+            createFOB(snapObj, docRefFOB, user, db);
         };
     });
 });
