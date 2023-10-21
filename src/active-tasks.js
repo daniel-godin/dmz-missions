@@ -20,10 +20,6 @@ onAuthStateChanged(auth, user => {
     if (!activeTasksContainer) { return; };
 
     if (!user) {
-        // createFOB(FOBDataObject, undefined, undefined, undefined);
-        // recommendLogInBox(DMZFOBContainer);
-        // return;
-        // console.log("There's no point for a non-user to see/use this page.");
         logInRequiredFunction();
         return;
     }
@@ -35,7 +31,7 @@ onAuthStateChanged(auth, user => {
             createActiveTasks(FOBDocName, dataObjectFOB, docRefFOB, user, db);
             setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), dataObjectFOB); 
             return;
-        } // I think I need to put a reload() or return, or something at the end of this.
+        };
         let snapObj = snapshot.data();
         createActiveTasks(FOBDocName, snapObj, docRefFOB, user, db);
     }) 
