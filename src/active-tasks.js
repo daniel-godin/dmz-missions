@@ -5,7 +5,7 @@ import { FOBDataObject, currentFOBDocName } from "./fob";
 import { currentDMZStandardMissions, currentDMZSeasonDocName } from "./dmz-missions";
 import { auth, db } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
-import { recommendLogInBox } from "./ui";
+import { logInRequiredFunction } from "./ui";
 
 const activeTasksContainer = document.getElementById('activeTasksContainer');
 
@@ -23,7 +23,8 @@ onAuthStateChanged(auth, user => {
         // createFOB(FOBDataObject, undefined, undefined, undefined);
         // recommendLogInBox(DMZFOBContainer);
         // return;
-        console.log("There's no point for a non-user to see/use this page.");
+        // console.log("There's no point for a non-user to see/use this page.");
+        logInRequiredFunction();
         return;
     }
 
@@ -51,8 +52,8 @@ onAuthStateChanged(auth, user => {
 
 const createActiveTasks = (docName, dataObj, docRef, user, db, ) => { // I think I will need to move these out at some point, if I want to use 2 documents.
     // resetDOM(activeTasksContainer);
-    if (docName == currentFOBDocName) { console.log("FOB DOC"); } // Trigger CreateDOM??? 
-    if (docName == currentStandardMissionsDocName) { console.log("Standard Missions DOC"); } // Trigger CreateDOM??? 
+    if (docName == currentFOBDocName) {  } // Trigger CreateDOM??? 
+    if (docName == currentStandardMissionsDocName) {  } // Trigger CreateDOM??? 
     createDOM(dataObj, docRef, user, db);
     // createListenerEvents(dataObj, docRefFOB, user, db);
 }

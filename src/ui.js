@@ -107,20 +107,21 @@ const createFooter = async (version) => {
   `)
 }
 
-export const logInRequiredFunction = async () => {
-  // const logInRequiredContainer = document.querySelector('logInRequiredContainer')
+export const logInRequiredFunction = () => {
+  const mainContentContainer = document.getElementsByClassName('main-content-container');
+
+  mainContentContainer[0].insertAdjacentHTML('beforebegin', `
+    <div class='log-in-required' id='loggedInConfirmContainer'></div>
+  `)
+
   const logInRequiredContainer = document.getElementById('loggedInConfirmContainer');
-  // const contentContainer = document.getElementById('contentContainer');
-
-  const contentContainer = document.getElementsByClassName('main-content-container');
-
-  logInRequiredContainer.style.display = 'flex';
-  contentContainer[0].style.display = 'none';
 
   logInRequiredContainer.insertAdjacentHTML('afterbegin', `
-    <h2>This page requires an account to work correctly.  
-    Please <a href='./auth.html'>Log In</a> or <a href='./sign-up.html'>Sign Up</a>.</h2>
+    <h2>This page requires an account to work correctly. Please <a href='./auth.html'>Log In</a> or <a href='./sign-up.html'>Sign Up</a>.</h2>
   `)
+
+  logInRequiredContainer.style.display = 'flex';
+  mainContentContainer[0].style.display = 'none';
 }
 
 export const recommendLogInBox = async (attachmentPoint) => {
