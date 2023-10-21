@@ -27,11 +27,17 @@ onAuthStateChanged(auth, user => {
     const docRefFOBGrid = doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`);
 
     onSnapshot(docRefFOBGrid, (snapshot) => {
-        if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), FOBDataObject); } // I think I need to put a reload() or return, or something at the end of this.
-        let snapObj = snapshot.data();
-        createFOB(snapObj, docRefFOBGrid, user, db);
-    }) 
-})
+        if (!snapshot.exists()) { 
+            createFOB(FOBDataObject, docRefFOBGrid, user, db);
+            setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentFOBDocName}`), FOBDataObject);
+            return;
+        }; // I think I need to put a reload() or return, or something at the end of this.
+        if (snapshot.exists()) {
+            let snapObj = snapshot.data();
+            createFOB(snapObj, docRefFOBGrid, user, db);
+        };
+    });
+});
 
 const createFOB = (obj, docRef, user) => {
 
