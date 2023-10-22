@@ -51,11 +51,11 @@ const createActiveTasks = (docName, dataObj, docRef, user, db, ) => { // I think
     if (docName == currentFOBDocName) {  } // Trigger CreateDOM??? 
     if (docName == currentStandardMissionsDocName) {  } // Trigger CreateDOM??? 
     createDOM(dataObj, docRef, user, db);
-    // createListenerEvents(dataObj, docRefFOB, user, db);
+    createListenerEvents(dataObj, docRef, user, db);
 }
 
 const createDOM = (dataObj, docRef, user, db) => {
-    console.log("createDOM Function Triggered."); // FOR TESTING.
+    console.log("Active Tasks: createDOM Function Triggered."); // FOR TESTING.
 
     activeTasksContainer.innerHTML = ''; // Resets main container to zero.
 
@@ -152,13 +152,13 @@ const createDOM = (dataObj, docRef, user, db) => {
                     let missionTaskDotNotation = `${i}.${sectionTitle}.${j}.${subSectionTitle}.${k}.tasks.${p}`
 
                     if (missionDataObject.complete == false && missionDataObject.unlocked == true && complete == false) { 
-                        console.table("Incomplete, Available Tasks:", taskObj);
+                        // console.table("Incomplete, Available Tasks:", taskObj);
 
                         let DOMAttachmentPointLoop4 = document.querySelector(`[data-dom-attachment-point="${missionId}"]`);
 
                         DOMAttachmentPointLoop4.insertAdjacentHTML('beforeend', `
                             <div class='active-tasks-task-container'>
-                                <div class='active-tasks-task-checkbox'><input type='checkbox'></div>
+                                <div class='active-tasks-task-checkbox'><input type='checkbox' class='task-checkbox' data-task-id='${taskId}' data-obj-notation='${missionTaskDotNotation}' ${complete} /></div>
                                 <div class='active-tasks-task-description'>${task}</div>
                                 <div class='active-tasks-progress-container'>
                                     <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
@@ -174,9 +174,47 @@ const createDOM = (dataObj, docRef, user, db) => {
     } // End of First Loop
 }
 
-const createListenerEvents = () => {
+const createListenerEvents = (obj, docRef, user, db) => {
+    // What ListenerEvent Do I Want To Create?
+    // Task (not mission) checkboxes.
+    // - & + buttons.
+
+    if (!user) { console.log("Not Logged In.  Please log in to use this page."); return; }
+
+    const arrayOfMissionTaskCheckboxes = document.getElementsByClassName('task-checkbox');
+
+    for (let i = 0; i < arrayOfMissionTaskCheckboxes.length; i++) {
+        arrayOfMissionTaskCheckboxes[i].addEventListener('click', (e) => {
+            console.log("TEST: e.target", e.target);
+
+            let checked = e.target.checked;
+            let notation = e.target.dataset.objNotation;
+
+            let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
+
+            let currentObj = obj;
+            currentObj = currentObj.newSetUpKey;
+
+            for (let j = 0; j < notationArray.length; j++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
+                let key = notationArray[j];
+                if (currentObj && currentObj[key]) {
+                    currentObj = currentObj[key];
+                } else {
+                    console.log("nested property not found.");
+                    break;
+                }
+            }
+
+            currentObj.complete = checked;
+            if (checked == true) { currentObj.progressCurrent = currentObj.progressTotal; } // Updates object's progressCurrent number to match the progressTotal.
+            if (checked == false && currentObj.progressCurrent >= currentObj.progressTotal) { currentObj.progressCurrent = 0 } // Later, I want this to go back to whatever it was in a previous state.  Unsure of how to do this right now.
+
+            setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
+        });
+    }
 
 }
+
 
 const resetDOM = (...args) => {
     for (let arg of args) { arg.innerHTML = ''; console.log("Reset DOM", arg) }
