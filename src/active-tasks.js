@@ -158,7 +158,7 @@ const createDOM = (dataObj, docRef, user, db) => {
 
                         DOMAttachmentPointLoop4.insertAdjacentHTML('beforeend', `
                             <div class='active-tasks-task-container'>
-                                <div class='active-tasks-task-checkbox'><input type='checkbox' class='task-checkbox' data-task-id='${taskId}' data-obj-notation='${missionTaskDotNotation}' ${complete} /></div>
+                                <div class='active-tasks-task-checkbox'><input type='checkbox' class='task-checkbox' data-task-id='${taskId}' data-parent-mission-notation='${missionDotNotation}' data-obj-notation='${missionTaskDotNotation}' ${complete} /></div>
                                 <div class='active-tasks-task-description'>${task}</div>
                                 <div class='active-tasks-progress-container'>
                                     <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
@@ -189,8 +189,29 @@ const createListenerEvents = (obj, docRef, user, db) => {
 
             let checked = e.target.checked;
             let notation = e.target.dataset.objNotation;
+            let parentMissionNotation = e.target.dataset.parentMissionNotation;
 
             let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
+            let parentMissionArray = parentMissionNotation.split('.');
+
+            let parentNotationString = (arr, obj) => {
+                for (let i = 0; i < arr.length; i++) {
+                    let key = arr[i];
+                    let testObj = obj;
+                    testObj = testObj.newSetUpKey;
+
+                    if (testObj && testObj[key]) {
+                        testObj = testObj[key];
+                    } else {
+                        console.log("nested prop not found.");
+                        return testObj;
+                    }
+
+                }
+            }
+
+            console.log('consolelog parent notation string obj', parentNotationString(parentMissionArray, obj));
+
 
             let currentObj = obj;
             currentObj = currentObj.newSetUpKey;
@@ -205,15 +226,48 @@ const createListenerEvents = (obj, docRef, user, db) => {
                 }
             }
 
+            let savePreviousProgressCurrentNumber = currentObj.progressCurrent;
+            console.log ("1st prevNum", savePreviousProgressCurrentNumber);
+
             currentObj.complete = checked;
-            if (checked == true) { currentObj.progressCurrent = currentObj.progressTotal; } // Updates object's progressCurrent number to match the progressTotal.
-            if (checked == false && currentObj.progressCurrent >= currentObj.progressTotal) { currentObj.progressCurrent = 0 } // Later, I want this to go back to whatever it was in a previous state.  Unsure of how to do this right now.
+            if (checked == true) { 
+                currentObj.progressCurrent = currentObj.progressTotal; 
+                // let missionComplete = checkIfMissionComplete(); // Checks if all conditions are met to complete a task's parent mission.
+
+                // if (missionComplete) { // If checkIfMissionComplete returns true.  Means mission is complete, and you need to "unlock" the next mission in the array of mission objects.  If no next object exists, nothing to unlock.
+                //     unlockNextMission();
+                // }
+
+
+
+
+            } // Updates object's progressCurrent number to match the progressTotal.
+            if (checked == false && currentObj.progressCurrent >= currentObj.progressTotal) { 
+                currentObj.progressCurrent = 0 
+            } // Later, I want this to go back to whatever it was in a previous state.  Unsure of how to do this right now.
+
+            // console.log ("2nd prevNum", savePreviousProgressCurrentNumber);
+
 
             setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
+
+            // console.log ("3rd prevNum", savePreviousProgressCurrentNumber);
+
         });
     }
 
 }
+
+// const checkIfMissionComplete = (obj, arr, completeStatus) => {
+//     // Pseudo-code:
+//     // if parent mission of task is parentObj.complete: true || all task objects are taskObj.complete: true;  return true.
+//     let 
+
+// }
+
+// const unlockNextMission = (obj, arr, completeStatus) => {
+
+// }
 
 
 const resetDOM = (...args) => {

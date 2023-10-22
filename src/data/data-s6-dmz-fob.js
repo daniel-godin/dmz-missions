@@ -22,6 +22,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 100k in Cash.",
                 taskID:  848490,
+                progressCurrentSaved: 0,
                 progressCurrent: 0,
                 progressTotal: 100_000,
                 complete: false, // true/false complete/incomplete
@@ -30,7 +31,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
           },
           { title: "Wallet Expansion 1",
             missionID: 781282,
-            unlocked: false, 
+            unlocked: false,  // Can I put a function here to check if previous mission is complete?
             complete: false, // true/false complete/incomplete
             factionRequirement: "White Lotus Level 3", // Amount of Faction Needed to "Unlock"
             reward: "Expand the wallet's capacity by $150k",
