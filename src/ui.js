@@ -1,6 +1,7 @@
 import { auth, } from "./firebase";
 import { onAuthStateChanged, } from "firebase/auth";
 import { createSignOutButtonFunction } from "./auth";
+import { DMZFactions, dataDMZFactionLevels } from "./data/data-dmz-faction-levels"
 // import { menu.svg } from "./resources"
 
 export const navContainer = document.getElementById('navContainer');
@@ -27,9 +28,11 @@ function loadPage(user) {
   if (user) {
     createNavigation(user);
     createFooter(currentWebAppVersion);
+    createFactionLevelDisplay(DMZFactions, dataDMZFactionLevels);
   } else {
     createNavigation();
     createFooter(currentWebAppVersion);
+    createFactionLevelDisplay(DMZFactions, dataDMZFactionLevels); // Delete this after testing.
   }
 }
 
@@ -149,4 +152,19 @@ export const recommendLogInBox = async (attachmentPoint) => {
 
 }
 
-// console.log('Error Checking:  End of UI.js File');
+const createFactionLevelDisplay = (factionNameArray, factionLevelObject) => {
+
+    navContainer.insertAdjacentHTML('afterend', `
+        <div class='box' id='factionLevelsContainer'></div>
+    `);
+
+    let factionLevelsContainer = document.getElementById('factionLevelsContainer');
+
+    for (let i = 0; i < factionNameArray.length; i++) {
+        factionLevelsContainer.insertAdjacentHTML('beforeend', `
+            <div class='faction-name-container'>
+                <p class='faction-name'>${factionNameArray[i]}</p>
+            </div>
+        `)
+    }
+}
