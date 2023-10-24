@@ -1,18 +1,13 @@
 import { auth, } from "./firebase";
 import { onAuthStateChanged, } from "firebase/auth";
 import { createSignOutButtonFunction } from "./auth";
+import { currentWebAppVersion } from ".";
 // import { menu.svg } from "./resources"
 
 export const navContainer = document.getElementById('navContainer');
 export const profileLinkContainer = document.getElementById('profileLinkContainer');
 export const pageContainer = document.getElementById('pageContainer');
 const footerContainer = document.getElementById('footerContainer');
-
-// Variables That Change:
-const lastUpdated = "(2023.07.22)";
-const currentWebAppVersion = "version: 0.1" + " " + lastUpdated;
-
-// console.log('Error Checking:  Beginning of UI.js File');
 
 onAuthStateChanged(auth, user => {
   if (user) { // IF USER IS TRUE, MEANING IF USER IS LOGGED IN
@@ -27,10 +22,10 @@ function loadPage(user) {
   // showLoginState();
   if (user) {
     createNavigation(user);
-    createFooter(currentWebAppVersion);
+    createFooter();
   } else {
     createNavigation();
-    createFooter(currentWebAppVersion);
+    createFooter();
   }
 }
 
@@ -101,10 +96,10 @@ const createNavigation = async (user) => {
   }
 }
 
-const createFooter = async (version) => {
+const createFooter = async () => {
   footerContainer.insertAdjacentHTML('afterbegin', `
     <p>Created by Daniel Godin</p>
-    <p id='appVersion'>${version}</p>
+    <p id='appVersion'>${currentWebAppVersion}</p>
   `)
 }
 

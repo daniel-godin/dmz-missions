@@ -10,6 +10,10 @@ import { } from "./to-do";
 import { } from "./fob";
 import { } from "./active-tasks";
 
+// Last Updated:  CHANGE THIS WHEN YOU DO FIREBASE DEPLOY
+export const lastUpdated = "(2023.10.20)";
+export const currentWebAppVersion = "version: 0.1" + " " + lastUpdated;
+
 
 // Local Emulators
 connectAuthEmulator(auth, "http://localhost:9099"); // Auth Emulator
