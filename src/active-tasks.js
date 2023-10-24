@@ -6,6 +6,7 @@ import { currentDMZStandardMissions, currentDMZSeasonDocName } from "./dmz-missi
 import { auth, db } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { logInRequiredFunction } from "./ui";
+import { createFactionLevelDisplay } from "./faction-bar";
 
 const activeTasksContainer = document.getElementById('activeTasksContainer');
 
@@ -58,6 +59,8 @@ const createDOM = (dataObj, docRef, user, db) => {
     console.log("Active Tasks: createDOM Function Triggered."); // FOR TESTING.
 
     activeTasksContainer.innerHTML = ''; // Resets main container to zero.
+
+    createFactionLevelDisplay(); // Displays a bar from faction-bar.js.  This bar contains each faction name and current faction level.
 
     dataObj = dataObj.newSetUpKey; // This is a hacky way to get around FireStore's limitations of not allow nested arrays, nor having a document start with arrays.  Basically, newSetUpKey is the only key to the data Object, and it's value is an array with all the data.
 
