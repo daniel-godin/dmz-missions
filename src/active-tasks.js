@@ -195,6 +195,18 @@ const createListenerEvents = (obj, docRef, user, db) => {
             let currentObj = obj;
             currentObj = currentObj.newSetUpKey;
 
+            let taskObj = obj;
+            taskObj = taskObj.newSetUpKey;
+            let missionObj = obj;
+            missionObj = missionObj.newSetUpKey;
+
+
+
+
+
+
+
+
 
             let checked = e.target.checked;
             let notation = e.target.dataset.objNotation;
@@ -202,6 +214,23 @@ const createListenerEvents = (obj, docRef, user, db) => {
 
             let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
             let parentMissionArray = parentMissionNotation.split('.');
+
+            console.log("Mission Obj B4", missionObj);
+            missionObj = returnObj(missionObj, parentMissionArray);
+            console.log("mission obj after", missionObj);
+
+            function returnObj(object, array) {
+                for (let j = 0; j < array.length; j++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
+                    let key = array[j];
+                    if (object && object[key]) {
+                        object = object[key];
+                    } else {
+                        console.log("nested property not found.");
+                        break;
+                    }
+                }
+                return object;
+            }
 
             for (let j = 0; j < notationArray.length; j++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
                 let key = notationArray[j];
@@ -212,6 +241,7 @@ const createListenerEvents = (obj, docRef, user, db) => {
                     break;
                 }
             }
+            
 
             currentObj.complete = checked;
 
@@ -225,12 +255,29 @@ const createListenerEvents = (obj, docRef, user, db) => {
                 currentObj.progressCurrent = currentObj.savePrevProgressCurrentNum;
             };
 
-            // console.log ("2nd prevNum", savePreviousProgressCurrentNumber);
+
+            for (let j = 0; j < parentMissionArray.length; j++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
+                let key = parentMissionArray[j];
+                if (missionObj && missionObj[key]) {
+                    missionObj = missionObj[key];
+                } else {
+                    console.log("nested property not found.");
+                    break;
+                }
+            }
+
+            // console.log("currentObj3:", currentObj);
+            // console.log("missionObj", missionObj);
+            // console.log("missionArray", parentMissionArray);
+            // console.log("obj3", obj);
+
+
+
+
+
 
 
             setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
-
-            // console.log ("3rd prevNum", savePreviousProgressCurrentNumber);
 
             let parentNotationString = (arr, obj) => {
                 for (let i = 0; i < arr.length; i++) {
