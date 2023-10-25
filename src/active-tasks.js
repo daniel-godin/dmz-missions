@@ -198,78 +198,30 @@ const createListenerEvents = (obj, docRef, user, db) => {
 
             let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
             let parentMissionArray = parentMissionNotation.split('.');
+            let nextMissionArray = createNextMissionArray(parentMissionNotation);
+
 
    
             let currentObj = obj.newSetUpKey;
-            let missionObj = returnObjFromNotationArray(currentObj, parentMissionArray);
             let taskObj = returnObjFromNotationArray(currentObj, notationArray);
+            let missionObj = returnObjFromNotationArray(currentObj, parentMissionArray);
+            let nextMissionObj = returnObjFromNotationArray(currentObj, nextMissionArray);
+
 
             taskObj.complete = checked;
-            // missionObj.complete = checkTasks(missionObj);
+            missionObj.complete = confirmMissionCompleteCheckTasks(missionObj);
+            if (nextMissionObj != Array.isArray(nextMissionObj)) { nextMissionObj.unlocked = missionObj.complete };
+            if (Array.isArray(nextMissionObj)) { console.log('There is no next mission object.  Array Found'); }
 
-            let misCheck = checkTasks(missionObj);
-            console.log("misCheck", misCheck);
 
-            function checkTasks(object) {
-                let taskArray = object.tasks;
-                let answer = false;
-
-                for (let i = 0; i < taskArray.length; i++) {
-                    answer = taskArray[i].complete;
-                }
+            // Next Up:  Find the next mission object and make it unlock: true, if missionObject.complete = true;
 
 
 
-
-
-                return answer;
-            }
-
-
-            console.log("obj", obj);
-            console.log("currentObj", currentObj);
-            console.log("missionObj", missionObj);
-            console.log("taskObj", taskObj);
+            setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
 
 
 
-            // setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
-
-
-
-            // for (let j = 0; j < notationArray.length; j++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
-            //     let key = notationArray[j];
-            //     if (currentObj && currentObj[key]) {
-            //         currentObj = currentObj[key];
-            //     } else {
-            //         console.log("nested property not found.");
-            //         break;
-            //     }
-            // }
-            
-
-            // currentObj.complete = checked;
-
-            // if (checked == true) { 
-            //     let savePreviousProgressCurrentNumber = currentObj.progressCurrent;
-            //     currentObj.savePrevProgressCurrentNum = savePreviousProgressCurrentNumber;
-            //     currentObj.progressCurrent = currentObj.progressTotal; 
-            // };
-
-            // if (checked == false && currentObj.progressCurrent >= currentObj.progressTotal) { 
-            //     currentObj.progressCurrent = currentObj.savePrevProgressCurrentNum;
-            // };
-
-
-            // for (let j = 0; j < parentMissionArray.length; j++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
-            //     let key = parentMissionArray[j];
-            //     if (missionObj && missionObj[key]) {
-            //         missionObj = missionObj[key];
-            //     } else {
-            //         console.log("nested property not found.");
-            //         break;
-            //     }
-            // }
 
 
 
@@ -343,6 +295,24 @@ function returnObjFromNotationArray(object, array) {
         }
     }
     return object;
+}
+
+function confirmMissionCompleteCheckTasks(object) {
+    let taskArray = object.tasks;
+    let answer = false;
+
+    for (let i = 0; i < taskArray.length; i++) {
+        answer = taskArray[i].complete;
+    }
+    return answer;
+}
+
+function createNextMissionArray(notation) {
+    let arr = notation.split('.');
+    let lastElement = arr[arr.length - 1];
+    let modifiedElement = Number(lastElement) + 1;
+    arr[arr.length - 1] = modifiedElement.toString();
+    return arr;
 }
 
 
