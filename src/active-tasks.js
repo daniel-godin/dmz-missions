@@ -190,7 +190,11 @@ const createListenerEvents = (obj, docRef, user, db) => {
 
     for (let i = 0; i < arrayOfMissionTaskCheckboxes.length; i++) {
         arrayOfMissionTaskCheckboxes[i].addEventListener('click', (e) => {
-            console.log("TEST: e.target", e.target);
+            // console.log("TEST: e.target", e.target);
+
+            let currentObj = obj;
+            currentObj = currentObj.newSetUpKey;
+
 
             let checked = e.target.checked;
             let notation = e.target.dataset.objNotation;
@@ -198,6 +202,35 @@ const createListenerEvents = (obj, docRef, user, db) => {
 
             let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
             let parentMissionArray = parentMissionNotation.split('.');
+
+            for (let j = 0; j < notationArray.length; j++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
+                let key = notationArray[j];
+                if (currentObj && currentObj[key]) {
+                    currentObj = currentObj[key];
+                } else {
+                    console.log("nested property not found.");
+                    break;
+                }
+            }
+
+            currentObj.complete = checked;
+
+            if (checked == true) { 
+                let savePreviousProgressCurrentNumber = currentObj.progressCurrent;
+                currentObj.savePrevProgressCurrentNum = savePreviousProgressCurrentNumber;
+                currentObj.progressCurrent = currentObj.progressTotal; 
+            };
+
+            if (checked == false && currentObj.progressCurrent >= currentObj.progressTotal) { 
+                currentObj.progressCurrent = currentObj.savePrevProgressCurrentNum;
+            };
+
+            // console.log ("2nd prevNum", savePreviousProgressCurrentNumber);
+
+
+            setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
+
+            // console.log ("3rd prevNum", savePreviousProgressCurrentNumber);
 
             let parentNotationString = (arr, obj) => {
                 for (let i = 0; i < arr.length; i++) {
@@ -211,52 +244,8 @@ const createListenerEvents = (obj, docRef, user, db) => {
                         console.log("nested prop not found.");
                         return testObj;
                     }
-
                 }
             }
-
-            console.log('consolelog parent notation string obj', parentNotationString(parentMissionArray, obj));
-
-
-            let currentObj = obj;
-            currentObj = currentObj.newSetUpKey;
-
-            for (let j = 0; j < notationArray.length; j++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
-                let key = notationArray[j];
-                if (currentObj && currentObj[key]) {
-                    currentObj = currentObj[key];
-                } else {
-                    console.log("nested property not found.");
-                    break;
-                }
-            }
-
-            let savePreviousProgressCurrentNumber = currentObj.progressCurrent;
-            console.log ("1st prevNum", savePreviousProgressCurrentNumber);
-
-            currentObj.complete = checked;
-            if (checked == true) { 
-                currentObj.progressCurrent = currentObj.progressTotal; 
-                // let missionComplete = checkIfMissionComplete(); // Checks if all conditions are met to complete a task's parent mission.
-
-                // if (missionComplete) { // If checkIfMissionComplete returns true.  Means mission is complete, and you need to "unlock" the next mission in the array of mission objects.  If no next object exists, nothing to unlock.
-                //     unlockNextMission();
-                // }
-
-
-
-
-            } // Updates object's progressCurrent number to match the progressTotal.
-            if (checked == false && currentObj.progressCurrent >= currentObj.progressTotal) { 
-                currentObj.progressCurrent = 0 
-            } // Later, I want this to go back to whatever it was in a previous state.  Unsure of how to do this right now.
-
-            // console.log ("2nd prevNum", savePreviousProgressCurrentNumber);
-
-
-            setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
-
-            // console.log ("3rd prevNum", savePreviousProgressCurrentNumber);
 
         });
     }
@@ -301,16 +290,7 @@ const createFactionLevelDisplay = (dataObj, docRef, docName, user, db) => {
     }
 }
 
-// const checkIfMissionComplete = (obj, arr, completeStatus) => {
-//     // Pseudo-code:
-//     // if parent mission of task is parentObj.complete: true || all task objects are taskObj.complete: true;  return true.
-//     let 
 
-// }
-
-// const unlockNextMission = (obj, arr, completeStatus) => {
-
-// }
 
 
 const resetDOM = (...args) => {

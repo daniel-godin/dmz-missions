@@ -22,7 +22,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 100k in Cash.",
                 taskID:  848490,
-                progressCurrentSaved: 0,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 100_000,
                 complete: false, // true/false complete/incomplete
@@ -47,6 +47,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 10 bottles of liquor.",
                 taskID:  479699,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 10,
                 complete: false, // true/false complete/incomplete
@@ -54,6 +55,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 6 wine bottles.",
                 taskID:  689929,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 6,
                 complete: false, // true/false complete/incomplete
@@ -61,6 +63,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 2 aged or vintage wine bottles.",
                 taskID:  807135,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 2,
                 complete: false, // true/false complete/incomplete
@@ -85,6 +88,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 2 encrypted hard drives.",
                 taskID:  540358,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 2,
                 complete: false, // true/false complete/incomplete
@@ -92,6 +96,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 8 hard drives.",
                 taskID:  955670,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 8,
                 complete: false, // true/false complete/incomplete
@@ -99,6 +104,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 4 thumb drives.",
                 taskID:  918958,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
@@ -106,6 +112,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 4 laptops.",
                 taskID:  776282,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
@@ -130,6 +137,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 2 GPUs.",
                 taskID:  391812,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 2,
                 complete: false, // true/false complete/incomplete
@@ -154,6 +162,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 6 vintage wine bottles.",
                 taskID:  352358,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 6,
                 complete: false, // true/false complete/incomplete
@@ -161,6 +170,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 10 bottles of Japanese liquor.",
                 taskID:  787753,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 10,
                 complete: false, // true/false complete/incomplete
@@ -185,6 +195,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  740005,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -192,6 +203,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  589005,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -199,6 +211,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  442270,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -206,6 +219,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  719450,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -213,6 +227,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  834546,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -220,6 +235,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  687578,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -248,6 +264,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 10 nuclear fuel rods.",
                 taskID:  727520,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 10,
                 complete: false, // true/false complete/incomplete
@@ -255,6 +272,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 2 radiation blocker bottles.",
                 taskID:  240020,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 2,
                 complete: false, // true/false complete/incomplete
@@ -280,6 +298,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 9 cigar boxes.",
                 taskID:  601904,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 9,
                 complete: false, // true/false complete/incomplete
@@ -287,6 +306,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 5 comic books.",
                 taskID:  131839,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 5,
                 complete: false, // true/false complete/incomplete
@@ -294,6 +314,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 3 bottles of aspirin.",
                 taskID:  973954,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 3,
                 complete: false, // true/false complete/incomplete
@@ -319,6 +340,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 5 large medical bags.",
                 taskID:  204572,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 5,
                 complete: false, // true/false complete/incomplete
@@ -326,6 +348,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 10 AFAKs.",
                 taskID:  641703,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 10,
                 complete: false, // true/false complete/incomplete
@@ -333,6 +356,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extraft 15 IFAKs.",
                 taskID:  365220,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 15,
                 complete: false, // true/false complete/incomplete
@@ -358,6 +382,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 5 screwdrivers.",
                 taskID:  555264,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 5,
                 complete: false, // true/false complete/incomplete
@@ -365,6 +390,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 5 wrenches.",
                 taskID:  276009,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 5,
                 complete: false, // true/false complete/incomplete
@@ -372,6 +398,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 1 RGL-80.",
                 taskID:  152358,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -379,6 +406,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 3 dog tags.",
                 taskID:  684728,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -404,6 +432,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 40 documents.",
                 taskID:  622594,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 40,
                 complete: false, // true/false complete/incomplete
@@ -411,6 +440,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 16 sensitive documents.",
                 taskID:  794951,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 16,
                 complete: false, // true/false complete/incomplete
@@ -418,6 +448,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 8 classified documents.",
                 taskID:  909019,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 8,
                 complete: false, // true/false complete/incomplete
@@ -446,6 +477,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 5 batteries.",
                 taskID:  849893,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 5,
                 complete: false, // true/false complete/incomplete
@@ -453,6 +485,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 2 drills.",
                 taskID:  853435,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 2,
                 complete: false, // true/false complete/incomplete
@@ -460,6 +493,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 3 bottles of oil.",
                 taskID:  726311,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 3,
                 complete: false, // true/false complete/incomplete
@@ -485,6 +519,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 8 rolls of electrical tape.",
                 taskID:  383450,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 8,
                 complete: false, // true/false complete/incomplete
@@ -492,6 +527,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 3 car batteries.",
                 taskID:  486788,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 3,
                 complete: false, // true/false complete/incomplete
@@ -499,6 +535,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 6 jumper cables.",
                 taskID:  140872,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 6,
                 complete: false, // true/false complete/incomplete
@@ -524,6 +561,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 5 AQ laptops.",
                 taskID:  364751,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 5,
                 complete: false, // true/false complete/incomplete
@@ -531,6 +569,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 10 screwdrivers.",
                 taskID:  442773,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 10,
                 complete: false, // true/false complete/incomplete
@@ -538,6 +577,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 4 encrypted hard drives.",
                 taskID:  595707,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
@@ -545,6 +585,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 500k in cash.",
                 taskID:  560890,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 500,
                 complete: false, // true/false complete/incomplete
@@ -570,6 +611,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 4 GPUs.",
                 taskID:  409832,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
@@ -577,6 +619,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 10 game consoles.",
                 taskID:  528830,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 10,
                 complete: false, // true/false complete/incomplete
@@ -584,6 +627,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 10 VCRs.",
                 taskID:  340410,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 10,
                 complete: false, // true/false complete/incomplete
@@ -591,6 +635,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 6 encrypted thumb drives.",
                 taskID:  771441,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 6,
                 complete: false, // true/false complete/incomplete
@@ -616,6 +661,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  330925,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -623,6 +669,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  716134,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -630,6 +677,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  693788,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -637,6 +685,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  410846,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -644,6 +693,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  752980,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -651,6 +701,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  108684,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -679,6 +730,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 8 bandages.",
                 taskID:  881465,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 8,
                 complete: false, // true/false complete/incomplete
@@ -686,6 +738,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 4 IFAKs.",
                 taskID:  680861,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 4,
                 complete: false, // true/false complete/incomplete
@@ -693,6 +746,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 1 bottle of radiation blockers.",
                 taskID:  614255,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -718,6 +772,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 6 vases from Ashika Island.",
                 taskID:  662786,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 6,
                 complete: false, // true/false complete/incomplete
@@ -725,6 +780,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 3 Japanese liquor bottles.",
                 taskID:  538157,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 3,
                 complete: false, // true/false complete/incomplete
@@ -750,6 +806,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 8 bottles of fresh water.",
                 taskID:  464978,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 8,
                 complete: false, // true/false complete/incomplete
@@ -757,6 +814,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 7 food rations.",
                 taskID:  418681,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 7,
                 complete: false, // true/false complete/incomplete
@@ -764,6 +822,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 3 gas cans.",
                 taskID:  410600,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 3,
                 complete: false, // true/false complete/incomplete
@@ -771,6 +830,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 8 cans of food.",
                 taskID:  245661,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 8,
                 complete: false, // true/false complete/incomplete
@@ -796,6 +856,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 8 aspirin bottles.",
                 taskID:  891302,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 8,
                 complete: false, // true/false complete/incomplete
@@ -803,6 +864,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "Extract 8 large medical bags.",
                 taskID:  334802,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 8,
                 complete: false, // true/false complete/incomplete
@@ -828,6 +890,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  312287,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -835,6 +898,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  906443,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -842,6 +906,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  512846,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -849,6 +914,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  961647,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -856,6 +922,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  297957,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -863,6 +930,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                 task: "",
                 taskID:  844925,
+                savePrevProgressCurrentNum: 0,
                 progressCurrent: 0,
                 progressTotal: 1,
                 complete: false, // true/false complete/incomplete
@@ -893,6 +961,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
             {
               task: "Extract 4 bottles of gun oil.",
               taskID:  497595,
+              savePrevProgressCurrentNum: 0,
               progressCurrent: 0,
               progressTotal: 4,
               complete: false, // true/false complete/incomplete
@@ -900,6 +969,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
             {
               task: "Extract 3 classified documents.",
               taskID:  221197,
+              savePrevProgressCurrentNum: 0,
               progressCurrent: 0,
               progressTotal: 3,
               complete: false, // true/false complete/incomplete
@@ -907,6 +977,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
             {
               task: "Extract 400k in cash.",
               taskID:  601379,
+              savePrevProgressCurrentNum: 0,
               progressCurrent: 0,
               progressTotal: 400,
               complete: false, // true/false complete/incomplete
@@ -932,6 +1003,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
             {
               task: "Extract 12 tubes of toothpaste.",
               taskID:  939388,
+              savePrevProgressCurrentNum: 0,
               progressCurrent: 0,
               progressTotal: 12,
               complete: false, // true/false complete/incomplete
@@ -939,6 +1011,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
             {
               task: "Extract 15 bottles of fresh water.",
               taskID:  556786,
+              savePrevProgressCurrentNum: 0,
               progressCurrent: 0,
               progressTotal: 15,
               complete: false, // true/false complete/incomplete
@@ -946,6 +1019,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
             {
               task: "Extract 7 light bulbs.",
               taskID:  665800,
+              savePrevProgressCurrentNum: 0,
               progressCurrent: 0,
               progressTotal: 7,
               complete: false, // true/false complete/incomplete
@@ -953,6 +1027,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
             {
               task: "Extract 5 enemy operator's weapons.",
               taskID:  295744,
+              savePrevProgressCurrentNum: 0,
               progressCurrent: 0,
               progressTotal: 5,
               complete: false, // true/false complete/incomplete
@@ -983,6 +1058,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 3 IFAKs found at hospitals.",
                   taskID:  778662,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 3,
                   complete: false, // true/false complete/incomplete
@@ -990,6 +1066,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 1 AFAK or large medical bag.",
                   taskID:  862847,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 1,
                   complete: false, // true/false complete/incomplete
@@ -997,6 +1074,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 1 enemy operator's weapon.",
                   taskID:  675564,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 1,
                   complete: false, // true/false complete/incomplete
@@ -1024,6 +1102,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 8 bags of imported tea.",
                   taskID:  699570,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 8,
                   complete: false, // true/false complete/incomplete
@@ -1031,6 +1110,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 8 jars of soothing hand cream.",
                   taskID:  254812,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 8,
                   complete: false, // true/false complete/incomplete
@@ -1038,6 +1118,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 4 bottles of aged of vintage wine.",
                   taskID:  811077,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 4,
                   complete: false, // true/false complete/incomplete
@@ -1065,6 +1146,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 4 jugs of chlorine.",
                   taskID:  788532,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 4,
                   complete: false, // true/false complete/incomplete
@@ -1072,6 +1154,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 4 jugs of formaldehyde.",
                   taskID:  854490,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 4,
                   complete: false, // true/false complete/incomplete
@@ -1079,6 +1162,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 4 bottles of cephalexin.",
                   taskID:  538969,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 4,
                   complete: false, // true/false complete/incomplete
@@ -1086,6 +1170,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 4 bottles of hydrochloride.",
                   taskID:  253290,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 4,
                   complete: false, // true/false complete/incomplete
@@ -1093,6 +1178,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 4 bottles of acetone.",
                   taskID:  799494,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 4,
                   complete: false, // true/false complete/incomplete
@@ -1100,6 +1186,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 4 bottles of hydrogen peroxide.",
                   taskID:  636878,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 4,
                   complete: false, // true/false complete/incomplete
@@ -1130,6 +1217,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 5 GPUs.",
                   taskID:  738148,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 5,
                   tags: [],
@@ -1138,6 +1226,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 10 Gold Bars.",
                   taskID:  117587,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 10,
                   tags: [],
@@ -1146,6 +1235,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 8 Gold Skulls.",
                   taskID:  121145,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 8,
                   tags: [],
@@ -1154,6 +1244,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 10 Enemy Operator's Weapons.",
                   taskID:  344489,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 10,
                   tags: [],
@@ -1182,6 +1273,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 35 cigar boxes.",
                   taskID:  714201,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 35,
                   tags: [],
@@ -1190,6 +1282,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 20 lighters.",
                   taskID:  485497,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 20,
                   tags: [],
@@ -1218,6 +1311,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 10 dog tags.",
                   taskID:  252132,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 10,
                   tags: [],
@@ -1226,6 +1320,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 1 damascus dog tag.",
                   taskID:  774551,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 1,
                   tags: [],
@@ -1234,6 +1329,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 2 gold dog tags.",
                   taskID:  226648,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 2,
                   tags: [],
@@ -1242,6 +1338,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 3 silver dog tags.",
                   taskID:  304916,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 3,
                   tags: [],
@@ -1250,6 +1347,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 3 weapon cases.",
                   taskID:  709772,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 3,
                   tags: [],
@@ -1281,6 +1379,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 4 thumb drives.",
                   taskID:  948569,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 4,
                   tags: [],
@@ -1289,6 +1388,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 5 hard drives.",
                   taskID:  886710,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 5,
                   tags: [],
@@ -1317,6 +1417,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 4 dog tags.",
                   taskID:  920096,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 4,
                   tags: [],
@@ -1325,6 +1426,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 4 pieces of Black Mous intel from Rohan Oil.",
                   taskID:  562618,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 4,
                   tags: [],
@@ -1353,6 +1455,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 6 Ashika Island masks.",
                   taskID:  533039,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 6,
                   tags: [],
@@ -1361,6 +1464,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 1 original Ashika Island mask.",
                   taskID:  857597,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 1,
                   tags: [],
@@ -1389,6 +1493,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 15 armor plates.",
                   taskID:  886581,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 15,
                   tags: [],
@@ -1397,6 +1502,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 5 three-plate carriers.",
                   taskID:  676178,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 5,
                   tags: [],
@@ -1405,6 +1511,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 3 armor plate boxes.",
                   taskID:  211976,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 3,
                   tags: [],
@@ -1433,6 +1540,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 10 UAVs or advanced UAVs.",
                   taskID:  831333,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 10,
                   tags: [],
@@ -1441,6 +1549,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 12 anti-armor round boxes.",
                   taskID:  461853,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 12,
                   tags: [],
@@ -1449,6 +1558,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 20 encrypted hard drives.",
                   taskID:  631563,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 20,
                   tags: [],
@@ -1480,6 +1590,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 9 stims.",
                   taskID:  618279,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 9,
                   tags: [],
@@ -1488,6 +1599,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 6 bandages.",
                   taskID:  262346,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 6,
                   tags: [],
@@ -1516,6 +1628,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 15 lighters, comic books cigar boxes, or documents.",
                   taskID:  901152,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 15,
                   tags: [],
@@ -1524,6 +1637,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 5 gas cans.",
                   taskID:  527724,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 5,
                   tags: [],
@@ -1552,6 +1666,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 16 blow torches.",
                   taskID:  793652,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 16,
                   tags: [],
@@ -1560,6 +1675,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 12 jumper cables.",
                   taskID:  563323,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 12,
                   tags: [],
@@ -1568,6 +1684,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 8 car batteries.",
                   taskID:  840445,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 8,
                   tags: [],
@@ -1596,6 +1713,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 3,500 rounds of pistol or SMG ammo.",
                   taskID:  239326,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 3_500,
                   tags: [],
@@ -1604,6 +1722,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 6,500 rounds of AR or LMG ammo.",
                   taskID:  622241,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 6_500,
                   tags: [],
@@ -1612,6 +1731,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 1,200 shells of shotgun ammo.",
                   taskID:  843674,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 1_200,
                   tags: [],
@@ -1620,6 +1740,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 120 shells of launcher ammo.",
                   taskID:  208720,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 120,
                   tags: [],
@@ -1628,6 +1749,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 800 rounds of sniper ammo.",
                   taskID:  908383,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 800,
                   tags: [],
@@ -1656,6 +1778,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 30 gas masks.",
                   taskID:  100035,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 1,
                   tags: [],
@@ -1664,6 +1787,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 10 durable gas masks.",
                   taskID:  672580,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 2,
                   tags: [],
@@ -1672,6 +1796,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
               {
                   task: "Extract 15 radiation blocker bottles.",
                   taskID:  258593,
+                  savePrevProgressCurrentNum: 0,
                   progressCurrent: 0,
                   progressTotal: 3,
                   tags: [],
@@ -1705,6 +1830,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Dead Drop 8 stronghold keycards.",
                     taskID:  545823,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 8,
                     tags: [],
@@ -1713,6 +1839,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Dead drop 1 skeleton key.",
                     taskID:  349678,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -1741,6 +1868,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Dead drop 10 killstreaks.",
                     taskID:  342023,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 10,
                     tags: [],
@@ -1749,6 +1877,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 5 NVGs.",
                     taskID:  737718,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -1777,6 +1906,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 5 heart lockets.",
                     taskID:  152380,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -1785,6 +1915,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 5 vials of insulin.",
                     taskID:  551283,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -1793,6 +1924,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 5 small dolls.",
                     taskID:  651986,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -1801,6 +1933,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 5 lucky cat statues.",
                     taskID:  640747,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -1809,6 +1942,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 5 dog bank statues.",
                     taskID:  442191,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -1840,6 +1974,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 12 rebreathers.",
                     taskID:  834308,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 12,
                     tags: [],
@@ -1848,6 +1983,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 15 rolls of electrical tape.",
                     taskID:  945216,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 15,
                     tags: [],
@@ -1856,6 +1992,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 8 light bulbs.",
                     taskID:  852360,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 8,
                     tags: [],
@@ -1864,6 +2001,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 8 bottles of gun oil.",
                     taskID:  879443,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 8,
                     tags: [],
@@ -1872,6 +2010,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 5 blow torches.",
                     taskID:  972766,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -1880,6 +2019,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 1 GPU.",
                     taskID:  983389,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -1908,6 +2048,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 8 armor boxes.",
                     taskID:  107247,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 81,
                     tags: [],
@@ -1916,6 +2057,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 4 drills.",
                     taskID:  589039,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -1924,6 +2066,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 5 screwdrivers.",
                     taskID:  489890,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -1932,6 +2075,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 8 batteries.",
                     taskID:  162950,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 8,
                     tags: [],
@@ -1940,6 +2084,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 16 electronic components.",
                     taskID:  531880,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 16,
                     tags: [],
@@ -1948,6 +2093,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Extract 5 plastic explosive bricks.",
                     taskID:  363321,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -1979,6 +2125,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Dead drop 40 self revives.",
                     taskID:  635652,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 40,
                     tags: [],
@@ -2012,6 +2159,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Helo Commander.",
                     taskID:  717313,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2040,6 +2188,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Helo Commander 4 times.",
                     taskID:  853923,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -2068,6 +2217,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Helo Commander 5 times.",
                     taskID:  304398,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -2096,6 +2246,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Helo Commander 10 times.",
                     taskID:  672955,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 10,
                     tags: [],
@@ -2127,6 +2278,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Chemist.",
                     taskID:  269814,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2158,6 +2310,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Wheelson.",
                     taskID:  230607,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2189,6 +2342,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Sniper.",
                     taskID:  239390,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2217,6 +2371,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Sniper or the Rhino 4 times.",
                     taskID:  166805,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -2245,6 +2400,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  565090,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2253,6 +2409,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  305756,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 2,
                     tags: [],
@@ -2261,6 +2418,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  148999,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -2269,6 +2427,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  447901,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -2277,6 +2436,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  528621,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -2285,6 +2445,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  132619,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -2313,6 +2474,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  157881,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2321,6 +2483,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  178162,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 2,
                     tags: [],
@@ -2329,6 +2492,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  453283,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -2337,6 +2501,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  550298,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -2345,6 +2510,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  656813,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -2353,6 +2519,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  831621,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -2384,6 +2551,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Armored Commander.",
                     taskID:  600693,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2415,6 +2583,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Pyro.",
                     taskID:  104522,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2443,6 +2612,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Pyro 4 times.",
                     taskID:  571557,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -2471,6 +2641,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  845101,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2479,6 +2650,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  323230,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 2,
                     tags: [],
@@ -2487,6 +2659,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  336981,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -2495,6 +2668,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  695257,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -2503,6 +2677,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  438739,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -2511,6 +2686,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  316813,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -2539,6 +2715,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  457573,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2547,6 +2724,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  385515,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 2,
                     tags: [],
@@ -2555,6 +2733,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  905524,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -2563,6 +2742,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  338668,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -2571,6 +2751,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  871541,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -2579,6 +2760,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  831774,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -2610,6 +2792,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Scavenger.",
                     taskID:  617450,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2638,6 +2821,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Scavenger 9 times.",
                     taskID:  998467,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 9,
                     tags: [],
@@ -2669,6 +2853,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill Velikan in Building 21.",
                     taskID:  604350,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2697,6 +2882,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  944482,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2705,6 +2891,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  138158,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 2,
                     tags: [],
@@ -2713,6 +2900,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  947421,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 3,
                     tags: [],
@@ -2721,6 +2909,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  213370,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -2729,6 +2918,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  119585,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 5,
                     tags: [],
@@ -2737,6 +2927,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "",
                     taskID:  146367,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -2768,6 +2959,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Bomb Maker.",
                     taskID:  737603,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 1,
                     tags: [],
@@ -2796,6 +2988,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Bomb Maker 4 times.",
                     taskID:  382177,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 4,
                     tags: [],
@@ -2824,6 +3017,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                 {
                     task: "Kill the Bomb Maker 6 times.",
                     taskID:  331773,
+                    savePrevProgressCurrentNum: 0,
                     progressCurrent: 0,
                     progressTotal: 6,
                     tags: [],
@@ -2857,6 +3051,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract with a full backpack with each slot filled.",
                       taskID:  271702,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 1,
                       tags: [],
@@ -2885,6 +3080,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 12 Scavenger calling cards.",
                       taskID:  684708,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 12,
                       tags: [],
@@ -2916,6 +3112,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 2 Al Qatala Planning Diagrams or Images.",
                       taskID:  556447,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 2,
                       tags: [],
@@ -2944,6 +3141,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 10 jugs of liquid nitrogen.",
                       taskID:  688244,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 10,
                       tags: [],
@@ -2975,6 +3173,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 3 classified documents.",
                       taskID:  802967,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 3,
                       tags: [],
@@ -3003,6 +3202,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 10 cans of heavy chopper fuel.",
                       taskID:  298105,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 10,
                       tags: [],
@@ -3034,6 +3234,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 3 bottles of hydrogen peroxide, cephalexin, or aceton.",
                       taskID:  770245,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 3,
                       tags: [],
@@ -3062,6 +3263,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 5 origami horses.",
                       taskID:  419791,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 5,
                       tags: [],
@@ -3093,6 +3295,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Dead drop 10 keys.",
                       taskID:  200091,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 10,
                       tags: [],
@@ -3121,6 +3324,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 10 encrypted hard drives from Building 21.",
                       taskID:  978301,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 10,
                       tags: [],
@@ -3152,6 +3356,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 15 laptops.",
                       taskID:  357591,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 15,
                       tags: [],
@@ -3160,6 +3365,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 3 encrypted hard drives.",
                       taskID:  275898,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 3,
                       tags: [],
@@ -3168,6 +3374,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 6 encrypted thumb drives.",
                       taskID:  518492,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 6,
                       tags: [],
@@ -3199,6 +3406,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 6 bricks of plastic explosives.",
                       taskID:  259583,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 6,
                       tags: [],
@@ -3207,6 +3415,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 20 electrical components.",
                       taskID:  954757,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 20,
                       tags: [],
@@ -3215,6 +3424,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 5 VCRs.",
                       taskID:  482655,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 5,
                       tags: [],
@@ -3246,6 +3456,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Dead drop 3 RGL-80s.",
                       taskID:  578046,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 3,
                       tags: [],
@@ -3254,6 +3465,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Dead drop 20 weapons.",
                       taskID:  425294,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 20,
                       tags: [],
@@ -3262,6 +3474,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Dead drop 10 enemy weapons.",
                       taskID:  176061,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 10,
                       tags: [],
@@ -3293,6 +3506,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 8 sensitive or classified documents.",
                       taskID:  441887,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 8,
                       tags: [],
@@ -3301,6 +3515,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Dead drop $1 million in cash.",
                       taskID:  625313,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 1_000_000,
                       tags: [],
@@ -3332,6 +3547,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Dead drop 10 armor plate carriers.",
                       taskID:  878948,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 10,
                       tags: [],
@@ -3340,6 +3556,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Dead drop 6 3-plate carriers.",
                       taskID:  319264,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 6,
                       tags: [],
@@ -3348,6 +3565,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Dead drop 6 self revives.",
                       taskID:  412111,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 6,
                       tags: [],
@@ -3379,6 +3597,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 100k in cash on final exfils 10 times.",
                       taskID:  888011,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 10,
                       tags: [],
@@ -3410,6 +3629,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Complete 100 contracts.",
                       taskID:  678801,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 100,
                       tags: [],
@@ -3438,6 +3658,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  639316,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 1,
                       tags: [],
@@ -3446,6 +3667,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  991480,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 2,
                       tags: [],
@@ -3454,6 +3676,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  441290,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 3,
                       tags: [],
@@ -3462,6 +3685,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  613301,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 4,
                       tags: [],
@@ -3470,6 +3694,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  875005,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 5,
                       tags: [],
@@ -3478,6 +3703,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  810489,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 6,
                       tags: [],
@@ -3506,6 +3732,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  721364,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 1,
                       tags: [],
@@ -3514,6 +3741,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  140676,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 2,
                       tags: [],
@@ -3522,6 +3750,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  469384,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 3,
                       tags: [],
@@ -3530,6 +3759,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  941498,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 4,
                       tags: [],
@@ -3538,6 +3768,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  883334,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 5,
                       tags: [],
@@ -3546,6 +3777,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  675103,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 6,
                       tags: [],
@@ -3577,6 +3809,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 4 drills.",
                       taskID:  578153,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 4,
                       tags: [],
@@ -3585,6 +3818,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 5 screwdrivers.",
                       taskID:  372543,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 5,
                       tags: [],
@@ -3593,6 +3827,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 3 wrenches.",
                       taskID:  841098,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 3,
                       tags: [],
@@ -3601,6 +3836,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 4 hard drives.",
                       taskID:  656546,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 4,
                       tags: [],
@@ -3609,6 +3845,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 3 rolls of electrical tape.",
                       taskID:  615705,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 3,
                       tags: [],
@@ -3617,6 +3854,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 3 batteries.",
                       taskID:  736039,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 3,
                       tags: [],
@@ -3645,6 +3883,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 4 bottles of vintage wine.",
                       taskID:  460705,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 4,
                       tags: [],
@@ -3653,6 +3892,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 10 jars of soothing hand cream.",
                       taskID:  203318,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 10,
                       tags: [],
@@ -3661,6 +3901,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 10 cigar boxes.",
                       taskID:  722634,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 10,
                       tags: [],
@@ -3669,6 +3910,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 10 lighters.",
                       taskID:  786980,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 10,
                       tags: [],
@@ -3697,6 +3939,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  795284,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 1,
                       tags: [],
@@ -3705,6 +3948,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  758230,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 2,
                       tags: [],
@@ -3713,6 +3957,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  501373,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 3,
                       tags: [],
@@ -3721,6 +3966,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  663065,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 4,
                       tags: [],
@@ -3729,6 +3975,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  988012,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 5,
                       tags: [],
@@ -3737,6 +3984,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  537156,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 6,
                       tags: [],
@@ -3768,6 +4016,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 8 aged or vintage wine bottles.",
                       taskID:  233743,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 8,
                       tags: [],
@@ -3776,6 +4025,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 15 bottles of fresh water.",
                       taskID:  292230,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 15,
                       tags: [],
@@ -3784,6 +4034,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 10 bottles of Ashika liquor.",
                       taskID:  695234,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 10,
                       tags: [],
@@ -3812,6 +4063,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 8 laptops from Ashika Island.",
                       taskID:  262659,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 8,
                       tags: [],
@@ -3820,6 +4072,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 5 game consoles.",
                       taskID:  729062,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 5,
                       tags: [],
@@ -3828,6 +4081,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 6 VCRs.",
                       taskID:  474258,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 6,
                       tags: [],
@@ -3836,6 +4090,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "Extract 1 GPU.",
                       taskID:  792870,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 1,
                       tags: [],
@@ -3864,6 +4119,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  182197,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 1,
                       tags: [],
@@ -3872,6 +4128,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  960143,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 2,
                       tags: [],
@@ -3880,6 +4137,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  622547,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 3,
                       tags: [],
@@ -3888,6 +4146,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  846822,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 4,
                       tags: [],
@@ -3896,6 +4155,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  756694,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 5,
                       tags: [],
@@ -3904,6 +4164,7 @@ export const dataS6DMZFOB = { // This is currently an Array, but FireStore doesn
                   {
                       task: "",
                       taskID:  112331,
+                      savePrevProgressCurrentNum: 0,
                       progressCurrent: 0,
                       progressTotal: 6,
                       tags: [],
