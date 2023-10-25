@@ -192,8 +192,6 @@ const createListenerEvents = (obj, docRef, user, db) => {
         arrayOfMissionTaskCheckboxes[i].addEventListener('click', (e) => {
             // console.log("TEST: e.target", e.target);
 
-            let currentObj = obj.newSetUpKey;
-
             let checked = e.target.checked;
             let notation = e.target.dataset.objNotation;
             let parentMissionNotation = e.target.dataset.parentMissionNotation;
@@ -201,13 +199,41 @@ const createListenerEvents = (obj, docRef, user, db) => {
             let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
             let parentMissionArray = parentMissionNotation.split('.');
 
-            // console.log("Mission Obj B4", missionObj);
-            // console.log("Task Obj B4", missionObj);
-
+   
+            let currentObj = obj.newSetUpKey;
             let missionObj = returnObjFromNotationArray(currentObj, parentMissionArray);
             let taskObj = returnObjFromNotationArray(currentObj, notationArray);
-            console.log("mission obj after", missionObj);
+
+            taskObj.complete = checked;
+            // missionObj.complete = checkTasks(missionObj);
+
+            let misCheck = checkTasks(missionObj);
+            console.log("misCheck", misCheck);
+
+            function checkTasks(object) {
+                let taskArray = object.tasks;
+                let answer = false;
+
+                for (let i = 0; i < taskArray.length; i++) {
+                    answer = taskArray[i].complete;
+                }
+
+
+
+
+
+                return answer;
+            }
+
+
+            console.log("obj", obj);
+            console.log("currentObj", currentObj);
+            console.log("missionObj", missionObj);
             console.log("taskObj", taskObj);
+
+
+
+            // setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
 
 
 
@@ -245,7 +271,8 @@ const createListenerEvents = (obj, docRef, user, db) => {
             //     }
             // }
 
-            setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
+
+
 
             // let parentNotationString = (arr, obj) => {
             //     for (let i = 0; i < arr.length; i++) {
