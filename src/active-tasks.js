@@ -329,6 +329,7 @@ const createFactionLevelDisplay = (dataObj, docRef, docName, user, db) => {
 
             if (operator == '-') { --factionLevel; };
             if (operator == '+') { ++factionLevel; };
+            if (factionLevel < 0) { factionLevel = 0; }; // Prevent faction level from going negative.
 
             // tempObj[notation] = factionLevel; // Is this Number()?
             dataObj[notation] = factionLevel; // Is this Number()?
@@ -338,7 +339,7 @@ const createFactionLevelDisplay = (dataObj, docRef, docName, user, db) => {
             // Can I do updateDoc here???  Or do I have to do setDoc???  Try Both.
             setDoc(docRef, dataObj, { merge:true });  // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
 
-            factionLevelsContainer.innerHTML = '';
+            // factionLevelsContainer.innerHTML = '';
 
             // factionLevelsContainer = '';
 
