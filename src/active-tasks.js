@@ -200,47 +200,17 @@ const createListenerEvents = (obj, docRef, user, db) => {
             let parentMissionArray = parentMissionNotation.split('.');
             let nextMissionArray = createNextMissionArray(parentMissionNotation);
 
-
-   
             let currentObj = obj.newSetUpKey;
             let taskObj = returnObjFromNotationArray(currentObj, notationArray);
             let missionObj = returnObjFromNotationArray(currentObj, parentMissionArray);
             let nextMissionObj = returnObjFromNotationArray(currentObj, nextMissionArray);
-
 
             taskObj.complete = checked;
             missionObj.complete = confirmMissionCompleteCheckTasks(missionObj);
             if (nextMissionObj != Array.isArray(nextMissionObj)) { nextMissionObj.unlocked = missionObj.complete };
             if (Array.isArray(nextMissionObj)) { console.log('There is no next mission object.  Array Found'); }
 
-
-            // Next Up:  Find the next mission object and make it unlock: true, if missionObject.complete = true;
-
-
-
             setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
-
-
-
-
-
-
-
-            // let parentNotationString = (arr, obj) => {
-            //     for (let i = 0; i < arr.length; i++) {
-            //         let key = arr[i];
-            //         let testObj = obj;
-            //         testObj = testObj.newSetUpKey;
-
-            //         if (testObj && testObj[key]) {
-            //             testObj = testObj[key];
-            //         } else {
-            //             console.log("nested prop not found.");
-            //             return testObj;
-            //         }
-            //     }
-            // }
-
         });
     }
 
