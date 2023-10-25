@@ -313,10 +313,7 @@ const createFactionLevelDisplay = (dataObj, docRef, docName, user, db) => {
 
             dataObj[notation] = factionLevel; // Changes the object[key]'s value to whatever factionLevel is now.
 
-            // Can I do updateDoc here???  Or do I have to do setDoc???  Try Both.
-            setDoc(docRef, dataObj, { merge:true });  // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
-
-
+            setDoc(docRef, dataObj, { merge:true });  // Updates User's Firestore Doc I could use updateDoc() here, but setDoc with merge:true works nearly the same.
         })
     }
 }
