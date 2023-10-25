@@ -1,12 +1,21 @@
+// Active Tasks JavaScript File.  For the "Active Tasks" Feature.
+
+// Firebase Imports:
 import { doc, setDoc, onSnapshot, } from "firebase/firestore";
+import { auth, db } from "./firebase";
+import { onAuthStateChanged } from "firebase/auth";
+
+// Other Imports:
 // import { dataS6DMZFOB, } from "./data/data-s6-dmz-fob";
 // import { dataS6DMZStandardMissions } from "./data/data-s6-dmz-standard-missions";
 import { FOBDataObject, currentFOBDocName } from "./fob";
 import { currentDMZStandardMissions, currentDMZSeasonDocName } from "./dmz-missions";
-import { auth, db } from "./firebase";
-import { onAuthStateChanged } from "firebase/auth";
+import { DMZFactionsArray, dataDMZFactionLevels } from "./data/data-dmz-faction-levels";
+
+
 import { logInRequiredFunction } from "./ui";
-import { createFactionLevelDisplay } from "./faction-bar";
+// import { createFactionLevelDisplay } from "./faction-bar";
+import { camelCase } from "./tools";
 
 const activeTasksContainer = document.getElementById('activeTasksContainer');
 
@@ -17,16 +26,16 @@ const FOBDocName = currentFOBDocName;
 const dataObjectStandardMissions = currentDMZStandardMissions;
 const currentStandardMissionsDocName = currentDMZSeasonDocName;
 
+// Variables For Faction Bar:
+const factionBarDocumentName = 'factionLevels';
+const factionBarDataObject = dataDMZFactionLevels;
+
 onAuthStateChanged(auth, user => {
     if (!activeTasksContainer) { return; };
+    if (!user) { logInRequiredFunction(); return; }
 
-    if (!user) {
-        logInRequiredFunction();
-        return;
-    }
-
+    // Firestore FOB Document Creation/Utilization.
     const docRefFOB = doc(db, 'users', user.uid, 'mw2-trackers', `${FOBDocName}`);
-
     onSnapshot(docRefFOB, (snapshot) => {
         if (!snapshot.exists()) { 
             createActiveTasks(FOBDocName, dataObjectFOB, docRefFOB, user, db);
@@ -35,7 +44,19 @@ onAuthStateChanged(auth, user => {
         };
         let snapObj = snapshot.data();
         createActiveTasks(FOBDocName, snapObj, docRefFOB, user, db);
-    }) 
+    });
+
+     // Firestore Faction Levels Document Creation/Utilization.
+    const docRefFactionLevels = doc(db, 'users', user.uid, 'mw2-trackers', `${factionBarDocumentName}`);
+    onSnapshot(docRefFactionLevels, (snapshot) => {
+        if (!snapshot.exists()) {
+            createFactionLevelDisplay(factionBarDataObject, docRefFactionLevels, factionBarDocumentName, user, db);
+            setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${factionBarDocumentName}`), factionBarDataObject);
+            return;
+        };
+        let snapObj = snapshot.data();
+        createFactionLevelDisplay(snapObj, docRefFactionLevels, factionBarDocumentName, user, db);
+    });
 
     // const docRefStandardMissions = doc(db, 'users', user.uid, 'mw2-trackers', `${currentStandardMissionsDocName}`);
 
@@ -60,7 +81,6 @@ const createDOM = (dataObj, docRef, user, db) => {
 
     activeTasksContainer.innerHTML = ''; // Resets main container to zero.
 
-    createFactionLevelDisplay(); // Displays a bar from faction-bar.js.  This bar contains each faction name and current faction level.
 
     dataObj = dataObj.newSetUpKey; // This is a hacky way to get around FireStore's limitations of not allow nested arrays, nor having a document start with arrays.  Basically, newSetUpKey is the only key to the data Object, and it's value is an array with all the data.
 
@@ -73,7 +93,7 @@ const createDOM = (dataObj, docRef, user, db) => {
     };
     if (user) { 
         userStatus = "" 
-        TaskContainerClass = "fob-mission-task-container"
+        TaskContainerClass = "fob-mission-task-container";
     };
 
     // Later:  Create 2 or 3 div columns for:  Standard Missions | Passive Missions (FOB) Collection Tasks | FOB Boss Killing Tasks
@@ -259,6 +279,83 @@ const createListenerEvents = (obj, docRef, user, db) => {
         });
     }
 
+}
+
+const createFactionLevelDisplay = (dataObj, docRef, docName, user, db) => {
+    // Console Log Test:
+    // console.log("Faction Level Data Object: (JS or Doc?)", dataObj);
+
+    pageContainer.insertAdjacentHTML('afterbegin', `
+        <div class='box' id='factionLevelsContainer'></div>
+    `);
+
+    let factionLevelsContainer = document.getElementById('factionLevelsContainer');
+
+    for (let i = 0; i < DMZFactionsArray.length; i++) {
+
+        let objProp = camelCase(DMZFactionsArray[i]);
+        let factionLevel = dataObj[objProp];
+
+        let factionObjectDotNotation = `${objProp}`;
+
+        // console.log("objProp", objProp, "factionLevel", factionLevel);
+
+        factionLevelsContainer.insertAdjacentHTML('beforeend', `
+            <div class='faction-name-container'>
+                <p class='faction-name'>${DMZFactionsArray[i]} : ${factionLevel}</p>
+                <button class='btn-faction-change-amount' data-obj-notation='${factionObjectDotNotation}' data-btn-type='-' data-faction-level='${factionLevel}' >-</button>
+                <button class='btn-faction-change-amount' data-obj-notation='${factionObjectDotNotation}' data-btn-type='+' data-faction-level='${factionLevel}' >+</button>
+            </div>
+        `)
+    }
+
+    const arrayOfFactionButtons = document.getElementsByClassName('btn-faction-change-amount');
+    for (let i = 0; i < arrayOfFactionButtons.length; i++) {
+        arrayOfFactionButtons[i].addEventListener('click', (e) => {
+            // Test
+            // console.log("e.target", e.target);
+            // console.log("1st Object Check", dataObj);
+            // console.log("2nd Object Check", dataObj.blackMous);
+            // console.log("obj-notation", e.target.dataset.objNotation);
+
+            // let tempObj = dataObj;
+
+            // Variables From Clicked Target:
+            let notation = e.target.dataset.objNotation;
+            let operator = e.target.dataset.btnType;
+            let factionLevel = e.target.dataset.factionLevel;
+            
+            console.log("operator", operator);
+
+            if (operator == '-') { --factionLevel; };
+            if (operator == '+') { ++factionLevel; };
+
+            // tempObj[notation] = factionLevel; // Is this Number()?
+            dataObj[notation] = factionLevel; // Is this Number()?
+
+
+
+            // Can I do updateDoc here???  Or do I have to do setDoc???  Try Both.
+            setDoc(docRef, dataObj, { merge:true });  // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
+
+            factionLevelsContainer.innerHTML = '';
+
+            // factionLevelsContainer = '';
+
+            // console.log("obj + obj notation", dataObj[notation]);
+
+
+
+
+
+        })
+    }
+
+    // factionLevelsContainer.insertAdjacentHTML('beforeend', `
+    //     <div class='faction-name-container hide-btn'>
+    //         <button type='button' class='btn-hide'>Hide</button>
+    //     </div>
+    // `)
 }
 
 // const checkIfMissionComplete = (obj, arr, completeStatus) => {
