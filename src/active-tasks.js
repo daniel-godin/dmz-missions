@@ -281,8 +281,6 @@ const createListenerEvents = (obj, docRef, user, db) => {
 }
 
 const createFactionLevelDisplay = (dataObj, docRef, docName, user, db) => {
-    // Console Log Test:
-    // console.log("Faction Level Data Object: (JS or Doc?)", dataObj);
 
     factionLevelsContainer.innerHTML = ''; // Resets Faction Container To Zero.
 
@@ -290,10 +288,7 @@ const createFactionLevelDisplay = (dataObj, docRef, docName, user, db) => {
 
         let objProp = camelCase(DMZFactionsArray[i]);
         let factionLevel = dataObj[objProp];
-
         let factionObjectDotNotation = `${objProp}`;
-
-        // console.log("objProp", objProp, "factionLevel", factionLevel);
 
         factionLevelsContainer.insertAdjacentHTML('beforeend', `
             <div class='faction-name-container'>
@@ -307,53 +302,23 @@ const createFactionLevelDisplay = (dataObj, docRef, docName, user, db) => {
     const arrayOfFactionButtons = document.getElementsByClassName('btn-faction-change-amount');
     for (let i = 0; i < arrayOfFactionButtons.length; i++) {
         arrayOfFactionButtons[i].addEventListener('click', (e) => {
-            // Test
-            // console.log("e.target", e.target);
-            // console.log("1st Object Check", dataObj);
-            // console.log("2nd Object Check", dataObj.blackMous);
-            // console.log("obj-notation", e.target.dataset.objNotation);
 
-            // let tempObj = dataObj;
-
-            // Variables From Clicked Target:
             let notation = e.target.dataset.objNotation;
             let operator = e.target.dataset.btnType;
             let factionLevel = e.target.dataset.factionLevel;
             
-            console.log("operator", operator);
-
             if (operator == '-') { --factionLevel; };
             if (operator == '+') { ++factionLevel; };
             if (factionLevel < 0) { factionLevel = 0; }; // Prevent faction level from going negative.
 
-            // tempObj[notation] = factionLevel; // Is this Number()?
-            dataObj[notation] = factionLevel; // Is this Number()?
-
-
+            dataObj[notation] = factionLevel; // Changes the object[key]'s value to whatever factionLevel is now.
 
             // Can I do updateDoc here???  Or do I have to do setDoc???  Try Both.
             setDoc(docRef, dataObj, { merge:true });  // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
 
-            
-
-            // factionLevelsContainer.innerHTML = '';
-
-            // factionLevelsContainer = '';
-
-            // console.log("obj + obj notation", dataObj[notation]);
-
-
-
-
 
         })
     }
-
-    // factionLevelsContainer.insertAdjacentHTML('beforeend', `
-    //     <div class='faction-name-container hide-btn'>
-    //         <button type='button' class='btn-hide'>Hide</button>
-    //     </div>
-    // `)
 }
 
 // const checkIfMissionComplete = (obj, arr, completeStatus) => {
