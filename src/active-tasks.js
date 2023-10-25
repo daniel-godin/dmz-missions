@@ -27,6 +27,7 @@ const dataObjectStandardMissions = currentDMZStandardMissions;
 const currentStandardMissionsDocName = currentDMZSeasonDocName;
 
 // Variables For Faction Bar:
+const factionLevelsContainer = document.getElementById('factionLevelsContainer');
 const factionBarDocumentName = 'factionLevels';
 const factionBarDataObject = dataDMZFactionLevels;
 
@@ -70,8 +71,6 @@ onAuthStateChanged(auth, user => {
 
 const createActiveTasks = (docName, dataObj, docRef, user, db, ) => { // I think I will need to move these out at some point, if I want to use 2 documents.
     // resetDOM(activeTasksContainer);
-    if (docName == currentFOBDocName) {  } // Trigger CreateDOM??? 
-    if (docName == currentStandardMissionsDocName) {  } // Trigger CreateDOM??? 
     createDOM(dataObj, docRef, user, db);
     createListenerEvents(dataObj, docRef, user, db);
 }
@@ -285,11 +284,7 @@ const createFactionLevelDisplay = (dataObj, docRef, docName, user, db) => {
     // Console Log Test:
     // console.log("Faction Level Data Object: (JS or Doc?)", dataObj);
 
-    pageContainer.insertAdjacentHTML('afterbegin', `
-        <div class='box' id='factionLevelsContainer'></div>
-    `);
-
-    let factionLevelsContainer = document.getElementById('factionLevelsContainer');
+    factionLevelsContainer.innerHTML = ''; // Resets Faction Container To Zero.
 
     for (let i = 0; i < DMZFactionsArray.length; i++) {
 
@@ -338,6 +333,8 @@ const createFactionLevelDisplay = (dataObj, docRef, docName, user, db) => {
 
             // Can I do updateDoc here???  Or do I have to do setDoc???  Try Both.
             setDoc(docRef, dataObj, { merge:true });  // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
+
+            
 
             // factionLevelsContainer.innerHTML = '';
 
