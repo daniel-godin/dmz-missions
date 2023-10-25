@@ -76,13 +76,11 @@ const createActiveTasks = (docName, dataObj, docRef, user, db, ) => { // I think
 }
 
 const createDOM = (dataObj, docRef, user, db) => {
-    console.log("Active Tasks: createDOM Function Triggered."); // FOR TESTING.
+    // console.log("Active Tasks: createDOM Function Triggered."); // FOR TESTING.
 
     activeTasksContainer.innerHTML = ''; // Resets main container to zero.
 
-
     dataObj = dataObj.newSetUpKey; // This is a hacky way to get around FireStore's limitations of not allow nested arrays, nor having a document start with arrays.  Basically, newSetUpKey is the only key to the data Object, and it's value is an array with all the data.
-
 
     let userStatus;
     let TaskContainerClass;
@@ -91,12 +89,11 @@ const createDOM = (dataObj, docRef, user, db) => {
         TaskContainerClass = "fob-mission-task-container-logged-out";
     };
     if (user) { 
-        userStatus = "" 
+        userStatus = "";
         TaskContainerClass = "fob-mission-task-container";
     };
 
     // Later:  Create 2 or 3 div columns for:  Standard Missions | Passive Missions (FOB) Collection Tasks | FOB Boss Killing Tasks
-
 
     let DOMAttachmentPointLoop1 = document.getElementById('activeTasksContainer');
 
@@ -333,3 +330,10 @@ const createFactionLevelDisplay = (dataObj, docRef, docName, user, db) => {
 const resetDOM = (...args) => {
     for (let arg of args) { arg.innerHTML = ''; console.log("Reset DOM", arg) }
 }
+
+// TESTING:
+// const createDOM2 = () => {
+//     // Can I pass ...args to this function, and have it create a div box for each arg?
+//     // Before it creates the div boxes, it should divBoxID.innerHTML = '';  This makes sure when onSnapshot is triggered, it doesn't duplicate.
+//     // Maybe instead... it's pageContainer.innerHTML = ''; Then it triggers all the rest?  IDK.  Need to think about this for later.
+// }
