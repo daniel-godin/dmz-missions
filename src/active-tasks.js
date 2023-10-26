@@ -227,36 +227,9 @@ const createListenerEvents = (obj, docRef, user, db) => {
             let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
             let taskObj = getObjWithNotationArray(tempObj, notationArray);
 
-            console.log("Before changeProgressAmount", taskObj);
             taskObj = changeProgressAmount(taskObj, btnType, progressCurrent, progressTotal);
-            console.log("After changeProgressAmount", taskObj);
-
-
-            function changeProgressAmount (obj, operator, numCurrent, numTotal) {
-                obj.savePrevProgressCurrentNum = numCurrent; // Saving the previous number, in case user hits "complete" button accidentally.  Then they can uncheck it and it returns to the previously saved number.
-
-                if (operator == '-') { --numCurrent; };
-                if (operator == '+') { ++numCurrent; };
-
-                if (numCurrent < numTotal) { 
-                    if (numCurrent < 0) { numCurrent = 0; console.log("Cannot Go Below 0"); };
-                    obj.progressCurrent = numCurrent;
-                    obj.complete = false; 
-                } 
-
-                if (numCurrent >= numTotal) { 
-                    obj.progressCurrent = numTotal;
-                    obj.complete = true; 
-                    console.log("You've Completed This Task.  Congrats!");
-                    // Possibly put in a window.alert or window.prompt here to confirm the user wants to "complete" this task.
-                    // FOR NOW:  Just change the task Object.complete = true; (or false if the decrement);
-                    
-                }
-                return obj;
-            }
 
             setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
-
         })
     }
 
@@ -331,6 +304,30 @@ function createNextMissionArray(notation) {
     arr[arr.length - 1] = modifiedElement.toString();
     return arr;
 }
+
+function changeProgressAmount (obj, operator, numCurrent, numTotal) {
+    obj.savePrevProgressCurrentNum = numCurrent; // Saving the previous number, in case user hits "complete" button accidentally.  Then they can uncheck it and it returns to the previously saved number.
+
+    if (operator == '-') { --numCurrent; };
+    if (operator == '+') { ++numCurrent; };
+
+    if (numCurrent < numTotal) { 
+        if (numCurrent < 0) { numCurrent = 0; console.log("Cannot Go Below 0"); };
+        obj.progressCurrent = numCurrent;
+        obj.complete = false; 
+    } 
+
+    if (numCurrent >= numTotal) { 
+        obj.progressCurrent = numTotal;
+        obj.complete = true; 
+        console.log("You've Completed This Task.  Congrats!");
+        // Possibly put in a window.alert or window.prompt here to confirm the user wants to "complete" this task.
+        // FOR NOW:  Just change the task Object.complete = true; (or false if the decrement);
+        
+    }
+    return obj;
+}
+
 
 
 const resetDOM = (...args) => {
