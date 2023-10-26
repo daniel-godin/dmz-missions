@@ -233,18 +233,16 @@ const createListenerEvents = (obj, docRef, user, db) => {
 
 
             function changeProgressAmount (obj, operator, numCurrent, numTotal) {
-                // console.log("TEST: Start of change", obj, operator, numCurrent, numTotal);
-                // if (!obj || !operator || !numCurrent || !numTotal) { console.log('Something is missing from the changeProgressAmount function parameters.'); return; } // Error catch.
-
                 obj.savePrevProgressCurrentNum = numCurrent; // Saving the previous number, in case user hits "complete" button accidentally.  Then they can uncheck it and it returns to the previously saved number.
 
-                if (operator == '-') { --numCurrent; console.log('minus triggered'); };
-                if (operator == '+') { ++numCurrent; console.log('plus triggered'); };
+                if (operator == '-') { --numCurrent; };
+                if (operator == '+') { ++numCurrent; };
 
                 if (numCurrent < numTotal) { 
                     if (numCurrent < 0) { numCurrent = 0; console.log("Cannot Go Below 0"); };
                     obj.progressCurrent = numCurrent;
-                    obj.complete = false; } 
+                    obj.complete = false; 
+                } 
 
                 if (numCurrent >= numTotal) { 
                     obj.progressCurrent = numTotal;
@@ -256,6 +254,9 @@ const createListenerEvents = (obj, docRef, user, db) => {
                 }
                 return obj;
             }
+
+            setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
+
         })
     }
 

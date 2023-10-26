@@ -400,7 +400,11 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                     if (operator == '-') { --numCurrent };
                     if (operator == '+') { ++numCurrent };
 
-                    if (numCurrent < numTotal) { obj.complete = false; } // console.log("Task Not Complete Yet")
+                    if (numCurrent < numTotal) {
+                        if (numCurrent < 0) { numCurrent = 0; console.log("Cannot Go Below 0"); };
+                        obj.complete = false;
+                    }
+                    
                     if (numCurrent >= numTotal) { 
                         numCurrent = numTotal; 
                         console.log("You've Completed This Task.  Congrats!")
@@ -408,7 +412,6 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
                         // FOR NOW:  Just change the task Object.complete = true; (or false if the decrement);
                         obj.complete = true;
                     }
-                    if (numCurrent < 0) { numCurrent = 0; console.log("Cannot Go Below 0") }
                     return numCurrent;
                 }
             })
