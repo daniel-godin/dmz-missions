@@ -5,8 +5,8 @@ export const DMZFactionsArray = [ "Shadow Company", "Black Mous", "White Lotus",
 
 export const dataDMZFactionLevels = {
     shadowCompany: 0,
-    blackMous: 1,
-    whiteLotus: 2,
-    phalanx: 3,
-    crown: 4,
+    blackMous: 0,
+    whiteLotus: 0,
+    phalanx: 0,
+    crown: 0,
 }
