@@ -166,9 +166,9 @@ const createDOM = (dataObj, docRef, user, db) => {
                                 <div class='active-tasks-task-checkbox'><input type='checkbox' class='task-checkbox' data-task-id='${taskId}' data-parent-mission-notation='${missionDotNotation}' data-obj-notation='${missionTaskDotNotation}' ${complete} /></div>
                                 <div class='active-tasks-task-description'>${task}</div>
                                 <div class='active-tasks-progress-container'>
-                                    <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
+                                    <button type='button' class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
                                     <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
-                                    <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
+                                    <button type='button' class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
                                 </div>
                             </div>
                         `)
@@ -187,7 +187,6 @@ const createListenerEvents = (obj, docRef, user, db) => {
     if (!user) { console.log("Not Logged In.  Please log in to use this page."); return; }
 
     const arrayOfMissionTaskCheckboxes = document.getElementsByClassName('task-checkbox');
-
     for (let i = 0; i < arrayOfMissionTaskCheckboxes.length; i++) {
         arrayOfMissionTaskCheckboxes[i].addEventListener('click', (e) => {
             // console.log("TEST: e.target", e.target);
@@ -201,9 +200,9 @@ const createListenerEvents = (obj, docRef, user, db) => {
             let nextMissionArray = createNextMissionArray(parentMissionNotation);
 
             let currentObj = obj.newSetUpKey;
-            let taskObj = returnObjFromNotationArray(currentObj, notationArray);
-            let missionObj = returnObjFromNotationArray(currentObj, parentMissionArray);
-            let nextMissionObj = returnObjFromNotationArray(currentObj, nextMissionArray);
+            let taskObj = getObjWithNotationArray(currentObj, notationArray);
+            let missionObj = getObjWithNotationArray(currentObj, parentMissionArray);
+            let nextMissionObj = getObjWithNotationArray(currentObj, nextMissionArray);
 
             taskObj.complete = checked;
             missionObj.complete = confirmMissionCompleteCheckTasks(missionObj);
@@ -212,6 +211,52 @@ const createListenerEvents = (obj, docRef, user, db) => {
 
             setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
         });
+    }
+
+    const arrayofMissionTaskButtons = document.getElementsByClassName('btn-task-change-amount');
+    for (let i = 0; i < arrayofMissionTaskButtons.length && i < 10000; i++) {
+        arrayofMissionTaskButtons[i].addEventListener('click', (e) => {
+            // Variables From Target Button.
+            let progressCurrent = Number(e.target.dataset.progressCurrent);
+            let progressTotal = Number(e.target.dataset.progressTotal);
+            let btnType = e.target.dataset.btnType;
+            let notation = e.target.dataset.objNotation;
+
+            // Other Variables:
+            let tempObj = obj.newSetUpKey;
+            let notationArray = notation.split('.'); // Splits the notation string into an Array that I can iterate through, then reconnect as bracket notation.
+            let taskObj = getObjWithNotationArray(tempObj, notationArray);
+
+            console.log("Before changeProgressAmount", taskObj);
+            taskObj = changeProgressAmount(taskObj, btnType, progressCurrent, progressTotal);
+            console.log("After changeProgressAmount", taskObj);
+
+
+            function changeProgressAmount (obj, operator, numCurrent, numTotal) {
+                // console.log("TEST: Start of change", obj, operator, numCurrent, numTotal);
+                // if (!obj || !operator || !numCurrent || !numTotal) { console.log('Something is missing from the changeProgressAmount function parameters.'); return; } // Error catch.
+
+                obj.savePrevProgressCurrentNum = numCurrent; // Saving the previous number, in case user hits "complete" button accidentally.  Then they can uncheck it and it returns to the previously saved number.
+
+                if (operator == '-') { --numCurrent; console.log('minus triggered'); };
+                if (operator == '+') { ++numCurrent; console.log('plus triggered'); };
+
+                if (numCurrent < numTotal) { 
+                    if (numCurrent < 0) { numCurrent = 0; console.log("Cannot Go Below 0"); };
+                    obj.progressCurrent = numCurrent;
+                    obj.complete = false; } 
+
+                if (numCurrent >= numTotal) { 
+                    obj.progressCurrent = numTotal;
+                    obj.complete = true; 
+                    console.log("You've Completed This Task.  Congrats!");
+                    // Possibly put in a window.alert or window.prompt here to confirm the user wants to "complete" this task.
+                    // FOR NOW:  Just change the task Object.complete = true; (or false if the decrement);
+                    
+                }
+                return obj;
+            }
+        })
     }
 
 }
@@ -254,7 +299,8 @@ const createFactionLevelDisplay = (dataObj, docRef, docName, user, db) => {
     }
 }
 
-function returnObjFromNotationArray(object, array) {
+function getObjWithNotationArray(object, array) {
+    // Could possibly take in a notation string, instead of an array, then make the array in this function.  Reducing the need to do notation.split('.');
     for (let j = 0; j < array.length; j++) { // Loops through the Notation Array and combines them back into a notation for the currentObj notation.
         let key = array[j];
         if (object && object[key]) {
