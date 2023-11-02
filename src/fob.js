@@ -49,7 +49,7 @@ onAuthStateChanged(auth, user => {
 
 const createFOB = (obj, docRef, user) => {
 
-    resetDOMContainer(DMZFOBInformationContainer, DMZFOBTabBar)
+    resetDOMContainer(DMZFOBInformationContainer, DMZFOBTabBar); // I probably need to move this into each DOM creation function, and only use 1 variable for each later.
 
     createFOBDOM(obj, user); // Which one of these parameters do I not need to pass along?
 

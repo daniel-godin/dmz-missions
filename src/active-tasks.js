@@ -317,11 +317,15 @@ function changeProgressAmount (obj, operator, numCurrent, numTotal) {
     } 
 
     if (numCurrent >= numTotal) { 
-        obj.progressCurrent = numTotal;
-        obj.complete = true; 
-        console.log("You've Completed This Task.  Congrats!");
-        // Possibly put in a window.alert or window.prompt here to confirm the user wants to "complete" this task.
-        // FOR NOW:  Just change the task Object.complete = true; (or false if the decrement);
+
+        if (window.confirm(`Did You Complete This Task?\n\n${obj.task}`)) {
+            obj.progressCurrent = numTotal;
+            obj.complete = true; 
+            // console.log("You've Completed This Task.  Congrats!");
+        } else {
+            // Do Nothing.  Return to previous state.  Nothing should have changed.
+            return;
+        }
         
     }
     return obj;
