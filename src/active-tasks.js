@@ -15,7 +15,7 @@ import { DMZFactionsArray, dataDMZFactionLevels } from "./data/data-dmz-faction-
 
 import { logInRequiredFunction } from "./ui";
 // import { createFactionLevelDisplay } from "./faction-bar";
-import { camelCase } from "./tools";
+import { camelCase, resetDOMContainer } from "./tools";
 
 const activeTasksContainer = document.getElementById('activeTasksContainer');
 
@@ -325,10 +325,6 @@ function changeProgressAmount (obj, operator, numCurrent, numTotal) {
         
     }
     return obj;
-}
-
-const resetDOMContainer = (...args) => { // This function will reset any DOM Variable put into it's parameters.
-    for (let i = 0; i < args.length; i++) { args[i].innerHTML = ''; }
 }
 
 

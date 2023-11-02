@@ -9,6 +9,12 @@ export const camelCase = (str) => {
         s + (c.charAt(0).toUpperCase() + c.slice(1)));
 }
 
+export const resetDOMContainer = (...args) => { // This function will reset any DOM Variable put into it's parameters.
+    for (let i = 0; i < args.length; i++) { args[i].innerHTML = ''; }
+}
+
+
+
 // export const findPropFromNotation = (arr, obj) => {
 //     for (let i = 0; i < arr.length; i++) { // Loops through the Notation Array and combines them back into a notation for the tempObj notation.
 //         let key = arr[i];
