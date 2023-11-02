@@ -1,14 +1,21 @@
+// FOB (Forward Objective Base?) JS File.
+
+// Firebase Imports:
 import { doc, setDoc, onSnapshot, } from "firebase/firestore";
-import { dataS6DMZFOB, } from "./data/data-s6-dmz-fob";
 import { auth, db } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
-import { recommendLogInBox } from "./ui";
 
+
+// Other Imports:
+import { dataS6DMZFOB, } from "./data/data-s6-dmz-fob";
+import { recommendLogInBox } from "./ui";
+import { camelCase, resetDOMContainer } from "./tools";
+
+// *********** END OF IMPORTS **********
 
 const DMZFOBContainer = document.getElementById('DMZFOBContainer');
 const DMZFOBTabBar = document.getElementById('DMZFOBTabBar');
 const DMZFOBInformationContainer = document.getElementById('DMZFOBInformationContainer'); // DOM ID of div container for FOB Grid.
-
 
 // Change this at the beginning of each season.
 export const FOBDataObject = dataS6DMZFOB;
@@ -422,12 +429,4 @@ const createListenerEvents = async (obj, docRef, user) => { // Listener Events: 
 const resetFOBGrid = () => { // ???  Should I put in a parameter that accepts an array of variables to reset them all?
     DMZFOBInformationContainer.innerHTML = '';
     DMZFOBTabBar.innerHTML = '';
-}
-
-const camelCase = (str) => {
-    let answer = str.toLowerCase();
-
-    // Changing to camelCase:
-    return answer.split(" ").reduce((s, c) => 
-        s + (c.charAt(0).toUpperCase() + c.slice(1)));
 }
