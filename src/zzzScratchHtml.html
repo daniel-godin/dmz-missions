@@ -5,14 +5,10 @@
 </div>
 
 
-<!-- This goes INSIDE of active-tasks-mission-container -->
+<!-- "Popup" Confirmation.  Task Complete?  Yes or No. -->
 
-<div class='active-tasks-task-container'>
-    <div class='active-tasks-task-checkbox'><input type='checkbox'></div>
-    <div class='active-tasks-task-description'></div>
-    <div class='active-tasks-progress-container'>
-        <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='-' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>-</button>
-        <p class='${strikeThrough}'>${progressCurrent}</p><p class='${strikeThrough}'> / </p><p class='${strikeThrough}'>${progressTotal}</p>
-        <button class='btn-task-change-amount' data-obj-notation='${missionTaskDotNotation}' data-btn-type='+' data-progress-current='${progressCurrent}' data-progress-total='${progressTotal}'>+</button>
-    </div>
+<div class='pop-up-confirmation-container'>
+    <p>Complete?</p>
+    <button type='button' class='btn-pop-up-confirmation'>Yes</button>
+    <button type='button' class='btn-pop-up-confirmation'>No</button>
 </div>

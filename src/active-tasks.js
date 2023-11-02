@@ -70,7 +70,6 @@ onAuthStateChanged(auth, user => {
 
 
 const createActiveTasks = (docName, dataObj, docRef, user, db, ) => { // I think I will need to move these out at some point, if I want to use 2 documents.
-    // resetDOM(activeTasksContainer);
     createDOM(dataObj, docRef, user, db);
     createListenerEvents(dataObj, docRef, user, db);
 }
@@ -78,7 +77,7 @@ const createActiveTasks = (docName, dataObj, docRef, user, db, ) => { // I think
 const createDOM = (dataObj, docRef, user, db) => {
     // console.log("Active Tasks: createDOM Function Triggered."); // FOR TESTING.
 
-    activeTasksContainer.innerHTML = ''; // Resets main container to zero.
+    resetDOMContainer(activeTasksContainer); // Resets active tasks container to zero.  Preventing any duplicates from occuring.
 
     dataObj = dataObj.newSetUpKey; // This is a hacky way to get around FireStore's limitations of not allow nested arrays, nor having a document start with arrays.  Basically, newSetUpKey is the only key to the data Object, and it's value is an array with all the data.
 
@@ -237,7 +236,7 @@ const createListenerEvents = (obj, docRef, user, db) => {
 
 const createFactionLevelDisplay = (dataObj, docRef, docName, user, db) => {
 
-    factionLevelsContainer.innerHTML = ''; // Resets Faction Container To Zero.
+    resetDOMContainer(factionLevelsContainer); // Resets Faction Container To Zero.
 
     for (let i = 0; i < DMZFactionsArray.length; i++) {
 
@@ -328,11 +327,10 @@ function changeProgressAmount (obj, operator, numCurrent, numTotal) {
     return obj;
 }
 
-
-
-const resetDOM = (...args) => {
-    for (let arg of args) { arg.innerHTML = ''; console.log("Reset DOM", arg) }
+const resetDOMContainer = (...args) => { // This function will reset any DOM Variable put into it's parameters.
+    for (let i = 0; i < args.length; i++) { args[i].innerHTML = ''; }
 }
+
 
 // TESTING:
 // const createDOM2 = () => {
