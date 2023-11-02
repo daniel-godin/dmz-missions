@@ -326,15 +326,9 @@ function changeProgressAmount (obj, operator, numCurrent, numTotal) {
             // Do Nothing.  Return to previous state.  Nothing should have changed.
             return;
         }
-        
     }
     return obj;
 }
 
 
 // TESTING:
-// const createDOM2 = () => {
-//     // Can I pass ...args to this function, and have it create a div box for each arg?
-//     // Before it creates the div boxes, it should divBoxID.innerHTML = '';  This makes sure when onSnapshot is triggered, it doesn't duplicate.
-//     // Maybe instead... it's pageContainer.innerHTML = ''; Then it triggers all the rest?  IDK.  Need to think about this for later.
-// }
