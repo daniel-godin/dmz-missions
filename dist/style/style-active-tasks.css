@@ -40,8 +40,11 @@ html {
     padding: 0; */
 
     display: grid;
-    justify-items: center;
+    /* justify-items: center; */
     gap: var(--size-padding-standard);
+    /* grid-auto-flow: row; */
+
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
 }
 
@@ -49,7 +52,9 @@ html {
     margin: 0;
     padding: var(--size-padding-standard);
     height: min-content;
-    width: 95%;
+    min-width: 30%;
+    width: 400px;
+    max-width: 90vw;
 
     border: 1px solid var(--active-tasks-color-mission-accent);
     border-radius: var(--size-border-radius-content);
