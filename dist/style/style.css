@@ -181,7 +181,7 @@ svg:hover {
 /* For Faction Level "Bar".  Progress Bar.  Should Only Be Visible When User Logged In. */
 
 #factionLevelsContainer {
-  height: var(--size-nav-bar-height);
+  height: calc(var(--size-nav-bar-height) + 1rem);
   /* width: var(--size-nav-bar-width); */
   width: 95%;
   max-width: var(--size-nav-bar-max-width);
@@ -205,6 +205,7 @@ svg:hover {
   display: grid;
   place-items: center;
   grid-template-columns: 1fr min-content min-content;
+  gap: .25rem;
 
 }
 
@@ -351,8 +352,8 @@ svg:hover {
   margin: 0;
   padding: 0;
 
-  height: 25px;
-  width: 25px;
+  height: var(--size-nav-bar-height);
+  width: var(--size-nav-bar-height);
   border-radius: 0;
 }
 
