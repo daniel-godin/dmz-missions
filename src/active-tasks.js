@@ -55,11 +55,11 @@ onAuthStateChanged(auth, user => {
 
 
 const createActiveTasks = (docName, dataObj, docRef, user, db, ) => { // I think I will need to move these out at some point, if I want to use 2 documents.
-    createDOM(dataObj, docRef, user, db);
+    createActiveTasksDOM(dataObj, docRef, user, db);
     createListenerEvents(dataObj, docRef, user, db);
 }
 
-const createDOM = (dataObj, docRef, user, db) => {
+const createActiveTasksDOM = (dataObj, docRef, user, db) => {
     resetDOMContainer(activeTasksContainer); // Resets active tasks container to zero.  Preventing any duplicates from occuring.
 
     dataObj = dataObj.newSetUpKey; // This is a hacky way to get around FireStore's limitations of not allow nested arrays, nor having a document start with arrays.  Basically, newSetUpKey is the only key to the data Object, and it's value is an array with all the data.
@@ -300,6 +300,6 @@ function changeProgressAmount (obj, operator, numCurrent, numTotal) {
             return;
         }
     };
-    
+
     return obj;
 }
