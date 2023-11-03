@@ -1,32 +1,25 @@
 // Active Tasks JavaScript File.  For the "Active Tasks" Feature.
-
 // Firebase Imports:
 import { doc, setDoc, onSnapshot, } from "firebase/firestore";
 import { auth, db } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
 // Other Imports:
-// import { dataS6DMZFOB, } from "./data/data-s6-dmz-fob";
-// import { dataS6DMZStandardMissions } from "./data/data-s6-dmz-standard-missions";
 import { FOBDataObject, currentFOBDocName } from "./fob";
 import { currentDMZStandardMissions, currentDMZSeasonDocName } from "./dmz-missions";
 import { DMZFactionsArray, dataDMZFactionLevels } from "./data/data-dmz-faction-levels";
-
-
 import { logInRequiredFunction } from "./ui";
-// import { createFactionLevelDisplay } from "./faction-bar";
 import { camelCase, resetDOMContainer } from "./tools";
 
+// Global Variables:
 const activeTasksContainer = document.getElementById('activeTasksContainer');
-
-// I actually don't like how this works at all, but I'm set on doing it this way for the others.  Fix this later.  REFACTOR.
-// Change this at the beginning of each season.
 const dataObjectFOB = FOBDataObject;
 const FOBDocName = currentFOBDocName;
 const dataObjectStandardMissions = currentDMZStandardMissions;
 const currentStandardMissionsDocName = currentDMZSeasonDocName;
 
 // Variables For Faction Bar:
+// Will need to put these into it's own JS file later, maybe.
 const factionLevelsContainer = document.getElementById('factionLevelsContainer');
 const factionBarDocumentName = 'factionLevels';
 const factionBarDataObject = dataDMZFactionLevels;
@@ -58,14 +51,6 @@ onAuthStateChanged(auth, user => {
         let snapObj = snapshot.data();
         createFactionLevelDisplay(snapObj, docRefFactionLevels, factionBarDocumentName, user, db);
     });
-
-    // const docRefStandardMissions = doc(db, 'users', user.uid, 'mw2-trackers', `${currentStandardMissionsDocName}`);
-
-    // onSnapshot(docRefStandardMissions, (snapshot) => {
-    //     if (!snapshot.exists()) { setDoc(doc(db, 'users', user.uid, 'mw2-trackers', `${currentStandardMissionsDocName}`), dataObjectStandardMissions); } // I think I need to put a reload() or return, or something at the end of this.
-    //     let snapObj = snapshot.data();
-    //     createActiveTasks(currentStandardMissionsDocName, snapObj, docRefStandardMissions, user, db);
-    // }) 
 })
 
 
@@ -75,8 +60,6 @@ const createActiveTasks = (docName, dataObj, docRef, user, db, ) => { // I think
 }
 
 const createDOM = (dataObj, docRef, user, db) => {
-    // console.log("Active Tasks: createDOM Function Triggered."); // FOR TESTING.
-
     resetDOMContainer(activeTasksContainer); // Resets active tasks container to zero.  Preventing any duplicates from occuring.
 
     dataObj = dataObj.newSetUpKey; // This is a hacky way to get around FireStore's limitations of not allow nested arrays, nor having a document start with arrays.  Basically, newSetUpKey is the only key to the data Object, and it's value is an array with all the data.
@@ -92,12 +75,9 @@ const createDOM = (dataObj, docRef, user, db) => {
         TaskContainerClass = "fob-mission-task-container";
     };
 
-    // Later:  Create 2 or 3 div columns for:  Standard Missions | Passive Missions (FOB) Collection Tasks | FOB Boss Killing Tasks
-
     let DOMAttachmentPointLoop1 = document.getElementById('activeTasksContainer');
 
     for (let i = 0; i < dataObj.length && i < 10; i++) { // First Loop:
-        // console.log("First Loop"); // FOR TESTING.
         let arrayOfSectionTitle = Object.keys(dataObj[i]); // Creates an array of Object keys, which I can iterate through.
         let sectionTitle = arrayOfSectionTitle[0];
         let arrayFirstLevel = dataObj[i][sectionTitle];
@@ -179,16 +159,11 @@ const createDOM = (dataObj, docRef, user, db) => {
 }
 
 const createListenerEvents = (obj, docRef, user, db) => {
-    // What ListenerEvent Do I Want To Create?
-    // Task (not mission) checkboxes.
-    // - & + buttons.
-
     if (!user) { console.log("Not Logged In.  Please log in to use this page."); return; }
 
     const arrayOfMissionTaskCheckboxes = document.getElementsByClassName('task-checkbox');
     for (let i = 0; i < arrayOfMissionTaskCheckboxes.length; i++) {
         arrayOfMissionTaskCheckboxes[i].addEventListener('click', (e) => {
-            // console.log("TEST: e.target", e.target);
 
             let checked = e.target.checked;
             let notation = e.target.dataset.objNotation;
@@ -231,7 +206,6 @@ const createListenerEvents = (obj, docRef, user, db) => {
             setDoc(docRef,  obj , { merge:true }); // updateDoc() does not work because updateDoc() does not accept [ ] bracket notation.  Instead I have to use setDoc and merge:true.
         })
     }
-
 }
 
 const createFactionLevelDisplay = (dataObj, docRef, docName, user, db) => {
@@ -314,21 +288,18 @@ function changeProgressAmount (obj, operator, numCurrent, numTotal) {
         if (numCurrent < 0) { numCurrent = 0; console.log("Cannot Go Below 0"); };
         obj.progressCurrent = numCurrent;
         obj.complete = false; 
-    } 
+    };
 
     if (numCurrent >= numTotal) { 
 
         if (window.confirm(`Did You Complete This Task?\n\n${obj.task}`)) {
             obj.progressCurrent = numTotal;
             obj.complete = true; 
-            // console.log("You've Completed This Task.  Congrats!");
         } else {
             // Do Nothing.  Return to previous state.  Nothing should have changed.
             return;
         }
-    }
+    };
+    
     return obj;
 }
-
-
-// TESTING:
